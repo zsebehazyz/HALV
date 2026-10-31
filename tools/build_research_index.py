@@ -32,6 +32,9 @@ def main():
         ('pair64_check.json','unique_valid_scalars','valid private scalars'),
         ('bd_pair64_check.json','unique_valid_scalars','valid private scalars'),
         ('phase_decode_check.json','unique_valid_scalars','valid private scalars'),
+        ('fractional_area_check.json','unique_valid_scalars','valid private scalars'),
+        ('signature_phase_decode_check.json','unique_valid_scalars','valid private scalars'),
+        ('uniform_phase_layers_check.json','unique_valid_scalars','valid private scalars'),
         ('marker_glyph_relation.json','attempts_including_duplicates','structural comparisons, not private keys')]:
         p=ROOT/'research/data'/filename
         if p.exists():

@@ -1,0 +1,8 @@
+{
+  "model":"C19",
+  "question":"Does the measured staircase match50/2**n and what follows for phase and area scale?",
+  "reward_series":"50/2**n for n=0..4, given by user and calculated exactly",
+  "reference_y":"929.5 as in C18; no fitted offset or per-step correction",
+  "comparisons":["Exact height residuals and RMSE","floor-log2 phase from ideal rewards versus measured heights","Common factor between middle wave amplitude scales and rewards","Range-only consequences of factors25/16 and16/25 for C16 physical areas"],
+  "limitations":["A close reward match is a thematic geometric explanation, not a private-key decoding rule","Descending floor-log2 exponents also follow generically from halving","Extending the middle proportionality to all8 blocks is mathematical extrapolation;200 and100BTC are not historical block subsidies","No arbitrary additional divisor or key-candidate search"]
+}

@@ -1,0 +1,15 @@
+{
+  "model":"C15",
+  "question":"Continuous shared endpoint versus independent integer endpoint for each 33-position block",
+  "renderer":"Union of finite mirrored segments, round-distance kernel [1,113/255,20/255,0] at distances0,1,2,3; no per-block tuning",
+  "width_scales":[0.85,1,1.15],
+  "calibration":"Node patches at local positions8,24 in blocks1..4",
+  "renderer_validation":"Same node patches in blocks5..8",
+  "boundary_training_offsets":[-2,-1,1,2],
+  "boundary_validation_offset":0,
+  "independent_endpoints":[0,1,2,3],
+  "join_models":["vertical_connector","separate_paths"],
+  "terminal_test":"Observed last fitted node857 versus a new unclipped endpoint860; predict columns859,860",
+  "terminal_roi_y_inclusive":[468,482],
+  "limitations":["Approximate rasterizer; fixed nominal q values","Shared33-position indexing is geometrically equivalent to32 intervals, so cannot itself prove extra data","Clipped or different-cap rendering is not globally ruled out"]
+}

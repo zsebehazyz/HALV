@@ -1,0 +1,15 @@
+{
+  "model":"C20",
+  "question":"Can all64 cells use one invertible bit-separation rule while preserving all exceptional data?",
+  "phases":"z=(3-b)mod4, r=z-1mod4, as derived inC18; b zero-based",
+  "primary4":"Three H bits in local order excluding z, then L at r",
+  "residual4":"H at z, then three L bits in local order excluding r",
+  "verification":"Inverse primary+residual recovers every state in every cell; retain all96 edge residual bits",
+  "zero_phase_audit":"All16 affine phase laws; exact counts, masks and direct0-separated Morse",
+  "affine_control":"20000 within-block zero-mask permutations; maximize over all16 affine laws and report top-two gap",
+  "rng_seed":201031,
+  "surrogate_draws":20000,
+  "key_test":"Primary64 nibbles only; all24 common bit permutations, forward/reverse cells per block, forward/reverse bits per32bit block, original/reversed block order",
+  "finalization":"32 direct bytes; both P2PKH formats; no hash or residual-guided repair",
+  "limitations":["An invertible separation is not a predictive generator of the12 exceptions","44 regular cells and20 nonregular cells;40+24 describes region membership, not exact cell behavior","A primary-only key test leaves residual interpretation open","Permutation control is conditional and exploratory, not global intent evidence"]
+}

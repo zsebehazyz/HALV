@@ -226,3 +226,121 @@ a normalizálás és a kerekítés sorrendjét is igazolni kell, ahogy a Level 5
 C14 az L fázishelyein vett 64 bit egyszerű paritás- vagy CRC64-szerepét
 ellenőrizte a H adatokon: a deklarált affine-paritás és négy CRC64-változat
 egyike sem adott pontos kapcsolatot. Ez nem általános ellenőrzőösszeg-kizárás.
+
+## C15/C16: fizikai végpontok és fél egységnyi területkorrekció
+
+C15 elkülöníti a **logikai** 33 helyet a külön rajzolt 33. **geometriai**
+csúcstól. A 256 illesztett csúcs 255 intervallum, vízszintes távolságuk
+765 px (92…857). A 256×3=768 számtani szorzat nem bizonyít 256 teljes,
+független geometriai intervallumot; a 64×12-es cellázás külön hipotézis.
+
+A hét belső határból hatnál a külön egészértékű végpont összeeshet a közös
+végponttal; ezek nem különítik el a modelleket. Az x=284-nél a megosztott
+végpont 1,5 előző-blokkbeli egység. A rögzített egész {0,1,2,3} végpontok,
+két csatlakozási mód és három vonalskála közül mindegyik rosszabbul jósolja
+az ellenőrző oszlopot a folytonos görbénél. A végső 857→860 hosszabbítás
+a vizsgált, levágás nélküli modellekben szintén rosszul illeszkedik.
+Ez nem zárja ki a logikai paddinget, más raszterizálót vagy a rajz előtti
+adatátalakítást. A `r_b=(2-b) mod4` fázisóra továbbra is magyarázandó.
+
+C16 a BD-féljel lehetséges műveleti olvasatát és az alsó bitsíkot geometriailag
+kapcsolja össze: `q/2 = H + L/2`. A 61 alsó egyes hozzájárulása mind megmarad;
+az F- és E-csatornát nem vágjuk le. Egzakt racionális trapézintegrálás, két
+cellaigazítás, normalizált vagy fizikai csúcsmagasság, sugár/átmérő terület,
+négy korábbi párosítás, két irány és négy kerekítési szabály szerepel.
+Külön vizsgáljuk a kerekítés→összeg és az összeg→kerekítés sorrendet.
+
+1024 recept, 404 különböző érvényes skalár, 0 címegyezés mindkét P2PKH
+formátummal. A 512 fizikai-terület recept mind túlcsordul; a 512 normalizált
+receptből adódik a 404 skalár. Nincs hash, modulojavítás vagy célcím alapján
+választott skála. A statisztika és a helyes normalizálás nem azonosított.
+
+A jobb alsó lépcső külön mérése: a bal végpontok x-lépése négyszer 16 px,
+a vízszintes vonalpárok y-középértékei `879,5; 903,5; 917,5; 923,5; 926,5`.
+Az utolsó futam a kijelölt ROI szélén levágott. A középértékek különbsége
+`24,14,6,3`, ezért ezekből önmagukban nem állítunk pontos felezőképletet,
+ötblokkos vezérlést vagy számszerű normalizálást. Az aláírás utasításszerepe
+továbbra is aktív hipotézis, a teljes alakzat folytatása vizsgálandó.
+
+Adatok: `boundary33_check.json`, `boundary33_audit.png`,
+`fractional_area_check.json`, `fractional_area_profiles.json`,
+`fractional_area_recipes.json`, `fractional_area_audit.png`,
+`signature_staircase_geometry.json`; a data/ könyvtárban.
+
+## C17/C18/C19: nullahelyfázis, veszteségmentes3+1 és jutalomsor
+
+**Új, reprodukált strukturális adat:** a 3–7. blokkban nemcsak az alsó
+egyesek helye kötött. Minden négyes csoport egy teljes mintája nulla!
+Ennek fázisa `z_b=(3-b) mod4`, a páratlan mintáé `r_b=z_b-1 mod4`.
+Az előbbi a középső ötben `1,0,3,2,1`, az utóbbi `0,3,2,1,0`.
+A két fázist nem szabad felcserélni.
+
+Következmény: a négy magas bitből egy fix nulla; három magas bit és az
+r-fázis alsó bitje **veszteségmentesen** leír egy négyes csoportot.
+40 csoport→160 bit, visszakódolva pontosan egyezik mind a 160 állapottal.
+Ez a3+1 felépítés helyes bitköltsége; az öt változó bitre vonatkozó
+kezdeti gyors értelmezést a nullahelymérés alapján javítottuk.
+
+C17 az új szöveg7/8 periódusait és a három legnagyobb entrópiájú blokkot
+reprodukálja. A dátummaszk kontrollja60/560=10,714%; a felezés a nemnulla
+maszkot nem változtatja. A két képrész101 egyezése a szélső blokkokon nem
+független a teljes maszkok7/8 egyezésétől. A felhasználó korábbi1032,
+10368 és35436 kulcspróbáját külön bemenetek nélkül nem saját futásként kezeljük.
+
+C18 a felhasználói929,5 referenciával a megmért lépcsőből számítja a
+`floor(log2(h)) mod4` nullahelyfázist. Az összes képlet ugyanaz marad,
+ha a referencia a **[928,5;930,5)** tartományon belül változik. Az összes
+blokkra kiterjesztett nullahelyszám3,5,8,8,8,8,8,4 a nyolc lehetséges
+cellahelyből. Az első blokkban holtversenyes, a többiben egyedi maximum.
+
+A teljes, rétegzett veszteségmentes adat44 bájt: a három szélső blokkban
+8-8 nyers bájt, az öt középsőben4-4 bájt. Pontos256-állapotos visszakódolás.
+A három szélső blokk mintánkénti egybites kiválasztása még feltevés;
+a kimaradó96 bitet minden BD-/kontrollváltozat mellett megőriztük.
+A rögzített768 közvetlen kulcsjelölt nem adott címegyezést, hash nélkül.
+
+C19 **jutalomértelmezése** és a fázisazonosság együtt fennáll. Az ideális
+50,25,12.5,6.25,3.125 sorhoz a mért lépcső MSE-je pontosan17/64 px²,
+RMS-e0,515388 px. Mindkettő logaritmusának egészrésze5,4,3,2,1.
+A hullám középső skálái32,16,8,4,2, a jutalmakhoz közös faktoruk25/16.
+A jutalom a lépcső természetes tematikus magyarázata lehet, de a szándékolt
+kulcsműveletet ez még nem azonosítja. A feleződésből általában is
+egyesével csökkenő logaritmus-egészrészek keletkeznek.
+
+A25/16 és16/25 tényezővel külön ellenőrzött fizikai cellaterületek között
+is van256 fölötti, ezért a közvetlen pozitív páronkénti összegzés továbbra
+sem ad32 bájtot. Ez tartományvizsgálat, nem új kulcskeresés. A helyes
+geometriai normalizálás és a szélső96 bit szerepe közös nyitott feladat.
+
+## C20: egységes4+4 bites felbontás, a12 kivétel megőrzésével
+
+Az új felhasználói maszkok ésEAA/ETE/ES olvasatok pontosan reprodukálhatók.
+A kijelölt64 pozíció eloszlása52 nulla,9 egyes,3 kettes. A16 affine
+fázismodell közül a(z=3−b mod4) valóban52 nullával az első, a második38.
+A maszkBD és11000001 egyezése3/8; egyszerű kivételblokk-kijelölésként nem pontos.
+
+Pontosítás: a40 középső cellán kívül a2. blokk1.,3.,5. és a8. blokk0.
+cellája is teljesen megfelel a3+1 feltételnek (cellák nullaalapúak).
+Így44 szabályos,20 eltérő cella van. A40+24 területi csoportosítás,
+nem az összes cella pontos viselkedési besorolása.
+
+Egységes kivonatolás minden cellában, z=(3−b)mod4 és r=z−1mod4:
+
+- A4: három H bit növekvő helyi sorrendben z nélkül, majd L[r].
+- R4: H[z], majd három L bit növekvő sorrendben r nélkül.
+
+Egyetlen invertálható szabály, külön szélső bitválasztás nélkül. A mind a64
+cellán képzett A32 bájt; az R64 nibble-jéből a középső40 nulla. A szélső
+24 nibble12 bájtja mind megmarad, együtt44 bájt veszteségmentes adat.
+Az R-ben29 egyes bit van:3 darabH[z],9 darabL[z] és17 további nem-r,
+nem-z alsó egyes. A12 jelölt nullapozíció elemzése ezért nem a teljes
+maradékréteg elemzése; a másik17 bitet sem hagyjuk el.
+
+A főcsatorna24 közös bitpermutációja és rögzített irányai192 receptből96
+különböző skalárt adnak,0 célcímegyezéssel, hash nélkül. A maradék szerepe
+ettől nyitott. A szabály nem jósolja meg a12 értéket; **nem teljes generátor**.
+
+A16-modelles, hisztogramot megőrző új kontrollban20000 permutáció közül
+egyik sem érte el az52-es maximumot vagy a14-es első–második különbséget.
+Ez feltételes, feltáró kontroll;0 esemény nem nulla valószínűség és nem
+globális szándékbizonyíték. A kontrollpontszámok mentve vannak.

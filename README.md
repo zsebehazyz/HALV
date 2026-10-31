@@ -12,6 +12,20 @@ Folytatáskor először olvasd el az [AGENTS.md](AGENTS.md) fájlt és a
 a [források között](research/sources/user_prior_notes.txt) található;
 állításai önmagukban nem reprodukált eredmények.
 
+A lépcsővizsgálat az **50→3,125 BTC jutalomsorhoz** való
+illeszkedését 0,515 px RMS-sel reprodukálja. Ugyanez a felezési sor a
+középső öt blokk nullahelyfázisát is adja. A **3 magas + 1 alsó bit**
+ezekben a blokkokban veszteségmentes: mind a 160 állapotot pontosan
+visszakódoltuk. Részletek a napló tizenegyedik körében és a
+[C18](research/data/signature_phase_decode_check.json),
+[C19](research/data/reward_staircase_check.json) eredményekben.
+
+A legfrissebb [C20](research/data/uniform_phase_layers_check.json)
+ugyanazzal a szabállyal bontja az összes cellát főcsatornára és maradékra:
+32+12 bájt, teljes veszteségmentességgel. **44 cella szabályos,20 eltérő**;
+a12 kiemelt nemnulla minta mellett17 további alsó egyes is megmarad.
+A közvetlen főcsatorna96 olvasata nem adta a kulcsot; a maradék szerepe nyitott.
+
 ## Reprodukálás
 
 Python 3, külső csomag nélkül:
@@ -155,3 +169,70 @@ deltakódolással is összeköti. A rögzített családokban nincs címegyezés;
 a két fő kutatási ág továbbra is aktív.
 
 ![Fáziscsatornák](research/data/phase_channels.png)
+
+## Blokkhatárok és pontos félértékű területek
+
+```sh
+python3 tools/check_boundary33.py
+python3 tools/check_fractional_area.py
+python3 tools/measure_signature_staircase.py
+MPLCONFIGDIR=/tmp/halv_mpl XDG_CACHE_HOME=/tmp/halv_cache python3 tools/plot_boundary_fraction.py
+```
+
+C15-ben az x=284 határ a folytonos, közös végpontot támogatja a vizsgált
+külön egészértékű végpontokkal szemben. Az x=860-ig rajzolt új végpont
+sem illeszkedik a hullám végéhez. **Ez nem zárja ki a 33 logikai pozíciós
+adatkezelést**, és a fázisóra eredetét még nem magyarázza.
+
+C16 megőrzi a `q/2 = H + L/2` összes törtrészét az integrálás és a
+páronkénti összegzés előtt. Az alsó bit a cellaigazítástól függően 45 vagy
+47 területet módosít a 64-ből. A rögzített lánc 404 különböző érvényes
+skalárja nem adott címegyezést. A fizikai pixelterületek közvetlen összegzése
+minden vizsgált olvasatban túlcsordult; a helyes normalizálás továbbra is nyitott.
+
+![Blokkhatár ellenőrzése](research/data/boundary33_audit.png)
+![Fél egységnyi geometriai korrekció](research/data/fractional_area_audit.png)
+
+## Rétegzett szerkezet, lépcsőfázis és blokkjutalom
+
+```sh
+python3 tools/check_layered_structure.py
+python3 tools/check_signature_phase_decode.py
+python3 tools/check_reward_staircase.py
+MPLCONFIGDIR=/tmp/halv_mpl XDG_CACHE_HOME=/tmp/halv_cache python3 tools/plot_signature_phase.py
+```
+
+C17 reprodukálja az új felhasználói szöveg nullahely- és entrópiaméréseit,
+és keresési családra korrigált, feltételes perióduskontrollt ment.
+C18 elkülöníti a nulla- és páratlan fázist. A 40 középső cellában egy
+teljes minta mindig nulla, két további minta páros, a negyedik tetszőleges
+0…3: így 3H+1L bitből minden állapot pontosan rekonstruálható.
+
+A teljes 256 állapot veszteségmentes köztes ábrázolása
+[44 bájt](research/data/layered_lossless44.bin), rögzített blokkhosszakkal
+`8,8,4,4,4,4,4,8`. Ez kutatási adat, nem megtalált kulcs. A C18 rögzített
+BD-/kontrollvezérelt 768 skalárja egyik címformátumban sem egyezett.
+
+C19 a jutalomsort és a fáziskapcsolatot együtt tartja meg. A középső
+hullámskálák és a jutalmak pontos aránya 25/16; ez önmagában még nem
+ad bájttartományú területnormalizálást. A geometriai ág továbbra is aktív.
+
+![Lépcső és nullahelyfázisok](research/data/signature_phase_audit.png)
+
+## Egységes adat- és maradékfelbontás mind a64 cellában
+
+```sh
+python3 tools/check_uniform_phase_layers.py
+MPLCONFIGDIR=/tmp/halv_mpl XDG_CACHE_HOME=/tmp/halv_cache python3 tools/plot_uniform_layers.py
+```
+
+C20 ugyanazt a4+4 bites szétválasztást használja minden cellára.
+A főcsatorna32 bájt, a szélső blokkok maradéka12 bájt; minden állapot
+pontos visszakódolással ellenőrizve. A teljes3+1 feltételnek **44 cella**
+felel meg,20-ban van eltérés. A12 kijelölt nemnulla mintán kívül17 további
+alsó egyest is megőrzünk. A főcsatorna96 közvetlen kulcsváltozata nem ad címegyezést.
+
+Ez egységes, veszteségmentes felbontás; a maradékértékeket előrejelző
+generátort továbbra sem azonosítottuk.
+
+![Mind a64 cella két csatornája](research/data/uniform_phase_layers.png)

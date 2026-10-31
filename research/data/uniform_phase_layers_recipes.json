@@ -1,0 +1,1154 @@
+[
+  {
+    "key_hex": "9f471963c5fffefef76dd5a443ad8c6463dcc29879cd433922412af1f4f035b0",
+    "permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f4f035b022412af179cd433963dcc29843ad8c64f76dd5a4c5fffefe9f471963",
+    "permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "c698e2f97f7fffa325abb6ef2631b5c219433bc69cc2b39e8f5482440dac0f2f",
+    "permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0dac0f2f8f5482449cc2b39e19433bc62631b5c225abb6ef7f7fffa3c698e2f9",
+    "permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "369174f9efefff5c4a5dd67f46c8da34892ccd369334dc971fa214220b530f4f",
+    "permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0b530f4f1fa214229334dc97892ccd3646c8da344a5dd67fefefff5c369174f9",
+    "permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "9f2e896c3afff7f7fe6bba522c5b13626cb33491e93b2cc9442845f8f2f0cad0",
+    "permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f2f0cad0442845f8e93b2cc96cb334912c5b1362fe6bba523afff7f79f2e896c",
+    "permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "af472a53c6fffdfdf75ee694439e8c5453ecc1a87ace433a114219f2f4f036b0",
+    "permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f4f036b0114219f27ace433a53ecc1a8439e8c54f75ee694c6fffdfdaf472a53",
+    "permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "ca54e2f5bfbfff6329677aef2a3179c2158337ca5cc2735e4f9842880d6c0f2f",
+    "permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0d6c0f2f4f9842885cc2735e158337ca2a3179c229677aefbfbfff63ca54e2f5",
+    "permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "35a274fadfdfff6c496ee57f45c8e9348a1cce35a334eca72f9124110b630f4f",
+    "permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0b630f4f2f912411a334eca78a1cce3545c8e934496ee57fdfdfff6c35a274fa",
+    "permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "5f2e45ac36fffbfbfea776922c9713a2ac733851e5372cc5882489f4f2f0c6d0",
+    "permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f2f0c6d0882489f4e5372cc5ac7338512c9713a2fea7769236fffbfb5f2e45ac",
+    "permutation": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "9f271965a3fffefef76bb3c225cb8a6265baa49879ab255944214cf1f2f053d0",
+    "permutation": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f2f053d044214cf179ab255965baa49825cb8a62f76bb3c2a3fffefe9f271965",
+    "permutation": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "a698e4f97f7fffc543cdd6ef4651d3a419255da69aa4d59e8f3284220bca0f4f",
+    "permutation": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0bca0f4f8f3284229aa4d59e19255da64651d3a443cdd6ef7f7fffc5a698e4f9",
+    "permutation": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "569172f9efefff3a2c3bb67f26a8bc52894aab569552ba971fc412440d350f2f",
+    "permutation": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0d350f2f1fc412449552ba97894aab5626a8bc522c3bb67fefefff3a569172f9",
+    "permutation": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "9f4e896a5cfff7f7fe6ddc344a3d15646ad55291e95d4aa9224823f8f4f0acb0",
+    "permutation": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f4f0acb0224823f8e95d4aa96ad552914a3d1564fe6ddc345cfff7f79f4e896a",
+    "permutation": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "af172a5693fffdfdf75bb3c116cb895156b994a87a9b166a44124cf2f1f063e0",
+    "permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f1f063e044124cf27a9b166a56b994a816cb8951f75bb3c193fffdfdaf172a56",
+    "permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "6a54e8f5bfbfffc983cddaef8a91d36815299d6a5668d95e4f32482207c60f8f",
+    "permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "07c60f8f4f3248225668d95e15299d6a8a91d36883cddaefbfbfffc96a54e8f5",
+    "permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "65a271fadfdfff391c3bb57f1598bc618a499b65a661b9a72fc421440e360f1f",
+    "permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0e360f1f2fc42144a661b9a78a499b651598bc611c3bb57fdfdfff3965a271fa",
+    "permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "5f8e45a69cfffbfbfeaddc38863d19a8a6d99251e59d8665228423f4f8f06c70",
+    "permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f8f06c70228423f4e59d8665a6d99251863d19a8feaddc389cfffbfb5f8e45a6",
+    "permutation": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "cf274c35a6fffbfbf73ee692259e8a3235eaa1c87cae255c112419f4f2f056d0",
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f2f056d0112419f47cae255c35eaa1c8259e8a32f73ee692a6fffbfbcf274c35",
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "ac32e4f3dfdfff6549677cef4c5179a4138557ac3aa4753e2f9824880b6a0f4f",
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0b6a0f4f2f9824883aa4753e138557ac4c5179a449677cefdfdfff65ac32e4f3",
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "53c472fcbfbfff6a296ee37f23a8e9528c1aae53c552eac74f9142110d650f2f",
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0d650f2f4f914211c552eac78c1aae5323a8e952296ee37fbfbfff6a53c472fc",
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "3f4e23ca56fffdfdfec776944a9715c4ca755831e3574aa3884289f2f4f0a6b0",
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f4f0a6b0884289f2e3574aa3ca7558314a9715c4fec7769456fffdfd3f4e23ca",
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "cf174c3695fffbfbf73dd5a116ad893136d992c87c9d166c22142af4f1f065e0",
+    "permutation": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f1f065e022142af47c9d166c36d992c816ad8931f73dd5a195fffbfbcf174c36",
+    "permutation": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "6c32e8f3dfdfffa985abbcef8c91b56813499b6c3668b93e2f54284407a60f8f",
+    "permutation": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "07a60f8f2f5428443668b93e13499b6c8c91b56885abbcefdfdfffa96c32e8f3",
+    "permutation": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "63c471fcbfbfff591a5dd37f1398da618c299d63c661d9c74fa241220e560f1f",
+    "permutation": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0e560f1f4fa24122c661d9c78c299d631398da611a5dd37fbfbfff5963c471fc",
+    "permutation": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "3f8e23c69afffdfdfecbba58865b19c8c6b99431e39b8663448245f2f8f06a70",
+    "permutation": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f8f06a70448245f2e39b8663c6b99431865b19c8fecbba589afffdfd3f8e23c6",
+    "permutation": [
+      0,
+      3,
+      2,
+      1
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "5f8b15a3c9fffefefbadd968836d4ca8a3dcc254b5cd8335228126f1f8f03970",
+    "permutation": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f8f03970228126f1b5cd8335a3dcc254836d4ca8fbadd968c9fffefe5f8b15a3",
+    "permutation": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "c5a8d1fa7f7fff93169bb5df1532b6c12a433bc5acc1b3ad8f6481440e9c0f1f",
+    "permutation": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0e9c0f1f8f648144acc1b3ad2a433bc51532b6c1169bb5df7f7fff93c5a8d1fa",
+    "permutation": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "3a51b8f5efefff9c869ddabf8ac4d638452ccd3a5338dc5b1f62182207930f8f",
+    "permutation": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "07930f8f1f6218225338dc5b452ccd3a8ac4d638869ddabfefefff9c3a51b8f5",
+    "permutation": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "af1d8a5c39fff7f7fd5bb9611c6b23515cb334a2da3b1cca441846f8f1f0c9e0",
+    "permutation": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f1f0c9e0441846f8da3b1cca5cb334a21c6b2351fd5bb96139fff7f7af1d8a5c",
+    "permutation": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "6f8b2693cafffdfdfb9eea58835e4c9893ecc164b6ce8336118215f2f8f03a70",
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f8f03a70118215f2b6ce833693ecc164835e4c98fb9eea58cafffdfd6f8b2693",
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "c964d1f6bfbfff531a5779df19327ac1268337c96cc1736d4fa841880e5c0f1f",
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0e5c0f1f4fa841886cc1736d268337c919327ac11a5779dfbfbfff53c964d1f6",
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "3962b8f6dfdfffac85aee9bf89c4e538461cce396338ec6b2f51281107a30f8f",
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "07a30f8f2f5128116338ec6b461cce3989c4e53885aee9bfdfdfffac3962b8f6",
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "6f1d469c35fffbfbfd9775a11ca723919c733862d6371cc688148af4f1f0c5e0",
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f1f0c5e088148af4d6371cc69c7338621ca72391fd9775a135fffbfb6f1d469c",
+    "permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "3f8d13c5a9fffefefdcbb968856b2ac8c5baa432d3ab8553448146f1f8f05970",
+    "permutation": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f8f05970448146f1d3ab8553c5baa432856b2ac8fdcbb968a9fffefe3f8d13c5",
+    "permutation": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "a3c8b1fc7f7fff95169dd3bf1354d6a14c255da3caa1d5cb8f6281220e9a0f1f",
+    "permutation": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0e9a0f1f8f628122caa1d5cb4c255da31354d6a1169dd3bf7f7fff95a3c8b1fc",
+    "permutation": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "5c31d8f3efefff9a869bbcdf8ca2b658234aab5c3558ba3d1f64184407950f8f",
+    "permutation": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "07950f8f1f6418443558ba3d234aab5c8ca2b658869bbcdfefefff9a5c31d8f3",
+    "permutation": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "cf1b8c3a59fff7f7fb3dd9611a6d45313ad552c4bc5d1aac221826f8f1f0a9e0",
+    "permutation": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f1f0a9e0221826f8bc5d1aac3ad552c41a6d4531fb3dd96159fff7f7cf1b8c3a",
+    "permutation": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "6f8d4695acfffbfbfd9eec38853e2a9895eaa162d6ae8556118413f4f8f05c70",
+    "permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f8f05c70118413f4d6ae855695eaa162853e2a98fd9eec38acfffbfb6f8d4695",
+    "permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "a962b1f6dfdfff351c3779bf19547ca1468557a96aa1756b2fc821880e3a0f1f",
+    "permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0e3a0f1f2fc821886aa1756b468557a919547ca11c3779bfdfdfff35a962b1f6",
+    "permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "5964d8f6bfbfffca83cee9df89a2e358261aae596558ea6d4f31481107c50f8f",
+    "permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "07c50f8f4f3148116558ea6d261aae5989a2e35883cee9dfbfbfffca5964d8f6",
+    "permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "6f1b269a53fffdfdfb9773c11ac745919a755864b6571aa688128cf2f1f0a3e0",
+    "permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f1f0a3e088128cf2b6571aa69a7558641ac74591fb9773c153fffdfd6f1b269a",
+    "permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "5f2b15a963fffefefba773c229c746a2a9766854b567299588218cf1f2f093d0",
+    "permutation": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f2f093d088218cf1b5672995a976685429c746a2fba773c263fffefe5f2b15a9",
+    "permutation": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "95a8d4fa7f7fffc643cee5df4562e3942a166e95a994e6ad8f3184110bc90f4f",
+    "permutation": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0bc90f4f8f318411a994e6ad2a166e954562e39443cee5df7f7fffc695a8d4fa",
+    "permutation": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "9a51b2f5efefff362c377abf2a647c924586679a5992765b1fc812880d390f2f",
+    "permutation": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0d390f2f1fc812885992765b4586679a2a647c922c377abfefefff369a51b2f5",
+    "permutation": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "af4d8a596cfff7f7fd5eec34493e265459e661a2da6e499a114813f8f4f09cb0",
+    "permutation": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f4f09cb0114813f8da6e499a59e661a2493e2654fd5eec346cfff7f7af4d8a59",
+    "permutation": [
+      2,
+      0,
+      1,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "3f4d13c965fffefefdc775a449a726c4c9766832d367499388418af1f4f095b0",
+    "permutation": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f4f095b088418af1d3674993c976683249a726c4fdc775a465fffefe3f4d13c9",
+    "permutation": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "93c8b2fc7f7fffa625aee3bf2364e5924c166e93c992e6cb8f5182110da90f2f",
+    "permutation": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0da90f2f8f518211c992e6cb4c166e932364e59225aee3bf7f7fffa693c8b2fc",
+    "permutation": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "reverse_cells": false,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "9c31d4f3efefff564a577cdf4c627a942386679c3994763d1fa814880b590f4f",
+    "permutation": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "0b590f4f1fa814883994763d2386679c4c627a944a577cdfefefff569c31d4f3",
+    "permutation": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": false,
+    "reverse_blocks": true
+  },
+  {
+    "key_hex": "cf2b8c396afff7f7fb3eea52295e463239e661c4bc6e299c112815f8f2f09ad0",
+    "permutation": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": false
+  },
+  {
+    "key_hex": "f2f09ad0112815f8bc6e299c39e661c4295e4632fb3eea526afff7f7cf2b8c39",
+    "permutation": [
+      2,
+      1,
+      0,
+      3
+    ],
+    "reverse_cells": true,
+    "reverse_bits": true,
+    "reverse_blocks": true
+  }
+]

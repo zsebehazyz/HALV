@@ -1,0 +1,182 @@
+{
+  "model": "C19",
+  "input_sha256": {
+    "research/data/signature_phase_decode_check.json": "a8413be924ba0bef0b53e5122eed5d66c9fd18349154008b386eb69236df844e",
+    "research/data/fractional_area_profiles.json": "2f1b2125dd465492c54f2a02fe5464d186ad7ac743cefac8723f785cd4faec9f",
+    "research/models/reward_staircase_v1.json": "10b68bf27bfc893997b0139f15bf9869ea4e33b54df3ec694304cc810e8cbdf3",
+    "tools/check_reward_staircase.py": "d78de15297aca28d84ad767de4bf658c1a60e2971fc5e3a9666da3a6d9ecd091"
+  },
+  "measured_heights_exact": [
+    "50",
+    "26",
+    "12",
+    "6",
+    "3"
+  ],
+  "reward_series_exact": [
+    "50",
+    "25",
+    "25/2",
+    "25/4",
+    "25/8"
+  ],
+  "height_minus_reward_exact": [
+    "0",
+    "1",
+    "-1/2",
+    "-1/4",
+    "-1/8"
+  ],
+  "mean_squared_error_exact": "17/64",
+  "rmse_pixels": 0.5153882032022076,
+  "max_abs_residual_pixels": 1.0,
+  "ideal_reward_floor_logs": [
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "ideal_reward_zero_phases": [
+    1,
+    0,
+    3,
+    2,
+    1
+  ],
+  "same_as_measured_signature_phase": true,
+  "reward_to_middle_wave_scale_factor_exact": "25/16",
+  "scaled_all8_amplitude_values_exact": [
+    "200",
+    "100",
+    "50",
+    "25",
+    "25/2",
+    "25/4",
+    "25/8",
+    "25/16"
+  ],
+  "all8_extension_is_not_all_historical_rewards": true,
+  "physical_area_range_only_checks": [
+    {
+      "profile": "physical_nodes/half_q_corrected/anchor=91/radius",
+      "factor": "25/16",
+      "maximum_cell_exact": "6850/3",
+      "floor_maximum": 2283,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/half_q_corrected/anchor=91/radius",
+      "factor": "16/25",
+      "maximum_cell_exact": "70144/75",
+      "floor_maximum": 935,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/half_q_corrected/anchor=91/diameter",
+      "factor": "25/16",
+      "maximum_cell_exact": "13700/3",
+      "floor_maximum": 4566,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/half_q_corrected/anchor=91/diameter",
+      "factor": "16/25",
+      "maximum_cell_exact": "140288/75",
+      "floor_maximum": 1870,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/high_bit_only_control/anchor=91/radius",
+      "factor": "25/16",
+      "maximum_cell_exact": "5000/3",
+      "floor_maximum": 1666,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/high_bit_only_control/anchor=91/radius",
+      "factor": "16/25",
+      "maximum_cell_exact": "2048/3",
+      "floor_maximum": 682,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/high_bit_only_control/anchor=91/diameter",
+      "factor": "25/16",
+      "maximum_cell_exact": "10000/3",
+      "floor_maximum": 3333,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/high_bit_only_control/anchor=91/diameter",
+      "factor": "16/25",
+      "maximum_cell_exact": "4096/3",
+      "floor_maximum": 1365,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/half_q_corrected/anchor=92/radius",
+      "factor": "25/16",
+      "maximum_cell_exact": "2100",
+      "floor_maximum": 2100,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/half_q_corrected/anchor=92/radius",
+      "factor": "16/25",
+      "maximum_cell_exact": "21504/25",
+      "floor_maximum": 860,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/half_q_corrected/anchor=92/diameter",
+      "factor": "25/16",
+      "maximum_cell_exact": "4200",
+      "floor_maximum": 4200,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/half_q_corrected/anchor=92/diameter",
+      "factor": "16/25",
+      "maximum_cell_exact": "43008/25",
+      "floor_maximum": 1720,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/high_bit_only_control/anchor=92/radius",
+      "factor": "25/16",
+      "maximum_cell_exact": "1500",
+      "floor_maximum": 1500,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/high_bit_only_control/anchor=92/radius",
+      "factor": "16/25",
+      "maximum_cell_exact": "3072/5",
+      "floor_maximum": 614,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/high_bit_only_control/anchor=92/diameter",
+      "factor": "25/16",
+      "maximum_cell_exact": "3000",
+      "floor_maximum": 3000,
+      "direct_pair_byte_overflow_unavoidable": true
+    },
+    {
+      "profile": "physical_nodes/high_bit_only_control/anchor=92/diameter",
+      "factor": "16/25",
+      "maximum_cell_exact": "6144/5",
+      "floor_maximum": 1228,
+      "direct_pair_byte_overflow_unavoidable": true
+    }
+  ],
+  "interpretation": "Reward theme and phase identity coexist; the common scale does not yet normalize areas into bytes",
+  "no_private_key_search": true,
+  "limitations": [
+    "A close reward match is a thematic geometric explanation, not a private-key decoding rule",
+    "Descending floor-log2 exponents also follow generically from halving",
+    "Extending the middle proportionality to all8 blocks is mathematical extrapolation;200 and100BTC are not historical block subsidies",
+    "No arbitrary additional divisor or key-candidate search"
+  ]
+}

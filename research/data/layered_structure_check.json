@@ -1,0 +1,744 @@
+{
+  "model": "C17",
+  "input_sha256": {
+    "research/sources/user_layered_notes_20261031.txt": "21eb0b7204288a8353a33ea1ff3b068d9291353534cc05276325fc77abcb86f5",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/models/layered_structure_v1.json": "c65428f11fe91d8c65d2eb9f4e2c8fb712bad89d15829f2b988b3f542f9c92d9",
+    "tools/check_layered_structure.py": "199eef5462b3c959dc2af82a5473dc9398b02bf9ccb1591c510ccebc4597ca3b"
+  },
+  "blocks": [
+    {
+      "block_1based": 1,
+      "state_counts": [
+        9,
+        10,
+        7,
+        6
+      ],
+      "state_entropy_bits": 1.9715667056067312,
+      "high_bit_entropy_bits": 0.9744894033980523,
+      "zero_positions": [
+        7,
+        8,
+        10,
+        11,
+        12,
+        17,
+        23,
+        28,
+        29
+      ],
+      "phase": 2,
+      "off_phase_low_ones": 10,
+      "zero_counts_by_phase": [
+        3,
+        2,
+        1,
+        3
+      ],
+      "predicted_zero_phase": 3
+    },
+    {
+      "block_1based": 2,
+      "state_counts": [
+        8,
+        2,
+        15,
+        7
+      ],
+      "state_entropy_bits": 1.742036144108406,
+      "high_bit_entropy_bits": 0.8960382325345574,
+      "zero_positions": [
+        3,
+        4,
+        6,
+        7,
+        14,
+        18,
+        22,
+        30
+      ],
+      "phase": 1,
+      "off_phase_low_ones": 4,
+      "zero_counts_by_phase": [
+        1,
+        0,
+        5,
+        2
+      ],
+      "predicted_zero_phase": 2
+    },
+    {
+      "block_1based": 3,
+      "state_counts": [
+        15,
+        2,
+        12,
+        3
+      ],
+      "state_entropy_bits": 1.613193861095465,
+      "high_bit_entropy_bits": 0.9971803988942642,
+      "zero_positions": [
+        1,
+        5,
+        8,
+        9,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        26,
+        28,
+        29,
+        31
+      ],
+      "phase": 0,
+      "off_phase_low_ones": 0,
+      "zero_counts_by_phase": [
+        2,
+        8,
+        1,
+        4
+      ],
+      "predicted_zero_phase": 1
+    },
+    {
+      "block_1based": 4,
+      "state_counts": [
+        19,
+        1,
+        11,
+        1
+      ],
+      "state_entropy_bits": 1.2886134199863002,
+      "high_bit_entropy_bits": 0.954434002924965,
+      "zero_positions": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        16,
+        18,
+        19,
+        20,
+        23,
+        24,
+        25,
+        28,
+        29,
+        31
+      ],
+      "phase": 3,
+      "off_phase_low_ones": 0,
+      "zero_counts_by_phase": [
+        8,
+        4,
+        3,
+        4
+      ],
+      "predicted_zero_phase": 0
+    },
+    {
+      "block_1based": 5,
+      "state_counts": [
+        18,
+        2,
+        11,
+        1
+      ],
+      "state_entropy_bits": 1.4027375677821283,
+      "high_bit_entropy_bits": 0.954434002924965,
+      "zero_positions": [
+        0,
+        3,
+        4,
+        5,
+        7,
+        11,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        23,
+        25,
+        27,
+        29,
+        30,
+        31
+      ],
+      "phase": 2,
+      "off_phase_low_ones": 0,
+      "zero_counts_by_phase": [
+        3,
+        4,
+        3,
+        8
+      ],
+      "predicted_zero_phase": 3
+    },
+    {
+      "block_1based": 6,
+      "state_counts": [
+        17,
+        4,
+        9,
+        2
+      ],
+      "state_entropy_bits": 1.6244939589301068,
+      "high_bit_entropy_bits": 0.9283620723948676,
+      "zero_positions": [
+        0,
+        2,
+        6,
+        7,
+        10,
+        11,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        22,
+        24,
+        26,
+        30,
+        31
+      ],
+      "phase": 1,
+      "off_phase_low_ones": 0,
+      "zero_counts_by_phase": [
+        4,
+        0,
+        8,
+        5
+      ],
+      "predicted_zero_phase": 2
+    },
+    {
+      "block_1based": 7,
+      "state_counts": [
+        21,
+        2,
+        8,
+        1
+      ],
+      "state_entropy_bits": 1.3050416913014387,
+      "high_bit_entropy_bits": 0.8571484374283715,
+      "zero_positions": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        25,
+        29,
+        30,
+        31
+      ],
+      "phase": 0,
+      "off_phase_low_ones": 0,
+      "zero_counts_by_phase": [
+        4,
+        8,
+        6,
+        3
+      ],
+      "predicted_zero_phase": 1
+    },
+    {
+      "block_1based": 8,
+      "state_counts": [
+        10,
+        11,
+        5,
+        6
+      ],
+      "state_entropy_bits": 1.9252361177297612,
+      "high_bit_entropy_bits": 0.9283620723948676,
+      "zero_positions": [
+        0,
+        7,
+        8,
+        12,
+        14,
+        15,
+        21,
+        28,
+        30,
+        31
+      ],
+      "phase": 3,
+      "off_phase_low_ones": 12,
+      "zero_counts_by_phase": [
+        4,
+        1,
+        2,
+        3
+      ],
+      "predicted_zero_phase": 0
+    }
+  ],
+  "entropy_contrast": {
+    "edge_mean": 1.8796129891482993,
+    "middle_mean": 1.4468160998190878,
+    "difference": 0.43279688932921156,
+    "three_block_choices": 56,
+    "as_good_descriptive": 1,
+    "not_an_independent_significance_test": true
+  },
+  "specified_lattices": {
+    "(2, 8, 6)": {
+      "matches": true,
+      "fixed_lattice_probability": 0.001946607341490545,
+      "sample_count": 4,
+      "as_good_family_control": 1223,
+      "family_control_fraction": 0.06115
+    },
+    "(8, 7, 0)": {
+      "matches": true,
+      "fixed_lattice_probability": 0.0012513904338153504,
+      "sample_count": 5,
+      "as_good_family_control": 476,
+      "family_control_fraction": 0.0238
+    }
+  },
+  "all_complete_zero_lattices": [
+    {
+      "block_1based": 2,
+      "period": 8,
+      "residue": 6,
+      "positions": [
+        6,
+        14,
+        22,
+        30
+      ],
+      "fixed_lattice_probability": 0.001946607341490545,
+      "score": 6.241667246536197
+    },
+    {
+      "block_1based": 3,
+      "period": 4,
+      "residue": 1,
+      "positions": [
+        1,
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29
+      ],
+      "fixed_lattice_probability": 0.0006117908787541713,
+      "score": 7.399120035227241
+    },
+    {
+      "block_1based": 3,
+      "period": 8,
+      "residue": 1,
+      "positions": [
+        1,
+        9,
+        17,
+        25
+      ],
+      "fixed_lattice_probability": 0.03795884315906563,
+      "score": 3.2712527809664964
+    },
+    {
+      "block_1based": 3,
+      "period": 8,
+      "residue": 5,
+      "positions": [
+        5,
+        13,
+        21,
+        29
+      ],
+      "fixed_lattice_probability": 0.03795884315906563,
+      "score": 3.2712527809664964
+    },
+    {
+      "block_1based": 4,
+      "period": 4,
+      "residue": 0,
+      "positions": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ],
+      "fixed_lattice_probability": 0.007185761957730812,
+      "score": 4.93565371667711
+    },
+    {
+      "block_1based": 4,
+      "period": 8,
+      "residue": 0,
+      "positions": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "fixed_lattice_probability": 0.10778642936596218,
+      "score": 2.2276035155749
+    },
+    {
+      "block_1based": 4,
+      "period": 8,
+      "residue": 4,
+      "positions": [
+        4,
+        12,
+        20,
+        28
+      ],
+      "fixed_lattice_probability": 0.10778642936596218,
+      "score": 2.2276035155749
+    },
+    {
+      "block_1based": 4,
+      "period": 9,
+      "residue": 1,
+      "positions": [
+        1,
+        10,
+        19,
+        28
+      ],
+      "fixed_lattice_probability": 0.10778642936596218,
+      "score": 2.2276035155749
+    },
+    {
+      "block_1based": 5,
+      "period": 4,
+      "residue": 3,
+      "positions": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31
+      ],
+      "fixed_lattice_probability": 0.004160177975528365,
+      "score": 5.4821974230451795
+    },
+    {
+      "block_1based": 5,
+      "period": 7,
+      "residue": 4,
+      "positions": [
+        4,
+        11,
+        18,
+        25
+      ],
+      "fixed_lattice_probability": 0.08509454949944383,
+      "score": 2.46399229363913
+    },
+    {
+      "block_1based": 5,
+      "period": 8,
+      "residue": 3,
+      "positions": [
+        3,
+        11,
+        19,
+        27
+      ],
+      "fixed_lattice_probability": 0.08509454949944383,
+      "score": 2.46399229363913
+    },
+    {
+      "block_1based": 5,
+      "period": 8,
+      "residue": 7,
+      "positions": [
+        7,
+        15,
+        23,
+        31
+      ],
+      "fixed_lattice_probability": 0.08509454949944383,
+      "score": 2.46399229363913
+    },
+    {
+      "block_1based": 6,
+      "period": 4,
+      "residue": 2,
+      "positions": [
+        2,
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ],
+      "fixed_lattice_probability": 0.002311209986404647,
+      "score": 6.069984087947299
+    },
+    {
+      "block_1based": 6,
+      "period": 8,
+      "residue": 2,
+      "positions": [
+        2,
+        10,
+        18,
+        26
+      ],
+      "fixed_lattice_probability": 0.06618464961067853,
+      "score": 2.715306721920036
+    },
+    {
+      "block_1based": 6,
+      "period": 8,
+      "residue": 6,
+      "positions": [
+        6,
+        14,
+        22,
+        30
+      ],
+      "fixed_lattice_probability": 0.06618464961067853,
+      "score": 2.715306721920036
+    },
+    {
+      "block_1based": 6,
+      "period": 10,
+      "residue": 0,
+      "positions": [
+        0,
+        10,
+        20,
+        30
+      ],
+      "fixed_lattice_probability": 0.06618464961067853,
+      "score": 2.715306721920036
+    },
+    {
+      "block_1based": 7,
+      "period": 4,
+      "residue": 1,
+      "positions": [
+        1,
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29
+      ],
+      "fixed_lattice_probability": 0.01934628219389065,
+      "score": 3.9452550126492327
+    },
+    {
+      "block_1based": 7,
+      "period": 7,
+      "residue": 1,
+      "positions": [
+        1,
+        8,
+        15,
+        22,
+        29
+      ],
+      "fixed_lattice_probability": 0.10104977753058954,
+      "score": 2.292142036712471
+    },
+    {
+      "block_1based": 7,
+      "period": 7,
+      "residue": 4,
+      "positions": [
+        4,
+        11,
+        18,
+        25
+      ],
+      "fixed_lattice_probability": 0.16643492769744161,
+      "score": 1.7931508705934829
+    },
+    {
+      "block_1based": 7,
+      "period": 8,
+      "residue": 1,
+      "positions": [
+        1,
+        9,
+        17,
+        25
+      ],
+      "fixed_lattice_probability": 0.16643492769744161,
+      "score": 1.7931508705934829
+    },
+    {
+      "block_1based": 7,
+      "period": 8,
+      "residue": 5,
+      "positions": [
+        5,
+        13,
+        21,
+        29
+      ],
+      "fixed_lattice_probability": 0.16643492769744161,
+      "score": 1.7931508705934829
+    },
+    {
+      "block_1based": 7,
+      "period": 8,
+      "residue": 6,
+      "positions": [
+        6,
+        14,
+        22,
+        30
+      ],
+      "fixed_lattice_probability": 0.16643492769744161,
+      "score": 1.7931508705934829
+    },
+    {
+      "block_1based": 7,
+      "period": 9,
+      "residue": 4,
+      "positions": [
+        4,
+        13,
+        22,
+        31
+      ],
+      "fixed_lattice_probability": 0.16643492769744161,
+      "score": 1.7931508705934829
+    },
+    {
+      "block_1based": 7,
+      "period": 10,
+      "residue": 1,
+      "positions": [
+        1,
+        11,
+        21,
+        31
+      ],
+      "fixed_lattice_probability": 0.16643492769744161,
+      "score": 1.7931508705934829
+    },
+    {
+      "block_1based": 8,
+      "period": 7,
+      "residue": 0,
+      "positions": [
+        0,
+        7,
+        14,
+        21,
+        28
+      ],
+      "fixed_lattice_probability": 0.0012513904338153504,
+      "score": 6.683499998815237
+    }
+  ],
+  "strongest_lattice_in_family": {
+    "block_1based": 3,
+    "period": 4,
+    "residue": 1,
+    "positions": [
+      1,
+      5,
+      9,
+      13,
+      17,
+      21,
+      25,
+      29
+    ],
+    "fixed_lattice_probability": 0.0006117908787541713,
+    "score": 7.399120035227241
+  },
+  "family_control": {
+    "draws": 20000,
+    "seed": 173105,
+    "as_good": 174,
+    "fraction": 0.0087,
+    "maximum_scores_file": "research/data/layered_zero_surrogates.npz"
+  },
+  "date_bd": {
+    "date": "20042402",
+    "halved_digitwise": "10021201",
+    "nonzero_mask": "10011101",
+    "mask_hex": "9d",
+    "bd": "10111101",
+    "hamming_distance": 1,
+    "distinct_permutations": 560,
+    "distance_histogram": {
+      "1": 60,
+      "5": 200,
+      "3": 300
+    },
+    "as_good": 60,
+    "fraction": 0.10714285714285714,
+    "edge_bit_selection_both": "101",
+    "halving_does_not_change_nonzero_mask": true,
+    "agreement_on_edges_not_independent_of_overall_mask_agreement": true
+  },
+  "bit_budget": {
+    "middle_cells": 40,
+    "high_bit_positions_per_cell": 4,
+    "fixed_zero_high_bit_positions_per_cell": 1,
+    "variable_high_bit_positions_per_cell": 3,
+    "additional_variable_low_bits_per_cell": 1,
+    "middle_variable_bit_positions": 160,
+    "high_only_output_bits_including_fixed_zeros": 160,
+    "middle_low_flag40_hex_as_5_bytes": "0xdc5062d713",
+    "edge_one_bit_selection_output_bits": 96,
+    "warning": "The additional always-zero phase makes3H+1L lossless in the middle; choosing only one bit per edge sample remains an unproved rule"
+  },
+  "user_reported_candidate_counts_not_reproduced": [
+    1032,
+    10368,
+    35436
+  ],
+  "no_private_key_search": true,
+  "limitations": [
+    "Exploratory conditional reference, not global discovery probability",
+    "Entropy contrast uses groups selected on the same data",
+    "3+5=8 and256 output bits do not identify a decoder",
+    "Codex Protocol Fibonacci-mod5 historical claim lacks a concrete source URL here and is not independently verified"
+  ]
+}

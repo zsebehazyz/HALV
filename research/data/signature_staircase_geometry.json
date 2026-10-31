@@ -1,0 +1,77 @@
+{
+  "source": "research/sources/cryptoHALV.png",
+  "source_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "script_sha256": "874520a478a8ed200c6e9d38207eec8e74bc95e5e0e1067fe09c7f3c5e370cd3",
+  "roi_xyxy_exclusive": [
+    788,
+    830,
+    868,
+    930
+  ],
+  "predicate": "white horizontal run >=4 pixels; adjacent identical rows merged",
+  "horizontals": [
+    {
+      "x_start": 794,
+      "x_end_inclusive": 811,
+      "width": 18,
+      "y_start": 879,
+      "y_end_inclusive": 880,
+      "center_y": 879.5,
+      "touches_right_roi_boundary": false
+    },
+    {
+      "x_start": 810,
+      "x_end_inclusive": 827,
+      "width": 18,
+      "y_start": 903,
+      "y_end_inclusive": 904,
+      "center_y": 903.5,
+      "touches_right_roi_boundary": false
+    },
+    {
+      "x_start": 826,
+      "x_end_inclusive": 843,
+      "width": 18,
+      "y_start": 917,
+      "y_end_inclusive": 918,
+      "center_y": 917.5,
+      "touches_right_roi_boundary": false
+    },
+    {
+      "x_start": 842,
+      "x_end_inclusive": 859,
+      "width": 18,
+      "y_start": 923,
+      "y_end_inclusive": 924,
+      "center_y": 923.5,
+      "touches_right_roi_boundary": false
+    },
+    {
+      "x_start": 858,
+      "x_end_inclusive": 867,
+      "width": 10,
+      "y_start": 926,
+      "y_end_inclusive": 927,
+      "center_y": 926.5,
+      "touches_right_roi_boundary": true
+    }
+  ],
+  "left_endpoint_spacings_px": [
+    16,
+    16,
+    16,
+    16
+  ],
+  "center_y_spacings_px": [
+    24.0,
+    14.0,
+    6.0,
+    3.0
+  ],
+  "limitations": [
+    "Last run is clipped by the ROI; continuation overlaps label region",
+    "Five visible runs are not evidence for exactly five encoded data blocks",
+    "No exact halving rule or numeric normalization follows from these row spacings alone"
+  ],
+  "no_private_key_search": true
+}

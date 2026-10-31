@@ -1,0 +1,21 @@
+{
+  "model":"C16",
+  "question":"Does retaining q/2 = H + L/2 before geometric integration and rounding recover a 64-area to32-byte chain?",
+  "source":"Nominal256 states only; keep original order and values",
+  "height_channels":["half_q_corrected","high_bit_only_control"],
+  "height_definitions":{"half_q_corrected":"q/2","high_bit_only_control":"floor(q/2)"},
+  "domains":{"normalized_nodes":"Interpolate the normalized node heights","physical_nodes":"Multiply each node height by its measured amplitude scale128/2**block before interpolation"},
+  "cell_anchors_px":[91,92],
+  "cell_width_px":12,
+  "cell_count":64,
+  "extents":{"radius":1,"diameter":2},
+  "outside_node_span":"Constant endpoint continuation, explicitly an assumption; last q=0",
+  "arithmetic":"Exact rational piecewise-linear integration; no floating point before key formation",
+  "pairings":["adjacent","global_halves","within_halving_block_halves","transpose_8x8_then_adjacent"],
+  "directions":["forward","reverse_64_values"],
+  "rounders":["floor","ceil","nearest_ties_even","nearest_ties_up"],
+  "rounding_orders":["round_each_then_sum","sum_then_round"],
+  "finalization":"32 direct bytes; reject overflow or invalid scalar; both P2PKH formats; no hash or modulo repair",
+  "structural_checks":["Piecewise-linear exact-integral known answers","Area(H)+Area(L/2)=Area(q/2) for every cell and domain","All rounders known ties and non-ties"],
+  "limitations":["Neither the true geometric statistic nor its normalization is identified","Normalized-node interpolation and physical geometry are separate hypotheses","Cell anchors and endpoint continuation are explicit assumptions","No negative result excludes the general64-to32 composition or an instruction in the signature"]
+}

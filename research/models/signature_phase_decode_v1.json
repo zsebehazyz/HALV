@@ -1,0 +1,19 @@
+{
+  "model":"C18",
+  "question":"Does the measured staircase determine a lossless3H+1L middle code and a complete layered key?",
+  "signature_source":"Five horizontal centerlines measured in signature_staircase_geometry.json",
+  "reference_y":"929.5, as proposed by user; also report exact baseline interval preserving the floor-log values",
+  "phase_formula":"zero_phase = floor(log2(reference_y - horizontal_center_y)) mod4",
+  "middle_blocks_1based":[3,4,5,6,7],
+  "odd_phase":"zero_phase -1 mod4; distinguish from zero phase",
+  "middle_code":"In each four-state cell: three H bits at positions other than the always-zero phase, plus L at odd phase",
+  "verification":"Reconstruct all160 middle states exactly from their40 nibbles; retain the unselected96 edge bits separately",
+  "edge_selection_rules":["BD_1_high_0_low","BD_1_low_0_high","all_high_control","all_low_control"],
+  "bd":"10111101",
+  "bit_orders":"All24 uniform permutations of the four middle-code bits; same permutation in every cell",
+  "cell_order":["forward","reverse_within_middle_block"],
+  "bit_direction":["forward","reverse_each32bit_block"],
+  "block_order":["original","reverse_all8"],
+  "finalization":"Direct32byte scalar, both P2PKH formats; no hash, modular half, post-hoc repair or per-block permutation",
+  "limitations":["Phase relation noticed after observing data; not independent proof of intent","Approximately halving heights generically give descending floor-log exponents","A tie for most zeros is allowed and reported, not described as a unique maximum","One-bit selection in the three edge blocks remains a hypothesis, with all omitted bits retained"]
+}

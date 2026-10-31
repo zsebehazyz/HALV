@@ -73,6 +73,27 @@
       "target_or_exact_matches": 0
     },
     {
+      "result": "research/data/fractional_area_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 404,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
+      "result": "research/data/signature_phase_decode_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 768,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
+      "result": "research/data/uniform_phase_layers_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 96,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
       "result": "research/data/marker_glyph_relation.json",
       "count_field": "attempts_including_duplicates",
       "count": 61200,
@@ -92,6 +113,18 @@
       "role": "executed_result_or_artifact",
       "bytes": 2735,
       "sha256": "7e94c85ef372058a409801edd6c15c0006ae0f4702214252d971390a49fbe941"
+    },
+    {
+      "path": "research/data/boundary33_audit.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 241770,
+      "sha256": "089965516773d72f48ec6febeabaf511d882f6587fb71f7c7cbbd85ef605ab29"
+    },
+    {
+      "path": "research/data/boundary33_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 48516,
+      "sha256": "5b9d46542260c43f548f02e2ffd6ff798414a4c3a7c1143e3281fdd36b46e36b"
     },
     {
       "path": "research/data/btc_usd_daily_2020_to_halving.csv",
@@ -142,6 +175,30 @@
       "sha256": "0060745795c50fc9237bbfbf09041164cbbba3b540fe87fae253f250e2c04e40"
     },
     {
+      "path": "research/data/fractional_area_audit.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 231730,
+      "sha256": "848f9d675eea83188e96f911de947f923080720a3cf35807728801df253d0299"
+    },
+    {
+      "path": "research/data/fractional_area_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 9981,
+      "sha256": "6e093e315aad88b94be704bf1ee3195cf3b3913c52c664bcb4aede7b02ed4b56"
+    },
+    {
+      "path": "research/data/fractional_area_profiles.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 17251,
+      "sha256": "2f1b2125dd465492c54f2a02fe5464d186ad7ac743cefac8723f785cd4faec9f"
+    },
+    {
+      "path": "research/data/fractional_area_recipes.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 385727,
+      "sha256": "31c8b7a587f2e414d36af64807202303219833f83b6881197b7730bd1ea5e3da"
+    },
+    {
       "path": "research/data/halv_64_cells.csv",
       "role": "executed_result_or_artifact",
       "bytes": 2407,
@@ -158,6 +215,24 @@
       "role": "executed_result_or_artifact",
       "bytes": 6844,
       "sha256": "04557c09a16f6f3a41c503c883c93f0f1717675a4a240bb2bcd960d3186d82d1"
+    },
+    {
+      "path": "research/data/layered_lossless44.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 44,
+      "sha256": "6613982c04744eaba5ebcf0fc7fdff6f5fc83da3ecd7163fef59542b5fbc91e5"
+    },
+    {
+      "path": "research/data/layered_structure_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 14272,
+      "sha256": "28e194c97c4c1ccb156cede9f50dd2e8d095fd4bc3777ef0d5c4bd0d1465591b"
+    },
+    {
+      "path": "research/data/layered_zero_surrogates.npz",
+      "role": "executed_result_or_artifact",
+      "bytes": 19777,
+      "sha256": "566d01d1153f710546833b6c267aad78b2a14a0bbf30df6e87fade14c77df2a8"
     },
     {
       "path": "research/data/level5_geometry_verification.json",
@@ -310,10 +385,40 @@
       "sha256": "53970e5db54a5783c97f66a2011aa7e3443f2f4c554b7005d55eece52b093cdc"
     },
     {
+      "path": "research/data/reward_staircase_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 5578,
+      "sha256": "b828d2179c0084b2de4ef02d0321875c867d12308c972208292566c9213d8354"
+    },
+    {
       "path": "research/data/runtime_versions.json",
       "role": "executed_result_or_artifact",
       "bytes": 99,
       "sha256": "290c89c5fb05476b19de32a70d6a630193d1a97f78195f833664c6909805282d"
+    },
+    {
+      "path": "research/data/signature_phase_audit.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 175277,
+      "sha256": "55fce6b1e51a40cbf47b4046741b95f6328ecafcdd3d4527ae13a3d0b0fb0c02"
+    },
+    {
+      "path": "research/data/signature_phase_decode_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 7660,
+      "sha256": "a8413be924ba0bef0b53e5122eed5d66c9fd18349154008b386eb69236df844e"
+    },
+    {
+      "path": "research/data/signature_phase_decode_recipes.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 240579,
+      "sha256": "d09bbac32d6a4fc564f0b15c3ee57c453efc846b7e078126610e5bd75ccb3ae4"
+    },
+    {
+      "path": "research/data/signature_staircase_geometry.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1849,
+      "sha256": "c6d00d8e9d0323b101060e85c5b5dbdadc38f8aa377c3ca86a1d2e7eb7762c88"
     },
     {
       "path": "research/data/signed_model_check.json",
@@ -344,6 +449,48 @@
       "role": "executed_result_or_artifact",
       "bytes": 637695,
       "sha256": "84eb5d82a246cc6e6aa77e3531b7eb1ec474673d44f6d34cb79088a86c9d9ceb"
+    },
+    {
+      "path": "research/data/uniform_affine_surrogates.npz",
+      "role": "executed_result_or_artifact",
+      "bytes": 25544,
+      "sha256": "0306c20ab766493922c8f7b45193410b112a247a0b0f05a5d88a57a17a7d8bc1"
+    },
+    {
+      "path": "research/data/uniform_edge_residual12.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 12,
+      "sha256": "d11f2a7e0295f65967cd3afc51c5f784ba9131f5a9efe6d2c989c1d68335c4b1"
+    },
+    {
+      "path": "research/data/uniform_lossless44.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 44,
+      "sha256": "2fa31fde801b3e8db72029926da90f223ae9ea98e8732fda3cb7071f1efa5613"
+    },
+    {
+      "path": "research/data/uniform_phase_layers.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 99662,
+      "sha256": "87453677d502d417a8a931cfefbe43dcf1ce3f8fec5eee00074d3ceed644b068"
+    },
+    {
+      "path": "research/data/uniform_phase_layers_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 14811,
+      "sha256": "b20f8017dc15961073195d9ef9a3b34cb5e930cd4a790699b0e6ef980b75f110"
+    },
+    {
+      "path": "research/data/uniform_phase_layers_recipes.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 22707,
+      "sha256": "3c16140835c1af333fa3bd84a1ce45cf3985f971a94e4cd08662e7c4d8085d19"
+    },
+    {
+      "path": "research/data/uniform_primary32.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 32,
+      "sha256": "7a0a7c69b8c6de6fa86940d1edcc243dcd1ab149f5734c3a3c33e7a601fca570"
     },
     {
       "path": "research/sources/author-posts.md",
@@ -490,10 +637,22 @@
       "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
     },
     {
+      "path": "research/sources/user_exception_layer_note_20261031.md",
+      "role": "source_or_reference",
+      "bytes": 801,
+      "sha256": "f5f7e2d85f59c98f3d40a3afef3820cd60f720fa865c14b4de50a24298d4d3af"
+    },
+    {
       "path": "research/sources/user_lattice_controls_update_2026-10-31.json",
       "role": "source_or_reference",
       "bytes": 1416,
       "sha256": "38e4786d49afbd1c9aabda382ae6dc393f5281f9b6b3a169d782e5fc0c08fa83"
+    },
+    {
+      "path": "research/sources/user_layered_notes_20261031.txt",
+      "role": "source_or_reference",
+      "bytes": 10328,
+      "sha256": "21eb0b7204288a8353a33ea1ff3b068d9291353534cc05276325fc77abcb86f5"
     },
     {
       "path": "research/sources/user_level5_pairing_lead_2026-10-31.md",
@@ -526,6 +685,18 @@
       "sha256": "98f0520a5e972467746a11deb91eb91114293656d6b5707a37099ca3b8543582"
     },
     {
+      "path": "research/sources/user_reward_staircase_note_20261031.md",
+      "role": "source_or_reference",
+      "bytes": 447,
+      "sha256": "34bac0012ae1ed9654d1793c5d87a2d6db95f9756ad642fe21ddc3a1f0ef4463"
+    },
+    {
+      "path": "research/sources/user_signature_phase_note_20261031.md",
+      "role": "source_or_reference",
+      "bytes": 699,
+      "sha256": "27e1d861967e8bac009c48023fb738de9e32127197d2e291117e4e4372527c66"
+    },
+    {
       "path": "research/sources/user_wif_lead_2026-10-31.txt",
       "role": "source_or_reference",
       "bytes": 972,
@@ -544,16 +715,34 @@
       "sha256": "d456d49fad306a7a098ea12051327f0370eee9c3f546e6096d66dccaed5d5201"
     },
     {
+      "path": "research/models/boundary33_v1.json",
+      "role": "model_specification",
+      "bytes": 979,
+      "sha256": "112799d0ca3f6f1277d4c1f748d76c7c462f4183c61bd5876b1fb4930a713567"
+    },
+    {
       "path": "research/models/composite_v1.json",
       "role": "model_specification",
       "bytes": 1435,
       "sha256": "fb0fcf731f0436cb6cd53bff8255296a83cec903ab66ffa822386a63746c2524"
     },
     {
+      "path": "research/models/fractional_area_v1.json",
+      "role": "model_specification",
+      "bytes": 1755,
+      "sha256": "90d142fa5b470360d588c3fac914c0121c5ea8a60c7ee0c3406bcd5ff26d7cc0"
+    },
+    {
       "path": "research/models/halving_pairs_v1.json",
       "role": "model_specification",
       "bytes": 788,
       "sha256": "675a0b0df22df87db0a879440c3b61abef4432f7dbc76ae2b588c4b99a100aed"
+    },
+    {
+      "path": "research/models/layered_structure_v1.json",
+      "role": "model_specification",
+      "bytes": 1249,
+      "sha256": "c65428f11fe91d8c65d2eb9f4e2c8fb712bad89d15829f2b988b3f542f9c92d9"
     },
     {
       "path": "research/models/pair64_v1.json",
@@ -574,10 +763,28 @@
       "sha256": "8ef1a0cd2f94998635e90bbb4f3668f65cc3a28b860f8fbc475afe00665129dc"
     },
     {
+      "path": "research/models/reward_staircase_v1.json",
+      "role": "model_specification",
+      "bytes": 901,
+      "sha256": "10b68bf27bfc893997b0139f15bf9869ea4e33b54df3ec694304cc810e8cbdf3"
+    },
+    {
+      "path": "research/models/signature_phase_decode_v1.json",
+      "role": "model_specification",
+      "bytes": 1653,
+      "sha256": "6fad05ce8c3386fe4631196704471046dbecf2c63f0f622207ae506c7e2d0182"
+    },
+    {
       "path": "research/models/timing_lattice_v1.json",
       "role": "model_specification",
       "bytes": 1197,
       "sha256": "1bcad4fa3800999aef86f722cde185dbf157c5aaf5821afd066f8cfb0a71704b"
+    },
+    {
+      "path": "research/models/uniform_phase_layers_v1.json",
+      "role": "model_specification",
+      "bytes": 1318,
+      "sha256": "c07ba4450cade6ba2f64592acaace983edf897f7bdc7ee0a8ec3c12788c25ae0"
     },
     {
       "path": "tools/analyze_parity_phase.py",
@@ -594,8 +801,8 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 3233,
-      "sha256": "318fc0aa9e4a885f0e8877630ac8f78795130d57d4742dd06e541feb622fec92"
+      "bytes": 3506,
+      "sha256": "8af81a080b8d2798dcc240cdf67ae77a64050a63e93bcc5194daf754ed3a9f3e"
     },
     {
       "path": "tools/check_bd_halving.py",
@@ -608,6 +815,12 @@
       "role": "reproduction_tool",
       "bytes": 3258,
       "sha256": "26fd1bcab8ab5e4bea06bf295ffa6eb7bf1d8905cb6f6922776dbf8c1ac5d4f6"
+    },
+    {
+      "path": "tools/check_boundary33.py",
+      "role": "reproduction_tool",
+      "bytes": 5544,
+      "sha256": "946451423896405ba7e8bb75074cca7d2fec4542107b922dc32ab8ec3b37ecf0"
     },
     {
       "path": "tools/check_composite_models.py",
@@ -628,6 +841,12 @@
       "sha256": "2726b1417e4f1fa3674785f6191cdc635f8ceb197acf0c7fa96b8104dc2b09df"
     },
     {
+      "path": "tools/check_fractional_area.py",
+      "role": "reproduction_tool",
+      "bytes": 8302,
+      "sha256": "fc83cf50396ae709bab84ba342f3dbc37d7aed25fa2d46f40abc2d755f71bb13"
+    },
+    {
       "path": "tools/check_halving_pairs.py",
       "role": "reproduction_tool",
       "bytes": 3184,
@@ -638,6 +857,12 @@
       "role": "reproduction_tool",
       "bytes": 1483,
       "sha256": "2f25df4a1738e98db22241d16b29f697d993e3bc8171a875c9b9b1477a5d875f"
+    },
+    {
+      "path": "tools/check_layered_structure.py",
+      "role": "reproduction_tool",
+      "bytes": 6793,
+      "sha256": "199eef5462b3c959dc2af82a5473dc9398b02bf9ccb1591c510ccebc4597ca3b"
     },
     {
       "path": "tools/check_marker_glyph_relation.py",
@@ -694,6 +919,18 @@
       "sha256": "300aa8f1863679af071614481fb55858f7bf2f29c859287b9219d3f568c7d4e2"
     },
     {
+      "path": "tools/check_reward_staircase.py",
+      "role": "reproduction_tool",
+      "bytes": 3262,
+      "sha256": "d78de15297aca28d84ad767de4bf658c1a60e2971fc5e3a9666da3a6d9ecd091"
+    },
+    {
+      "path": "tools/check_signature_phase_decode.py",
+      "role": "reproduction_tool",
+      "bytes": 8730,
+      "sha256": "b37820e38618e0569550a245852902f2d34f8c1c6ee2d7935097a91d2cda6ac8"
+    },
+    {
       "path": "tools/check_signed_models.py",
       "role": "reproduction_tool",
       "bytes": 1512,
@@ -704,6 +941,12 @@
       "role": "reproduction_tool",
       "bytes": 8331,
       "sha256": "42994b08e2865b853d9b230cab27025587c054398bdb62e1abbc62b25e9479b4"
+    },
+    {
+      "path": "tools/check_uniform_phase_layers.py",
+      "role": "reproduction_tool",
+      "bytes": 7840,
+      "sha256": "d33085915223f4f670df32e11b23ad83f8650e5be716733e5f499498f13a99ff"
     },
     {
       "path": "tools/diagnose_pair64_ranges.py",
@@ -736,6 +979,18 @@
       "sha256": "1ea915952a0490ac1b795c2a54920351923cfaac9da2bb6dff7a82a94d164a9a"
     },
     {
+      "path": "tools/measure_signature_staircase.py",
+      "role": "reproduction_tool",
+      "bytes": 2287,
+      "sha256": "874520a478a8ed200c6e9d38207eec8e74bc95e5e0e1067fe09c7f3c5e370cd3"
+    },
+    {
+      "path": "tools/plot_boundary_fraction.py",
+      "role": "reproduction_tool",
+      "bytes": 4815,
+      "sha256": "383ce9de03f221b8f7fa5a5fa1763395b0039f22a83b7307cf96652cf0860413"
+    },
+    {
       "path": "tools/plot_pair64.py",
       "role": "reproduction_tool",
       "bytes": 2707,
@@ -754,6 +1009,18 @@
       "sha256": "768a96819fdbc28f1c5cf1d6e149a44bee770f5caabc09ed7136e97a060a434a"
     },
     {
+      "path": "tools/plot_signature_phase.py",
+      "role": "reproduction_tool",
+      "bytes": 2319,
+      "sha256": "3aff43d872bae650d4f4d6783d795234d9a3bba60e7585eb87a7463e9166b86c"
+    },
+    {
+      "path": "tools/plot_uniform_layers.py",
+      "role": "reproduction_tool",
+      "bytes": 1580,
+      "sha256": "d8329c3909d7cd04693a994e7e3ac64eccf9f7a7dbd06aea702c7cb6d566bf9c"
+    },
+    {
       "path": "tools/verify_level5_geometry.py",
       "role": "reproduction_tool",
       "bytes": 4130,
@@ -762,8 +1029,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 7630,
-      "sha256": "920e8434ebebf20db64d30a7f83f069c008892085c02e1d833da97a70adc8d05"
+      "bytes": 11737,
+      "sha256": "cfe739b4b5334b137c74f7c89c80bf12225f87c440bc6ae7e73959877eef3e39"
     },
     {
       "path": "AGENTS.md",
@@ -774,14 +1041,14 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 14596,
-      "sha256": "5a0e8e57058ecddc1516da3e0ed7ccf151da250277464f0e08ea2cdb7f40647b"
+      "bytes": 21923,
+      "sha256": "17599fe1ee9c241f7811afb87d892d4b6735b0bc0a15c4916e193156c748a159"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 67434,
-      "sha256": "90c093868571a33015c829c6da021cd48e9fb9e1ddb7d6a65d7d11d6bca978a5"
+      "bytes": 86272,
+      "sha256": "b212a65127e7b4023457bf7c3cdb039b151f4ae92ab46a5c6c72757c96899b7c"
     }
   ]
 }

@@ -1,0 +1,1529 @@
+{
+  "model": "C15",
+  "input_sha256": {
+    "research/sources/cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/models/boundary33_v1.json": "112799d0ca3f6f1277d4c1f748d76c7c462f4183c61bd5876b1fb4930a713567",
+    "tools/check_boundary33.py": "946451423896405ba7e8bb75074cca7d2fec4542107b922dc32ab8ec3b37ecf0"
+  },
+  "node_span": {
+    "first": 92,
+    "last": 857,
+    "distance": 765,
+    "vertices": 256,
+    "intervals": 255
+  },
+  "calibration": [
+    {
+      "width": 0.85,
+      "training_patch_mse": 0.0015010652698632778,
+      "validation_patch_mse": 0.0022415500211876408
+    },
+    {
+      "width": 1,
+      "training_patch_mse": 0.0022858447730965963,
+      "validation_patch_mse": 0.002279254834120122
+    },
+    {
+      "width": 1.15,
+      "training_patch_mse": 0.005038435976216857,
+      "validation_patch_mse": 0.0024655425848782555
+    }
+  ],
+  "chosen_global_width": 0.85,
+  "boundaries": [
+    {
+      "next_block_1based": 2,
+      "x": 188,
+      "shared_endpoint_in_previous_units": 1.0,
+      "width_models": [
+        {
+          "width": 0.85,
+          "continuous": {
+            "training_mse": 0.0011359364593791518,
+            "validation_mse": 0.0009651662237717517
+          },
+          "best_independent_by_training": {
+            "endpoint": 1,
+            "join": "vertical_connector",
+            "training_mse": 0.0011359364593791518,
+            "validation_mse": 0.0009651662237717517
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.09559064530282294,
+              "validation_mse": 0.37555779225047087
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.08632165182881481,
+              "validation_mse": 0.16657917398360092
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0011359364593791518,
+              "validation_mse": 0.0009651662237717517
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0011359364593791518,
+              "validation_mse": 0.0009651662237717517
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.05176823493778943,
+              "validation_mse": 0.20291922619283995
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.0691063766160235,
+              "validation_mse": 0.06868634806673161
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.11766213854720559,
+              "validation_mse": 0.5307041173580128
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.1215304989981084,
+              "validation_mse": 0.12534578118881243
+            }
+          ]
+        },
+        {
+          "width": 1,
+          "continuous": {
+            "training_mse": 0.0024865784367203753,
+            "validation_mse": 0.0023709850695964865
+          },
+          "best_independent_by_training": {
+            "endpoint": 1,
+            "join": "vertical_connector",
+            "training_mse": 0.0024865784367203753,
+            "validation_mse": 0.0023709850695964865
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.10596758341044607,
+              "validation_mse": 0.3634351340566832
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.09432941048389451,
+              "validation_mse": 0.17198115372349906
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0024865784367203753,
+              "validation_mse": 0.0023709850695964865
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0024865784367203753,
+              "validation_mse": 0.0023709850695964865
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.05286983442385168,
+              "validation_mse": 0.20304833017538312
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.06974777229354212,
+              "validation_mse": 0.0686332893730915
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.1310394222956563,
+              "validation_mse": 0.530833221340556
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.1303339665386513,
+              "validation_mse": 0.135436608770963
+            }
+          ]
+        },
+        {
+          "width": 1.15,
+          "continuous": {
+            "training_mse": 0.005805037700300808,
+            "validation_mse": 0.0055810845684980724
+          },
+          "best_independent_by_training": {
+            "endpoint": 1,
+            "join": "vertical_connector",
+            "training_mse": 0.005805037700300808,
+            "validation_mse": 0.0055810845684980724
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.12043765901075276,
+              "validation_mse": 0.35332046894443414
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.10440421615931439,
+              "validation_mse": 0.1773349089619945
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.005805037700300808,
+              "validation_mse": 0.0055810845684980724
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.005805037700300808,
+              "validation_mse": 0.0055810845684980724
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.05374291128016232,
+              "validation_mse": 0.20334194508501022
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.07097797755514773,
+              "validation_mse": 0.06839477546468274
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.14656254877010258,
+              "validation_mse": 0.5311183438335116
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.13908043765763842,
+              "validation_mse": 0.14522201689938274
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "next_block_1based": 3,
+      "x": 284,
+      "shared_endpoint_in_previous_units": 1.5,
+      "width_models": [
+        {
+          "width": 0.85,
+          "continuous": {
+            "training_mse": 0.0010810762210161362,
+            "validation_mse": 0.000992086614893635
+          },
+          "best_independent_by_training": {
+            "endpoint": 2,
+            "join": "vertical_connector",
+            "training_mse": 0.011129675216633644,
+            "validation_mse": 0.052667759986077915
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.05561639192463058,
+              "validation_mse": 0.1600405760602154
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.05500396412355367,
+              "validation_mse": 0.06693476324887303
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.016237026310157016,
+              "validation_mse": 0.020333566112654456
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.016237026310157016,
+              "validation_mse": 0.015681864741324773
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.011129675216633644,
+              "validation_mse": 0.052667759986077915
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.014299319403641913,
+              "validation_mse": 0.01816624687716726
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.045538213793413565,
+              "validation_mse": 0.21656020556866434
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.0418113859624301,
+              "validation_mse": 0.04570207815880428
+            }
+          ]
+        },
+        {
+          "width": 1,
+          "continuous": {
+            "training_mse": 0.00157289665809779,
+            "validation_mse": 0.001938262310888458
+          },
+          "best_independent_by_training": {
+            "endpoint": 2,
+            "join": "vertical_connector",
+            "training_mse": 0.011169195523794357,
+            "validation_mse": 0.05340080674689333
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.06011927635700797,
+              "validation_mse": 0.15860377229109618
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.059340144255235594,
+              "validation_mse": 0.07203325894248341
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.017376522629376143,
+              "validation_mse": 0.018499414206669437
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.017376522629376143,
+              "validation_mse": 0.01400807044989732
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.011169195523794357,
+              "validation_mse": 0.05340080674689333
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.013087181490274767,
+              "validation_mse": 0.018717130961799347
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.05216651825070728,
+              "validation_mse": 0.2172932523294798
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.04508876791311868,
+              "validation_mse": 0.05125641999568679
+            }
+          ]
+        },
+        {
+          "width": 1.15,
+          "continuous": {
+            "training_mse": 0.0036380915068673606,
+            "validation_mse": 0.004682995911221057
+          },
+          "best_independent_by_training": {
+            "endpoint": 2,
+            "join": "separate_paths",
+            "training_mse": 0.013803574875302182,
+            "validation_mse": 0.020357606429300543
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.06573492282125917,
+              "validation_mse": 0.1572502032515483
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.06457312761835253,
+              "validation_mse": 0.07697999792051997
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.01969006857009691,
+              "validation_mse": 0.01798107064619555
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.01969006857009691,
+              "validation_mse": 0.013730157018400819
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.013820137119160402,
+              "validation_mse": 0.05558358874422428
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.013803574875302182,
+              "validation_mse": 0.020357606429300543
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.06270535618403932,
+              "validation_mse": 0.2194760343268107
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.05006773369954857,
+              "validation_mse": 0.057801189809291255
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "next_block_1based": 4,
+      "x": 380,
+      "shared_endpoint_in_previous_units": 0.0,
+      "width_models": [
+        {
+          "width": 0.85,
+          "continuous": {
+            "training_mse": 0.00011534748267582771,
+            "validation_mse": 8.183227368551595e-06
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.00011534748267582771,
+            "validation_mse": 8.183227368551595e-06
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.00011534748267582771,
+              "validation_mse": 8.183227368551595e-06
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.00011534748267582771,
+              "validation_mse": 8.183227368551595e-06
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.015698482987528774,
+              "validation_mse": 0.08026733581718741
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.012791639529640682,
+              "validation_mse": 0.016323493067323936
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.03345014232965137,
+              "validation_mse": 0.1622135586084806
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.02716991413480992,
+              "validation_mse": 0.030852838308828436
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.05136067446841943,
+              "validation_mse": 0.24415978139977387
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.041704174499670336,
+              "validation_mse": 0.0454110523950198
+            }
+          ]
+        },
+        {
+          "width": 1,
+          "continuous": {
+            "training_mse": 0.0003644885543266207,
+            "validation_mse": 1.437445757344386e-06
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.0003644885543266207,
+            "validation_mse": 1.437445757344386e-06
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.0003644885543266207,
+              "validation_mse": 1.437445757344386e-06
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.0003644885543266207,
+              "validation_mse": 1.437445757344386e-06
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.018690293503293553,
+              "validation_mse": 0.08041195620122468
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.014898299127219905,
+              "validation_mse": 0.019042647275190117
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.03973367847594844,
+              "validation_mse": 0.1623581789925179
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.031569199983368976,
+              "validation_mse": 0.03613860328712572
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.06092381602966971,
+              "validation_mse": 0.24430440178381113
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.048380860107168085,
+              "validation_mse": 0.05326484239026297
+            }
+          ]
+        },
+        {
+          "width": 1.15,
+          "continuous": {
+            "training_mse": 0.0009040859775758457,
+            "validation_mse": 5.364660153583356e-05
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.0009040859775758457,
+            "validation_mse": 5.364660153583356e-05
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.0009040859775758457,
+              "validation_mse": 5.364660153583356e-05
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.0009040859775758457,
+              "validation_mse": 5.364660153583356e-05
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.022321432019240015,
+              "validation_mse": 0.08065412603841876
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.017101927770312247,
+              "validation_mse": 0.021899078557741997
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.047306204801944335,
+              "validation_mse": 0.16260034882971197
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.03595954249201528,
+              "validation_mse": 0.041560345596503664
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.07243761973519112,
+              "validation_mse": 0.24454657162100518
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.054956168679492566,
+              "validation_mse": 0.0612550478764336
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "next_block_1based": 5,
+      "x": 476,
+      "shared_endpoint_in_previous_units": 0.0,
+      "width_models": [
+        {
+          "width": 0.85,
+          "continuous": {
+            "training_mse": 0.00019656822885067703,
+            "validation_mse": 0.00011102373984431234
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.00019656822885067703,
+            "validation_mse": 0.00011102373984431234
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.00019656822885067703,
+              "validation_mse": 0.00011102373984431234
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.00019656822885067703,
+              "validation_mse": 0.00011102373984431234
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.006711239158856135,
+              "validation_mse": 0.02595203012121014
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.006543911783033264,
+              "validation_mse": 0.008808558647856207
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.015607749911035997,
+              "validation_mse": 0.06692514151685676
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.01389331992894939,
+              "validation_mse": 0.016399073251750003
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.024578623768384485,
+              "validation_mse": 0.10789825291250334
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.021188271436641367,
+              "validation_mse": 0.023680924791244676
+            }
+          ]
+        },
+        {
+          "width": 1,
+          "continuous": {
+            "training_mse": 0.00033459221525509775,
+            "validation_mse": 0.0002196979809288645
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.00033459221525509775,
+            "validation_mse": 0.0002196979809288645
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.00033459221525509775,
+              "validation_mse": 0.0002196979809288645
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.00033459221525509775,
+              "validation_mse": 0.0002196979809288645
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.007701153865587595,
+              "validation_mse": 0.026096650505247416
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.00747522716383745,
+              "validation_mse": 0.00995746302709547
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.01823429165631833,
+              "validation_mse": 0.06706976190089403
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.016074918175802793,
+              "validation_mse": 0.01915957029727503
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.028840384673863434,
+              "validation_mse": 0.10804287329654064
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.024516890607721564,
+              "validation_mse": 0.027747880853046972
+            }
+          ]
+        },
+        {
+          "width": 1.15,
+          "continuous": {
+            "training_mse": 0.0007393786589715201,
+            "validation_mse": 0.0005723228341627792
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.0007393786589715201,
+            "validation_mse": 0.0005723228341627792
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.0007393786589715201,
+              "validation_mse": 0.0005723228341627792
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.0007393786589715201,
+              "validation_mse": 0.0005723228341627792
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.008825113650346635,
+              "validation_mse": 0.026338820342441498
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.00849063552793219,
+              "validation_mse": 0.011208278988197587
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.021307801893745443,
+              "validation_mse": 0.06731193173808811
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.018352603115508105,
+              "validation_mse": 0.02209043371128815
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.033882924796667005,
+              "validation_mse": 0.10828504313373469
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.027897764242566996,
+              "validation_mse": 0.03210099901166713
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "next_block_1based": 6,
+      "x": 572,
+      "shared_endpoint_in_previous_units": 0.0,
+      "width_models": [
+        {
+          "width": 0.85,
+          "continuous": {
+            "training_mse": 0.00012515896571186656,
+            "validation_mse": 8.218494090563968e-05
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.00012515896571186656,
+            "validation_mse": 8.218494090563968e-05
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.00012515896571186656,
+              "validation_mse": 8.218494090563968e-05
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.00012515896571186656,
+              "validation_mse": 8.218494090563968e-05
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0035672849254866283,
+              "validation_mse": 0.009533239739923021
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0035782806118090436,
+              "validation_mse": 0.004411131682543603
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.007858251750381427,
+              "validation_mse": 0.029932455260561153
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.007459658550202965,
+              "validation_mse": 0.009093913972633674
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.012324679556924628,
+              "validation_mse": 0.05041901095838447
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.011110235039792193,
+              "validation_mse": 0.012763370060480655
+            }
+          ]
+        },
+        {
+          "width": 1,
+          "continuous": {
+            "training_mse": 0.0001535181015105186,
+            "validation_mse": 0.00015965421795422288
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.0001535181015105186,
+            "validation_mse": 0.00015965421795422288
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.0001535181015105186,
+              "validation_mse": 0.00015965421795422288
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.0001535181015105186,
+              "validation_mse": 0.00015965421795422288
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0040047687837118755,
+              "validation_mse": 0.009670675372690458
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.004001485523745176,
+              "validation_mse": 0.004828329497210126
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.009049495109313608,
+              "validation_mse": 0.030077075644598432
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.008541873363285607,
+              "validation_mse": 0.010429072522631252
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.014329974325203177,
+              "validation_mse": 0.050563631342421735
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.012783469031252105,
+              "validation_mse": 0.014861679538061773
+            }
+          ]
+        },
+        {
+          "width": 1.15,
+          "continuous": {
+            "training_mse": 0.0003474243074883665,
+            "validation_mse": 0.0004289478946746931
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.0003474243074883665,
+            "validation_mse": 0.0004289478946746931
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.0003474243074883665,
+              "validation_mse": 0.0004289478946746931
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.0003474243074883665,
+              "validation_mse": 0.0004289478946746931
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.004530591831782525,
+              "validation_mse": 0.009910097413829656
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.004511294159430719,
+              "validation_mse": 0.005379543853127619
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.010401631707513837,
+              "validation_mse": 0.030319245481792503
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.009698623161484838,
+              "validation_mse": 0.011863453307674117
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.016666170220329464,
+              "validation_mse": 0.05080580117961582
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.014541144876516561,
+              "validation_mse": 0.017120374312149824
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "next_block_1based": 7,
+      "x": 668,
+      "shared_endpoint_in_previous_units": 0.0,
+      "width_models": [
+        {
+          "width": 0.85,
+          "continuous": {
+            "training_mse": 7.736124981496857e-06,
+            "validation_mse": 7.556589048871249e-06
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 7.736124981496857e-06,
+            "validation_mse": 7.556589048871249e-06
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 7.736124981496857e-06,
+              "validation_mse": 7.556589048871249e-06
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 7.736124981496857e-06,
+              "validation_mse": 7.556589048871249e-06
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0019496077566253421,
+              "validation_mse": 0.008570002820570823
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0018219144608215669,
+              "validation_mse": 0.004018586915633402
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.004260391473953806,
+              "validation_mse": 0.018813280669482475
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.003787519919928807,
+              "validation_mse": 0.005653052901590222
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.006587987777393302,
+              "validation_mse": 0.029056558518394133
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.005705196544213613,
+              "validation_mse": 0.007364985698331705
+            }
+          ]
+        },
+        {
+          "width": 1,
+          "continuous": {
+            "training_mse": 1.3586816062570215e-06,
+            "validation_mse": 1.4571367951162268e-06
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 1.3586816062570215e-06,
+            "validation_mse": 1.4571367951162268e-06
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 1.3586816062570215e-06,
+              "validation_mse": 1.4571367951162268e-06
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 1.3586816062570215e-06,
+              "validation_mse": 1.4571367951162268e-06
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.002273420167378187,
+              "validation_mse": 0.008714623204608096
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0021119839508732642,
+              "validation_mse": 0.004454868879840788
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.004978846878600922,
+              "validation_mse": 0.018957901053519747
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.004335095731133816,
+              "validation_mse": 0.0064431355049221995
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.007683635247128734,
+              "validation_mse": 0.029201178902431398
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.006507854717784341,
+              "validation_mse": 0.008474570992046805
+            }
+          ]
+        },
+        {
+          "width": 1.15,
+          "continuous": {
+            "training_mse": 5.1299471279164515e-05,
+            "validation_mse": 5.2353369865996525e-05
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 5.1299471279164515e-05,
+            "validation_mse": 5.2353369865996525e-05
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 5.1299471279164515e-05,
+              "validation_mse": 5.2353369865996525e-05
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 5.1299471279164515e-05,
+              "validation_mse": 5.2353369865996525e-05
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0026819335686710977,
+              "validation_mse": 0.008956793041802177
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0024615227546448785,
+              "validation_mse": 0.004966805726059542
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.005848239573215227,
+              "validation_mse": 0.019200070890713832
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.004926244215782138,
+              "validation_mse": 0.007363407481809324
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.009034622569144281,
+              "validation_mse": 0.029443348739625484
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.007361668981808109,
+              "validation_mse": 0.009740426461065321
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "next_block_1based": 8,
+      "x": 764,
+      "shared_endpoint_in_previous_units": 0.0,
+      "width_models": [
+        {
+          "width": 0.85,
+          "continuous": {
+            "training_mse": 4.617846129196536e-05,
+            "validation_mse": 9.522661367234374e-07
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 4.617846129196536e-05,
+            "validation_mse": 9.522661367234374e-07
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 4.617846129196536e-05,
+              "validation_mse": 9.522661367234374e-07
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 4.617846129196536e-05,
+              "validation_mse": 9.522661367234374e-07
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0007130653719944581,
+              "validation_mse": 0.0032809113109032624
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0007130653719944581,
+              "validation_mse": 0.0025309585521990376
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.0019239426443696114,
+              "validation_mse": 0.008402550235359088
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.0018575722275402694,
+              "validation_mse": 0.003992247635287142
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.0032557053576337154,
+              "validation_mse": 0.013524189159814914
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.003039809994634063,
+              "validation_mse": 0.004814388390780827
+            }
+          ]
+        },
+        {
+          "width": 1,
+          "continuous": {
+            "training_mse": 4.9083970941123384e-05,
+            "validation_mse": 5.603669274549841e-05
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 4.9083970941123384e-05,
+            "validation_mse": 5.603669274549841e-05
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 4.9083970941123384e-05,
+              "validation_mse": 5.603669274549841e-05
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 4.9083970941123384e-05,
+              "validation_mse": 5.603669274549841e-05
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0008449201866185434,
+              "validation_mse": 0.0034255316949405356
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0008449201866185434,
+              "validation_mse": 0.002691055087036991
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.002222832273113619,
+              "validation_mse": 0.008547170619396362
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.002148523541959401,
+              "validation_mse": 0.004443108493069568
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.00372744968351286,
+              "validation_mse": 0.013668809543852188
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.0034375398087954008,
+              "validation_mse": 0.0054806309089197045
+            }
+          ]
+        },
+        {
+          "width": 1.15,
+          "continuous": {
+            "training_mse": 0.0001154211911936005,
+            "validation_mse": 0.00016062379633621386
+          },
+          "best_independent_by_training": {
+            "endpoint": 0,
+            "join": "vertical_connector",
+            "training_mse": 0.0001154211911936005,
+            "validation_mse": 0.00016062379633621386
+          },
+          "candidates": [
+            {
+              "endpoint": 0,
+              "join": "vertical_connector",
+              "training_mse": 0.0001154211911936005,
+              "validation_mse": 0.00016062379633621386
+            },
+            {
+              "endpoint": 0,
+              "join": "separate_paths",
+              "training_mse": 0.0001154211911936005,
+              "validation_mse": 0.00016062379633621386
+            },
+            {
+              "endpoint": 1,
+              "join": "vertical_connector",
+              "training_mse": 0.0010090816615453203,
+              "validation_mse": 0.0036677015321346165
+            },
+            {
+              "endpoint": 1,
+              "join": "separate_paths",
+              "training_mse": 0.0010090816615453203,
+              "validation_mse": 0.002966671401591488
+            },
+            {
+              "endpoint": 2,
+              "join": "vertical_connector",
+              "training_mse": 0.002585773127129217,
+              "validation_mse": 0.008789340456590442
+            },
+            {
+              "endpoint": 2,
+              "join": "separate_paths",
+              "training_mse": 0.002488677688823898,
+              "validation_mse": 0.004964716239738998
+            },
+            {
+              "endpoint": 3,
+              "join": "vertical_connector",
+              "training_mse": 0.00430002581198619,
+              "validation_mse": 0.013910979381046271
+            },
+            {
+              "endpoint": 3,
+              "join": "separate_paths",
+              "training_mse": 0.0039038006113543845,
+              "validation_mse": 0.0062403789038383796
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "terminal": [
+    {
+      "width": 0.85,
+      "endpoint": 0,
+      "baseline_mse": 6.073621887126756e-05,
+      "extended_mse": 0.08208793796370574
+    },
+    {
+      "width": 0.85,
+      "endpoint": 1,
+      "baseline_mse": 6.073621887126756e-05,
+      "extended_mse": 0.13752742357042813
+    },
+    {
+      "width": 0.85,
+      "endpoint": 2,
+      "baseline_mse": 6.073621887126756e-05,
+      "extended_mse": 0.16763965052146557
+    },
+    {
+      "width": 0.85,
+      "endpoint": 3,
+      "baseline_mse": 6.073621887126756e-05,
+      "extended_mse": 0.20682558300133477
+    },
+    {
+      "width": 1,
+      "endpoint": 0,
+      "baseline_mse": 0.00025960451581150676,
+      "extended_mse": 0.08961783929257977
+    },
+    {
+      "width": 1,
+      "endpoint": 1,
+      "baseline_mse": 0.00025960451581150676,
+      "extended_mse": 0.15250865391936858
+    },
+    {
+      "width": 1,
+      "endpoint": 2,
+      "baseline_mse": 0.00025960451581150676,
+      "extended_mse": 0.19040816675024003
+    },
+    {
+      "width": 1,
+      "endpoint": 3,
+      "baseline_mse": 0.00025960451581150676,
+      "extended_mse": 0.23386458111211791
+    },
+    {
+      "width": 1.15,
+      "endpoint": 0,
+      "baseline_mse": 0.00123582506471118,
+      "extended_mse": 0.1022268154824849
+    },
+    {
+      "width": 1.15,
+      "endpoint": 1,
+      "baseline_mse": 0.00123582506471118,
+      "extended_mse": 0.16909918101547838
+    },
+    {
+      "width": 1.15,
+      "endpoint": 2,
+      "baseline_mse": 0.00123582506471118,
+      "extended_mse": 0.21352228636695475
+    },
+    {
+      "width": 1.15,
+      "endpoint": 3,
+      "baseline_mse": 0.00123582506471118,
+      "extended_mse": 0.2610597439370173
+    }
+  ],
+  "terminal_roi_y_inclusive": [
+    468,
+    482
+  ],
+  "terminal_observed_columns": {
+    "859": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.06274509803921569,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "860": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "terminal_observed_max": 0.06274509803921569,
+  "no_private_key_search": true,
+  "limitations": [
+    "Approximate rasterizer; fixed nominal q values",
+    "Shared33-position indexing is geometrically equivalent to32 intervals, so cannot itself prove extra data",
+    "Clipped or different-cap rendering is not globally ruled out"
+  ]
+}

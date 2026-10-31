@@ -1,0 +1,254 @@
+Új eredmény: a három kivételes blokkban is van szabályos ritmus
+A teljes 256 mintás sorozat újravizsgálatakor két korábban figyelmen kívül hagyott mintázatot találtam.
+
+A 8. blokkban az amplitúdó pontosan nulla a következő mintapozíciókon:
+
+0, 7, 14, 21, 28
+
+Vagyis hétes periódusú nullahely-sorozat található benne. A 2. blokkban pedig egy nyolcas periódus:
+
+6, 14, 22, 30
+
+Ez fontos, mert az eddigi 3+1 bites modell kizárólag a négyes csoportokat vizsgálta. A három kivételes blokk közül kettőben tehát található más, rendszeres ismétlődési távolság.
+
+Ez még nem bizonyítja, hogy ezek az eredeti szimbólumórák. A felsorolt helyeken kívül további nullaértékek is vannak, és többféle periódust keresve véletlen egyezéseket is találhatunk.
+
+Az 1:3:7 jelölővel azonban most már van egy konkrétan tesztelhető kapcsolatunk: a 8. blokk hétes ritmusa. A kérdés az, hogy ez egy hang- vagy Morse-kódolási időegység része-e, vagy pusztán a hullám alakjából adódik.
+A fontosabb felfedezés: a három kivételes blokk más jellegű adatot tartalmazhat
+A blokkokat nemcsak az ismétlődő nullahelyek, hanem az információeloszlásuk alapján is összehasonlítottam.
+
+
+
+Fent a 256 amplitúdóminta és a feltételezett ritmusok, lent az egyes blokkok négy állapotának entrópiája.
+Az eredmény figyelemre méltó: az 1., 2. és 8. blokk pontosan a három legnagyobb állapoteloszlási entrópiájú blokk. Ezek ugyanazok, amelyek nem követik a középső öt blokk 3+1 bites szerkezetét.
+Három kivételes blokk
+1,880
+Átlagos entrópia, bit/minta
+
+Öt szabályos blokk
+1,447
+Átlagos entrópia, bit/minta
+
+
+Az összes lehetséges háromblokkos kiválasztást összehasonlítva ez adta a legnagyobb entrópiakülönbséget az 56 lehetőség közül. Ez leíró eredmény, nem független statisztikai bizonyíték, mert a blokkokat ugyanazon minták alapján választottuk ki.
+
+Ugyanakkor így már nem egyszerűen arról van szó, hogy három blokkban nem találunk egy bizonyos ritmust. A három blokk az adateloszlásában is különbözik a többitől.
+Egy lehetséges Fibonacci-kapcsolat
+A teljes nyolc blokk felosztása most így néz ki:
+\[
+\boxed{3+5=8}
+\]
+
+Ez három egymást követő Fibonacci-szám. Ráadásul az öt szabályos blokk száma megegyezik a jobb alsó aláírásban azonosított öt lépcsőszakasszal.
+
+Egy lehetséges többlépcsős modell tehát az, hogy a három kivételes blokk más típusú információt – például olvasási paramétereket – hordoz, míg az öt szabályos blokk a tényleges kódolt adatot.
+
+Ez még nem bizonyított kapcsolat, de már több megfigyelést foglal egyetlen ellenőrizhető hipotézisbe.
+A Fibonacci-algoritmust új módon is kipróbáltam
+Zden korábbi, megfejtett Codex Protocol játékában a Fibonacci-sorozatot mod 5 művelettel arra használták, hogy kiválasszák a következő kiolvasandó élt. 
+GitHub
+
+
+Ezért a HALV 256 mintáján három, hasonló elvű kiolvasást teszteltem: Fibonacci-paritás alapján bitválasztást, mod 4 alapú mintapozíció-választást és mod 8 alapú blokk kiválasztását.
+Új, különböző privátkulcs-jelöltek
+
+1 032
+
+
+Egyezés a HALV célcímével
+
+0
+
+
+Ezek az egyszerű Fibonacci-vezérelt modellek nem adtak találatot. A dokumentált korábbi játék viszont alátámasztja, hogy a Fibonacci-sorozatot érdemes kiválasztási algoritmusként is kezelni, nem kizárólag hang-deltakódként.
+A következő célzott kutatási lépés
+Most a három kivételes blokk egymáshoz való kapcsolatát vizsgálnám mélyebben. Különösen azt, hogy közös kódolásban hordoznak-e olyan paramétereket, amelyek az öt középső blokk sorrendjét vagy dekódolását határozzák meg.
+
+Ebben a modellben a bal oldali BD → ½ jelölő, a jobb alsó öt lépcső, a Fibonacci-indexelés és a hullám már nem egymástól független feltevések, hanem egy lehetséges műveletsor különböző részei.
+
+Ehhez viszont olyan képlet kell, amelyet nem külön állítunk be az egyes blokkokhoz. Egyetlen rögzített szabálynak kellene mindhárom kivételes blokk szerepét megmagyaráznia.
+
+A számításokat és a mostani eredményeket elmentettem:
+
+Teljes kutatási jelentés · Blokkszerkezet-elemző Python · Fibonacci-kulcsolvasó teszt · Perióduskontrollok
+
+A privát kulcs továbbra sincs meg. Az új eredmények alapján viszont indokolt külön kezelni a három kivételes és az öt szabályos blokkot. A következő valódi áttörés az lenne, ha a három kivétel valamelyik másik képelem segítségével pontos, megismételhető utasítássá válna az öt középső blokk feldolgozásához.
+
+
+
+
+
+HALV_retegzett_uj_kutatas_20261031.mdDokumentumHALV_harom_ot_nyolc_20261031.pyKódHALV_Fibonacci_valaszto_20261031.pyKódHALV_20261031_zeroperiodus_kontroll.jsonKód
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+folytasd az észrevételed szerint
+
+
+
+
+
+
+
+
+
+
+
+
+8m 38s ideig dolgozott rajta
+
+A három kivételes blokk (1., 2. és 8.) lehetséges vezérlőszerepét vizsgálom tovább. Előbb az eredeti képen ellenőrzöm, hogy a 3+5-ös felosztás nem a mintavétel mellékhatása-e, majd azt tesztelem, hogy a három blokk adatai előre meghatározhatják-e az öt középső blokk kiolvasását. Az eredményt a BD → ½ és a Fibonacci-indexelés korábbi nyomaival is összevetem.
+
+
+
+
+
+
+
+
+
+Elemezte és pontosította a hullámformák mintázatainak vizsgálatát
+
+
+Feltártam a mélyebb mintázatokat és teszteltem az összefüggéseket
+
+
+Ellenőrzési tervet készített
+
+
+Feltárta az adatelemzési módszereket, mintázatokat és rejtett kódokat
+
+
+
+
+
+4 webhely átnézve
+
+
+
+
+
+Értelmezési irányokat azonosított
+
+
+Összefüggő jeleket keresett és összevetette az eredményeket
+
+
+Megvizsgálták a pixelintenzitásokat, kódolási hipotéziseket és kriptográfiai teszteket
+
+
+
+
+
+
+Előkerült egy másik, képelemeket összekapcsoló lehetőség is. A bal alsó 20042402 minden számjegye páros, ezért a feltételezett ½ utasítással osztva 10021201 lesz belőle. Ha a nem nulla értékeket jelöljük, az így kapott nyolcbites maszk hét helyen egyezik a bal oldali BD mintával. Most ellenőrzöm, hogy ez valóban ritka kapcsolat-e, vagy sok más számjegysorrend is hasonló egyezést adna.
+
+
+
+
+
+
+
+
+
+Lefuttatta a hash- és script-ellenőrzést, vizsgálta a középső bitek entrópiáját
+
+
+
+
+
+
+A 96+160 bites összeállításból 10 368 különböző kulcsjelöltet ellenőriztem, tömörített és tömörítetlen Bitcoin-címmel is; nincs egyezés. A BD és a felezett dátum 7/8-as egyezése sem olyan ritka, mint elsőre tűnt: a megfelelő kontrollban 10,7% az esélye legalább ilyen egyezésnek. Most még a ½ utasítás szó szerinti, privátkulcson végzett műveletét ellenőrzöm, mert ez más lépés, mint a korábbi bitkiválasztás.
+
+
+
+
+
+
+
+
+
+Ellenőrizte az ECC-függőségeket és a részskalárkulcsokat
+
+
+
+
+
+
+
+
+
+
+
+
+
+HALV – új, közös modell a három kivételes és az öt szabályos blokkra
+Az eddigi eredményekből most egy olyan lehetséges kulcsfelépítés rajzolódik ki, amelyhez nem kell a három kivételes blokkot hibásnak vagy fölöslegesnek tekinteni.
+
+A 3–7. blokkban a korábbi 3+1 bites értelmezés szerint minden négy amplitúdóminta egy négybites értéket ad. A három kivételes blokkban viszont elképzelhető, hogy minden amplitúdómintából csak egy bitet kell kiolvasni.
+
+Így a teljes adat pontosan 256 bitre állna össze:
+3 kivételes blokk
+96 bit
+3 × 32 minta × 1 bit
+
+
+5 szabályos blokk
+160 bit
+5 × 8 csoport × 4 bit
+
+
+
+
+256 bit
+Egy teljes Bitcoin-privátkulcs lehetséges mérete
+
+
+Ez a felosztás azért érdekesebb a korábbi próbálkozások egy részénél, mert az eltérő geometriai szerkezetű blokkoknak eltérő feldolgozást ad, mégis ugyanannyi, 32 bitnyi kimenetet eredményez blokkonként.
+
+Fontos: a hosszúság pontos egyezése még nem bizonyítja a kódolást. Külön meg kell találni, hogy a három kivételes blokkban melyik bit számít, valamint hogy az öt középső blokkban valóban helyes-e a 3+1 bites értelmezés.
+Az új modell ellenőrzésének eredménye
+A 160+96 bites felépítés alapján 10 368 különböző kulcsjelöltet állítottam elő. Ellenőriztem a három kivételes blokk felső és alsó bitjét, a nemnulla-maszkot, a négybites csoportok bitrendjét, a fordított olvasási irányokat, valamint a közvetlen és SHA-256-os kulcslevezetést.
+
+Pontos Bitcoin-címegyezés nem volt.
+
+Ezután a feltételezett ½ utasítást a teljes privátkulcs-jelöltre is alkalmaztam, háromféleképpen: egész számként feleztem, secp256k1 skalárként osztottam kettővel, illetve ellenpróbaként megdupláztam.
+Különböző ellenőrzött skalárok
+35 436
+
+Pontos címegyezések
+0
+
+
+
+A dátum és a BD-jelölő közötti kapcsolat
+A két képelem összehasonlítása:
+Bal oldali jelölő:  10111101  (BD)
+Felezett dátum:     10021201
+Nemnulla-maszk:     10011101  (9D)
+                       ^
+                 Eltérés: 3. blokk
+
+
+Ez hét egyező pozíciót jelent nyolcból. A 560 lehetséges dátumszámjegy-átrendezés kontrolljában azonban 10,7% adott legalább ilyen jó eredményt.
+
+Vagyis érdekes kapcsolat, de még nem tekinthető a dekódolási algoritmus bizonyítékának.
+
+Egy másik lehetőséget is ellenőriztem: az öt középső blokk 160 bitje éppen akkora, mint a célcím 160 bites HASH160-értéke. A célcímből visszafejtett értékhez azonban a 96 kipróbált közvetlen bitrendezés egyike sem illeszkedett.
+Mi legyen a következő lépés?
+A következő vizsgálatban a három kivételes blokk bitválasztási szabályát próbálnám levezetni kizárólag a kép többi eleméből.
+
+Különösen fontos, hogy a BD és a felezett dátum az 1., 2. és 8. blokkra egyaránt az 1,0,1 mintát adja. Ha ezt felső–alsó–felső bitválasztásként értelmezzük, két egymástól különálló képrészlet látszólag ugyanazt az utasítást adja. A probléma az, hogy az így összeállított kulcs még nem helyes.
+
+Ezért két lehetőség marad nyitva: vagy a három kivételes blokk szerepét értelmezzük rosszul, vagy az öt középső blokk 3+1 bites adatain még szükség van egy további átalakításra — esetleg éppen a Fibonacci–hang–Morse kapcsolaton keresztül.

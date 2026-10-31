@@ -1,0 +1,13 @@
+{
+  "model":"C17",
+  "source":"Nominal256 states, unchanged",
+  "claims_to_check":["Block8 zeros at0,7,14,21,28","Block2 zeros at6,14,22,30","Blocks1,2,8 are the three highest state-entropy blocks","Date nonzero mask differs fromBD in one position"],
+  "zero_lattice_family":"All8 blocks; periods2..10; all residue classes having at least4 positions in32 samples; exact-zero predicate only",
+  "lattice_score":"For complete-zero classes only, -log(comb(z,k)/comb(32,k)); maximize over declared family",
+  "conditional_control":"20000 independent within-block state permutations preserving each block histogram; recompute family maximum",
+  "rng_seed":173105,
+  "surrogate_draws":20000,
+  "date_control":"Enumerate all560 distinct digit permutations of20042402; count nonzero-mask Hamming distance<=1 toBD",
+  "layered_key_scope":"No new candidate-key search: exact scripts for user-reported1032/10368/35436 tests were not attached",
+  "limitations":["Exploratory conditional reference, not global discovery probability","Entropy contrast uses groups selected on the same data","3+5=8 and256 output bits do not identify a decoder","Codex Protocol Fibonacci-mod5 historical claim lacks a concrete source URL here and is not independently verified"]
+}

@@ -1189,3 +1189,317 @@ teszteli, de nem helyettesíti a C10/C11 nyitott terület-/aláíráskalibráci�
 **Mindkét kért kutatási ág aktív és összekapcsolt marad.** A domináns
 fázis mind a nyolc blokkra kiterjedő megfigyelés, de a teljes generálószabály,
 az extra alsó bitek szerepe és az ellenőrzött HALV-kulcs még nincs meg.
+
+## 2026-10-31 – tizedik kör: közös végpont, pontos törtek, lépcsőmérés
+
+A felhasználó engedélyével folytattuk a két összekapcsolt kutatási ágat.
+Az eredeti 256 állapot és minden korábbi számítás változatlanul megmaradt.
+Új specifikációk: `models/boundary33_v1.json`, `models/fractional_area_v1.json`.
+A modellek az új futások előtt kerültek fájlba; ez munkameneten belüli
+rögzítés, nem külső előregisztráció. Bemeneti hash-ek a JSON-eredményekben.
+
+### C15 – 32 intervallum nem azonos 32 csúccsal
+
+A 92+3i rács 256 illesztett csúcsa 92…857 között **255 intervallumot és
+765 px csúcstávolságot** ad. A 256×3=768 ezért nem bizonyít 256 teljes
+geometriai intervallumot. A 64×12-es felosztás lehetséges cellázás, de a
+széleken extrapolációt vagy más forrásmodellből eredő értelmezést igényel.
+A közösen használt 33. pozíció önmagában csak indexelési lehetőség;
+nem új, független képi adat.
+
+Közelítő, véges szegmensekből álló raszterizálót használtunk, szimmetrikus
+felső/alsó görbével. A vonalprofil rögzített; három globális szélességskálát
+(0,85; 1; 1,15) az első négy blokk belső csúcskörnyezetein hasonlítottunk
+össze. Tanítóadat alapján 0,85 adódott; a második négy blokk külön ellenőrzés.
+Az egyes blokkhatárokra nem hangoltunk külön vonalvastagságot.
+
+A hét határnál a szomszédos négy oszlop szolgál a külön végpont kiválasztására,
+a határoszlop az ellenőrzés. Az előző blokk 0…3 egészértékű végpontját két
+rajzolási móddal vizsgáltuk: függőleges összekötés, illetve külön útvonalak.
+Hat határnál a legjobb külön végpont geometriailag azonos a közössel;
+ezeken nincs modelleket elkülönítő bizonyíték.
+
+**Az x=284 határ viszont elkülönít:** a következő blokk első mintája 3,
+feleakkora skálán, tehát az előző skáláján 1,5. A folytonos görbe ellenőrző
+MSE-je a kiválasztott 0,85 skálán 0,0009921; a tanítóoszlopokon legjobb
+külön egész végponté 0,0526678. A másik két vonalskálán is a folytonos
+görbe a jobb. Ez a vizsgált független egész végpontok ellen szól, nem a
+logikai 33-helyes forráskezelés általános kizárása.
+
+A hullám végén a 859. oszlopban még 16/255 fényesség van, a 860.-ban a
+468…482 ROI minden pixele fekete. A 857-nél lezárt modell MSE-je 0,0000607;
+a 860-ig levágás nélkül hosszabbított modellé legalább 0,08209 ugyanott.
+A terminális mérés szűk, hullámra korlátozott ROI-t használ: az első helyi
+fejlesztési változat túl magas ROI-ja az aláírást is bevonta volna, ezt
+az eredmény értelmezése előtt javítottuk. A végső JSON a helyes ROI-t és
+az eredeti ellenőrző oszlopok összes fényességértékét őrzi.
+
+Korlát: ez továbbra is közelítő raszterizáló és rögzített névleges állapotsor.
+Más ecsetvég, levágás vagy rajzolás előtti transzformáció nincs kizárva.
+A paritásóra eredetét ez a teszt nem oldja meg; a fáziság aktív marad.
+
+### C16 – q/2 = H + L/2 geometria, kerekítési sorrenddel
+
+Mind a 61 alsó egyes geometriai hozzájárulását megtartottuk, beleértve
+a fázison kívüli E-adatokat. Két külön koordinátahipotézis:
+normalizált csúcsok interpolációja; illetve az eredeti blokkskálával
+megszorzott csúcsok interpolációja. Utóbbi a fizikai geometriát jelenti.
+A q/2 magasság és a csak H magasság külön, kontrollált adatág.
+
+64 darab 12 px-es cella, 91 és 92 px-es kezdőpont, sugár/átmérő terület.
+A határokon konstans végpont-folytatást deklaráltunk; ez feltevés, nem mérés.
+**Minden interpoláció és integrál racionális számokkal pontos**, nincs korai
+lebegőpontos kerekítés. Négy párosítás, két olvasási irány, floor/ceil/
+legközelebbi páros/legközelebbi felfelé kerekítés. Külön receptekben a
+területeket kerekítjük és összeadjuk, illetve az összeget kerekítjük.
+
+- Az L/2 tag 91-es igazításnál 47, 92-esnél 45 cella területét módosítja.
+- A normalizált sugárterületek összes korrekciója mindkét igazítással
+  pontosan 183/2 = 61×3/2. Az összes alsó egyes hozzájárulása megmarad.
+- 512 kerekítési sorrendpár közül 388 ad eltérő 32 értéket, helyenként
+  legfeljebb 1 különbséggel. Ez a fizikai, bájtként érvénytelen recepteket is
+  tartalmazó strukturális összehasonlítás, nem 388 külön kulcstalálat.
+- 16 értékprofilból 1024 recept; a 512 fizikai területrecept mindegyike
+  legalább egy helyen túlcsordul. A másik 512 recept 404 különböző érvényes
+  skalárt ad. **0 célcímegyezés**, mindkét P2PKH-formátumban.
+
+Nincs önkényes osztókeresés, modulojavítás vagy hash-véglegesítés. Három
+ismert integrál, 24 ismert kerekítési eset, négy teljes párosítási partíció,
+256 cellán az Area(H)+Area(L/2)=Area(q/2) azonosság, továbbá a címképzés
+meglévő ismert esetei sikeresen ellenőrizve. Minden recept és az egzakt
+64-értékű profilok elmentve. A negatívum a specifikált láncra vonatkozik;
+a valós mennyiség és a normalizálás képi indoka továbbra is hiányzik.
+
+### A lépcső külön, nyers koordinátamérése
+
+A 788…867 × 830…929 ROI bináris. A legalább négy fehér pixeles vízszintes
+futamokat kimérve, az azonos szomszédos sorokat összevonva öt vonalpár van:
+
+| Bal x | Y-sorok | Közép y | Megfigyelt szélesség |
+|---:|---|---:|---:|
+| 794 | 879–880 | 879,5 | 18 |
+| 810 | 903–904 | 903,5 | 18 |
+| 826 | 917–918 | 917,5 | 18 |
+| 842 | 923–924 | 923,5 | 18 |
+| 858 | 926–927 | 926,5 | 10, a ROI levágja |
+
+A bal végpontok x-lépése pontosan 16 px; az y-középtávolságok 24,14,6,3.
+Ebből még nem állítunk pontos felezőképletet vagy öt adatszintet. A felirat
+területébe eső folytatás külön geometriai elemzést igényel. Ez megőrzött
+adat az aláírás lehetséges utasításszerepéhez, nem elvetett mellékág.
+
+### Következő megkülönböztető feladat
+
+A fázisóra esetén olyan **logikai** előfeldolgozó szabály kell, amely
+megmagyarázza a blokkonkénti +1 indexeltolást, de nem igényel a képen
+nem látható egész amplitúdójú pluszcsúcsokat. A geometriai ágon a lépcső
+teljes folytatását és rajzolási rácsát kell összekötni egy mérhető skálával;
+a 64 értéket csak ilyen indokolt korrekció után érdemes újra összepárosítani.
+A két ágban az összes bit, a BD-jelölő, a dátum és az aláírás megmarad.
+
+Mentés: `data/boundary33_check.json`, `data/boundary33_audit.png`,
+`data/fractional_area_check.json`, `data/fractional_area_profiles.json`,
+`data/fractional_area_recipes.json`, `data/fractional_area_audit.png`,
+`data/signature_staircase_geometry.json`; reprodukálás a megfelelő tools/
+programokkal és `tools/plot_boundary_fraction.py`-jal.
+
+**Ellenőrzött HALV-privát kulcs ebben a körben sem került elő.**
+
+## 2026-10-31 – tizenegyedik kör: új felhasználói adatok, nullahely és jutalom
+
+Munka közben új szöveg érkezett, majd külön lépcső–fázis és blokkjutalom
+észrevétel. A teljes feltöltött szöveg mentése:
+`sources/user_layered_notes_20261031.txt`; a két további üzenet állításainak
+kivonata a megfelelő `sources/user_*_note_20261031.md` fájlokban.
+Korábbi ágakat és eredményeket nem töröltünk. Új modellek C17–C19.
+
+### C17 – a közölt megfigyelések saját reprodukciója
+
+A 8. blokk0,7,14,21,28 és a 2. blokk6,14,22,30 helyein valóban nulla van.
+A három szélső blokk állapotentrópia-átlaga1,879613 bit/minta, a középső
+öté1,446816; az előbbi pontosan a három legnagyobb entrópiájú blokk.
+Az56 hármas közül ez adja a legnagyobb különbséget; leíró eredmény,
+nem független jelentőségteszt, hiszen ugyanazon adaton választottuk ki.
+
+A nullahelyekre előre fájlba rögzített feltételes kontroll: mind a nyolc
+blokkban minden2…10 periódus minden legalább4 pozíciós maradékosztálya,
+pontos-nullaság feltétellel. Teljesen nulla osztály esetén a pontszám a
+hisztogramot megőrző nullmodell szerinti fix rács valószínűségének negatív
+logaritmusa.20000 blokkon belüli permutáció, rögzített173105 seed;
+minden kontrollnál újrakeressük a teljes család maximumát.
+
+A 8. blokk hétes mintájának szintjét476/20000=2,38%, a 2. blokk nyolcas
+mintájáét1223/20000=6,115% kontroll éri el valahol a családban. A legerősebb
+mért nullahelyrács viszont a 3. blokk négyes periódusa,1-es fázisa;
+annak szintjét174/20000=0,87% éri el. Ez **feltételes, feltáró referencia**,
+nem az összes korábbi hipotéziskeresést tartalmazó p-érték, és nem külön
+Morse-bizonyíték. A teljes kontrollpontszámokat NPZ-ben őrizzük.
+
+A20042402 számjegyenként felezve10021201; nemnulla-maszkja10011101=9D,
+aBD-től egy bitre. Az560 különböző átrendezésből60 ad legalább ilyen
+egyezést:10,714%. Maga a felezés a nemnulla-maszkot nem változtatja,
+ezért a maszkegyezés nem a felezés lépését igazolja. A két maszk szélső
+blokkokon vett101 egyezése sem új, független bizonyíték.
+
+A szövegben említett1032,10368,35436 kulcspróba forrásprogramjai csak
+fájlnévként szerepeltek; ezeket nem saját, reprodukált futásként jelentjük.
+A Codex Protocol Fibonacci-mod5 módszerét konkrét forráslink hiányában
+egyelőre felhasználói történeti állításként tartjuk számon.
+
+### C18 – fontos javítás: a3+1 valóban lehet veszteségmentes
+
+Az új lépcsőképlet **nullahelyfázist** ad: a középső ötben1,0,3,2,1.
+A korábbi **páratlanfázis**0,3,2,1,0; a kettő egy pozícióval különbözik.
+Az összes blokkra kiterjesztett nullahelyfázis3,2,1,0,3,2,1,0.
+A kijelölt helyeken a nullaszám3,5,8,8,8,8,8,4 a nyolc cellából.
+Az első blokkban3 nullával másik fázis is holtversenyes, a többiben
+egyedi maximum. Ezt a különbséget a táblázat és ábra is jelzi.
+
+A középső40 négyes mindegyikében a z-fázis teljes mintája nulla,
+két másik minta páros, az r=z−1 fázis mintája tetszőleges0…3. Így a négy
+magas bitből egy fix nulla; csak **három magas bit és egy alsó bit** változik.
+Az előző gyors megjegyzés, amely öt változó bitet feltételezett, hibás volt;
+ezt a nullahelymérés alapján javítottuk a jelentésben és az adatmodellben.
+
+Kanonicitási választás: növekvő helyi pozíció szerint a három nem-z magas
+bit, majd az r alsó bitje. Öt32 bites köztes sor:
+`f76dd5a4`, `43ad8c64`, `63dcc298`, `79cd4339`, `22412af1`.
+Mind a40 cella, összesen160 eredeti állapot pontosan visszakódolható.
+Ezek köztes adatok, nem igazolt kulcsdarabok.
+
+Megőrzött **teljes veszteségmentes ábrázolás**:44 bájt, blokkhosszak
+8,8,4,4,4,4,4,8. A három szélső blokk minden nyers kétbitese megmarad;
+a középsők a fenti négybites cellakódot használják. Az eltárolt bájtokból
+visszaolvasva mind a256 állapot pontosan egyezik. Fájl:
+`data/layered_lossless44.bin`, SHA-256
+`6613982c04744eaba5ebcf0fc7fdff6f5fc83da3ecd7163fef59542b5fbc91e5`.
+
+A929,5 referenciából a magasságok50,26,12,6,3; a log2 egészrésze5,4,3,2,1.
+A nullahelyfázis mind az öt helyen egyezik. Ugyanezek az egészrészek a
+referencia **[928,5;930,5)** tartományában végig változatlanok, tehát
+nem egyetlen tizedespontos referencia választásán múlnak. Ugyanakkor a
+képlet az adatok ismeretében született; a feleződő sor önmagában is
+csökkenő logaritmus-egészrészeket ad. Nem tekintjük önálló szándékbizonyítéknak.
+
+Kulcslánc: három szélső blokk BD szerinti H/L választása, annak fordítottja,
+valamint mindenütt H/L kontroll; a középső négy bit24 közös permutációja,
+két cellairány, két blokkon belüli bitirány és két teljes blokksorrend.
+**768 különböző érvényes skalár,0 címegyezés**, mindkét P2PKH-formátumban.
+Nincs hash, utólagos moduláris felezés vagy blokkonként hangolt permutáció.
+A kiválasztás mellett kihagyott96 szélső bitet minden szabálynál külön
+eltároltuk; lehetséges utasítás-/korrekciószerepük nyitott marad.
+
+### C19 – jutalomsor és fázis együtt értelmezve
+
+A felhasználó50,25,12.5,6.25,3.125 BTC sora jó tematikus értelmezést ad.
+A mért magasság mínusz jutalom pontosan0,1,−1/2,−1/4,−1/8 px;
+MSE=17/64 px², RMS=**0,5153882032 px**, maximális eltérés1 px.
+Ezt saját egzakt számítás reprodukálja, külön per-lépcső korrekció nélkül.
+
+Az ideális jutalmak logaritmusának egészrésze is5,4,3,2,1. A jutalomtéma
+és a nullahelyfázis azonossága tehát együtt igaz; a tematikus magyarázat
+nem teszi semmissé a mért fáziskapcsolatot. A kulcshoz szükséges műveleti
+értelmet viszont egyik sem bizonyítja önmagában.
+
+További pontos arány: a középső öt hullám amplitúdóegysége32,16,8,4,2;
+mindegyiket25/16-dal szorozva a jutalomsor adódik. Az összes blokkra
+kiterjesztve200,100,50,25,12.5,6.25,3.125,1.5625 keletkezik. Ez az első
+két helyen matematikai visszafelé extrapoláció, **nem történelmi jutalom**;
+a3+5 felosztás szerepét nem igazolja automatikusan.
+
+A geometriai ágban a fizikailag mért területekre a25/16 és reciprok16/25
+tényezőt külön tartományellenőriztük. Minden profilban marad legalább256-os
+cella már lefelé kerekítve is; mivel minden korábbi párosítás minden
+nemnegatív területet felhasznál, közvetlen bájtösszeg továbbra sem lehet.
+Ez tiszta tartománykorlát, ezért új célcímpróbákat nem indítottunk rá.
+További, képi indokkal bíró normalizálási lépésre lenne szükség.
+
+### Friss kutatási sorrend és mentések
+
+Elsőként olyan közös előállítási szabályt érdemes keresni, ahol a fázis a
+függőleges skála kettes kitevőjéhez kötött: z=e mod4, r=e−1 mod4. Ez az
+új adat jobb kiindulópont, mint kizárólag hiányzó33. csúcsot feltételezni.
+A három szélső blokk összes192 bitjét megőrizve kell eldönteni, mi vezérlés,
+mi kulcsadat és mi korrekció. Az öt középső160 bit immár veszteségmentes
+kiinduló adat. A BD/dátum, Fibonacci/Morse/hang és a64→32 geometriai ág
+megmarad, de új tesztet a teljes lánc konkrét, egységes képlete indokoljon.
+
+Új bizonyítékok: `data/layered_structure_check.json`,
+`data/layered_zero_surrogates.npz`, `data/signature_phase_decode_check.json`,
+`data/signature_phase_decode_recipes.json`, `data/signature_phase_audit.png`,
+`data/layered_lossless44.bin`, `data/reward_staircase_check.json`;
+a megfelelő tools/ programok és models/ specifikációk mellett.
+
+**A privát kulcs továbbra sincs meg.** A legerősebb új, ellenőrzött
+eredmény a középső állapotok veszteségmentes3H+1L leírása, valamint a
+jutalom-, skála- és nullahelyfázis közös, számszerűen ellenőrzött kapcsolata.
+
+## 2026-10-31 – tizenkettedik kör: minden cellára egységes kétcsatornás szabály
+
+A felhasználó újabb megfigyelése a12 nemnulla, kijelölt nullahelyről érkezett.
+Állításkivonat: `sources/user_exception_layer_note_20261031.md`.
+Modell: `models/uniform_phase_layers_v1.json`, C20, a futás előtt mentve.
+
+### Saját ellenőrzés és a pontos kivételfogalom
+
+Mindhárom maszk10011011,10100010,01001110 és azEAA,ETE,ES közvetlen
+0-elválasztós Morse-olvasat egyezik. Az érintett64 mintából52 nulla,
+9 egyes,3 kettes. A16 affine modulo4 törvény sorrendjében z=(3−b)mod4
+52 nullával első, a második38. ABD és a11000001 blokkmaszk3/8 egyezésű.
+
+A teljes3+1 feltételt cellánként külön ellenőrizve **44** cella szabályos,
+**20** eltérő. A középső40 mellett a2. blokk1,3,5 és a8. blokk0 cellája
+is szabályos, nullaalapú cellaszámozással. A40+24 csak a középső/szélső
+területek száma; nem mind a24 szélső cella sérti a feltételt.
+
+### Két csatorna, blokkfüggő külön algoritmus nélkül
+
+Minden négyesben ugyanaz a bitkivonatolás:
+z=(3−b)mod4, r=z−1mod4, b nullaalapú;
+**A4** a három nem-z magas bit növekvő pozíciósorrendben, majd L[r];
+**R4** H[z], majd a három nem-r alsó bit növekvő pozíciósorrendben.
+
+Az A és R nyolc bitje együtt az eredeti négy kétbites állapot puszta,
+invertálható átrendezése. Mind a64 cella,256 állapot pontosan visszaáll.
+A64 nibble32 bájt; R középső40 nibble-je nulla. R szélső24 nibble-je
+12 bájt: `3221c2782080402406127552`. Együtt újabb44 bájtos, teljes
+veszteségmentes ábrázolás. A tényleges eltárolt bájtokat is visszaolvastuk
+és a képzett csatornákkal pontosan egyeztettük.
+
+Ez egységesebb a C18 szélső H/L kiválasztásánál: minden cellára azonos
+szabály vonatkozik. Ugyanakkor invertálható szétválasztás, **nem a kivételek
+értékét előrejelző jelgenerátor**. A32 bájtos főcsatorna sem igazolt kulcs.
+
+R-ben29 egyes bit marad. Ebből3 darabH[z] a kettes kivételekben,
+9 darabL[z] az egyes kivételekben, további17 pedig más nem-r, nem-z
+pozícióban van. Ezért önmagában a12 kivételes minta nem tartalmazza
+a teljes második réteget. Az összes maradékbitet megőrizzük.
+
+### Kontroll és korlátozott közvetlen kulcsteszt
+
+A16 affine törvényhez20000, blokkon belüli nullahely-permutációt vizsgáltunk,
+minden blokk hisztogramját megtartva,201031 seed mellett. Minden kontrollban
+újraszámoltuk az összes16 törvényt, a legnagyobb értéket és az első–második
+különbséget.0 kontroll ért el52 nullát,0 ért el14-es különbséget. Ez
+**feltételes referencia**, a korábbi teljes keresést nem korrigálja.
+A0/20000 nem nulla valószínűség; plusz-egy becsléssel1/20001 az alsó
+felbontás. A teljes maximum- és különbségsorozat NPZ-ben megmarad.
+
+A főcsatorna24 közös bitpermutációja, cellák és blokkon belüli bitek
+fordítása, eredeti/fordított blokksorrend:192 recept,96 különböző
+érvényes skalár. **0 célcímegyezés**, mindkét P2PKH-formátumban, hash és
+maradék alapján hangolt javítás nélkül. A negatívum a főcsatorna ezen
+közvetlen olvasataira vonatkozik. A12 bájtos maradék feltételezett
+utasítás-, korrekció- vagy más adatkapcsolati szerepe nyitott marad.
+
+Mentések: `data/uniform_phase_layers_check.json`,
+`data/uniform_phase_layers_recipes.json`, `data/uniform_affine_surrogates.npz`,
+`data/uniform_primary32.bin`, `data/uniform_edge_residual12.bin`,
+`data/uniform_lossless44.bin`, `data/uniform_phase_layers.png`;
+reprodukálás: `tools/check_uniform_phase_layers.py`, `tools/plot_uniform_layers.py`.
+
+A következő előrelépéshez R szerepét kell **egységes, előre megadott**
+művelethez kötni és lehetőleg új képoszlopokat vagy részmintákat jósolni vele.
+Fibonacci/hang/Morse műveletet ennek indokolt helyére érdemes tenni.
+Az R egyszerűen elhagyva nem adta a kulcsot. Az eddigi geometriai terület-,
+BD-, dátum- és aláírásadatok továbbra is megvannak a közös térképen.
