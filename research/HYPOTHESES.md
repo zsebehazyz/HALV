@@ -16,6 +16,7 @@ A több réteg lehetőségét vizsgáljuk; a konkrét rétegeket még nem igazol
 | D | 20042402 nyolc számjegy | corner_check.json, közvetlen bitmap | időbélyeg; esetleg nyolc blokk paraméterei |
 | H | Csökkenő hullámskála és lépcsőzés a logóban | bitmap és illesztés | felezés, normalizálás, réteg-/mintaválasztás |
 | B | Hat erős csúcs 7 px rácson, nyolc helyen 10111101=BD | timing_lattice_check.json | Latin1/cp1252 „½” műveleti jel, vagy nyolc blokk vezérlése; a gyenge kilencedik csúcs magyarázandó |
+| P | Domináns páratlan fázis mind a 8 blokkban: 2,1,0,3,2,1,0,3 | parity_phase_check.json, phase_law_diagnostics.json | fázisóra, 64 bites vezérlő és külön megőrzött maradékcsatorna |
 | A | Bitcoin-célcím | Base58Check és offline címképzés | a teljes modell végső ellenőrzése |
 
 ```mermaid
@@ -38,6 +39,12 @@ flowchart TD
     MASK --> SM[Aláírás és jelölő közös olvasata]
     JOIN --> F[Kulcsformátum vagy WIF]
     R --> CELLS[64 feltételezett adatérték]
+    R --> BITS[Magas bit és alsó bit csatornái]
+    BITS --> PHASE[Domináns fázisóra]
+    S -. lehetséges fázisvezérlés .-> PHASE
+    PHASE -. adatolvasási hipotézis .-> CELLS
+    BITS -. feltételezett dekódolás .-> CODEC[Delta vagy algebrai dekódoló]
+    CODEC --> CELLS
     HALF -. normalizálás .-> CELLS
     S -. lehetséges geometriai korrekció .-> CELLS
     CELLS --> SUM[32 páronkénti összeg]
@@ -170,3 +177,52 @@ Adatok: `level5_geometry_verification.json`, `level5_remeasured_rectangles.csv`,
 `halv_64_cells.csv`, `pair64_profiles.json`, `pair64_check.json`,
 `pair64_range_diagnostics.json`, `bd_pair64_check.json`; a data/ könyvtárban.
 A HALV 64 valódi adatértékének és normalizálási szabályának azonosítása nyitott.
+
+## C12/C13: paritás, fázisóra és a korábbi 64-egységes ág összekötése
+
+A felhasználó 3–7. blokkra adott táblája és a közvetlen magas bitsík pontosan
+reprodukálható. Új, mind a nyolc blokkra érvényes megfigyelés:
+**a páratlan értékek egyértelműen leggyakoribb helyi fázisa**
+`r_b=(2-b) mod4`, azaz `2,1,0,3,2,1,0,3` (b nullaalapú).
+Ez az első két és az utolsó blokkban nem kizárólagos fázis!
+
+A jelöltek 64 bites fáziscsatornája mellett az összes további 192 alsó bitet
+is megőrizzük. Ezekben blokkonként `10,4,0,0,0,0,0,12` egyes van.
+Az első két és utolsó blokk adatait nem minősítjük zajnak, és nem töröljük.
+
+C12-ben az egyik köztes képoszlopon újraillesztve, a másikon ellenőrizve
+mindkét irányban pontosan ugyanaz a 256 állapot adódott. Ez oszlopok közti
+predikció ugyanazon közelítő modellben, nem új képen történő validálás.
+A korábbi 496 oszlop nagy része már a tárolt fit tanítóadata volt.
+
+A `(mintaszám+b) mod4` értelmezés 33 logikai pozíciós blokkot is felvet,
+de nem igazol hiányzó mintákat. A megosztott geometriai végpontot követve
+a második blokk végén 1,5 állapot adódna, ami az egész négyszintű forrás
+feltételezésével nem egyezik. Teljes generátorszabály még nincs.
+
+| Modell | Cél | Eredmény |
+|---|---|---|
+| C12 | paritás-/fázismérés, referencia, képi kényszerek és oszloponkénti predikció | a szabály és domináns fázis stabil; globálisan kizárólagossá téve az első két blokk rosszul illeszkedik |
+| C13-nibble | fázisolvasás → magas nibble + alsó bit / flag → 32 bájt | 640 különböző skalár a futáson belül, 0 találat |
+| C13-pair64 | fázisolvasás → a korábbi 64 érték / normalizálás / páronkénti összeg | 22448 különböző skalár a futáson belül, 0 találat |
+| C13-codec | nibblesor + flag → 8SVX-kompatibilis delta-mag → 64 érték → páronkénti összeg | 143458 különböző skalár a futáson belül, 0 találat |
+
+A C13 teljes futásában 166546 különböző skalár, mindkét P2PKH-formátummal;
+nem használ hash-véglegesítést. A kodekmag telítődő aritmetikát és külön
+vizsgált nibble-sorrendet használ az archivált FFmpeg forrás szerint;
+nem feltételez moduláris prediktor-túlcsordulást. IFF-fájl vagy hangüzenet
+ettől még nem lett azonosítva.
+
+**Mindkét fő ág aktív marad:** (1) az óra/fázis, magas adatbit és alsó
+vezérlő/maradék csatorna szerepe; (2) a Level 5 által alátámasztott
+geometria→korrekció→64 érték→32 összeg kompozíció. A C13 összeköti őket,
+és nem helyettesíti a még nyitott geometriai terület- és aláíráskalibrációt.
+
+Az alsó bit másik, párhuzamos értelmezése geometriai: `q/2 = H + L/2`.
+A BD-féljel után L fél egységnyi koordináta-/amplitúdókorrekció lehet.
+Ezt nem azonosítjuk automatikusan vezérlőbittel. A pontos területméréshez
+a normalizálás és a kerekítés sorrendjét is igazolni kell, ahogy a Level 5-nél.
+
+C14 az L fázishelyein vett 64 bit egyszerű paritás- vagy CRC64-szerepét
+ellenőrizte a H adatokon: a deklarált affine-paritás és négy CRC64-változat
+egyike sem adott pontos kapcsolatot. Ez nem általános ellenőrzőösszeg-kizárás.

@@ -5,6 +5,8 @@
 - A felhasználó több, egymásra épülő jel kapcsolatának vizsgálatát kéri.
   Tartsd külön az adat, utasítás, maszk, sorrend és validálás lehetséges szerepeit.
   Önálló adat→kulcs negatívumból ne állítsd egy képrész lényegtelenségét.
+- A fázis-/bitsíkos és a 64 geometriai érték→32 összeg irány párhuzamosan
+  aktív kutatási ág. Új nyom miatt ne dobd el a korábbit; őrizd a kapcsolataikat.
 - Kapcsolt tesztnél rögzíts modellazonosítót, bemeneti fájlhash-eket,
   előre megadott műveletláncot, motivációt és az eredmény pontos hatókörét.
 - Használd a meglévő checkoutot. Külön worktree-t csak kifejezett kérésre készíts.

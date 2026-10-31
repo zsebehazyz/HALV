@@ -1006,3 +1006,186 @@ azonosítja már megoldottként.
 
 Összehasonlító ábra: `data/pair64_control_comparison.png`, reprodukálója
 `tools/plot_pair64.py`. Ellenőrzött HALV-kulcs továbbra sincs.
+
+## 2026-10-31 – kilencedik menet: fázistörvény, oszlopokra bontott predikció és két aktív kutatási ág
+
+### A felhasználó új nyoma és a párhuzamos kutatási irány
+
+A felhasználó kéri az új fázis-/bitsíkos és a korábbi geometriai/páronkénti
+irány együttes folytatását. Ezt az AGENTS.md és HYPOTHESES.md is rögzíti.
+A közölt adatokat a `sources/user_phase_lead_2026-10-31.json` őrzi.
+A korábbi kutatási ágak és negatív eredményeik megmaradtak.
+
+A 3–7. blokkok páratlan mintaszámai és fázisai pontosan reprodukálhatók.
+A magas bitsík is pontosan a felhasználó által megadott sor:
+`8e461863c4fdddddb33aa2922156463262ccc28858cc4118112019b072701250`.
+Ez kísérleti adatsor, nem megfejtett kulcs; a közvetlen olvasat nem ad célcímet.
+A felhasználó 1216 jelöltes futását pontos paraméterei és programja hiányában
+nem állítjuk saját reprodukált tesztnek, és nem keverjük a saját futásszámokkal.
+
+### Új összefüggés: az egyedi leggyakoribb fázis mind a nyolc blokkban szabályos
+
+Az indexek nullaalapúak. Az egyes sorok a 32 mintás blokkon belüli j mod4
+pozíciókat jelölik. A „leggyakoribb” itt móduszt jelent, nem feltétlenül többséget.
+
+| Blokk | Páratlan minták fázisonként [0,1,2,3] | Leggyakoribb fázis | Más fázisokon összesen |
+|---:|---|---:|---:|
+| 1 | [2,5,6,3] | 2 | 10 |
+| 2 | [2,5,2,0] | 1 | 4 |
+| 3 | [5,0,0,0] | 0 | 0 |
+| 4 | [0,0,0,2] | 3 | 0 |
+| 5 | [0,0,3,0] | 2 | 0 |
+| 6 | [0,6,0,0] | 1 | 0 |
+| 7 | [3,0,0,0] | 0 | 0 |
+| 8 | [4,4,4,5] | 3 | 12 |
+
+Tehát **minden blokk egyértelmű módusza** `r_b=(2-b) mod4`, azaz
+`2,1,0,3,2,1,0,3`. Az első és utolsó blokkban a módusz mindössze egy
+mintával vezet a következő fázis előtt; ezt a bizonytalanságot nem hallgatjuk el.
+A középső öt blokkban a szabály kizárólagos. Az első kettőben és az utolsóban
+a többi fázis adatait nem javítottuk ki és nem minősítettük zajnak.
+
+A szigorú középső szabály `(j+b) mod4=2`; a globális i=32b+j indexszel
+ugyanez `(i+b) mod4=2`. Ez blokkonként egy plusz logikai számlálólépést,
+33 pozíciós logikai értelmezést is felvet. De ebből nem következik nyolc
+független hiányzó minta. Ha a blokk végpontja a következő blokk első
+fizikai pontja, az előző skálában rendre `1;1,5;0;0;0;0;0;0` adódik.
+A második blokk 1,5-ös végpontja ellentmondana egy végig egész négyszintű
+33-pontos forrásnak. Teljes generátorszabályt ebből még nem azonosítottunk.
+
+### C12: rögzített fázisreferenciák
+
+Specifikáció: `models/parity_phase_v1.json`.
+Mind a 4^8=65536 független blokkonkénti fázisforgatást felsoroltuk;
+a blokktartalmat és annak belső mintázatát megtartva, csak az illeszkedés
+fázisát változtatva. A vizsgált szabályt a kontrollon is kiválasztottuk.
+
+- Bármely ötblokkos ablakon, négy meredekség és négy kezdőfázis mellett
+  (64 modell) a megfigyelt kizárólagos szabályhoz legalább ilyen jó
+  kontroll 1024/65536 = **1,5625%**.
+- A mind a nyolc blokk móduszára illesztett affine fázisszabálynál
+  (16 modell) pontosan illeszkedő kontroll 16/65536 = **1/4096**.
+
+Ezek az adott feltételes fázisreferencia pontos arányai, **nem a teljes
+kutatásra korrigált p-értékek**, és nem bizonyítják a szerző szándékát.
+A nyolcblokkos móduszszabály ebben a menetben észrevett további megfigyelés,
+nem előzetesen vakon rögzített felfedezés.
+
+### Képi ellenőrzés: valódi oszlopfelosztás ugyanazon modellben
+
+A korábbi névleges fit a mintapontok közötti +1 és +2 oszlopokat már
+felhasználta az állapotok kiválasztásához. A 496 blokkon belüli oszlopon
+kapott korábbi kis maradék ezért itt nem független validálás.
+A felhasználó 0,0404 amplitúdóegységű hibáját és 0,858 kontrollmediánját
+a pontos középvonalbecslő hiányában nem reprodukáltuk; az alábbi egység
+**normalizált pixelintenzitás-MSE**, tehát a számok közvetlenül nem összevethetők.
+
+C12-ben frissen illesztettünk csak a +1 oszlopokon, és a +2-ken mértünk,
+majd felcseréltük a szerepeket. Mindegyik irányban 248 illesztési és
+248 ellenőrzési oszlop volt; a 7 blokkközi átmenet oszlopai kimaradtak.
+
+| Illesztés / ellenőrzés | Ellenőrzési pixel-MSE | 1000 blokkon belül kevert sorrend mediánja |
+|---|---:|---:|
+| +1 / +2 | 0,00306927 | 0,05102909 |
+| +2 / +1 | 0,00312957 | 0,05163618 |
+
+**Mindkét friss illesztés pontosan ugyanazt a 256 állapotot adta**, mint a
+névleges fit, a paritás-/móduszminta is változatlan. A szomszédos oszlopok
+korreláltak, és azonos közelítő vonalprofil-modellt használunk; ez nem új
+képen vagy új raszterezőn történő független ellenőrzés.
+
+A költségfüggvényt ellenőrzésként újraszámoltuk: az eredeti 256 állapot és
+az eredeti célfüggvényérték egyezik a mentett baseline-nal.
+
+### Mi történik, ha az egész hullámra kizárólagossá kényszerítjük a fázist?
+
+A fázison kívüli páratlan állapotokat tiltó illesztést a képre, a célcímtől
+függetlenül futtattuk. Az első blokk lokális pixel-MSE-je kb. **10,72-szeres**,
+a másodiké **4,55-szeres** lenne. Ezeket nem lehet egyszerűen kitisztítani
+a középső kizárólagos szabály kedvéért.
+
+Az utolsó blokkot a várható 3-as fázisra korlátozva 13 állapot változik;
+a lokális MSE kb. **2,82%-kal** nő. Ez egy külön, struktúrával regularizált
+forrásjelölt lehet, nem a valódi eredeti adatok bizonyítása. A nyers sor
+mindig megmarad mellette. A teljes célfüggvényben ez kb. 0,95% növekedés;
+az összes blokkra kényszerített szigorú modell kb. 336% növekedést okozna.
+
+### Három csatorna pontos megőrzése
+
+A névleges sor minden bitjét megőrző felbontás:
+
+- H: magas bit, 256 bit;
+- F: az előre jelzett fázishelyeken vett alsó bit, 64 bit,
+  hexben `dd7adc5062d713ae`;
+- E: minden további alsó bit, 192 bit. Ezek közül 120 (a középső öt blokk
+  nem-fázishelyei) nulla; a szélső három blokkban 72 bit marad vizsgálandó,
+  sorrendben `6918b840081418af6a`.
+
+E nem 26 bites mező: **192 pozíciójában 26 darab 1 van**. Az első két és
+utolsó blokkhoz tartozó 72 bit összesen 9 bájt, de nem azonosítottuk formátumát.
+Az F középső 40 bitje `1101110001010000011000101101011100010011`;
+futamai között 2 és 5 is van, így a közvetlen 1/3/7 Morse-olvasat nem tiszta.
+A felbontás tömör empirikus szerkezet, nem teljes forráskódoló azonosítása.
+
+### C13: a fáziság összekapcsolása a korábbi 64→32 kutatással
+
+Specifikáció: `models/phase_decode_v1.json`. Két forrás: a névleges sor,
+illetve a képi fáziskényszerrel kapott utolsó blokk. Öt adatolvasási nézet:
+eredeti, négyes csoportonkénti és blokkonkénti ciklikus fázisigazítás,
+utóbbi kettő az összes blokkra vagy csak a középső ötre. A nézet a forrás
+értékeit átrendezi; nem célcím alapján módosít mintákat.
+
+| Ág | Lánc | Különböző skalár a futáson belül |
+|---|---|---:|
+| nibble | a magas/alsó bitsík nibble-jei és a fázisbit rögzített algebrai kombinációi → 32 bájt | 640 |
+| pair64 | fázisolvasat → 64 base4-érték → a korábbi párosítások/normalizálások → 32 összeg | 22448 |
+| codec_pair64 | H-nibblesor és opcionális flag-módosítás → Fibonacci vagy exponenciális dekódermag → 64 érték → szomszédos összegek | 143458 |
+
+A dekódermagban az archivált FFmpeg forrás szerint **minden lépés után
+0…255-re telítés** szerepel, nem moduláris prediktor-túlcsordulás. A
+csomagolt adat alacsony nibble-először sorrendjét külön vizsgáltuk. Az ismeretlen
+kezdő unsigned prediktor teljes 0…255 tartományát teszteltük.
+Három ismert eredményű dekóderellenőrzés futott, köztük alsó/felső telítési
+esetekkel; mind sikeres. Ez nem tényleges IFF/8SVX-fájl azonosítása.
+
+**166546 különböző érvényes skalár** ebben a futásban, mindkét P2PKH
+publikuskulcs-formátummal: **0 célcímegyezés**. Nincs hash-véglegesítés.
+A számot nem adjuk hozzá korábbi futások darabszámaihoz globális egyediként.
+Az ismert címképzési tesztek is sikeresek.
+
+### C14: a 64 bites fázismező egyszerű ellenőrző szerepei
+
+Külön, kulcskeresés nélküli adatkapcsolati teszt: F előáll-e a H-nibble
+négy bitjének valamely affine paritásfüggvényeként? Illetve egyezik-e F
+négy megnevezett CRC64 (ECMA182, WE, XZ, GO-ISO) valamelyikével a H-adat
+nyers bájtjain vagy hexszövegén, a programban rögzített irányváltozatokkal?
+Nincs pontos egyezés. A négy CRC-implementáció ismert `123456789`
+ellenőrzővektorát sikeresen ellenőriztük. A közeli mintákat nem fogadjuk
+el dekódolásként. Ez nem zár ki más ellenőrző-, titkosítási vagy metadataszerepet.
+
+### Párhuzamosan megtartott geometriai értelmezés
+
+A BD-féljel után `q/2 = H + L/2` pontos azonosság. Az alsó bit ezért fél
+egységnyi geometriai korrekcióként is értelmezhető; nem szükségszerűen
+vezérlőbit. Ez közvetlenül kapcsolódik a korábbi Level 5-ben igazolt
+korrekció→normalizálás→kerekítés→páronkénti összeg modellhez.
+A HALV esetén a megfelelő geometriai mennyiség, skála és a kerekítés
+sorrendje továbbra is igazolandó. A C13 pair64 ága az adatolvasási kapcsolatot
+teszteli, de nem helyettesíti a C10/C11 nyitott terület-/aláíráskalibrációját.
+
+### Mentett bizonyítékok
+
+- `data/parity_phase_check.json`, `data/parity_phase_audit.png` – C12,
+  teljes fázis- és oszlopillesztési adatok;
+- `data/phase_law_diagnostics.json`, `data/phase_channels.png` – nyolcblokkos
+  móduszszabály, lokális költségek, megőrzött bitmezők;
+- `data/phase_decode_check.json`, `data/phase_decode_run.log` – C13,
+  bemeneti hash-ek, jelöltkészlet-hash és ágonkénti eredmények;
+- `data/phase_field_consistency.json` – C14 strukturális ellenőrzések;
+- `tools/analyze_parity_phase.py`, `tools/diagnose_phase_law.py`,
+  `tools/check_phase_decode.py`, `tools/check_phase_field_consistency.py`,
+  `tools/plot_phase_channels.py` – reprodukálás.
+
+**Mindkét kért kutatási ág aktív és összekapcsolt marad.** A domináns
+fázis mind a nyolc blokkra kiterjedő megfigyelés, de a teljes generálószabály,
+az extra alsó bitek szerepe és az ellenőrzött HALV-kulcs még nincs meg.

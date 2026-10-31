@@ -1,0 +1,15 @@
+{
+  "model":"C13",
+  "parents":["C12 parity phase law","C10/C11 64-value pair sums","documented 8SVX tables"],
+  "sources":["nominal","predicted_last_block_phase with image-fit penalty, not oracle-guided edits"],
+  "payload_orders":["forward","reverse"],
+  "final_byte_orders":["forward","reverse"],
+  "views":["identity","align_all_quad_cycles","align_all_block_cycles","align_middle_quad_cycles","align_middle_block_cycles"],
+  "phase":"r_b=(2-b) mod4; all q values preserved, only ordering changes",
+  "nibble_branch":["high_only","xor_low_nibble","add_low_mod16","subtract_low_mod16","complement_on_flag","flip_msb_on_flag","flip_lsb_on_flag","rotate_left_on_flag"],
+  "flag":"Low bit at predicted phase within each four-sample cell; after alignment at phase0",
+  "pair_branch":"All24 state bijections, 64 base4 values, C10 four pairing orders and seven declared normalizers, direct 32 bytes",
+  "codec_branch":{"tables":["fibonacci","exponential_control"],"index_rules":["high_nibble","xor8_if_flag","xor15_if_flag"],"initial_unsigned_predictors":"all0..255","arithmetic":"FFmpeg8svx saturation after every delta, not modular wrap","nibble_orders":["as_read","swap_each_adjacent_pair (FFmpeg low-first packing)"],"pair_order":"adjacent","sum_rules":["direct","halve_each_floor_then_sum"]},
+  "finalization":"Direct key bytes only, no hash",
+  "limitations":["Unknown flag meaning; arithmetic modifications are bounded hypotheses","Residual off-phase bits preserved in phase_law_diagnostics.json, not explained by these decoding chains","Codec core compatibility does not establish an actual IFF/8SVX file","No oracle-guided sample corrections","The user's1216-candidate protocol is not assumed reproduced"]
+}

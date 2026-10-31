@@ -1,0 +1,47 @@
+{
+  "model": "C13",
+  "input_sha256": {
+    "research/sources/cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "research/sources/ffmpeg_8svx.c": "2b873e391d1e2747fd3d2f696c08054489e502e26cd0e1b7f117f15fa619084f",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/data/parity_phase_check.json": "44d3c6cac70eede9a401abd90e6d085c0cfaf066d30872d55e0a2e021634c5fe",
+    "research/models/phase_decode_v1.json": "8ef1a0cd2f94998635e90bbb4f3668f65cc3a28b860f8fbc475afe00665129dc",
+    "tools/check_phase_decode.py": "3e357d413c9423748a73de70675801b700c06417678983a601351306b9f206cd"
+  },
+  "branches": {
+    "nibble": {
+      "attempts": 320,
+      "invalid_or_range_rejections": 0,
+      "unique_scalars": 640
+    },
+    "codec_pair64": {
+      "attempts": 122880,
+      "invalid_or_range_rejections": 27004,
+      "unique_scalars": 143458
+    },
+    "pair64": {
+      "attempts": 26880,
+      "invalid_or_range_rejections": 3934,
+      "unique_scalars": 22448
+    }
+  },
+  "unique_valid_scalars": 166546,
+  "public_key_formats": 2,
+  "hash_finalization_used": false,
+  "candidate_set_sha256": "2bce924df5b0ba66583102e0bcd2368fdc3c6acc2aaf1ebede9594087c79a394",
+  "matches": [],
+  "oracle_selftest": {
+    "scalar_1_both_formats": "passed",
+    "target_base58check": "passed",
+    "invalid_scalars": "passed",
+    "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+  },
+  "codec_known_answer_tests": 3,
+  "limitations": [
+    "Unknown flag meaning; arithmetic modifications are bounded hypotheses",
+    "Residual off-phase bits preserved in phase_law_diagnostics.json, not explained by these decoding chains",
+    "Codec core compatibility does not establish an actual IFF/8SVX file",
+    "No oracle-guided sample corrections",
+    "The user's1216-candidate protocol is not assumed reproduced"
+  ]
+}

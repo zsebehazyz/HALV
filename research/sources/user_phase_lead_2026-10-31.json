@@ -1,0 +1,12 @@
+{
+  "source":"User research update, 2026-10-31",
+  "request":"Investigate this phase lead while preserving and continuing the earlier 64-value/geometric research",
+  "reported_middle_blocks_1based":[3,4,5,6,7],
+  "odd_counts":[5,2,3,6,3],
+  "odd_residues_mod4":[0,3,2,1,0],
+  "reported_high_bit_hex":"8e461863c4fdddddb33aa2922156463262ccc28858cc4118112019b072701250",
+  "reported_amplitude_validation":{"columns":496,"mean_amplitude_error":0.0404,"shuffled_median_error":0.858,"status":"Exact medial-line estimator not supplied; not independently reproduced. Own run uses explicit held-out pixel MSE."},
+  "reported_external_key_test":{"unique_candidates":1216,"matches":0,"status":"Exact candidate generation not supplied; do not combine with own executed candidate counts."},
+  "reported_middle40":"Mixed Morse run lengths including2 and5; not a pure Morse message",
+  "signature_relation":"Five staircase sections may control the five middle-block phases; user explicitly labels this unproven."
+}

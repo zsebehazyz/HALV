@@ -66,6 +66,13 @@
       "target_or_exact_matches": 0
     },
     {
+      "result": "research/data/phase_decode_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 166546,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
       "result": "research/data/marker_glyph_relation.json",
       "count_field": "attempts_including_duplicates",
       "count": 61200,
@@ -229,6 +236,48 @@
       "role": "executed_result_or_artifact",
       "bytes": 2124,
       "sha256": "48f14cc63e0088e38470e143730d90633b85c7d33d19a4caa31eaddea2f50c17"
+    },
+    {
+      "path": "research/data/parity_phase_audit.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 105483,
+      "sha256": "bedee4da023e85e2eb775eb21b293a720ef1fb9eac2efc4c2408ca033ec935b5"
+    },
+    {
+      "path": "research/data/parity_phase_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 26593,
+      "sha256": "44d3c6cac70eede9a401abd90e6d085c0cfaf066d30872d55e0a2e021634c5fe"
+    },
+    {
+      "path": "research/data/phase_channels.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 82903,
+      "sha256": "bdc80c53b2ca2951154ba81e72d3bdde130ff17c7736812db9e665a0ff0437cc"
+    },
+    {
+      "path": "research/data/phase_decode_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1921,
+      "sha256": "3fe0a1bcdad08e7a10d68af4a54d5ada3b9ad3d847ef169fee33fab73eebfe2d"
+    },
+    {
+      "path": "research/data/phase_decode_run.log",
+      "role": "executed_result_or_artifact",
+      "bytes": 2403,
+      "sha256": "f03241f4e27147f194452488f7c3a6014392ee731811d90db61008b28c6c0a53"
+    },
+    {
+      "path": "research/data/phase_field_consistency.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 3782,
+      "sha256": "cf0719918022b5e790ff7a0c09050a9b4e9a72c95274ff0fe39cb6746402937a"
+    },
+    {
+      "path": "research/data/phase_law_diagnostics.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 7531,
+      "sha256": "ac51a8544128da09b60ab94c310292b8fb1cc91f6273f4ed62fd5764481dbe2d"
     },
     {
       "path": "research/data/pixel_measurements.json",
@@ -459,6 +508,12 @@
       "sha256": "032b78a0a9229ed80b34bc666a0e8c500fe3ade5d9543320e094d99c323ca3a0"
     },
     {
+      "path": "research/sources/user_phase_lead_2026-10-31.json",
+      "role": "source_or_reference",
+      "bytes": 1000,
+      "sha256": "e78e4d6f4789817b9f2b3c2d904c0bf0df8ae59374a4d0465fafe8fe71bf8201"
+    },
+    {
       "path": "research/sources/user_prior_notes.txt",
       "role": "source_or_reference",
       "bytes": 11294,
@@ -507,10 +562,28 @@
       "sha256": "a4ab67ee7db32438bba31f49bbc9d56c07bf6fa2e8bb863228de978e71996c6a"
     },
     {
+      "path": "research/models/parity_phase_v1.json",
+      "role": "model_specification",
+      "bytes": 1106,
+      "sha256": "39e6d8ad0fdb6e1febd12ca8887ccaa98d6d2b89321f05b1deca77e2391d10e6"
+    },
+    {
+      "path": "research/models/phase_decode_v1.json",
+      "role": "model_specification",
+      "bytes": 1714,
+      "sha256": "8ef1a0cd2f94998635e90bbb4f3668f65cc3a28b860f8fbc475afe00665129dc"
+    },
+    {
       "path": "research/models/timing_lattice_v1.json",
       "role": "model_specification",
       "bytes": 1197,
       "sha256": "1bcad4fa3800999aef86f722cde185dbf157c5aaf5821afd066f8cfb0a71704b"
+    },
+    {
+      "path": "tools/analyze_parity_phase.py",
+      "role": "reproduction_tool",
+      "bytes": 8632,
+      "sha256": "d9f2bbd7792f4ba01986b9c565fcae41ab2f5b1b29304e5159434981381227ff"
     },
     {
       "path": "tools/bitcoin_oracle.py",
@@ -521,8 +594,8 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 3149,
-      "sha256": "6fc8e23c1382d3c1628881fcf96e4add79f0676b07aee0fb768be70236e7bb8c"
+      "bytes": 3233,
+      "sha256": "318fc0aa9e4a885f0e8877630ac8f78795130d57d4742dd06e541feb622fec92"
     },
     {
       "path": "tools/check_bd_halving.py",
@@ -597,6 +670,18 @@
       "sha256": "84eb83c0311e20dca8ca333c5cfff7d83766f3c86064004d965b22cefe93f523"
     },
     {
+      "path": "tools/check_phase_decode.py",
+      "role": "reproduction_tool",
+      "bytes": 7713,
+      "sha256": "3e357d413c9423748a73de70675801b700c06417678983a601351306b9f206cd"
+    },
+    {
+      "path": "tools/check_phase_field_consistency.py",
+      "role": "reproduction_tool",
+      "bytes": 4261,
+      "sha256": "2ee4e101c08957cb07c8761986500c8b0c1e269c215b88259c4cb22e76210853"
+    },
+    {
       "path": "tools/check_price_hypothesis.py",
       "role": "reproduction_tool",
       "bytes": 1681,
@@ -627,6 +712,12 @@
       "sha256": "d1267cd113ae908678b617bbcfe04bed9a950010b0cd5f9a983098a8d914446a"
     },
     {
+      "path": "tools/diagnose_phase_law.py",
+      "role": "reproduction_tool",
+      "bytes": 3932,
+      "sha256": "68eaca08a5049ce5a7cc476811190cb6ae3c1351673648e304a9f5ac3ab59b2c"
+    },
+    {
       "path": "tools/diagnose_timing_specificity.py",
       "role": "reproduction_tool",
       "bytes": 2348,
@@ -651,6 +742,12 @@
       "sha256": "7de9c93d1d1acb983ca12df27f286ac2bf322a645ba1ea5d97ca8b6caa44b344"
     },
     {
+      "path": "tools/plot_phase_channels.py",
+      "role": "reproduction_tool",
+      "bytes": 1662,
+      "sha256": "c5e594da645077831b812ec597413acba48073b827782a9da067052f21738e73"
+    },
+    {
       "path": "tools/plot_reconstruction.py",
       "role": "reproduction_tool",
       "bytes": 2040,
@@ -665,26 +762,26 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 6933,
-      "sha256": "9cd2cbab6aa98e93247090f27cc773eea85ccae6110bfffcdc56db03c8c27a06"
+      "bytes": 7630,
+      "sha256": "920e8434ebebf20db64d30a7f83f069c008892085c02e1d833da97a70adc8d05"
     },
     {
       "path": "AGENTS.md",
       "role": "research_map_or_log",
-      "bytes": 1565,
-      "sha256": "8f5844290183ea9cadf6b3f5a2a6082529492a9e507e291fda92a7e42e5770c0"
+      "bytes": 1737,
+      "sha256": "78be9b22ea489c0a5cbeb6fc400cebcfb62cb9a3591d6e59d1dd44cf31de3ee7"
     },
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 10837,
-      "sha256": "e11603ec13d9c4d02e510b66bf2c532d12c09390c019493eb74880e08a449a1f"
+      "bytes": 14596,
+      "sha256": "5a0e8e57058ecddc1516da3e0ed7ccf151da250277464f0e08ea2cdb7f40647b"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 57092,
-      "sha256": "d079133120b450de31fd88064180cb1d3ff51be374e9e288dadfe1c0cb96ca3d"
+      "bytes": 67434,
+      "sha256": "90c093868571a33015c829c6da021cd48e9fb9e1ddb7d6a65d7d11d6bca978a5"
     }
   ]
 }

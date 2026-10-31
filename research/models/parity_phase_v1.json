@@ -1,0 +1,11 @@
+{
+  "model":"C12",
+  "waveform":"Stored 256 states, start x92, 3px grid, 8x32 samples",
+  "parity_phase":"Odd amplitude states by local index modulo 4",
+  "predicted_law":"local_index + zero_based_block_index == 2 mod 4",
+  "look_elsewhere_control":{"windows":"All four contiguous five-block windows","slopes":[0,1,2,3],"intercepts":[0,1,2,3],"reference":"All 4^8 independent block phase rotations, preserving each block's content"},
+  "pixel_model":"Same approximate mirrored polyline stroke kernel as stored baseline",
+  "crossfit":"Fit offset +1, validate +2, then swap; use only 31 within-block intervals per block (248 train and 248 validation columns)",
+  "constraint_audit":"For each block, forbid odd states outside each one of four phases; separately test predicted law on blocks3..8 and all8",
+  "limitations":["Conditional phase-rotation reference, not global search-adjusted significance","Adjacent columns are correlated","Stored 256-state fit already used 496 columns, so its residual is not independent validation","No full-image renderer or unique logical 33-point generator is claimed"]
+}

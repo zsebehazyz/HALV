@@ -31,6 +31,7 @@ def main():
         ('halving_pairs_check.json','unique_valid_scalars','valid private scalars'),
         ('pair64_check.json','unique_valid_scalars','valid private scalars'),
         ('bd_pair64_check.json','unique_valid_scalars','valid private scalars'),
+        ('phase_decode_check.json','unique_valid_scalars','valid private scalars'),
         ('marker_glyph_relation.json','attempts_including_duplicates','structural comparisons, not private keys')]:
         p=ROOT/'research/data'/filename
         if p.exists():

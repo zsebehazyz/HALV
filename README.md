@@ -136,3 +136,22 @@ geometriai értékein és a BD-vezérelt felezésen. Véglegesítésük közvetl
 `python3 tools/plot_pair64.py` elkészíti az összehasonlító ábrát.
 
 ![64 egységes kontroll](research/data/pair64_control_comparison.png)
+
+## Új fázisóra mind a nyolc blokkban
+
+A páratlan minták domináns fázisa `2,1,0,3,2,1,0,3`. Csak a középső öt
+blokkban kizárólagos; a többi alsó bitet is megőriztük.
+
+```sh
+python3 tools/analyze_parity_phase.py
+python3 tools/diagnose_phase_law.py
+python3 tools/check_phase_decode.py
+python3 tools/plot_phase_channels.py
+```
+
+A C12 képi fázisvizsgálatot és külön illesztési/ellenőrzési oszlopokat használ.
+A C13 a kétbitsíkos irányt a korábbi 64→32 összegzéssel és a dokumentált
+deltakódolással is összeköti. A rögzített családokban nincs címegyezés;
+a két fő kutatási ág továbbra is aktív.
+
+![Fáziscsatornák](research/data/phase_channels.png)
