@@ -1,0 +1,1172 @@
+{
+  "image_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "column": 91,
+  "roi_rows_inclusive": [
+    438,
+    512
+  ],
+  "comparator": ">=",
+  "threshold_plateaus": [
+    {
+      "start": 1,
+      "end": 1,
+      "count": 4
+    },
+    {
+      "start": 2,
+      "end": 2,
+      "count": 6
+    },
+    {
+      "start": 3,
+      "end": 23,
+      "count": 8
+    },
+    {
+      "start": 24,
+      "end": 107,
+      "count": 9
+    },
+    {
+      "start": 108,
+      "end": 177,
+      "count": 7
+    },
+    {
+      "start": 178,
+      "end": 216,
+      "count": 6
+    },
+    {
+      "start": 217,
+      "end": 217,
+      "count": 2
+    },
+    {
+      "start": 218,
+      "end": 255,
+      "count": 0
+    }
+  ],
+  "conditional_morse": {
+    "threshold": 32,
+    "dash_min_height": 4,
+    "group_min_blank_gap": 5,
+    "heights": [
+      6,
+      3,
+      5,
+      5,
+      1,
+      5,
+      3,
+      4,
+      5
+    ],
+    "blank_gaps": [
+      1,
+      5,
+      2,
+      6,
+      2,
+      2,
+      5,
+      2
+    ],
+    "groups": [
+      "-.",
+      "--",
+      ".-.",
+      "--"
+    ],
+    "reading": "NMRM",
+    "limitation": "Conditional on thresholds, not proof of Morse."
+  },
+  "seven_bit": {
+    "threshold": 3,
+    "rows_inclusive": [
+      444,
+      506
+    ],
+    "bit_count": 63,
+    "values": [
+      127,
+      120,
+      31,
+      63,
+      1,
+      63,
+      60,
+      15,
+      63
+    ],
+    "variants": [
+      {
+        "phase": 0,
+        "reverse": false,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          120,
+          31,
+          63,
+          1,
+          63,
+          60,
+          15,
+          63
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 0,
+        "reverse": false,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          15,
+          124,
+          126,
+          64,
+          126,
+          30,
+          120,
+          126
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 0,
+        "reverse": false,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          7,
+          96,
+          64,
+          126,
+          64,
+          67,
+          112,
+          64
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 0,
+        "reverse": false,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          112,
+          3,
+          1,
+          63,
+          1,
+          97,
+          7,
+          1
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 0,
+        "reverse": true,
+        "complement": false,
+        "little": false,
+        "values": [
+          126,
+          120,
+          30,
+          126,
+          64,
+          126,
+          124,
+          15,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 0,
+        "reverse": true,
+        "complement": false,
+        "little": true,
+        "values": [
+          63,
+          15,
+          60,
+          63,
+          1,
+          63,
+          31,
+          120,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 0,
+        "reverse": true,
+        "complement": true,
+        "little": false,
+        "values": [
+          1,
+          7,
+          97,
+          1,
+          63,
+          1,
+          3,
+          112,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 0,
+        "reverse": true,
+        "complement": true,
+        "little": true,
+        "values": [
+          64,
+          112,
+          67,
+          64,
+          126,
+          64,
+          96,
+          7,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 1,
+        "reverse": false,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          112,
+          62,
+          126,
+          2,
+          126,
+          120,
+          30,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 1,
+        "reverse": false,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          7,
+          62,
+          63,
+          32,
+          63,
+          15,
+          60,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 1,
+        "reverse": false,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          15,
+          65,
+          1,
+          125,
+          1,
+          7,
+          97,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 1,
+        "reverse": false,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          120,
+          65,
+          64,
+          95,
+          64,
+          112,
+          67,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 1,
+        "reverse": true,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          60,
+          15,
+          63,
+          32,
+          63,
+          62,
+          7,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 1,
+        "reverse": true,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          30,
+          120,
+          126,
+          2,
+          126,
+          62,
+          112,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 1,
+        "reverse": true,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          67,
+          112,
+          64,
+          95,
+          64,
+          65,
+          120,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 1,
+        "reverse": true,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          97,
+          7,
+          1,
+          125,
+          1,
+          65,
+          15,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 2,
+        "reverse": false,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          96,
+          125,
+          124,
+          5,
+          125,
+          112,
+          61,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 2,
+        "reverse": false,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          3,
+          95,
+          31,
+          80,
+          95,
+          7,
+          94,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 2,
+        "reverse": false,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          31,
+          2,
+          3,
+          122,
+          2,
+          15,
+          66,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 2,
+        "reverse": false,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          124,
+          32,
+          96,
+          47,
+          32,
+          120,
+          33,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 2,
+        "reverse": true,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          94,
+          7,
+          95,
+          80,
+          31,
+          95,
+          3,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 2,
+        "reverse": true,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          61,
+          112,
+          125,
+          5,
+          124,
+          125,
+          96,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 2,
+        "reverse": true,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          33,
+          120,
+          32,
+          47,
+          96,
+          32,
+          124,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 2,
+        "reverse": true,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          66,
+          15,
+          2,
+          122,
+          3,
+          2,
+          31,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 3,
+        "reverse": false,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          65,
+          123,
+          120,
+          11,
+          123,
+          96,
+          123,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 3,
+        "reverse": false,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          65,
+          111,
+          15,
+          104,
+          111,
+          3,
+          111,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 3,
+        "reverse": false,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          62,
+          4,
+          7,
+          116,
+          4,
+          31,
+          4,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 3,
+        "reverse": false,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          62,
+          16,
+          112,
+          23,
+          16,
+          124,
+          16,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 3,
+        "reverse": true,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          111,
+          3,
+          111,
+          104,
+          15,
+          111,
+          65,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 3,
+        "reverse": true,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          123,
+          96,
+          123,
+          11,
+          120,
+          123,
+          65,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 3,
+        "reverse": true,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          16,
+          124,
+          16,
+          23,
+          112,
+          16,
+          62,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 3,
+        "reverse": true,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          4,
+          31,
+          4,
+          116,
+          7,
+          4,
+          62,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 4,
+        "reverse": false,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          3,
+          119,
+          112,
+          23,
+          119,
+          65,
+          119,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 4,
+        "reverse": false,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          96,
+          119,
+          7,
+          116,
+          119,
+          65,
+          119,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 4,
+        "reverse": false,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          124,
+          8,
+          15,
+          104,
+          8,
+          62,
+          8,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 4,
+        "reverse": false,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          31,
+          8,
+          120,
+          11,
+          8,
+          62,
+          8,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 4,
+        "reverse": true,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          119,
+          65,
+          119,
+          116,
+          7,
+          119,
+          96,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 4,
+        "reverse": true,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          119,
+          65,
+          119,
+          23,
+          112,
+          119,
+          3,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 4,
+        "reverse": true,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          8,
+          62,
+          8,
+          11,
+          120,
+          8,
+          31,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 4,
+        "reverse": true,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          8,
+          62,
+          8,
+          104,
+          15,
+          8,
+          124,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 5,
+        "reverse": false,
+        "complement": false,
+        "little": false,
+        "values": [
+          126,
+          7,
+          111,
+          96,
+          47,
+          111,
+          3,
+          111,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 5,
+        "reverse": false,
+        "complement": false,
+        "little": true,
+        "values": [
+          63,
+          112,
+          123,
+          3,
+          122,
+          123,
+          96,
+          123,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 5,
+        "reverse": false,
+        "complement": true,
+        "little": false,
+        "values": [
+          1,
+          120,
+          16,
+          31,
+          80,
+          16,
+          124,
+          16,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 5,
+        "reverse": false,
+        "complement": true,
+        "little": true,
+        "values": [
+          64,
+          15,
+          4,
+          124,
+          5,
+          4,
+          31,
+          4,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 5,
+        "reverse": true,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          123,
+          96,
+          123,
+          122,
+          3,
+          123,
+          112,
+          63
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 5,
+        "reverse": true,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          111,
+          3,
+          111,
+          47,
+          96,
+          111,
+          7,
+          126
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 5,
+        "reverse": true,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          4,
+          31,
+          4,
+          5,
+          124,
+          4,
+          15,
+          64
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 5,
+        "reverse": true,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          16,
+          124,
+          16,
+          80,
+          31,
+          16,
+          120,
+          1
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 6,
+        "reverse": false,
+        "complement": false,
+        "little": false,
+        "values": [
+          124,
+          15,
+          95,
+          64,
+          95,
+          94,
+          7,
+          95,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 6,
+        "reverse": false,
+        "complement": false,
+        "little": true,
+        "values": [
+          31,
+          120,
+          125,
+          1,
+          125,
+          61,
+          112,
+          125,
+          127
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 6,
+        "reverse": false,
+        "complement": true,
+        "little": false,
+        "values": [
+          3,
+          112,
+          32,
+          63,
+          32,
+          33,
+          120,
+          32,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 6,
+        "reverse": false,
+        "complement": true,
+        "little": true,
+        "values": [
+          96,
+          7,
+          2,
+          126,
+          2,
+          66,
+          15,
+          2,
+          0
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 6,
+        "reverse": true,
+        "complement": false,
+        "little": false,
+        "values": [
+          127,
+          125,
+          112,
+          61,
+          125,
+          1,
+          125,
+          120,
+          31
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 6,
+        "reverse": true,
+        "complement": false,
+        "little": true,
+        "values": [
+          127,
+          95,
+          7,
+          94,
+          95,
+          64,
+          95,
+          15,
+          124
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 6,
+        "reverse": true,
+        "complement": true,
+        "little": false,
+        "values": [
+          0,
+          2,
+          15,
+          66,
+          2,
+          126,
+          2,
+          7,
+          96
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      },
+      {
+        "phase": 6,
+        "reverse": true,
+        "complement": true,
+        "little": true,
+        "values": [
+          0,
+          32,
+          120,
+          33,
+          32,
+          63,
+          32,
+          112,
+          3
+        ],
+        "all_base58_ascii": false,
+        "all_base58_zero_based_indices": false
+      }
+    ],
+    "variants_all_base58_ascii": 0,
+    "variants_all_base58_indices": 0
+  }
+}

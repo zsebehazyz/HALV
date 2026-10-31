@@ -398,3 +398,104 @@ A WIF-irány általában nem kizárt. A konkrét közvetlen ötmintás család e
 a rekonstrukción nem működik. Előrelépést egy indokolt elválasztó-szegmentálás
 vagy egy forrással alátámasztott karakterkód adhat; az ellenőrzőösszeg
 utólagos „javítása” nem megoldás.
+
+## 2026-10-31 – negyedik menet: teljes küszöbskála, hétbites rács, előjeles kontroll
+
+### Átvett eredmények és saját futások különválasztása
+
+A felhasználó részletes küszöbtáblát, feltételes NMRM-olvasatot, kilenc
+hétbites értéket és egy 1200 jelöltes, 1067 különböző karaktersort adó külső
+futás összegzését adta meg. A strukturált átirat:
+`sources/user_marker_wif_update_2026-10-31.json`.
+Az utóbbi futás pontos transzformációlistája, jelöltjei és az állítólagosan
+használt első szintű ismert kulcs tesztvektora nem érkezett meg. Ezért a
+1200/1067/0 számokat átvett eredményként őrizzük; nem saját végrehajtott
+tesztként, és nem adjuk hozzá a saját jelöltösszegekhez.
+A történeti megoldásábrák állításai változatlanul a felhasználó közléséből
+származnak; ebben a menetben sem végeztünk saját hitelesítést az ábrákon.
+
+### A küszöbtábla pontosan reprodukálható
+
+A mentett 950×950-es PNG x=91 oszlopán, y=438…512 tartományban végigmértük
+mind a 255 nemnulla egész fényességküszöböt. A feltétel most **fényesség ≥ T**.
+
+| T tartomány | Összefüggő jelek |
+|---|---:|
+| 1 | 4 |
+| 2 | 6 |
+| 3…23 | 8 |
+| 24…107 | 9 |
+| 108…177 | 7 |
+| 178…216 | 6 |
+| 217 | 2 |
+| 218…255 | 0 |
+
+Az új tábla egyezik a felhasználóéval. A korábbi program **fényesség > T**
+feltételt használt, ezért a tartományhatárok ott eggyel kisebbek voltak.
+A kilences plató valóban **84 egymást követő küszöböt** fed le, nem egyetlen
+kényelmes küszöbértéket. Ez erősíti a kilencalakzatos grafikus olvasatot,
+de önmagában nem igazolja a morzekódot.
+
+T=32 mellett a magasságok `6,3,5,5,1,5,3,4,5`, az üres szünetek
+`1,5,2,6,2,2,5,2` pixelsor hosszúak. Legalább 4 pixeles vonással és
+legalább 5 üres soros betűhatárral pontosan `-. -- .-. --`, azaz **NMRM**
+adódik. Ez **feltételes dekódolás**, nem igazolt értelmes üzenet. Ezen konkrét
+szabályok nem az XEX olvasatot adják; az XEX más besorolást/csoportosítást igényel.
+
+### Kilenc hétbites egység: a számsor is egyezik
+
+T=3 (`>=`) mellett az aktív oszlop y=444…506, mindkét végponttal együtt
+**63 sor**. Felülről lefelé, csoporton belül legnagyobb helyiértékkel kezdve:
+
+`127,120,31,63,1,63,60,15,63`.
+
+Ezek nem mind Base58 ASCII-karakterek és nem mind 0…57 indexek.
+Egy előre rögzített, kis átalakításcsaládot is lefuttattunk:
+
+- 7 ciklikus fázis a 63 bites blokkon;
+- előre/hátra teljes bejárás;
+- komplementálás igen/nem;
+- csoporton belüli bitrend megfordítása igen/nem.
+
+Összesen **56 paraméterkombináció**. Egyik sem ad kilenc érvényes Base58
+ASCII-karaktert, és egyik sem ad kilenc szabályos nullaalapú Base58-indexet.
+Ez nem tetszőleges hétbites kódolás kizárása. A ciklikus fázis műveleti
+hipotézis: nem jelent a képen kívül mért további pixeleket.
+Program: `tools/check_marker_grid.py`; teljes adat és minden variáns:
+`data/marker_grid_check.json`.
+
+### Új geometriai kontroll: előjeles minták a tükrözött ágak mögött
+
+A korábbi illesztés nemnegatív csomópontokból két tükrözött görbét rajzolt.
+Ez nem engedett meg csomópontok közötti tengelykeresztezést akkor, ha
+az eredeti, rejtett jel előjelet váltott volna. Ezt külön kontrollal vizsgáltuk.
+
+Azonos közelítő vonalprofillal két előjeles ábécét engedtünk meg:
+`{-3,-2,-1,0,1,2,3}` és `{-3,-1,1,3}`. Három órát/fázist vizsgáltunk:
+3 px x=92, 6 px x=92, 6 px x=95. A globális tükrözési szabadságot az első
+állapot nemnegativitásával rögzítettük; nulla állapot után további előjel-tie
+maradhat. Az előjelsor nem tekinthető egyértelműen kinyert adatnak.
+
+| Óra, kezdő x | Ábécé | Átlagos szakasz-MSE |
+|---|---|---:|
+| 3 px, 92 | −3…+3 | 0,003055 |
+| 3 px, 92 | −3,−1,+1,+3 | 0,021439 |
+| 6 px, 92 | −3…+3 | 0,022894 |
+| 6 px, 92 | −3,−1,+1,+3 | 0,026080 |
+| 6 px, 95 | −3…+3 | 0,021337 |
+| 6 px, 95 | −3,−1,+1,+3 | 0,027095 |
+
+A hárompixeles hétállapotú modell nem javít a névleges négyállapotú
+illesztés hibáján; abszolút állapotai is azonosak a korábbi sorral.
+A hatpixeles egyenes előjeles változatok nem közelítik meg ezt a hibát.
+A különböző órák eltérő oszlopokat vesznek a költségbe, ezért ezek nem
+formális likelihood-arányok. Spline-modellt nem teszteltünk.
+
+A közös `fit` függvény ábécéparamétert kapott, az alapértelmezés változatlan.
+A névleges modellt újrafuttatva a teljes eredménye **pontosan megegyezik**
+a korábban mentettel. Program: `tools/check_signed_models.py`;
+eredmény: `data/signed_model_check.json`.
+
+Ebben a menetben nem állítottunk elő új privátkulcs-jelölteket.
+Az ellenőrzött nyom most a kilences plató és a hétbites geometria;
+egyik sem adott kulcsot vagy igazolt Base58-üzenetet.

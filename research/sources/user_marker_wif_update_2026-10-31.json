@@ -1,0 +1,22 @@
+{
+  "source": "User message, 2026-10-31; structured transcription of research claims, not independently supplied run artifacts",
+  "marker_thresholds": [[3,23,8],[24,107,9],[108,177,7],[178,216,6]],
+  "threshold_32_heights": [6,3,5,5,1,5,3,4,5],
+  "conditional_morse": "-. | -- | .-. | -- = NMRM; dash if height >=4, group if blank gap >=5",
+  "seven_bit_values": [127,120,31,63,1,63,60,15,63],
+  "earlier_level_claims": {
+    "levels_1_2": "Base58 WIF",
+    "level_2": "Seven bits per Base58 character in author solution",
+    "level_4": "17 Bezier curves times three points = 51 WIF characters",
+    "level_3": "32 direct key bytes"
+  },
+  "proposed_numeric_relations": ["59 = 51 + 8", "256 = 51*5 + 1", "fixed WIF prefix 5 plus 50 characters from 250 samples"],
+  "reported_external_candidate_run": {
+    "base58_candidates": 1200,
+    "distinct_candidates": 1067,
+    "valid_wifs": 0,
+    "transforms_described": ["24 state permutations", "read directions", "bit selections", "Gray code", "modulo 58"],
+    "reported_validation": "Accepted known private key from Zden level 1",
+    "reproduction_status": "Not independently reproduced: exact transformation enumeration, candidate strings, and historical test vector not supplied. Do not combine these counts with locally executed searches."
+  }
+}

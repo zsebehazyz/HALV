@@ -55,3 +55,14 @@ karaktersor egyike sem érvényes WIF. A WIF-dekóder kilenc pozitív/negatív
 ellenőrzése sikeres. Részletek: `research/data/five_sample_wif_check.json`.
 
 A jelölőnél a `fényesség > 0` feltétel valóban **négy** összefüggő alakzatot ad.
+
+## Teljes küszöbmérés és hétbites jelölő
+
+`python3 tools/check_marker_grid.py` reprodukálja a 24…107 közötti 84 küszöbön
+stabil kilenc jelet (`>=` összehasonlítással), a feltételes NMRM olvasatot és
+a kilenc hétbites számot. Az 56 vizsgált egyszerű hétbites átalakítás egyike
+sem ad teljes Base58-szöveget vagy nullaalapú indexsort.
+
+`python3 tools/check_signed_models.py` az előjeles, tengelyen áthaladó
+töröttvonal-változatokat vizsgálja. A hárompixeles modell hibája nem javul;
+az itt vizsgált hatpixeles változatok továbbra is rosszabbak. Ez nem spline-teszt.
