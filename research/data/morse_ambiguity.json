@@ -1,0 +1,47 @@
+{
+  "note": "Patterns come from user-supplied prior notes, not new pixel measurements. Counts allow A-Z/0-9 and arbitrary letter boundaries.",
+  "results": [
+    {
+      "claimed_reading": "XEX",
+      "grouped": "-..- . -..-",
+      "pattern": "-..-.-..-",
+      "marks": 9,
+      "possible_alphanumeric_readings_without_gaps": 200,
+      "shortest_readings": [
+        "DCA",
+        "DKU",
+        "DNX",
+        "NRX",
+        "TFX",
+        "XAU",
+        "XEX",
+        "XLT",
+        "XRA",
+        "DCET",
+        "DKEA",
+        "DKIT"
+      ]
+    },
+    {
+      "claimed_reading": "NMRM",
+      "grouped": "-. -- .-. --",
+      "pattern": "-.--.-.--",
+      "marks": 9,
+      "possible_alphanumeric_readings_without_gaps": 200,
+      "shortest_readings": [
+        "KCM",
+        "KKW",
+        "KNY",
+        "NGY",
+        "NQW",
+        "TPY",
+        "YAW",
+        "YEY",
+        "YRM",
+        "KCTT",
+        "KKAT",
+        "KKEM"
+      ]
+    }
+  ]
+}

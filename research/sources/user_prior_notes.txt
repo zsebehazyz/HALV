@@ -1,0 +1,152 @@
+segíts megfejteni ezt a bitcoin puzzle-t, az alkotó semmi leirást nem adott hogy hogy a neve HALV és a btc felezés alkalmából csinálta(ezért szerintem a felezésnek van jelentősége a kulcs megfejtésében)
+
+Keresett cim: 1crypto24HCr178iMcKd5iUi5D4rsg1nK
+
+infok:
+
+komment egy megfejtőtől:\
+Cracked it. I dont want the balance i just wanted to crack it. Fibonacci and morse code , and audio decryption :) well done tho for the deep layers was fun to crack i really enjoyed the challenge \
+korábbi kutatásaim jegyzete:
+\
+Van egy hasznos ellenőrzés ehhez: a Fibonacci-deltakódban a `8` érték jelent nulla változást.
+
+A megengedőbb keresés adott néhány hárombetűs olvasatot, például `ETA`, `TEN` és `ITE`\
+&#x20;A teljes feldolgozás egy ismert, mesterségesen előállított „HALV” Morse-hangot tisztán és zajjal együtt is visszaolvasott.
+
+\
+Amit a jelölőről mértem. A középső oszlop értékei (443–506 sorok) szabályos fűrészfogat adnak: 23, 47, 75, 107, 141, 178, 216 ismétlődik, és köztük 0-s szakaszok vannak. A fényerő tehát nem véletlen adat, hanem egy 7 soros rámpa, amit valami kitakar. Az információ legfeljebb a kitakarás mintázatában van (64 sor, kb. 64 bit), nem a fényerőértékekben, így 64 nibble adatnak nem tekinthető.\
+\
+Amit lefuttattam (2186 jelölt × 4 átalakítás).\
+\
+A fényerő nibble-lé alakítva (több kvantálással, előre és fordítva, magas/alacsony nibble elöl), közvetlen bájtként és Fibonacci-delta dekódolással (kezdőérték 0, 127, 128, 255, minden 32 bájtos ablak).\
+A kitakarás 64 bites maszkja (3 küszöbbel, negálva, fordítva), önmagában, 4-szer ismételve és nullákkal kiegészítve.\
+Mindegyiket nyersen, SHA-256-tal, dupla SHA-256-tal és bájtfordítva ellenőriztem.\
+Találat nem volt. A Fibonacci-delta kezdőértékét csak négy értékre próbáltam (a teljes 0–255 keresés túl lassú volt a 10 perces időkeretben), tehát az a rész nem teljes.\
+\
+A feljegyzésed alapján a legfontosabb nyitott pontok:\
+\
+A Morse-olvasatod (-. | -- | .-. | -- = NMRM) és az enyém (-..- . -..- = XEX) különbözik, mert más küszöbbel osztályoztunk a hosszakat. Az enyém tükörszimmetrikus, a tiéd nem, ezért érdemes lenne eldönteni, melyik küszöb a helyes (az 5 px-es jel: rövid vagy hosszú).\
+A Fibonacci-delta hasznos ötlet a hullámra is: ha a hullám szintváltozásai (−3…+3) ennek az ábécének felelnek meg, akkor a kulcs nem a szintekben, hanem a delták indexeiben (nibble 5…11 ↔ −3…+3) lehet. Ezt a hullám ellenőrzött szintsorozatával lehetne tesztelni, az itteni mérésem viszont 1 px-es időzítési bizonytalanságot hagyott.\
+\
+\
+\
+Ellenőriztem a Fibonacci-delta ötletet a hullámon, és a mérés részben alátámasztja, de kulcsot ebből nem tudtam előállítani.\
+\
+Ami igazolódott (pixelfelbontásban mérve, 4 szakaszban):\
+\
+Az amplitúdó egységei egészek. Ha a magasságot az adott szakasz egységével osztom (a szakasz egysége 42,67 px az 1. szakaszban, minden szakaszban felezve), a jel pixelenként egész értékek között halad (pl. 5,0 → 6,0 → 7,0 a kép első csúcsánál). A csúcs kb. 9 egység, vagyis 3 szint × 3.\
+A pixelenkénti változás −3…+3. A 4 szakasz \~400 pixeles lépéseinek hisztogramja: −3 (9), −2 (28), −1 (113), 0 (90), +1 (104), +2 (31), +3 (5), néhány kiugró 4–6 érték csak a csúcsok körüli elmosódásnál van. Pontosan 7 érték, ami az 8SVX Fibonacci-delta tábla középső része (index 5…11 ↔ −3…+3, a 8-as nibble = 0 változás).\
+Az amplitúdó felezése szakaszonként (8 szakasz, 96 px) szintén egybevág az „audio“ ötlettel: a jel egy szakaszonként elhalkított, egész értékű mintasorozat.\
+\
+Ami nem igazolódott:\
+\
+A 7 elemű (−3…+3) ábécéből \~770 pixeles lépés 2000 bit felett lenne, ez sokkal több egy 256 bites kulcsnál. A kulcs tehát nem a delták nyers sorozata, hanem valamilyen szűrés vagy egy rétegzett kódolás (a hangban Morse?) része.\
+A némaságok (y≈0) hossza 1–8 px között szóródik (2 px: 8-szor, 5 px: 3-szor, 8 px: 2-szer), ez nem egyezik tiszta Morse-időzítéssel (1:3:7). Az „be“ szakaszok hossza: 24, 7, 48, 18, 7, 100, 49, ..., 288, szintén nem Morse-szerű.\
+A pixelenkénti értékek a törések körül ±1 px-szel bizonytalanok (az élsimítás elmossa a csúcsokat és a töréseket), ezért a pontos, hibátlan egész sorozatot nem tudom ellenőrzötten kiolvasni. Ez ugyanaz az „időzítési szabadság“, amit a feljegyzésed is leír.\
+\
+Következtetés: a „Fibonacci-delta + hang“ irány a kép szerkezetével összefér (7 delta, egész egységek, szakaszonkénti halkítás). A kulcshoz viszont még azt kell megtalálni, hogy a \~770 deltából mi a hasznos tartalom. A legígéretesebb folytatás: a te pontos 128 értékű rekonstrukciódból előállítani a Fibonacci-delta nibble-folyamot, és azon keresni a 256 bites részt (pl. a deltaindexek alsó bitjei vagy a nem nulla változások helyei).\
+\
+Ha megosztod a rekonstrukciót szövegként (akár csak a pixelenkénti egész sorozatot az első 2–3 szakaszra), azt közvetlenül nibble-folyammá alakítom, és lefuttatom a kulcskereső változatokat.
+
+találtam egy másik, részletes geometriai elemzést, amely szerint a hullámforma 59 különálló hullámlobusz alakját használhatja adatként. Ez más megközelítés, mint a teljes hullámforma pixelenkénti Fibonacci-delta dekódolása. : Zden — Level HALV
+Zden’s Level HALV was published on 2024-04-20, the day of Bitcoin’s fourth halving.
+
+The prize address is:
+
+1crypto24HCr178iMcKd5iUi5D4rsg1nK
+
+It is a funded, unspent legacy P2PKH address. Because it has never spent an output, its public key is not exposed. A proposed solution can therefore be validated only by treating it as a secp256k1 private scalar, deriving the corresponding compressed and uncompressed Bitcoin addresses, and requiring an exact match.
+
+The reward of 312,500 satoshis mirrors the fourth-halving block subsidy of 3.125 BTC at a scale of 1:1000.
+
+What the image actually contains
+
+Forensic analysis of the official cryptoHALV.png rules out the usual hidden-data channels:
+
+no appended payload after IEND no meaningful bit-plane steganography no hidden color or alpha channel no independent FFT watermark no usable metadata payload
+
+The waveform itself is the data-bearing object.
+
+Its geometry establishes a precise multiscale structure:
+
+the signal occupies exactly 768 horizontal pixels its measured span is x = 91…858 a marked vertical feature at x = 90…92 identifies the origin the signal divides into eight blocks of 96 pixels the scale halves from one block to the next the block scales are: 128, 64, 32, 16, 8, 4, 2, 1
+
+Within block (b), the measured amplitude levels follow:
+
+[ A=q\cdot 2^{7-b},\qquad q\in{1,2,3} ]
+
+The observed maximum slopes in the high-resolution blocks agree with:
+
+[ \text{slope}=\frac{2^{7-b}}{3} ]
+
+This establishes a physical lattice of three pixels and connects the waveform directly to repeated halving.
+
+The real ambiguity: lattice versus symbol clock
+
+A three-pixel lattice does not necessarily mean that every three pixels encode one symbol. At least two compact models remain:
+
+Model Clock Symbols Information Binary-step model 3 px 256 directions (256\times1=256) bits Quaternary-state model 6 px 128 states (128\times2=256) bits
+
+In the binary model, each three-pixel step would encode an upward or downward transition.
+
+In the quaternary model, every six pixels would encode one state:
+
+[ q\in{0,1,2,3} ]
+
+with the centerline supplying state zero and the visible amplitudes supplying states one through three.
+
+Both models fit the 768-pixel span, and both can produce the measured maximum slope. A change of two amplitude units over six pixels has the same slope as a change of one unit over three pixels:
+
+[ \frac{2s}{6}=\frac{s}{3} ]
+
+Therefore, the slope proves the raster lattice but does not by itself determine the symbol rate.
+
+The binary-step interpretation also faces a parity constraint. If every transition is exactly (+1) or (-1), then:
+
+[ q\_{n+m}-q_n\equiv m\pmod 2 ]
+
+A measured transition from (q=2) to (q=1) across two three-pixel intervals violates this invariant. Rounded rendering cannot repair an inconsistency in the underlying discrete path.
+
+This makes the six-pixel quaternary model the strongest current hypothesis, although it still requires pixel-level reconstruction.
+
+What has already been eliminated
+
+More than 33,000 unique candidates have been tested from:
+
+apex shape and amplitude channels 59-, 64-, 67- and 69-lobe segmentations direct nibble interpretations differential and accumulated encodings half-key expansions interval and run-length transducers block and halving metadata hashes, reversals, complements and byte-order variants
+
+None derives the target address.
+
+These negatives strongly constrain apex-only interpretations, but they do not test a complete reconstruction of 128 regularly sampled quaternary states. The missing information may lie between the visible extrema rather than in an additional external “half” of the key.
+
+Current resolution strategy
+
+The next discriminating experiment is to reconstruct the image as the output of a small family of signal generators:
+
+Extract the medial centerline rather than the outside stroke boundary. Compare a three-pixel binary clock with a six-pixel quaternary clock. Render each candidate using a limited set of global smoothing models: straight polyline rounded joins quadratic midpoint interpolation Catmull–Rom interpolation with one global tension one-pass corner cutting Fit the global geometry on the first high-resolution blocks. Predict the remaining blocks without retuning. Reject any model requiring per-lobe corrections. Recover the discrete state sequence using dynamic programming. Only after reconstruction, test the resulting 256 bits against the Bitcoin oracle.
+
+If the quaternary model produces 128 states, the primary decoding space is small:
+
+24 bijections between four states and two-bit symbols forward and reverse traversal bit order within each pair byte order compressed and uncompressed public-key derivation
+
+A solution is accepted only if the resulting scalar derives exactly to:
+
+1crypto24HCr178iMcKd5iUi5D4rsg1nK
+
+No visual plausibility, partial prefix, printable output or statistical score is treated as evidence.
+
+Why this puzzle matters
+
+HALV is not primarily a password search or a conventional steganography problem.
+
+It is a digital signal reverse-engineering problem disguised as a simple image:
+
+rasterized curve → recover scale and clock → infer discrete states → decode 256 bits → derive Bitcoin address
+
+The central methodological lesson is that a visible sampling grid and a symbol clock are not the same thing. The correct solution must explain the complete pixel geometry before it is allowed to use the target address.
+
+That turns the puzzle from uncontrolled interpretation into a falsifiable model-selection problem.
+
+
+
+próbáld megtalálni a puzzle privát kulcsát

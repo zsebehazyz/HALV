@@ -1,0 +1,7 @@
+{
+  "url": "https://raw.githubusercontent.com/coinmetrics/data/master/csv/btc.csv",
+  "retrieved_utc": "2026-10-31",
+  "raw_sha256": "06495ff8e643432e6948b7b4686ce44fc106217287dabdc1b38351d9ddec46c3",
+  "selected_rows": 1572,
+  "note": "Historical daily PriceUSD, as served at retrieval; not a frozen 2024 vintage."
+}
