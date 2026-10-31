@@ -31,6 +31,20 @@
       "target_or_exact_matches": 0
     },
     {
+      "result": "research/data/bd_halving_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 2112,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
+      "result": "research/data/halving_pairs_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 5184,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
       "result": "research/data/marker_glyph_relation.json",
       "count_field": "attempts_including_duplicates",
       "count": 61200,
@@ -39,6 +53,12 @@
     }
   ],
   "files": [
+    {
+      "path": "research/data/bd_halving_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1610,
+      "sha256": "336a3da88d311dca591150fe7d76812915f5a7f0b7b21fe36ac90b0b783674a8"
+    },
     {
       "path": "research/data/btc_usd_daily_2020_to_halving.csv",
       "role": "executed_result_or_artifact",
@@ -86,6 +106,12 @@
       "role": "executed_result_or_artifact",
       "bytes": 1716,
       "sha256": "0060745795c50fc9237bbfbf09041164cbbba3b540fe87fae253f250e2c04e40"
+    },
+    {
+      "path": "research/data/halving_pairs_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 2146,
+      "sha256": "360c0eef3b83442e314ff2c41d643a707c2a53dfa7a81508c3943bd6bfb5e657"
     },
     {
       "path": "research/data/hex_text_check.json",
@@ -178,6 +204,30 @@
       "sha256": "4c8be47411a6a2ded8ef435c9e71c21970838872cc79d17ed56034b020e9f6cc"
     },
     {
+      "path": "research/data/timing_lattice_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 10270,
+      "sha256": "a3bdb2985d82cfdb99496a9bebbfffa29a8e356c39a6a2408fc2a21b4d29bafb"
+    },
+    {
+      "path": "research/data/timing_lattice_controls.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 316392,
+      "sha256": "4031998dc10915d56d8a35bb9a151a530909a7f5ab399b53519037e028944b9a"
+    },
+    {
+      "path": "research/data/timing_specificity.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1576,
+      "sha256": "3610130e9bee85991afd51fd9c9d6ac164620fbd4bd9078d68f8c9e97a64ea0e"
+    },
+    {
+      "path": "research/data/timing_surrogate_scores.npz",
+      "role": "executed_result_or_artifact",
+      "bytes": 637695,
+      "sha256": "84eb5d82a246cc6e6aa77e3531b7eb1ec474673d44f6d34cb79088a86c9d9ceb"
+    },
+    {
       "path": "research/sources/author-posts.md",
       "role": "source_or_reference",
       "bytes": 1046,
@@ -244,6 +294,18 @@
       "sha256": "6f4beb65d6222bb06bd514f4295da7eb3f9515ba67c4162b0c1c075a173a119a"
     },
     {
+      "path": "research/sources/ffmpeg_8svx.c",
+      "role": "source_or_reference",
+      "bytes": 6581,
+      "sha256": "2b873e391d1e2747fd3d2f696c08054489e502e26cd0e1b7f117f15fa619084f"
+    },
+    {
+      "path": "research/sources/ffmpeg_8svx_provenance.json",
+      "role": "source_or_reference",
+      "bytes": 201,
+      "sha256": "37806d7dc70fb25a10378036ff7fa18ea915c677dac58ffe77a3e6b87691a295"
+    },
+    {
       "path": "research/sources/floflo777__open-crypto-puzzles_README.md",
       "role": "source_or_reference",
       "bytes": 18369,
@@ -292,6 +354,12 @@
       "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
     },
     {
+      "path": "research/sources/user_lattice_controls_update_2026-10-31.json",
+      "role": "source_or_reference",
+      "bytes": 1416,
+      "sha256": "38e4786d49afbd1c9aabda382ae6dc393f5281f9b6b3a169d782e5fc0c08fa83"
+    },
+    {
       "path": "research/sources/user_marker_wif_update_2026-10-31.json",
       "role": "source_or_reference",
       "bytes": 1301,
@@ -316,10 +384,28 @@
       "sha256": "379ab19a3f9b4cfcb706a66f5715c719c1eb74ab89ca785d3d33da51db328503"
     },
     {
+      "path": "research/models/bd_halving_v1.json",
+      "role": "model_specification",
+      "bytes": 928,
+      "sha256": "45d462345ff3e8dbe173d1c153546958f2beadb0455a40b6fe75de3324c93f70"
+    },
+    {
       "path": "research/models/composite_v1.json",
       "role": "model_specification",
       "bytes": 1435,
       "sha256": "fb0fcf731f0436cb6cd53bff8255296a83cec903ab66ffa822386a63746c2524"
+    },
+    {
+      "path": "research/models/halving_pairs_v1.json",
+      "role": "model_specification",
+      "bytes": 788,
+      "sha256": "675a0b0df22df87db0a879440c3b61abef4432f7dbc76ae2b588c4b99a100aed"
+    },
+    {
+      "path": "research/models/timing_lattice_v1.json",
+      "role": "model_specification",
+      "bytes": 1197,
+      "sha256": "1bcad4fa3800999aef86f722cde185dbf157c5aaf5821afd066f8cfb0a71704b"
     },
     {
       "path": "tools/bitcoin_oracle.py",
@@ -330,8 +416,14 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 2536,
-      "sha256": "559763ed1adcafc3b1a03812423a74205f8ea91f0fabc66ffce135a302d1da9d"
+      "bytes": 2703,
+      "sha256": "1cd540aed05fe9e2afd1aabb2e10d9e756c3de8384ddc1726cc11b7c463a1086"
+    },
+    {
+      "path": "tools/check_bd_halving.py",
+      "role": "reproduction_tool",
+      "bytes": 3730,
+      "sha256": "19e879b5ca06d040743197d65e4e170873570dfe433996e7ed287c51dfaf80de"
     },
     {
       "path": "tools/check_composite_models.py",
@@ -350,6 +442,12 @@
       "role": "reproduction_tool",
       "bytes": 6192,
       "sha256": "2726b1417e4f1fa3674785f6191cdc635f8ceb197acf0c7fa96b8104dc2b09df"
+    },
+    {
+      "path": "tools/check_halving_pairs.py",
+      "role": "reproduction_tool",
+      "bytes": 3184,
+      "sha256": "ed700014657c43b44665f25dc71872165b6451cd1a5368c9ceff4cbe18b6b6fb"
     },
     {
       "path": "tools/check_hex_text.py",
@@ -400,6 +498,18 @@
       "sha256": "158eb792b7792c8574efe449dd933e2e66092ac58db978452074551ee811280a"
     },
     {
+      "path": "tools/check_timing_lattice.py",
+      "role": "reproduction_tool",
+      "bytes": 8331,
+      "sha256": "42994b08e2865b853d9b230cab27025587c054398bdb62e1abbc62b25e9479b4"
+    },
+    {
+      "path": "tools/diagnose_timing_specificity.py",
+      "role": "reproduction_tool",
+      "bytes": 2348,
+      "sha256": "9fbca332834adb4a069e4d78d28fcc4f051834e3e16994979fd5366b23133d9e"
+    },
+    {
       "path": "tools/inspect_png.py",
       "role": "reproduction_tool",
       "bytes": 809,
@@ -420,8 +530,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 4970,
-      "sha256": "c1ee0f7330fd66649eaf8a4d5cfb69c988f9ca33d93bbbbe9632f3c7c071614b"
+      "bytes": 6091,
+      "sha256": "6031fd2f0e4334283a309318e423968192a8fff49d3d27621c2e0fd7039dce1e"
     },
     {
       "path": "AGENTS.md",
@@ -432,14 +542,14 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 6186,
-      "sha256": "5162c4a2661e923bf4e7b077da6572640f4c742efb63729f0ff1a798adaae9ae"
+      "bytes": 8932,
+      "sha256": "663ccaa1460dcf24e5d3dc25ceef4f1cddade99bda01efb8e867f4afbe48234e"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 40996,
-      "sha256": "be67d7b987925871797e71838a30b41ae1a775957cb420f0e09c6e4d8ae83d04"
+      "bytes": 49616,
+      "sha256": "bd3c6c8c2d0ca24c146ae00e7db0e3c61e2e45903e3a56cca1b253a45f9f9cb1"
     }
   ]
 }

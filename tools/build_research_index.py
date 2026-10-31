@@ -26,6 +26,8 @@ def main():
         ('five_sample_wif_check.json','target_matches','target matches; hypotheses are in families'),
         ('corner_check.json','unique_corner_candidates','valid private scalars'),
         ('composite_model_check.json','global_unique_valid_scalars','valid private scalars'),
+        ('bd_halving_check.json','unique_valid_scalars','valid private scalars'),
+        ('halving_pairs_check.json','unique_valid_scalars','valid private scalars'),
         ('marker_glyph_relation.json','attempts_including_duplicates','structural comparisons, not private keys')]:
         p=ROOT/'research/data'/filename
         if p.exists():

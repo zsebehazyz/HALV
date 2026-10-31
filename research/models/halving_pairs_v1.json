@@ -1,0 +1,11 @@
+{
+  "model": "C9",
+  "chain": "marker BD -> codepage half-sign -> pair waveform samples -> 128 four-state symbols -> 256 bits",
+  "pairings": ["adjacent","global_halves","within_block_halves"],
+  "operators": ["mean_floor","mean_ceil","mean_ties_even","absolute_difference","minimum","maximum","xor","sum_mod4","difference_mod4"],
+  "state_encoding": "24 bijections, applied after arithmetic on measured amplitude states",
+  "directions": ["forward","reverse"],
+  "byte_orders": ["normal","reversed"],
+  "finalization": ["raw_32_bytes","SHA256_of_32_bytes"],
+  "limitations": ["Half-sign codepage reading is a hypothesis","Unsigned envelope states, not recovered signed PCM samples","Pairwise pooling is not the same as decoding 8SVX","No arbitrary padding or dropped boundary sample"]
+}

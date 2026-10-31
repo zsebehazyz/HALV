@@ -729,3 +729,149 @@ rekonstrukciós bizonytalanságát sem terjesztettük ki.
 A további kutatásnak ezeket a kapcsolatokat is nyitva kell tartania;
 az egyedi vagy összekapcsolt tesztek sikertelensége nem indokolja egy teljes
 képrész lényegtelennek minősítését. Továbbra sincs ellenőrzött HALV-kulcs.
+
+## 2026-10-31 – hetedik menet: 1:3:7, hétsoros rács, BD → ½ és ellenőrzött időzítés
+
+### Felhasználói adatok és a montázsok szerepe
+
+A felhasználó két aláírás-montázst és több korábbi szint képét csatolta.
+A HALV saját lépcsőzése és a megváltozott szintcímke a közös fejléc mellett
+is önállóan vizsgálandó módosítás; a közös emblémarészek nem teszik ezeket
+lényegtelenné. Az inline képek bináris fájlelérése továbbra sem áll rendelkezésre.
+A saját mérések a már archivált HALV- és Level 5-képmásolatokon futnak.
+
+Az új szöveges adatokat és a külső statisztikai eredményeket a
+`sources/user_lattice_controls_update_2026-10-31.json` őrzi. A felhasználó
+560 dátumpermutációra, 30 modellre közölt 2,3%/34,6%, illetve 2000
+lobuszelőjel-kontrollra közölt 48,9% arányai **átvett eredmények**: az eredeti
+program, pontszám és seed hiányában ezeket a konkrét kontrollfutásokat
+nem állítjuk saját reprodukált kísérletnek. Az alábbi C7 más, teljesen
+specifikált kontrollprotokoll; nem helyettesíti ezeket az eredményeket.
+
+### Saját pixelmérés: mindkét új jelölőolvasat reprodukálható
+
+x=91-ben a legalább 178 intenzitású lokális csúcsok:
+`450,464,471,478,485,499`, intenzitásuk `216,216,217,216,217,216`.
+A párosított csúcsok közös közepe **474,5**. Különböző távolságaik:
+`3,5;10,5;24,5`, arányuk pontosan **1:3:7**.
+A szomszédos csúcsok távolsága `14,7,7,7,14`, legnagyobb közös osztója **7**.
+A hullám korábban illesztett 475-ös középvonala és e csúcspárok 474,5-ös
+közepe külön mért mennyiség, nem szabad automatikusan azonosítani őket.
+
+A 450…499 közötti nyolc rácshely: `10111101 = 0xBD`. Ez bitfordítva is
+ugyanaz, ami a már ismert tükrözési szimmetria következménye.
+Az y=506 helyen **177** intenzitású további csúcs van. A nyolcbites modell
+nem magyarázza meg önmagában ezt a kilencedik, gyengébb csúcsot.
+
+Leíró kontroll: a nyolc rácshely hat aktív pozíciós részhalmazai közül
+1/28, kilenc rácshelynél 2/84 ad szimmetrikus 1:3:7 távolságokat.
+**Ez nem p-érték**: a küszöböt, a rácsot és az ablakot a látott képből
+választottuk. A radiális távolságok nem automatikusan Morse-hangidőtartamok.
+
+### Új műveleti kapcsolat: BD és a féljel
+
+Python szabványos kódlapjaival ellenőrizve `0xBD` a Latin1/ISO-8859-1 és
+Windows-1252 kódolásban **„½”**. UTF-8-ban ugyanez a jel **C2 BD**, nem
+önmagában BD. A kódlap kiválasztása és a jel műveleti használata hipotézis,
+de ez egy konkrét, a HALV és a lépcsőzés felezési témájához illő kapcsolat.
+
+**C8:** M → BD → „½”/nyolc blokkvezérlő → minták felezése → kulcs.
+Tíz rögzített mintakiválasztás: globális páros/páratlan, első/második fél,
+blokkonként első/második fél, valamint BD és komplementere által vezérelt
+blokkfél- vagy páros/páratlan választás. Minden esetben 128 négyszintű
+minta marad, ami 256 bitre képezhető. További változatként a nyolc BD-bit
+egy-egy 32 mintás blokk magas/alacsony bitrétegét választja.
+24 állapotcímkézés, irányok, bájtsorrend, nyers és SHA-256 véglegesítés.
+**2112 különböző érvényes skalár, két nyilvánoskulcs-formátum, nulla címegyezés.**
+Specifikáció és eredmény: `models/bd_halving_v1.json`, `data/bd_halving_check.json`.
+
+**C9:** a felezés páronkénti számítást is jelenthet. Három párosítás
+(szomszédos, teljes jel két fele, blokkok két fele) és kilenc rögzített
+művelet szerepelt: átlag lefelé/felfelé/párosra kerekítve, abszolút különbség,
+minimum, maximum, XOR, modulo 4 összeg és különbség. Az amplitúdóértékeken
+végeztük az aritmetikát, és csak utána a 24 kétbites címkézést.
+**5184 különböző érvényes skalár, két nyilvánoskulcs-formátum, nulla címegyezés.**
+Ez az unsigned burkoló hipotetikus párosítása, nem bizonyított PCM- vagy
+8SVX-dekódolás. Specifikáció és eredmény: `models/halving_pairs_v1.json`,
+`data/halving_pairs_check.json`. Futtatók: `tools/check_bd_halving.py`,
+`tools/check_halving_pairs.py`. Az egyes futások darabszámait nem összegezzük
+globális egyedi kulcsszámként; a futások közti átfedés nincs kimérve.
+
+### Fibonacci/exponenciális kompatibilitás és a közölt Morse-tábla
+
+Az FFmpeg hivatalos 8svx.c forrásából kiolvastuk a két dokumentált táblát:
+`sources/ffmpeg_8svx.c`, származása `sources/ffmpeg_8svx_provenance.json`.
+A nyolc blokkon belüli 8×31=248 változásból **248 Fibonacci-kompatibilis**,
+**225 exponenciális-kompatibilis**; a 23 hiányzó átmenet mind ±3.
+Blokkonként az exponenciális táblából hiányzó változások száma:
+`4,4,4,2,2,3,1,3`.
+A 0…3 állapotok különbsége szükségszerűen −3…+3, tehát ez nem független
+bizonyíték a használt kodekre. Tényleges IFF/8SVX-adatfolyam nem került elő.
+
+A felhasználó négy közvetlen Morse-hosszmérési sorát pontosan reprodukáltuk,
+egy mintát egységnek véve, szélső futamokat is beleszámítva:
+
+| Aktivitás | Szabályos jel / összes | Szabályos szünet / összes |
+|---|---:|---:|
+| q > 0 | 42/63 | 40/63 |
+| q ≥ 2 | 39/61 | 33/61 |
+| q = 3 | 21/24 | 6/25 |
+| globális delta ≠ 0, kezdő False mintával | 29/61 | 47/62 |
+
+Az utolsó sor a globális 255 különbségből és egy kezdő nulla aktivitásból
+adódik. Ez **nem azonos** a 248 blokkon belüli különbséggel; a két protokollt
+külön őrizzük. Nem állítunk közvetlen tiszta Morse-jel megfejtést.
+
+### C7: jelölőből származó időegység és helyi átmeneteket megőrző kontroll
+
+A futás előtt rögzített protokoll: `models/timing_lattice_v1.json`.
+Öt aktivitás (a fenti négy és blokkonként visszaállított változásjelző), két
+polaritás és három fizikai időegység: **3 px** mintarács, **3,5 px** radiális
+egység és **7 px** csúcsrács. Összesen **30 modell**. Ez az aktivitási
+proxyk időzítését vizsgálja, nem visszafejtett audiofájlt.
+
+A veszteség a legközelebbi 1/3 jelhossz és 1/3/7 szünethossz egységben
+mért négyzetes eltérésének átlaga. Az első és utolsó futamot csonkolhatja
+a képhatár, ezért ezeket kihagytuk. A pontszám az olvasási irányra invariáns;
+a két irány nem lett új független időmodellként felszámolva.
+
+Seed: **20261031**. Két, egyenként 2000 különböző kontrollsort adó család:
+
+- a q értékek keverése minden 32 mintás blokkon belül;
+- véletlenített Euler-bejárás ugyanazon blokkbeli átmenetgráfon. Ez megőrzi
+  minden rendezett állapotpár darabszámát, a blokk kezdő/végállapotát és
+  állapotgyakoriságait. Minden előállított blokknál assert ellenőrizte ezeket.
+
+Az Euler-módszer egy megadott, **nem egyenletes** referenciamintavétel;
+az arányokat nem állítjuk egzakt permutációs p-értéknek. A legjobb modell
+kiválasztását minden kontrollon ugyanúgy elvégeztük mind a 30 modellből.
+Az egész korábbi kutatás sok utólagos döntésére ez nem ad globális korrekciót.
+
+A megfigyelt minimumveszteség **0,1943877551**. Legjobb aktivitás q≥2,
+7 px egységgel; mindkét polaritás azonos. Az add-one referenciaarány
+`(1 + legalább ilyen jó kontrollok)/(2000+1)`:
+
+| Kontroll | Arány |
+|---|---:|
+| értékkeverés | 0,3998% |
+| átmenetmegőrző Euler | 0,29985% |
+
+Ez a rögzített kontrollokhoz képest szabályosabb időstruktúrát mutat,
+de **nem Morse-specifikus eredmény**. A legjobb modell hozzárendelése:
+59 rövid + 1 hosszú jel, 55 rövid + 5 háromegységes szünet,
+**nulla hétegységes szünet**. Az egyszerű, mindkét szerepnél csak 1/3
+hosszt engedő nyelvtan pontosan ugyanazt a veszteséget adja; a jel és
+szünet felcserélése sem változtat az eredményen. Az RMS eltérés 0,441 egység,
+tehát a szekvencia abszolút illeszkedése sem hibátlan.
+Ez nem cáfolja a Morse lehetőségét, de ebből az eredményből nem azonosítható
+egyedül a Morse-kódolás vagy a szerző szándéka.
+
+Eredmény: `data/timing_lattice_check.json`; a kontrollok minden modellre
+kapott pontszámai: `data/timing_surrogate_scores.npz`; diagnosztika:
+`data/timing_specificity.json`; ábra: `data/timing_lattice_controls.png`.
+Futtatók: `tools/check_timing_lattice.py`, `tools/diagnose_timing_specificity.py`.
+
+**Egyetlen teljes képet előrejelző jelgenerátor, visszafejtett hang,
+ellenőrzött Morse-üzenet vagy HALV-kulcs továbbra sincs.** A BD/féljel,
+a lépcsőzés, a jelölő rácsa és a hullám kapcsolata nyitott, konkrétan
+nyilvántartott kutatási lánc marad.

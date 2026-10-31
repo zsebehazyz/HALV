@@ -1,0 +1,56 @@
+{
+  "timing_result_sha256": "a3bdb2985d82cfdb99496a9bebbfffa29a8e356c39a6a2408fc2a21b4d29bafb",
+  "script_sha256": "9fbca332834adb4a069e4d78d28fcc4f051834e3e16994979fd5366b23133d9e",
+  "best_model_diagnostics": [
+    {
+      "model": {
+        "rule": "amplitude_ge2",
+        "inverted": false,
+        "unit_px": 7
+      },
+      "nearest_duration_assignments": {
+        "marks": {
+          "1": 59,
+          "3": 1
+        },
+        "gaps": {
+          "1": 55,
+          "3": 5,
+          "7": 0
+        }
+      },
+      "losses": {
+        "morse_137": 0.1943877551020408,
+        "symmetric_13_without_word_gap": 0.1943877551020408
+      },
+      "grammars_identical_on_observed": true,
+      "rms_error_in_units": 0.4408942674860275
+    },
+    {
+      "model": {
+        "rule": "amplitude_ge2",
+        "inverted": true,
+        "unit_px": 7
+      },
+      "nearest_duration_assignments": {
+        "marks": {
+          "1": 55,
+          "3": 5
+        },
+        "gaps": {
+          "1": 59,
+          "3": 1,
+          "7": 0
+        }
+      },
+      "losses": {
+        "morse_137": 0.1943877551020408,
+        "symmetric_13_without_word_gap": 0.1943877551020408
+      },
+      "grammars_identical_on_observed": true,
+      "rms_error_in_units": 0.4408942674860275
+    }
+  ],
+  "interpretation": "Low surrogate reference fractions identify regularity relative to the specified controls. The best observed model uses no seven-unit word gaps and is unchanged by a non-word-gap 1/3 grammar; it does not identify Morse uniquely.",
+  "not_a_new_key_search": true
+}

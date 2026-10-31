@@ -1,0 +1,15 @@
+{
+  "model": "C8",
+  "marker_slots_px": [450,457,464,471,478,485,492,499],
+  "marker_byte": "BD",
+  "codepage_hypothesis": ["ISO-8859-1","Windows-1252"],
+  "decoded_symbol": "½",
+  "halving_profiles": ["global_even","global_odd","global_first_half","global_last_half","block_first_half","block_last_half","block_half_by_marker","block_half_by_marker_inverted","block_phase_by_marker","block_phase_by_marker_inverted"],
+  "additional_profile": "Marker bit per 32-sample block selects high/low bitplane",
+  "state_permutations": 24,
+  "directions": ["forward","reverse"],
+  "byte_orders": ["normal","reversed"],
+  "finalization": ["raw_32_bytes","SHA256_of_32_bytes"],
+  "acceptance": "Exact target P2PKH address, both public-key formats",
+  "limitations": ["Codepage and operator meaning are hypotheses","Ninth weaker marker peak at y506 is not explained by eight-bit model","No full-image generator or key solution claimed"]
+}

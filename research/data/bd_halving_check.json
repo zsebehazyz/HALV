@@ -1,0 +1,52 @@
+{
+  "model": "C8",
+  "input_sha256": {
+    "research/sources/cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/models/bd_halving_v1.json": "45d462345ff3e8dbe173d1c153546958f2beadb0455a40b6fe75de3324c93f70",
+    "tools/check_bd_halving.py": "19e879b5ca06d040743197d65e4e170873570dfe433996e7ed287c51dfaf80de"
+  },
+  "codepage_readings": {
+    "latin1": "\u00bd",
+    "cp1252": "\u00bd"
+  },
+  "utf8_half_hex": "c2bd",
+  "marker_bits": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1
+  ],
+  "unique_valid_scalars": 2112,
+  "public_key_formats": 2,
+  "unique_per_recipe": {
+    "global_even": 192,
+    "global_odd": 192,
+    "global_first_half": 192,
+    "global_last_half": 192,
+    "block_first_half": 192,
+    "block_last_half": 192,
+    "block_half_by_marker": 192,
+    "block_phase_by_marker": 192,
+    "block_half_by_marker_inverted": 192,
+    "block_phase_by_marker_inverted": 192,
+    "bitplane_by_marker": 192
+  },
+  "candidate_set_sha256": "0d40dd4f8629d5791726a621df59b65a402c78650b6d5602aa1aab02e6f5f792",
+  "oracle_selftest": {
+    "scalar_1_both_formats": "passed",
+    "target_base58check": "passed",
+    "invalid_scalars": "passed",
+    "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+  },
+  "matches": [],
+  "limitations": [
+    "Codepage and operator meaning are hypotheses",
+    "Ninth weaker marker peak at y506 is not explained by eight-bit model",
+    "No full-image generator or key solution claimed"
+  ]
+}

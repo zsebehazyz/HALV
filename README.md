@@ -101,3 +101,22 @@ pontos XOR/OR/AND összefüggést a megadott családban.
 `python3 tools/build_research_index.py` – a bizonyítékjegyzék frissítése új
 mentett eredmények után. A negatív eredmények a pontos modellekre vonatkoznak;
 egy képrész további szerepét nem zárják ki.
+
+## Hétsoros rács, BD és a féljel
+
+A hat erős csúcs nyolc 7 px-es helyet jelöl: `10111101 = BD`.
+**BD a Latin1 és Windows-1252 kódlapon „½”**; UTF-8-ban a féljel `C2 BD`.
+Ez tematikus és műveleti hipotézis, nem kész megfejtés; a 506. sor gyengébb
+csúcsát a nyolcbites modell még nem magyarázza.
+
+- `python3 tools/check_bd_halving.py`: C8, mintafelezés és blokkonkénti BD-vezérlés.
+- `python3 tools/check_halving_pairs.py`: C9, páronkénti átlagolás és más rögzített műveletek.
+- `python3 tools/check_timing_lattice.py`: C7, időzítési kontrollok, rögzített seed és teljes nullpontszámok.
+- `python3 tools/diagnose_timing_specificity.py`: a legjobb időmodell szerepeinek ellenőrzése.
+
+A C7 kontrollhoz képest szabályosabb aktivitást talál, de a legjobb modell
+nem használ hétegységes szünetet, és nem különíti el a jel/szünet polaritását.
+Ez még nem Morse-azonosítás. A korábbi szignatúrák közös részei mellett a
+HALV lépcsőzése továbbra is vizsgálandó saját módosítás.
+
+![Időzítési kontrollok](research/data/timing_lattice_controls.png)

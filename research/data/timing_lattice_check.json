@@ -1,0 +1,491 @@
+{
+  "model": "C7",
+  "input_sha256": {
+    "research/sources/cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "research/sources/ffmpeg_8svx.c": "2b873e391d1e2747fd3d2f696c08054489e502e26cd0e1b7f117f15fa619084f",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/models/timing_lattice_v1.json": "1bcad4fa3800999aef86f722cde185dbf157c5aaf5821afd066f8cfb0a71704b",
+    "tools/check_timing_lattice.py": "42994b08e2865b853d9b230cab27025587c054398bdb62e1abbc62b25e9479b4"
+  },
+  "marker": {
+    "peaks": [
+      450,
+      464,
+      471,
+      478,
+      485,
+      499
+    ],
+    "peak_intensities": [
+      216,
+      216,
+      217,
+      216,
+      217,
+      216
+    ],
+    "center": 474.5,
+    "unique_distances": [
+      3.5,
+      10.5,
+      24.5
+    ],
+    "distance_ratios": [
+      1.0,
+      3.0,
+      7.0
+    ],
+    "gaps": [
+      14,
+      7,
+      7,
+      7,
+      14
+    ],
+    "lattice_step": 7,
+    "slots": [
+      450,
+      457,
+      464,
+      471,
+      478,
+      485,
+      492,
+      499
+    ],
+    "bits": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "byte_hex": "BD",
+    "weak_extra_peak": {
+      "y": 506,
+      "intensity": 177
+    },
+    "lattice_subset_enumerations": {
+      "8": {
+        "six_active_subsets": 28,
+        "exact_137_symmetric_subsets": [
+          [
+            450,
+            464,
+            471,
+            478,
+            485,
+            499
+          ]
+        ],
+        "warning": "Descriptive enumeration, not a p-value; grid/window/threshold selected from observed image."
+      },
+      "9": {
+        "six_active_subsets": 84,
+        "exact_137_symmetric_subsets": [
+          [
+            450,
+            464,
+            471,
+            478,
+            485,
+            499
+          ],
+          [
+            457,
+            471,
+            478,
+            485,
+            492,
+            506
+          ]
+        ],
+        "warning": "Descriptive enumeration, not a p-value; grid/window/threshold selected from observed image."
+      }
+    }
+  },
+  "codec_tables": {
+    "fibonacci": [
+      -34,
+      -21,
+      -13,
+      -8,
+      -5,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      5,
+      8,
+      13,
+      21
+    ],
+    "exponential": [
+      -128,
+      -64,
+      -32,
+      -16,
+      -8,
+      -4,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ]
+  },
+  "within_block_delta_compatibility": {
+    "fibonacci": {
+      "representable": 248,
+      "total": 248
+    },
+    "exponential": {
+      "representable": 225,
+      "total": 248
+    }
+  },
+  "activity_rule_order": [
+    "amplitude_gt0",
+    "amplitude_ge2",
+    "amplitude_eq3",
+    "global_delta_nonzero_initial_false",
+    "block_reset_delta_nonzero_initial_false"
+  ],
+  "legacy_one_sample_unit_counts_including_boundaries": [
+    {
+      "marks_legal": 42,
+      "marks": 63,
+      "gaps_legal": 40,
+      "gaps": 63
+    },
+    {
+      "marks_legal": 39,
+      "marks": 61,
+      "gaps_legal": 33,
+      "gaps": 61
+    },
+    {
+      "marks_legal": 21,
+      "marks": 24,
+      "gaps_legal": 6,
+      "gaps": 25
+    },
+    {
+      "marks_legal": 29,
+      "marks": 61,
+      "gaps_legal": 47,
+      "gaps": 62
+    },
+    {
+      "marks_legal": 29,
+      "marks": 62,
+      "gaps_legal": 48,
+      "gaps": 63
+    }
+  ],
+  "models": [
+    {
+      "rule": "amplitude_gt0",
+      "inverted": false,
+      "unit_px": 3
+    },
+    {
+      "rule": "amplitude_gt0",
+      "inverted": false,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "amplitude_gt0",
+      "inverted": false,
+      "unit_px": 7
+    },
+    {
+      "rule": "amplitude_gt0",
+      "inverted": true,
+      "unit_px": 3
+    },
+    {
+      "rule": "amplitude_gt0",
+      "inverted": true,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "amplitude_gt0",
+      "inverted": true,
+      "unit_px": 7
+    },
+    {
+      "rule": "amplitude_ge2",
+      "inverted": false,
+      "unit_px": 3
+    },
+    {
+      "rule": "amplitude_ge2",
+      "inverted": false,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "amplitude_ge2",
+      "inverted": false,
+      "unit_px": 7
+    },
+    {
+      "rule": "amplitude_ge2",
+      "inverted": true,
+      "unit_px": 3
+    },
+    {
+      "rule": "amplitude_ge2",
+      "inverted": true,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "amplitude_ge2",
+      "inverted": true,
+      "unit_px": 7
+    },
+    {
+      "rule": "amplitude_eq3",
+      "inverted": false,
+      "unit_px": 3
+    },
+    {
+      "rule": "amplitude_eq3",
+      "inverted": false,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "amplitude_eq3",
+      "inverted": false,
+      "unit_px": 7
+    },
+    {
+      "rule": "amplitude_eq3",
+      "inverted": true,
+      "unit_px": 3
+    },
+    {
+      "rule": "amplitude_eq3",
+      "inverted": true,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "amplitude_eq3",
+      "inverted": true,
+      "unit_px": 7
+    },
+    {
+      "rule": "global_delta_nonzero_initial_false",
+      "inverted": false,
+      "unit_px": 3
+    },
+    {
+      "rule": "global_delta_nonzero_initial_false",
+      "inverted": false,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "global_delta_nonzero_initial_false",
+      "inverted": false,
+      "unit_px": 7
+    },
+    {
+      "rule": "global_delta_nonzero_initial_false",
+      "inverted": true,
+      "unit_px": 3
+    },
+    {
+      "rule": "global_delta_nonzero_initial_false",
+      "inverted": true,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "global_delta_nonzero_initial_false",
+      "inverted": true,
+      "unit_px": 7
+    },
+    {
+      "rule": "block_reset_delta_nonzero_initial_false",
+      "inverted": false,
+      "unit_px": 3
+    },
+    {
+      "rule": "block_reset_delta_nonzero_initial_false",
+      "inverted": false,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "block_reset_delta_nonzero_initial_false",
+      "inverted": false,
+      "unit_px": 7
+    },
+    {
+      "rule": "block_reset_delta_nonzero_initial_false",
+      "inverted": true,
+      "unit_px": 3
+    },
+    {
+      "rule": "block_reset_delta_nonzero_initial_false",
+      "inverted": true,
+      "unit_px": 3.5
+    },
+    {
+      "rule": "block_reset_delta_nonzero_initial_false",
+      "inverted": true,
+      "unit_px": 7
+    }
+  ],
+  "observed_losses": [
+    0.75,
+    0.4219881500987491,
+    0.23913759052007896,
+    0.49193548387096775,
+    0.33903884134298873,
+    0.23913759052007896,
+    0.525,
+    0.3156462585034013,
+    0.1943877551020408,
+    0.8583333333333333,
+    0.5061224489795918,
+    0.1943877551020408,
+    51.1063829787234,
+    33.965696917064705,
+    4.186712983065567,
+    72.8936170212766,
+    51.181502388189344,
+    9.536257056013893,
+    2.4049586776859506,
+    1.4776522179119578,
+    0.3047731489289931,
+    0.8842975206611571,
+    0.5048068814302579,
+    0.23865744644965417,
+    2.105691056910569,
+    1.2787456445993026,
+    0.289198606271777,
+    0.8048780487804879,
+    0.4889663182346109,
+    0.22415795586527293
+  ],
+  "best_observed_models": [
+    {
+      "rule": "amplitude_ge2",
+      "inverted": false,
+      "unit_px": 7
+    },
+    {
+      "rule": "amplitude_ge2",
+      "inverted": true,
+      "unit_px": 7
+    }
+  ],
+  "controls": {
+    "value_shuffle": {
+      "draws": 2000,
+      "distinct_sequences": 2000,
+      "modelwise_reference_fractions": [
+        0.06046976511744128,
+        0.06446776611694154,
+        0.1489255372313843,
+        0.031984007996002,
+        0.14492753623188406,
+        0.18140929535232383,
+        0.10844577711144428,
+        0.14842578710644677,
+        0.0004997501249375312,
+        0.10944527736131934,
+        0.1634182908545727,
+        0.0004997501249375312,
+        0.4097951024487756,
+        0.424287856071964,
+        0.4867566216891554,
+        0.35782108945527236,
+        0.36481759120439783,
+        0.4047976011994003,
+        0.4707646176911544,
+        0.5032483758120939,
+        0.526736631684158,
+        0.3588205897051474,
+        0.383808095952024,
+        0.10444777611194403,
+        0.5092453773113443,
+        0.5327336331834083,
+        0.55872063968016,
+        0.33683158420789605,
+        0.4122938530734633,
+        0.04697651174412794
+      ],
+      "selected_best_reference_fraction": 0.00399800099950025,
+      "mean_best_score": 0.2423577696292402,
+      "best_score_quantiles": [
+        0.17787114845938376,
+        0.21007807703233963,
+        0.2419825072886297,
+        0.27744103432878936,
+        0.3020408163265306
+      ]
+    },
+    "transition_preserving_euler": {
+      "draws": 2000,
+      "distinct_sequences": 2000,
+      "modelwise_reference_fractions": [
+        0.018490754622688656,
+        0.02348825587206397,
+        0.24537731134432783,
+        0.05347326336831584,
+        0.24537731134432783,
+        0.2893553223388306,
+        0.11294352823588207,
+        0.14942528735632185,
+        0.0009995002498750624,
+        0.0559720139930035,
+        0.1089455272363818,
+        0.0009995002498750624,
+        0.45027486256871563,
+        0.4657671164417791,
+        0.5177411294352824,
+        0.42128935532233885,
+        0.42328835582208896,
+        0.4452773613193403,
+        0.5772113943028486,
+        0.6166916541729135,
+        0.6221889055472264,
+        0.5317341329335332,
+        0.551224387806097,
+        0.10444777611194403,
+        0.5182408795602199,
+        0.5552223888055972,
+        0.5887056471764118,
+        0.49325337331334335,
+        0.5837081459270365,
+        0.026986506746626688
+      ],
+      "selected_best_reference_fraction": 0.0029985007496251873,
+      "mean_best_score": 0.23674175880164305,
+      "best_score_quantiles": [
+        0.18745885450954575,
+        0.20753785385121787,
+        0.23650427913100722,
+        0.2667907413684093,
+        0.29795918367346935
+      ]
+    }
+  },
+  "limitations": [
+    "Activity proxy, not decoded PCM audio",
+    "Euler generation is a specified nonuniform reference distribution, not an exact uniform permutation test",
+    "Exploratory reference fractions, not proof of intended encoding"
+  ],
+  "no_audio_or_private_key_decoded": true
+}

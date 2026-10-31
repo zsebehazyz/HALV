@@ -15,6 +15,7 @@ A több réteg lehetőségét vizsgáljuk; a konkrét rétegeket még nem igazol
 | S | HALV/ZDEN: 4×(7×9) mintacella | corner_check.json, 3 nem homogén HALV-cella | négyrészes maszk, referencia, olvasási/geometriai utasítás |
 | D | 20042402 nyolc számjegy | corner_check.json, közvetlen bitmap | időbélyeg; esetleg nyolc blokk paraméterei |
 | H | Csökkenő hullámskála és lépcsőzés a logóban | bitmap és illesztés | felezés, normalizálás, réteg-/mintaválasztás |
+| B | Hat erős csúcs 7 px rácson, nyolc helyen 10111101=BD | timing_lattice_check.json | Latin1/cp1252 „½” műveleti jel, vagy nyolc blokk vezérlése; a gyenge kilencedik csúcs magyarázandó |
 | A | Bitcoin-célcím | Base58Check és offline címképzés | a teljes modell végső ellenőrzése |
 
 ```mermaid
@@ -23,6 +24,11 @@ flowchart TD
     H[Felezés és lépcsőzés H] -. normalizálás .-> R
     M[Bal jelölő M] --> MASK[Maszk vagy vezérlés]
     M --> N[Feltételes Morse N]
+    M --> B[BD nyolcbites olvasat]
+    B -. kódlap .-> HALF[½ mint lehetséges művelet]
+    HALF -. mintafelezés vagy párosítás .-> JOIN
+    M -. hétsoros rács .-> CLOCK[Lehetséges időegység]
+    CLOCK -. időzítési teszt .-> JOIN
     S[Aláírás S] --> MASK
     D[Dátum D] -. nyolc blokk vezérlése .-> ORDER[Sorrend vagy forgatás]
     N -. négy negyed vezérlése .-> ORDER
@@ -96,3 +102,39 @@ ezt nem tekintjük dekódolt kapcsolatnak.
 
 Futtatók: `tools/check_composite_models.py`, `tools/check_marker_glyph_relation.py`.
 Az eredményfájlok és hash-ek a `research/RUN_INDEX.json` jegyzékben vannak.
+
+## C7/C8: jelölőrács → időzítés vagy felezési utasítás
+
+**Mért:** a hat erős csúcs 450,464,471,478,485,499; páronkénti közepe
+474,5, távolságai 3,5/10,5/24,5, azaz 1:3:7. Az egymás közti távolságok
+14/7/7/7/14. Ez egyszerre egy szimmetrikus arány és egy 7 pixeles rácsminta.
+A radiális távolság nem automatikusan hangidőtartam.
+
+**Új kódolási kapcsolat:** BD a Latin1 és Windows-1252 kódlapon „½”.
+UTF-8-ban „½” két bájt: C2 BD. A kódlap és a műveleti szerep hipotézis;
+y=506-nál egy 177 intenzitású kilencedik csúcs megmarad, amelyet az egyszerű
+nyolcbites olvasat nem magyaráz meg.
+
+| Modell | Lánc | Eredmény |
+|---|---|---|
+| C7 | M rácsa → 3/3,5/7 px időegységek → normalizált W aktivitás → Morse-hosszak | megadott kontrollhoz képest ritkább időstruktúra; nem Morse-specifikus |
+| C8 | M → BD → „½”/8 blokkparaméter → W mintafelezése vagy bitrétegválasztása → kulcs | 2112 különböző skalár, 0 címegyezés |
+
+C7-ben öt explicit aktivitás, két polaritás és három időegység 30 modelljét
+azonos modellválasztással alkalmaztuk 2000+2000 kontrollra. A blokkon belüli
+átmeneteket és végpontokat megőrző Euler-kontroll referenciaaránya kb. 0,30%.
+A legjobb modell azonban nulla hétegységes szünetet használ; ugyanazt a
+veszteséget adja egy egyszerű 1/3 jel–szünet nyelvtan. Ez nem azonosítja
+egyedül a Morse-t. A kontroll generálása nem egyenletes permutációmintavétel,
+az arány feltáró referenciamutató, nem szerzői szándékot bizonyító p-érték.
+
+Adatok: `timing_lattice_check.json`, `timing_specificity.json`,
+`timing_surrogate_scores.npz`, `bd_halving_check.json`; a data/ könyvtárban.
+Az egyetlen, a teljes képet előrejelző generátorszabály továbbra is nyitott cél.
+
+C9: a „½” lehetséges műveleti olvasataként két mintából egyet képzünk:
+átlagolás, különbség és a specifikáció szerinti rögzített műveletek, három
+párosítással. A 128 négyszintű eredmény 256 kulcsbitre képezhető.
+Ez a minták páronkénti feldolgozását vizsgálja a puszta ritkítás mellett;
+nem 8SVX-dekódolás. Eredmény: `data/halving_pairs_check.json`.
+5184 különböző skalár, nulla célcímegyezés ebben a rögzített családban.

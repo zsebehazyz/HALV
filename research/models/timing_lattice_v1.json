@@ -1,0 +1,19 @@
+{
+  "model": "C7",
+  "purpose": "Marker-calibrated activity timing, with local-transition-preserving controls",
+  "marker_column": 91,
+  "strong_peak_threshold_inclusive": 178,
+  "marker_roi_rows_inclusive": [438,512],
+  "wave_sample_spacing_px": 3,
+  "timing_units_px": [3,3.5,7],
+  "activity_rules": ["amplitude_gt0","amplitude_ge2","amplitude_eq3","global_delta_nonzero_initial_false","block_reset_delta_nonzero_initial_false"],
+  "polarities": ["normal","inverted"],
+  "mark_lengths_units": [1,3],
+  "gap_lengths_units": [1,3,7],
+  "loss": "Mean squared nearest-duration error in time units, excluding first and last run (censored boundaries)",
+  "surrogates_per_family": 2000,
+  "seed": 20261031,
+  "surrogate_families": ["shuffle_values_within_each_32_sample_block","randomized_Euler_trail_preserving_each_block_ordered_transition_counts_and_endpoints"],
+  "selection_control": "Compare the minimum over all 30 models for both observed and each surrogate",
+  "limitations": ["Activity proxy, not decoded PCM audio","Euler generation is a specified nonuniform reference distribution, not an exact uniform permutation test","Exploratory reference fractions, not proof of intended encoding"]
+}
