@@ -1,0 +1,21 @@
+{
+  "retrieved_utc": "2026-10-31",
+  "note": "Secondary research claims, not author instructions or certified original measurements.",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/gpt4omni/unsolved-crypto-puzzles/HEAD/2-mid-prizes/zden-haluska-halv-312ksats/data/lobe-shape-sequence.csv",
+      "file": "external_data__lobe-shape-sequence.csv",
+      "sha256": "6f4beb65d6222bb06bd514f4295da7eb3f9515ba67c4162b0c1c075a173a119a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gpt4omni/unsolved-crypto-puzzles/HEAD/2-mid-prizes/zden-haluska-halv-312ksats/analysis/tested.md",
+      "file": "external_analysis__tested.md",
+      "sha256": "f0e8def6d43abaedf1ba1e9c285e2a483265687a980c11fb5f2308082a886c03"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gpt4omni/unsolved-crypto-puzzles/HEAD/2-mid-prizes/zden-haluska-halv-312ksats/analysis/leads.md",
+      "file": "external_analysis__leads.md",
+      "sha256": "4011cd9a9aa06a6336ecae9be0324c185b8aecec5003e9529dfb22eb9210cee1"
+    }
+  ]
+}

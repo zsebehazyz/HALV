@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-31",
+  "note": "Third-party mirrors, not author-hosted downloads",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/floflo777/open-crypto-puzzles/HEAD/4-solved/zden-haluska-lvl5-555ksats/clues/crypto5fix.png",
+      "file": "crypto5fix.png",
+      "sha256": "5a62843597f0fd545e19a343b750c6cdfa8010ba2cb5b52d4ad29c7016e57cc6",
+      "bytes": 6798
+    },
+    {
+      "url": "https://raw.githubusercontent.com/floflo777/open-crypto-puzzles/HEAD/4-solved/zden-haluska-lvl5-555ksats/clues/crypto5.png",
+      "file": "crypto5.png",
+      "sha256": "936c401fac266e245e40d5ae1705360746387be934ced4ee6c37fc30dfdd5d15",
+      "bytes": 4874
+    }
+  ]
+}

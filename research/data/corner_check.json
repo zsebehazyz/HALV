@@ -1,0 +1,188 @@
+{
+  "image_hashes": {
+    "cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "crypto5.png": "936c401fac266e245e40d5ae1705360746387be934ced4ee6c37fc30dfdd5d15",
+    "crypto5fix.png": "5a62843597f0fd545e19a343b750c6cdfa8010ba2cb5b52d4ad29c7016e57cc6"
+  },
+  "corner_unique_intensities": [
+    0,
+    255
+  ],
+  "comparisons": {
+    "header": {
+      "roi": [
+        788,
+        806,
+        916,
+        830
+      ],
+      "different_pixels_vs_level5fix": 0,
+      "level5_original_vs_fix_differences": 0
+    },
+    "U_Z_ZDEN": {
+      "roi": [
+        868,
+        832,
+        932,
+        890
+      ],
+      "different_pixels_vs_level5fix": 0,
+      "level5_original_vs_fix_differences": 0
+    },
+    "left_stems_and_staircase": {
+      "roi": [
+        788,
+        830,
+        868,
+        930
+      ],
+      "different_pixels_vs_level5fix": 164,
+      "level5_original_vs_fix_differences": 0
+    },
+    "level_label": {
+      "roi": [
+        868,
+        890,
+        932,
+        930
+      ],
+      "different_pixels_vs_level5fix": 418,
+      "level5_original_vs_fix_differences": 0
+    }
+  },
+  "dates": {
+    "cryptoHALV.png": {
+      "glyph_bitstrings": [
+        "110001010100111",
+        "010101101101010",
+        "010101101101010",
+        "101101111001001",
+        "110001010100111",
+        "101101111001001",
+        "010101101101010",
+        "110001010100111"
+      ],
+      "reading": "20042402"
+    },
+    "crypto5.png": {
+      "glyph_bitstrings": [
+        "010101101101010",
+        "010101011001010",
+        "010110010010111",
+        "010110010010111",
+        "010110010010111",
+        "010101010101010",
+        "010110010010111",
+        "010101011001010"
+      ],
+      "reading": "09111819"
+    },
+    "crypto5fix.png": {
+      "glyph_bitstrings": [
+        "010101101101010",
+        "010101011001010",
+        "010110010010111",
+        "010110010010111",
+        "010110010010111",
+        "010101010101010",
+        "010110010010111",
+        "010101011001010"
+      ],
+      "reading": "09111819"
+    }
+  },
+  "glyph_sampling": {
+    "HALV": {
+      "shape_per_glyph": [
+        9,
+        7
+      ],
+      "nonuniform_2x2_cells": 3
+    },
+    "ZDEN": {
+      "shape_per_glyph": [
+        9,
+        7
+      ],
+      "nonuniform_2x2_cells": 0
+    }
+  },
+  "lobe_definition": "Dark runs at y=475 in x=91..858, intensity <1; includes open first run, excludes unresolved small tail lobes. Not a topology certificate.",
+  "lobe_threshold_plateaus": [
+    {
+      "start": 1,
+      "end": 4,
+      "count": 59
+    },
+    {
+      "start": 5,
+      "end": 32,
+      "count": 61
+    },
+    {
+      "start": 33,
+      "end": 64,
+      "count": 63
+    },
+    {
+      "start": 65,
+      "end": 119,
+      "count": 64
+    },
+    {
+      "start": 120,
+      "end": 137,
+      "count": 65
+    },
+    {
+      "start": 138,
+      "end": 145,
+      "count": 64
+    },
+    {
+      "start": 146,
+      "end": 146,
+      "count": 65
+    },
+    {
+      "start": 147,
+      "end": 151,
+      "count": 66
+    },
+    {
+      "start": 152,
+      "end": 156,
+      "count": 67
+    },
+    {
+      "start": 157,
+      "end": 255,
+      "count": 64
+    }
+  ],
+  "lobe_counts_per_96px_block_by_midpoint": [
+    5,
+    7,
+    11,
+    9,
+    9,
+    9,
+    6,
+    3
+  ],
+  "oracle_selftest": {
+    "scalar_1_both_formats": "passed",
+    "target_base58check": "passed",
+    "invalid_scalars": "passed",
+    "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+  },
+  "level5_reference_addresses": {
+    "compressed": "19Tquic4EfTBskmYxh2tbW84SAxbMUWW42",
+    "uncompressed": "1cryptoGeCRiTzVgxBQcKFFjSVydN1GW7"
+  },
+  "unique_corner_candidates": 10386,
+  "formats_per_candidate": 2,
+  "matches": [],
+  "candidate_set_sha256": "13f90cdc08d4aafa031c9437f305e61c524432d9adfec1ca333e703f888068a0",
+  "limitation": "Negative for the explicit 252-bit glyph/padding and canonical bitmap/date hash families only. No claim that signature is irrelevant; no unique eight-separator rule found."
+}

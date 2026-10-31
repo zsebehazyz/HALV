@@ -499,3 +499,129 @@ eredmény: `data/signed_model_check.json`.
 Ebben a menetben nem állítottunk elő új privátkulcs-jelölteket.
 Az ellenőrzött nyom most a kilences plató és a hétbites geometria;
 egyik sem adott kulcsot vagy igazolt Base58-üzenetet.
+
+## 2026-10-31 – ötödik menet: két alsó sarok, korábbi logók és lobuszok
+
+### A felhasználó új iránya
+
+A felhasználó jelezte, hogy korábbi szinteknél a sarkokban elhelyezett
+rajzoknak szerepük volt a megoldásban, és csatolt egy Level 4-képet.
+A bemutatott képen vizuálisan valóban megjelenik a rokon BTCrypto/ZDEN
+embléma. Ehhez a csatolmányhoz sem kaptunk bináris fájlelérést, ezért
+**Level 4-gyel nem állítunk pixelazonossági vizsgálatot**.
+
+Ettől függetlenül letöltöttük a már ismert floflo777 tárolóból az 5. szint
+`crypto5.png` és `crypto5fix.png` képmásolatait. Mindkettő 950×950-es;
+források és SHA-256: `sources/level5_image_provenance.json`.
+Ezek harmadik fél másolatai, nem a szerző oldaláról letöltött fájlok.
+
+### Jobb alsó aláírás: mért közös és változó részek
+
+A HALV jobb alsó aláírása a vizsgált 788…931, 806…929 tartományban kizárólag
+0 és 255 intenzitású pixeleket használ. Itt nincs külön szürkeárnyalatos
+intenzitáscsatorna; a geometriai vagy bináris adatrejtés ettől még lehetséges.
+
+HALV és az 5. szint javított képe között, félig nyílt ROI-kkal:
+
+| Rész | ROI [x0,y0,x1,y1] | Eltérő pixelek |
+|---|---|---:|
+| BTCrypto fejléc | [788,806,916,830] | **0** |
+| Függőleges U/Z és a ZDEN sor | [868,832,932,890] | **0** |
+| Bal függőleges szárak és lépcsőzés | [788,830,868,930] | 164 |
+| Szintcímke környéke | [868,890,932,930] | 418 |
+
+Az 5. szint eredeti és javított képe a fenti négy ROI-ban pixelre azonos.
+A HALV két felső T-je egymással, és a függőleges két Z egymással is
+azonos mintát ad. A közös betűk tehát nem különálló, HALV-specifikus
+pixeleltérések. A nagy függőleges szárakat összekötő lépcső és a szintcímke
+változását viszont nem söpörjük félre: utasításként is vizsgálandók.
+A lépcsőzés összefér a felezés témájával; pontos műveleti dekódolást nem találtunk.
+
+### Bal alsó sarok: a tényleges felirat és egy dátumhipotézis
+
+A 20…50 oszlopokban, 925…929 sorokban nyolc 3×5 pixeles számjegy van.
+A mért bitmapek olvasata **20042402**. Az 5. szint mindkét képén ugyanezen
+a helyen **09111819** szerepel. A karakterenkénti bitminták a JSON-ban megvannak.
+
+Ez nem a szokásos YYYYMMDD dátumrendezés. Egy egyszerű lehetséges formátum:
+**DDMMYYHH**, vagyis `20.04.24, 02 óra`, illetve `09.11.18, 19 óra`.
+A nap/hónap/év illeszkedik a két szint közölt megjelenési napjához.
+A HALV 02 órája összefér a 2024-es Bitcoin-felezés közép-európai nyári
+idő szerinti 02 óra körüli időpontjával is. **A formátumot és a szerző
+óra-/időzóna-választását nem igazoltuk szerzői forrásból.** Más olvasat is lehet;
+az eltérő sorrend önmagában nem bizonyít rejtett kulcsot.
+
+### Ténylegesen ellenőrzött sarok-kulcsjelöltek
+
+A HALV és ZDEN négy-négy nagy karaktere 7×9-es rácson mintavételezhető:
+egy karakter 63, négy karakter **252 bit**. A HALV mezőben három 2×2-es
+cella nem homogén, a ZDEN mezőben minden cella homogén. A látható
+lépcsővonal betűmezőbe érő része is érinthet ilyen cellákat; ez nem három
+önálló, bizonyított adatbit.
+
+Előre rögzített, korlátozott tesztcsalád:
+
+- négy globális 2×2 mintavételi szabály: bal felső, bármely fehér,
+  minden fehér, illetve legalább két fehér pixel;
+- karakterenkénti vagy soronként összefűzés, transzponálás és tengelyfordítások;
+- 252 bit kiegészítése négy prefix-/suffixbittel, minden 16 értékkel;
+- külön változatként karakterenként egy prefix-/suffixbit: négy 64 bites
+  mező, mind a 16 kitöltéssel, előre/hátra karakterrendben;
+- komplementálás;
+- a dátum, az aláírás, a lépcsőzés és az 5. szinttel vett XOR kanonikus
+  bitcsomagolásának SHA-256 és dupla SHA-256 lenyomatai;
+- az olvasott `20042402`, illetve a hagyományos `20042024` és `20240420`
+  ASCII-, BCD- és bináris decimális alakjának kétféle lenyomata.
+
+**10386 különböző, érvényes skalár**, mindegyikhez tömörített és tömörítetlen
+nyilvános kulcs: **nulla célcímegyezés**. Ez csak a megadott kódolási család
+negatívuma, nem az aláírásban szereplő lehetséges műveleti utasításoké.
+Minden jelölt determinisztikusan újra előállítható, a deduplikált készlet
+hashét a `data/corner_check.json` tartalmazza.
+
+Az ellenőrző standard tesztjein túl a másodlagos forrásban közzétett,
+megoldott Level 5 32 bájtos kulcsával is ellenőriztük a címképzést.
+Tömörítetlenül pontosan `1cryptoGeCRiTzVgxBQcKFFjSVydN1GW7` adódott.
+Ez a címképzés új ismert-válaszú kontrollja, nem a HALV megoldása.
+A történeti kulcs forrása:
+`https://github.com/floflo777/open-crypto-puzzles/blob/HEAD/4-solved/zden-haluska-lvl5-555ksats/README.md`.
+
+### Az 59 lobusz és a nyolc elválasztó kérdése
+
+A külső 59 elemű alaklistát és negatív naplókat is archiváltuk:
+`sources/external_data__lobe-shape-sequence.csv`,
+`sources/external_analysis__tested.md`, `sources/external_analysis__leads.md`.
+Származás: `sources/lobe_reference_provenance.json`. A külső mérési és
+entrópiaállítások nem lettek ettől saját bizonyított eredményeink.
+
+Saját, pontosan definiált szegmentálás: y=475 középvonal, x=91…858,
+az adott küszöbnél sötétebb pixelek összefüggő szakaszai.
+Az 1…4 küszöb mind **59** szakaszt ad. Az 5…32 tartományban 61,
+33…64-nél 63, 65…119-nél 64 szakasz van. Az 59-es eredmény így valóban
+reprodukálható, de nem minden küszöbön. Tartalmazza az első nyitott
+lobuszrészt, és az egymásba mosódó kis végső hullámok nem mind elkülöníthetők.
+Nem zárt topológiai bizonyítás a teljes hullám 59 szimbólumára.
+
+Az 59 szakasz középpontja szerint a nyolc 96 px-es blokkba rendre
+`5,7,11,9,9,9,6,3` darab esik. Nincs ebből adódó egyértelmű nyolc speciális
+jel. A blokkonként egy elem eldobása pusztán az 51-es célszámhoz igazítana;
+ilyen szabályra nem alapítottunk WIF-keresést.
+Az összes intervallum, szélesség és mért csúcssor:
+`data/lobes_centerline_t1.csv`. A küszöbplatók a `data/corner_check.json` fájlban vannak.
+Az archivált külső D/O alaklistát még nem igazítottuk ehhez a szegmentáláshoz.
+A mi első, nyitott szakaszunk felső csúcsa 100 feletti intenzitásnál négy
+pixel széles, miközben a külső lista első jele D. Ez eltérő szegmentálásból
+vagy csúcsdefinícióból is adódhat; a két 59 elemű felsorolás azonosságát
+nem szabad pusztán az elemszámból feltételezni.
+
+### Rövid, külön hexszöveg-kontroll
+
+A korábbi 256 négyszintű minta mind a 24 kétbites címkézését két irányban
+64 bájttá alakítottuk. Ellenőriztük, lehet-e ez 64 ASCII-hexadecimális karakter,
+amelyből 32 közvetlen kulcsbájt adódna. A **48** változat legjobbja is csak
+**15/64** szabályos hexkaraktert tartalmazott. Nem keletkezett ilyen kulcsjelölt.
+Program és eredmény: `tools/check_hex_text.py`, `data/hex_text_check.json`.
+
+A sarokmérések, a történeti összehasonlítás és a kulcsjelöltek közös
+reprodukálója: `tools/check_corners.py`. Az összehasonlító ábra:
+`data/corner_comparison.png`. Továbbra sincs ellenőrzött HALV-kulcs.

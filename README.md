@@ -66,3 +66,16 @@ sem ad teljes Base58-szöveget vagy nullaalapú indexsort.
 `python3 tools/check_signed_models.py` az előjeles, tengelyen áthaladó
 töröttvonal-változatokat vizsgálja. A hárompixeles modell hibája nem javul;
 az itt vizsgált hatpixeles változatok továbbra is rosszabbak. Ez nem spline-teszt.
+
+## Alsó sarkok és szerzői embléma
+
+`python3 tools/check_corners.py` – a két alsó sarok mérése, összehasonlítás
+az 5. szint két nyilvános képmásolatával, valamint célzott bitmap-kulcsteszt.
+A közös fejléc és ZDEN-rész pixelre egyezik; a dátum `20042402`.
+**10386** különböző sarokból képzett kulcsjelölt egyik nyilvánoskulcs-formátummal
+sem egyezik a célcímmel. Ez nem a sarokban levő esetleges utasítások kizárása.
+
+![Sarok-összehasonlítás](research/data/corner_comparison.png)
+
+`python3 tools/check_hex_text.py` – a 256 négyszintű mintából képzett 64 bájt
+ASCII-hexadecimális olvasatának ellenőrzése. 48 változatból nincs teljes hexszöveg.
