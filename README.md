@@ -120,3 +120,19 @@ Ez még nem Morse-azonosítás. A korábbi szignatúrák közös részei mellett
 HALV lépcsőzése továbbra is vizsgálandó saját módosítás.
 
 ![Időzítési kontrollok](research/data/timing_lattice_controls.png)
+
+## Level 5 pozitív kontroll és 64×12 px HALV-egységek
+
+`python3 tools/verify_level5_geometry.py` a képből kiméri a 64 téglalapot,
+alkalmazza a két segédvonal szélességkorrekcióját, majd normalizál, kerekít
+és párokat összead. Pontosan a publikált régi kulcs és cím adódik.
+
+`python3 tools/check_pair64.py` és `python3 tools/check_bd_pair64.py`
+ezt a kompozíciós mintát teszteli a HALV 64 négyállapotú mintacsoportján,
+geometriai értékein és a BD-vezérelt felezésen. Véglegesítésük közvetlen
+32 bájt, hash nélkül. A két rögzített család nem adott célcímegyezést.
+
+`python3 tools/diagnose_pair64_ranges.py` a bájttartomány-korlátot ellenőrzi.
+`python3 tools/plot_pair64.py` elkészíti az összehasonlító ábrát.
+
+![64 egységes kontroll](research/data/pair64_control_comparison.png)

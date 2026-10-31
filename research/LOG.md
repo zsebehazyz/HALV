@@ -875,3 +875,134 @@ Futtatók: `tools/check_timing_lattice.py`, `tools/diagnose_timing_specificity.p
 ellenőrzött Morse-üzenet vagy HALV-kulcs továbbra sincs.** A BD/féljel,
 a lépcsőzés, a jelölő rácsa és a hullám kapcsolata nyitott, konkrétan
 nyilvántartott kutatási lánc marad.
+
+## 2026-10-31 – nyolcadik menet: Level 5 teljes pozitív kontroll, HALV 64×12 px
+
+### Mi lett most újonnan, saját képméréssel igazolva?
+
+A felhasználó a megoldott Level 5 64→32 páronkénti összegzését javasolta
+erősebb alkotói előzménynek. A korábbi saját kontrollunk csak a közzétett
+kulcsból történő címképzést ellenőrizte. Most **a képtől a kulcsig vezető
+teljes láncot** is reprodukáltuk. A támpontot a
+`sources/user_level5_pairing_lead_2026-10-31.md` őrzi.
+
+A letöltött másodlagos megoldásleírás és geometriai referencia:
+`sources/level5_README.md`, `sources/level5_data__rectangle-measurements.csv`;
+URL és hash: `sources/level5_solution_provenance.json`. Az elsődleges
+echo.ls cikkre a leírás hivatkozik; azt ebben a menetben nem olvastuk.
+A közölt megoldási dátumot nem ellenőriztük külön láncadatokból.
+
+### A Level 5 képből reprodukált eljárása
+
+1. A már archivált 950×950-es crypto5fix.png képen, az emblémát és a
+   bal alsó utasítást kizáró ROI-ban 66 fehér összefüggő komponens van.
+   Közülük 64 lyukas téglalapkeret, kettő egysoros segédvonal.
+2. A kereteket függőleges közép szerint nyolcas sorokra, azon belül x szerint
+   rendeztük. A külső szélesség/magasság, külső/belső/keretterület
+   **mind a 64 téglalapnál egyezik** a közzétett referenciával.
+3. A bal/jobb, illetve felső/alsó vastagságokat a keretek középvonalán
+   fehér pixelfutamként mértük. Mindegyiknél a szemközti vastagságok egyeznek.
+4. A két segédvonal a megfelelő téglalap alatt pontosan négy üres sorral
+   található, vízszintes középvonaluk legfeljebb 1 px eltérésű.
+   Ezzel a geometriai szabállyal, a kulcstól függetlenül rendeltük őket hozzá:
+   **#40: W=33 helyett 17**, **#53: W=20 helyett 6**.
+5. Minden téglalapra a publikált képletet alkalmaztuk:
+
+   `X = (10*valódi_szélesség + bal_vastagság - 1)/64`
+
+   `Y = (10*magasság + felső_vastagság - 1)/64`
+
+   `érték = round(X*Y)`.
+
+6. A 64 kerekített területet sorfolytonosan, szomszédos párokban összeadtuk.
+   Mind a 32 összeg 0…255 közé esik. A 32 bájt **pontosan megegyezik**
+   a publikált kulccsal, és tömörítetlenül pontosan a régi
+   `1cryptoGeCRiTzVgxBQcKFFjSVydN1GW7` címet adja.
+
+A maximális kerekítési maradék 0,14453125, tehát minden érték 1/6-on belül
+van egy egészhez. A segédvonalak figyelembevétele a teljes lánc része;
+nem pusztán „64 adat összeadása” oldja meg a régi képet.
+Ez nem HALV-találat, hanem ellenőrzött történeti pozitív kontroll.
+
+Program: `tools/verify_level5_geometry.py`; teljes mért tábla:
+`data/level5_remeasured_rectangles.csv`; képletek, korrekciók, a 64 érték,
+32 összeg, ismert történeti kulcs és cím: `data/level5_geometry_verification.json`.
+
+### C10: 64 HALV-egység, normalizálás, majd 32 közvetlen összeg
+
+Rögzített specifikáció: `models/pair64_v1.json`.
+768 px = 64×12 px; a névleges 3 px-es rekonstrukció négy mintája jut
+egy cellára. Nyolc amplitúdóblokk × nyolc cella egy 8×8 elrendezést ad.
+A 12 pixeles cellahatárok viszont nincsenek függetlenül megjelölve a képen:
+ez továbbra is tesztelt, nem bizonyított adatbontás.
+
+Két adatcsaládot kezeltünk külön:
+
+- **Base4:** négy négyszintű minta egy 0…255 közötti érték. A 24 globális
+  címkézés, két olvasási irány és két négyes-számjegysorrend 96 profilt ad.
+- **Geometria:** minták összege, konstans mintatartás területe, lineárisan
+  interpolált sugár-/teljes átmérőterület és négyzetes energiaösszeg.
+  A lineáris területeknél 91 és 92 px-es cellaeredetet is vizsgáltunk;
+  a széleken a legelső/utolsó illesztett értéket tartottuk állandónak.
+  Lefelé/felfelé/legközelebbi párosra kerekítés és irányok: 42 profil.
+
+Összesen **138 darab 64 értékes profil**, teljes számsorral archiválva:
+`data/pair64_profiles.json`. A cellák négy mintája, identitás-base4 értéke
+és fő területolvasatai a `data/halv_64_cells.csv` fájlban vannak.
+A geometriai értékek a névleges illesztésből számított hipotézisek, nem
+függetlenül igazolt eredeti vektorgeometriai adatok.
+
+Négy párosítás: szomszédos, teljes 64-es sor két fele, minden nyolccellás
+amplitúdóblokk két fele, valamint 8×8 transzponálás után szomszédos.
+Hét rögzített normalizálás/összegzés: közvetlen összeg, összeg felezése
+három kerekítéssel, értékek külön felezése két kerekítéssel, illetve
+külön megjelölt modulo 256 bájttúlcsordulási kontroll.
+Nem használtunk hash-véglegesítést vagy tetszőleges osztókeresést.
+A Level 5 konkrét 10/64 együtthatóinak HALV-beli jelentését nem feltételeztük.
+
+**3864 paraméterkombináció, 2846 különböző érvényes skalár**, mindkét
+nyilvánoskulcs-formátummal: **0 HALV-címegyezés**.
+
+### A bájttartomány külön, kriptográfiától független korlát
+
+A normalizálás nélküli base4-értékek páronkénti összege **mind a 384**
+irány/címkézés/párosítás kombinációban túllépi a 255-öt legalább egy helyen.
+A legjobb tartományilleszkedésnél is **kettő a 32-ből** túl nagy.
+Példa egy ilyen, nem javított olvasatra: 270 és 412 két összege.
+Az identitás szerinti első két cella 149 és 188, amelyek összege 337.
+Ez közvetlen, mérhető akadály ennek az egyszerű byte→összeg olvasatnak.
+Nem javítottunk ki két önkényes mezőt a célcímhez igazítva.
+A 64-egységes általános modell ettől még nyitott: más lehet az adatérték
+képzése, a geometriai korrekció vagy a normalizálás.
+
+Eredmény: `data/pair64_check.json`; külön tartománydiagnosztika:
+`data/pair64_range_diagnostics.json`. Programok: `tools/check_pair64.py`,
+`tools/diagnose_pair64_ranges.py`.
+
+### C11: BD-vezérelt blokkfelezés a párok összeadása előtt
+
+A Level 5 kontroll megmutatja, hogy mellékelt geometriai jelölés csak egyes
+adatértékeket is korrigálhat. Ezt nem vittük át önkényes hibajavításként:
+a HALV-ban már mért **BD nyolc bitje** jelöli ki a felezendő nyolccellás
+blokkokat. Külön változat a hat aktív vagy a két inaktív hely kiválasztása.
+Az integer értékek felezését három globális kerekítés követi, utána a négy
+párosítás szerinti **közvetlen** összeg. Túlcsorduláskor elutasítás;
+nincs modulo, hash vagy célcímhez igazított mezőjavítás.
+
+Specifikáció: `models/bd_pair64_v1.json`. **3312 paraméterkombinációból
+754 különböző érvényes skalár**, mindkét nyilvánoskulcs-formátummal:
+**0 HALV-címegyezés**. Ezeket nem adjuk hozzá automatikusan más futások
+számaihoz, mert a futások közötti átfedés nincs meghatározva.
+Eredmény: `data/bd_pair64_check.json`; program: `tools/check_bd_pair64.py`.
+
+### Következő pontosan megfogalmazott kérdés
+
+A történeti **mérés→jelölő általi korrekció→normalizálás→64 érték→32 összeg**
+lánc most valóban teljesen visszaellenőrzött. A HALV-nál a hiányzó láncszem
+az, hogy egy 12 pixeles egységből melyik geometriai/kódolt mennyiség lesz
+a helyes normalizált adatérték, és ezt hogyan szabályozza a saját aláírása.
+A 64×12 felosztás és a BD-féljel együtt ezt a kérdést motiválja, nem
+azonosítja már megoldottként.
+
+Összehasonlító ábra: `data/pair64_control_comparison.png`, reprodukálója
+`tools/plot_pair64.py`. Ellenőrzött HALV-kulcs továbbra sincs.

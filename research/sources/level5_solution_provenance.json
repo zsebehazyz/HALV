@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-31",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/floflo777/open-crypto-puzzles/HEAD/4-solved/zden-haluska-lvl5-555ksats/README.md",
+      "file": "level5_README.md",
+      "sha256": "ecd5707fa4773088f76d1d8122a09287488009f6c237faddd0b03cdd3d1a5d69"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/floflo777/open-crypto-puzzles/HEAD/4-solved/zden-haluska-lvl5-555ksats/data/rectangle-measurements.csv",
+      "file": "level5_data__rectangle-measurements.csv",
+      "sha256": "7912c83353f7c5ae9bb6da27ca187e6d36002db1169c2cd81768c5a059caf17a"
+    }
+  ]
+}

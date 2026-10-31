@@ -1,0 +1,11 @@
+{
+  "model": "C11",
+  "chain": "Measured marker BD and half-sign interpretation -> selective normalization of eight groups of eight cell values -> direct pairwise sum -> 32 key bytes",
+  "input_profiles": "C10 saved 64-value profiles",
+  "flags": ["BD active bits select halved blocks","BD inactive bits select halved blocks"],
+  "half_rounding": ["floor","ceil","nearest_ties_even"],
+  "pair_orders": ["adjacent","global_halves","within_halving_block_halves","transpose_8x8_then_adjacent"],
+  "finalization": "Direct sum only; reject any byte outside 0..255, no modulo, no hash, no oracle-guided repair",
+  "motivation": "Level5 shows that geometric side hints can normalize selected input units before pair sums; marker yields eight flags and a possible half operator",
+  "limitations": ["BD as a selector is hypothetical","No arbitrary choice of exceptional cells","Uses C10 approximate waveform profiles, not a full-image generator"]
+}

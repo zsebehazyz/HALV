@@ -1,0 +1,88 @@
+{
+  "model": "C11",
+  "input_sha256": {
+    "research/data/pair64_profiles.json": "3a17619e6db0b2abe67b54bdf0f7892606477356700700eee289e152ae51e159",
+    "research/data/timing_lattice_check.json": "a3bdb2985d82cfdb99496a9bebbfffa29a8e356c39a6a2408fc2a21b4d29bafb",
+    "research/models/bd_pair64_v1.json": "d456d49fad306a7a098ea12051327f0370eee9c3f546e6096d66dccaed5d5201",
+    "tools/check_bd_pair64.py": "26fd1bcab8ab5e4bea06bf295ffa6eb7bf1d8905cb6f6922776dbf8c1ac5d4f6"
+  },
+  "groups": {
+    "base4/inverse=False/ceil": {
+      "attempts": 384,
+      "invalid_or_out_of_range": 338,
+      "unique_scalars": 46
+    },
+    "base4/inverse=False/floor": {
+      "attempts": 384,
+      "invalid_or_out_of_range": 338,
+      "unique_scalars": 46
+    },
+    "base4/inverse=False/nearest_ties_even": {
+      "attempts": 384,
+      "invalid_or_out_of_range": 338,
+      "unique_scalars": 46
+    },
+    "base4/inverse=True/ceil": {
+      "attempts": 384,
+      "invalid_or_out_of_range": 384,
+      "unique_scalars": 0
+    },
+    "base4/inverse=True/floor": {
+      "attempts": 384,
+      "invalid_or_out_of_range": 384,
+      "unique_scalars": 0
+    },
+    "base4/inverse=True/nearest_ties_even": {
+      "attempts": 384,
+      "invalid_or_out_of_range": 384,
+      "unique_scalars": 0
+    },
+    "geometry/inverse=False/ceil": {
+      "attempts": 168,
+      "invalid_or_out_of_range": 0,
+      "unique_scalars": 104
+    },
+    "geometry/inverse=False/floor": {
+      "attempts": 168,
+      "invalid_or_out_of_range": 0,
+      "unique_scalars": 104
+    },
+    "geometry/inverse=False/nearest_ties_even": {
+      "attempts": 168,
+      "invalid_or_out_of_range": 0,
+      "unique_scalars": 104
+    },
+    "geometry/inverse=True/ceil": {
+      "attempts": 168,
+      "invalid_or_out_of_range": 0,
+      "unique_scalars": 104
+    },
+    "geometry/inverse=True/floor": {
+      "attempts": 168,
+      "invalid_or_out_of_range": 0,
+      "unique_scalars": 104
+    },
+    "geometry/inverse=True/nearest_ties_even": {
+      "attempts": 168,
+      "invalid_or_out_of_range": 0,
+      "unique_scalars": 104
+    }
+  },
+  "attempts_including_duplicates": 3312,
+  "unique_valid_scalars": 754,
+  "public_key_formats": 2,
+  "candidate_set_sha256": "ee18613dc70904cf5713906abde36838761bb9cc64966af1730209b859032ff8",
+  "hash_finalization_used": false,
+  "oracle_selftest": {
+    "scalar_1_both_formats": "passed",
+    "target_base58check": "passed",
+    "invalid_scalars": "passed",
+    "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+  },
+  "matches": [],
+  "limitations": [
+    "BD as a selector is hypothetical",
+    "No arbitrary choice of exceptional cells",
+    "Uses C10 approximate waveform profiles, not a full-image generator"
+  ]
+}

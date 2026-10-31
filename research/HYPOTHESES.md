@@ -37,6 +37,11 @@ flowchart TD
     ORDER --> JOIN
     MASK --> SM[Aláírás és jelölő közös olvasata]
     JOIN --> F[Kulcsformátum vagy WIF]
+    R --> CELLS[64 feltételezett adatérték]
+    HALF -. normalizálás .-> CELLS
+    S -. lehetséges geometriai korrekció .-> CELLS
+    CELLS --> SUM[32 páronkénti összeg]
+    SUM --> F
     SM --> F
     F --> A[Pontos célcímegyezés]
 ```
@@ -138,3 +143,30 @@ párosítással. A 128 négyszintű eredmény 256 kulcsbitre képezhető.
 Ez a minták páronkénti feldolgozását vizsgálja a puszta ritkítás mellett;
 nem 8SVX-dekódolás. Eredmény: `data/halving_pairs_check.json`.
 5184 különböző skalár, nulla célcímegyezés ebben a rögzített családban.
+
+## C10/C11: ellenőrzött alkotói előzmény, 64 érték → 32 összeg
+
+**Pozitív kontroll:** a Level 5 képéből 64 téglalapot mértünk ki; mind a
+64 W/H/külső-/belső-/keretterület egyezik a közzétett referenciával.
+Két segédvonal a 40. egység szélességét 33→17, az 53.-ét 20→6 módosítja.
+Ezután a közzétett normalizálás és kerekítés 64 értéke páronként összeadva
+pontos kulcsot és a régi célcímet adja. Ez a teljes képi lánc ellenőrzése,
+nem csupán egy ismert kulcsból történő címképzés.
+
+HALV-hipotézis: 768 px = 64×12 px; a 256 állapot négyes csoportjai 64
+értéket adhatnak. 8 felezési blokk × 8 cella egy 8×8 elrendezést is képez.
+
+| Modell | Összekapcsolt lánc | Eredmény |
+|---|---|---|
+| C10 | W → 64 base4-/geometriai érték → normalizálás/½ → páronkénti összeg → 32 közvetlen bájt | 2846 különböző skalár, 0 címegyezés |
+| C11 | W → 64 érték → M/BD által kijelölt blokkok felezése → páronkénti összeg → 32 bájt | 754 különböző skalár, 0 címegyezés |
+
+A közvetlen, normalizálás nélküli base4-párok mind a 384 olvasatban
+túlcsordulnak, legalább két bájthelyen. Ez egy pontos kódolási korlát;
+a 64-egységes általános modellre nem kizárás. A Level 5 saját 10/64
+együtthatóit nem alkalmaztuk automatikusan a HALV-ra, ahol jelentésük ismeretlen.
+
+Adatok: `level5_geometry_verification.json`, `level5_remeasured_rectangles.csv`,
+`halv_64_cells.csv`, `pair64_profiles.json`, `pair64_check.json`,
+`pair64_range_diagnostics.json`, `bd_pair64_check.json`; a data/ könyvtárban.
+A HALV 64 valódi adatértékének és normalizálási szabályának azonosítása nyitott.

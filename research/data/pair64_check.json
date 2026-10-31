@@ -1,0 +1,108 @@
+{
+  "model": "C10",
+  "input_sha256": {
+    "research/sources/cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/data/level5_geometry_verification.json": "197d7ea1dd7a875e3c487e632c36459985c8a22e2a408c48eaf8d390c112217f",
+    "research/models/pair64_v1.json": "a4ab67ee7db32438bba31f49bbc9d56c07bf6fa2e8bb863228de978e71996c6a",
+    "tools/check_pair64.py": "84eb83c0311e20dca8ca333c5cfff7d83766f3c86064004d965b22cefe93f523"
+  },
+  "positive_control": {
+    "level5_geometry_matches": 64,
+    "level5_full_pipeline_verified": true
+  },
+  "cell_count": 64,
+  "nominal_cell_width_px": 12,
+  "states_per_cell": 4,
+  "value_profiles": 138,
+  "attempts_including_duplicates": 3864,
+  "groups": {
+    "base4/byte_wrap_control": {
+      "attempts": 384,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 384
+    },
+    "base4/direct": {
+      "attempts": 384,
+      "out_of_range_or_invalid_rejections": 384,
+      "unique_valid_scalars": 0
+    },
+    "base4/half_sum_ceil": {
+      "attempts": 384,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 384
+    },
+    "base4/half_sum_floor": {
+      "attempts": 384,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 384
+    },
+    "base4/half_sum_ties_even": {
+      "attempts": 384,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 384
+    },
+    "base4/halve_each_ceil_then_sum": {
+      "attempts": 384,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 384
+    },
+    "base4/halve_each_floor_then_sum": {
+      "attempts": 384,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 384
+    },
+    "geometry/byte_wrap_control": {
+      "attempts": 168,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 104
+    },
+    "geometry/direct": {
+      "attempts": 168,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 104
+    },
+    "geometry/half_sum_ceil": {
+      "attempts": 168,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 104
+    },
+    "geometry/half_sum_floor": {
+      "attempts": 168,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 102
+    },
+    "geometry/half_sum_ties_even": {
+      "attempts": 168,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 104
+    },
+    "geometry/halve_each_ceil_then_sum": {
+      "attempts": 168,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 96
+    },
+    "geometry/halve_each_floor_then_sum": {
+      "attempts": 168,
+      "out_of_range_or_invalid_rejections": 0,
+      "unique_valid_scalars": 96
+    }
+  },
+  "unique_valid_scalars": 2846,
+  "public_key_formats": 2,
+  "hash_finalization_used": false,
+  "candidate_set_sha256": "e9805d11cc61f840c7d46498e9ad01358a73568bc1d561a5509e6c73a9f47d7c",
+  "oracle_selftest": {
+    "scalar_1_both_formats": "passed",
+    "target_base58check": "passed",
+    "invalid_scalars": "passed",
+    "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+  },
+  "matches": [],
+  "limitations": [
+    "Reuses a verified composition pattern, not proof of reused author method",
+    "HALV normalized q is a fitted unsigned envelope, not exact source samples",
+    "12px cell boundaries are anchored to fitted start x92, not independently marked",
+    "Linear-area model holds final zero endpoint through its last interval"
+  ]
+}

@@ -3,6 +3,13 @@
   "counting_rule": "Do not sum per-run unique candidates as global uniques; overlap across runs has not been measured. Structural comparisons, WIF strings, hypotheses and private scalars are separate units.",
   "result_summaries": [
     {
+      "result": "research/data/level5_geometry_verification.json",
+      "count_field": "geometry_reference_matches",
+      "count": 64,
+      "unit": "historical Level5 geometry matches; positive control, not HALV",
+      "historical_control_address_match": true
+    },
+    {
       "result": "research/data/candidate_check.json",
       "count_field": "valid_scalars_checked",
       "count": 1800,
@@ -45,6 +52,20 @@
       "target_or_exact_matches": 0
     },
     {
+      "result": "research/data/pair64_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 2846,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
+      "result": "research/data/bd_pair64_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 754,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
       "result": "research/data/marker_glyph_relation.json",
       "count_field": "attempts_including_duplicates",
       "count": 61200,
@@ -58,6 +79,12 @@
       "role": "executed_result_or_artifact",
       "bytes": 1610,
       "sha256": "336a3da88d311dca591150fe7d76812915f5a7f0b7b21fe36ac90b0b783674a8"
+    },
+    {
+      "path": "research/data/bd_pair64_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 2735,
+      "sha256": "7e94c85ef372058a409801edd6c15c0006ae0f4702214252d971390a49fbe941"
     },
     {
       "path": "research/data/btc_usd_daily_2020_to_halving.csv",
@@ -108,6 +135,12 @@
       "sha256": "0060745795c50fc9237bbfbf09041164cbbba3b540fe87fae253f250e2c04e40"
     },
     {
+      "path": "research/data/halv_64_cells.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 2407,
+      "sha256": "5fe73347aa4952ee8aa29de6b7d7e3324d4c2e0738aecb8f9d99684ebc63cdd6"
+    },
+    {
       "path": "research/data/halving_pairs_check.json",
       "role": "executed_result_or_artifact",
       "bytes": 2146,
@@ -118,6 +151,18 @@
       "role": "executed_result_or_artifact",
       "bytes": 6844,
       "sha256": "04557c09a16f6f3a41c503c883c93f0f1717675a4a240bb2bcd960d3186d82d1"
+    },
+    {
+      "path": "research/data/level5_geometry_verification.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 2511,
+      "sha256": "197d7ea1dd7a875e3c487e632c36459985c8a22e2a408c48eaf8d390c112217f"
+    },
+    {
+      "path": "research/data/level5_remeasured_rectangles.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 4816,
+      "sha256": "528e359ad2e4f18fd651fc184115482ee50b1c54bd76c3dadc713ffc8fa1a88a"
     },
     {
       "path": "research/data/lobes_centerline_t1.csv",
@@ -160,6 +205,30 @@
       "role": "executed_result_or_artifact",
       "bytes": 969,
       "sha256": "91434f6b3e0f2ce4bd85fc864a2cb18b40ecc63e55fcda85181db7bc15927d5e"
+    },
+    {
+      "path": "research/data/pair64_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 3641,
+      "sha256": "a1e23fd9246811a493ff628cdb8adda0a12eb2c0d56baf1c5632dc4e7ce9b9b0"
+    },
+    {
+      "path": "research/data/pair64_control_comparison.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 249031,
+      "sha256": "52ec6d0a490c51b770591d39454f0394ef4670c34e9d092cc47a36f91260736c"
+    },
+    {
+      "path": "research/data/pair64_profiles.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 108292,
+      "sha256": "3a17619e6db0b2abe67b54bdf0f7892606477356700700eee289e152ae51e159"
+    },
+    {
+      "path": "research/data/pair64_range_diagnostics.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 2124,
+      "sha256": "48f14cc63e0088e38470e143730d90633b85c7d33d19a4caa31eaddea2f50c17"
     },
     {
       "path": "research/data/pixel_measurements.json",
@@ -330,10 +399,28 @@
       "sha256": "e4f3402837bd1aee35c36ee24db03323a8e5a0c0fc4409aad001a77c56f5d84a"
     },
     {
+      "path": "research/sources/level5_README.md",
+      "role": "source_or_reference",
+      "bytes": 8800,
+      "sha256": "ecd5707fa4773088f76d1d8122a09287488009f6c237faddd0b03cdd3d1a5d69"
+    },
+    {
+      "path": "research/sources/level5_data__rectangle-measurements.csv",
+      "role": "source_or_reference",
+      "bytes": 1815,
+      "sha256": "7912c83353f7c5ae9bb6da27ca187e6d36002db1169c2cd81768c5a059caf17a"
+    },
+    {
       "path": "research/sources/level5_image_provenance.json",
       "role": "source_or_reference",
       "bytes": 682,
       "sha256": "04b8fd64207bfc6efde89c6bb754dafcc82473009b0018b8c0f0b9c63b6f8421"
+    },
+    {
+      "path": "research/sources/level5_solution_provenance.json",
+      "role": "source_or_reference",
+      "bytes": 611,
+      "sha256": "68ef60531a0b04fc301e64f7771a5cb1fa7644de7083de5b538a9fa587d606d3"
     },
     {
       "path": "research/sources/lobe_reference_provenance.json",
@@ -358,6 +445,12 @@
       "role": "source_or_reference",
       "bytes": 1416,
       "sha256": "38e4786d49afbd1c9aabda382ae6dc393f5281f9b6b3a169d782e5fc0c08fa83"
+    },
+    {
+      "path": "research/sources/user_level5_pairing_lead_2026-10-31.md",
+      "role": "source_or_reference",
+      "bytes": 722,
+      "sha256": "3bb89c0778091cafed894c0b4a4d9006bcfee8b15145f5c71c027fbbde51465c"
     },
     {
       "path": "research/sources/user_marker_wif_update_2026-10-31.json",
@@ -390,6 +483,12 @@
       "sha256": "45d462345ff3e8dbe173d1c153546958f2beadb0455a40b6fe75de3324c93f70"
     },
     {
+      "path": "research/models/bd_pair64_v1.json",
+      "role": "model_specification",
+      "bytes": 940,
+      "sha256": "d456d49fad306a7a098ea12051327f0370eee9c3f546e6096d66dccaed5d5201"
+    },
+    {
       "path": "research/models/composite_v1.json",
       "role": "model_specification",
       "bytes": 1435,
@@ -400,6 +499,12 @@
       "role": "model_specification",
       "bytes": 788,
       "sha256": "675a0b0df22df87db0a879440c3b61abef4432f7dbc76ae2b588c4b99a100aed"
+    },
+    {
+      "path": "research/models/pair64_v1.json",
+      "role": "model_specification",
+      "bytes": 1601,
+      "sha256": "a4ab67ee7db32438bba31f49bbc9d56c07bf6fa2e8bb863228de978e71996c6a"
     },
     {
       "path": "research/models/timing_lattice_v1.json",
@@ -416,14 +521,20 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 2703,
-      "sha256": "1cd540aed05fe9e2afd1aabb2e10d9e756c3de8384ddc1726cc11b7c463a1086"
+      "bytes": 3149,
+      "sha256": "6fc8e23c1382d3c1628881fcf96e4add79f0676b07aee0fb768be70236e7bb8c"
     },
     {
       "path": "tools/check_bd_halving.py",
       "role": "reproduction_tool",
       "bytes": 3730,
       "sha256": "19e879b5ca06d040743197d65e4e170873570dfe433996e7ed287c51dfaf80de"
+    },
+    {
+      "path": "tools/check_bd_pair64.py",
+      "role": "reproduction_tool",
+      "bytes": 3258,
+      "sha256": "26fd1bcab8ab5e4bea06bf295ffa6eb7bf1d8905cb6f6922776dbf8c1ac5d4f6"
     },
     {
       "path": "tools/check_composite_models.py",
@@ -480,6 +591,12 @@
       "sha256": "5e7dd187694ceecb109f03f32a904f3b496ffedf4b09b34248cd74aa013dcd9c"
     },
     {
+      "path": "tools/check_pair64.py",
+      "role": "reproduction_tool",
+      "bytes": 6053,
+      "sha256": "84eb83c0311e20dca8ca333c5cfff7d83766f3c86064004d965b22cefe93f523"
+    },
+    {
       "path": "tools/check_price_hypothesis.py",
       "role": "reproduction_tool",
       "bytes": 1681,
@@ -504,6 +621,12 @@
       "sha256": "42994b08e2865b853d9b230cab27025587c054398bdb62e1abbc62b25e9479b4"
     },
     {
+      "path": "tools/diagnose_pair64_ranges.py",
+      "role": "reproduction_tool",
+      "bytes": 1721,
+      "sha256": "d1267cd113ae908678b617bbcfe04bed9a950010b0cd5f9a983098a8d914446a"
+    },
+    {
       "path": "tools/diagnose_timing_specificity.py",
       "role": "reproduction_tool",
       "bytes": 2348,
@@ -522,16 +645,28 @@
       "sha256": "1ea915952a0490ac1b795c2a54920351923cfaac9da2bb6dff7a82a94d164a9a"
     },
     {
+      "path": "tools/plot_pair64.py",
+      "role": "reproduction_tool",
+      "bytes": 2707,
+      "sha256": "7de9c93d1d1acb983ca12df27f286ac2bf322a645ba1ea5d97ca8b6caa44b344"
+    },
+    {
       "path": "tools/plot_reconstruction.py",
       "role": "reproduction_tool",
       "bytes": 2040,
       "sha256": "768a96819fdbc28f1c5cf1d6e149a44bee770f5caabc09ed7136e97a060a434a"
     },
     {
+      "path": "tools/verify_level5_geometry.py",
+      "role": "reproduction_tool",
+      "bytes": 4130,
+      "sha256": "e7a9785cfc0e9d559e992a1087779b8eb0588a8703f584d2b92c480c92fcb43f"
+    },
+    {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 6091,
-      "sha256": "6031fd2f0e4334283a309318e423968192a8fff49d3d27621c2e0fd7039dce1e"
+      "bytes": 6933,
+      "sha256": "9cd2cbab6aa98e93247090f27cc773eea85ccae6110bfffcdc56db03c8c27a06"
     },
     {
       "path": "AGENTS.md",
@@ -542,14 +677,14 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 8932,
-      "sha256": "663ccaa1460dcf24e5d3dc25ceef4f1cddade99bda01efb8e867f4afbe48234e"
+      "bytes": 10837,
+      "sha256": "e11603ec13d9c4d02e510b66bf2c532d12c09390c019493eb74880e08a449a1f"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 49616,
-      "sha256": "bd3c6c8c2d0ca24c146ae00e7db0e3c61e2e45903e3a56cca1b253a45f9f9cb1"
+      "bytes": 57092,
+      "sha256": "d079133120b450de31fd88064180cb1d3ff51be374e9e288dadfe1c0cb96ca3d"
     }
   ]
 }

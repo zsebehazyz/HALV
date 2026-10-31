@@ -1,0 +1,17 @@
+{
+  "model": "C10",
+  "motivation": "Verified Level 5 pipeline: 64 corrected geometric values, normalized and rounded, pairwise sum -> 32 direct key bytes; HALV marker may mean half",
+  "halv_geometry": {"signal_span_px":768,"cells":64,"cell_width_px":12,"samples_per_cell":4,"samples":256},
+  "families": {
+    "base4": {"state_bijections":24,"quad_orders":["forward","reverse"],"global_orders":["forward","reverse"]},
+    "geometry": ["sample_sum","zero_order_hold_area","linear_area_radius","linear_area_diameter","energy_sum"]
+  },
+  "pair_orders": ["adjacent","global_halves","within_halving_block_halves","transpose_8x8_then_adjacent"],
+  "sum_rules": ["direct","half_sum_floor","half_sum_ceil","half_sum_ties_even","halve_each_floor_then_sum","halve_each_ceil_then_sum","byte_wrap_control"],
+  "area_rounding": ["floor","ceil","nearest_ties_even"],
+  "linear_area_anchors_px": [91,92],
+  "linear_area_endpoint_extension": "Hold first/last fitted state constant outside fitted nodes; explicit model assumption",
+  "acceptance": "32 bytes within 0..255; no clipping; direct scalar, both P2PKH public-key formats; exact target",
+  "excluded": ["hash finalization","arbitrary divisor sweep","oracle-guided geometric corrections","cyclic sample offset to force 64 cells"],
+  "limitations": ["Reuses a verified composition pattern, not proof of reused author method","HALV normalized q is a fitted unsigned envelope, not exact source samples","12px cell boundaries are anchored to fitted start x92, not independently marked","Linear-area model holds final zero endpoint through its last interval"]
+}
