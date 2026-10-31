@@ -1,0 +1,6 @@
+{
+  "numpy": "2.3.5",
+  "Pillow": "12.3.0",
+  "cryptography": "50.0.0",
+  "matplotlib": "3.10.8"
+}

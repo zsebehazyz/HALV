@@ -142,3 +142,170 @@ További numerikus képi bizonyítékhoz szükséges a már csatolt PNG bájtjai
 programozott hozzáférés: például fájlként elérhető melléklet vagy hozzáférhető,
 igazolt letöltési URL. A korábbi 128 értékű mintasor és
 mérőprogramok szintén hiányoznak. Jelenleg nincs ellenőrzött kulcs.
+
+## 2026-10-31 – második menet: a kép előkerült, saját rekonstrukció és címegyezési teszt
+
+### A korábbi képhozzáférési akadály feloldása
+
+GitHub README-keresésben megtaláltuk a felhasználói előzményben idézett hosszú
+geometriai szöveg forrását: `benjacasas02/independent-cryptography-research`.
+Ez nem új, független bizonyíték ugyanazokra a geometriai állításokra.
+A `research/zden/README.md` hivatkozása a lekéréskor 404-et adott.
+
+Két másik nyilvános tárolóban tényleges képfájl található:
+
+- `gpt4omni/unsolved-crypto-puzzles`
+- `floflo777/open-crypto-puzzles`
+
+Mindkettő útvonala: `2-mid-prizes/zden-haluska-halv-312ksats/clues/cryptoHALV.png`.
+Mindkét letöltés 61566 bájt, SHA-256:
+`3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95`.
+A PNG 950×950 képpontos, `L` színmódú. Vizuálisan megfelel a chatben látható
+képnek. **Bájtszintű azonosságot a chatcsatolmánnyal vagy a szerző oldalán
+lévő eredetivel nem igazoltunk.** A két tároló közös eredetű másolatot is őrizhet.
+Részletes származás: `sources/image_provenance.json`.
+
+Saját PNG-ellenőrzés: érvényes szignatúra, minden chunk CRC-je helyes,
+az IEND után nulla bájt. Chunkok: IHDR, pHYs, IDAT, tEXt, IEND.
+A komment a puzzle megnevezését, célcímét és a szerző elérhetőségeit tartalmazza.
+Ez **nem** teljes szteganográfiai kizárás; bitplane/FFT vizsgálatot itt nem futtattunk.
+Program és adat: `tools/inspect_png.py`, `data/png_structure.json`.
+
+### Saját pixelmérés
+
+A függőleges tükrözés három vizsgált tengelye közül y=475 adja a legkisebb
+átlagos fényerőeltérést: 0,662 / 255. y=474-nél 2,482, y=476-nál 2,414.
+A vizsgált tartományt a program rögzíti; ez csak az adott ROI eredménye.
+
+Rögzített modellcsalád:
+
+- felső és alsó, y=475-re tükrözött, egyenes szakaszokból álló görbe;
+- csomópontokban `q ∈ {0,1,2,3}` nemnegatív amplitúdó;
+- skála 32 hárompixeles lépésenként feleződik: 128, 64, …, 1;
+- három globális kezdőfázis: x=91, 92, 93;
+- 3 px és 6 px csomóponttávolság;
+- külön 3 px-es modell kizárólag ±1 szomszédos állapotváltozással;
+- minden szakaszhoz közelítő vonalprofil; dinamikus programozás választja ki
+  a teljes minimumköltségű állapotsort. A csomóponti oszlopok kimaradnak a veszteségből.
+
+Néhány mért modellhiba, 0…1 fényerőre számított átlagos szakasz-MSE:
+
+| Kezdő x | Óra | Modell | MSE |
+|---:|---:|---|---:|
+| 91 | 3 px | szabad négyállapotú | 0,018728 |
+| 92 | 3 px | szabad négyállapotú | **0,003055** |
+| 93 | 3 px | szabad négyállapotú | 0,018816 |
+| 92 | 3 px | csak ±1 változás | 0,032879 |
+| 93 | 6 px | szabad négyállapotú | 0,025518 |
+
+A hatpixeles modell legkisebb nyers hibája kb. 8,35-szöröse a hárompixeles
+modellének. **Nem tekinthető formális valószínűségi modell-összehasonlításnak:**
+eltérő a paraméterszám és a költségbe vett oszlopok halmaza. A 6 px-es spline,
+lekerekített vagy más görbemodelleket ez nem zárja ki.
+
+Az x=92-től hárompixeles modell **256 állapotot** ad. A négy állapot
+darabszáma: q0=117, q1=34, q2=78, q3=27. A vonalprofil szélességét 0,85 és
+1,15 szorzóra változtatva mind a 256 állapot változatlan maradt.
+Ez korlátozott stabilitási próba, nem teljes rekonstrukciós bizonyítás.
+Az utolsó, kis amplitúdójú blokk alternatív állapotaihoz jóval kisebb
+költségkülönbségek tartoznak; ezeket a CSV/JSON megőrzi.
+
+Fontos módosítás a korábbi irányhoz képest: a rögzített hárompixeles,
+négyállapotú modellben **256**, nem 128 állapot van. Ez elvileg 512 nyers bit;
+a kulcshoz vezető átalakítás nem ismert. Nem szabad egyszerűen 128 jól
+meghatározott kétbites mintát állítani a mért sor helyett.
+
+Mentett adatok:
+
+- `data/pixel_measurements.json`: minden modell állapotsora, geometria és költség;
+- `data/reconstructed_states.csv`: névleges modell 256 állapota, koordinátái és alternatívaköltsége;
+- `data/reconstruction.png`: eredeti képpontok és illesztés az első blokkban,
+  alatta a felezési skálától megszabadított állapotsor;
+- `tools/measure_image.py`, `tools/plot_reconstruction.py`: reprodukáló programok.
+
+### Bal oldali jelölő: a kilenc jel nem küszöbfüggetlen
+
+A 90…92 oszlopokban, y=438…512 között mérve:
+
+| Küszöb (szigorúan nagyobb) | Összefüggő jelek száma |
+|---:|---:|
+| 1 | 6 |
+| 5, 10, 20 | 8 |
+| 40, 80 | 9 |
+| 120 | 7 |
+| 180 | 6 |
+
+40-es küszöbnél a jelmagasságok: `6,3,5,5,1,5,3,4,5` képpont.
+A több sornyi fényerőrámpák szétvágása is létrehozhat külön jeleket.
+Ezért a kilenc pont/vonal és az XEX/NMRM olvasat továbbra sem igazolt.
+Minden nyers pixel és küszöbönkénti intervallum mentve:
+`data/marker_pixels.csv`, `data/pixel_measurements.json`.
+
+### Saját bitcoin-ellenőrző és tényleges kulcsjelöltek
+
+A célcím Base58Check ellenőrzőösszege érvényes, mainnet P2PKH-verziója 0,
+HASH160 tartalma: `06c84797d1f468b9d5773a61c80073b344df7470`.
+`tools/bitcoin_oracle.py` kizárólag offline ellenőriz, pénzmozgatást nem végez.
+
+Ismert válaszú teszt a privát skalár 1-gyel:
+
+- tömörített: `1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH` – sikeres;
+- tömörítetlen: `1EHNa6Q4Jz2uvNExL497mE43ikXhwF6kZm` – sikeres;
+- nulla és a csoport rendjével egyenlő skalár elutasítása – sikeres.
+
+Az ellenőrzött, előre meghatározott transzformációcsalád:
+
+- a négy amplitúdóállapot összes nemkonstans bináris projekciója;
+- az egymást követő állapotkülönbségek −3…+3 ábécéjének összes
+  nemkonstans bináris projekciója, négy kezdeti állapottal;
+- a négy állapot mind a 24 kétbites permutációja, az így kapott 64 bájt
+  első/második fele, páros/páratlan bájtjai, a két fél XOR-ja,
+  SHA-256 és dupla SHA-256 lenyomata;
+- a nyers állapotbájtok és az ASCII-állapotsor kétféle lenyomata;
+- a különbségek 8SVX Fibonacci-delta táblabeli indexeinek nibble-pakolása,
+  mindkét nibble-sorrendben, annak negyedei és SHA-256 lenyomata;
+- előre/hátra bejárás, bájtfordítás és a programban megadott komplementálás.
+
+**1800 különböző, érvényes 32 bájtos skalár, mindegyikhez kétféle nyilvános
+kulcs: nulla célcímegyezés.** A három vonalvastagság azonos állapotsora miatt
+ezek nem három független jelöltkészletet jelentenek. A teljes deduplikált
+jelöltkészlet SHA-256 lenyomata és a futási eredmény:
+`data/candidate_check.json`. Program: `tools/check_reconstruction_candidates.py`.
+Nem volt magánkulcs-találat. Nem futott teljes bizonytalansági keresés vagy
+korlátlan transzformációkeresés. Ez a negatívum nem zárja ki a Fibonacci-hang irányt.
+
+### A felhasználó új miner-revenue ábrája
+
+A 2020…2024-es képrészlet címében „Miner revenue, USD” szerepel. Ez különbözik
+a BTC árfolyamától és a blokkonkénti támogatástól. Az USD-napi bevétel a
+kibocsátástól, a díjaktól, a blokkszámtól és az átváltási ártól is függ.
+A kivágás teljes függőleges skálája, aggregációja és eredeti forrása nem ismert;
+a képhez nem állítunk pontos adatillesztést.
+
+Coin Metrics-adatból közelítő napi bevételt számoltunk:
+`(IssTotNtv + FeeTotNtv) × PriceUSD`. Ez napi referenciaáron történő átváltás,
+nem egy kész `RevUSD` mező: az aktuális CSV-ben ilyen mező nincs.
+
+2020-05-11–2024-04-19 között nyolc egyforma napmennyiségű blokk maximumai,
+az elsőhöz viszonyítva: `1; 4,20; 3,92; 3,53; 2,18; 1,81; 2,22; 4,31`.
+Ez a közvetlen időrendi bevételburkoló sem ad ismétlődő felezést.
+Átalakított bevételjel vagy a felezés mint tematikus kapcsolat nincs kizárva.
+Mentett adat: `data/miner_revenue_daily.csv`, `data/miner_revenue_check.json`;
+program: `tools/check_miner_revenue.py`; forrás: `sources/miner_revenue.json`.
+
+### További munka pontos kiindulópontja
+
+1. Az új állapotsor geometriai ellenőrzése más globális raszterezővel és
+   a teljes képtartományon, beleértve a most kihagyott csomóponti oszlopokat.
+2. A 6 px-es spline-modell összevetése: a pusztán egyenes 6 px-es modell
+   rosszabb illeszkedése nem minden 128 szimbólumos modellt cáfol.
+3. A bal jelölő fényerőrámpája és kitakarási maszkja szétválasztása;
+   puszta küszöbözésből ne állítsunk elő biztos morzeüzenetet.
+4. A hanghipotézishez a jel előjelét és időskáláját is igazolni kell.
+   Ebben a menetben nem készítettünk állítólagosan „dekódolt” hangfájlt.
+
+Módszertani korrekció a külső forrásokhoz: egy 118 bites megfigyelésből is
+képezhető determinisztikusan 256 bites kulcs például SHA-256-tal. Az alacsonyabb
+megfigyelt entrópia önmagában nem bizonyítja, hogy a képhez külső kulcsfél kell.
+Hasonlóképp a 256 rekonstruált négyszintű állapot nem bizonyít automatikusan
+512 független információbitet. A generátor és a kódolás továbbra is nyitott.

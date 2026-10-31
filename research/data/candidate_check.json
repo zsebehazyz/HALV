@@ -1,0 +1,30 @@
+{
+  "selftest": {
+    "scalar_1_both_formats": "passed",
+    "target_base58check": "passed",
+    "invalid_scalars": "passed",
+    "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+  },
+  "image_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "fits_tested": 3,
+  "state_stability_relative_to_stroke_1": [
+    {
+      "stroke_scale": 1.0,
+      "different_indices": []
+    },
+    {
+      "stroke_scale": 0.85,
+      "different_indices": []
+    },
+    {
+      "stroke_scale": 1.15,
+      "different_indices": []
+    }
+  ],
+  "unique_32byte_candidates": 1800,
+  "valid_scalars_checked": 1800,
+  "public_key_formats_per_valid_scalar": 2,
+  "matches": [],
+  "candidate_set_sha256": "f83db0282310bbadabf9f87cfa30ca6ee2550dfa2bd3a8c0f455b193b5f149ff",
+  "limitation": "A negative applies only to these reconstructions and declared transforms. No uncertainty expansion, full waveform decoder, or exhaustive key search."
+}

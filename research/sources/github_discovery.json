@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-31",
+  "scope": "Public repository metadata/README search, not authenticated code search. Only first page retained.",
+  "results": [
+    {
+      "q": "cryptoHALV in:readme",
+      "count": 1,
+      "repos": [
+        "benjacasas02/independent-cryptography-research"
+      ]
+    },
+    {
+      "q": "\"satori.digital\" in:readme",
+      "count": 6,
+      "repos": [
+        "ssmason/WP-Gutenberg-block-popup-anywhere",
+        "ssmason/satori-digital-wp",
+        "ssmason/satori-digital",
+        "ssmason/WP-QR-Code-manager-theme",
+        "ssmason/WP-Gutenberg-Block-Post-Carousel",
+        "ssmason/WP-Plugin-manifest"
+      ]
+    },
+    {
+      "q": "\"HALV\" \"puzzle\" in:readme",
+      "count": 13,
+      "repos": [
+        "floflo777/open-crypto-puzzles",
+        "benjacasas02/independent-cryptography-research",
+        "zsebehazyz/HALV",
+        "cbman0/BitcoinPuzzles",
+        "gpt4omni/unsolved-crypto-puzzles",
+        "SmallCakekoo/open-crypto-puzzles",
+        "yibie/awesome-jev",
+        "kmja/Kedjan",
+        "Hrafnir/bjornsveen-laser",
+        "vonRotter/couch"
+      ]
+    },
+    {
+      "q": "\"1crypto24HCr178iMcKd5iUi5D4rsg1nK\" in:readme",
+      "count": 1,
+      "repos": [
+        "benjacasas02/independent-cryptography-research"
+      ]
+    }
+  ]
+}

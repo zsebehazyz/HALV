@@ -1,0 +1,31 @@
+{
+  "signature_valid": true,
+  "chunks": [
+    {
+      "type": "IHDR",
+      "length": 13,
+      "crc_ok": true
+    },
+    {
+      "type": "pHYs",
+      "length": 9,
+      "crc_ok": true
+    },
+    {
+      "type": "IDAT",
+      "length": 61309,
+      "crc_ok": true
+    },
+    {
+      "type": "tEXt",
+      "length": 167,
+      "crc_ok": true
+    },
+    {
+      "type": "IEND",
+      "length": 0,
+      "crc_ok": true
+    }
+  ],
+  "bytes_after_IEND": 0
+}

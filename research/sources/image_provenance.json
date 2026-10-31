@@ -1,0 +1,24 @@
+{
+  "retrieved_utc": "2026-10-31",
+  "note": "Third-party mirrors; not independently verified against author-hosted original or chat attachment bytes.",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/gpt4omni/unsolved-crypto-puzzles/HEAD/2-mid-prizes/zden-haluska-halv-312ksats/clues/cryptoHALV.png",
+      "file": "cryptoHALV.png",
+      "bytes": 61566,
+      "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/floflo777/open-crypto-puzzles/HEAD/2-mid-prizes/zden-haluska-halv-312ksats/clues/cryptoHALV.png",
+      "file": "mirror_cryptoHALV.png",
+      "bytes": 61566,
+      "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gpt4omni/unsolved-crypto-puzzles/HEAD/2-mid-prizes/zden-haluska-halv-312ksats/clues/author-posts.md",
+      "file": "author-posts.md",
+      "bytes": 1046,
+      "sha256": "4e2c55c52dfbdf86f7097387c385c70585d5062f11147809e4fd04a4c9fbc0b3"
+    }
+  ]
+}
