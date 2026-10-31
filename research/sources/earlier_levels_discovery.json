@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-31",
+  "note": "Secondary repository excerpts, not inspection of author solution images.",
+  "results": [
+    {
+      "url": "https://raw.githubusercontent.com/cbman0/BitcoinPuzzles/HEAD/zdens_crypto_puzzles_series_2015/README.md",
+      "excerpts": [
+        "|-------|-----------|-------|--------|-------|",
+        "| Level 1 | 6 hours | BTC | Solved | Entry-level; beginner-accessible |",
+        "| Level 2 | 29 hours | BTC | Solved | \u2014 |",
+        "| Level 3 | 38 hours | BTC | Solved | \u2014 |",
+        "| Level 1 | 6 hours | BTC | Solved | Entry-level; beginner-accessible |",
+        "| Level 2 | 29 hours | BTC | Solved | \u2014 |",
+        "| Level 3 | 38 hours | BTC | Solved | \u2014 |",
+        "| Level 4 | 52 hours | BTC | Solved | Solution published on Steemit |",
+        "| Level 2 | 29 hours | BTC | Solved | \u2014 |",
+        "| Level 3 | 38 hours | BTC | Solved | \u2014 |",
+        "| Level 4 | 52 hours | BTC | Solved | Solution published on Steemit |",
+        "| Level 5 | 3+ years; relaunched 2021 | 0.005 BTC | Solved (relaunched version) | Original was buggy/incomplete; relaunch fixed |",
+        "| Level 3 | 38 hours | BTC | Solved | \u2014 |",
+        "| Level 4 | 52 hours | BTC | Solved | Solution published on Steemit |",
+        "| Level 5 | 3+ years; relaunched 2021 | 0.005 BTC | Solved (relaunched version) | Original was buggy/incomplete; relaunch fixed |",
+        "| Level HALV | \u2014 | Unknown | Solved | Created for the 2024 Bitcoin Halving |"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cbman0/BitcoinPuzzles/HEAD/lang_slovak/README.md",
+      "excerpts": [
+        "",
+        "### Level 1",
+        "**Prize:** Undisclosed BTC",
+        "**Solve Time:** **6 hours**",
+        "",
+        "### Level 2",
+        "**Prize:** Undisclosed BTC",
+        "**Solve Time:** **29 hours**",
+        "",
+        "### Level 3",
+        "**Prize:** Undisclosed BTC",
+        "**Solve Time:** **38 hours**",
+        "",
+        "### Level 4",
+        "**Prize:** Undisclosed BTC",
+        "**Solve Time:** **52 hours**",
+        "**Status:** SOLVED",
+        "**URL:** Solution published on Steemit: https://steemit.com/bitcoin/@mmorsl/solution-of-the-bitcoin-crypto-puzzle-level-4-by-zden",
+        "",
+        "---",
+        "|--------|---------------|-----------|",
+        "| Level 1 | BTC | 6 hours |",
+        "| Level 2 | BTC | 29 hours |",
+        "| Level 3 | BTC | 38 hours |",
+        "| Level 1 | BTC | 6 hours |",
+        "| Level 2 | BTC | 29 hours |",
+        "| Level 3 | BTC | 38 hours |",
+        "| Level 4 | BTC | 52 hours |",
+        "| Level 2 | BTC | 29 hours |",
+        "| Level 3 | BTC | 38 hours |",
+        "| Level 4 | BTC | 52 hours |",
+        "| Level SFX | BTC | 21 hours |",
+        "| Level 3 | BTC | 38 hours |",
+        "| Level 4 | BTC | 52 hours |",
+        "| Level SFX | BTC | 21 hours |",
+        "| Level XM17 (GIF) | BTC | 22 hours |",
+        "",
+        "The demoscene background is crucial: demosceners are trained to find creative solutions under constraints, extract maximum information from minimum data, and appreciate technical elegance. Zden's puzzles reward exactly these skills."
+      ]
+    }
+  ]
+}

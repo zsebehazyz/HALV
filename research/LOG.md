@@ -309,3 +309,92 @@ képezhető determinisztikusan 256 bites kulcs például SHA-256-tal. Az alacson
 megfigyelt entrópia önmagában nem bizonyítja, hogy a képhez külső kulcsfél kell.
 Hasonlóképp a 256 rekonstruált négyszintű állapot nem bizonyít automatikusan
 512 független információbitet. A generátor és a kódolás továbbra is nyitott.
+
+## 2026-10-31 – harmadik menet: négy alakzat és ötmintás WIF-olvasat
+
+### Új támpont és forrásstátusz
+
+A felhasználó szerint a szerző megoldásábráin az 1., 2. és 4. szinten
+51 karakteres Base58 WIF, a 3. szinten 32 közvetlen kulcsbájt szerepel.
+A szöveget a `sources/user_wif_lead_2026-10-31.txt` őrzi. Ezeket az ábrákat
+ebben a menetben nem kaptuk meg fájlként vagy konkrét URL-lel, ezért nem
+állítjuk, hogy saját szemrevételezéssel hitelesítettük a történeti állítást.
+A WIF mint hipotézis ettől még tesztelhető.
+
+A cbman0/BitcoinPuzzles két kapcsolódó README-jéből keresési kivonatot
+mentettünk: `sources/earlier_levels_discovery.json`. Ezek másodlagos források.
+A sorozatleírás HALV-ra „Solved” státuszt ír, miközben más források „OPEN”
+státuszt adnak. Itt egyik sem mellékel hitelesített kulcsot; nem következtetünk
+ebből megoldottságra.
+
+### Saját mérés: négy alakzat a legalacsonyabb küszöbön
+
+A korábbi mérés 1-es szigorú küszöbnél kezdődött. Most a `fényesség > 0`
+esetet is hozzáadtuk ugyanahhoz a 90…92 oszlopos, y=438…512 ROI-hoz.
+Az eredmény **négy** összefüggő tartomány, az intervallumvégeket beleszámítva:
+
+| Kezdő y | Záró y | Hossz |
+|---:|---:|---:|
+| 443 | 454 | 12 |
+| 460 | 472 | 13 |
+| 478 | 490 | 13 |
+| 496 | 506 | 11 |
+
+Ez reprodukálja a felhasználó megfigyelését. A korábbi hatos számnál
+`fényesség > 1` volt a feltétel, ami az 1 fényességű összekötő pixeleket elhagyja.
+Frissítés: `tools/measure_image.py`, `data/pixel_measurements.json`.
+A rekonstruált állapotsorok és modellköltségek változatlanok maradtak.
+A küszöbfüggés önmagában sem nem bizonyítja, sem nem cáfolja a morzét.
+
+### A pontosan tesztelt ötmintás család
+
+Kiindulás: az x=92, 3 px-es, négyállapotú névleges modell 256 mintája.
+`256 = 51 × 5 + 1`: az első vagy az utolsó mintát hagytuk ki, körbeforgatás
+nélkül. Mindkét teljes olvasási irányt és csoporton belüli számjegysorrendet
+vizsgáltuk.
+
+| Család | Hipotézisek | Eredmény |
+|---|---:|---|
+| Öt négyértékű minta mint base4 számjegy, mind a 24 állapotpermutáció, nulla- és egyalapú indexelés | 384 | Mind kiesik a Base58-tartományból; legalább 40 hibás csoport az 51-ből |
+| Az állapotok mind a 14 nemkonstans bináris projekciója, öt bit mint Base58-index | 112 | 112 különböző karaktersor, mind hibás ellenőrzőösszegű |
+
+A 112 bináris olvasat közül négy kezdődik 5-tel, de ezek sem érvényes WIF-ek.
+Öt bináris minta csak 32 értéket ad, tehát nem teljes Base58-karakterkód.
+Egy konkrét WIF elvileg használhat részábécét, ezért itt ténylegesen
+ellenőriztük az összes kapott karaktersor ellenőrzőösszegét.
+Öt négyértékű minta 1024 kombinációja túl nagy a közvetlen Base58-indexeléshez;
+az aktuális sorokon ez tényleges tartományhibaként jelentkezik.
+Nem alkalmaztunk modulo 58-at, önkényes levágást vagy karakterjavítást.
+
+### WIF-ellenőrzés és validálás
+
+Az új dekóder ellenőrzi a Base58-ábécét, az 51/52 karakteres és 37/38 bájtos
+hosszt, a dupla SHA-256 első négy bájtos ellenőrzőösszegét, a mainnet 0x80
+verziót, a tömörítési jelölő 0x01 értékét és a privát skalár tartományát.
+
+**Kilenc pozitív/negatív teszt sikeres:** a skalár 1 ismert 51 és 52
+karakteres WIF-je; mindkettőn egy karakter elrontása; hibás verzió; hibás
+tömörítési jelölő; nulla skalár; a csoport rendjével egyenlő skalár; tiltott
+Base58-karakter. Az alap címellenőrző ismert tesztjei is sikeresek.
+
+**Érvényes WIF: 0. Célcímegyezés: 0.** Nem jutottunk új, WIF-ből kinyert
+kulcsjelölthöz; a 496 hipotézis nem 496 privátkulcs-ellenőrzés.
+Teljes eredmény és determinisztikus hipotéziskészlet-hash:
+`data/five_sample_wif_check.json`. Program: `tools/check_five_sample_wif.py`.
+
+### A 59 = 51 + 8 értelmezés korlátja
+
+A számazonosság továbbra is hipotézis. **A nyolc elválasztót a célkulcstól
+független, mérhető szabállyal kell azonosítani**, majd a maradó lobuszokból
+egyértelmű karakterértéket képezni. Nem választottunk önkényesen nyolc
+eldobandó lobuszt, és nem kerestünk tetszőleges helyettesítési táblát.
+
+A jelenlegi állapotsoron 63 nemnulla összefüggő szakasz van. Ez nem ugyanaz
+a definíció, mint az előzményben említett 59 vizuális lobusz; nem kezeljük
+az 59 megcáfolásaként. Az ötmintás teszt a szabályos mintasoron futott,
+nem egy igazolt 59 lobuszos szegmentáláson.
+
+A WIF-irány általában nem kizárt. A konkrét közvetlen ötmintás család ezen
+a rekonstrukción nem működik. Előrelépést egy indokolt elválasztó-szegmentálás
+vagy egy forrással alátámasztott karakterkód adhat; az ellenőrzőösszeg
+utólagos „javítása” nem megoldás.

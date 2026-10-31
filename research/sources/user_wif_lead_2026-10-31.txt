@@ -1,0 +1,5 @@
+A felhasználó új kutatási támpontja, 2026-10-31:
+
+A bal oldali jelölőnél már látszik egy mérhető küszöbfüggés: alacsony fényességküszöbnél négy összefüggő alakzatot kapunk, közepesnél kilencet, magasnál pedig csak hat-hét marad. Ez megerősíti, hogy a kilenc jel nem magától értetődő, küszöbtől független tény. Közben az alkotó eredeti, közzétett megoldásábrái igazolják, hogy a korai rejtvényekben valóban használt Base58-as WIF kulcsokat.
+
+Az eredeti megoldásokból két hasznos támpont adódik: az 1., 2. és 4. szintnél az 51 karakteres WIF-formátum fontos szerepet játszott, a 3. szintnél viszont 32 közvetlen kulcsbájt szerepelt. A HALV 59 hullámlobusza ezért érdekes: 59 = 51 + 8, vagyis számszerűen elképzelhető nyolc elválasztójel és 51 WIF-karakter. Ezt még csak hipotézisnek tekintem; most a korábban rekonstruált 256 mintából is ellenőrzök egy konkrét, ötmintás Base58-olvasatot.

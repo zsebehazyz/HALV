@@ -45,3 +45,13 @@ python3 tools/plot_reconstruction.py
 ![Rekonstrukciós hipotézis](research/data/reconstruction.png)
 
 A részletes korlátokat és a következő kísérleteket a napló legújabb bejegyzése írja le.
+
+## Ötmintás WIF-hipotézis
+
+`python3 tools/check_five_sample_wif.py` – a 256 állapotból 51 ötmintás
+csoportot vizsgál, egy kihagyott mintával. 384 közvetlen négyes számrendszerű
+értelmezés kiesik az értéktartomány miatt; 112 bináris projekcióból kapott
+karaktersor egyike sem érvényes WIF. A WIF-dekóder kilenc pozitív/negatív
+ellenőrzése sikeres. Részletek: `research/data/five_sample_wif_check.json`.
+
+A jelölőnél a `fényesség > 0` feltétel valóban **négy** összefüggő alakzatot ad.

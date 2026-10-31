@@ -1,0 +1,46 @@
+{
+  "image_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "selftests": {
+    "address_oracle": {
+      "scalar_1_both_formats": "passed",
+      "target_base58check": "passed",
+      "invalid_scalars": "passed",
+      "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+    },
+    "wif_decoder": {
+      "cases_passed": 9,
+      "known_vectors": "scalar 1, uncompressed and compressed",
+      "negative_cases": "mutated checksum, version, compression marker, scalar zero/order, forbidden alphabet"
+    }
+  },
+  "samples": 256,
+  "groups": 51,
+  "samples_per_group": 5,
+  "unused_samples": 1,
+  "assumptions": "Contiguous noncyclic groups; discard first or last sample; both directions and within-group endianness. Four-state bijections or nonconstant boolean projections only. No modulo, clipping, offsets beyond explicit 0/1 indexing, substitution cipher, or error repair.",
+  "families": {
+    "five_base4_digits": {
+      "hypotheses": 384,
+      "rejections": {
+        "digit_out_of_range": 384
+      },
+      "minimum_out_of_range_groups": 40,
+      "unique_in_range_strings": 0,
+      "prefix_5_count": 0
+    },
+    "five_binary_digits": {
+      "hypotheses": 112,
+      "rejections": {
+        "checksum": 112
+      },
+      "minimum_out_of_range_groups": 0,
+      "unique_in_range_strings": 112,
+      "prefix_5_count": 4
+    }
+  },
+  "valid_wifs": [],
+  "target_matches": 0,
+  "hypothesis_set_sha256": "f4f77f9ad19e63e145ae0c1e53b9ef5eaa123b54b95eac672295a4916288449c",
+  "nonzero_runs_in_fitted_states": 63,
+  "limitation": "A negative excludes only this explicit mapping family on this reconstruction, not all WIF encodings or alternate sample reconstructions."
+}

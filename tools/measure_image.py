@@ -83,7 +83,7 @@ def main():
     for axis in [474, 475, 476]:
         d = min(axis-85, 865-axis)
         output['symmetry_mae_by_axis'][str(axis)] = float(np.mean(np.abs(a[axis-d:axis, 95:859]-a[axis+1:axis+d+1, 95:859][::-1])))
-    for threshold in [1, 5, 10, 20, 40, 80, 120, 180]:
+    for threshold in [0, 1, 5, 10, 20, 40, 80, 120, 180]:
         output['marker'][str(threshold)] = runs(np.max(a[438:513, 90:93], axis=1)>threshold, 438)
     with (ROOT/'research/data/marker_pixels.csv').open('w') as f:
         w = csv.writer(f, lineterminator='\n'); w.writerow(['y', 'x90', 'x91', 'x92'])
