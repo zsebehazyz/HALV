@@ -625,3 +625,107 @@ Program és eredmény: `tools/check_hex_text.py`, `data/hex_text_check.json`.
 A sarokmérések, a történeti összehasonlítás és a kulcsjelöltek közös
 reprodukálója: `tools/check_corners.py`. Az összehasonlító ábra:
 `data/corner_comparison.png`. Továbbra sincs ellenőrzött HALV-kulcs.
+
+## 2026-10-31 – hatodik menet: összefüggéstérkép és több réteget összekapcsoló tesztek
+
+### Kutatási módszer korrekciója és tartós memória
+
+A felhasználó hangsúlyozta, hogy a jelek egymásra épülhetnek, egy képrész
+lehet vezérlés vagy utasítás is, és a hullám szerepe sem előre eldöntött.
+A korábbi közvetlen adat→kulcs negatívumok valóban nem tesztelték ezeknek
+a kapcsolatoknak a nagy részét. Az irányt a
+`sources/user_research_method_2026-10-31.md` őrzi.
+
+Új közös térkép: `research/HYPOTHESES.md`, függőségi gráffal, modellazonosítókkal,
+bemeneti szerepekkel és a megmaradó nyitott irányokkal. Az AGENTS.md
+előírja ennek és a bizonyítékindexnek az elolvasását a későbbi munkamenetekben.
+A `research/RUN_INDEX.json` a korábbi eredményeket és forrásokat is indexeli,
+fájlhash-ekkel és egymástól elkülönített számlálási egységekkel.
+
+Ez a módszertani változtatás nem bizonyítja előre, hogy melyik kapcsolat
+helyes: a több réteg konkrét szerepeit továbbra is tesztelni kell.
+
+### Előre rögzített modellcsalád
+
+Az állandó paraméterleírás a futás előtt elkészült:
+`research/models/composite_v1.json`. Az alábbiakat kapcsoltuk össze:
+
+- **W:** a korábbi 256 négyszintű hullámminta, az ismert felezési skálától
+  megszabadítva. Minden bijektív kétbites címkézés két 256 bites réteget ad.
+- **M:** a bal jelölő két, egy sorral eltérő 64 soros ablaka, az öt mért
+  platóhoz tartozó reprezentatív küszöbön. Négyszer ismételve, olvasási
+  irányokkal és komplementálással **40 különböző 256 bites maszk**.
+- **S:** a HALV/ZDEN négy 63 bites betűrácsa egy-egy kitöltőbittel 64 bites
+  mezőkké alakítva; két globális mintavétel, olvasási irányok és kitöltések:
+  **384 különböző 256 bites maszk**. A kitöltés szerepe hipotézis.
+- **D:** a mért 20042402 nyolc számjegye nyolc 32 mintás blokk bal/jobb
+  forgatását adja a minták kétbites értelmezése előtt. Ez gyenge, méretazonosságra
+  épülő teszthipotézis; nem megfejtett dátumutasítás.
+- **N:** a feltételes NMRM négy Morse-csoportjának gyökér=1, pont=0,
+  vonás=1 faindexei **6,7,10,7**. Ezek négy 64 mintás negyed forgatásait
+  vezérlik két irányban. A kezdő 1 megőrzi a Morse-jel hosszát; a szerep hipotézis.
+
+### Lefuttatott láncok és pontos eredmények
+
+| Modell | Műveletlánc | Különböző érvényes skalár |
+|---|---|---:|
+| C1 | W bitrétegei → M szerinti rétegválasztás vagy réteg XOR M → kulcs | 2384 |
+| C2 | W bitrétegei → S szerinti rétegválasztás vagy réteg XOR S → kulcs | 21728 |
+| C3 | S XOR M → kulcs; a hullám nem szerepel a láncban | 14592 |
+| C4 | D szerinti blokkonkénti mintaforgatás → W rétegei → C1/C2 | 47512 |
+| C5 | N szerinti negyedenkénti mintaforgatás → W rétegei → C1/C2 | 47800 |
+
+Az első két modellben a maszk pozíciónként választhatja ki a magas vagy
+alacsony bitet. A bemenetek összekapcsolása tehát már a kulcs előtt megtörténik;
+nem az egyes képrészek külön-külön vett hash-einek összevetéséről van szó.
+Kontrollként egy-egy bitréteg és a maszk XOR-ját is teszteltük.
+A köztes 256 bitet nyersen és egyszeres SHA-256 után ellenőriztük.
+
+A generálás 641280 próbát tartalmazott ismétlésekkel együtt. Az ismétlődések
+kiszűrése után **134016 különböző érvényes skalár** maradt ebben a futásban;
+**mindegyikhez tömörített és tömörítetlen nyilvános kulcsot** ellenőriztünk.
+**Célcímegyezés: 0.** A standard ismert-válaszú címellenőrzési tesztek sikeresek.
+Ezt a mennyiséget nem adjuk hozzá automatikusan korábbi futások számaihoz:
+a futások közötti esetleges átfedést nem mértük.
+
+A teljes bemeneti hashlista – a program és az állandó specifikáció hashével
+együtt –, a családonkénti számlálók és a teljes deduplikált jelöltkészlet
+hash-e: `data/composite_model_check.json`. A 424 maszk pontos bájtjai és
+forrásműveletei: `data/composite_masks.json`. Futtató:
+`tools/check_composite_models.py`. A műveletláncok és adatok alapján minden
+jelölt újra előállítható. A futás bemeneti hash-eit utólag ellenőriztük:
+mind megegyeznek a mentett állománnyal.
+A végrehajtási napló: `data/composite_run.log`.
+
+### Külön szerkezeti teszt: M 63 bitje és S 63 bites betűi
+
+Az egyik közvetlenül mérhető méretkapcsolat, hogy a T=3 jelölő aktív
+területe 9×7=63 sor, a nagy betűk pedig 9×7=63 mintacellát tartalmaznak.
+Ezt nem csak kulcsellenőrzéssel, hanem **pontos fedvényegyenlőséggel** is
+vizsgáltuk: előáll-e a jelölő a nyolc HALV/ZDEN betű valamely nem üres
+részhalmazának XOR/OR/AND képeként?
+
+C6: két globális cellamintavétel, négy tengelyfordítás, komplementálás,
+öt jelölőküszöb, 255 nem üres betűrészhalmaz, három művelet:
+**61200 összehasonlítás, ismétlődő mintákkal. Pontos egyezés: 0.**
+Ez strukturális teszt, nem 61200 új privátkulcs-jelölt.
+
+A legkisebb eltérés 5/63 bit, de ez a 178-as küszöb nagyon ritka maszkjánál
+adódik, ahol az állandó nulla mintától is csak 9 bit az eltérés. Az 5 bites
+közelséget ezért nem fogadjuk el kapcsolatként vagy megfejtett üzenetként.
+A legközelebbi mintákat nem javítottuk kézzel, és nem vittük tovább kulcsként.
+Eredmény és konstans kontrollok: `data/marker_glyph_relation.json`;
+program: `tools/check_marker_glyph_relation.py`.
+
+### A negatív eredmény hatóköre és nyitott kapcsolatok
+
+Az eredmény csak ezekre az explicit mintavételi, maszk-, forgatási és
+kulcsformálási láncokra vonatkozik. A jelölő ettől még adhat mintavételi
+órát vagy dekóderutasítást; az aláírás vonalhosszai vagy sorrendje
+szabályozhatják az olvasást; a hullám más generátorral is rekonstruálható.
+WIF- és hangdekódoló láncot ez a futás nem vizsgált. A kétbites állapotok
+rekonstrukciós bizonytalanságát sem terjesztettük ki.
+
+A további kutatásnak ezeket a kapcsolatokat is nyitva kell tartania;
+az egyedi vagy összekapcsolt tesztek sikertelensége nem indokolja egy teljes
+képrész lényegtelennek minősítését. Továbbra sincs ellenőrzött HALV-kulcs.

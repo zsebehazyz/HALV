@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "models": {
+    "C1": "Wave bitplanes selected or XORed by marker mask",
+    "C2": "Wave bitplanes selected or XORed by signature mask",
+    "C3": "Signature mask XOR marker mask; waveform not used",
+    "C4": "Date-controlled sample-block rotations before C1/C2",
+    "C5": "Morse-tree-controlled sample-quarter rotations before C1/C2"
+  },
+  "marker": {"row_starts": [443,444], "rows": 64, "column": 91, "thresholds_inclusive": [1,3,24,108,178], "repeat": 4},
+  "signature": {"glyphs": 4, "cells_per_glyph": [9,7], "pixel_scale": 2, "samples": ["any","all"], "padding_bits": [0,1], "padding_positions": ["prefix","suffix"], "orientations": 8, "reverse_glyph_order": true},
+  "wave": {"start_x": 92, "clock_px": 3, "states": [0,1,2,3], "permutations": 24, "reverse": true},
+  "date": {"source": "measured 20042402", "block_size_samples": 32, "operations": ["identity","rotate_left","rotate_right"]},
+  "morse": {"source": "conditional NMRM groups", "root": 1, "dot": 0, "dash": 1, "block_size_samples": 64, "operations": ["rotate_left","rotate_right"]},
+  "operations": ["select_high_or_low","xor_high","xor_low"],
+  "finalization": ["raw_256_bits","SHA256_of_32_bytes"],
+  "validation": "Known-answer tested secp256k1 P2PKH, compressed and uncompressed; exact target match only",
+  "excluded": ["unbounded operation search","alternate waveform fits","audio decoding","WIF chains","arbitrary separator removal"]
+}

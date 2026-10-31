@@ -1,0 +1,445 @@
+{
+  "purpose": "Persistent evidence index; read together with HYPOTHESES.md and LOG.md.",
+  "counting_rule": "Do not sum per-run unique candidates as global uniques; overlap across runs has not been measured. Structural comparisons, WIF strings, hypotheses and private scalars are separate units.",
+  "result_summaries": [
+    {
+      "result": "research/data/candidate_check.json",
+      "count_field": "valid_scalars_checked",
+      "count": 1800,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
+      "result": "research/data/five_sample_wif_check.json",
+      "count_field": "target_matches",
+      "count": 0,
+      "unit": "target matches; hypotheses are in families",
+      "target_or_exact_matches": 0
+    },
+    {
+      "result": "research/data/corner_check.json",
+      "count_field": "unique_corner_candidates",
+      "count": 10386,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
+      "result": "research/data/composite_model_check.json",
+      "count_field": "global_unique_valid_scalars",
+      "count": 134016,
+      "unit": "valid private scalars",
+      "target_or_exact_matches": 0
+    },
+    {
+      "result": "research/data/marker_glyph_relation.json",
+      "count_field": "attempts_including_duplicates",
+      "count": 61200,
+      "unit": "structural comparisons, not private keys",
+      "target_or_exact_matches": 0
+    }
+  ],
+  "files": [
+    {
+      "path": "research/data/btc_usd_daily_2020_to_halving.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 45504,
+      "sha256": "49437c19c61b57bb0426bd6372c64e7de554205a5d8eb818aa1e5e33a89cc1d4"
+    },
+    {
+      "path": "research/data/candidate_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 955,
+      "sha256": "833514beb3118e183808767cb1068e7380e4567d403ce49a0800087bf80a8d2c"
+    },
+    {
+      "path": "research/data/composite_masks.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 88453,
+      "sha256": "cb5f1ed3882e6d63dad59b91672f8febd095a3f20b579b522ffb953bf748f267"
+    },
+    {
+      "path": "research/data/composite_model_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 2563,
+      "sha256": "ae558bcecbd36d09dcacce1ec58530848e15dfd5f1607332178c60b1e863614d"
+    },
+    {
+      "path": "research/data/composite_run.log",
+      "role": "executed_result_or_artifact",
+      "bytes": 3493,
+      "sha256": "61a28cf42f637621781d5c50be16475e53bbbf2e4e9fc562bde26d556ac9d5df"
+    },
+    {
+      "path": "research/data/corner_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 4040,
+      "sha256": "904e86defa775c8bfd375fe7b93ef8b2bd5f959eab59a2da0e5571851a6d6159"
+    },
+    {
+      "path": "research/data/corner_comparison.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 75633,
+      "sha256": "62a3a071fecc4d5534d3e8f13fb6f6790c6c2b88cd42ef02fe919af868ca80ce"
+    },
+    {
+      "path": "research/data/five_sample_wif_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1716,
+      "sha256": "0060745795c50fc9237bbfbf09041164cbbba3b540fe87fae253f250e2c04e40"
+    },
+    {
+      "path": "research/data/hex_text_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 6844,
+      "sha256": "04557c09a16f6f3a41c503c883c93f0f1717675a4a240bb2bcd960d3186d82d1"
+    },
+    {
+      "path": "research/data/lobes_centerline_t1.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 1173,
+      "sha256": "156ff4371693e54116d23216ecb7f5badb9d8aba3ea8dc187c5105717579519d"
+    },
+    {
+      "path": "research/data/marker_glyph_relation.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 5084,
+      "sha256": "dcf5ce536011d595490b67983cba3d25665961df63dd4fd6887a950382a391a8"
+    },
+    {
+      "path": "research/data/marker_grid_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 21368,
+      "sha256": "bc483972863368ff7b4f6a4fffb6ce0aa6dfda4a6aa1632475bd08ac074d95e6"
+    },
+    {
+      "path": "research/data/marker_pixels.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 917,
+      "sha256": "305bf4febd4cb6615063c84884d97162275bd3e421f559a9b9f97e4c980b05d5"
+    },
+    {
+      "path": "research/data/miner_revenue_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1323,
+      "sha256": "443a0a9e513b8c94074e3832964b70467007fe146fc4b7d01d87eaedb2062eac"
+    },
+    {
+      "path": "research/data/miner_revenue_daily.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 110584,
+      "sha256": "50447e8cba448c8a7e2d02888ed388ce257e330df94b4297501e77ed6b517523"
+    },
+    {
+      "path": "research/data/morse_ambiguity.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 969,
+      "sha256": "91434f6b3e0f2ce4bd85fc864a2cb18b40ecc63e55fcda85181db7bc15927d5e"
+    },
+    {
+      "path": "research/data/pixel_measurements.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 173640,
+      "sha256": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79"
+    },
+    {
+      "path": "research/data/png_structure.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 455,
+      "sha256": "480d2cb89e65ccf9ee5b2c7f713656a3ff89d07adc7388cec438ec98169d4b0e"
+    },
+    {
+      "path": "research/data/price_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 3087,
+      "sha256": "d6369c2c3c0f840e1408b11add6be442830b56b70fd32fe4fdaa57c0b9c6c7ce"
+    },
+    {
+      "path": "research/data/reconstructed_states.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 8939,
+      "sha256": "bf64567763d899d80ab75111068949ce6d6097fd9507ea0e0487a7b38a477359"
+    },
+    {
+      "path": "research/data/reconstruction.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 350164,
+      "sha256": "53970e5db54a5783c97f66a2011aa7e3443f2f4c554b7005d55eece52b093cdc"
+    },
+    {
+      "path": "research/data/runtime_versions.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 99,
+      "sha256": "290c89c5fb05476b19de32a70d6a630193d1a97f78195f833664c6909805282d"
+    },
+    {
+      "path": "research/data/signed_model_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 72925,
+      "sha256": "4c8be47411a6a2ded8ef435c9e71c21970838872cc79d17ed56034b020e9f6cc"
+    },
+    {
+      "path": "research/sources/author-posts.md",
+      "role": "source_or_reference",
+      "bytes": 1046,
+      "sha256": "4e2c55c52dfbdf86f7097387c385c70585d5062f11147809e4fd04a4c9fbc0b3"
+    },
+    {
+      "path": "research/sources/benjacasas02__independent-cryptography-research_README.md",
+      "role": "source_or_reference",
+      "bytes": 17459,
+      "sha256": "0bcce3305e4b8bc383815299e4192c3b43aa4d25ec4519bcd3d157a71bf01b2d"
+    },
+    {
+      "path": "research/sources/cbman0__BitcoinPuzzles_README.md",
+      "role": "source_or_reference",
+      "bytes": 17756,
+      "sha256": "63e373d13c7075adb1d3f3689bd178f9049f5cbd1d9d451a82599b16be765323"
+    },
+    {
+      "path": "research/sources/coinmetrics.json",
+      "role": "source_or_reference",
+      "bytes": 318,
+      "sha256": "dd38b51ce10a808861c68ed5775cf52b2bdfa53836b37c061728364e7b295d8f"
+    },
+    {
+      "path": "research/sources/crypto5.png",
+      "role": "source_or_reference",
+      "bytes": 4874,
+      "sha256": "936c401fac266e245e40d5ae1705360746387be934ced4ee6c37fc30dfdd5d15"
+    },
+    {
+      "path": "research/sources/crypto5fix.png",
+      "role": "source_or_reference",
+      "bytes": 6798,
+      "sha256": "5a62843597f0fd545e19a343b750c6cdfa8010ba2cb5b52d4ad29c7016e57cc6"
+    },
+    {
+      "path": "research/sources/cryptoHALV.png",
+      "role": "source_or_reference",
+      "bytes": 61566,
+      "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
+    },
+    {
+      "path": "research/sources/earlier_levels_discovery.json",
+      "role": "source_or_reference",
+      "bytes": 3245,
+      "sha256": "782d07734fa8e1424e7023379c6cc72ae1ed78bcbd3fbdaccd0d1d3d37ce1c03"
+    },
+    {
+      "path": "research/sources/external_analysis__leads.md",
+      "role": "source_or_reference",
+      "bytes": 1668,
+      "sha256": "4011cd9a9aa06a6336ecae9be0324c185b8aecec5003e9529dfb22eb9210cee1"
+    },
+    {
+      "path": "research/sources/external_analysis__tested.md",
+      "role": "source_or_reference",
+      "bytes": 3362,
+      "sha256": "f0e8def6d43abaedf1ba1e9c285e2a483265687a980c11fb5f2308082a886c03"
+    },
+    {
+      "path": "research/sources/external_data__lobe-shape-sequence.csv",
+      "role": "source_or_reference",
+      "bytes": 624,
+      "sha256": "6f4beb65d6222bb06bd514f4295da7eb3f9515ba67c4162b0c1c075a173a119a"
+    },
+    {
+      "path": "research/sources/floflo777__open-crypto-puzzles_README.md",
+      "role": "source_or_reference",
+      "bytes": 18369,
+      "sha256": "d31b2d28d2b67fec52a073566c0fdfd16065ff29f452705f9dc6b54d1425755b"
+    },
+    {
+      "path": "research/sources/github_discovery.json",
+      "role": "source_or_reference",
+      "bytes": 1300,
+      "sha256": "b789636bf6f43dfa0aca90be7830f6f41adb4abf2dba4e32a94e37b699d74bb7"
+    },
+    {
+      "path": "research/sources/gpt4omni__unsolved-crypto-puzzles_README.md",
+      "role": "source_or_reference",
+      "bytes": 13517,
+      "sha256": "cc35ce174ec812f4ef8c2467e2e1985c20a0c917300a13094b99454cc8d7240e"
+    },
+    {
+      "path": "research/sources/image_provenance.json",
+      "role": "source_or_reference",
+      "bytes": 1073,
+      "sha256": "e4f3402837bd1aee35c36ee24db03323a8e5a0c0fc4409aad001a77c56f5d84a"
+    },
+    {
+      "path": "research/sources/level5_image_provenance.json",
+      "role": "source_or_reference",
+      "bytes": 682,
+      "sha256": "04b8fd64207bfc6efde89c6bb754dafcc82473009b0018b8c0f0b9c63b6f8421"
+    },
+    {
+      "path": "research/sources/lobe_reference_provenance.json",
+      "role": "source_or_reference",
+      "bytes": 1038,
+      "sha256": "c5276f0ef3450222fe09865dc2957cc2a9bfff4bb39a5d5d0246a8d74908e564"
+    },
+    {
+      "path": "research/sources/miner_revenue.json",
+      "role": "source_or_reference",
+      "bytes": 379,
+      "sha256": "2b357f4d0d3488be05830ad517aeb6e28761216fa9381d03eee35acdbcb91136"
+    },
+    {
+      "path": "research/sources/mirror_cryptoHALV.png",
+      "role": "source_or_reference",
+      "bytes": 61566,
+      "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
+    },
+    {
+      "path": "research/sources/user_marker_wif_update_2026-10-31.json",
+      "role": "source_or_reference",
+      "bytes": 1301,
+      "sha256": "032b78a0a9229ed80b34bc666a0e8c500fe3ade5d9543320e094d99c323ca3a0"
+    },
+    {
+      "path": "research/sources/user_prior_notes.txt",
+      "role": "source_or_reference",
+      "bytes": 11294,
+      "sha256": "fa0a67d90a13781f7a1467989458ff681096728ff19b47d9158026838e314938"
+    },
+    {
+      "path": "research/sources/user_research_method_2026-10-31.md",
+      "role": "source_or_reference",
+      "bytes": 617,
+      "sha256": "98f0520a5e972467746a11deb91eb91114293656d6b5707a37099ca3b8543582"
+    },
+    {
+      "path": "research/sources/user_wif_lead_2026-10-31.txt",
+      "role": "source_or_reference",
+      "bytes": 972,
+      "sha256": "379ab19a3f9b4cfcb706a66f5715c719c1eb74ab89ca785d3d33da51db328503"
+    },
+    {
+      "path": "research/models/composite_v1.json",
+      "role": "model_specification",
+      "bytes": 1435,
+      "sha256": "fb0fcf731f0436cb6cd53bff8255296a83cec903ab66ffa822386a63746c2524"
+    },
+    {
+      "path": "tools/bitcoin_oracle.py",
+      "role": "reproduction_tool",
+      "bytes": 2264,
+      "sha256": "23fc132483bbee26271c5bfdfe745e590ddf431ca92fb3897b696e46c198f5ec"
+    },
+    {
+      "path": "tools/build_research_index.py",
+      "role": "reproduction_tool",
+      "bytes": 2536,
+      "sha256": "559763ed1adcafc3b1a03812423a74205f8ea91f0fabc66ffce135a302d1da9d"
+    },
+    {
+      "path": "tools/check_composite_models.py",
+      "role": "reproduction_tool",
+      "bytes": 7893,
+      "sha256": "acf684085174dda3348793d08f3d43dc807195e1797c08b02ba5e628ade59eea"
+    },
+    {
+      "path": "tools/check_corners.py",
+      "role": "reproduction_tool",
+      "bytes": 8771,
+      "sha256": "f17963fd47ea8bb1b6e81b2cceaf70827f1a578e11669585fb938da98bef532c"
+    },
+    {
+      "path": "tools/check_five_sample_wif.py",
+      "role": "reproduction_tool",
+      "bytes": 6192,
+      "sha256": "2726b1417e4f1fa3674785f6191cdc635f8ceb197acf0c7fa96b8104dc2b09df"
+    },
+    {
+      "path": "tools/check_hex_text.py",
+      "role": "reproduction_tool",
+      "bytes": 1483,
+      "sha256": "2f25df4a1738e98db22241d16b29f697d993e3bc8171a875c9b9b1477a5d875f"
+    },
+    {
+      "path": "tools/check_marker_glyph_relation.py",
+      "role": "reproduction_tool",
+      "bytes": 3499,
+      "sha256": "f00c2e3571c384e989d68c6b3ac53e349f1a1b61b8041d3719a768963b6d85fc"
+    },
+    {
+      "path": "tools/check_marker_grid.py",
+      "role": "reproduction_tool",
+      "bytes": 3037,
+      "sha256": "3eef1b7295e33f0806decb4d033f74df93f1dcef98136df9339adb823102398a"
+    },
+    {
+      "path": "tools/check_miner_revenue.py",
+      "role": "reproduction_tool",
+      "bytes": 1008,
+      "sha256": "9bfa91c32d34408148d0a48307a1110726ccb7e9f7c53bbb04894fe82dabe0b6"
+    },
+    {
+      "path": "tools/check_morse_ambiguity.py",
+      "role": "reproduction_tool",
+      "bytes": 1330,
+      "sha256": "5e7dd187694ceecb109f03f32a904f3b496ffedf4b09b34248cd74aa013dcd9c"
+    },
+    {
+      "path": "tools/check_price_hypothesis.py",
+      "role": "reproduction_tool",
+      "bytes": 1681,
+      "sha256": "08fef3b7ba36fd29a3944b021b2dec8567571c75b3626bbdf9e9e42ee017102e"
+    },
+    {
+      "path": "tools/check_reconstruction_candidates.py",
+      "role": "reproduction_tool",
+      "bytes": 4926,
+      "sha256": "300aa8f1863679af071614481fb55858f7bf2f29c859287b9219d3f568c7d4e2"
+    },
+    {
+      "path": "tools/check_signed_models.py",
+      "role": "reproduction_tool",
+      "bytes": 1512,
+      "sha256": "158eb792b7792c8574efe449dd933e2e66092ac58db978452074551ee811280a"
+    },
+    {
+      "path": "tools/inspect_png.py",
+      "role": "reproduction_tool",
+      "bytes": 809,
+      "sha256": "bd4b462d7d6c7203fe4966184b8543c1eec4756653f11d855db8bc94c01fbb21"
+    },
+    {
+      "path": "tools/measure_image.py",
+      "role": "reproduction_tool",
+      "bytes": 4889,
+      "sha256": "1ea915952a0490ac1b795c2a54920351923cfaac9da2bb6dff7a82a94d164a9a"
+    },
+    {
+      "path": "tools/plot_reconstruction.py",
+      "role": "reproduction_tool",
+      "bytes": 2040,
+      "sha256": "768a96819fdbc28f1c5cf1d6e149a44bee770f5caabc09ed7136e97a060a434a"
+    },
+    {
+      "path": "README.md",
+      "role": "research_map_or_log",
+      "bytes": 4970,
+      "sha256": "c1ee0f7330fd66649eaf8a4d5cfb69c988f9ca33d93bbbbe9632f3c7c071614b"
+    },
+    {
+      "path": "AGENTS.md",
+      "role": "research_map_or_log",
+      "bytes": 1565,
+      "sha256": "8f5844290183ea9cadf6b3f5a2a6082529492a9e507e291fda92a7e42e5770c0"
+    },
+    {
+      "path": "research/HYPOTHESES.md",
+      "role": "research_map_or_log",
+      "bytes": 6186,
+      "sha256": "5162c4a2661e923bf4e7b077da6572640f4c742efb63729f0ff1a798adaae9ae"
+    },
+    {
+      "path": "research/LOG.md",
+      "role": "research_map_or_log",
+      "bytes": 40996,
+      "sha256": "be67d7b987925871797e71838a30b41ae1a775957cb420f0e09c6e4d8ae83d04"
+    }
+  ]
+}

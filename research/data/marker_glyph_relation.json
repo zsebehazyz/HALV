@@ -1,0 +1,241 @@
+{
+  "image_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "script_sha256": "f00c2e3571c384e989d68c6b3ac53e349f1a1b61b8041d3719a768963b6d85fc",
+  "marker_rows_inclusive": [
+    444,
+    506
+  ],
+  "marker_length": 63,
+  "glyph_shape": [
+    9,
+    7
+  ],
+  "constant_baselines": {
+    "1": {
+      "all_zero_distance": 48,
+      "all_one_distance": 15
+    },
+    "3": {
+      "all_zero_distance": 43,
+      "all_one_distance": 20
+    },
+    "24": {
+      "all_zero_distance": 37,
+      "all_one_distance": 26
+    },
+    "108": {
+      "all_zero_distance": 17,
+      "all_one_distance": 46
+    },
+    "178": {
+      "all_zero_distance": 9,
+      "all_one_distance": 54
+    }
+  },
+  "attempts_including_duplicates": 61200,
+  "exact_relations": [],
+  "best_diagnostic_only": {
+    "xor/threshold=1": {
+      "operation": "xor",
+      "threshold": 1,
+      "sample": "all",
+      "flip_y": false,
+      "flip_x": true,
+      "complement": true,
+      "glyphs": [
+        "HALV/H",
+        "HALV/A",
+        "HALV/L",
+        "ZDEN/E"
+      ],
+      "hamming_distance": 12
+    },
+    "xor/threshold=3": {
+      "operation": "xor",
+      "threshold": 3,
+      "sample": "any",
+      "flip_y": false,
+      "flip_x": false,
+      "complement": true,
+      "glyphs": [
+        "HALV/A",
+        "HALV/L",
+        "ZDEN/D"
+      ],
+      "hamming_distance": 11
+    },
+    "xor/threshold=24": {
+      "operation": "xor",
+      "threshold": 24,
+      "sample": "any",
+      "flip_y": false,
+      "flip_x": true,
+      "complement": true,
+      "glyphs": [
+        "HALV/H",
+        "HALV/L"
+      ],
+      "hamming_distance": 14
+    },
+    "xor/threshold=108": {
+      "operation": "xor",
+      "threshold": 108,
+      "sample": "all",
+      "flip_y": false,
+      "flip_x": true,
+      "complement": false,
+      "glyphs": [
+        "HALV/H",
+        "ZDEN/D",
+        "ZDEN/E"
+      ],
+      "hamming_distance": 11
+    },
+    "xor/threshold=178": {
+      "operation": "xor",
+      "threshold": 178,
+      "sample": "all",
+      "flip_y": false,
+      "flip_x": true,
+      "complement": false,
+      "glyphs": [
+        "HALV/H",
+        "ZDEN/D",
+        "ZDEN/E"
+      ],
+      "hamming_distance": 7
+    },
+    "or/threshold=1": {
+      "operation": "or",
+      "threshold": 1,
+      "sample": "any",
+      "flip_y": false,
+      "flip_x": false,
+      "complement": false,
+      "glyphs": [
+        "HALV/V",
+        "ZDEN/Z",
+        "ZDEN/N"
+      ],
+      "hamming_distance": 17
+    },
+    "or/threshold=3": {
+      "operation": "or",
+      "threshold": 3,
+      "sample": "all",
+      "flip_y": true,
+      "flip_x": true,
+      "complement": true,
+      "glyphs": [
+        "HALV/H"
+      ],
+      "hamming_distance": 17
+    },
+    "or/threshold=24": {
+      "operation": "or",
+      "threshold": 24,
+      "sample": "all",
+      "flip_y": false,
+      "flip_x": false,
+      "complement": true,
+      "glyphs": [
+        "HALV/H"
+      ],
+      "hamming_distance": 19
+    },
+    "or/threshold=108": {
+      "operation": "or",
+      "threshold": 108,
+      "sample": "any",
+      "flip_y": true,
+      "flip_x": true,
+      "complement": false,
+      "glyphs": [
+        "HALV/L"
+      ],
+      "hamming_distance": 13
+    },
+    "or/threshold=178": {
+      "operation": "or",
+      "threshold": 178,
+      "sample": "any",
+      "flip_y": true,
+      "flip_x": true,
+      "complement": false,
+      "glyphs": [
+        "HALV/L"
+      ],
+      "hamming_distance": 9
+    },
+    "and/threshold=1": {
+      "operation": "and",
+      "threshold": 1,
+      "sample": "any",
+      "flip_y": false,
+      "flip_x": false,
+      "complement": true,
+      "glyphs": [
+        "HALV/A",
+        "HALV/V"
+      ],
+      "hamming_distance": 13
+    },
+    "and/threshold=3": {
+      "operation": "and",
+      "threshold": 3,
+      "sample": "any",
+      "flip_y": false,
+      "flip_x": false,
+      "complement": true,
+      "glyphs": [
+        "HALV/A",
+        "HALV/L",
+        "ZDEN/D"
+      ],
+      "hamming_distance": 14
+    },
+    "and/threshold=24": {
+      "operation": "and",
+      "threshold": 24,
+      "sample": "all",
+      "flip_y": false,
+      "flip_x": false,
+      "complement": true,
+      "glyphs": [
+        "HALV/H",
+        "ZDEN/E"
+      ],
+      "hamming_distance": 18
+    },
+    "and/threshold=108": {
+      "operation": "and",
+      "threshold": 108,
+      "sample": "all",
+      "flip_y": false,
+      "flip_x": true,
+      "complement": false,
+      "glyphs": [
+        "HALV/H",
+        "HALV/L",
+        "ZDEN/D"
+      ],
+      "hamming_distance": 10
+    },
+    "and/threshold=178": {
+      "operation": "and",
+      "threshold": 178,
+      "sample": "any",
+      "flip_y": false,
+      "flip_x": true,
+      "complement": false,
+      "glyphs": [
+        "HALV/H",
+        "HALV/L",
+        "ZDEN/D",
+        "ZDEN/N"
+      ],
+      "hamming_distance": 5
+    }
+  },
+  "limitation": "No exact relation means only this global binary-overlay family failed. Nearest patterns are diagnostics, not decoded messages or key candidates."
+}

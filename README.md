@@ -2,6 +2,11 @@
 
 A bitcoin puzzle vizsgálata. **Nincs ellenőrzött megfejtés vagy privát kulcs.**
 
+A kutatás fő térképe az [összefüggések és hipotézisek](research/HYPOTHESES.md)
+fájl: a jelölő, az aláírás, a hullám és a dátum lehetséges adat-, maszk-,
+vezérlő- és sorrendi szerepeit együtt kezeli. A korábbi eredmények hash-sel
+ellátott jegyzéke: [RUN_INDEX.json](research/RUN_INDEX.json).
+
 Folytatáskor először olvasd el az [AGENTS.md](AGENTS.md) fájlt és a
 [kutatási naplót](research/LOG.md). A felhasználó által adott korábbi szöveg
 a [források között](research/sources/user_prior_notes.txt) található;
@@ -79,3 +84,20 @@ sem egyezik a célcímmel. Ez nem a sarokban levő esetleges utasítások kizár
 
 `python3 tools/check_hex_text.py` – a 256 négyszintű mintából képzett 64 bájt
 ASCII-hexadecimális olvasatának ellenőrzése. 48 változatból nincs teljes hexszöveg.
+
+## Összekapcsolt modellek
+
+`python3 tools/check_composite_models.py` – az előre rögzített C1…C5 láncok:
+hullám + jelölő/aláírás mint maszk vagy rétegválasztó; dátum/Morse által
+vezérelt blokkolvasás; külön jelölő + aláírás, hullám nélkül.
+A futásban 134016 különböző érvényes skalár, két nyilvánoskulcs-formátum:
+nincs célcímegyezés. A pontos paraméterek a `research/models/composite_v1.json`
+fájlban, a futás a `research/data/composite_model_check.json` fájlban van.
+
+`python3 tools/check_marker_glyph_relation.py` – C6: a 63 bites jelölő és
+a szintén 63 bites betűrácsok lehetséges bináris fedvényei. Nem találtunk
+pontos XOR/OR/AND összefüggést a megadott családban.
+
+`python3 tools/build_research_index.py` – a bizonyítékjegyzék frissítése új
+mentett eredmények után. A negatív eredmények a pontos modellekre vonatkoznak;
+egy képrész további szerepét nem zárják ki.

@@ -1,6 +1,12 @@
 # HALV kutatási munkamenetek
 
-- Minden új munkamenet elején olvasd el a README.md és research/LOG.md fájlt.
+- Minden új munkamenet elején olvasd el a README.md, research/LOG.md és
+  research/HYPOTHESES.md és research/RUN_INDEX.json fájlt.
+- A felhasználó több, egymásra épülő jel kapcsolatának vizsgálatát kéri.
+  Tartsd külön az adat, utasítás, maszk, sorrend és validálás lehetséges szerepeit.
+  Önálló adat→kulcs negatívumból ne állítsd egy képrész lényegtelenségét.
+- Kapcsolt tesztnél rögzíts modellazonosítót, bemeneti fájlhash-eket,
+  előre megadott műveletláncot, motivációt és az eredmény pontos hatókörét.
 - Használd a meglévő checkoutot. Külön worktree-t csak kifejezett kérésre készíts.
 - A kutatás eredményeit dátumozva naplózd a research/LOG.md fájlban;
   az adatokat, forrásokat és reprodukálható programokat is őrizd meg.

@@ -1,0 +1,1702 @@
+{
+  "M": [
+    {
+      "mask_hex": "fff07ffc1fff07fffff07ffc1fff07fffff07ffc1fff07fffff07ffc1fff07ff",
+      "source": "M/rows=443:507/threshold>=1/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "000f8003e000f800000f8003e000f800000f8003e000f800000f8003e000f800",
+      "source": "M/rows=443:507/threshold>=1/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ffe0fff83ffe0fffffe0fff83ffe0fffffe0fff83ffe0fffffe0fff83ffe0fff",
+      "source": "M/rows=443:507/threshold>=1/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "001f0007c001f000001f0007c001f000001f0007c001f000001f0007c001f000",
+      "source": "M/rows=443:507/threshold>=1/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "7ff07df817ef07bf7ff07df817ef07bf7ff07df817ef07bf7ff07df817ef07bf",
+      "source": "M/rows=443:507/threshold>=3/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "800f8207e810f840800f8207e810f840800f8207e810f840800f8207e810f840",
+      "source": "M/rows=443:507/threshold>=3/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "fde0f7e81fbe0ffefde0f7e81fbe0ffefde0f7e81fbe0ffefde0f7e81fbe0ffe",
+      "source": "M/rows=443:507/threshold>=3/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "021f0817e041f001021f0817e041f001021f0817e041f001021f0817e041f001",
+      "source": "M/rows=443:507/threshold>=3/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "3f707cf813e7079f3f707cf813e7079f3f707cf813e7079f3f707cf813e7079f",
+      "source": "M/rows=443:507/threshold>=24/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "c08f8307ec18f860c08f8307ec18f860c08f8307ec18f860c08f8307ec18f860",
+      "source": "M/rows=443:507/threshold>=24/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "f9e0e7c81f3e0efcf9e0e7c81f3e0efcf9e0e7c81f3e0efcf9e0e7c81f3e0efc",
+      "source": "M/rows=443:507/threshold>=24/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "061f1837e0c1f103061f1837e0c1f103061f1837e0c1f103061f1837e0c1f103",
+      "source": "M/rows=443:507/threshold>=24/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "07001c3810e0018307001c3810e0018307001c3810e0018307001c3810e00183",
+      "source": "M/rows=443:507/threshold>=108/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "f8ffe3c7ef1ffe7cf8ffe3c7ef1ffe7cf8ffe3c7ef1ffe7cf8ffe3c7ef1ffe7c",
+      "source": "M/rows=443:507/threshold>=108/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "c18007081c3800e0c18007081c3800e0c18007081c3800e0c18007081c3800e0",
+      "source": "M/rows=443:507/threshold>=108/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "3e7ff8f7e3c7ff1f3e7ff8f7e3c7ff1f3e7ff8f7e3c7ff1f3e7ff8f7e3c7ff1f",
+      "source": "M/rows=443:507/threshold>=108/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "03000c181020008003000c181020008003000c181020008003000c1810200080",
+      "source": "M/rows=443:507/threshold>=178/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "fcfff3e7efdfff7ffcfff3e7efdfff7ffcfff3e7efdfff7ffcfff3e7efdfff7f",
+      "source": "M/rows=443:507/threshold>=178/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "01000408183000c001000408183000c001000408183000c001000408183000c0",
+      "source": "M/rows=443:507/threshold>=178/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "fefffbf7e7cfff3ffefffbf7e7cfff3ffefffbf7e7cfff3ffefffbf7e7cfff3f",
+      "source": "M/rows=443:507/threshold>=178/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ffe0fff83ffe0ffeffe0fff83ffe0ffeffe0fff83ffe0ffeffe0fff83ffe0ffe",
+      "source": "M/rows=444:508/threshold>=1/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "001f0007c001f001001f0007c001f001001f0007c001f001001f0007c001f001",
+      "source": "M/rows=444:508/threshold>=1/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7ff07ffc1fff07ff7ff07ffc1fff07ff7ff07ffc1fff07ff7ff07ffc1fff07ff",
+      "source": "M/rows=444:508/threshold>=1/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "800f8003e000f800800f8003e000f800800f8003e000f800800f8003e000f800",
+      "source": "M/rows=444:508/threshold>=1/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ffe0fbf02fde0f7effe0fbf02fde0f7effe0fbf02fde0f7effe0fbf02fde0f7e",
+      "source": "M/rows=444:508/threshold>=3/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "001f040fd021f081001f040fd021f081001f040fd021f081001f040fd021f081",
+      "source": "M/rows=444:508/threshold>=3/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7ef07bf40fdf07ff7ef07bf40fdf07ff7ef07bf40fdf07ff7ef07bf40fdf07ff",
+      "source": "M/rows=444:508/threshold>=3/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "810f840bf020f800810f840bf020f800810f840bf020f800810f840bf020f800",
+      "source": "M/rows=444:508/threshold>=3/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "7ee0f9f027ce0f3e7ee0f9f027ce0f3e7ee0f9f027ce0f3e7ee0f9f027ce0f3e",
+      "source": "M/rows=444:508/threshold>=24/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "811f060fd831f0c1811f060fd831f0c1811f060fd831f0c1811f060fd831f0c1",
+      "source": "M/rows=444:508/threshold>=24/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7cf073e40f9f077e7cf073e40f9f077e7cf073e40f9f077e7cf073e40f9f077e",
+      "source": "M/rows=444:508/threshold>=24/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "830f8c1bf060f881830f8c1bf060f881830f8c1bf060f881830f8c1bf060f881",
+      "source": "M/rows=444:508/threshold>=24/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "0e00387021c003060e00387021c003060e00387021c003060e00387021c00306",
+      "source": "M/rows=444:508/threshold>=108/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "f1ffc78fde3ffcf9f1ffc78fde3ffcf9f1ffc78fde3ffcf9f1ffc78fde3ffcf9",
+      "source": "M/rows=444:508/threshold>=108/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "60c003840e1c007060c003840e1c007060c003840e1c007060c003840e1c0070",
+      "source": "M/rows=444:508/threshold>=108/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "9f3ffc7bf1e3ff8f9f3ffc7bf1e3ff8f9f3ffc7bf1e3ff8f9f3ffc7bf1e3ff8f",
+      "source": "M/rows=444:508/threshold>=108/repeat=4/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "0600183020400100060018302040010006001830204001000600183020400100",
+      "source": "M/rows=444:508/threshold>=178/repeat=4/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "f9ffe7cfdfbffefff9ffe7cfdfbffefff9ffe7cfdfbffefff9ffe7cfdfbffeff",
+      "source": "M/rows=444:508/threshold>=178/repeat=4/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "008002040c180060008002040c180060008002040c180060008002040c180060",
+      "source": "M/rows=444:508/threshold>=178/repeat=4/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ff7ffdfbf3e7ff9fff7ffdfbf3e7ff9fff7ffdfbf3e7ff9fff7ffdfbf3e7ff9f",
+      "source": "M/rows=444:508/threshold>=178/repeat=4/reverse=True/complement=True"
+    }
+  ],
+  "S": [
+    {
+      "mask_hex": "83060c1bb040c1fa6d060c1ef060c18281020408102000fe83060a24488a1400",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f3e44fbf3e0592f9f3e10f9f3e7d7efdfbf7efdfff017cf9f5dbb775ebff",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "00285112245060c17f000408102040814183060f783060b65f83020dd83060c1",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffd7aeeddbaf9f3e80fffbf7efdfbf7ebe7cf9f087cf9f49a07cfdf227cf9f3e",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4183060dd82060fd3683060f783060c1408102040810007f4183051224450a00",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be7cf9f227df9f02c97cf9f087cf9f3ebf7efdfbf7efff80be7cfaeddbbaf5ff",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "0050a22448a0c182fe0008102040810283060c1ef060c16cbf06041bb060c182",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffaf5ddbb75f3e7d01fff7efdfbf7efd7cf9f3e10f9f3e9340f9fbe44f9f3e7d",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060c1bb040c1fb6d060c1ef060c18381020408102000ff83060a24488a1401",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f3e44fbf3e0492f9f3e10f9f3e7c7efdfbf7efdfff007cf9f5dbb775ebfe",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "80285112245060c1ff00040810204081c183060f783060b6df83020dd83060c1",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7fd7aeeddbaf9f3e00fffbf7efdfbf7e3e7cf9f087cf9f49207cfdf227cf9f3e",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c183060dd82060fdb683060f783060c1c08102040810007fc183051224450a00",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e7cf9f227df9f02497cf9f087cf9f3e3f7efdfbf7efff803e7cfaeddbbaf5ff",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "0050a22448a0c183fe0008102040810383060c1ef060c16dbf06041bb060c183",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffaf5ddbb75f3e7c01fff7efdfbf7efc7cf9f3e10f9f3e9240f9fbe44f9f3e7c",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060a24488a140081020408102000fe6d060c1ef060c18283060c1bb040c1fa",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f5dbb775ebff7efdfbf7efdfff0192f9f3e10f9f3e7d7cf9f3e44fbf3e05",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "5f83020dd83060c14183060f783060b67f0004081020408100285112245060c1",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "a07cfdf227cf9f3ebe7cf9f087cf9f4980fffbf7efdfbf7effd7aeeddbaf9f3e",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4183051224450a00408102040810007f3683060f783060c14183060dd82060fd",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be7cfaeddbbaf5ffbf7efdfbf7efff80c97cf9f087cf9f3ebe7cf9f227df9f02",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "bf06041bb060c18283060c1ef060c16cfe000810204081020050a22448a0c182",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "40f9fbe44f9f3e7d7cf9f3e10f9f3e9301fff7efdfbf7efdffaf5ddbb75f3e7d",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060a24488a140181020408102000ff6d060c1ef060c18383060c1bb040c1fb",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f5dbb775ebfe7efdfbf7efdfff0092f9f3e10f9f3e7c7cf9f3e44fbf3e04",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "df83020dd83060c1c183060f783060b6ff0004081020408180285112245060c1",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "207cfdf227cf9f3e3e7cf9f087cf9f4900fffbf7efdfbf7e7fd7aeeddbaf9f3e",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c183051224450a00c08102040810007fb683060f783060c1c183060dd82060fd",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e7cfaeddbbaf5ff3f7efdfbf7efff80497cf9f087cf9f3e3e7cf9f227df9f02",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "bf06041bb060c18383060c1ef060c16dfe000810204081030050a22448a0c183",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "40f9fbe44f9f3e7c7cf9f3e10f9f3e9201fff7efdfbf7efcffaf5ddbb75f3e7c",
+      "source": "S/HALV/any/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060c1bb06041be6d060c1ef060c18202040810204080fe83060a24488a1400",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f3e44f9fbe4192f9f3e10f9f3e7dfdfbf7efdfbf7f017cf9f5dbb775ebff",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "00285112245060c17f010204081020404183060f783060b67d82060dd83060c1",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffd7aeeddbaf9f3e80fefdfbf7efdfbfbe7cf9f087cf9f49827df9f227cf9f3e",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4183060dd83020df3683060f783060c1010204081020407f4183051224450a00",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be7cf9f227cfdf20c97cf9f087cf9f3efefdfbf7efdfbf80be7cfaeddbbaf5ff",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "0050a22448a0c182fe0204081020408083060c1ef060c16cfb040c1bb060c182",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffaf5ddbb75f3e7d01fdfbf7efdfbf7f7cf9f3e10f9f3e9304fbf3e44f9f3e7d",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060c1bb06041bf6d060c1ef060c18302040810204080ff83060a24488a1401",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f3e44f9fbe4092f9f3e10f9f3e7cfdfbf7efdfbf7f007cf9f5dbb775ebfe",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "80285112245060c1ff01020408102040c183060f783060b6fd82060dd83060c1",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7fd7aeeddbaf9f3e00fefdfbf7efdfbf3e7cf9f087cf9f49027df9f227cf9f3e",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c183060dd83020dfb683060f783060c1810204081020407fc183051224450a00",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e7cf9f227cfdf20497cf9f087cf9f3e7efdfbf7efdfbf803e7cfaeddbbaf5ff",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "0050a22448a0c183fe0204081020408183060c1ef060c16dfb040c1bb060c183",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffaf5ddbb75f3e7c01fdfbf7efdfbf7e7cf9f3e10f9f3e9204fbf3e44f9f3e7c",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060a24488a140002040810204080fe6d060c1ef060c18283060c1bb06041be",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f5dbb775ebfffdfbf7efdfbf7f0192f9f3e10f9f3e7d7cf9f3e44f9fbe41",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7d82060dd83060c14183060f783060b67f0102040810204000285112245060c1",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "827df9f227cf9f3ebe7cf9f087cf9f4980fefdfbf7efdfbfffd7aeeddbaf9f3e",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4183051224450a00010204081020407f3683060f783060c14183060dd83020df",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be7cfaeddbbaf5fffefdfbf7efdfbf80c97cf9f087cf9f3ebe7cf9f227cfdf20",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "fb040c1bb060c18283060c1ef060c16cfe020408102040800050a22448a0c182",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "04fbf3e44f9f3e7d7cf9f3e10f9f3e9301fdfbf7efdfbf7fffaf5ddbb75f3e7d",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060a24488a140102040810204080ff6d060c1ef060c18383060c1bb06041bf",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f5dbb775ebfefdfbf7efdfbf7f0092f9f3e10f9f3e7c7cf9f3e44f9fbe40",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "fd82060dd83060c1c183060f783060b6ff0102040810204080285112245060c1",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "027df9f227cf9f3e3e7cf9f087cf9f4900fefdfbf7efdfbf7fd7aeeddbaf9f3e",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c183051224450a00810204081020407fb683060f783060c1c183060dd83020df",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e7cfaeddbbaf5ff7efdfbf7efdfbf80497cf9f087cf9f3e3e7cf9f227cfdf20",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "fb040c1bb060c18383060c1ef060c16dfe020408102040810050a22448a0c183",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "04fbf3e44f9f3e7c7cf9f3e10f9f3e9201fdfbf7efdfbf7effaf5ddbb75f3e7c",
+      "source": "S/HALV/any/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fd804221108803fe7fc42200088441fefe80402010080402e00e00c00030e380",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "027fbddeef77fc01803bddfff77bbe01017fbfdfeff7fbfd1ff1ff3fffcf1c7f",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "01c70c0003007007402010080402017f7f822110004423fe7fc01108844201bf",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "fe38f3fffcff8ff8bfdfeff7fbfdfe80807ddeefffbbdc01803feef77bbdfe40",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "7ec02110884401ff3fe21100044220ff7f4020100804020170070060001871c0",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "813fdeef77bbfe00c01deefffbbddf0080bfdfeff7fbfdfe8ff8ff9fffe78e3f",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "038e18000600e00e80402010080402feff044220008847fcff8022110884037e",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "fc71e7fff9ff1ff17fbfdfeff7fbfd0100fbbddfff77b803007fddeef77bfc81",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fd804221108803ff7fc42200088441fffe80402010080403e00e00c00030e381",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "027fbddeef77fc00803bddfff77bbe00017fbfdfeff7fbfc1ff1ff3fffcf1c7e",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "81c70c0003007007c02010080402017fff822110004423feffc01108844201bf",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7e38f3fffcff8ff83fdfeff7fbfdfe80007ddeefffbbdc01003feef77bbdfe40",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fec02110884401ffbfe21100044220ffff40201008040201f0070060001871c0",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "013fdeef77bbfe00401deefffbbddf0000bfdfeff7fbfdfe0ff8ff9fffe78e3f",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "038e18000600e00f80402010080402ffff044220008847fdff8022110884037f",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "fc71e7fff9ff1ff07fbfdfeff7fbfd0000fbbddfff77b802007fddeef77bfc80",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "e00e00c00030e380fe804020100804027fc42200088441fefd804221108803fe",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "1ff1ff3fffcf1c7f017fbfdfeff7fbfd803bddfff77bbe01027fbddeef77fc01",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7fc01108844201bf7f822110004423fe402010080402017f01c70c0003007007",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "803feef77bbdfe40807ddeefffbbdc01bfdfeff7fbfdfe80fe38f3fffcff8ff8",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "70070060001871c07f402010080402013fe21100044220ff7ec02110884401ff",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "8ff8ff9fffe78e3f80bfdfeff7fbfdfec01deefffbbddf00813fdeef77bbfe00",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff8022110884037eff044220008847fc80402010080402fe038e18000600e00e",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007fddeef77bfc8100fbbddfff77b8037fbfdfeff7fbfd01fc71e7fff9ff1ff1",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "e00e00c00030e381fe804020100804037fc42200088441fffd804221108803ff",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "1ff1ff3fffcf1c7e017fbfdfeff7fbfc803bddfff77bbe00027fbddeef77fc00",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ffc01108844201bfff822110004423fec02010080402017f81c70c0003007007",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "003feef77bbdfe40007ddeefffbbdc013fdfeff7fbfdfe807e38f3fffcff8ff8",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "f0070060001871c0ff40201008040201bfe21100044220fffec02110884401ff",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "0ff8ff9fffe78e3f00bfdfeff7fbfdfe401deefffbbddf00013fdeef77bbfe00",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff8022110884037fff044220008847fd80402010080402ff038e18000600e00f",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007fddeef77bfc8000fbbddfff77b8027fbfdfeff7fbfd00fc71e7fff9ff1ff0",
+      "source": "S/HALV/any/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "dfc02211088003feff044220008847fcbfc0201008040200038e18000600e00e",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "203fddeef77ffc0100fbbddfff77b803403fdfeff7fbfdfffc71e7fff9ff1ff1",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "70070060001871c000402010080403fd3fe21100044220ff7fc00110884403fb",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "8ff8ff9fffe78e3fffbfdfeff7fbfc02c01deefffbbddf00803ffeef77bbfc04",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "6fe01108844001ff7f822110004423fe5fe010080402010001c70c0003007007",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "901feef77bbffe00807ddeefffbbdc01a01feff7fbfdfefffe38f3fffcff8ff8",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "e00e00c00030e38000804020100807fa7fc42200088441feff800221108807f6",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "1ff1ff3fffcf1c7fff7fbfdfeff7f805803bddfff77bbe01007ffddeef77f809",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "dfc02211088003ffff044220008847fdbfc0201008040201038e18000600e00f",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "203fddeef77ffc0000fbbddfff77b802403fdfeff7fbfdfefc71e7fff9ff1ff0",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "f0070060001871c080402010080403fdbfe21100044220ffffc00110884403fb",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "0ff8ff9fffe78e3f7fbfdfeff7fbfc02401deefffbbddf00003ffeef77bbfc04",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "efe01108844001ffff822110004423fedfe010080402010081c70c0003007007",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "101feef77bbffe00007ddeefffbbdc01201feff7fbfdfeff7e38f3fffcff8ff8",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "e00e00c00030e38100804020100807fb7fc42200088441ffff800221108807f7",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "1ff1ff3fffcf1c7eff7fbfdfeff7f804803bddfff77bbe00007ffddeef77f808",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "038e18000600e00ebfc0201008040200ff044220008847fcdfc02211088003fe",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "fc71e7fff9ff1ff1403fdfeff7fbfdff00fbbddfff77b803203fddeef77ffc01",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7fc00110884403fb3fe21100044220ff00402010080403fd70070060001871c0",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "803ffeef77bbfc04c01deefffbbddf00ffbfdfeff7fbfc028ff8ff9fffe78e3f",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "01c70c00030070075fe01008040201007f822110004423fe6fe01108844001ff",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "fe38f3fffcff8ff8a01feff7fbfdfeff807ddeefffbbdc01901feef77bbffe00",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff800221108807f67fc42200088441fe00804020100807fae00e00c00030e380",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007ffddeef77f809803bddfff77bbe01ff7fbfdfeff7f8051ff1ff3fffcf1c7f",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "038e18000600e00fbfc0201008040201ff044220008847fddfc02211088003ff",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "fc71e7fff9ff1ff0403fdfeff7fbfdfe00fbbddfff77b802203fddeef77ffc00",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ffc00110884403fbbfe21100044220ff80402010080403fdf0070060001871c0",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "003ffeef77bbfc04401deefffbbddf007fbfdfeff7fbfc020ff8ff9fffe78e3f",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "81c70c0003007007dfe0100804020100ff822110004423feefe01108844001ff",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7e38f3fffcff8ff8201feff7fbfdfeff007ddeefffbbdc01101feef77bbffe00",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff800221108807f77fc42200088441ff00804020100807fbe00e00c00030e381",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007ffddeef77f808803bddfff77bbe00ff7fbfdfeff7f8041ff1ff3fffcf1c7e",
+      "source": "S/HALV/any/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060c1bb040c1c26d060c1ef060c18281020408102000fe83060a24488a1400",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f3e44fbf3e3d92f9f3e10f9f3e7d7efdfbf7efdfff017cf9f5dbb775ebff",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "00285112245060c17f000408102040814183060f783060b64383020dd83060c1",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffd7aeeddbaf9f3e80fffbf7efdfbf7ebe7cf9f087cf9f49bc7cfdf227cf9f3e",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4183060dd82060e13683060f783060c1408102040810007f4183051224450a00",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be7cf9f227df9f1ec97cf9f087cf9f3ebf7efdfbf7efff80be7cfaeddbbaf5ff",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "0050a22448a0c182fe0008102040810283060c1ef060c16c8706041bb060c182",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffaf5ddbb75f3e7d01fff7efdfbf7efd7cf9f3e10f9f3e9378f9fbe44f9f3e7d",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060c1bb040c1c36d060c1ef060c18381020408102000ff83060a24488a1401",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f3e44fbf3e3c92f9f3e10f9f3e7c7efdfbf7efdfff007cf9f5dbb775ebfe",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "80285112245060c1ff00040810204081c183060f783060b6c383020dd83060c1",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7fd7aeeddbaf9f3e00fffbf7efdfbf7e3e7cf9f087cf9f493c7cfdf227cf9f3e",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c183060dd82060e1b683060f783060c1c08102040810007fc183051224450a00",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e7cf9f227df9f1e497cf9f087cf9f3e3f7efdfbf7efff803e7cfaeddbbaf5ff",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "0050a22448a0c183fe0008102040810383060c1ef060c16d8706041bb060c183",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffaf5ddbb75f3e7c01fff7efdfbf7efc7cf9f3e10f9f3e9278f9fbe44f9f3e7c",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060a24488a140081020408102000fe6d060c1ef060c18283060c1bb040c1c2",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f5dbb775ebff7efdfbf7efdfff0192f9f3e10f9f3e7d7cf9f3e44fbf3e3d",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "4383020dd83060c14183060f783060b67f0004081020408100285112245060c1",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "bc7cfdf227cf9f3ebe7cf9f087cf9f4980fffbf7efdfbf7effd7aeeddbaf9f3e",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4183051224450a00408102040810007f3683060f783060c14183060dd82060e1",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be7cfaeddbbaf5ffbf7efdfbf7efff80c97cf9f087cf9f3ebe7cf9f227df9f1e",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "8706041bb060c18283060c1ef060c16cfe000810204081020050a22448a0c182",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "78f9fbe44f9f3e7d7cf9f3e10f9f3e9301fff7efdfbf7efdffaf5ddbb75f3e7d",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060a24488a140181020408102000ff6d060c1ef060c18383060c1bb040c1c3",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f5dbb775ebfe7efdfbf7efdfff0092f9f3e10f9f3e7c7cf9f3e44fbf3e3c",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "c383020dd83060c1c183060f783060b6ff0004081020408180285112245060c1",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "3c7cfdf227cf9f3e3e7cf9f087cf9f4900fffbf7efdfbf7e7fd7aeeddbaf9f3e",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c183051224450a00c08102040810007fb683060f783060c1c183060dd82060e1",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e7cfaeddbbaf5ff3f7efdfbf7efff80497cf9f087cf9f3e3e7cf9f227df9f1e",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "8706041bb060c18383060c1ef060c16dfe000810204081030050a22448a0c183",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "78f9fbe44f9f3e7c7cf9f3e10f9f3e9201fff7efdfbf7efcffaf5ddbb75f3e7c",
+      "source": "S/HALV/all/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060c1bb06041866d060c1ef060c18202040810204080fe83060a24488a1400",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f3e44f9fbe7992f9f3e10f9f3e7dfdfbf7efdfbf7f017cf9f5dbb775ebff",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "00285112245060c17f010204081020404183060f783060b66182060dd83060c1",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffd7aeeddbaf9f3e80fefdfbf7efdfbfbe7cf9f087cf9f499e7df9f227cf9f3e",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4183060dd83020c33683060f783060c1010204081020407f4183051224450a00",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be7cf9f227cfdf3cc97cf9f087cf9f3efefdfbf7efdfbf80be7cfaeddbbaf5ff",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "0050a22448a0c182fe0204081020408083060c1ef060c16cc3040c1bb060c182",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffaf5ddbb75f3e7d01fdfbf7efdfbf7f7cf9f3e10f9f3e933cfbf3e44f9f3e7d",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060c1bb06041876d060c1ef060c18302040810204080ff83060a24488a1401",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f3e44f9fbe7892f9f3e10f9f3e7cfdfbf7efdfbf7f007cf9f5dbb775ebfe",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "80285112245060c1ff01020408102040c183060f783060b6e182060dd83060c1",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7fd7aeeddbaf9f3e00fefdfbf7efdfbf3e7cf9f087cf9f491e7df9f227cf9f3e",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c183060dd83020c3b683060f783060c1810204081020407fc183051224450a00",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e7cf9f227cfdf3c497cf9f087cf9f3e7efdfbf7efdfbf803e7cfaeddbbaf5ff",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "0050a22448a0c183fe0204081020408183060c1ef060c16dc3040c1bb060c183",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "ffaf5ddbb75f3e7c01fdfbf7efdfbf7e7cf9f3e10f9f3e923cfbf3e44f9f3e7c",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060a24488a140002040810204080fe6d060c1ef060c18283060c1bb0604186",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f5dbb775ebfffdfbf7efdfbf7f0192f9f3e10f9f3e7d7cf9f3e44f9fbe79",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "6182060dd83060c14183060f783060b67f0102040810204000285112245060c1",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "9e7df9f227cf9f3ebe7cf9f087cf9f4980fefdfbf7efdfbfffd7aeeddbaf9f3e",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4183051224450a00010204081020407f3683060f783060c14183060dd83020c3",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be7cfaeddbbaf5fffefdfbf7efdfbf80c97cf9f087cf9f3ebe7cf9f227cfdf3c",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "c3040c1bb060c18283060c1ef060c16cfe020408102040800050a22448a0c182",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "3cfbf3e44f9f3e7d7cf9f3e10f9f3e9301fdfbf7efdfbf7fffaf5ddbb75f3e7d",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83060a24488a140102040810204080ff6d060c1ef060c18383060c1bb0604187",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cf9f5dbb775ebfefdfbf7efdfbf7f0092f9f3e10f9f3e7c7cf9f3e44f9fbe78",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "e182060dd83060c1c183060f783060b6ff0102040810204080285112245060c1",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "1e7df9f227cf9f3e3e7cf9f087cf9f4900fefdfbf7efdfbf7fd7aeeddbaf9f3e",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c183051224450a00810204081020407fb683060f783060c1c183060dd83020c3",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e7cfaeddbbaf5ff7efdfbf7efdfbf80497cf9f087cf9f3e3e7cf9f227cfdf3c",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "c3040c1bb060c18383060c1ef060c16dfe020408102040810050a22448a0c183",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "3cfbf3e44f9f3e7c7cf9f3e10f9f3e9201fdfbf7efdfbf7effaf5ddbb75f3e7c",
+      "source": "S/HALV/all/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fd804201008003fe7fc42200088441fefe80402010080402e00e00c00030e380",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "027fbdfeff7ffc01803bddfff77bbe01017fbfdfeff7fbfd1ff1ff3fffcf1c7f",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "01c70c0003007007402010080402017f7f822110004423fe7fc00100804201bf",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "fe38f3fffcff8ff8bfdfeff7fbfdfe80807ddeefffbbdc01803ffeff7fbdfe40",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "7ec02100804001ff3fe21100044220ff7f4020100804020170070060001871c0",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "813fdeff7fbffe00c01deefffbbddf0080bfdfeff7fbfdfe8ff8ff9fffe78e3f",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "038e18000600e00e80402010080402feff044220008847fcff8002010084037e",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "fc71e7fff9ff1ff17fbfdfeff7fbfd0100fbbddfff77b803007ffdfeff7bfc81",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fd804201008003ff7fc42200088441fffe80402010080403e00e00c00030e381",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "027fbdfeff7ffc00803bddfff77bbe00017fbfdfeff7fbfc1ff1ff3fffcf1c7e",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "81c70c0003007007c02010080402017fff822110004423feffc00100804201bf",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7e38f3fffcff8ff83fdfeff7fbfdfe80007ddeefffbbdc01003ffeff7fbdfe40",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fec02100804001ffbfe21100044220ffff40201008040201f0070060001871c0",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "013fdeff7fbffe00401deefffbbddf0000bfdfeff7fbfdfe0ff8ff9fffe78e3f",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "038e18000600e00f80402010080402ffff044220008847fdff8002010084037f",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "fc71e7fff9ff1ff07fbfdfeff7fbfd0000fbbddfff77b802007ffdfeff7bfc80",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "e00e00c00030e380fe804020100804027fc42200088441fefd804201008003fe",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "1ff1ff3fffcf1c7f017fbfdfeff7fbfd803bddfff77bbe01027fbdfeff7ffc01",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7fc00100804201bf7f822110004423fe402010080402017f01c70c0003007007",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "803ffeff7fbdfe40807ddeefffbbdc01bfdfeff7fbfdfe80fe38f3fffcff8ff8",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "70070060001871c07f402010080402013fe21100044220ff7ec02100804001ff",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "8ff8ff9fffe78e3f80bfdfeff7fbfdfec01deefffbbddf00813fdeff7fbffe00",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff8002010084037eff044220008847fc80402010080402fe038e18000600e00e",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007ffdfeff7bfc8100fbbddfff77b8037fbfdfeff7fbfd01fc71e7fff9ff1ff1",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "e00e00c00030e381fe804020100804037fc42200088441fffd804201008003ff",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "1ff1ff3fffcf1c7e017fbfdfeff7fbfc803bddfff77bbe00027fbdfeff7ffc00",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ffc00100804201bfff822110004423fec02010080402017f81c70c0003007007",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "003ffeff7fbdfe40007ddeefffbbdc013fdfeff7fbfdfe807e38f3fffcff8ff8",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "f0070060001871c0ff40201008040201bfe21100044220fffec02100804001ff",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "0ff8ff9fffe78e3f00bfdfeff7fbfdfe401deefffbbddf00013fdeff7fbffe00",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff8002010084037fff044220008847fd80402010080402ff038e18000600e00f",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007ffdfeff7bfc8000fbbddfff77b8027fbfdfeff7fbfd00fc71e7fff9ff1ff0",
+      "source": "S/HALV/all/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "dfc00201008003feff044220008847fcbfc0201008040200038e18000600e00e",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "203ffdfeff7ffc0100fbbddfff77b803403fdfeff7fbfdfffc71e7fff9ff1ff1",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "70070060001871c000402010080403fd3fe21100044220ff7fc00100804003fb",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "8ff8ff9fffe78e3fffbfdfeff7fbfc02c01deefffbbddf00803ffeff7fbffc04",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "6fe00100804001ff7f822110004423fe5fe010080402010001c70c0003007007",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "901ffeff7fbffe00807ddeefffbbdc01a01feff7fbfdfefffe38f3fffcff8ff8",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "e00e00c00030e38000804020100807fa7fc42200088441feff800201008007f6",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "1ff1ff3fffcf1c7fff7fbfdfeff7f805803bddfff77bbe01007ffdfeff7ff809",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "dfc00201008003ffff044220008847fdbfc0201008040201038e18000600e00f",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "203ffdfeff7ffc0000fbbddfff77b802403fdfeff7fbfdfefc71e7fff9ff1ff0",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "f0070060001871c080402010080403fdbfe21100044220ffffc00100804003fb",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "0ff8ff9fffe78e3f7fbfdfeff7fbfc02401deefffbbddf00003ffeff7fbffc04",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "efe00100804001ffff822110004423fedfe010080402010081c70c0003007007",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "101ffeff7fbffe00007ddeefffbbdc01201feff7fbfdfeff7e38f3fffcff8ff8",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "e00e00c00030e38100804020100807fb7fc42200088441ffff800201008007f7",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "1ff1ff3fffcf1c7eff7fbfdfeff7f804803bddfff77bbe00007ffdfeff7ff808",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "038e18000600e00ebfc0201008040200ff044220008847fcdfc00201008003fe",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "fc71e7fff9ff1ff1403fdfeff7fbfdff00fbbddfff77b803203ffdfeff7ffc01",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7fc00100804003fb3fe21100044220ff00402010080403fd70070060001871c0",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "803ffeff7fbffc04c01deefffbbddf00ffbfdfeff7fbfc028ff8ff9fffe78e3f",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "01c70c00030070075fe01008040201007f822110004423fe6fe00100804001ff",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "fe38f3fffcff8ff8a01feff7fbfdfeff807ddeefffbbdc01901ffeff7fbffe00",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff800201008007f67fc42200088441fe00804020100807fae00e00c00030e380",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007ffdfeff7ff809803bddfff77bbe01ff7fbfdfeff7f8051ff1ff3fffcf1c7f",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "038e18000600e00fbfc0201008040201ff044220008847fddfc00201008003ff",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "fc71e7fff9ff1ff0403fdfeff7fbfdfe00fbbddfff77b802203ffdfeff7ffc00",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ffc00100804003fbbfe21100044220ff80402010080403fdf0070060001871c0",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "003ffeff7fbffc04401deefffbbddf007fbfdfeff7fbfc020ff8ff9fffe78e3f",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "81c70c0003007007dfe0100804020100ff822110004423feefe00100804001ff",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7e38f3fffcff8ff8201feff7fbfdfeff007ddeefffbbdc01101ffeff7fbffe00",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff800201008007f77fc42200088441ff00804020100807fbe00e00c00030e381",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007ffdfeff7ff808803bddfff77bbe00ff7fbfdfeff7f8041ff1ff3fffcf1c7e",
+      "source": "S/HALV/all/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fe001041041000fefc060c18106081fcfe02040b902000fe83468c993262c582",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "01ffefbefbefff0103f9f3e7ef9f7e0301fdfbf46fdfff017cb97366cd9d3a7d",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "41a3464c993162c17f000409d020407f3f8106081830603f7f0008208208007f",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "be5cb9b366ce9d3e80fffbf62fdfbf80c07ef9f7e7cf9fc080fff7df7df7ff80",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "7f0008208208007f7e03060c083040fe7f010205c810007f41a3464c993162c1",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "80fff7df7df7ff8081fcf9f3f7cfbf0180fefdfa37efff80be5cb9b366ce9d3e",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "83468c993262c582fe000813a04080fe7f020c103060c07efe001041041000fe",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7cb97366cd9d3a7d01fff7ec5fbf7f0180fdf3efcf9f3f8101ffefbefbefff01",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fe001041041000fffc060c18106081fdfe02040b902000ff83468c993262c583",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "01ffefbefbefff0003f9f3e7ef9f7e0201fdfbf46fdfff007cb97366cd9d3a7c",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "c1a3464c993162c1ff000409d020407fbf8106081830603fff0008208208007f",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "3e5cb9b366ce9d3e00fffbf62fdfbf80407ef9f7e7cf9fc000fff7df7df7ff80",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ff0008208208007ffe03060c083040feff010205c810007fc1a3464c993162c1",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "00fff7df7df7ff8001fcf9f3f7cfbf0100fefdfa37efff803e5cb9b366ce9d3e",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "83468c993262c583fe000813a04080ff7f020c103060c07ffe001041041000ff",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7cb97366cd9d3a7c01fff7ec5fbf7f0080fdf3efcf9f3f8001ffefbefbefff00",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83468c993262c582fe02040b902000fefc060c18106081fcfe001041041000fe",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cb97366cd9d3a7d01fdfbf46fdfff0103f9f3e7ef9f7e0301ffefbefbefff01",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7f0008208208007f3f8106081830603f7f000409d020407f41a3464c993162c1",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "80fff7df7df7ff80c07ef9f7e7cf9fc080fffbf62fdfbf80be5cb9b366ce9d3e",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "41a3464c993162c17f010205c810007f7e03060c083040fe7f0008208208007f",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be5cb9b366ce9d3e80fefdfa37efff8081fcf9f3f7cfbf0180fff7df7df7ff80",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "fe001041041000fe7f020c103060c07efe000813a04080fe83468c993262c582",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "01ffefbefbefff0180fdf3efcf9f3f8101fff7ec5fbf7f017cb97366cd9d3a7d",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83468c993262c583fe02040b902000fffc060c18106081fdfe001041041000ff",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7cb97366cd9d3a7c01fdfbf46fdfff0003f9f3e7ef9f7e0201ffefbefbefff00",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff0008208208007fbf8106081830603fff000409d020407fc1a3464c993162c1",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "00fff7df7df7ff80407ef9f7e7cf9fc000fffbf62fdfbf803e5cb9b366ce9d3e",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c1a3464c993162c1ff010205c810007ffe03060c083040feff0008208208007f",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e5cb9b366ce9d3e00fefdfa37efff8001fcf9f3f7cfbf0100fff7df7df7ff80",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "fe001041041000ff7f020c103060c07ffe000813a04080ff83468c993262c583",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "01ffefbefbefff0080fdf3efcf9f3f8001fff7ec5fbf7f007cb97366cd9d3a7c",
+      "source": "S/ZDEN/any/orientation=0/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fe010101010100fe7f020c103060c07efe000813a04080fe83162c993268d182",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "01fefefefefeff0180fdf3efcf9f3f8101fff7ec5fbf7f017ce9d366cd972e7d",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "418b164c993468c17f010205c810007f7e03060c083040fe7f0080808080807f",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "be74e9b366cb973e80fefdfa37efff8081fcf9f3f7cfbf0180ff7f7f7f7f7f80",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "7f0080808080807f3f8106081830603f7f000409d020407f418b164c993468c1",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "80ff7f7f7f7f7f80c07ef9f7e7cf9fc080fffbf62fdfbf80be74e9b366cb973e",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "83162c993268d182fe02040b902000fefc060c18106081fcfe010101010100fe",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7ce9d366cd972e7d01fdfbf46fdfff0103f9f3e7ef9f7e0301fefefefefeff01",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "fe010101010100ff7f020c103060c07ffe000813a04080ff83162c993268d183",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "01fefefefefeff0080fdf3efcf9f3f8001fff7ec5fbf7f007ce9d366cd972e7c",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "c18b164c993468c1ff010205c810007ffe03060c083040feff0080808080807f",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "3e74e9b366cb973e00fefdfa37efff8001fcf9f3f7cfbf0100ff7f7f7f7f7f80",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ff0080808080807fbf8106081830603fff000409d020407fc18b164c993468c1",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "00ff7f7f7f7f7f80407ef9f7e7cf9fc000fffbf62fdfbf803e74e9b366cb973e",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "83162c993268d183fe02040b902000fffc060c18106081fdfe010101010100ff",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7ce9d366cd972e7c01fdfbf46fdfff0003f9f3e7ef9f7e0201fefefefefeff00",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83162c993268d182fe000813a04080fe7f020c103060c07efe010101010100fe",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7ce9d366cd972e7d01fff7ec5fbf7f0180fdf3efcf9f3f8101fefefefefeff01",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7f0080808080807f7e03060c083040fe7f010205c810007f418b164c993468c1",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "80ff7f7f7f7f7f8081fcf9f3f7cfbf0180fefdfa37efff80be74e9b366cb973e",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "418b164c993468c17f000409d020407f3f8106081830603f7f0080808080807f",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "be74e9b366cb973e80fffbf62fdfbf80c07ef9f7e7cf9fc080ff7f7f7f7f7f80",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "fe010101010100fefc060c18106081fcfe02040b902000fe83162c993268d182",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "01fefefefefeff0103f9f3e7ef9f7e0301fdfbf46fdfff017ce9d366cd972e7d",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "83162c993268d183fe000813a04080ff7f020c103060c07ffe010101010100ff",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7ce9d366cd972e7c01fff7ec5fbf7f0080fdf3efcf9f3f8001fefefefefeff00",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff0080808080807ffe03060c083040feff010205c810007fc18b164c993468c1",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "00ff7f7f7f7f7f8001fcf9f3f7cfbf0100fefdfa37efff803e74e9b366cb973e",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c18b164c993468c1ff000409d020407fbf8106081830603fff0080808080807f",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3e74e9b366cb973e00fffbf62fdfbf80407ef9f7e7cf9fc000ff7f7f7f7f7f80",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "fe010101010100fffc060c18106081fdfe02040b902000ff83162c993268d183",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "01fefefefefeff0003f9f3e7ef9f7e0201fdfbf46fdfff007ce9d366cd972e7c",
+      "source": "S/ZDEN/any/orientation=1/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "80c16131190d0602bec06030180c05dcbec06231188c0602ff801803803003fe",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7f3e9ecee6f2f9fd413f9fcfe7f3fa23413f9dcee773f9fd007fe7fc7fcffc01",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7fc00c01c01801ff406031188c46037d3ba030180c06037d4060b0988c868301",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "803ff3fe3fe7fe00bf9fcee773b9fc82c45fcfe7f3f9fc82bf9f4f6773797cfe",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "4060b0988c8683015f6030180c0602ee5f6031188c4603017fc00c01c01801ff",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "bf9f4f6773797cfea09fcfe7f3f9fd11a09fcee773b9fcfe803ff3fe3fe7fe00",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff801803803003fe80c06231188c06fa77406030180c06fa80c16131190d0602",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007fe7fc7fcffc017f3f9dcee773f90588bf9fcfe7f3f9057f3e9ecee6f2f9fd",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "80c16131190d0603bec06030180c05ddbec06231188c0603ff801803803003ff",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7f3e9ecee6f2f9fc413f9fcfe7f3fa22413f9dcee773f9fc007fe7fc7fcffc00",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ffc00c01c01801ffc06031188c46037dbba030180c06037dc060b0988c868301",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "003ff3fe3fe7fe003f9fcee773b9fc82445fcfe7f3f9fc823f9f4f6773797cfe",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c060b0988c868301df6030180c0602eedf6031188c460301ffc00c01c01801ff",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3f9f4f6773797cfe209fcfe7f3f9fd11209fcee773b9fcfe003ff3fe3fe7fe00",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff801803803003ff80c06231188c06fb77406030180c06fb80c16131190d0603",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007fe7fc7fcffc007f3f9dcee773f90488bf9fcfe7f3f9047f3e9ecee6f2f9fc",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ff801803803003febec06231188c0602bec06030180c05dc80c16131190d0602",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "007fe7fc7fcffc01413f9dcee773f9fd413f9fcfe7f3fa237f3e9ecee6f2f9fd",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "4060b0988c8683013ba030180c06037d406031188c46037d7fc00c01c01801ff",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "bf9f4f6773797cfec45fcfe7f3f9fc82bf9fcee773b9fc82803ff3fe3fe7fe00",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "7fc00c01c01801ff5f6031188c4603015f6030180c0602ee4060b0988c868301",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "803ff3fe3fe7fe00a09fcee773b9fcfea09fcfe7f3f9fd11bf9f4f6773797cfe",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "80c16131190d060277406030180c06fa80c06231188c06faff801803803003fe",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7f3e9ecee6f2f9fd88bf9fcfe7f3f9057f3f9dcee773f905007fe7fc7fcffc01",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ff801803803003ffbec06231188c0603bec06030180c05dd80c16131190d0603",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "007fe7fc7fcffc00413f9dcee773f9fc413f9fcfe7f3fa227f3e9ecee6f2f9fc",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "c060b0988c868301bba030180c06037dc06031188c46037dffc00c01c01801ff",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "3f9f4f6773797cfe445fcfe7f3f9fc823f9fcee773b9fc82003ff3fe3fe7fe00",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ffc00c01c01801ffdf6031188c460301df6030180c0602eec060b0988c868301",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "003ff3fe3fe7fe00209fcee773b9fcfe209fcfe7f3f9fd113f9f4f6773797cfe",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "80c16131190d060377406030180c06fb80c06231188c06fbff801803803003ff",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7f3e9ecee6f2f9fc88bf9fcfe7f3f9047f3f9dcee773f904007fe7fc7fcffc00",
+      "source": "S/ZDEN/any/orientation=4/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "80d06431184c1602bec06030180c05dcbec06231188c0602ff8000c3860003fe",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7f2f9bcee7b3e9fd413f9fcfe7f3fa23413f9dcee773f9fd007fff3c79fffc01",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "7fc00061c30001ff406031188c46037d3ba030180c06037d406832188c260b01",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "803fff9e3cfffe00bf9fcee773b9fc82c45fcfe7f3f9fc82bf97cde773d9f4fe",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "406832188c260b015f6030180c0602ee5f6031188c4603017fc00061c30001ff",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "bf97cde773d9f4fea09fcfe7f3f9fd11a09fcee773b9fcfe803fff9e3cfffe00",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff8000c3860003fe80c06231188c06fa77406030180c06fa80d06431184c1602",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007fff3c79fffc017f3f9dcee773f90588bf9fcfe7f3f9057f2f9bcee7b3e9fd",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "80d06431184c1603bec06030180c05ddbec06231188c0603ff8000c3860003ff",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "7f2f9bcee7b3e9fc413f9fcfe7f3fa22413f9dcee773f9fc007fff3c79fffc00",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ffc00061c30001ffc06031188c46037dbba030180c06037dc06832188c260b01",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "003fff9e3cfffe003f9fcee773b9fc82445fcfe7f3f9fc823f97cde773d9f4fe",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "c06832188c260b01df6030180c0602eedf6031188c460301ffc00061c30001ff",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "3f97cde773d9f4fe209fcfe7f3f9fd11209fcee773b9fcfe003fff9e3cfffe00",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "ff8000c3860003ff80c06231188c06fb77406030180c06fb80d06431184c1603",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "007fff3c79fffc007f3f9dcee773f90488bf9fcfe7f3f9047f2f9bcee7b3e9fc",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=False/pad=1/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ff8000c3860003febec06231188c0602bec06030180c05dc80d06431184c1602",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "007fff3c79fffc01413f9dcee773f9fd413f9fcfe7f3fa237f2f9bcee7b3e9fd",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "406832188c260b013ba030180c06037d406031188c46037d7fc00061c30001ff",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "bf97cde773d9f4fec45fcfe7f3f9fc82bf9fcee773b9fc82803fff9e3cfffe00",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=0/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "7fc00061c30001ff5f6031188c4603015f6030180c0602ee406832188c260b01",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "803fff9e3cfffe00a09fcee773b9fcfea09fcfe7f3f9fd11bf97cde773d9f4fe",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "80d06431184c160277406030180c06fa80c06231188c06faff8000c3860003fe",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7f2f9bcee7b3e9fd88bf9fcfe7f3f9057f3f9dcee773f905007fff3c79fffc01",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=0/prefix=True/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ff8000c3860003ffbec06231188c0603bec06030180c05dd80d06431184c1603",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "007fff3c79fffc00413f9dcee773f9fc413f9fcfe7f3fa227f2f9bcee7b3e9fc",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "c06832188c260b01bba030180c06037dc06031188c46037dffc00061c30001ff",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "3f97cde773d9f4fe445fcfe7f3f9fc823f9fcee773b9fc82003fff9e3cfffe00",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=1/prefix=False/reverse=True/complement=True"
+    },
+    {
+      "mask_hex": "ffc00061c30001ffdf6031188c460301df6030180c0602eec06832188c260b01",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=False"
+    },
+    {
+      "mask_hex": "003fff9e3cfffe00209fcee773b9fcfe209fcfe7f3f9fd113f97cde773d9f4fe",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=False/complement=True"
+    },
+    {
+      "mask_hex": "80d06431184c160377406030180c06fb80c06231188c06fbff8000c3860003ff",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=False"
+    },
+    {
+      "mask_hex": "7f2f9bcee7b3e9fc88bf9fcfe7f3f9047f3f9dcee773f904007fff3c79fffc00",
+      "source": "S/ZDEN/any/orientation=5/reverse_glyphs=True/pad=1/prefix=True/reverse=True/complement=True"
+    }
+  ]
+}

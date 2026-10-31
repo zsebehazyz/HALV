@@ -1,0 +1,79 @@
+{
+  "input_sha256": {
+    "research/sources/cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/data/marker_grid_check.json": "bc483972863368ff7b4f6a4fffb6ce0aa6dfda4a6aa1632475bd08ac074d95e6",
+    "research/data/corner_check.json": "904e86defa775c8bfd375fe7b93ef8b2bd5f959eab59a2da0e5571851a6d6159",
+    "research/models/composite_v1.json": "fb0fcf731f0436cb6cd53bff8255296a83cec903ab66ffa822386a63746c2524",
+    "tools/check_composite_models.py": "acf684085174dda3348793d08f3d43dc807195e1797c08b02ba5e628ade59eea"
+  },
+  "oracle_selftest": {
+    "scalar_1_both_formats": "passed",
+    "target_base58check": "passed",
+    "invalid_scalars": "passed",
+    "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+  },
+  "wave_reconstruction": "x=92, clock=3px, unsigned four-state nominal fit; no uncertainty expansion",
+  "date_digits": [
+    2,
+    0,
+    0,
+    4,
+    2,
+    4,
+    0,
+    2
+  ],
+  "morse_groups": [
+    "-.",
+    "--",
+    ".-.",
+    "--"
+  ],
+  "morse_tree_indices": [
+    6,
+    7,
+    10,
+    7
+  ],
+  "marker_masks": 40,
+  "signature_masks": 384,
+  "models": {
+    "C1": {
+      "attempts_including_duplicates": 11520,
+      "invalid_scalar_attempts": 0,
+      "unique_valid_scalars": 2384
+    },
+    "C2": {
+      "attempts_including_duplicates": 110592,
+      "invalid_scalar_attempts": 0,
+      "unique_valid_scalars": 21728
+    },
+    "C3": {
+      "attempts_including_duplicates": 30720,
+      "invalid_scalar_attempts": 0,
+      "unique_valid_scalars": 14592
+    },
+    "C4": {
+      "attempts_including_duplicates": 244224,
+      "invalid_scalar_attempts": 0,
+      "unique_valid_scalars": 47512
+    },
+    "C5": {
+      "attempts_including_duplicates": 244224,
+      "invalid_scalar_attempts": 0,
+      "unique_valid_scalars": 47800
+    }
+  },
+  "global_unique_valid_scalars": 134016,
+  "public_key_formats_per_scalar": 2,
+  "candidate_set_sha256": "945eb95372042640269e22f915b02248f942cde8839e90b476df95decc21c2bb",
+  "matches": [],
+  "limitations": [
+    "Predeclared bounded models, not exhaustive compositions.",
+    "Marker as selector/XOR mask and glyph padding are hypotheses.",
+    "Date/Morse rotations are weak hypotheses, not decoded instructions.",
+    "Negative results do not exclude a part from instruction, normalization, or other joint roles.",
+    "No alternate waveform reconstruction, WIF decoder chain, or audio demodulation tested here."
+  ]
+}
