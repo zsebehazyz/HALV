@@ -1,0 +1,21 @@
+{
+  "models": ["C45", "C46"],
+  "motivation": "User requests full residual role, cross-block Fibonacci continuation and exact256sample reverse encoding, including a justified reversible twist.",
+  "C45": {
+    "hypothesis": "The full R256 is determined by Fibonacci word boundaries in A256, or marks polarity transitions before or after each A bit.",
+    "boundary_family": "Both frames; A forward/reversed and original/complemented. Parse continuously, no block reset. Predict full R as word starts, final delimiter bits, both delimiter bits; compare in original source-bit coordinates. Also compare complements. No ignored prefix or suffix.",
+    "transition_family": "For every A/R bitpair, R toggles running polarity immediately before or after the A bit, starting0; emit A XOR state. Retain full R for reverse audit. Compare R against starts/ends/both delimiter bits of this emitted stream, and complements.",
+    "gate": "Exact equality of all256R bits and complete stream framing; a partial match or zero-dominated accuracy is not explanatory. Record full mismatch positions, positive confusion counts and incomplete suffix."
+  },
+  "C46": {
+    "hypothesis": "A and full R jointly form a self-delimiting Fibonacci stream through one invertible channel operation.",
+    "transforms": ["identity", "A_xor_R", "A_xor_running_R_including_current", "rotate_A_left_by_R_mod4", "A_mod16_difference_previous_A_start0"],
+    "layouts": ["A256_then_R256", "R256_then_A256", "cellwise_A4_R4", "bitwise_A1_R1"],
+    "orientations": "Both frames, whole-bitstream forward/reversed, original/complemented:160recipes. All512bits always retained; no cell exceptions, no padding, no dropped tail, no block resets.",
+    "roundtrip_gate": "If complete, discard the original bitstream as reconstruction input: Fibonacci-encode decoded integers, undo polarity/direction/layout/transform and restore q from recovered A/R. Compare all256q and all256R. Record decoded values, input and reconstructed hashes and cross-block word spans. Incomplete streams are not reverse-verified using their saved tail.",
+    "key_gate": "Only after successful fullq/R reverse gate: positive or n-1 byte mapping; exact32raw bytes,64ASCII hex or checksum51/52ASCII WIF. No hash, modulus, skipped value or per-cell repair.",
+    "controls": "64 deterministic within-block q permutations, seed461101, identical full160recipefamily; report whole-family complete counts as descriptive reference, not independent tests or author-intent pvalues."
+  },
+  "validation": "All256possible cell states in every block and both frames through extract/restore; random full inputs for every layout/transform, synthetic Fibonacci sequence through each full inverse path; independent residual-role and fullq reconstruction audit.",
+  "limits": ["Finite posthoc family", "Reversible representation is necessary but not sufficient to identify the author encoder", "R retained as sidechannel inC45 polarity probes does not establish its generative role", "No marker or signature operation selected unless structural and inverse gates support it", "C43geometry and completeq/R branches remain active"]
+}

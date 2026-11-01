@@ -693,3 +693,16 @@ bájtsor n vagy n−1 olvasattal. A 128 blokkon belül kevert kontroll közül
 Ez a közvetlen kódcsalád negatívuma; előjeles/delta-, csatornakapcsolt és
 hangértelmezéshez továbbra is külön indokolt műveleti szabály kell.
 A teljes q/R és geometriai ág megmarad. Részletek a fő MD 24. fejezetében.
+
+
+## C45–C46: teljes R-szerep és Fibonacci-visszakódolás
+
+C45:144egységes határ-/polaritásmodellből nulla jósolja pontosan a teljes
+256R-bitet; legkevesebb47hiba, a teljes keretezésűek közt52.
+C46:160veszteségmentes kétcsatornás műveletből23teljes Fibonacci-folyam;
+mindből pontosan visszaáll256q és256R, csak az egészek és a recept alapján.
+Ez szükséges inverzkapu, nem a szerző kódolójának vagy R keletkezésének
+azonosítása. A64kevert kontrollból41ad legalább23teljes folyamot.
+Egyik teljes folyam sem közvetlen bájtkód n vagy n−1 szerint. Nincs új
+kulcsjelölt. A teljes maradék és geometriai ág megmarad; a továbblépéshez
+R generálása és az egészek indokolt szemantikája kell. Részletek:25.fejezet.

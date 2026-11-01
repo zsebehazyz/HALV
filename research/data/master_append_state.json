@@ -2007,6 +2007,52 @@
           "sha256": "b6b55bbec4c924a9acb4fc4ebc192d7d0dfa707198bb0313053f66ffbe0bfe14"
         }
       ]
+    },
+    {
+      "journal_round": 25,
+      "offset": 372110,
+      "bytes": 14675,
+      "sha256": "53a5358af15304cc458d896a4bd64b8b8c0a2685e91f1516ed5b422a91bd96d7",
+      "journal_section_sha256": "66d63ef380f37f1c922566224d72c4d6037c0e2aa769929cea29662ec6aa03d5",
+      "model_inputs": [
+        {
+          "path": "research/models/fibonacci_residual_roles_v1.json",
+          "bytes": 3148,
+          "sha256": "13d21e3274dcb43fec32309fec4a8d5046c1516066b0eb0eeaeb755277f778f1"
+        }
+      ],
+      "artifact_inputs": [
+        {
+          "path": "research/data/fibonacci_residual_roles_check.json",
+          "bytes": 1547710,
+          "sha256": "f9f8cc92f61313b42ffb485b26e789096508db742f0adb6f236188961c680426"
+        },
+        {
+          "path": "research/data/fibonacci_residual_roles_integrity.json",
+          "bytes": 702,
+          "sha256": "47b846683bae8e6577713a3af2446aea291a5d6d108b7b8a2965976d0724e7dd"
+        },
+        {
+          "path": "research/data/fibonacci_residual_roles_audit.png",
+          "bytes": 143556,
+          "sha256": "fb8f08cf0f6bd174c964b5ed0c5516d4df96e7b5bec1d1df61bb6fb56dedbfe1"
+        },
+        {
+          "path": "tools/check_fibonacci_residual_roles.py",
+          "bytes": 10494,
+          "sha256": "bc8275f2c0c7cbfeebd607d9ab1ad4aae2b8b92f5ffdc8c0cc5454ca37792a08"
+        },
+        {
+          "path": "tools/audit_fibonacci_residual_roles.py",
+          "bytes": 6162,
+          "sha256": "7e9c9bc7aa96233a3fc73522fba8324ffd7973727e94a5f5bdfeb1703ce9785c"
+        },
+        {
+          "path": "tools/plot_fibonacci_residual_roles.py",
+          "bytes": 2283,
+          "sha256": "654a4c19ff20b5e4773a3334eac510f5aa9ba5780c6b8a55d0660ec3a77ccf6d"
+        }
+      ]
     }
   ]
 }

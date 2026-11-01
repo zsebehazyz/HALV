@@ -2906,3 +2906,187 @@ python3 tools/audit_fibonacci_vlc.py
 
 Az új fejezet a meglévő fő MD végéhez kerül. A korábbi 362930 bájt
 változatlan marad; ezt az append-nyilvántartás és az indexelő ellenőrzi.
+
+
+## 2026-11-01 – huszonötödik kör: teljes maradék, állapotváltás és pontos Fibonacci-visszakódolás, C45–C46
+
+### 1. A kérés és a 24. kör pontos határa
+
+A felhasználó három összekapcsolt feltételt kért: változó hosszúságú
+Fibonacci-kód blokkokon át is; a teljes maradék szerepének ellenőrzése;
+ugyanazzal a szabállyal pontos visszakódolás mind a256 hullámmintára.
+Külön felhívta a figyelmet az összetett, csavart megoldások lehetőségére.
+Ezt új, véges és invertálható műveletcsaláddal vizsgáljuk, nem a közvetlen
+olvasat negatívumából zárjuk ki az egész Fibonacci-irányt.
+
+A C44 folyamatos olvasatai már engedték a kódszó blokkon át folytatását.
+A mostani C45–C46 ezt megtartja, és az A/R csatornákat összekapcsolja.
+A hagyományos `11` lezárású egészkód továbbra sem azonos a rögzített
+nibble-ös8SVX Fibonacci-deltával. Új külső megfejtési forrás nincs.
+A pontos receptet a `models/fibonacci_residual_roles_v1.json` rögzíti.
+A recept a vizsgálat előtt készült; a család a korábban látott adatokhoz
+választott feltáró modellcsalád, nem független felfedezési kísérlet.
+
+### 2. C45: lehet-e a teljes R kódszóhatár vagy polaritásváltás?
+
+Mindkét már definiált A/R felbontást használjuk: abszolút és fázisrelatív.
+A teljes A256 és R256 szerepel, nem csak a12 külső maradékbájt.
+A teljes R-ben29 egyes van. Nincs elhagyott cella, tetszőleges kitöltés
+vagy külön szabály az első, második és utolsó hullámblokkra.
+
+Három folyamatos transzduktor:
+
+- közvetlen A;
+- minden bitnél R előbb átbillenti a0-ról induló polaritást, utána A XOR állapot;
+- A XOR aktuális állapot után R átbillenti a polaritást.
+
+Mindegyiknél két teljes olvasási irány és két kimeneti polaritás szerepel.
+A kapott Fibonacci-szavak kezdőbitjeiből, végső lezáróbitjeiből vagy
+mindkét lezáróbitjéből készül R-jóslat; a maszk komplementjét is külön
+vizsgáljuk. A maszkot ugyanabban a forrásbeli bitkoordinátában hasonlítjuk
+R-hez. 2keret×3transzduktor×2irány×2polaritás×3maszk×2maszkpolaritás
+=144 deklarált recept. A kódszó nem indul újra a32bites blokkok szélén.
+
+A döntési kapu: a teljes256 R-bit pontos egyezése ÉS hiánytalan keretezés.
+Az, hogy a sok nulla miatt magas az összes bit egyezési aránya, nem elég.
+Az összes téves pozíció és az egyesekre számított TP/FP/FN is mentve van.
+
+**Eredmény: 0/144 pontos R-jóslat, 0/144 közös kaputeljesítés.**
+A legkisebb hiba47bit: fázisrelatív, előre olvasott, komplementált,
+R-rel utólag polaritást váltó transzduktor végbitmaszkja. TP=10, FP=28,
+FN=19. Ez a változat ráadásul befejezetlenül keretezhető.
+A teljesen keretezhető változatok közt a legkisebb R-hiba52bit.
+Ez a teljes, egyszerű kódszóhatár/polaritásmodell negatívuma; nem általános
+bizonyíték arra, hogy a maradék ne hordozhatna vezérlést.
+
+Fontos különbség: a transzduktorba az eredeti R-t bemenetként adtuk.
+Ez önmagában nem magyarázza, honnan származik R. Ezért követeltük meg a
+határokból való teljes visszajóslását is; ez a kapu nem teljesült.
+
+### 3. C46: öt visszafordítható csavar, az összes adat megtartásával
+
+A 64 A-nibble és64 R-nibble minden bitje megmarad. Az alábbi műveleteket
+mindkét keretben azonos szabállyal alkalmazzuk minden cellára:
+
+| Művelet | Előre | Inverz |
+| --- | --- | --- |
+| identity | T_i=A_i | A_i=T_i |
+| xor_R | T_i=A_i XOR R_i | ugyanaz az XOR |
+| running_xor_R | S_i=S_(i−1) XOR R_i; T_i=A_i XOR S_i, S_−1=0 | ugyanaz az S az R-ből |
+| rotate_R | T_i=ROL4(A_i,R_i mod4) | ROR4(T_i,R_i mod4) |
+| difference_A | T_i=(A_i−A_(i−1)) mod16, A_−1=0 | A_i=(T_i+A_(i−1)) mod16 |
+
+A modulo16 itt a4bites differenciális leképezés előre rögzített, pontos
+inverzének része; nem a dekódolt nagy egészek utólagos bájttá csonkítása.
+A forgatásnál R felső bitjeit sem dobjuk el: a teljes R külön megmarad.
+
+Négy bitsorrend: T256→R256; R256→T256; cellánként T4,R4;
+bitpáronként T1,R1. Mindegyiknél a teljes512bit előre/hátra, eredeti vagy
+komplementált. 2keret×5művelet×4sorrend×2irány×2polaritás=160 recept.
+Nincs blokkonkénti újraindítás, eltoláskeresés, prefixlevágás vagy utótagtörlés.
+A kódszó a hullámblokkon és a két csatorna összefűzési pontján is átléphet.
+
+### 4. Döntő visszakódolási próba:23 teljes inverz
+
+23/160 teljes, különböző512bites Fibonacci-felbontás adódott.
+Mind a23-nál a visszaállító függvény csak a dekódolt pozitív egészeket
+és a recept azonosítóit kapja, az eredeti q-t és R-t nem.
+Újrakódolja a Fibonacci-szavakat, visszafordítja a polaritást és olvasási
+irányt, szétválasztja a csatornákat, invertálja a műveletet, végül a
+rögzített fázisszabállyal összeállítja a hullámot.
+
+**Mind a23 esetben256/256 q-minta és256/256 R-bit pontosan visszaáll.**
+A20 maradékos cella és minden alsó egyes bit is megmarad.
+Befejezetlen folyamhoz nem használjuk fel a mentett utótagot, hogy látszólag
+sikeres teljes visszakódolást kapjunk. Csak a23 teljes eset kap inverzkaput.
+
+| Művelet | Teljes felbontás és pontos teljes inverz |
+| --- | ---: |
+| identity | 6 |
+| xor_R | 4 |
+| running_xor_R | 3 |
+| rotate_R | 7 |
+| difference_A | 3 |
+
+Sorrend szerint R→T:11, bitenkénti összefésülés:8, T→R:3,
+cellánkénti összefésülés:1. Mindegyik teljes olvasatban van blokkon
+átívelő kódszó; recepten belül5…13 ilyen szó. A csatornák közti középső
+összefűzési pontot külön mező jelöli, nem számítjuk hullámblokkhatárnak.
+A fordított sorokban a blokkhatárok ugyanahhoz a forrásfelosztáshoz tartoznak.
+
+Az adatfájl megőrzi a512 bemeneti bitet, az egészsort, a szóhatárokat,
+a határátlépéseket, a visszaállított256 q-t és256 R-t, valamint a hash-eket.
+Az inverz q-hash256 darab0…3 értékű bájton értendő:
+`895c75d543327473bf4ec18aa2a5b238ada7fae750a1566fb6d077020eb7dd0d`.
+
+### 5. Mit bizonyít ez, és mit nem?
+
+A teljes inverz a veszteségmentesség szükséges ellenőrzése; nem elégséges
+bizonyíték a készítő kódolójára. Itt a két csatorna együttes invertálható
+átrendezését találtuk meg, nem R kulcsból való előállítását. A C45 pontos
+R-jóslata hiányzik. A q→egészek→q kör önmagában nem fejti meg a kulcsot.
+
+A64 feltáró kontroll mindegyikében a32mintás blokkokon belül kevertük
+q-t, a blokkhisztogramokat megtartva; seed461101. Ugyanaz a teljes160recept
+futott. A teljes felbontások száma11…47;41/64 kontroll legalább a megfigyelt
+23-teljesítést adja. A keverés nem őrzi meg a fázisszerkezetet, ezért ez
+csak az adott feltételes kontrollcsalád referenciája, nem szerzői szándékra
+vagy minden lehetséges csavarra vonatkozó p-érték.
+A receptek nem tekinthetők független statisztikai próbáknak.
+
+Az összes teljes olvasatban van256-nál nagyobb egész; n vagy n−1
+megfeleltetéssel egyik sem teljes bájtsor. Emiatt nincs32bájtos,64ASCII hexes
+vagy ellenőrzőösszeges51/52ASCII WIF-kulcsjelölt. Nulla új jelölt,
+nulla célcímegyezés; ez nem nagy privátkulcs-keresés eredménye.
+A nagy értékeket nem vágjuk le és nem javítjuk külön cellaszabályokkal.
+
+### 6. Kalibráció és független audit
+
+- 4096cellállapot/keret/blokk oda-vissza ellenőrzés: a256lehetséges cella
+  mind a8blokkban és mindkét keretben visszaáll az A/R-ből.
+- 40véletlen teljes bemenet: mindkét keret, mind az5művelet és4sorrend inverze pontos.
+- 160szintetikus teljes512bites Fibonacci-kódút:128darab2 és64darab1
+  rögzített szavaiból minden teljes inverzút működik.
+
+A külön audit saját reguláris kifejezéses szófelbontással, saját
+Fibonacci-kódolóval, egészműveletes inverz transzformációkkal és saját
+A/R→q helyreállítással ismétli meg a144R-jóslatot és160folyamot.
+A23 teljes inverzhez itt sem adja át az eredeti q-t vagy R-t.
+Ellenőrzi a teljes hullámot, maradékot, hash-eket és a blokkátlépéseket.
+Minden auditellenőrzés sikeres. A kontrollkeveréseket csak a főprogram
+futtatta, nem állítunk két független kontrollcsaládot.
+
+![Teljes maradékjóslat és a23pontos inverz egy szemléltető példája](data/fibonacci_residual_roles_audit.png)
+
+Az ábrán a legkisebb hibájú R-jóslat diagnosztikus, utólag kiválasztott
+példa, nem megfejtés. Az alsó panel előre rögzített egyszerű tanúpélda:
+abszolút identity, R→A, előre, komplementált. A két q-sor pontosan fedi egymást.
+
+### 7. Következő kutatási határ
+
+A csavart eljárások vizsgálata indokolt, de a csavarhoz konkrét képi vagy
+kódolási motiváció kell. A mostani keretváltó/állapotos család nem magyarázza
+R keletkezését. Következő elfogadható modellnek az egészek szemantikáját
+és a teljes maradék generálását is meg kell adnia, miközben a pontos inverz
+megmarad. Ez lehet indokolt előjeles/delta- vagy többcsatornás eljárás,
+de a nagy értékek puszta csonkítása nem megoldás.
+
+Az aláírásból vagy jelölőből nem választottunk utólag új szabad paramétert:
+a szemantikai kapu még nem teljesült. A BD/felezés, a dátum, a jelölő,
+a geometriai64→32 és a Fibonacci–hang ágak továbbra is nyitottak.
+A C43teljes geometriai információmegőrzését nem dobtuk el.
+Nincs igazolt hang, Morse-szöveg, szerzői generátor vagy HALV-megfejtés.
+
+### 8. Reprodukció és folyamatos GitHub-nyilvántartás
+
+```sh
+cd /workspace/HALV
+OPENBLAS_NUM_THREADS=1 python3 tools/check_fibonacci_residual_roles.py
+python3 tools/audit_fibonacci_residual_roles.py
+MPLCONFIGDIR=/tmp/halv_mpl XDG_CACHE_HOME=/tmp/halv_cache python3 tools/plot_fibonacci_residual_roles.py
+```
+
+A meglévő fő MD végéhez fűzzük a kört, új jelentés-MD nélkül.
+A korábbi372110bájt változatlan marad. A recept, adatok, audit és ábra
+hash-sel bekerül a jegyzékbe. A GitHub-frissítés csak sikeres push után
+tekinthető feltöltöttnek; a reprodukciós adatfájl nem publikálási bizonyíték.

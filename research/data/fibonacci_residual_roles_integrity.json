@@ -1,0 +1,17 @@
+{
+  "models": [
+    "C45",
+    "C46"
+  ],
+  "independently_audited_boundary_recipes": 144,
+  "independently_parsed_joint_recipes": 160,
+  "full256sample_and256residual_bit_inverse_paths": 23,
+  "no_original_q_or_R_passed_to_inverse_function": true,
+  "no_tail_used_for_incomplete_inverse": true,
+  "all_input_hashes_verified": true,
+  "input_sha256": {
+    "research/data/fibonacci_residual_roles_check.json": "f9f8cc92f61313b42ffb485b26e789096508db742f0adb6f236188961c680426",
+    "tools/audit_fibonacci_residual_roles.py": "7e9c9bc7aa96233a3fc73522fba8324ffd7973727e94a5f5bdfeb1703ce9785c",
+    "tools/audit_fibonacci_vlc.py": "b6b55bbec4c924a9acb4fc4ebc192d7d0dfa707198bb0313053f66ffbe0bfe14"
+  }
+}

@@ -89,3 +89,13 @@ A változó hosszúságú Fibonacci-egészkód 256 rögzített olvasatát vizsg�
 A teljes keretezés 47/128 blokkon belül kevert kontrollban legalább ilyen
 gyakori. A független parseraudit sikeres; nincs új kulcsjelölt vagy hang.
 Részletes eredmény és hatókör a meglévő fő MD végén, 24. fejezet.
+
+
+### Legújabb folytatás:25.kör, C45–C46
+
+A teljes maradék144határ-/polaritásszerepe nem adott pontos R-jóslatot.
+Az összekapcsolt A+R160invertálható Fibonacci-olvasatából23teljes;
+mind a23-ból az egészek és a recept alapján256/256q és256/256R visszaáll.
+Ez veszteségmentes reprezentáció, nem R generálásának megfejtése.
+Nincs teljes közvetlen bájtsor vagy új kulcsjelölt; a független audit sikeres.
+A meglévő fő MD25.fejezete őrzi a teljes eredményt és korlátokat.
