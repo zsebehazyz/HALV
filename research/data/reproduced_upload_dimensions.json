@@ -1,0 +1,256 @@
+{
+  "image_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "num_samples": 256,
+  "cell_width_samples": 4,
+  "method": "Eight 8-bit cell patterns per block. Binary affine dimension over GF(2), after all four within-block cyclic start offsets. For a shared 4-bit affine-embedded code, affine dimension cannot exceed 4 and is invariant under fixed invertible bit permutations, XOR masks, or GF(2)-linear invertible transforms. Cell offsets are circular *within* each block; this does not test arbitrary variable-length symbols.",
+  "blocks": [
+    {
+      "block": 1,
+      "observed_phase_affine_dimension": 6,
+      "best_affine_dimension_across_offsets": 5,
+      "phase_checks": [
+        {
+          "start_offset_samples": 0,
+          "linear_rank": 7,
+          "affine_dimension": 6,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 1,
+          "linear_rank": 7,
+          "affine_dimension": 7,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 2,
+          "linear_rank": 8,
+          "affine_dimension": 7,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 3,
+          "linear_rank": 6,
+          "affine_dimension": 5,
+          "distinct_cell_patterns": 7
+        }
+      ]
+    },
+    {
+      "block": 2,
+      "observed_phase_affine_dimension": 6,
+      "best_affine_dimension_across_offsets": 5,
+      "phase_checks": [
+        {
+          "start_offset_samples": 0,
+          "linear_rank": 7,
+          "affine_dimension": 6,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 1,
+          "linear_rank": 7,
+          "affine_dimension": 6,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 2,
+          "linear_rank": 7,
+          "affine_dimension": 6,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 3,
+          "linear_rank": 6,
+          "affine_dimension": 5,
+          "distinct_cell_patterns": 8
+        }
+      ]
+    },
+    {
+      "block": 3,
+      "observed_phase_affine_dimension": 4,
+      "best_affine_dimension_across_offsets": 4,
+      "phase_checks": [
+        {
+          "start_offset_samples": 0,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 1,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 2,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 3,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 6
+        }
+      ]
+    },
+    {
+      "block": 4,
+      "observed_phase_affine_dimension": 4,
+      "best_affine_dimension_across_offsets": 4,
+      "phase_checks": [
+        {
+          "start_offset_samples": 0,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 1,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 2,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 6
+        },
+        {
+          "start_offset_samples": 3,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        }
+      ]
+    },
+    {
+      "block": 5,
+      "observed_phase_affine_dimension": 3,
+      "best_affine_dimension_across_offsets": 3,
+      "phase_checks": [
+        {
+          "start_offset_samples": 0,
+          "linear_rank": 4,
+          "affine_dimension": 3,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 1,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 2,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 3,
+          "linear_rank": 4,
+          "affine_dimension": 3,
+          "distinct_cell_patterns": 7
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "observed_phase_affine_dimension": 4,
+      "best_affine_dimension_across_offsets": 4,
+      "phase_checks": [
+        {
+          "start_offset_samples": 0,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 6
+        },
+        {
+          "start_offset_samples": 1,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 2,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 3,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        }
+      ]
+    },
+    {
+      "block": 7,
+      "observed_phase_affine_dimension": 3,
+      "best_affine_dimension_across_offsets": 3,
+      "phase_checks": [
+        {
+          "start_offset_samples": 0,
+          "linear_rank": 4,
+          "affine_dimension": 3,
+          "distinct_cell_patterns": 5
+        },
+        {
+          "start_offset_samples": 1,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 6
+        },
+        {
+          "start_offset_samples": 2,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 6
+        },
+        {
+          "start_offset_samples": 3,
+          "linear_rank": 4,
+          "affine_dimension": 4,
+          "distinct_cell_patterns": 7
+        }
+      ]
+    },
+    {
+      "block": 8,
+      "observed_phase_affine_dimension": 5,
+      "best_affine_dimension_across_offsets": 5,
+      "phase_checks": [
+        {
+          "start_offset_samples": 0,
+          "linear_rank": 6,
+          "affine_dimension": 5,
+          "distinct_cell_patterns": 7
+        },
+        {
+          "start_offset_samples": 1,
+          "linear_rank": 7,
+          "affine_dimension": 6,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 2,
+          "linear_rank": 6,
+          "affine_dimension": 6,
+          "distinct_cell_patterns": 8
+        },
+        {
+          "start_offset_samples": 3,
+          "linear_rank": 7,
+          "affine_dimension": 6,
+          "distinct_cell_patterns": 7
+        }
+      ]
+    }
+  ]
+}

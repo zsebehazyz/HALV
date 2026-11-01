@@ -1,0 +1,368 @@
+{
+  "model": "C26",
+  "input_sha256": {
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/data/lag2_halving_check.json": "2de6d22982c31fd1654999cce510b5860aa4b6118eece6b1f3c62f54e983394f",
+    "research/models/lag2_residual_bridge_v1.json": "0504786b9be80f254e1b4f03726de2677c1611f2ff65365d306b39ef9934019e",
+    "tools/check_lag2_residual_bridge.py": "19b6373d7fe98972eba06dc4b26cc6d629c96cf495a18781e0ac91a9a51bfa98",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+  },
+  "common_offset_from_training": 10,
+  "shifts": [
+    26,
+    18,
+    14
+  ],
+  "residual_word_bit_weights": [
+    12,
+    5,
+    12
+  ],
+  "xor_transition_bit_weights": [
+    7,
+    11,
+    7
+  ],
+  "pure_bit_permutation_impossible": true,
+  "coordinate_configurations": 1728,
+  "exact_training_fit_counts": {
+    "affine": 0,
+    "lookup": 0
+  },
+  "exact_training_fits": [],
+  "first_exact_training_fit_without_holdout_selection": null,
+  "full_heldout_successes": [],
+  "correction_words": [
+    {
+      "frame": "absolute",
+      "operation": "xor",
+      "nibbles_by_transition": [
+        [
+          0,
+          0,
+          0,
+          13,
+          1,
+          0,
+          8,
+          12
+        ],
+        [
+          6,
+          2,
+          3,
+          0,
+          11,
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          4,
+          0,
+          12,
+          8,
+          6,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "frame": "absolute",
+      "operation": "nibble_subtract_mod16",
+      "nibbles_by_transition": [
+        [
+          0,
+          0,
+          0,
+          3,
+          15,
+          0,
+          8,
+          4
+        ],
+        [
+          14,
+          14,
+          15,
+          0,
+          11,
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          4,
+          0,
+          4,
+          8,
+          2,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "frame": "absolute",
+      "operation": "word_subtract_mod2pow32",
+      "nibbles_by_transition": [
+        [
+          15,
+          15,
+          15,
+          2,
+          14,
+          15,
+          8,
+          4
+        ],
+        [
+          13,
+          13,
+          14,
+          15,
+          11,
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          3,
+          15,
+          3,
+          8,
+          1,
+          15,
+          8
+        ]
+      ]
+    },
+    {
+      "frame": "phase_relative",
+      "operation": "xor",
+      "nibbles_by_transition": [
+        [
+          0,
+          0,
+          0,
+          13,
+          1,
+          0,
+          8,
+          12
+        ],
+        [
+          10,
+          8,
+          9,
+          0,
+          13,
+          1,
+          0,
+          9
+        ],
+        [
+          0,
+          2,
+          0,
+          6,
+          4,
+          10,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "frame": "phase_relative",
+      "operation": "nibble_subtract_mod16",
+      "nibbles_by_transition": [
+        [
+          0,
+          0,
+          0,
+          3,
+          15,
+          0,
+          8,
+          4
+        ],
+        [
+          6,
+          8,
+          9,
+          0,
+          5,
+          1,
+          0,
+          9
+        ],
+        [
+          0,
+          2,
+          0,
+          10,
+          12,
+          10,
+          0,
+          12
+        ]
+      ]
+    },
+    {
+      "frame": "phase_relative",
+      "operation": "word_subtract_mod2pow32",
+      "nibbles_by_transition": [
+        [
+          15,
+          15,
+          15,
+          2,
+          14,
+          15,
+          8,
+          4
+        ],
+        [
+          5,
+          7,
+          9,
+          0,
+          5,
+          1,
+          0,
+          9
+        ],
+        [
+          0,
+          1,
+          15,
+          9,
+          11,
+          9,
+          15,
+          12
+        ]
+      ]
+    },
+    {
+      "frame": "filled_zero_position",
+      "operation": "xor",
+      "nibbles_by_transition": [
+        [
+          0,
+          0,
+          0,
+          14,
+          4,
+          0,
+          8,
+          10
+        ],
+        [
+          3,
+          1,
+          9,
+          0,
+          13,
+          8,
+          0,
+          9
+        ],
+        [
+          0,
+          4,
+          0,
+          12,
+          8,
+          6,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "frame": "filled_zero_position",
+      "operation": "nibble_subtract_mod16",
+      "nibbles_by_transition": [
+        [
+          0,
+          0,
+          0,
+          2,
+          12,
+          0,
+          8,
+          6
+        ],
+        [
+          15,
+          15,
+          7,
+          0,
+          5,
+          8,
+          0,
+          9
+        ],
+        [
+          0,
+          4,
+          0,
+          4,
+          8,
+          2,
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "frame": "filled_zero_position",
+      "operation": "word_subtract_mod2pow32",
+      "nibbles_by_transition": [
+        [
+          15,
+          15,
+          15,
+          1,
+          11,
+          15,
+          8,
+          6
+        ],
+        [
+          14,
+          15,
+          7,
+          0,
+          5,
+          8,
+          0,
+          9
+        ],
+        [
+          0,
+          3,
+          15,
+          3,
+          8,
+          1,
+          15,
+          8
+        ]
+      ]
+    }
+  ],
+  "no_private_key_search": true,
+  "limitations": [
+    "The96bit size agreement alone is not evidence",
+    "Relationship and model family chosen after observing the uploaded results",
+    "A failed local nibble bridge does not exclude long-range nonlinear or stateful correction rules",
+    "No private-key search"
+  ]
+}

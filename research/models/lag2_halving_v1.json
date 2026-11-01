@@ -1,0 +1,18 @@
+{
+  "model":"C25",
+  "question":"Does a single offset added to half the measured amplitude scale predict the next lag2 alignment?",
+  "source":"Nominal8x32 states, not amplitude pixels; preserve all original samples",
+  "descriptive_family":"Six lag2 pairs, all32 cyclic shifts; four possible five-block windows; statistic=max window sum of three independently maximized pair matches",
+  "phase_formula":"shift_b=(a+scale_b/2) mod32, scale_b=128/2**b; b is zero-based start block of each lag2 pair",
+  "training":"In each five-block window, choose a in0..31 from first two pair scores ONLY, ties smallest a; third target block not used in fitting",
+  "forecast":"Use the fitted a for the third lag2 pair; report full target samples and errors; compare every possible window in controls",
+  "descriptive_baselines":["Always zero","Unshifted source copy","Fixed phase-only shift2"],
+  "reported_half_split":"Also reproduce first16-shift selection, score final16; explicitly exploratory and conditional on source rows",
+  "controls":[{"chunk_samples":4,"draws":30000},{"chunk_samples":8,"draws":10000}],
+  "control_method":"Independently permute whole chunks within each block, retaining sample order inside chunks; verify preserved chunks and recompute all searched window maxima",
+  "control_statistics":["descriptive max-window sum","max-window training-selected forecast total","fixed middle-window heldout target match count","max heldout match count across windows"],
+  "noninformative_control":"Swapping two16-sample halves is only a cyclic rotation; descriptive circular maxima must stay unchanged, so do not treat this as independent evidence",
+  "algebraic_diagnostic":"For the observed even a, phi_b=floor(2*scale_b/3)-(a/2)*b gives the same lag2 shift differences; this is an equivalent rewrite, not independent evidence or an author-derived a",
+  "rng_seed":20261101,
+  "limitations":["Hypothesis supplied after observing the same data; forecast is a reconstruction check, not independent prospective discovery","a=10 is not independently derived from a picture clue","A shape-preserving physical null model is not supplied","Plus-one Monte Carlo fraction is not a confidence upper bound or global search p-value","No private-key search"]
+}

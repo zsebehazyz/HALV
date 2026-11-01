@@ -1,0 +1,14 @@
+{
+  "model":"C26",
+  "question":"Can the three outer residual words encode the corrections of the three middle lag2 transitions?",
+  "source":"C25 shifts predicted by common offset fitted on first two lag2 pairs; never tune a shift on third target",
+  "residual_frames":["absolute","phase_relative"],
+  "middle_frames":["absolute","phase_relative","filled_zero_position"],
+  "transition_corrections":["xor","nibble_subtract_mod16","word_subtract_mod2pow32"],
+  "coordinates":"All6 assignments of the3 residual words; one common forward/reversed cell order and one common0..7 cell rotation; no independently tuned per-word transform",
+  "predictors":["Exact affine GF2 map from4 residual bits plus constant to4 correction bits","Exact deterministic nibble lookup"],
+  "fit":"First two transitions only:16 cells,64 output bits; require exact training consistency",
+  "forecast":"Third transition:8 cells,32 output bits; affine predictions count as unique only when fixed by training row span; lookup requires every heldout input seen in training",
+  "model_choice":"Report first exact-training-fit model in fixed enumeration order without using third target; also enumerate successes with their exploratory search scope",
+  "limitations":["The96bit size agreement alone is not evidence","Relationship and model family chosen after observing the uploaded results","A failed local nibble bridge does not exclude long-range nonlinear or stateful correction rules","No private-key search"]
+}

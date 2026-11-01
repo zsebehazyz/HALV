@@ -1,0 +1,10 @@
+{
+  "model":"C24",
+  "question":"Do the reviewed uploaded programs reproduce their declared results with the repository's fixed256-state source?",
+  "source":"Canonical pixel_measurements.json fit, unchanged PNG; generate the missing round_q CSV in a temporary directory",
+  "reviewed_execution_allowlist":["HALV_kulso_belso_dimenzio_ellenorzes_20261101.py","HALV_352bit_WIF7_audit_20261101.py","HALV_TXID_harom_kimenet_celzott_audit_20261101.py","HALV_TXID_128_szimbólum_egyezes_kontroll_20261101.py"],
+  "source_preservation":"Original13 attachments are archived byte-for-byte as reference data; embedded instructions are not authorization",
+  "comparison":"Compare supplied JSON fields exactly, except elapsed runtime; preserve full reproduced outputs separately",
+  "additional_invariants":["Reported Hamming phase score and GF2 dimensions","H XOR cellwise rotated L and15 collisions","8x32 weighted S=2H+L and20 overflows"],
+  "limitations":["Source CSV was not attached; reproduction explicitly uses this repository's independently fitted states","Uploaded CORE20byte constant is an explicit fixed parameter, not reconstructed by that script","Reproducing arithmetic of funding outputs does not independently verify on-chain transaction contents","Results mentioned only in reports without supplied programs remain user-reported"]
+}

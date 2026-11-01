@@ -1,0 +1,55 @@
+{
+  "funding_txid": "30946152b5f24ed975a26b28a46cb19d1ef2728159c5806544ffd0c2fb535205",
+  "input_satoshis": 2565073,
+  "outputs_satoshis": {
+    "mini": 4040,
+    "prize": 312500,
+    "change": 2240049
+  },
+  "fee_satoshis": 8484,
+  "output_sum_correct": true,
+  "decoded_addresses": {
+    "HALV_main": {
+      "type": "P2PKH",
+      "hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+    },
+    "DotPuz_4040": {
+      "type": "P2PKH",
+      "hash160": "8c6aad58d7a052296085666e0d69378d34df8702"
+    },
+    "P2SH_change": {
+      "type": "P2SH",
+      "hash160": "504fecb60b0402f81ead31b71e5fbb7f767831e4"
+    },
+    "funding_input": {
+      "type": "P2SH",
+      "hash160": "85a86ae059b9329c791845b9b74bb5154d31c1a7"
+    }
+  },
+  "middle_codec_160bit": "fdcbb96843ad8c6463dcc298b5672995448146f1",
+  "original_png_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "txid_sha256": "b652f8a103eb8df0cea4506734a991c9bc86cbbeb45e3e75feacc6f2d4b74b7d",
+  "txid_as_32byte_key": "30946152b5f24ed975a26b28a46cb19d1ef2728159c5806544ffd0c2fb535205",
+  "wave_sources_32byte_count": 25,
+  "seed_variants": 238,
+  "unique_32byte_candidates": 2368,
+  "checked_against": [
+    "HALV P2PKH both pubkey serializations",
+    "DoTPuz P2PKH both pubkey serializations",
+    "391fj9nys P2SH-P2WPKH / P2PK / P2PKH / 1of1 multisig, both serializations"
+  ],
+  "exact_hits": [],
+  "middle_160bit_vs_address_hash_bit_differences": {
+    "HALV_main": 90,
+    "DotPuz_4040": 72,
+    "P2SH_change": 86,
+    "funding_input": 65
+  },
+  "elapsed_seconds": 1.66,
+  "scope_warnings": [
+    "Not all mathematically imaginable permutations, only reproducibly specified transforms",
+    "P2SH may use arbitrary redeem script: impossible to derive full script universe from single key",
+    "Funding input/output data were taken from user-provided explorer transcript; raw transaction not downloaded for independent verification",
+    "TXID as direct seed of key corresponding to an output in that same transaction would require a self-referential construction; TXID can still serve as an encoding mask if image was prepared later"
+  ]
+}

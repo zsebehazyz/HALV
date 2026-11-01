@@ -1,0 +1,124 @@
+{
+  "source_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "model": "352 bits from 3 outer (2-bit) plus 5 middle (4-bit) block sets, search 7-bit ASCII WIF without leading 5",
+  "models_tested": 4608,
+  "perfect_base58_strings": 0,
+  "highest_base58_chars_in_50": 33,
+  "highest_printable": 46,
+  "top5": [
+    {
+      "base58_count": 33,
+      "ascii_printable_count": 42,
+      "text": "o1JEz.tST.h==WMiD-8[LidNlINnZ.e...ujP)Qg[b.\\.WtgCT",
+      "mapping": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "outer_bit_order": "lo-hi",
+      "cell_reverse": true,
+      "block_reverse": true,
+      "full_bit_reverse": false,
+      "seven_bit_reverse": true,
+      "inverse": true,
+      "offset": 0
+    },
+    {
+      "base58_count": 33,
+      "ascii_printable_count": 42,
+      "text": "TCgtW.\\.b[gQ)Pju...e.ZnNIlNdiL[8-DiMW==h.TSt.zEJ1o",
+      "mapping": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "outer_bit_order": "lo-hi",
+      "cell_reverse": true,
+      "block_reverse": true,
+      "full_bit_reverse": true,
+      "seven_bit_reverse": false,
+      "inverse": true,
+      "offset": 2
+    },
+    {
+      "base58_count": 33,
+      "ascii_printable_count": 42,
+      "text": "TCgtW.\\.b[gQ)Pju...e.ZnNIlNdiL[8-DiMW==h.TSt.zEJ1o",
+      "mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "outer_bit_order": "hi-lo",
+      "cell_reverse": false,
+      "block_reverse": false,
+      "full_bit_reverse": false,
+      "seven_bit_reverse": false,
+      "inverse": true,
+      "offset": 2
+    },
+    {
+      "base58_count": 33,
+      "ascii_printable_count": 42,
+      "text": "o1JEz.tST.h==WMiD-8[LidNlINnZ.e...ujP)Qg[b.\\.WtgCT",
+      "mapping": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "outer_bit_order": "hi-lo",
+      "cell_reverse": false,
+      "block_reverse": false,
+      "full_bit_reverse": true,
+      "seven_bit_reverse": true,
+      "inverse": true,
+      "offset": 0
+    },
+    {
+      "base58_count": 33,
+      "ascii_printable_count": 41,
+      "text": "o1JEz.tST.X[}NNiH58=LqT.lQMn..V...ujP)Qg[b.\\.WtgCT",
+      "mapping": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "outer_bit_order": "lo-hi",
+      "cell_reverse": true,
+      "block_reverse": true,
+      "full_bit_reverse": false,
+      "seven_bit_reverse": true,
+      "inverse": true,
+      "offset": 0
+    }
+  ],
+  "scoring_histogram": {
+    "13": 12,
+    "14": 16,
+    "15": 40,
+    "16": 116,
+    "17": 92,
+    "18": 228,
+    "19": 324,
+    "20": 332,
+    "21": 472,
+    "22": 456,
+    "23": 528,
+    "24": 524,
+    "25": 408,
+    "26": 268,
+    "27": 240,
+    "28": 196,
+    "29": 140,
+    "30": 112,
+    "31": 64,
+    "32": 24,
+    "33": 16
+  },
+  "caveat": "The 352-bit representation and 3+1 encoding are speculative, this only tests simple shared reading conventions."
+}

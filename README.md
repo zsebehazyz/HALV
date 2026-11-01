@@ -26,13 +26,20 @@ ugyanazzal a szabállyal bontja az összes cellát főcsatornára és maradékra
 a12 kiemelt nemnulla minta mellett17 további alsó egyes is megmarad.
 A közvetlen főcsatorna96 olvasata nem adta a kulcsot; a maradék szerepe nyitott.
 
-A legfrissebb **C21–C23** a teljes maradék előrejelzését és képi szerepét
+A **C21–C23** a teljes maradék előrejelzését és képi szerepét
 vizsgálja. A helyi szabályok, a rögzített ellenőrzőkódok és közvetlen
 deltaolvasatok nem adtak teljes előrejelzést. Fontos mérési javítás:
 az utolsó blokk hibájából kivettük az aláírás pixeleit. Hullámkivágáson a
 maradék elhagyása 2,3–4,8-szoros ellenőrzési hibát ad; mind a hat szabad
 újraillesztés ugyanazt a 256 mintát állítja vissza. A generátor és a kulcs
 továbbra sincs azonosítva. Részletek a napló tizenharmadik körében.
+
+A legfrissebb **C24–C26** a 13 új csatolmányt és a két blokkal távolabbi
+illesztést auditálja. A négy mellékelt program eredménye reprodukálható.
+A közös felezési eltolás a 7. blokkban 25/32 értéket és mind a nyolc
+változó alsó bitet eltalálja; a hét eltérés mind magasbit-eltérés.
+A külső maradék egyszerű cellánkénti hozzárendelése nem adja meg ezeket
+a javításokat. [Teljes audit és kontrollkorlátok](research/REPORT_20261101_UPLOAD_AUDIT.md).
 
 ## Reprodukálás
 
@@ -268,3 +275,19 @@ egységnyi csúcskorrekciót hordoz; pontos normalizált sugárterülete 48.
 Ez továbbra is mért, modellfüggő összefüggés, nem igazolt kulcsdekóder.
 
 ![Maradék-előrejelzés és hullámkivágás](research/data/residual_followup_audit.png)
+
+## Feltöltött auditok és lag2 jóslat
+
+```sh
+python3 tools/reproduce_uploaded_audits.py
+python3 tools/check_lag2_halving.py
+python3 tools/check_lag2_residual_bridge.py
+MPLCONFIGDIR=/tmp/halv_mpl XDG_CACHE_HOME=/tmp/halv_cache python3 tools/plot_lag2_audit.py
+```
+
+Az eredeti csatolmányok a `research/sources/upload_*` fájlokban vannak;
+az audit négy átnézett programot futtat külön ideiglenes könyvtárban,
+a hiányzó CSV-t a repó rögzített mintáiból előállítva.
+
+![Reprodukált blokkillesztés](research/data/lag2_pair_alignment.png)
+![Előrejelzés és kontrollcsaládok](research/data/lag2_prediction_audit.png)

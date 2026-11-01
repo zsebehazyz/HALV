@@ -1,0 +1,151 @@
+{
+  "model": "C24",
+  "input_sha256": {
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/sources/cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "research/models/upload_audit_v1.json": "0b6be6a18374352c1d9b342d0a1eb3abc9b88e5ef859d8898d6eb537cf9d8d23",
+    "research/sources/upload_batch_20261101_manifest.json": "525df00695e6d244d41a0ae43ba07d301ec5372dd42f0ffbf76e49cefa731a0d",
+    "tools/reproduce_uploaded_audits.py": "d31b0e26b2b4db6690113c20b71ba298a2eb9f1a11618840f44ca6caeb8ee524",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+  },
+  "generated_csv_sha256": "488d9879edd506445af61e490ccd6336a24841652ccbaec76fa72c6d2be81179",
+  "canonical_states_sha256": "895c75d543327473bf4ec18aa2a5b238ada7fae750a1566fb6d077020eb7dd0d",
+  "comparisons": {
+    "HALV_kulso_belso_dimenzio_ellenorzes_20261101.py": {
+      "reported_default_dimensions_match": true,
+      "reported_minimum_dimensions_match": true
+    },
+    "HALV_352bit_WIF7_audit_20261101.py": {
+      "all_declared_fields_match_except_runtime": true,
+      "differences": {}
+    },
+    "HALV_TXID_harom_kimenet_celzott_audit_20261101.py": {
+      "all_declared_fields_match_except_runtime": true,
+      "differences": {}
+    },
+    "HALV_TXID_128_szimbólum_egyezes_kontroll_20261101.py": {
+      "all_declared_fields_match_except_runtime": true,
+      "differences": {}
+    }
+  },
+  "executions": {
+    "HALV_kulso_belso_dimenzio_ellenorzes_20261101.py": {
+      "saved_result": "research/data/reproduced_upload_dimensions.json",
+      "source_sha256": "dd1fe709c64c05ffed7168603f922da13173b6c331da8821ba841560dddd2f71",
+      "stdout": "block 1 default dimension 6 min dimension 5\nblock 2 default dimension 6 min dimension 5\nblock 3 default dimension 4 min dimension 4\nblock 4 default dimension 4 min dimension 4\nblock 5 default dimension 3 min dimension 3\nblock 6 default dimension 4 min dimension 4\nblock 7 default dimension 3 min dimension 3\nblock 8 default dimension 5 min dimension 5\nsaved: /tmp/halv_reviewed_uploads_iha5v1yb/HALV_kulso_belso_dimenzio_20261101.json\n",
+      "returncode": 0
+    },
+    "HALV_352bit_WIF7_audit_20261101.py": {
+      "saved_result": "research/data/reproduced_upload_wif7.json",
+      "source_sha256": "0db404ef7003353a09590b806be4ca61ba2df24c0737d15b9acf1590072fa980",
+      "stdout": "{\n  \"source_sha256\": \"3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95\",\n  \"model\": \"352 bits from 3 outer (2-bit) plus 5 middle (4-bit) block sets, search 7-bit ASCII WIF without leading 5\",\n  \"models_tested\": 4608,\n  \"perfect_base58_strings\": 0,\n  \"highest_base58_chars_in_50\": 33,\n  \"highest_printable\": 46,\n  \"top5\": [\n    {\n      \"base58_count\": 33,\n      \"ascii_printable_count\": 42,\n      \"text\": \"o1JEz.tST.h==WMiD-8[LidNlINnZ.e...ujP)Qg[b.\\\\.WtgCT\",\n      \"mapping\": [\n        0,\n        1,\n        2,\n        3\n      ],\n      \"outer_bit_order\": \"lo-hi\",\n      \"cell_reverse\": true,\n      \"block_reverse\": true,\n      \"full_bit_reverse\": false,\n      \"seven_bit_reverse\": true,\n      \"inverse\": true,\n      \"offset\": 0\n    },\n    {\n      \"base58_count\": 33,\n      \"ascii_printable_count\": 42,\n      \"text\": \"TCgtW.\\\\.b[gQ)Pju...e.ZnNIlNdiL[8-DiMW==h.TSt.zEJ1o\",\n      \"mapping\": [\n        0,\n        1,\n        2,\n        3\n      ],\n      \"outer_bit_order\": \"lo-hi\",\n      \"cell_reverse\": true,\n      \"block_reverse\": true,\n      \"full_bit_reverse\": true,\n      \"seven_bit_reverse\": false,\n      \"inverse\": true,\n      \"offset\": 2\n    },\n    {\n      \"base58_count\": 33,\n      \"ascii_printable_count\": 42,\n      \"text\": \"TCgtW.\\\\.b[gQ)Pju...e.ZnNIlNdiL[8-DiMW==h.TSt.zEJ1o\",\n      \"mapping\": [\n        3,\n        2,\n        1,\n        0\n      ],\n      \"outer_bit_order\": \"hi-lo\",\n      \"cell_reverse\": false,\n      \"block_reverse\": false,\n      \"full_bit_reverse\": false,\n      \"seven_bit_reverse\": false,\n      \"inverse\": true,\n      \"offset\": 2\n    },\n    {\n      \"base58_count\": 33,\n      \"ascii_printable_count\": 42,\n      \"text\": \"o1JEz.tST.h==WMiD-8[LidNlINnZ.e...ujP)Qg[b.\\\\.WtgCT\",\n      \"mapping\": [\n        3,\n        2,\n        1,\n        0\n      ],\n      \"outer_bit_order\": \"hi-lo\",\n      \"cell_reverse\": false,\n      \"block_reverse\": false,\n      \"full_bit_reverse\": true,\n      \"seven_bit_reverse\": true,\n      \"inverse\": true,\n      \"offset\": 0\n    },\n    {\n      \"base58_count\": 33,\n      \"ascii_printable_count\": 41,\n      \"text\": \"o1JEz.tST.X[}NNiH58=LqT.lQMn..V...ujP)Qg[b.\\\\.WtgCT\",\n      \"mapping\": [\n        0,\n        1,\n        3,\n        2\n      ],\n      \"outer_bit_order\": \"lo-hi\",\n      \"cell_reverse\": true,\n      \"block_reverse\": true,\n      \"full_bit_reverse\": false,\n      \"seven_bit_reverse\": true,\n      \"inverse\": true,\n      \"offset\": 0\n    }\n  ],\n  \"caveat\": \"The 352-bit representation and 3+1 encoding are speculative, this only tests simple shared reading conventions.\"\n}\n",
+      "returncode": 0
+    },
+    "HALV_TXID_harom_kimenet_celzott_audit_20261101.py": {
+      "saved_result": "research/data/reproduced_upload_txid_outputs.json",
+      "source_sha256": "0413b16dea587e5571d17a585c1f47355a26dbdda42adc54c5e311e014985c9a",
+      "stdout": "{\"unique_32byte_candidates\": 2368, \"exact_hits\": [], \"elapsed_seconds\": 1.68, \"middle_160bit_vs_address_hash_bit_differences\": {\"HALV_main\": 90, \"DotPuz_4040\": 72, \"P2SH_change\": 86, \"funding_input\": 65}}\nReport /tmp/halv_reviewed_uploads_iha5v1yb/HALV_TXID_harom_kimenet_celzott_audit_20261101.json\n",
+      "returncode": 0
+    },
+    "HALV_TXID_128_szimbólum_egyezes_kontroll_20261101.py": {
+      "saved_result": "research/data/reproduced_upload_txid_control.json",
+      "source_sha256": "f15fd821bcbe7c885ae071557291917a1775e63a04bac048f980ca869a78cbda",
+      "stdout": "{\n  \"observed_max_correct_128\": 52,\n  \"observed_best_parameters\": [\n    \"pair_sum_mod4\",\n    \"forward\",\n    \"tx_be\",\n    12,\n    [\n      2,\n      0,\n      1,\n      3\n    ]\n  ],\n  \"random_trials\": 400,\n  \"random_min\": 49,\n  \"random_median\": 53.0,\n  \"random_max\": 61,\n  \"random_count_at_least_observed\": 341,\n  \"empirical_p_with_plus_one\": 0.8528678304239401,\n  \"tested\": \"7 waveform pairing schemes x both directions x both txid orientations x 128 shifts x 24 bijective state mappings\",\n  \"warning\": \"This can only reject a direct substituted/shifted-dibit encoding; XOR with a truly unknown secret would show no correlation.\"\n}\n",
+      "returncode": 0
+    }
+  },
+  "hamming_phase_scores": [
+    [
+      16,
+      18,
+      15,
+      12
+    ],
+    [
+      16,
+      15,
+      5,
+      13
+    ],
+    [
+      9,
+      0,
+      12,
+      9
+    ],
+    [
+      0,
+      6,
+      7,
+      5
+    ],
+    [
+      8,
+      7,
+      6,
+      0
+    ],
+    [
+      10,
+      10,
+      0,
+      9
+    ],
+    [
+      5,
+      0,
+      5,
+      8
+    ],
+    [
+      12,
+      16,
+      17,
+      17
+    ]
+  ],
+  "cellwise_H_xor_rotated_L_hex": "3d6f4b82d6dfbde9f73ee692295e463263dcc2987ace433a112419f4f4e2ef82",
+  "collision_count_per_block": [
+    6,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5
+  ],
+  "weighted_H_hex": "e04d392784c0a9324cdd63716cdcb040685c20c3c25039466ac192774c40b0c0",
+  "weighted_L_hex": "2084c08121c5881000c0090122458090e14181012184810183c4498142058000",
+  "weighted_sum_overflow_columns": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    9,
+    13,
+    14,
+    15,
+    16,
+    19,
+    20,
+    21,
+    24,
+    25,
+    26,
+    27,
+    30,
+    31
+  ],
+  "weighted_sum_overflow_count": 20,
+  "funding_data_status": "User-provided transcript; no independent raw transaction validation in this offline audit",
+  "fixed_uploaded_CORE20_hex": "fdcbb96843ad8c6463dcc298b5672995448146f1",
+  "limitations": [
+    "Source CSV was not attached; reproduction explicitly uses this repository's independently fitted states",
+    "Uploaded CORE20byte constant is an explicit fixed parameter, not reconstructed by that script",
+    "Reproducing arithmetic of funding outputs does not independently verify on-chain transaction contents",
+    "Results mentioned only in reports without supplied programs remain user-reported"
+  ]
+}

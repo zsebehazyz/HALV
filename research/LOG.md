@@ -1636,3 +1636,113 @@ Mentések: `data/residual_predictors_check.json`, `data/residual_codes_check.jso
 a két keret primary32/residual12 bináris fájljai; a három models/ specifikáció,
 `sources/rs_reference_vectors.json`, valamint a megfelelő tools/ programok.
 A teljes bizonyítékjegyzék frissítve; a régi geometriai és hang-/Morse-ágak megmaradnak.
+
+## 2026-11-01 – tizennegyedik kör: új csatolmányok, eltolásjóslat és maradékhíd
+
+A felhasználó 13 fájlt és egy három sorpárból álló illesztési ábrát adott.
+Az eredeti fájlokat bájtpontosan archiváltuk `sources/upload_*` néven;
+eredet/név/méret/hash a `sources/upload_batch_20261101_manifest.json` fájlban.
+A dokumentumokba ágyazott javaslatok nem új felhasználói felhatalmazások.
+Négy átnézett programot választottunk az elkülönített saját reprodukcióhoz.
+
+### C24 – a deklarált számítások reprodukálhatók
+
+A csatolmányokból hiányzott a numerikus CSV; a repó rögzített 256 állapotából
+ideiglenes round_q CSV készült. Ezzel a rangjelentés eredeti/minimális
+dimenziói és a három mellékelt JSON minden mezője egyezik, a futási idő kivételével.
+Az eredeti cellák affine dimenziói 6,6,4,4,3,4,3,5; a négy fázis minimumai
+5,5,4,4,3,4,3,5. Ez az egyszerű, közös négybites affin kód külső alkalmazása
+ellen szól, nem általános nonlinearitás vagy állapot kizárása.
+
+WIF-audit: 4608 olvasat, 0 teljes Base58-sor, legjobb 33/50 karakter.
+Háromkimenetes audit: 2368 jelölt, 0 pontos találat a program által felsorolt
+cím-/szkriptcsaládra. Ez a feltöltött futás reprodukciója; nem 2368 új hipotézis.
+A script CORE20 értéke beégetett, a reprodukció ezt használja változatlanul.
+
+TXID128-kontroll: 52/128 egyezés, 400 kontrollból 341 legalább ilyen jó,
+kontrollmedián 53, plusz-egyes arány 342/401=0,8528678. Az egyszerű közvetlen
+TXID-olvasat e családban nem kap támogatást. A kód állapotpermutációkat és
+eltolásokat is újrakeres minden kontrollon; ismeretlen titkos maszkot nem tesztel.
+A nem csatolt programokhoz tartozó nagy futásszámok továbbra is forrásállítások.
+
+Az új H XOR kvartetten belül jobbra forgatott L művelet is reprodukálható;
+az ütközésszám 6,4,0,0,0,0,0,5, összesen 15. A súlyozott S=2H+L oszlopok
+20 helyen túlcsordulnak. Ezek nem azonos maradékdefiníciók, nem egymás checksumjai.
+
+### C25 – a felezési eltolás valóban ad konkrét jóslatot
+
+A három ábrabeli pár eredménye 26/32,24/32,25/32; a jobbra eltolások
+26,18,14. A négy lehetséges ötblokkos ablak pontszáma 56,67,75,63.
+Első 16 mintából választva az eltolások ugyanezek, a második feleken
+12/16,12/16,12/16 egyezéssel. Ez a korábban teljesen megtekintett adatokon
+végzett ellenőrzés; nem állítunk új, független mintából történt validálást.
+
+Rögzített alacsony paraméterszámú modell: `s_b=(a+S_b/2) mod32`,
+S_b=128/2^b. Minden ablakban az első két párból választjuk a-t, legkisebb
+értékkel bontva a holtversenyt. A középső ablakban a=10, tanítás 50/64;
+a 7. blokkot nem használva az eltolás jóslata 14. Az újraszámolt 7. blokkban
+25/32 érték egyezik. Mind a nyolc változó L hely helyes, három egyessel;
+a hét eltérés H-bit. A 24 további fix nulla L bit nem új független jóslat.
+Eltérő célpozíciók: 2,7,8,14,23,30,31 (nullaalapú).
+Összehasonlítás: mindig nulla 21/32, eltolás nélküli forrásmásolás 12/32,
+rögzített 2-es fázisigazítás 16/32. Az erősen nemuniform állapoteloszlást
+a kontrollok is megőrzik; nem 25%-os találati alaphoz mérjük a 25/32-t.
+
+Az összes lag2 párra extrapolálva az egyezések 7,17,26,24,25,8.
+A teljes kép generátorát ez még nem adja. A 10-es alap képi utasításként
+nem azonosított. A `phi_b=floor(2*S_b/3)-5*b` alak ugyanazokat a lag2
+fáziskülönbségeket adja; csak algebrai átírás. A két eltolásból moduláris
+felezéssel önmagában 14/30 kétértelműség lenne; a konkrét amplitúdóformula
+választja a 14-et. Ezt az implicit választást dokumentáltuk.
+
+### A kontrollcsalád érzékenysége
+
+30000 kontroll az egész négyes cellákat, 10000 kontroll egész nyolcmintás
+szakaszokat kever blokkonként, belső sorrendjük megtartásával. A generálásnál
+ellenőriztük a teljes szakaszok megőrzését; nem külön-külön kevertük a négy
+bitpozíciót. Minden kontrollon újra elvégezzük az összes ablak/modellválasztást.
+
+A 75-ös összpontszámot kvartett-kontrollon 0, nyolcmintás kontrollon 44 eset
+éri el. A tanításon választott közös a és a céljóslat összesített 75-ös
+eredményét rendre 0 és 4 kontroll éri el. A puszta 25/32-es céljóslatot,
+a négy ablakból legjobbat választva, 134/30000 és 566/10000 éri el;
+plusz-egyes arányok 0,4500% és 5,6694%. E különböző tesztstatisztikákat
+nem cseréljük fel. A pontos kontrollsorozatok NPZ-ben elmentve.
+
+A plusz-egyes arány nem konfidencia-felsőkorlát, nem minden korábbi
+keresést korrigáló p-érték. A helyi hosszabb alakzatok megtartása gyengíti
+a szokatlanság bizonyítékát. Két félblokk cseréje puszta körforgatás;
+a leíró körkörös maximum változatlanságát ellenőriztük, de nem nevezzük
+informatív nullmodellnek.
+
+### C26 – a 96 bites javítás és a 96 bites R kapcsolata
+
+Új hipotézis: a három külső R-szó a három középső lag2 átmenet javítását
+hordozza. A három XOR-javítás bitösszege 7,11,7, összesen 25; R-é 12,5,12,
+összesen 29. Puszta bitpermutáció nem lehet pontos megfeleltetés.
+
+Tágabb célzott család: két R-keret, három A-keret (köztük a feltöltött,
+nullahelyet kitöltő olvasat), XOR/nibble-/teljes szókivonás, hat szóhozzárendelés,
+egyetlen közös cellairány és forgatás. A 1728 koordinátakonfiguráció mindegyikén
+csak az első két átmeneten illesztünk közös R4→D4 affine leképezést vagy
+általános nibble-táblát. Már a tanító 16 cellán sincs konzisztens megoldás.
+A harmadik átmenetre így e családból nincs teljes jóslat. Nem teszteltünk
+önkényes, nagy paraméterszámú 96→96 leképezést, amely ezen az egy adaton
+bármit megmagyarázhatna. Kulcspróbát a C25/C26 nem indít.
+
+### Külső forrásellenőrzés és mentés
+
+A csatolt finanszírozási hivatkozás GitHub-README-je letöltve és archiválva.
+A 312500 sat összeget és 2024-04-18 dátumot közli, a teljes TXID-t nem.
+A nyers háromkimenetes tranzakciót továbbra sem igazoltuk; a DotPuz-kimenet
+szerepe nyitott. A másik megadott GitHub solved-levels útvonal 404-et adott;
+ebből a Codex Fibonacci-módszere nem vált most önállóan ellenőrzött ténnyé.
+A harmadik fél 118 bites alakzatbecslését nem tekintjük a teljes PNG korlátjának.
+
+Részletes jelentés: `REPORT_20261101_UPLOAD_AUDIT.md`. Új eredmények:
+`data/upload_audit_check.json`, a négy `data/reproduced_upload_*.json`,
+`data/lag2_halving_check.json`, `data/lag2_control_scores.npz`,
+`data/lag2_residual_bridge_check.json`, `data/lag2_pair_alignment.png`
+és `data/lag2_prediction_audit.png`.
+A fájlok pontos neve és hash-e a frissített RUN_INDEX-ben van.
+**Nincs közös, minden kivételt előállító generátor és nincs igazolt HALV-kulcs.**

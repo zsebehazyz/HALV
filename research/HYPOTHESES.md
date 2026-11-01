@@ -390,3 +390,38 @@ a vizsgált Fibonacci/exponenciális táblák sem adnak teljes egyezést.
 működő közös generátor; R esetleges utasítás-/paraméter-szerepe; a megfelelő
 geometriai normalizálás; összetettebb Fibonacci–hang–Morse műveletsorrend.
 Az eddigi tesztek nem igazolnak kész dekódolási láncot.
+
+## C24–C26: csatolmányok, lag2 fázis és a maradék lehetséges kapcsolata
+
+Az új 13 forrásból négy átnézett programot futtattunk a rögzített q-n.
+A rangok, 4608 ASCII7-olvasat, 2368 kulcsjelölt és a TXID-kontroll teljes
+eredménye reprodukálható. A hiányzó CSV-t a repóból generáltuk; az eredeti
+csatolmányok változatlanok. A nyers finanszírozási tranzakció nincs függetlenül
+ellenőrizve. A beégetett CORE20 egy adott konvenció paramétere, nem új mérés.
+
+A 3–5., 4–6., 5–7. pár körkörös eltolása 26,18,14, az egyezések 26,24,25.
+Az első két párból az `s_b=(a+S_b/2) mod32` modellben a=10 adódik;
+a harmadikra 14-et jósol. A 7. blokk 25/32 értéke és a nyolc változó L bitje
+egyezik, hét H bit hibás. Ez a már látott adatokon végzett modellrekonstrukció;
+a 10-es alap képi jelentése nincs meg. Az összes lag2 párt nem írja le pontosan.
+
+A `phi_b=floor(2*S_b/3)-5*b` fáziskoordináta ugyanennek algebrai átírása,
+nem külön bizonyíték. Az első 16 minta szerinti illesztés második felén
+12/16 egyezés reprodukálható, de nem független új képi teszt.
+
+A négy ablakra végzett kontroll az ismert 75-ös összegnél egész kvartetteket
+keverve 0/30000, nyolcmintás szakaszokat keverve 44/10000 találatot ad.
+A 25/32 céljóslatot a négy ablak közül legjobbat választva rendre 134/30000
+és 566/10000 kontroll éri el. A különböző statisztikákat nem cseréljük fel;
+a lokális szerkezet megőrzése lényegesen befolyásolja az értékelést.
+
+Új összekapcsolási teszt: a három átmenet cellakód-javítása szintén 96 bit,
+mint a külső R. Az XOR-javítások 7,11,7 egyest, az R-szavak 12,5,12 egyest
+tartalmaznak; puszta bitpermutáció nem elég. Két R-keret, három A-keret,
+XOR/nibble-/szókivonás és egységes forgatások 1728 konfigurációja közül
+sem affine, sem általános memóriátlan nibble-tábla nem konzisztens már az
+első két átmenettel sem. Ez e helyi család negatívuma, nem globális vagy
+állapotos kapcsolatok kizárása.
+
+Részletes audit: `REPORT_20261101_UPLOAD_AUDIT.md`. A korábbi geometriai,
+Fibonacci–hang–Morse és bitréteg-ágak megmaradnak. Közös generátor és kulcs nincs.
