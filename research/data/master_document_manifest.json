@@ -2,11 +2,11 @@
   "purpose": "Append-only full research MD; old snapshot plus new end chapters",
   "mode": "append_only",
   "master_path": "research/HALV_TELJES_KUTATAS.md",
-  "master_sha256": "95b61dd25236ddfe51889f1b7eb4bb28fef45c4d9013642f60e78d28fd13fe9a",
+  "master_sha256": "3ef034f0feabdf30f83ef885200674ebf8808a05da014c74ca6c804c99bc1596",
   "frozen_prefix_bytes": 298373,
   "frozen_prefix_sha256": "c08809df3d1725dde612e150008d00ca8caf76fa89fcb9523a2650ff9d6fadb2",
   "base_snapshot_journal_rounds": 19,
-  "journal_round_headings": 26,
+  "journal_round_headings": 27,
   "all_journal_rounds_present": true,
   "full_journal_embedded_as_one_current_snapshot": false,
   "full_reports_embedded": [
@@ -52,7 +52,8 @@
     "research/models/marker_raster_v1.json",
     "research/models/cell_moment_identifiability_v1.json",
     "research/models/fibonacci_vlc_v1.json",
-    "research/models/fibonacci_residual_roles_v1.json"
+    "research/models/fibonacci_residual_roles_v1.json",
+    "research/models/image_directed_join_v1.json"
   ],
   "appended_chapters": [
     {
@@ -904,6 +905,57 @@
           "sha256": "8500c68bfec5fb9dd3078104405a30d645c46c90a71d09e0827fcca99af6b099"
         }
       ]
+    },
+    {
+      "journal_round": 27,
+      "offset": 420869,
+      "bytes": 13888,
+      "sha256": "6a4df1b499505176ed47d68a6cb9d176de09b523063f42fe2b6ee65ba8b523c2",
+      "journal_section_sha256": "133a95870569219f3d7ebdc52d1cd12aa0ee50d9f6e50fe0775815538a0c458a",
+      "model_inputs": [
+        {
+          "path": "research/models/image_directed_join_v1.json",
+          "bytes": 2404,
+          "sha256": "a94484acff79c2d67c665de9e74da2529c18aa19abf47dc5a681a709e9e5ce2b"
+        }
+      ],
+      "artifact_inputs": [
+        {
+          "path": "research/data/image_directed_join_check.json",
+          "bytes": 10528424,
+          "sha256": "ebe151e0a92ba8d8b0c2e3b34afed416e40799167984bc4b8642dd62de7c58a9"
+        },
+        {
+          "path": "research/data/image_directed_join_outputs.npz",
+          "bytes": 261191,
+          "sha256": "988dd2ae3bba134e05999d268f917ca5ae6f1f3edcedb65a73a4eb16ac668384"
+        },
+        {
+          "path": "research/data/image_directed_join_integrity.json",
+          "bytes": 941,
+          "sha256": "37bc04c1ed25a7068a362802d1e4be93bdd677c00f97da5d3f982d31b935b4a5"
+        },
+        {
+          "path": "research/data/residual_local_collisions.json",
+          "bytes": 8621,
+          "sha256": "842b9596456d67dfed7fe8beff33c92a5e9acaa2071ecb2373aafdb821db4b5b"
+        },
+        {
+          "path": "tools/check_image_directed_join.py",
+          "bytes": 5962,
+          "sha256": "4ae0ba5fc5bbb4f56d6461a446d109dd5e49d21f71774b99feceedc3a59b381a"
+        },
+        {
+          "path": "tools/audit_image_directed_join.py",
+          "bytes": 5127,
+          "sha256": "4f522932022df984349c08fc8975538675ad0a61c5ca03fd2563c72cae79e0ad"
+        },
+        {
+          "path": "tools/check_residual_local_collisions.py",
+          "bytes": 2288,
+          "sha256": "2eceb6f99fdc6967a0bfca5e88ccaf71091f56e0c0cbae4903ca8d83e9ead222"
+        }
+      ]
     }
   ],
   "inputs": [
@@ -916,26 +968,26 @@
     {
       "path": "README.md",
       "role": "dokumentum",
-      "bytes": 19363,
-      "sha256": "1152659a3e848a199a7b6c4f8176ff506957ff4a6f48ff62d16ef46a053934ef"
+      "bytes": 19342,
+      "sha256": "c0101fc3a556ed1d205b4b728096a78c88ee9585ff15b81d1d6aba59e1e0ad40"
     },
     {
       "path": "research/HYPOTHESES.md",
       "role": "dokumentum",
-      "bytes": 45793,
-      "sha256": "c879952455b085b2a3ba1fa4dbdab18c6b4c37d98d3603934e8637b8993cba73"
+      "bytes": 46538,
+      "sha256": "0c37639b4c3cd332e681c9ce462a3028478076dd864be3454c15df0ba4f40ccb"
     },
     {
       "path": "research/LOG.md",
       "role": "dokumentum",
-      "bytes": 194477,
-      "sha256": "e9f8df631afa5dcd440505b04b3abbdcdf95b3d44fcc862459b4c415c0e4bdd1"
+      "bytes": 204424,
+      "sha256": "7615601a628815cad77b2bdaf3d942352a57f4c68c12127191fab1c76945bbaf"
     },
     {
       "path": "research/MASTER_OVERVIEW.md",
       "role": "dokumentum",
-      "bytes": 6672,
-      "sha256": "6329051a581cc3645ac65e773122d4466b8c19b1def18fc6f7314f69562b5498"
+      "bytes": 7189,
+      "sha256": "1a46b0472cd30512e643161fe07d542b68a88fac5af7433717119a6477e5282f"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",
@@ -1226,6 +1278,24 @@
       "sha256": "25ff02c98056b136a36e739f7fcca62ac7a4ee7978644323f0a752f96fa02bb9"
     },
     {
+      "path": "research/data/image_directed_join_check.json",
+      "role": "eredmény/adat",
+      "bytes": 10528424,
+      "sha256": "ebe151e0a92ba8d8b0c2e3b34afed416e40799167984bc4b8642dd62de7c58a9"
+    },
+    {
+      "path": "research/data/image_directed_join_integrity.json",
+      "role": "eredmény/adat",
+      "bytes": 941,
+      "sha256": "37bc04c1ed25a7068a362802d1e4be93bdd677c00f97da5d3f982d31b935b4a5"
+    },
+    {
+      "path": "research/data/image_directed_join_outputs.npz",
+      "role": "eredmény/adat",
+      "bytes": 261191,
+      "sha256": "988dd2ae3bba134e05999d268f917ca5ae6f1f3edcedb65a73a4eb16ac668384"
+    },
+    {
       "path": "research/data/lag2_control_scores.npz",
       "role": "eredmény/adat",
       "bytes": 100509,
@@ -1354,8 +1424,8 @@
     {
       "path": "research/data/master_append_state.json",
       "role": "eredmény/adat",
-      "bytes": 93349,
-      "sha256": "b6468bc98d6a7ad84d191c8a25534b1df54ebac2a3e884ad9c062918aad858e8"
+      "bytes": 95262,
+      "sha256": "718541a51902c64ded5ff2683d5d3051fc88d4a9a0bb698b33fa63636831356c"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -1634,6 +1704,12 @@
       "sha256": "d9b3d73c508f408173a1c6de9b6bd70c7796d40917e0c1828d8e919d35fc1330"
     },
     {
+      "path": "research/data/residual_local_collisions.json",
+      "role": "eredmény/adat",
+      "bytes": 8621,
+      "sha256": "842b9596456d67dfed7fe8beff33c92a5e9acaa2071ecb2373aafdb821db4b5b"
+    },
+    {
       "path": "research/data/residual_physics_check.json",
       "role": "eredmény/adat",
       "bytes": 427664,
@@ -1872,6 +1948,12 @@
       "role": "rögzített modell",
       "bytes": 1156,
       "sha256": "32907bf2af36842f844ec69b4ab2f0df66606088aba0aad17596e94037c140e7"
+    },
+    {
+      "path": "research/models/image_directed_join_v1.json",
+      "role": "rögzített modell",
+      "bytes": 2404,
+      "sha256": "a94484acff79c2d67c665de9e74da2529c18aa19abf47dc5a681a709e9e5ce2b"
     },
     {
       "path": "research/models/lag2_halving_v1.json",
@@ -2924,6 +3006,12 @@
       "sha256": "4eb68d36a185bb0979d7acba6582ef49599dc9e792651d0456bb0810b299860c"
     },
     {
+      "path": "tools/audit_image_directed_join.py",
+      "role": "program",
+      "bytes": 5127,
+      "sha256": "4f522932022df984349c08fc8975538675ad0a61c5ca03fd2563c72cae79e0ad"
+    },
+    {
       "path": "tools/audit_marker_pixel_revisit.py",
       "role": "program",
       "bytes": 8314,
@@ -3062,6 +3150,12 @@
       "sha256": "2f25df4a1738e98db22241d16b29f697d993e3bc8171a875c9b9b1477a5d875f"
     },
     {
+      "path": "tools/check_image_directed_join.py",
+      "role": "program",
+      "bytes": 5962,
+      "sha256": "4ae0ba5fc5bbb4f56d6461a446d109dd5e49d21f71774b99feceedc3a59b381a"
+    },
+    {
       "path": "tools/check_lag2_halving.py",
       "role": "program",
       "bytes": 6848,
@@ -3180,6 +3274,12 @@
       "role": "program",
       "bytes": 8770,
       "sha256": "7296c1c3f657aba58b8b6a635c42e7084b84061399ac46532172f0b6e4e601ec"
+    },
+    {
+      "path": "tools/check_residual_local_collisions.py",
+      "role": "program",
+      "bytes": 2288,
+      "sha256": "2eceb6f99fdc6967a0bfca5e88ccaf71091f56e0c0cbae4903ca8d83e9ead222"
     },
     {
       "path": "tools/check_residual_physics.py",

@@ -1,0 +1,23 @@
+{
+  "model": "C47",
+  "independent_full256sample_inverses": 10080,
+  "independent_hex_cell_checks": 1290240,
+  "diagnostic_R_solution_enumerations_independently_audited": 1,
+  "best_valid_hex_cells_out_of64": 17,
+  "key_candidates": 0,
+  "C48_independent_conflicting_group_counts": [
+    4,
+    3,
+    1,
+    4,
+    3,
+    1
+  ],
+  "input_sha256": {
+    "research/data/image_directed_join_check.json": "ebe151e0a92ba8d8b0c2e3b34afed416e40799167984bc4b8642dd62de7c58a9",
+    "research/data/image_directed_join_outputs.npz": "988dd2ae3bba134e05999d268f917ca5ae6f1f3edcedb65a73a4eb16ac668384",
+    "tools/audit_image_directed_join.py": "4f522932022df984349c08fc8975538675ad0a61c5ca03fd2563c72cae79e0ad",
+    "research/data/residual_local_collisions.json": "842b9596456d67dfed7fe8beff33c92a5e9acaa2071ecb2373aafdb821db4b5b",
+    "tools/audit_fibonacci_residual_roles.py": "7e9c9bc7aa96233a3fc73522fba8324ffd7973727e94a5f5bdfeb1703ce9785c"
+  }
+}

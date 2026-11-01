@@ -3328,3 +3328,174 @@ akkor egészíti ki ezt az összképet, amikor a blokkolt elsődleges és fórum
 források elérhetővé válnak. Nem állítjuk, hogy a teljes internetet vagy
 zárt csoportokat átnéztük. A GitHub-publikálást csak sikeres push után
 tekintjük megtörténtnek. Ebben a körben nincs HALV-megfejtés.
+
+
+## 2026-11-01 – huszonhetedik kör: képi jel vezérelte A/R-illesztés és helyi lehetetlenségi tanúk, C47–C48
+
+### 1. Miért ez az összetett lánc?
+
+A felhasználó az R26-ban javasolt első irányt választotta: képi jel által
+vezérelt A/R-összeillesztés, a XIXOIO tanulságával. A feladat nem egyszerű
+bitpakolásként értelmezendő. Külön kell vizsgálni az adatot, az utasítást,
+a műveleti sorrendet, a maradék keletkezését és a visszakódolást.
+
+A XIXOIO-ban két félbájt külön mérhető, az illesztést zárójel vezérli,
+a végső aritmetikát logóérték módosítja. A Level2 feltételes vezérlése,
+Level5 geometriai normalizálása és XM17 mozgó kezdőpontja eltérő további
+előzmény. Ezeket nem tekintjük minden feladványra azonos receptnek.
+
+C47 konkrét hipotézise: a teljes A4/R4 egyesítéséből cellánként egy
+ASCII-hexkarakter keletkezik, amelynek szabályát a már mért képi jelek
+vezérlik. A 64 karakter 32 kulcsbájtot írhatna le. Ez indokolt, de nem
+bizonyított HALV-formátum. A vizsgálat nem zárhatja ki a geometriai,
+állapotos vagy más formátumú megoldást.
+
+### 2. A vizsgált vezérlőlánc, szabad cellajavítás nélkül
+
+Recept: `models/image_directed_join_v1.json`, a futtatás előtt rögzítve.
+A család feltáró, mert a képet és a korábbi eredményeket már ismertük.
+
+1. Az abszolút vagy fázisrelatív felbontás mind a 64 cellájának teljes
+   négy A- és négy R-bitjét megtartjuk. A 20 eltérő cella nem kivétel.
+2. A marker BD-bitje az adott blokkban felcserélheti a két csatornát;
+   kontrollként nincs csere, BD szerinti vagy inverz BD szerinti csere.
+3. A két négybites csatorna belső sorrendjét megőrző mind a 70 illesztés
+   szerepel: A4R4, R4A4, R2A4R2 és az összefésülések is. A 70 nem a
+   tetszőleges nyolcbites permutációk száma, hanem C(8,4).
+4. A kész bájt bitkezdését a mért z-fázis, r-fázis, a képi dátum számjegye
+   modulo8, vagy a rögzített nulla elforgatás adja.
+5. A bájthoz a dátum aktuális számjegyét hozzáadjuk, kivonjuk, vagy nem
+   módosítjuk. A 20042402 olvasatot a tárolt pixelmérés adja; nem keresünk
+   alternatív dátumot vagy szabad konstanseltolást.
+6. Globális komplementálás vagy annak hiánya zárja a receptet.
+
+2 keret ×70 illesztés ×3 csere ×4 forgatás ×3 aritmetika ×2 polaritás
+= **10080 recept**, 6720 különböző 64 bájtos kimenettel.
+A receptek nem független statisztikai próbák és nem mind teljesen újak:
+a C28–30 két egyszerű csatornapakolása részben átfedő kontroll.
+
+A dátum és a marker numerikus értelmezése hipotézis. A HALV-képen nem
+azonosítottunk igazolt XIXOIO-zárójelet; nem állítjuk, hogy az utasítás
+szemantikáját már megoldottuk. A kötéseket előre megadtuk, nem a címre
+hangoltuk. A modulo256 itt a kétoldalt invertált bájtaritmetika része,
+nem egy túl nagy dekódolt érték utólagos megmentése.
+
+### 3. Erősebb kapu: a kulcsból generálható teljes hullám
+
+A 10080 kimenet mindegyikénél csak a 64 kimeneti bájt és a recept alapján
+visszavonjuk a komplementálást, aritmetikát, forgatást, illesztést és
+csatornacserét, majd a rögzített fázisszabállyal visszakapjuk a hullámot.
+**Minden esetben pontosan visszaáll 256/256 q és a teljes 256 R-bit.**
+Ez még csak a leképezés veszteségmentességének ellenőrzése.
+
+A további kapu szigorúbb: mind a 64 kimeneti bájt egységes nagybetűs
+vagy egységes kisbetűs ASCII hexkarakter legyen. Az így kapott kulcsból
+újra előállítjuk ugyanazt a kanonikus hexszöveget, majd ugyanazzal az
+inverzzel mind a 256 q-t és R-t. Így a maradékot nem külső mellékletből,
+és nem elmentett kis-/nagybetűmaszkból kapnánk vissza.
+Csak ezután lenne indokolt a két nyilvánoskulcs-formátum célcímpróbája.
+A teljes karakterfolyam megfordítása csak e kapu teljesülése után szerepelne.
+
+**Eredmény: 0 teljes kanonikus hexfolyam, 0 kulcsjelölt.**
+A legjobb diagnosztikus recept is csak **17/64** megengedett karaktert ad.
+Ez abszolút keretben az A biteket a [1,5,6,7] nullaalapú helyekre teszi;
+nincs marker-csere, forgatás, dátumaritmetika vagy komplementálás.
+A 47 többi cellát nem javítjuk ki és nem hagyjuk el. A legtöbb megfelelő
+karaktert adó recept utólagos diagnosztika, nem egy kiválasztott megfejtés.
+
+A nulla címegyezéshez itt nulla kulcsjelölt tartozik, nem 10080 különböző
+privátkulcs-próba. Nem alkalmaztunk hash-véglegesítést, csonkítást, paddinget
+vagy egyes cellákra külön illesztést.
+
+### 4. R nem csak megőrzött melléklet: algebrai kompatibilitás
+
+Minden receptnél és mindkét kanonikus ábécénél külön számoljuk:
+adott A és képi utasítás mellett mely R-nibble-ök eredményezhetnének
+megengedett karaktert? A 16 karakterből visszafelé számolunk, nem tanítunk
+illesztőt a megfigyelt R-re. Rögzítjük az üres, egyértelmű és többértelmű
+megoldáshalmazokat, valamint a tényleges R tagságát, minden cellára.
+
+A legjobb 17/64 karakteres receptnél 11 cellához semmilyen R nem adna
+megengedett nagybetűs karaktert; 48 cellánál egyetlen, 5-nél több R lehetséges.
+A teljes családban a legkisebb üresmegoldás-szám is 5 cella. Vagyis még az
+R szabad átírásával sem lenne az adott A-k és vezérlések mellett teljes
+kanonikus hexszöveg ebben az egész családban. R javítását ténylegesen nem
+végeztük el: ez algebrai ellenpélda, nem új jelöltkeresés.
+Ez a konkrét ASCII-hex és sorrendtartó illesztési családra vonatkozik.
+
+### 5. C48: van-e egyáltalán helyi R=f(A,képi jel) szabály?
+
+A C47 után külön követő szerkezeti ellenőrzést futtattunk. Ha két azonos
+A-nibble ugyanabban a blokkban más R-t kap, akkor R nem lehet pusztán A
+és bármilyen blokkonként állandó képi utasítás determinisztikus függvénye.
+Ez a nemlineáris függvényekre is igaz; nem kell találgatni a képletet.
+
+Még a teljes blokkazonosítót is engedjük bemenetként, ami több információ,
+mint önmagában a dátumszámjegy, a markerbit vagy az adott blokk fázisa.
+További két próbában a cellaszám modulo2, illetve modulo4 is megengedett.
+Nem illesztünk táblát: csak ütközési tanúkat keresünk a mért adatokban.
+
+| Keret | R=f(A,blokk) ütköző csoport | +cellaszám mod2 | +cellaszám mod4 |
+| --- | ---: | ---: | ---: |
+| abszolút | 4 | 3 | 1 |
+| fázisrelatív | 4 | 3 | 1 |
+
+Konkrét, nullaalapú tanú: a 10. és 14. cella ugyanabban a második blokkban
+van, mindkettő cellaszáma modulo4=2, mindkettő A=15. Abszolút keretben
+R rendre8 és2; fázisrelatív keretben8 és4. Egyetlen determinisztikus
+R=f(A,blokk,cellaszám mod4) sem adhatja egyszerre ezeket.
+A függvény komplexebbé tétele önmagában nem oldja fel ezt az ütközést.
+
+Ez nem zárja ki, hogy R önálló adatot hordoz, korábbi állapottól függ,
+vagy hogy a valódi payload csak egy másik, nemlineáris összeillesztés után
+azonosítható. A teljes cellapozíciót külön paraméterként kiosztó táblázat
+viszont csak megjegyezné az adatot. A korábbi C21 és állapotos ágak
+negatívumait ez nem helyettesíti; itt egy rövid, ellenőrizhető ellenpéldát
+adunk a mostani egyszerű helyi vezérlési értelmezéshez.
+
+### 6. Ellenőrzés és reprodukció
+
+A főprogram mind a 70 illesztést mind a 256 bájton kalibrálja:
+17920 pontos illesztési kontroll. A 10080 tényleges teljes inverz ellenőrzött.
+A külön audit egészműveletekkel, más bitkiválasztással és saját q-helyreállítással
+újraszámolja mind a 10080 teljes inverzt és 1290240 karaktertagsági próbát.
+A legjobb recept R-megoldáshalmazait külön újraenumerálja.
+A C48 mind a hat függvénycsaládjának ütközésszámát és tanúit a korábban
+függetlenül írt csatornakinyeréssel is megerősíti. Minden ellenőrzés sikeres.
+
+```sh
+cd /workspace/HALV
+OPENBLAS_NUM_THREADS=1 python3 tools/check_image_directed_join.py
+python3 tools/check_residual_local_collisions.py
+OPENBLAS_NUM_THREADS=1 python3 tools/audit_image_directed_join.py
+```
+
+A teljes kimeneti bájtmátrix NPZ-ben, a receptek, hibás cellák és R-kompatibilitás
+JSON-ban vannak; a tanúk külön JSON-ba kerülnek. A JSON tömör szöveges
+formátuma csak a méretet csökkenti, nem tartalmi szűrés. A hash-ek a fejezet
+mellékleteiben és a kutatási indexben szerepelnek.
+
+### 7. Mit szűkítettünk, és hogyan gondolkodjunk tovább?
+
+A képi jel→csatornaművelet→formátum→kulcs→hullám láncot ténylegesen
+megpróbáltuk, az összes kellemetlen cellával együtt. A mostani negatívum
+nem jelenti azt, hogy Zden egyszerű vagy egyetlen csatornás megoldást készített.
+Éppen a C48 mutatja, hogy az A-nibble és a blokkonkénti utasítás együtt
+sem magyaráz el minden R-t, még egy rövid mozgó cellaórával sem.
+
+A következő érdemi jelöltnek ezért legalább egyet konkrétan indokolnia kell:
+R valóban önálló adatrész; a dekódolás előzményállapotot használ; a payload
+nem a jelenlegi A-nibble; vagy előbb a geometriát/képi előállítást kell
+visszafordítani. Ezeket nem lehet az összes képi jel korlátlan kombinálásával
+helyettesíteni. A C31–34 előzményállapot-próbái és a C42 renderer-negatívum
+csak saját receptjeikre vonatkoznak, nem általános kizárások.
+
+A közvetlen kanonikus hexformátum feltevése szintén nyitott: ebben a körben
+WIF-kihagyást vagy Fibonacci-kódot nem erőltettünk a 64 cellára.
+A geometriai C43 információmegőrzés és a teljes q/R továbbra is megmarad.
+A marker Morse-olvasata nem vált most bizonyított vezérlőutasítássá.
+Nincs azonosított HALV-generátor vagy kulcs. A következő lépéshez olyan
+képi jelhez kötött művelet kell, amely a C48 tanúinak eltérését előre kezeli,
+nem külön kivételként javítja őket.
+
+A meglévő MD korábbi 420869 bájtja változatlan marad; új jelentés-MD nincs.

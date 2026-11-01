@@ -1,0 +1,13 @@
+{
+ "model":"C47",
+ "motivation":"XIXOIO has two halfbytes whose joining is selected by a drawn instruction and whose final arithmetic uses logo values. Test a finite HALV transfer using existing measured cues, not a claim of identical encoding.",
+ "input":"All64 A4/R4 cells in absolute and phase_relative frames, full256R bits. No edge exceptions.",
+ "joins":"All70 choices of4positions among8 for A, preserving internal A and R order. Includes A4R4,R4A4,R2A4R2 and alternating joins.",
+ "image_controls":{"swap_channels":["none","BD_marker","inverse_BD_marker"],"byte_rotate_left":["none","staircase_zero_phase_z","odd_phase_r","date_digit_mod8"],"arithmetic_after_rotation":["none","add_date_digit_mod256","subtract_date_digit_mod256"],"global_byte_complement":[false,true]},
+ "date":"Only directly measured20042402, bound one digit per32sampleblock. No alternate date reading or tuned offset.",
+ "scope":"2frames*70joins*3swaps*4rotations*3arithmetic*2complements=10080 recipes. Whole output reversal only for canonical key gate. Cue bindings are hypotheses, including otherwise undemonstrated use of date digits as numeric instructions.",
+ "gates":"All64cells retained. Inverse from64output bytes and recipe only must recover256q and256R. To claim a key-derived encoder, require exactly64uppercase hex OR exactly64lowercase hex, decode32bytes, then regenerate canonical hex from that key, invert recipe and reproduce originalq/R without a saved case-mask or residual. Check both address formats only after this gate.",
+ "residual_prediction":"For each recipe and canonical alphabet, enumerate16possible output characters for each fixed A4 and image cue, invert to possible R4; count no-solution, unique, ambiguous and measuredR membership. This is algebraic compatibility, not learned fit. Apply to every cell, including20irregular cells.",
+ "calibration":"All70joins exhaustively invert all256byte values; exact arithmetic, channel swap and rotations; independent integer-based full inverse audit of archived outputs.",
+ "limitations":["Finite posthoc transfer, not universalXIXOIO orHALV exclusion","No claim thatHALV signature contains a confirmed bracket instruction","Does not test arbitraryR0..R3 permutations, nonlinear glyph dictionaries, neighbors or new pixel renderer","No independent hash finalization, padding, trimming or per-cell repair","Geometric andFibonacci branches retained"]
+}

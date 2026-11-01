@@ -2503,6 +2503,57 @@
           "sha256": "8500c68bfec5fb9dd3078104405a30d645c46c90a71d09e0827fcca99af6b099"
         }
       ]
+    },
+    {
+      "journal_round": 27,
+      "offset": 420869,
+      "bytes": 13888,
+      "sha256": "6a4df1b499505176ed47d68a6cb9d176de09b523063f42fe2b6ee65ba8b523c2",
+      "journal_section_sha256": "133a95870569219f3d7ebdc52d1cd12aa0ee50d9f6e50fe0775815538a0c458a",
+      "model_inputs": [
+        {
+          "path": "research/models/image_directed_join_v1.json",
+          "bytes": 2404,
+          "sha256": "a94484acff79c2d67c665de9e74da2529c18aa19abf47dc5a681a709e9e5ce2b"
+        }
+      ],
+      "artifact_inputs": [
+        {
+          "path": "research/data/image_directed_join_check.json",
+          "bytes": 10528424,
+          "sha256": "ebe151e0a92ba8d8b0c2e3b34afed416e40799167984bc4b8642dd62de7c58a9"
+        },
+        {
+          "path": "research/data/image_directed_join_outputs.npz",
+          "bytes": 261191,
+          "sha256": "988dd2ae3bba134e05999d268f917ca5ae6f1f3edcedb65a73a4eb16ac668384"
+        },
+        {
+          "path": "research/data/image_directed_join_integrity.json",
+          "bytes": 941,
+          "sha256": "37bc04c1ed25a7068a362802d1e4be93bdd677c00f97da5d3f982d31b935b4a5"
+        },
+        {
+          "path": "research/data/residual_local_collisions.json",
+          "bytes": 8621,
+          "sha256": "842b9596456d67dfed7fe8beff33c92a5e9acaa2071ecb2373aafdb821db4b5b"
+        },
+        {
+          "path": "tools/check_image_directed_join.py",
+          "bytes": 5962,
+          "sha256": "4ae0ba5fc5bbb4f56d6461a446d109dd5e49d21f71774b99feceedc3a59b381a"
+        },
+        {
+          "path": "tools/audit_image_directed_join.py",
+          "bytes": 5127,
+          "sha256": "4f522932022df984349c08fc8975538675ad0a61c5ca03fd2563c72cae79e0ad"
+        },
+        {
+          "path": "tools/check_residual_local_collisions.py",
+          "bytes": 2288,
+          "sha256": "2eceb6f99fdc6967a0bfca5e88ccaf71091f56e0c0cbae4903ca8d83e9ead222"
+        }
+      ]
     }
   ]
 }

@@ -112,3 +112,13 @@ A legerősebb módszertani előzmények: XIXOIO képi utasítás→csatornailles
 SFX inverz képi effekt, XM17 továbbforgó bitkezdés és nem rajzolt0index.
 A teljes q/R megőrzése és pontos jóslata marad követelmény. Új HALV-kulcskeresés
 nem indult; a további irányt a felhasználóval választjuk ki.
+
+
+### Legújabb eredmény:27.kör, C47–C48
+
+A XIXOIO-tanulságú képi jel→A/R-illesztés→ASCII-hex lánc10080 receptje
+veszteségmentes, de nincs teljes formátumtalálat. A legjobb17/64 karakter.
+A helyi R=f(A,blokk,mod4óra) feltevéshez pontos ütközési tanú van a második
+blokkban. A következő generátornak ezt indokolt állapottal, más payload
+azonosítással vagy R adatszerepével kell magyaráznia. Nincs kulcsjelölt.
+A meglévő fő MD27.fejezete őrzi az összes receptet és a korlátokat.

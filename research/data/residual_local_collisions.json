@@ -1,0 +1,417 @@
+{
+  "model": "C48",
+  "input_sha256": {
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006",
+    "tools/check_residual_local_collisions.py": "2eceb6f99fdc6967a0bfca5e88ccaf71091f56e0c0cbae4903ca8d83e9ead222"
+  },
+  "rows": [
+    {
+      "frame": "absolute",
+      "clock": "block_only",
+      "conflicting_groups": 4,
+      "conflicts": [
+        {
+          "key": [
+            0,
+            9
+          ],
+          "cells": [
+            0,
+            5
+          ],
+          "R_values": [
+            3,
+            2
+          ],
+          "certificate": {
+            "i": 0,
+            "j": 5,
+            "A": 9,
+            "R_i": 3,
+            "R_j": 2
+          }
+        },
+        {
+          "key": [
+            1,
+            15
+          ],
+          "cells": [
+            10,
+            11,
+            12,
+            14
+          ],
+          "R_values": [
+            8,
+            0,
+            4,
+            2
+          ],
+          "certificate": {
+            "i": 10,
+            "j": 11,
+            "A": 15,
+            "R_i": 8,
+            "R_j": 0
+          }
+        },
+        {
+          "key": [
+            1,
+            14
+          ],
+          "cells": [
+            13,
+            15
+          ],
+          "R_values": [
+            0,
+            4
+          ],
+          "certificate": {
+            "i": 13,
+            "j": 15,
+            "A": 14,
+            "R_i": 0,
+            "R_j": 4
+          }
+        },
+        {
+          "key": [
+            7,
+            15
+          ],
+          "cells": [
+            56,
+            58
+          ],
+          "R_values": [
+            0,
+            1
+          ],
+          "certificate": {
+            "i": 56,
+            "j": 58,
+            "A": 15,
+            "R_i": 0,
+            "R_j": 1
+          }
+        }
+      ],
+      "scope": "R=f(A,block,counter_modulus); block id grants MORE information than any fixed blockwise marker/date/phase cue. Conflict disproves this deterministic pointwise family only."
+    },
+    {
+      "frame": "absolute",
+      "clock": "cell_parity",
+      "conflicting_groups": 3,
+      "conflicts": [
+        {
+          "key": [
+            1,
+            15,
+            0
+          ],
+          "cells": [
+            10,
+            12,
+            14
+          ],
+          "R_values": [
+            8,
+            4,
+            2
+          ],
+          "certificate": {
+            "i": 10,
+            "j": 12,
+            "A": 15,
+            "R_i": 8,
+            "R_j": 4
+          }
+        },
+        {
+          "key": [
+            1,
+            14,
+            1
+          ],
+          "cells": [
+            13,
+            15
+          ],
+          "R_values": [
+            0,
+            4
+          ],
+          "certificate": {
+            "i": 13,
+            "j": 15,
+            "A": 14,
+            "R_i": 0,
+            "R_j": 4
+          }
+        },
+        {
+          "key": [
+            7,
+            15,
+            0
+          ],
+          "cells": [
+            56,
+            58
+          ],
+          "R_values": [
+            0,
+            1
+          ],
+          "certificate": {
+            "i": 56,
+            "j": 58,
+            "A": 15,
+            "R_i": 0,
+            "R_j": 1
+          }
+        }
+      ],
+      "scope": "R=f(A,block,counter_modulus); block id grants MORE information than any fixed blockwise marker/date/phase cue. Conflict disproves this deterministic pointwise family only."
+    },
+    {
+      "frame": "absolute",
+      "clock": "cell_mod4",
+      "conflicting_groups": 1,
+      "conflicts": [
+        {
+          "key": [
+            1,
+            15,
+            2
+          ],
+          "cells": [
+            10,
+            14
+          ],
+          "R_values": [
+            8,
+            2
+          ],
+          "certificate": {
+            "i": 10,
+            "j": 14,
+            "A": 15,
+            "R_i": 8,
+            "R_j": 2
+          }
+        }
+      ],
+      "scope": "R=f(A,block,counter_modulus); block id grants MORE information than any fixed blockwise marker/date/phase cue. Conflict disproves this deterministic pointwise family only."
+    },
+    {
+      "frame": "phase_relative",
+      "clock": "block_only",
+      "conflicting_groups": 4,
+      "conflicts": [
+        {
+          "key": [
+            0,
+            5
+          ],
+          "cells": [
+            0,
+            5
+          ],
+          "R_values": [
+            5,
+            1
+          ],
+          "certificate": {
+            "i": 0,
+            "j": 5,
+            "A": 5,
+            "R_i": 5,
+            "R_j": 1
+          }
+        },
+        {
+          "key": [
+            1,
+            15
+          ],
+          "cells": [
+            10,
+            11,
+            12,
+            14
+          ],
+          "R_values": [
+            8,
+            0,
+            1,
+            4
+          ],
+          "certificate": {
+            "i": 10,
+            "j": 11,
+            "A": 15,
+            "R_i": 8,
+            "R_j": 0
+          }
+        },
+        {
+          "key": [
+            1,
+            14
+          ],
+          "cells": [
+            13,
+            15
+          ],
+          "R_values": [
+            0,
+            1
+          ],
+          "certificate": {
+            "i": 13,
+            "j": 15,
+            "A": 14,
+            "R_i": 0,
+            "R_j": 1
+          }
+        },
+        {
+          "key": [
+            7,
+            15
+          ],
+          "cells": [
+            56,
+            58
+          ],
+          "R_values": [
+            0,
+            1
+          ],
+          "certificate": {
+            "i": 56,
+            "j": 58,
+            "A": 15,
+            "R_i": 0,
+            "R_j": 1
+          }
+        }
+      ],
+      "scope": "R=f(A,block,counter_modulus); block id grants MORE information than any fixed blockwise marker/date/phase cue. Conflict disproves this deterministic pointwise family only."
+    },
+    {
+      "frame": "phase_relative",
+      "clock": "cell_parity",
+      "conflicting_groups": 3,
+      "conflicts": [
+        {
+          "key": [
+            1,
+            15,
+            0
+          ],
+          "cells": [
+            10,
+            12,
+            14
+          ],
+          "R_values": [
+            8,
+            1,
+            4
+          ],
+          "certificate": {
+            "i": 10,
+            "j": 12,
+            "A": 15,
+            "R_i": 8,
+            "R_j": 1
+          }
+        },
+        {
+          "key": [
+            1,
+            14,
+            1
+          ],
+          "cells": [
+            13,
+            15
+          ],
+          "R_values": [
+            0,
+            1
+          ],
+          "certificate": {
+            "i": 13,
+            "j": 15,
+            "A": 14,
+            "R_i": 0,
+            "R_j": 1
+          }
+        },
+        {
+          "key": [
+            7,
+            15,
+            0
+          ],
+          "cells": [
+            56,
+            58
+          ],
+          "R_values": [
+            0,
+            1
+          ],
+          "certificate": {
+            "i": 56,
+            "j": 58,
+            "A": 15,
+            "R_i": 0,
+            "R_j": 1
+          }
+        }
+      ],
+      "scope": "R=f(A,block,counter_modulus); block id grants MORE information than any fixed blockwise marker/date/phase cue. Conflict disproves this deterministic pointwise family only."
+    },
+    {
+      "frame": "phase_relative",
+      "clock": "cell_mod4",
+      "conflicting_groups": 1,
+      "conflicts": [
+        {
+          "key": [
+            1,
+            15,
+            2
+          ],
+          "cells": [
+            10,
+            14
+          ],
+          "R_values": [
+            8,
+            4
+          ],
+          "certificate": {
+            "i": 10,
+            "j": 14,
+            "A": 15,
+            "R_i": 8,
+            "R_j": 4
+          }
+        }
+      ],
+      "scope": "R=f(A,block,counter_modulus); block id grants MORE information than any fixed blockwise marker/date/phase cue. Conflict disproves this deterministic pointwise family only."
+    }
+  ],
+  "no_fitted_parameters": true,
+  "no_key_search": true,
+  "limitations": "Does not excludeR carrying independent data, neighbor-dependent rules, unobserved state or redefined payload after nonlinear joining; absence of a collision does not validate a generator."
+}

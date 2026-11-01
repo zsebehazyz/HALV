@@ -721,3 +721,16 @@ A Codex pontos4lépése, az eredeti Fibonacci/Morse-komment és a friss fórumk�
 még hálózatilag blokkolt. Az elérhető GitHub-forrásokban nincs új ellenőrzött
 HALV-algoritmus. A következő irányt a felhasználóval választjuk ki; új kulcskeresés
 nem futott. Részletes forráskritika és döntési sorrend a fő MD26.fejezetében.
+
+
+## C47–C48: képi jel vezérelte A/R-illesztés
+
+10080 recept (70 sorrendtartó illesztés, két keret, marker-csere, fázis/dátum
+forgatás és dátumaritmetika) pontosan invertálható, de egyik sem ad teljes
+kanonikus ASCII-hexsort; maximum17/64 karakter. Még szabad R mellett is
+legalább5 cellánál nincs kompatibilis R a család bármely tagjában.
+C48: a10. és14.nullaalapú cella azonos A=15, blokk és mod4óra mellett más R-t
+kap. Emiatt R=f(A,blokk,cellaszám mod4) sem lehet teljes magyarázat.
+Ez nem zárja ki R önálló adatszerepét, korábbi állapotot, más payloadot vagy
+képi előtranszformációt. A teljes q/R és geometriai ág megmarad.
+Független audit sikeres; nincs új kulcsjelölt. Részletek:27.fejezet.
