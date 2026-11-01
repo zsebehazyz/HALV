@@ -2,11 +2,11 @@
   "purpose": "Append-only full research MD; old snapshot plus new end chapters",
   "mode": "append_only",
   "master_path": "research/HALV_TELJES_KUTATAS.md",
-  "master_sha256": "93cd3b51ee9aee40f70ccde7c8d951a51916247ef2f80055de82caf66e4c1344",
+  "master_sha256": "d502f3a3b1ff1cc82f0bd4a0d3ba94344e119e6286434f631530dcd30ff57cff",
   "frozen_prefix_bytes": 298373,
   "frozen_prefix_sha256": "c08809df3d1725dde612e150008d00ca8caf76fa89fcb9523a2650ff9d6fadb2",
   "base_snapshot_journal_rounds": 19,
-  "journal_round_headings": 21,
+  "journal_round_headings": 22,
   "all_journal_rounds_present": true,
   "full_journal_embedded_as_one_current_snapshot": false,
   "full_reports_embedded": [
@@ -232,6 +232,51 @@
           "sha256": "1a1fabfb2a06192b614fcad4ddd6296399b2412a9bca62bbe4e65744156dc83c"
         }
       ]
+    },
+    {
+      "journal_round": 22,
+      "offset": 335921,
+      "bytes": 7173,
+      "sha256": "875b37b61d7e8cfdb81e7967f11182c308a91fafd7260d494d0c31b12fb348f8",
+      "journal_section_sha256": "dd44d795b1b379d86e3220ee17f06940efd7184013a37c595af269da3d148b45",
+      "model_inputs": [],
+      "artifact_inputs": [
+        {
+          "path": "research/data/research_priorities_20261101.json",
+          "bytes": 3305,
+          "sha256": "33f8ae3d71d469bbaacfa4bec525cc40883814299568ccafe839343ddbae58c1"
+        },
+        {
+          "path": "research/data/signature_phase_decode_check.json",
+          "bytes": 7660,
+          "sha256": "a8413be924ba0bef0b53e5122eed5d66c9fd18349154008b386eb69236df844e"
+        },
+        {
+          "path": "research/data/uniform_phase_layers_check.json",
+          "bytes": 14811,
+          "sha256": "b20f8017dc15961073195d9ef9a3b34cb5e930cd4a790699b0e6ef980b75f110"
+        },
+        {
+          "path": "research/data/marker_pixel_revisit_check.json",
+          "bytes": 184061,
+          "sha256": "4edcd8f9536e7905117bbdf441fccb61cef3fbdc5ae036fa825943b9d16808b3"
+        },
+        {
+          "path": "research/data/fibonacci_audio_probe_check.json",
+          "bytes": 19809,
+          "sha256": "ea70b774b388815df087b84d04f1d8d5c4ed925286405ceeb9c995256782a3b6"
+        },
+        {
+          "path": "research/data/price_shape_revisit_check.json",
+          "bytes": 37768,
+          "sha256": "479a1d5d22993a2e915bab8da1ac40e36d878f0801b669b874aba158f00386f3"
+        },
+        {
+          "path": "tools/append_master_chapter.py",
+          "bytes": 4030,
+          "sha256": "8fcbed97a056f4e4449919f39b239044263e529b515773aa7c107f061634094b"
+        }
+      ]
     }
   ],
   "inputs": [
@@ -244,26 +289,26 @@
     {
       "path": "README.md",
       "role": "dokumentum",
-      "bytes": 18753,
-      "sha256": "41ad4c906d4bbcb3ff207caa406eca6ac1aaf13eb2090364798422bcb6f182d2"
+      "bytes": 18755,
+      "sha256": "6a08fec0a9f88b0fab23e4bcfc10b1447f6e76d17733e76b8b4317530e56430f"
     },
     {
       "path": "research/HYPOTHESES.md",
       "role": "dokumentum",
-      "bytes": 39895,
-      "sha256": "012710937a6f0057c249bcfeaabccb9a9e5275e5e5f65dcec01fe06d5b0b27c1"
+      "bytes": 41067,
+      "sha256": "080cca108b71f291127c4174ac1e2a3b3ca591c5f6e937d6842ed1181d0929c0"
     },
     {
       "path": "research/LOG.md",
       "role": "dokumentum",
-      "bytes": 141463,
-      "sha256": "76ae59749f9ebb09ec53eccd3f49777356a6c665b84631b0320240920609f6c3"
+      "bytes": 147347,
+      "sha256": "d40424d7090bc95bd92aae2d0614a1bb2e06f5e95be9a85638d3b000b62f9a37"
     },
     {
       "path": "research/MASTER_OVERVIEW.md",
       "role": "dokumentum",
-      "bytes": 4627,
-      "sha256": "5154e8992cf2ed7ff27e32cf2212286d880018285f9438939099ffc9c450bea9"
+      "bytes": 5265,
+      "sha256": "87b352f107e5ec8b6ea9638af077e2e6cd8376bc9838716a708edd41038ac377"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",
@@ -604,8 +649,8 @@
     {
       "path": "research/data/master_append_state.json",
       "role": "eredmény/adat",
-      "bytes": 66909,
-      "sha256": "c27f7a7469c265727d938ceaa515e972bac34aeddf9f5cff12909b1791b34f6e"
+      "bytes": 68632,
+      "sha256": "6b162a5cbbdfe3c5f3660383b316ac9eb0f842c672dc2d41cd6c2a8e4063311c"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -846,6 +891,12 @@
       "role": "eredmény/adat",
       "bytes": 2872,
       "sha256": "a62964ba1d47fe6abf7f65aef4e69c239237ad190e3c1a011523b74ec9b19de3"
+    },
+    {
+      "path": "research/data/research_priorities_20261101.json",
+      "role": "eredmény/adat",
+      "bytes": 3305,
+      "sha256": "33f8ae3d71d469bbaacfa4bec525cc40883814299568ccafe839343ddbae58c1"
     },
     {
       "path": "research/data/residual_codes_check.json",
@@ -1588,8 +1639,8 @@
     {
       "path": "tools/append_master_chapter.py",
       "role": "program",
-      "bytes": 4008,
-      "sha256": "8572f99e61e4a69054aafcf0969bbd5c0460b47adfacb2415c5684014baa91be"
+      "bytes": 4030,
+      "sha256": "8fcbed97a056f4e4449919f39b239044263e529b515773aa7c107f061634094b"
     },
     {
       "path": "tools/audit_audio_revisit_results.py",

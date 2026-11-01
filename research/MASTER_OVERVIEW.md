@@ -51,6 +51,15 @@ felhasználói jegyzetben is szerepelt; önállóan ellenőrzött forrás továb
 
 ### Nyitott munkafeladat
 
+A 22. körben a meglévő eredmények alapján rangsoroltuk a nyomokat; új
+dekóderfutás vagy kulcskeresés nem történt. Első a 12 px-es, 3+1 bites
+cellaszerkezet és a teljes maradék közös magyarázata. Következő célzott
+feladat a marker három oszlopának teljes rasztermodellje: rögzített
+rajzolási paraméterekkel és közös órával megjósolni a kihagyott pixeleket,
+NMRM/XEX és szabályos referenciajel versengő értelmezése mellett.
+A küszöbölt pontos időzítés negatívuma önmagában nem rasterizált Morse-kizárás.
+Utána csak az így alátámasztott órajelet vagy maszkot vigyük a hullámmodellbe.
+
 Olyan közös előállítási szabály kell, amely változó jelalakot is generál,
 és a külső mintákat, az összes R-bitet, a felezési skálát és fázist együtt
 kezeli. A lag2 modell 10-es alapja továbbra sem képi levezetés. A hét hibát

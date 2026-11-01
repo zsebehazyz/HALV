@@ -49,8 +49,8 @@ def main():
     section=raw[headings[-1].start():].rstrip()+'\n'
     model_inputs=[source_record(name) for name in args.model]
     artifacts=[source_record(name) for name in args.artifact]
-    pieces=['\n\n---\n\n'+f'<a id="round-{args.round}"></a>\n\n'+section,
-            '### A fejezethez rögzített pontos modellreceptek\n']
+    pieces=['\n\n---\n\n'+f'<a id="round-{args.round}"></a>\n\n'+section]
+    if model_inputs:pieces.append('### A fejezethez rögzített pontos modellreceptek\n')
     for record in model_inputs:
         path=ROOT/record['path'];text=path.read_text();json.loads(text)
         target=quote(os.path.relpath(path,MASTER.parent),safe='/')

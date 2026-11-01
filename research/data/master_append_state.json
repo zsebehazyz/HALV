@@ -1835,6 +1835,51 @@
           "sha256": "1a1fabfb2a06192b614fcad4ddd6296399b2412a9bca62bbe4e65744156dc83c"
         }
       ]
+    },
+    {
+      "journal_round": 22,
+      "offset": 335921,
+      "bytes": 7173,
+      "sha256": "875b37b61d7e8cfdb81e7967f11182c308a91fafd7260d494d0c31b12fb348f8",
+      "journal_section_sha256": "dd44d795b1b379d86e3220ee17f06940efd7184013a37c595af269da3d148b45",
+      "model_inputs": [],
+      "artifact_inputs": [
+        {
+          "path": "research/data/research_priorities_20261101.json",
+          "bytes": 3305,
+          "sha256": "33f8ae3d71d469bbaacfa4bec525cc40883814299568ccafe839343ddbae58c1"
+        },
+        {
+          "path": "research/data/signature_phase_decode_check.json",
+          "bytes": 7660,
+          "sha256": "a8413be924ba0bef0b53e5122eed5d66c9fd18349154008b386eb69236df844e"
+        },
+        {
+          "path": "research/data/uniform_phase_layers_check.json",
+          "bytes": 14811,
+          "sha256": "b20f8017dc15961073195d9ef9a3b34cb5e930cd4a790699b0e6ef980b75f110"
+        },
+        {
+          "path": "research/data/marker_pixel_revisit_check.json",
+          "bytes": 184061,
+          "sha256": "4edcd8f9536e7905117bbdf441fccb61cef3fbdc5ae036fa825943b9d16808b3"
+        },
+        {
+          "path": "research/data/fibonacci_audio_probe_check.json",
+          "bytes": 19809,
+          "sha256": "ea70b774b388815df087b84d04f1d8d5c4ed925286405ceeb9c995256782a3b6"
+        },
+        {
+          "path": "research/data/price_shape_revisit_check.json",
+          "bytes": 37768,
+          "sha256": "479a1d5d22993a2e915bab8da1ac40e36d878f0801b669b874aba158f00386f3"
+        },
+        {
+          "path": "tools/append_master_chapter.py",
+          "bytes": 4030,
+          "sha256": "8fcbed97a056f4e4449919f39b239044263e529b515773aa7c107f061634094b"
+        }
+      ]
     }
   ]
 }

@@ -626,3 +626,22 @@ A „Cracked it…” idézet a kezdeti user_prior_notes.txt-ben már benne volt
 nem új független megerősítés. A közölt2186×4 jelöltet nem könyveljük el
 saját új futásként. A geometriai ág és a konkrét további hangkodek/
 demoduláció lehetősége megmarad. Részletek a meglévő fő MD végén,21. kör.
+
+## 22. kör: bizonyítékalapú prioritások, még nem új modellfutás
+
+Elsődleges szerkezeti nyom a12px cella, a3+1 fázis és a teljes32+12bájt
+közös előállítása. A BD/lépcső utasításszerepe és a maradék jelentése
+hipotézis; az egyező számhossz nem ad kódolási képletet.
+
+Következő célzott vizsgálat: a marker teljes háromoszlopos előállítása
+közös vonal-/élsimítási paraméterekből és időzítésből. Az x90,91,92
+oszlopban43,49,43 pozitív pixel van a438..512 ROI-ban; a központi oszlop
+küszöbölése részleges képi adat. A pontos bináris1:3:7 negatívum nem
+zárja ki a rasterizált Morse-t, de az AA-ra hivatkozás sem javíthat ki
+szabadon minden jelet. Első részen illesztés, maradékon képpontjóslat kell.
+
+A geometriai64→32 ág párhuzamosan aktív. A konkrét8SVX/Morse család és
+árfolyamvizsgálat negatívumai után ezek bővítéséhez új konkrét indok kell.
+A „Cracked it…” eredeti forrásának/algoritmusának hitelesítése értékes
+független nyom lehet, jelenleg nincs ilyen új bizonyíték. Rangsor és terv
+a meglévő fő MD22. fejezetében; nem végrehajtott C42-ként könyveljük.

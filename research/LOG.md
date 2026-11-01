@@ -2477,3 +2477,106 @@ a meglévő fő MD VÉGÉHEZ kerül az append-programmal,21. körként. Új MD n
 Az indexelő csak ellenőrzi a régi prefixet és frissíti az aktuális jegyzéket.
 
 **Nincs igazolt Morse-üzenet, eredeti hangdekódolás, teljes generátor vagy HALV-kulcs.**
+
+## 2026-11-01 – huszonkettedik kör: jó nyomok és a következő vizsgálat
+
+### Kérés és e kör hatóköre
+
+A felhasználó azt kérdezte, hogyan folytassuk és mely nyomok jók, továbbra
+is a meglévő MD végének bővítésével, új MD nélkül. Ez rangsorolás és
+teszttervezés, nem új dekóderfutás vagy kulcskeresés. A korábbi negatív
+eredményeket nem jelentjük új futásként, és nem állítunk új C42-megfejtést.
+
+### 1. Legerősebb szerkezeti nyom: cella, fázis és teljes maradék együtt
+
+A 3 px-es mintarács, 12 px-es cella és a középső öt blokkban eltolódó
+3 magas +1 alsó bit valóban reprodukált szerkezet. Az aláírás felezési
+lépcsője kompatibilis a skálával és fázisokkal. Ezek többet mondanak
+a kódoló szervezéséről, mint a közvetlen nyers kulcspróbák száma.
+
+Az A32+R12 felbontás ugyanazzal az invertálható szabállyal működik mind a
+64 cellán, de ez nem bizonyítja, hogy A már a kulcs, R pedig ellenőrzőkód.
+A helyi és vizsgált állapotos R→lag2-javítások nem működtek; a hét H-eltérés
+nem igazoltan javítandó kódhiba. A következő közös kódolónak a teljes
+256 mintát és minden R-bitet kell előállítania, szélső blokkonkénti kivétel nélkül.
+
+### 2. Azonnali célzott feladat: a marker teljes rasztere
+
+A C39 főleg az x=91 oszlopból képzett küszöbös hosszakra következtetett.
+Most előzetesen megnéztük a szomszédos oszlopokat is, a y=438..512 tartományban:
+
+| Oszlop | Pozitív pixelek | Legnagyobb fényesség |
+| --- | ---: | ---: |
+| x=90 | 43 | 90 |
+| x=91 | 49 | 217 |
+| x=92 | 43 | 90 |
+
+Az x85..89 és93..98 oszlopok itt nullák. A két szélső oszlop között
+legfeljebb1 fényességegység az eltérés. Ez kis leíró környezetellenőrzés,
+nem új üzenet vagy előállítási modell illesztése.
+
+A következő kísérletben egyszerre kellene a három oszlop pixelintenzitásait
+előállítani, nem csak egy kiválasztott küszöbű középső oszlopot olvasni.
+Versengő hipotézisek: rasterizált NMRM, rasterizált XEX, szabályos referencia-
+vagy impulzusjel értelmes üzenet feltételezése nélkül.
+
+A futás előtt rögzítendő szabályok:
+
+1. Egyetlen közös időegység, kezdőpozíció, vonalszélesség és rögzített
+   élsimítási/átviteli modell. Ha fényességrámpa szerepel, annak fázisát
+   és paramétereit is közösen kell megadni, külön betűjavítás nélkül.
+2. A jelölő első részén illesztés; a maradék pixelintenzitásai előrejelzendők.
+   A teljes ROI-hoz utólag választott legszebb szöveg nem ellenőrzés.
+3. Teljes pixelhibát, maximális eltérést és az egyszerű referenciajelhez
+   képesti javulást is jelenteni kell; a sok fekete háttér nem uralhatja a mutatót.
+4. A pontos1:3:7 bináris időzítés C39-negatívuma nem rasterizált Morse-kizárás.
+   Ugyanakkor az élsimítás nem lehet tetszőleges magyarázat minden hibára:
+   közös előállítási modellnek kell a fényes és halvány pixeleket is megjósolnia.
+5. A már ismert képen végzett visszatartás feltáró ellenőrzés marad,
+   nem független új mérés vagy automatikus szándékbizonyíték.
+
+Ha ebből stabil óra vagy maszk születik, azt egyetlen, előre rögzített
+műveletként lehet visszavinni a hullám kódolásába. Az NMRM-et nem rögzítjük
+előre megfejtett utasításnak; az XEX-et sem választjuk a szimmetriája alapján.
+
+### 3. Harmadik, párhuzamos nyom: geometriai kódolás
+
+A Level5 64 geometriai adatból párosítva32kulcsbájtot adó módszere teljes
+történeti pozitív kontroll. A HALV-nál a64 cella csak motiváció, nem bizonyíték
+ugyanarra a képletre. A normalizálást és a cellák jelentését a képből kell
+levezetni. A korábbi egyszerű területcsaládok negatívak voltak, ezért
+új szabad skálázófaktor hozzáadása önmagában nem továbblépés.
+
+A C33 pontos kioltásai mutatják, hogy a területegyezés elrejthet mintahibát.
+Ezen az ágon is kell a teljes hullám és maradék ellenőrzése. A geometriai
+ág megmarad a fázis-/bitsíkos ág mellett.
+
+### 4. Nyitott, de jelenleg kevésbé alátámasztott irányok
+
+A Fibonacci–hang ág nincs általánosan kizárva. A hét kicsi delta önmagában
+nem kodekbizonyíték, a vizsgált 8SVX/amplitúdókapu család pedig nem adott
+minősített Morse-t. Új hangteszthez konkrét kódoló, demodulátor, fejléc,
+időzítés vagy ellenőrizhető megfejtési leírás kell. A „Cracked it…” eredeti
+forrásának és teljes algoritmusának hitelesítése ezért hasznos külön feladat,
+de jelenleg nem rendelkezünk új, független megerősítéssel.
+
+Az árfolyamot alacsonyabb prioritásra tesszük: a rögzített alakteszt legjobb
+eredményénél az eltolt családreferenciák40,2%-a legalább ilyen jó. Új konkrét
+képi utalás nélkül nem bővítjük tovább tetszőleges árfolyamtranszformációkkal.
+
+### 5. Következő sorrend és naplózás
+
+Azonnali következő feladat a marker közös háromoszlopos előállítási modellje.
+Utána csak az abból alátámasztott órát/maszkot használjuk a teljes hullám
+és maradék közös kódolójában. A geometriai alternatíva párhuzamosan aktív.
+Minden új vizsgálathoz előre rögzített egyenlet, paramétertartomány,
+ellenőrző részhalmaz és sikerfeltétel kell; végül a célcím pontos egyezése.
+
+A prioritások és az előzetes marker-környezeti számok a
+`data/research_priorities_20261101.json` fájlban vannak, kép-hash-sel.
+Új modell-JSON vagy jelentés-MD nem készült. Az append-programot úgy
+egészítettük ki, hogy modell nélküli tervezési körnél ne tegyen üres
+modellfejezetet a fő MD-be. A teljes új naplókör a meglévő fő MD VÉGÉHEZ
+kerül22. fejezetként; a korábbi tartalom változatlan marad.
+
+**Ez kutatási rangsor és terv. Nincs új megfejtési eredmény vagy HALV-kulcs.**

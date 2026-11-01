@@ -1,0 +1,118 @@
+{
+  "purpose": "Evidence-linked research priorities; planning and descriptive neighborhood read, not a new decoder test",
+  "image_sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+  "marker_neighborhood": {
+    "rows_inclusive": [
+      438,
+      512
+    ],
+    "columns": [
+      {
+        "x": 85,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 86,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 87,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 88,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 89,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 90,
+        "positive_pixels": 43,
+        "maximum": 90
+      },
+      {
+        "x": 91,
+        "positive_pixels": 49,
+        "maximum": 217
+      },
+      {
+        "x": 92,
+        "positive_pixels": 43,
+        "maximum": 90
+      },
+      {
+        "x": 93,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 94,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 95,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 96,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 97,
+        "positive_pixels": 0,
+        "maximum": 0
+      },
+      {
+        "x": 98,
+        "positive_pixels": 0,
+        "maximum": 0
+      }
+    ],
+    "left_right_max_intensity_difference": 1
+  },
+  "priorities": [
+    {
+      "rank": 1,
+      "clue": "Measured12px phase/cell structure and fullA32+R12",
+      "status": "Strong structure; encoding semantics unproved",
+      "next_requirement": "One joint encoding rule for all64 cells; no per-edge repair or assumption thatR is a correction packet"
+    },
+    {
+      "rank": 2,
+      "clue": "Marker3column raster,7level palette and timing",
+      "status": "Open constrained inference; exact binary timing failure does not rule out a rasterized Morse source",
+      "next_test": "Fit shared rendering and clock on first part, predict remaining pixel intensities; compareNMRM,XEX and regular reference marks"
+    },
+    {
+      "rank": 3,
+      "clue": "Historical Level5 geometric64to32 method",
+      "status": "Independent historical positive control, not a HALV formula",
+      "next_requirement": "Image-derived geometry/normalization and sample-level consistency before key validation"
+    },
+    {
+      "rank": 4,
+      "clue": "Fibonacci/audio and quoted successful solver",
+      "status": "Specific bare8SVX amplitude-gating family negative; quote origin unverified",
+      "next_requirement": "Concrete source/algorithm or independently identified codec/demodulation; avoid arbitrary nibble hashes"
+    },
+    {
+      "rank": 5,
+      "clue": "2020to2024price shape",
+      "status": "Low priority after fixed-family comparisons; arbitrary encoded references remain possible",
+      "next_requirement": "New specific image clue before further price-transform families"
+    }
+  ],
+  "immediate_next_task": "Full raster marker forward-model comparison, then use only a supported clock/mask in the joint waveform model",
+  "no_new_model_fit": true,
+  "no_private_key_search": true
+}

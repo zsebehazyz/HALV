@@ -7,7 +7,7 @@ Tartalmazza a teljes naplót, hipotéziseket, részletes jelentéseket és
 modellrecepteket. Az új körök a meglévő fájl végéhez kerülnek; a korábbi
 tartalom változatlan marad. A forrásadatok és programok hash-sel megmaradnak.
 Aktuális állapotkép: [MASTER_OVERVIEW.md](research/MASTER_OVERVIEW.md).
-Legújabb folytatás: [21. kör, jelölő / Fibonacci–Morse / árfolyam](research/HALV_TELJES_KUTATAS.md#round-21).
+Legújabb folytatás: [22. kör, nyomok rangsora és következő vizsgálat](research/HALV_TELJES_KUTATAS.md#round-22).
 Pontos rekonstrukció: [256 csúcsérték szövegként](research/data/canonical_q256.txt),
 [csúcsok és deltaindexek CSV-ben](research/data/canonical_q256.csv).
 A [128 mintás PCM-példa](research/data/hypothetical_pcm128_identity_seed128.csv)
