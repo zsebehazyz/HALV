@@ -3090,3 +3090,241 @@ A meglévő fő MD végéhez fűzzük a kört, új jelentés-MD nélkül.
 A korábbi372110bájt változatlan marad. A recept, adatok, audit és ábra
 hash-sel bekerül a jegyzékbe. A GitHub-frissítés csak sikeres push után
 tekinthető feltöltöttnek; a reprodukciós adatfájl nem publikálási bizonyíték.
+
+
+## 2026-11-01 – huszonhatodik kör: internetes forráskritika és Zden tényleges megoldási módszerei, R26
+
+### 1. Feladat, elvégzett munka és a lefedettség határa
+
+A felhasználó nyilvános internetes gyűjtést kért HALV-ról, összevetést a
+saját kutatással, valamint Zden korábbi megoldásainak ellenőrzését.
+Új visszafejtési irányt ezután közösen választunk. Ebben a körben nem futott
+új HALV-kulcskeresés, és nem választottunk ki önkényesen új modellcsaládot.
+A meglévő fő MD végét frissítjük; új jelentés-MD nem készül.
+
+A forrásjegyzék 103 URL-bejegyzést rögzít: 83 sikeresen archivált válasz,
+20 sikertelen vagy blokkolt kérés. A 83 nem 83 független kutatási eredmény:
+keresőoldalak, fájllisták, üres találatok és részben ismétlődő oldalak is vannak
+köztük. Mind a16 Zden-katalógusrekordot átnéztük, hét megoldóábrát
+vizuálisan ellenőriztünk. A hét ábra bájtmérete és SHA-256 értéke egyezik a
+katalóguséval. A fő források közül28 válasz bájtazonosságát teljes commitra
+mutató URL-lel is újraellenőriztük.
+
+**A teljes fórum- és csoportkutatás még nincs kész.** A futó környezet
+csak csomagkezelő/GitHub hálózati engedélyeket kapott. A szerzői oldal,
+a Google és DuckDuckGo, Reddit, Bitcointalk, Steemit, Medium és echo.ls
+kéréseit a proxy403-mal blokkolta. Ez nem404 és nem bizonyítja, hogy az
+ottani információ nem létezik. Privát csoportokhoz nincs hozzáférés;
+nem léptünk kapcsolatba emberekkel és nem küldtünk üzenetet.
+
+A szükséges20 domain bővítését elmentettük a környezet konfigurációs
+tervezetébe, az előre beállított csomagkezelő-csoport megtartásával.
+A tervezet mentése nem alkalmazta a hálózati szabályt. Az internetes kör
+lezárásához a felhasználónak a környezet beállításaiban mentenie kell a
+módosítást; csak utána tekinthetők újrapróbálhatónak a blokkolt műveletek.
+A publikálás a környezet termékbeli lépése, nem a GitHub-push.
+
+Az audit, a kérésenkénti URL/időpont/státusz/hash és a pontos archivált
+szövegek megmaradnak. A HTML-ből a látható szöveget őrizzük, nem a
+bejelentkezési felület tokenjeit. Egy nyilvánosan idézett GitHub-leiratkozó
+linket kitakartunk. A választest eredeti hash-e és az archivált kivonat
+hash-e külön mező, ahol ez szükséges.
+
+### 2. HALV: mit találtunk ténylegesen?
+
+| Forrás | Ellenőrzött tartalom | Következtetés és korlát |
+| --- | --- | --- |
+| [floflo777 HALV-leírás](https://github.com/floflo777/open-crypto-puzzles/tree/43b5882716852e7b23dd733d0bc65b2ca6a158f9/2-mid-prizes/zden-haluska-halv-312ksats) | 59 lobusz, választott kör/rombusz olvasat, korábbi negatív próbák, a312500satoshis célcím | Már ismert külső elemzés; nem új dekóder. A sok korábbi próba nem saját új futásunk. |
+| [agntn aktuális HALV-rekord](https://github.com/agntn/puzzles/blob/38025a53495a6816ae81388d3e7ca3ca9e7b195d/src/collections/zden/level-halv.ts) | Célcím, a2024-04-18-i finanszírozás adata, szerzői idézet és kép-hash | A kép61566bájtos SHA-256 értéke egyezik a nálunk használt PNG-vel; közvetlen szerzői letöltés továbbra sem történt. |
+| [fernandesrobert/ZDEN-HALV-PUZZLE](https://github.com/fernandesrobert/ZDEN-HALV-PUZZLE) | Leírás szerint kutatórepó, a megnyitott fájlnézet szerint üres | Nem tartalmaz új algoritmust vagy kutatási adatot. A név önmagában nem eredmény. |
+| [agntn issue5](https://github.com/agntn/puzzles/issues/5) és [issue346](https://github.com/agntn/puzzles/issues/346) | Katalógusfelvétel, illetve cím szerinti keresés szűrőhibája | A HALV-cím nyitott rekordként szerepel; a hibajegy nem megfejtési beszámoló. |
+| [GitHub Fibonacci-keresés](https://github.com/search?q=%22HALV%22+%22Fibonacci%22&type=issues) | Nulla találat az adott keresésben | Nem bizonyítja, hogy más fórumon nincs ilyen hozzászólás. |
+| [GitHub HALV-vitakeresés](https://github.com/search?q=%22HALV%22+%22zden%22&type=discussions) | Nulla találat az adott keresésben | Csak a nyilvános, kereshető GitHub Discussions hatóköre. |
+
+A `Cracked it … Fibonacci and morse code, and audio decryption` állítás
+hiteles eredeti szálát vagy reprodukálható algoritmusát most sem sikerült
+azonosítani az elérhető anyagokban. Nem emeljük szerzői utasítássá.
+A GitHub teljes kódkeresése bejelentkezés nélkül nem ad hozzáférhető
+kódtalálatokat; nem tekintjük ezt teljes internetes negatívumnak.
+A hasonló skandináv szavakat vagy általános algoritmusokat találó, HALV-hoz
+nem kapcsolódó issue-kat nem visszük tovább nyomként.
+
+Az elérhető forrásokban nem találtunk új, ellenőrzött HALV-megfejtést.
+A nyitott státusz nem friss, saját on-chain bizonyíték: a mempool/aktuális
+költési állapotot ebben a körben nem ellenőriztük élőben.
+A szerző „way easier than LVL5” mondata katalógusban megőrzött idézet;
+egy rövid műveleti láncot motiválhat, de nem bizonyítja egyik hipotézist sem.
+
+### 3. Forráskritikai javítások: mit nem szabad átvenni?
+
+**118bit nem általános lehetetlenségi bizonyíték.** A külső elemzés a saját
+59lobuszos kör/rombusz és amplitúdó értelmezésére ad kapacitásbecslést.
+Ez nem a teljes PNG és nem a mi q/A/R rendszerünk felső információkorlátja.
+Ráadásul egy256bites kulcsnak nem szükségszerűen van256bit független
+entrópiája: rövid determinisztikus generátor is előállíthat ilyen kulcsot.
+A hipotézisek értékét a konkrét előrejelzés és a pontos cím dönti el.
+
+**A katalógusok státuszai nem egységesek.** A cbman0 leírásban HALV egyszer
+megoldottként szerepel, a korábban archivált szlovák lap mást állít.
+A Level5 friss leírásában a megoldott fejléc mellett régi OPEN táblázat és
+sikertelen kutatási rész is megmaradt. Az általános táblázatot nem tekintjük
+publikált kulcs, megoldási út vagy friss láncbeli állapot helyettesítőjének.
+
+**HomelessPhD kódja közösségi kód.** A README saját MATLAB- és ellenőrző
+programról ír. Nem állapítottuk meg, hogy ez Zden eredeti kódja lenne.
+Az a másodlagos mondat, amely „the author's own measurement script”-nek
+nevezi, nem elég a szerzőség igazolásához. A mi Level5 pozitív kontrollunk
+értékét a saját képmérés és a pontos cím adja, nem ez a szerzőségi állítás.
+
+**A jól hangzó flag nem megfejtés.** A HomelessPhD repó issue1 és issue2
+oldalain flagjelöltek és filozófiai következtetések vannak, de nincs
+ellenőrzött privátkulcs→célcím levezetés. Nem használjuk őket bizonyítékként.
+
+**Nincs univerzális „csak a kép, soha külső oldal” szabály.** Az SFX
+megoldóábrája kifejezetten URL-mini-puzzle-t és külső pluginoldalt mutat.
+A WhitePaper külön közjegyzői/notarizáló tárcához rendeli a képfájl hash-ét;
+ebből nem következik, hogy a jutalomkulcs ugyanaz a hash.
+
+### 4. Zden korábbi feladványai: konkrét, ellenőrzött lépések
+
+Az alábbiaknál három bizonyítékszintet különítünk el: saját teljes képi
+reprodukció; megoldóábra megtekintése és ismert kulcs ellenőrzése;
+másodlagos leírás vagy még nem hozzáférhető elsődleges szöveg.
+Az ábrák a szerzőnek tulajdonított, eredeti URL-lel és hash-sel rögzített
+GitHub-másolatok. A szerzői szerverrel való közvetlen összevetés blokkolt.
+
+| Puzzle | Tényleges műveleti út / csavar | Mostani ellenőrzés |
+| --- | --- | --- |
+| Level1 | A karakter ASCII-értékéből a`'0'` értékét kivonja,12-vel skálázza és téglalapgeometriává rajzolja; az51karakter és a kezdő5 segíti az értelmezést | Szerzői megoldóábra olvasva; publikált kulcs/WIF/cím ellenőrizve. Nem új teljes képi dekóder. |
+| Level2 | Szomszédos komplementer bitek; központi flag; feltételes inverzió; WIF-sorrend | A korábbi saját teljes képi kódot újrafuttattuk:306/306 kényszer, checksum és régi cím pontos. |
+| Level3 | 32blokk32bájtot ad; a vonalak iránya és kezdőorientációja határozza meg a bitolvasást | Ábra olvasva; az aljára nyomtatott32bájtos sor és publikált WIF a régi címet adja. A teljes pixelfeldolgozást most nem implementáltuk újra. |
+| Level4 | Két átfedő rács;17másodfokú Bézier-görbe, görbénként3karakter; körsugár szerinti sorrend | A győztes cikkének közösségi összefoglalója olvasva; a Steemit-cikk közvetlen elérése blokkolt. A bevezető példa-WIF nem a megfejtés. |
+| Level5 | Két vonal két szélességet korrigál;`(10*w+left−1)/64`, illetve magassági párja; kerekített területek páros összege | Saját teljes képi reprodukció újrafuttatva:64/64méret, minden korrekció és a régi cím pontos. |
+| SFX | URL-mini-puzzle→Satori PixelStretch; fehér pixelek8px-re nyújtása és szomszéd-interpoláció; inverz képi művelet; WIF kezdő5 kihagyva | A teljes megoldóábra olvasva; az inverz renderelést most nem futtattuk újra. A kihagyott5 itt ténylegesen dokumentált. |
+| XM17 | Base58-index6biten, hatszögön; bitkezdet karakterenként eggyel továbbfordul; animált skála; a nulla indexű`1` karakterhez nincs alakzat | Szerzői megoldóábra olvasva. Nem általános0-karaktercsere; teljes GIF-dekódolás most nem futott. |
+| Nethemba | Összetett szimbólumonként8bit; körméret/szín/kitöltés és nyilak külön csatornák; a kulcs kezdete a felső sor7.helyén | Megoldóábra olvasva, a pontos bitpozíciós legenda látszik. Nem általános utasítás minden kép elforgatására. |
+| XIXOIO |32szegmensben két eltérő félbájt: ternáris adat és vonaltávolság; távolságnál+1; zárójel vezérli az összefűzést; logóértékek vezérelnek végső aritmetikát | A szándékosan részleges szerzői ábra olvasva; a fennmaradó műveleteket nem állítjuk saját megfejtésnek. |
+| Codex | A publikált megjegyzés szerint4lépés256szor, egyenként biteket gyűjtve | A publikált kulcsra mutató forrás olvasva. A pontos4lépést és Fibonacci-szerepet az eredeti blog nélkül még nem igazoltuk. |
+| WhitePaper | A publikált kulcs ismert; a képfájl hash-e külön notarizáló tárcához kapcsolódik | Kulcs/WIF/cím ellenőrizve. A győztes részletes cikke blokkolt, ezért a teljes kép→kulcs út itt még nincs újraellenőrizve. |
+| Demobit, Janus, LTC | Köztes adatblokkhash,`33*bbb` és külön SVG-hintek szerepelnek a katalógusban | Forráshivatkozások összegyűjtve; nem teljes megfejtési utak. Nem találunk ki hiányzó műveleteket. |
+
+#### SFX: a forrásképi transzformáció pontos tanulsága
+
+A megoldóábra PixelStretch=7.0, PixelSize=1.0, Linear Ramp Up paraméterekkel
+írja le a nyújtást; a visszaalakításnál görbeszűrő és küszöbölés után
+PixelStretch=0.875, PixelSize=0.125, Linear Ramp Down szerepel.
+A képben a szöveg először visszaállítandó bitmap, nem közvetlen amplitúdóbájt.
+Az5 kihagyásának leírt oka az azonos sorhossz és a kevésbé feltűnő megjelenés.
+Ezek SFX-paraméterek, nem HALV-ra automatikusan átemelendő konstansok.
+
+#### XM17: valódi rejtett nullák és mozgó kezdőpont
+
+A megoldóábra kifejezetten Base58-ábécéindexet használ, alacsony bittől
+magas felé, óramutatóval ellentétes irányban. A következő karakter kezdete
+ugyanebben az irányban eggyel elfordul. A nulla indexhez tartozó`1` karakter
+nem generál alakzatot. Ez konkrét előzmény arra, hogy egy vizuális objektum
+hiánya adatot is jelenthet. Nem jogosít önkényes üres cellák hozzáadására.
+
+#### XIXOIO: a képi utasítás és két adatcsatorna összekapcsolása
+
+A távolságcsatorna1…16tartománya a0 elkerülése miatt van eltolva.
+A zárójel nem egyszerű dísz: például az ábra szerint az egyik változat
+`B1 B2 A1 A2 A3 A4 B3 B4` sorrendben egyesíti a két félbájtot.
+A logó`XIXOIO` betűértékei2,1,2,0,1,0; ezek a végső egyszerű aritmetikát
+irányítják. Az ábra a többi választást részben nyitva hagyja.
+Ez erős, tényleges előzmény a több képelem→műveleti sorrend gondolatára.
+
+### 5. Saját ellenőrzések és a bizonyítás pontos határa
+
+Öt publikált történeti Bitcoin-kulcsot ellenőriztünk: Level1,2,3,5 és
+WhitePaper. Mind az öt a megadott tömörítetlen célcímet adja, a hozzájuk
+közölt WIF-ek checksuma és kulcstartalma is megfelelő.
+A Level3ábra alján közölt32bájtos sort kézzel átírtuk és címmel ellenőriztük.
+Ez az átírás nem automatikus OCR vagy teljes képi visszafejtés.
+
+A Level2 és Level5 meglévő képi reprodukcióját ideiglenes másolatban
+újrafuttattuk. Mindkettő sikeres; a korábbi kutatási adatfájlok nem változtak.
+A két futás teljes eredményét külön JSON őrzi. A forrásaudit mind a83
+archivált fájl méretét és hash-ét ellenőrzi. A hét solver-PNG megegyezik
+a nyilvános katalógusban megadott digesttel. A28 commitra rögzített URL
+azonos válaszbájtokat adott, tehát nem csak egy mozgó HEAD név maradt meg.
+
+Az agntn forráscommitja: `38025a53495a6816ae81388d3e7ca3ca9e7b195d`.
+A floflo forráscommitja: `43b5882716852e7b23dd733d0bc65b2ca6a158f9`.
+A hash-egyezés a forrás azonosságát igazolja, nem minden abban szereplő
+állítás helyességét vagy a szerzői szerver friss állapotát.
+
+### 6. Összevetés a mi HALV-eredményeinkkel
+
+| Külső tanulság | Saját eredmény | Mi maradt valóban nyitva? |
+| --- | --- | --- |
+| Több adatcsatorna és képi utasítás, XIXOIO/Level2 | A/R veszteségmentes; C45-ben0/144 teljes R-jóslat; C46-ban23teljes inverz, de nincs közvetlen bájtkulcs | R tényleges generálása és a művelet képi kiválasztása. A puszta invertálható XOR/forgatás nem elég. |
+| Forráskép visszaalakítása, SFX | C42ben egy közelítő marker-rasztercsalád elbukott a kihagyott pixeleken | Más, konkrétan indokolt képi előállító művelet nincs általánosan kizárva. |
+| Mozgó bitkezdés és nem rajzolt0index, XM17 | A fázisóra ismert; C44–46 engedett blokkon átívelő kódszavakat | Az óra és a kódolási objektum kapcsolata. Objektumhiányból nem lehet képi indok nélkül karaktert beilleszteni. |
+| Pontos geometriai normalizálás, Level5 | C43megtartja a teljes cellainformációt; a64→32ág aktív | A geometriai mennyiségek kulcsból való generálása és az indokolt normalizálás. |
+| Formátumkonvenció szándékos eltérése, SFX | C44–46közvetlen byte/WIF/hex kapuin nincs új jelölt | Dokumentált50karakteresWIF esetén vezető5 visszaállítható; most ilyen jelölt nem keletkezett. |
+| Fibonaccihoz kapcsolt konkrét útvonal, esetleges Codex-kapcsolat | C40fixnibble-delta és C44–46egészkód-családok ellenőrizve | Az eredeti Codex-szabály elolvasása; ne helyettesítsük a Fibonacci nevéből kitalált algoritmussal. |
+
+A mostani előzmények alapján Zden többféle módszert használ: geometria,
+bitpozíció, feltételes vezérlés, grafikus transzformáció, formátumhoz igazított
+kihagyás és olvasási sorrend is előfordul. Nem állapítható meg egyetlen
+„pontos univerzális Zden-algoritmus”. A közös, megfigyelt minta a külön
+adat és utasítás összekapcsolása, valamint a köztes korlátokkal ellenőrizhető
+rövid műveleti lánc. Ez támpont, nem a HALV megoldásának bizonyítása.
+
+### 7. Új és megerősített irányok – döntésre, még nem végrehajtva
+
+**Első lépés: a forráskör lezárása a hálózati hozzáférés után.**
+A Codex szerzői blogja, a WhitePaper és Level4 nyertes cikkei, az eredeti
+HALV-bejegyzés és a Fibonacci/Morse-komment teljes szála a legértékesebb
+hiányzó források. A kereső- és fórumhozzáférés után az itt rögzített
+blokkolásokat újra kell ellenőrizni. Általános katalógusmásolatok gyűjtése
+helyett ezek az elsődleges, algoritmust tartalmazó beszámolók fontosak.
+
+**A – XIXOIO-szerű, képi utasítással kiválasztott csatornaegyesítés.**
+A jelölő vagy aláírás azonosítható geometriája döntsön az A/R-bitek
+összefűzéséről vagy egy kicsi, rögzített aritmetikai láncról. A teljes R-t
+nem szabad mellékcsatornaként korlátlanul magunkkal vinni, majd ezt a
+szerepe megfejtésének nevezni. Szükséges a teljes R vagy előre kijelölt
+minták jóslata, a teljes q inverze és utána a formátum/címellenőrzés.
+Ez **megerősített architektúra**, nem állítjuk teljesen új ötletnek:
+a korábbi Level2-ág és C45–46részben már foglalkozott vele. Új eleme a
+XIXOIO-ból konkrétan dokumentált képi zárójel→bitillesztés→logóaritmetika.
+
+**B – SFX-szerű, indokolt képi előállító művelet inverze.**
+A hullámot és markert előbb egy egységes képi transzformáció kimeneteként
+kezeljük. Csak konkrét paraméterezett renderelő/szűrő/cellaalakítás jöhet
+szóba, amely a megőrzött ellenőrzőpixeleket is megjósolja. A7.0/0.875
+SFX-konstansokat nem másoljuk át. Új értéke az eddig általános renderer-
+feltevéshez képest a ténylegesen dokumentált szerzői PixelStretch-példa.
+
+**C – Pontos Codex-művelet átvételi vizsgálata.**
+Előbb az eredeti4lépést és a Fibonacci-szerepet kell hitelesíteni.
+Ha ez ténylegesen indexléptetés, navigáció vagy állapotsor, külön kell
+választani a negatív8SVX-delta és Fibonacci-egészkód próbáinktól.
+Új nagy keresést az algoritmus ismerete előtt nem javaslunk.
+
+Előzetes ajánlás: forráskör lezárása, majd **A**, B párhuzamosan megtartva;
+ha az eredeti Codex-szöveg konkrét és jobban illő műveletet ad, ez a
+sorrend megváltozhat. A felhasználó döntése előtt egyik új irányhoz sem
+indítottunk automatikusan új HALV-kulcskeresést.
+
+### 8. Reprodukció, mentés és még nyitott feladat
+
+```sh
+cd /workspace/HALV
+python3 tools/audit_public_zden_review.py
+```
+
+A források URL-je, a pontos hash-ek és a blokkolások:
+`sources/public_web_review_20261101.json`.
+A géppel ellenőrzött állapot: `data/public_zden_review_integrity.json`.
+A teljes történeti képi újrafutások: `data/public_zden_historical_rerun.json`.
+A strukturált megállapítások és döntési irányok:
+`data/public_zden_review_findings.json`.
+
+A meglévő MD korábbi bájtjai változatlanul maradnak. A következő fejezet
+akkor egészíti ki ezt az összképet, amikor a blokkolt elsődleges és fórum-
+források elérhetővé válnak. Nem állítjuk, hogy a teljes internetet vagy
+zárt csoportokat átnéztük. A GitHub-publikálást csak sikeres push után
+tekintjük megtörténtnek. Ebben a körben nincs HALV-megfejtés.

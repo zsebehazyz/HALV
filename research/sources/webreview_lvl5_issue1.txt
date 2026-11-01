@@ -1,0 +1,267 @@
+
+
+ [Flag Submission] LVL5 — Possible Solution · Issue #1 · HomelessPhD/Zden_LVL5 · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+HomelessPhD
+Zden_LVL5
+
+Repository navigation
+
+Code
+Issues2 (2)
+Pull requests1 (1)
+Actions
+Projects
+Security and quality
+Insights
+
+More items
+
+[Flag Submission] LVL5 — Possible Solution #1
+
+New issueCopy link
+
+New issueCopy link
+
+Open
+
+Open
+
+[Flag Submission] LVL5 — Possible Solution#1
+
+Copy link
+
+Description
+
+Ateammods
+opened on Jun 27, 2025
+
+Issue body actions
+
+Hello ZDEN team,
+
+I'd like to submit my solution to the Level 5 puzzle.
+
+Primary Flag Candidate:
+
+zden{PPYTPSPZYS}
+
+Derived via:
+
+Rectangle geometry → sorted by row tolerance
+
+Area-based Vigenère cipher
+
+Binary mask extraction & ASCII transform
+
+Secondary (prime-indexed) attempt:
+
+zden{PBGMTCKSJKA}
+
+Let me know if either passes. Cheers!
+
+🧠 Solved entirely on mobile with logic + code + vision.
+
+Activity
+
+HomelessPhD commented on Jun 27, 2025 
+
+HomelessPhD
+on Jun 27, 2025 via email
+
+Owner
+More actions
+
+Hi. Can you be more specific please? I tried to solve this puzzle pretty
+long time ago (by the way - check another ZDEN puzzle comments on twitter,
+i have posted some ideas there too)
+…
+
+On Fri, Jun 27, 2025 at 5:47 AM Ateammods ***@***.***> wrote:
+ *Ateammods* created an issue (HomelessPhD/Zden_LVL5#1)
+ <#1>
+
+ Hello ZDEN team,
+
+ I'd like to submit my solution to the Level 5 puzzle.
+
+ Primary Flag Candidate:
+
+ *zden{PPYTPSPZYS}*
+
+ Derived via:
+
+ - Rectangle geometry → sorted by row tolerance
+ - Area-based Vigenère cipher
+ - Binary mask extraction & ASCII transform
+
+ Secondary (prime-indexed) attempt:
+
+ *zden{PBGMTCKSJKA}*
+
+ Let me know if either passes. Cheers!
+
+ 🧠 Solved entirely on mobile with logic + code + vision.
+
+ —
+ Reply to this email directly, view it on GitHub
+ <#1>, or unsubscribe
+ <[redacted GitHub unsubscribe link]>
+ .
+ You are receiving this because you are subscribed to this thread.Message
+ ID: ***@***.***>
+
+Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment
+
+Metadata
+Metadata
+
+AssigneesNo one assigned
+
+LabelsNo labels
+
+No labels
+
+ProjectsNo projects
+
+MilestoneNo milestone
+
+RelationshipsNone yet
+
+DevelopmentNo branches or pull requests
+
+Issue actions
+Open in GitHub Copilot app
+
+Footer
+
+ © 2026 GitHub, Inc.
+
+Footer navigation
+
+ Terms
+
+ Privacy
+
+ Security
+
+ Status
+
+ Community
+
+ Docs
+
+ Contact
+
+ Manage cookies
+
+ Do not share my personal information
+
+ You can’t perform that action at this time.
+

@@ -706,3 +706,18 @@ azonosítása. A64kevert kontrollból41ad legalább23teljes folyamot.
 Egyik teljes folyam sem közvetlen bájtkód n vagy n−1 szerint. Nincs új
 kulcsjelölt. A teljes maradék és geometriai ág megmarad; a továbblépéshez
 R generálása és az egészek indokolt szemantikája kell. Részletek:25.fejezet.
+
+
+## R26: nyilvános források és tényleges Zden-előzmények
+
+Hét szerzőnek tulajdonított, hash-azonos megoldóábra megtekintve. Új konkrét
+előzmény: SFX inverz PixelStretch és kihagyott WIF5; XM17 mozgó6bites kezdés
+és nem rajzolt0indexű1; XIXOIO két eltérő félbájtja képi zárójel szerint
+fűződik össze, majd a logóértékek aritmetikát vezérelnek. Ezek nem HALV-szabályok.
+Level2 és Level5 teljes képi kontrollja újrafuttatva; öt publikált történeti
+Bitcoin-kulcs címegyezése külön ellenőrizve. A118bit állítás csak egy külső
+olvasat modellfüggő becslése, nem a teljes kép lehetetlenségi bizonyítéka.
+A Codex pontos4lépése, az eredeti Fibonacci/Morse-komment és a friss fórumkör
+még hálózatilag blokkolt. Az elérhető GitHub-forrásokban nincs új ellenőrzött
+HALV-algoritmus. A következő irányt a felhasználóval választjuk ki; új kulcskeresés
+nem futott. Részletes forráskritika és döntési sorrend a fő MD26.fejezetében.

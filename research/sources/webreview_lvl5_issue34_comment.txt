@@ -1,0 +1,236 @@
+
+
+ Zden Cryptopuzzle LVL.5, solved · Issue #34 · floflo777/open-crypto-puzzles · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+floflo777
+open-crypto-puzzles
+
+Repository navigation
+
+Code
+Issues11 (11)
+Pull requests1 (1)
+Actions
+Projects
+Security and quality
+Insights
+
+More items
+
+Zden Cryptopuzzle LVL.5, solved #34
+
+New issueCopy link
+
+New issueCopy link
+
+Closed
+
+Closed
+
+Zden Cryptopuzzle LVL.5, solved#34
+
+Copy link
+
+Description
+
+deviceio121
+opened on Sep 23, 2026
+
+Issue body actions
+
+zden lvl 5 is empty, probably solved https://www.blockexplorer.com/bitcoin/tx/e2544433184d0fe4157ca10a8e1ce753bb52a7b0bbcf833740d7448ed25e8e8e#overview
+
+Activity
+
+floflo777 commented on Sep 24, 2026 
+
+floflo777
+on Sep 24, 2026
+
+Owner
+More actions
+
+oh wow
+
+floflo777 commented on Sep 26, 2026 
+
+floflo777
+on Sep 26, 2026
+
+Owner
+More actions
+
+Confirmed on chain: swept in block 968,171 on 2026-09-22, tx e2544433, 551,745 sats to bc1qw50q83k7psugw5z5548kwnxqqjxjxvx2pkvz0s, no message. Folder moved to archive/dead-ends, research kept. If the solver reads this, the derivation gets full credit here. Thanks for the report.
+
+floflo777added a commit that references this issue on Sep 26, 2026
+
+zden lvl5: swept 2026-09-22 (issue #34), moved to dead ends; guntis: …...
+
+8f4db15
+
+floflo777closed this as completedon Sep 26, 2026
+
+floflo777 commented on Oct 3, 2026 
+
+floflo777
+on Oct 3, 2026
+
+Owner
+More actions
+
+Full solution published and verified: the key f4bfad68...ce8a9f51 derives the vanity escrow 1cryptoGeCRiTzVgxBQcKFFjSVydN1GW7. Formula x=(10width+left-1)/64, y=(10height+top-1)/64, round(x*y) into an 8x8 grid, sum consecutive pairs for each key byte. Writeup: https://echo.ls/zden-level-5/ . Recorded in 4-solved with credit.
+
+Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment
+
+Metadata
+Metadata
+
+AssigneesNo one assigned
+
+LabelsNo labels
+
+No labels
+
+ProjectsNo projects
+
+MilestoneNo milestone
+
+RelationshipsNone yet
+
+DevelopmentNo branches or pull requests
+
+Issue actions
+Open in GitHub Copilot app
+
+Footer
+
+ © 2026 GitHub, Inc.
+
+Footer navigation
+
+ Terms
+
+ Privacy
+
+ Security
+
+ Status
+
+ Community
+
+ Docs
+
+ Contact
+
+ Manage cookies
+
+ Do not share my personal information
+
+ You can’t perform that action at this time.
+

@@ -1,0 +1,233 @@
+
+
+ GitHub - jsn/btc-crypto: Zden's crypto puzzles · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+jsn
+btc-crypto
+
+Repository navigation
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security and quality
+Insights
+
+More items
+
+btc-cryptoPublic
+
+NotificationsYou must be signed in to change notification settings
+Fork0 (0)
+Star5 (5)You must be signed in to star a repository
+
+About
+Zden's crypto puzzles
+Resources
+Readme
+
+Activity
+
+Stars
+5 stars
+Watchers
+3 watching
+Forks
+0 forks
+Report repository
+
+master
+
+BranchesTags
+
+Go to fileCode
+Open more actions menu
+
+Latest commit
+
+History4 Commits
+
+4 Commits
+Folders and files
+
+NameName
+Last commit message
+Last commit date
+
+crypto2
+
+crypto2
+
+README.rst
+
+README.rst
+
+View all files
+
+Repository files navigation
+
+README
+
+More items
+
+Zden's bitcoin crypto puzzles
+
+See http://crypto.haluska.sk/ for task descriptions.
+
+About
+Zden's crypto puzzles
+Resources
+Readme
+
+Activity
+
+Stars
+5 stars
+Watchers
+3 watching
+Forks
+0 forks
+Report repository
+
+Releases
+
+Packages
+
+Contributors
+
+Languages
+
+Footer
+
+ © 2026 GitHub, Inc.
+
+Footer navigation
+
+ Terms
+
+ Privacy
+
+ Security
+
+ Status
+
+ Community
+
+ Docs
+
+ Contact
+
+ Manage cookies
+
+ Do not share my personal information
+
+ You can’t perform that action at this time.
+

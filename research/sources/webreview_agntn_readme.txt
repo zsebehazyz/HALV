@@ -1,0 +1,211 @@
+# @agntn/puzzles
+
+[![npm version](https://npmx.dev/api/registry/badge/version/@agntn/puzzles)](https://npmx.dev/package/@agntn/puzzles)
+[![npm downloads](https://npmx.dev/api/registry/badge/downloads/@agntn/puzzles)](https://npmx.dev/package/@agntn/puzzles)
+[![license](https://npmx.dev/api/registry/badge/license/@agntn/puzzles)](https://npmx.dev/package/@agntn/puzzles)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/agntn/puzzles)
+
+Public crypto puzzles and bounties, as typed records. You ask for a puzzle, you get its address, its key material and what happened on chain.
+
+## Why?
+
+Every puzzle thread has the same three things: the addresses, the prizes, and who solved what. Every scanner and tracker re-types them from the thread, slightly differently each time. So they live here once, as code. A puzzle is a TypeScript record. The type checker reads it before a test does. The CLI, the MCP server and the Pi and OMP extensions read one registry.
+
+Docs, one page per puzzle and a live playground: [puzzles.agntn.dev](https://puzzles.agntn.dev).
+
+> [!WARNING]
+> Pre-1.0. The API, the CLI flags and the data model can still move. Pin an exact version if you build on it.
+
+## ✨ Features
+
+- 🧾 **Data as code.** One `PuzzleSpec` literal per puzzle, built by one `puzzle()` factory for every chain. No JSON, no build step.
+- 🕳️ **Absent means absent.** A puzzle without a solver or a prize has no such key. Nothing serializes as null.
+- 🔑 **Key material in every shape.** Hex, WIF, a BIP38 payload, a seed phrase, secret shares, a sealed Arweave keyfile, or just a bit width. Every key of a multisig, too. One builder.
+- 💤 **Lazy registry.** Importing the package loads no records. `get("bits/71")` imports one collection module.
+- ✅ **Verification is a value.** A published key derives the address or it doesn't. Nothing throws for a bad record.
+- 💰 **Live balances.** `puzzle.balance()` through `@agntn/explorers`. Base units as `bigint`, API keys redacted from errors.
+- 👀 **A watch on the record.** `puzzles watch` lists the deposits and spends a record misses, a prize that moved, a public key a spend gave away, a source page that changed. It never edits a record. You do.
+- 📋 **A checklist before the weekend.** `puzzles eligibility` gathers the source, the address, lifetime totals from the explorer, the status with its evidence and what counts as a solution. Whatever nobody can fill comes back as a `missing` row, never a guess.
+- 🖼️ **The puzzle itself, not a link to it.** `puzzles_assets` hands a model the image, the stage files and the archived posts behind the hints, checked against the SHA-256 the record pins. Links rot. These don't.
+- 🤖 **Fifteen agent tools.** One executor behind MCP, Pi and OMP. Same answer everywhere.
+- 🌐 **Runs anywhere.** Neutral ESM on the Fetch API. Node, browsers, edge workers.
+
+## 📦 Install
+
+```bash
+pnpm add @agntn/puzzles
+```
+
+Node.js 26 or newer for the CLI.
+
+## 🚀 First call
+
+```bash
+npx @agntn/puzzles stats
+```
+
+That prints the total, one count per status and how many puzzles have a known public key. No key, no config, no network. The records ship inside the package. The bare `puzzles` below is `pnpm exec puzzles` after a local `pnpm add`, or just `puzzles` after `pnpm add -g @agntn/puzzles`.
+
+```bash
+puzzles show hash-collision/sha256
+```
+
+```text
+hash-collision/sha256	unsolved	0.27734251 BTC	35Snmmy3uhaer2gTboc81ayCip4m9DT4ko
+chain: bitcoin  address kind: p2sh
+hash160: 292fb39df7cd619a396069383928e6bfb74ebec5
+redeem script: 6e879169a87ca887 (hash 292fb39df7cd619a396069383928e6bfb74ebec5)
+public key: unknown
+private key: unknown
+started: 2013-09-13 05:59:09
+transactions: 1
+	funding	2013-09-13 05:59:09	0.1 BTC	397f12ee15f8a3d2ab25c0f6bb7d3c64d2038ca056af10dd8251b98ae0f076b0
+explorer: https://blockstream.info/address/35Snmmy3uhaer2gTboc81ayCip4m9DT4ko
+source: https://bitcointalk.org/index.php?topic=293382.0
+```
+
+### Commands
+
+| Command                       | What it prints                                                                                                                         |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `puzzles stats`               | Totals, status counts, prize sums and the data version                                                                                 |
+| `puzzles collections`         | One row per collection: key, counts, author                                                                                            |
+| `puzzles authors [key]`       | One row per author, or one author's record with its sourced facts                                                                      |
+| `puzzles author <key>`        | One author's record, straight from the `puzzles_author` tool                                                                           |
+| `puzzles solvers [key]`       | One row per named solver, or one solver's record: every solve, profiles and sourced facts                                              |
+| `puzzles solver <key>`        | One solver's record, straight from the `puzzles_solver` tool                                                                           |
+| `puzzles show <id>`           | One puzzle's record: key material, transactions, hints and links. `--json` for the data                                                |
+| `puzzles hints <id>`          | The collection's hints, the puzzle's own, then its hint files. `--json` for both                                                       |
+| `puzzles stages <id>`         | The stages of a multi-stage puzzle with their pages, files and published answers. `--json` for the list                                |
+| `puzzles assets <id>`         | The files a puzzle ships with SHA-256 and size, and the archived pages it cites. `--read <path>` writes one, `--check`/`--live` verify |
+| `puzzles list [collection]`   | One puzzle per line. `--address`, `--chain`, `--status`, `--technique` and `--with-pubkey` narrow it, `--limit` and `--offset` page it |
+| `puzzles verify [id]`         | A published key and its recipe against the address. `--all` or the `list` filters for a set, exit 1 on a mismatch                      |
+| `puzzles balance [id]`        | The live balance. The `list` filters check a whole set, one row each. `--api-key`, or one variable per chain                           |
+| `puzzles watch [id]`          | What the chain knows and the record doesn't. `--since` checks the source pages too, exit 1 on any finding                              |
+| `puzzles eligibility <query>` | The checklist before working on a prize, by id or address. Exit 1 while any field is missing                                           |
+| `puzzles export`              | The whole dataset with its `data_version`                                                                                              |
+| `puzzles mcp`                 | The MCP server over stdio                                                                                                              |
+
+`--json` prints the data behind the text, `bigint` as strings and absent fields left out. The commands come from the same tool definitions the agents get, so a typo in a flag fails here just like it fails for a model. The flags and exit codes are in the [CLI guide](https://puzzles.agntn.dev/guide/cli).
+
+## 🧠 Library
+
+```ts
+import { get, stats, verify } from "@agntn/puzzles";
+import { bits } from "@agntn/puzzles/collections/bits";
+
+const puzzle = await get("bits/71"); // loads the bits collection, nothing else
+puzzle?.address().value; // "1PWo3JeB9jrGwfHDNpdGK54CRas7fsVzXU"
+puzzle?.keyRange(); // [2n ** 70n, 2n ** 71n - 1n]
+
+(await verify(bits.require(1))).verified; // true, key 1 derives its address
+(await stats()).unsolved; // how many are still waiting for a key
+(await bits.require(71).balance()).totalUnits(); // 7.10190014 when I ran it, mempool.space decides
+```
+
+That's most of it, really. A collection is its own entry and everything on it is synchronous. The views that span collections await a load. Errors descend from `PuzzlesError`, balances have their own family under `BalanceError`. The rest is in the guides: [records](https://puzzles.agntn.dev/guide/records), [registry](https://puzzles.agntn.dev/guide/registry), [lookups](https://puzzles.agntn.dev/guide/lookups), [verification](https://puzzles.agntn.dev/guide/verification), [balances](https://puzzles.agntn.dev/guide/balances).
+
+## 🗺️ Collections
+
+| Key                         | Chains                              | What it is                                  |
+| --------------------------- | ----------------------------------- | ------------------------------------------- |
+| `bits`                      | bitcoin                             | Keys of 1 to 256 bits, one address each     |
+| `quizchain`                 | bitcoin                             | Quiz blocks chained by their keys           |
+| `quizchain2`                | bitcoin                             | Quizchain's second run, from May 2019       |
+| `rushwallet`                | bitcoin                             | Brainwallets from a 2014 contest            |
+| `zden`                      | bitcoin, ethereum, litecoin, decred | Zden's visual puzzles                       |
+| `weave`                     | arweave, ethereum                   | Tiamat's Puzzle Weave series                |
+| `move-over-brokers`         | bitcoin                             | Twelve keys hidden in a blockchain book     |
+| `mini`                      | bitcoin, bitcoincash                | RetiredCoder's seven mini-puzzles           |
+| `warp`                      | bitcoin                             | Keybase's scrypt brainwallet challenges     |
+| `hash-collision`            | bitcoin                             | Peter Todd's P2SH collision bounties        |
+| `teikhos`                   | ethereum                            | Contracts that pay for a public key         |
+| `ballet`                    | bitcoin                             | BIP38 keys printed on physical wallets      |
+| `dug`                       | bitcoin                             | 2025 student seed hunt                      |
+| `coin-games`                | bitcoin                             | Banknotes with a skull, a lion and Venus    |
+| `bitimage`                  | bitcoin                             | Seeds hashed from photographs               |
+| `luckylurker`               | bitcoin                             | Two Bitcoin Vault seed challenges           |
+| `iamabananaamaa`            | bitcoin                             | A ZIP in a GIF, then a fake Caesar          |
+| `doges-gambit`              | ethereum, dogecoin                  | Two keys read off one chess board video     |
+| `crypto-puzzles`            | ethereum                            | Raw Ether keys hidden in short videos       |
+| `walking-banks`             | bitcoin                             | A seed hidden in a Bitcoin thriller novel   |
+| `grycoin`                   | bitcoin                             | Quizchain renamed, days before the shutdown |
+| `smith-lyle-moore`          | bitcoin                             | A band's two hunts, one per single          |
+| `real-big-block`            | bitcoin                             | 777 mBTC for a Wattpad chapter, unclaimed   |
+| `school-of-bitcoin`         | bitcoin                             | A business card with 1M sats on the back    |
+| `liberte-guidant-le-peuple` | bitcoin                             | Delacroix in yellow vests, seed in French   |
+| `hunting-time`              | bitcoin                             | Seed words disguised as times in a novel    |
+| `bitaps`                    | bitcoin                             | A 3 of 5 secret sharing scheme              |
+| `gsmg`                      | bitcoin                             | A multi phase image puzzle                  |
+| `movie-enigma`              | bitcoin                             | Film titles as seed words, solved 2026      |
+| `ledger-donjon`             | bitcoin                             | Scissors Secret Sharing from the CTF        |
+| `coin-artist`               | bitcoin                             | TORCHED H34R7S painting                     |
+| `genesis`                   | bitcoin                             | Genesis block OP_RETURN puzzle              |
+| `mineshop`                  | ethereum                            | A seed split between a video and a post     |
+| `satoshi-birthday-quiz`     | bitcoin                             | Seven quiz answers hashed into a wallet     |
+| `book-quiz`                 | bitcoin                             | A book quiz nobody won in time              |
+| `80-bit`                    | bitcoin                             | 80 hidden bits and a mempool race           |
+| `wickex`                    | bitcoin                             | Hex, Morse and a spectrogram passphrase     |
+| `picture-puzzle`            | bitcoin                             | Four pictures that spell a key database     |
+| `brave-new-world`           | bitcoin                             | A seed phrase hidden in a 2020 collage      |
+| `wealth-in-poetry`          | bitcoin                             | Seed words hidden in a 2019 Medium essay    |
+| `path-to-greatness`         | litecoin                            | Clues from a game demo, a Litecoin key      |
+| `proof-of-writing`          | ecash                               | A Cashtab seed on an essay's diagonal       |
+| `bitaddress`                | bitcoin                             | A BIP38 wallet with a forgotten passphrase  |
+| `powerful-moss`             | base                                | A seed in an album, the prize in a contract |
+| `trivia-brainwallet`        | bitcoin                             | Twelve trivia riddles salted into scrypt    |
+| `great-riddle`              | bitcoin                             | Seed words hidden in ballpoint pen drawings |
+| `satoshi-maze`              | bitcoin                             | A prime from e times two Base58 words       |
+| `natasha-otomoski`          | bitcoin                             | Eight camel case words as raw key bytes     |
+| `phy`                       | bitcoin                             | A signed post and a spiral of grey emojis   |
+| `seed-phrase`               | bitcoin                             | Dated clues, then two years of silence      |
+| `9vw04`                     | bitcoin                             | A WIF in one tweet, rainbows not included   |
+
+Identifiers are `collection/name`. A singleton, such as `gsmg`, `genesis` or `80-bit`, is just the key. Each collection has a page with the story, the quirks and every puzzle: [puzzles.agntn.dev/collections](https://puzzles.agntn.dev/collections).
+
+## 🤖 Agents
+
+```bash
+claude mcp add puzzles --scope user -- npx -y @agntn/puzzles mcp
+claude mcp add --transport http puzzles https://puzzles.agntn.dev/mcp # nothing to install
+pi install npm:@agntn/puzzles
+```
+
+```json
+{
+  "mcpServers": {
+    "puzzles": { "command": "npx", "args": ["-y", "@agntn/puzzles", "mcp"] }
+  }
+}
+```
+
+Fifteen tools: `puzzles_stats`, `puzzles_collections`, `puzzles_authors`, `puzzles_author`, `puzzles_solvers`, `puzzles_solver`, `puzzles_show`, `puzzles_hints`, `puzzles_stages`, `puzzles_assets`, `puzzles_list`, `puzzles_verify`, `puzzles_balance`, `puzzles_watch` and `puzzles_eligibility`. The last three leave the process, and so does `puzzles_assets` when it reads a file. Their annotations say so. What the text carries and where the limits live: the [agents guide](https://puzzles.agntn.dev/guide/agents).
+
+## 🚫 What this does not do
+
+It doesn't solve anything. No scanner, no kangaroo, no brainwallet cracker, and no guessing a status from a transaction list. `solved`, `swept`, `claimed` and `expired` are written down by hand, because a claim transaction plus a published key still means solved. Chain facts come from `@agntn/chains`, key derivation from `@agntn/keys` and balances from `@agntn/explorers`. This package doesn't reimplement any of them.
+
+## 🧩 Adding a puzzle
+
+One record file under `src/collections/<key>/` and one line in the collection module. Then `pnpm test` runs the data gate: unique ids, address and txid formats, key derivation, BIP38 payloads, asset paths and their SHA-256, no nulls. The shape of a record is in [Puzzle records](https://puzzles.agntn.dev/guide/records) and the rules in [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## 🛠️ Development
+
+```bash
+pnpm install      # the library and the docs site, one lockfile
+pnpm lint         # vp lint and vp fmt, docs included
+pnpm typecheck    # builds first, then checks src, Pi and OMP
+pnpm test         # unit tests and the data gate
+pnpm test:packed  # packs the tarball and runs every published entry without src/
+pnpm run docs     # the Docus site on localhost
+```
+
+One install covers the site too. No second trip into `docs/`, no second lockfile quietly drifting away from the first. And the `run` in that last line isn't decoration. pnpm 12 has a `docs` command of its own, and it wants a package name, not our site.
+
+## 💛 Thanks
+
+This package exists thanks to the open source programs at Anthropic and OpenAI: [Claude for Open Source](https://claude.com/contact-sales/claude-for-oss) and [Codex for Open Source](https://developers.openai.com/community/codex-for-oss).
+
+## 📄 License
+
+[MIT](./LICENSE)

@@ -1,0 +1,54 @@
+{
+  "review": "R26-public-source-review",
+  "network_requests_recorded": 103,
+  "saved_source_files_hash_verified": 83,
+  "successes": 83,
+  "failed_or_blocked": 20,
+  "commit_pinned_exact_response_matches": 28,
+  "catalog_digest_matching_solver_images": 7,
+  "historical_vectors": [
+    {
+      "level": "level-1",
+      "uncompressed_address": "1cryptommoqPHVNHuxVQG3bzujnRJYB1D",
+      "published_key_derives_address": true,
+      "WIF_checked": true,
+      "scope": "published vector check, not artwork decoding"
+    },
+    {
+      "level": "level-2",
+      "uncompressed_address": "1cryptoTuax4qeedzVC35eYf4c16v4reJ",
+      "published_key_derives_address": true,
+      "WIF_checked": true,
+      "scope": "published vector check, not artwork decoding"
+    },
+    {
+      "level": "level-3",
+      "uncompressed_address": "1cryptoJzomVVJUSys8Qv1gKPCXFoZy1U",
+      "published_key_derives_address": true,
+      "WIF_checked": true,
+      "scope": "published vector check, not artwork decoding"
+    },
+    {
+      "level": "level-5",
+      "uncompressed_address": "1cryptoGeCRiTzVgxBQcKFFjSVydN1GW7",
+      "published_key_derives_address": true,
+      "WIF_checked": true,
+      "scope": "published vector check, not artwork decoding"
+    },
+    {
+      "level": "1bitcoin-white-paper",
+      "uncompressed_address": "1BiTCoiNsuFnkCFGkv6AGgwWxN31GUwY6W",
+      "published_key_derives_address": true,
+      "WIF_checked": true,
+      "scope": "published vector check, not artwork decoding"
+    }
+  ],
+  "level3_printed_diagram_vector_verified": true,
+  "coverage_limit": "Public GitHub only; author site, search engines and forums blocked by current egress policy. No private group access.",
+  "not_a_HALV_solution": true,
+  "input_sha256": {
+    "research/sources/public_web_review_20261101.json": "33fe1c784bca890f62abacd3858dc06e42b74872ae146341ee2f9efe9bfd3f17",
+    "tools/audit_public_zden_review.py": "3a1c7e3f714fdc07479faf91f9acda8fe6a714af2a6051c0c9fbebd1428191b1",
+    "tools/bitcoin_oracle.py": "23fc132483bbee26271c5bfdfe745e590ddf431ca92fb3897b696e46c198f5ec"
+  }
+}

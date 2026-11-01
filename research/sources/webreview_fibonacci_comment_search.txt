@@ -1,0 +1,252 @@
+
+
+ Issue search results · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+issues Search Results · "Cracked it" "Fibonacci"
+
+Filter by
+
+Code... (...)results
+Repositories
+results
+Issues4 (4)results
+Pull requests
+results
+AI resources
+results
+Discussions
+results
+More
+
+State
+
+Open
+
+Closed
+
+Advanced
+
+Owner
+
+State
+
+Close reason
+
+Has linked pull request
+
+Author
+
+Assignee
+
+Mentioned user
+
+Mentioned team
+
+Commenter
+
+Involved user
+
+Label
+
+Milestone
+
+Number of comments
+
+Number of interactions
+
+Advanced search
+
+Filter:Issues4 (4)4 results  (122 ms)
+4 results 
+
+Sort by: Best match
+Filter
+
+microsoftnorman/gametime
+Add the Rotten Egg ranged enemy
+Deferred from MVP. requirements.md Phase 2 item 5. The MVP ships exactly one enemy archetype (the Cracked Egg chaser).
+
+Why it was cut
+
+This is the first item that requires a projectile system ...
+
+enhancement
+phase-2
+points/13
+size/XL
+microsoftnorman·
+1·
+Opened  
+on Jul 28·
+#2
+
+enspyrco/tech_world
+feat: unlock doors by casting prompt spells
+... with 1 slot left, watching someone
+on the other side who already cracked it? That s motivation you can t manufacture. And unlike coding exercises, prompt
+challenges are infinitely generatable — Clawd can create new ones on the fly, tailored to each spell school and
+difficulty tier.
+
+nickmeinhold·
+1·
+Opened  
+on Apr 4·
+#213
+
+javascript-obfuscator/javascript-obfuscator
+VM obfuscation can be trivially bypassed in seconds using Large Language Models
+... this and tell me what it does 4. Enjoy, you now have cracked vm
+protections which were supposed to be revolutionary
+
+JavaScript Obfuscator Edition
+
+obfuscator.io free with vm enabled set on low
+
+Your ...
+
+As designed
+enhancement
+fixed
+Not a bug
+Pro
+question
+ghost·
+14·
+Opened  
+on Jan 25·
+#1371
+
+xoseperez/espurna
+1.6.6 Sonoff Basic doesn't connect to wifi
+... 
+previously wouldn t flash above 1.6 with no issues. If I m feeling brave tomorrow I ll flash the one in the ceiling too!
+
+Edit: And can confirm the ceiling one flashed perfectly as well - you might well have cracked it! :)
+
+Cheers
+
+Andy
+
+bug
+major
+wifi
+xoseperez·
+66·
+Opened  
+on Feb 25, 2017·
+#86
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Restrict your search to the title by using the in:title qualifier.
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+ You can’t perform that action at this time.
+

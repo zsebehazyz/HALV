@@ -1,0 +1,291 @@
+
+
+ Issue search results · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+issues Search Results · "zden" "puzzle"
+
+Filter by
+
+Code... (...)results
+Repositories
+results
+Issues23 (23)results
+Pull requests
+results
+AI resources
+results
+Discussions
+results
+More
+
+State
+
+Open
+
+Closed
+
+Advanced
+
+Owner
+
+State
+
+Close reason
+
+Has linked pull request
+
+Author
+
+Assignee
+
+Mentioned user
+
+Mentioned team
+
+Commenter
+
+Involved user
+
+Label
+
+Milestone
+
+Number of comments
+
+Number of interactions
+
+Advanced search
+
+Filter:Issues23 (23)23 results  (89 ms)
+23 results 
+
+Sort by: Best match
+Filter
+
+agntn/puzzles
+Solved puzzles should always have pubkey - add validation
+
+enhancement
+oritwoen·
+Opened  
+on Jan 21·
+#99
+
+agntn/puzzles
+CLI: add `export` command for full database dump
+... ,
+ unsolved : 78,
+ ...
+ },
+ collections : {
+ b1000 : {
+ author : { ... },
+ puzzles : [ ... ]
+ },
+ zden : {
+ author : { ... },
+ puzzles ...
+
+enhancement
+oritwoen·
+Opened  
+on Jan 11·
+#91
+
+agntn/puzzles
+Add puzzle assets support (images, hints, solvers)
+... Zden s collection ARE the images - without them, the puzzle data is incomplete. Researchers and AI
+tools should be able to:
+
+ - Install boha and have everything needed to analyze puzzles
+ - Work ...
+oritwoen·
+Opened  
+on Dec 31, 2025·
+#28
+
+agntn/puzzles
+data: add private key for zden/Level 2 puzzle
+oritwoen·
+Opened  
+on Jan 6·
+#84
+
+agntn/puzzles
+feat: add private key for zden Level 1 puzzle
+Problem
+
+The zden Level 1 puzzle is marked as solved but missing its private key data in the database.
+
+Proposed Solution
+
+Add the verified private key (WIF ...
+oritwoen·
+Opened  
+on Jan 6·
+#80
+
+agntn/puzzles
+Add Ethereum blockchain API support for transaction fetching
+
+enhancement
+oritwoen·
+Opened  
+on Jan 2·
+#55
+
+agntn/puzzles
+data: add zden Level 3 private key
+oritwoen·
+Opened  
+on Jan 6·
+#86
+
+agntn/puzzles
+Add support for seed-based puzzles (Monero HCPP17)
+oritwoen·
+Opened  
+on Jan 2·
+#52
+
+agntn/puzzles
+Add Decred blockchain API support for transaction fetching
+
+enhancement
+oritwoen·
+Opened  
+on Jan 2·
+#56
+
+agntn/puzzles
+Add timestamps to dates in b1000, gsmg, hash_collision
+Problem
+
+Currently dates in older collections only have YYYY-MM-DD format, while zden uses YYYY-MM-DD HH:MM:SS.
+
+Collections to update
+
+ - b1000.toml: 256 puzzles with start_date = 2015-01-15 and ...
+
+enhancement
+oritwoen·
+Opened  
+on Jan 2·
+#58
+
+Previous123Next
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Restrict your search to the title by using the in:title qualifier.
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+ You can’t perform that action at this time.
+

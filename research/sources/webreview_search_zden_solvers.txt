@@ -1,0 +1,224 @@
+
+
+ Repository search results · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+repositories Search Results · zden puzzle
+
+Filter by
+
+Code... (...)results
+Repositories5 (5)results
+Issues
+results
+Pull requests
+results
+AI resources
+results
+Discussions
+results
+More
+
+Languages
+
+Go
+
+MATLAB
+
+Python
+
+More languages...
+
+Advanced
+
+Owner
+
+Size
+
+Number of followers
+
+Number of forks
+
+Number of stars
+
+Date created
+
+Date pushed
+
+Topic
+
+License
+
+Archived
+
+Public
+
+Private
+
+Advanced search
+
+Filter:Repositories5 (5)5 results  (124 ms)
+5 results 
+
+Sort by: Best match
+Filter
+
+HomelessPhD/Zden_LVL5
+Zden crypto puzzle LVL5 solving - rectangles
+
+MATLAB·
+10·
+Updated 
+on Sep 24
+
+Star
+
+jsn/btc-crypto
+Zden's crypto puzzles
+
+Go·
+5·
+Updated 
+on Jun 19, 2016
+
+Star
+
+consigcody94/zden-puzzle
+Zden Level 5 Bitcoin puzzle exploration scripts
+
+Python·
+0·
+Updated 
+on Apr 24
+
+Star
+
+aksara1237-bit/zden-puzzle-analysis
+Analysis and interpretation of Zden Puzzle Level 5
+0·
+Updated 
+on Dec 31, 2025
+
+Star
+
+fernandesrobert/ZDEN-HALV-PUZZLE
+Attempt to solve the puzzle: BTCrypto Puzzle Level HALV Created by Zden (@Zd3N)
+0·
+Updated 
+on Aug 22
+
+Star
+
+Sponsor open source projects you depend onContributors are working behind the scenes to make open source better for everyone—give them the help and recognition they deserve.Explore sponsorable projects 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+Sponsor open source projects you depend onContributors are working behind the scenes to make open source better for everyone—give them the help and recognition they deserve.Explore sponsorable projects 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+ You can’t perform that action at this time.
+

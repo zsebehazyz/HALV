@@ -1,0 +1,501 @@
+
+
+ puzzles/src/collections at main · agntn/puzzles · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+agntn
+puzzles
+
+Repository navigation
+
+Code
+Issues10 (10)
+Pull requests3 (3)Only collaborators can create PRs
+Actions
+Security and quality
+Insights
+
+More items
+
+FilesExpand file tree
+
+main
+
+Breadcrumbs
+puzzles
+/src
+/
+collections/Copy path
+
+Directory actions
+
+More optionsMore options
+
+Directory actions
+
+More optionsMore options
+
+Latest commit
+
+HistoryHistory
+
+History
+
+main
+
+Breadcrumbs
+puzzles
+/src
+/
+collections/Copy pathTop
+
+Folders and files
+
+NameName
+Last commit message
+Last commit date
+
+parent directory
+..
+
+ballet
+
+ballet
+
+bitimage
+
+bitimage
+
+bits
+
+bits
+
+coin-artist
+
+coin-artist
+
+coin-games
+
+coin-games
+
+crypto-puzzles
+
+crypto-puzzles
+
+doges-gambit
+
+doges-gambit
+
+dug
+
+dug
+
+grycoin
+
+grycoin
+
+hash-collision
+
+hash-collision
+
+iamabananaamaa
+
+iamabananaamaa
+
+ledger-donjon
+
+ledger-donjon
+
+luckylurker
+
+luckylurker
+
+mini
+
+mini
+
+move-over-brokers
+
+move-over-brokers
+
+quizchain
+
+quizchain
+
+quizchain2
+
+quizchain2
+
+rushwallet
+
+rushwallet
+
+smith-lyle-moore
+
+smith-lyle-moore
+
+teikhos
+
+teikhos
+
+walking-banks
+
+walking-banks
+
+warp
+
+warp
+
+weave
+
+weave
+
+wickex
+
+wickex
+
+zden
+
+zden
+
+80-bit.ts
+
+80-bit.ts
+
+9vw04.ts
+
+9vw04.ts
+
+ballet.ts
+
+ballet.ts
+
+bitaddress.ts
+
+bitaddress.ts
+
+bitaps.ts
+
+bitaps.ts
+
+bitimage.ts
+
+bitimage.ts
+
+bits.ts
+
+bits.ts
+
+book-quiz.ts
+
+book-quiz.ts
+
+brave-new-world.ts
+
+brave-new-world.ts
+
+coin-artist.ts
+
+coin-artist.ts
+
+coin-games.ts
+
+coin-games.ts
+
+crypto-puzzles.ts
+
+crypto-puzzles.ts
+
+doges-gambit.ts
+
+doges-gambit.ts
+
+dug.ts
+
+dug.ts
+
+genesis.ts
+
+genesis.ts
+
+great-riddle.ts
+
+great-riddle.ts
+
+grycoin.ts
+
+grycoin.ts
+
+gsmg.ts
+
+gsmg.ts
+
+hash-collision.ts
+
+hash-collision.ts
+
+hunting-time.ts
+
+hunting-time.ts
+
+iamabananaamaa.ts
+
+iamabananaamaa.ts
+
+index.ts
+
+index.ts
+
+ledger-donjon.ts
+
+ledger-donjon.ts
+
+liberte-guidant-le-peuple.ts
+
+liberte-guidant-le-peuple.ts
+
+luckylurker.ts
+
+luckylurker.ts
+
+mineshop.ts
+
+mineshop.ts
+
+mini.ts
+
+mini.ts
+
+move-over-brokers.ts
+
+move-over-brokers.ts
+
+movie-enigma.ts
+
+movie-enigma.ts
+
+natasha-otomoski.ts
+
+natasha-otomoski.ts
+
+path-to-greatness.ts
+
+path-to-greatness.ts
+
+phy.ts
+
+phy.ts
+
+picture-puzzle.ts
+
+picture-puzzle.ts
+
+powerful-moss.ts
+
+powerful-moss.ts
+
+proof-of-writing.ts
+
+proof-of-writing.ts
+
+quizchain.ts
+
+quizchain.ts
+
+quizchain2.ts
+
+quizchain2.ts
+
+real-big-block.ts
+
+real-big-block.ts
+
+rushwallet.ts
+
+rushwallet.ts
+
+satoshi-birthday-quiz.ts
+
+satoshi-birthday-quiz.ts
+
+satoshi-maze.ts
+
+satoshi-maze.ts
+
+school-of-bitcoin.ts
+
+school-of-bitcoin.ts
+
+seed-phrase.ts
+
+seed-phrase.ts
+
+smith-lyle-moore.ts
+
+smith-lyle-moore.ts
+
+teikhos.ts
+
+teikhos.ts
+
+trivia-brainwallet.ts
+
+trivia-brainwallet.ts
+
+walking-banks.ts
+
+walking-banks.ts
+
+warp.ts
+
+warp.ts
+
+wealth-in-poetry.ts
+
+wealth-in-poetry.ts
+
+weave.ts
+
+weave.ts
+
+wickex.ts
+
+wickex.ts
+
+zden.ts
+
+zden.ts
+
+View all files
+
+Footer
+
+ © 2026 GitHub, Inc.
+
+Footer navigation
+
+ Terms
+
+ Privacy
+
+ Security
+
+ Status
+
+ Community
+
+ Docs
+
+ Contact
+
+ Manage cookies
+
+ Do not share my personal information
+
+ You can’t perform that action at this time.
+

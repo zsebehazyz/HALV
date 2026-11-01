@@ -1,0 +1,239 @@
+
+
+ Address lookup hides a match its filters dropped · Issue #346 · agntn/puzzles · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+agntn
+puzzles
+
+Repository navigation
+
+Code
+Issues10 (10)
+Pull requests3 (3)Only collaborators can create PRs
+Actions
+Security and quality
+Insights
+
+More items
+
+Address lookup hides a match its filters dropped #346
+
+New issueCopy link
+
+New issueCopy link
+
+Closed
+#347
+
+Closed
+
+Address lookup hides a match its filters dropped#346
+
+#347
+
+Copy link
+
+Labels
+
+enhancementNew feature or requestNew feature or request
+
+Description
+
+aeitwoen
+opened on Sep 28, 2026
+
+Issue body actions
+
+What's missing?
+
+puzzles_list with an address answers 0 matching puzzles: (none) when the other filters rule the puzzle out, which reads exactly like "this address isn't in the catalog". On OMP that's the common case, not an edge: OMP sends every parameter in the schema, so an address lookup always carries some collection, status and withPubkey. On 2026-09-26 six OMP sessions made about 35 address lookups this way. The agents' own labels were things like "Searching entire catalog for exact reward address" and "Resolving target without catalog status filters", while the call itself pinned collection: "ktimesg" and status: "unsolved". A few gave up and tried collection: "none" or "any".
+Steps to reproduce
+
+import { listTool } from "./src/tool-operations.ts";
+
+const address = "1crypto24HCr178iMcKd5iUi5D4rsg1nK"; // zden/level-halv
+
+await listTool({ address });
+await listTool({ address, collection: "b1000", chain: "bitcoin", status: "unsolved", withPubkey: false });
+await listTool({ address, collection: "zden", chain: "bitcoin", status: "solved", withPubkey: false });
+Expected
+
+When an address matches a puzzle that the filters exclude, the answer says so, for example 0 matching puzzles. 1crypto24H... is zden/level-halv (unsolved), outside collection b1000.
+Actual
+
+1 matching puzzles: zden/level-halv unsolved 0.003125 BTC 1crypto24HCr178iMcKd5iUi5D4rsg1nK
+0 matching puzzles: (none)
+0 matching puzzles: (none)
+
+Proposed fix
+
+An address is close to a unique key, so an empty filtered result can look the address up once without filters and name what it found and which filter dropped it. That covers every surface, not just OMP. Accepting a blank collection from OMP as "no filter" would help too, but #272 went the other way for good reasons, and the hint above makes the choice matter less.
+Notes
+
+agntn/sessions#152 is the same OMP behavior hitting sessions_list.
+
+Checked against ee051c9 (0.24.0).
+
+Activity
+
+aeitwoenadded 
+enhancementNew feature or requestNew feature or request on Sep 28, 2026
+
+oritwoenclosed this as completedin #347on Sep 28, 2026
+
+Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment
+
+Metadata
+Metadata
+
+AssigneesNo one assigned
+
+Labels
+
+enhancementNew feature or requestNew feature or request
+
+TypeNo type
+
+ProjectsNo projects
+
+MilestoneNo milestone
+
+RelationshipsNone yet
+
+DevelopmentNo branches or pull requests
+
+Issue actions
+Open in GitHub Copilot app
+
+Footer
+
+ © 2026 GitHub, Inc.
+
+Footer navigation
+
+ Terms
+
+ Privacy
+
+ Security
+
+ Status
+
+ Community
+
+ Docs
+
+ Contact
+
+ Manage cookies
+
+ Do not share my personal information
+
+ You can’t perform that action at this time.
+

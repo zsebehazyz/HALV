@@ -99,3 +99,16 @@ mind a23-ból az egészek és a recept alapján256/256q és256/256R visszaáll.
 Ez veszteségmentes reprezentáció, nem R generálásának megfejtése.
 Nincs teljes közvetlen bájtsor vagy új kulcsjelölt; a független audit sikeres.
 A meglévő fő MD25.fejezete őrzi a teljes eredményt és korlátokat.
+
+
+### Legújabb állapot:26.kör, R26 forráskritikai áttekintés
+
+A meglévő MD26.fejezete83archivált GitHub-választ, hét megoldóábra vizsgálatát
+és a saját eredményekkel való összevetést foglalja össze.28forrásválasz pontos
+commiton is egyezik. A szerzői oldal, webkeresők és fórumok a futó hálózati
+szabály miatt blokkoltak; a teljes forráskör még nem lezárt. A szükséges
+domainbővítés a környezeti tervezetben mentve, alkalmazásra vár.
+A legerősebb módszertani előzmények: XIXOIO képi utasítás→csatornaillesztés,
+SFX inverz képi effekt, XM17 továbbforgó bitkezdés és nem rajzolt0index.
+A teljes q/R megőrzése és pontos jóslata marad követelmény. Új HALV-kulcskeresés
+nem indult; a további irányt a felhasználóval választjuk ki.

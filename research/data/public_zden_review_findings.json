@@ -1,0 +1,131 @@
+{
+  "review": "R26",
+  "status": "partial_due_to_network_policy",
+  "no_new_HALV_key_search": true,
+  "coverage": {
+    "catalog_records": 16,
+    "source_records": 103,
+    "archived_responses": 83,
+    "commit_pinned_exact_byte_matches": 28,
+    "inspected_catalog_hash_matching_solver_images": 7,
+    "not_independent_new_findings": true,
+    "blocked_live_sources": [
+      "crypto.haluska.sk",
+      "www.google.com",
+      "html.duckduckgo.com",
+      "bitcointalk.org",
+      "www.reddit.com",
+      "echo.ls",
+      "steemit.com",
+      "jtobcat.medium.com"
+    ]
+  },
+  "historical_mechanisms": [
+    {
+      "puzzle": "Level1",
+      "mechanism": "ASCII code minus character0, scaled by12 into rectangle geometry; leading5 and51character WIF give interpretation",
+      "evidence": "inspected author-attributed solver diagram; published key/address validated",
+      "source": "research/sources/webreview_level-1_solver.png"
+    },
+    {
+      "puzzle": "Level2",
+      "mechanism": "neighbor complement constraints plus central control bit and conditional inversion, thenWIF rotation",
+      "evidence": "full artwork-to-address rerun passed",
+      "source": "research/data/public_zden_historical_rerun.json"
+    },
+    {
+      "puzzle": "Level3",
+      "mechanism": "32blocks encode32bytes; geometric line orientation/start guides ordered bits",
+      "evidence": "inspected author-attributed solver diagram; printed key/address validated, no new pixel decoder",
+      "source": "research/sources/webreview_level-3_solver.png"
+    },
+    {
+      "puzzle": "Level4",
+      "mechanism": "17quadraticBezier curves times3characters, two overlapping grids, circle radii order",
+      "evidence": "read community summary of winner article; primary article blocked",
+      "source": "research/sources/webreview_lvl4_solution_note.txt"
+    },
+    {
+      "puzzle": "Level5",
+      "mechanism": "two width corrections; border-dependent10/64 normalization; rounded areas paired into bytes",
+      "evidence": "full artwork-to-address rerun passed",
+      "source": "research/data/public_zden_historical_rerun.json"
+    },
+    {
+      "puzzle": "SFX",
+      "mechanism": "URL mini-puzzle -> SatoriPixelStretch; inverse8px/1px stretching; WIFleading5 omitted for layout",
+      "evidence": "inspected solver diagram; full reverse rendering not rerun",
+      "source": "research/sources/webreview_level-sfx_solver.png"
+    },
+    {
+      "puzzle": "XM17",
+      "mechanism": "Base58index in6hexagon bits; rotating start each character; index0 character1 has no generated shape",
+      "evidence": "inspected solver diagram; full GIF decode not rerun",
+      "source": "research/sources/webreview_level-xm17_solver.png"
+    },
+    {
+      "puzzle": "Nethemba",
+      "mechanism": "8bits per composite symbol; size/color/fill encode channels; shifted starting position7",
+      "evidence": "inspected solver diagram; full image decode not rerun",
+      "source": "research/sources/webreview_nethemba_solver.png"
+    },
+    {
+      "puzzle": "XIXOIO",
+      "mechanism": "trinary halfbyte plus line-distance halfbyte with+1zero avoidance; brackets choose joining; logo values2,1,2,0,1,0 control final arithmetic",
+      "evidence": "inspected deliberately partial solver diagram; exact remaining choices not independently solved",
+      "source": "research/sources/webreview_xixoio_solver.png"
+    },
+    {
+      "puzzle": "Codex",
+      "mechanism": "published summary says foursteps repeated256times; exact navigation andFibonacci role still not verified",
+      "evidence": "published key note; original author blog blocked",
+      "source": "research/sources/webreview_codex_solution_note.txt"
+    },
+    {
+      "puzzle": "WhitePaper",
+      "mechanism": "published prize key validated; fileSHA256 notarization wallet explicitly separate from prize wallet",
+      "evidence": "catalog quote and key check; complete winner article blocked",
+      "source": "research/sources/webreview_catalog_1bitcoin-white-paper.txt"
+    },
+    {
+      "puzzle": "Demobit/Janus/LTC",
+      "mechanism": "catalog provides intermediate-data hash,33*bbb and hint assets respectively; not complete methods",
+      "evidence": "quoted catalog metadata, no full source reconstruction",
+      "source": "research/sources/webreview_catalog_demobit-2018.txt"
+    }
+  ],
+  "corrections": [
+    "EmptyHALV repository is not a solver or research lead",
+    "118bit claim concerns one chosen feature model and is not a bound on complete image or proof that a256bit key cannot be generated",
+    "HomelessPhD repository MATLAB code is community work, not establishedZden source code",
+    "Source with solved heading may retain staleOPEN table and pre-solve negatives",
+    "Published known key is not proof that its artwork decoder has been reproduced",
+    "No generalZden rule to remove5, replace0, hash image or reset at blocks follows from one historical puzzle",
+    "SFX explicitly uses an externalURL clue, contradicting generic catalog image-only/no-websites claims"
+  ],
+  "directions_for_user_decision": [
+    {
+      "priority": 1,
+      "name": "Recover exact authorCodex and winnerWhitePaper/Level4 explanations and originalHALV discussion",
+      "kind": "sourcework",
+      "why": "Avoid inventingFibonacci or format rules; currently blocked",
+      "new_HALV_search_run": false
+    },
+    {
+      "priority": 2,
+      "name": "XIXOIO-style feature-directed channel combination and logo-controlled arithmetic",
+      "kind": "proposed model architecture",
+      "why": "FullR must have generative role and bracket/signature cue must select operation;C45/46 invertibility alone insufficient",
+      "gate": "Predict fullR or fixed heldout data, reconstruct fullq, then format/address",
+      "new_HALV_search_run": false
+    },
+    {
+      "priority": 3,
+      "name": "SFX-style inverse renderer or reversible image operation",
+      "kind": "proposed model architecture",
+      "why": "Actual author precedent for rendering as encoding;C42 failed only one approximate rasterfamily",
+      "gate": "Fixed global image transform predicts retained pixel columns and fullq/R",
+      "new_HALV_search_run": false
+    }
+  ]
+}

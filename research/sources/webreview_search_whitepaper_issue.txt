@@ -1,0 +1,224 @@
+
+
+ Issue search results · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+issues Search Results · "zden" "white"
+
+Filter by
+
+Code... (...)results
+Repositories
+results
+Issues5 (5)results
+Pull requests
+results
+AI resources
+results
+Discussions
+results
+More
+
+State
+
+Open
+
+Closed
+
+Advanced
+
+Owner
+
+State
+
+Close reason
+
+Has linked pull request
+
+Author
+
+Assignee
+
+Mentioned user
+
+Mentioned team
+
+Commenter
+
+Involved user
+
+Label
+
+Milestone
+
+Number of comments
+
+Number of interactions
+
+Advanced search
+
+Filter:Issues5 (5)5 results  (101 ms)
+5 results 
+
+Sort by: Best match
+Filter
+
+agntn/puzzles
+Pin author URLs for the remaining asset files
+
+enhancement
+oritwoen·
+Opened  
+on Oct 1·
+#402
+
+agntn/puzzles
+refactor: zden snake_case names
+Problem
+
+All collections use snake_case identifiers (e.g. sha256, kitten_passphrase, demobit_2018) except zden, which has mixed
+case with spaces: Level 1, 1BiTCoiN WHiTe PaPeR, Litecoin SegWit, etc ...
+
+enhancement
+refactor
+oritwoen·
+Opened  
+on Feb 21·
+#113
+
+agntn/puzzles
+Add Zden crypto puzzles collection
+oritwoen·
+Opened  
+on Dec 30, 2025·
+#5
+
+Babulas/melike-g-zden
+Getting Started with GitHub
+github-learning-lab[bot]·
+4·
+Opened  
+on Aug 19, 2020·
+#1
+
+Progressbar/presskit
+Zden by mohol dat SVG logo 
+yangwao·
+3·
+Opened  
+on Mar 4, 2016·
+#1
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Restrict your search to the title by using the in:title qualifier.
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+ You can’t perform that action at this time.
+

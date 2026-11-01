@@ -5932,3 +5932,340 @@ Forrás: [fibonacci_residual_roles_v1.json](models/fibonacci_residual_roles_v1.j
 | [tools/check_fibonacci_residual_roles.py](../tools/check_fibonacci_residual_roles.py) | 10494 | `bc8275f2c0c7cbfeebd607d9ab1ad4aae2b8b92f5ffdc8c0cc5454ca37792a08` |
 | [tools/audit_fibonacci_residual_roles.py](../tools/audit_fibonacci_residual_roles.py) | 6162 | `7e9c9bc7aa96233a3fc73522fba8324ffd7973727e94a5f5bdfeb1703ce9785c` |
 | [tools/plot_fibonacci_residual_roles.py](../tools/plot_fibonacci_residual_roles.py) | 2283 | `654a4c19ff20b5e4773a3334eac510f5aa9ba5780c6b8a55d0660ec3a77ccf6d` |
+
+
+---
+
+<a id="round-26"></a>
+
+## 2026-11-01 – huszonhatodik kör: internetes forráskritika és Zden tényleges megoldási módszerei, R26
+
+### 1. Feladat, elvégzett munka és a lefedettség határa
+
+A felhasználó nyilvános internetes gyűjtést kért HALV-ról, összevetést a
+saját kutatással, valamint Zden korábbi megoldásainak ellenőrzését.
+Új visszafejtési irányt ezután közösen választunk. Ebben a körben nem futott
+új HALV-kulcskeresés, és nem választottunk ki önkényesen új modellcsaládot.
+A meglévő fő MD végét frissítjük; új jelentés-MD nem készül.
+
+A forrásjegyzék 103 URL-bejegyzést rögzít: 83 sikeresen archivált válasz,
+20 sikertelen vagy blokkolt kérés. A 83 nem 83 független kutatási eredmény:
+keresőoldalak, fájllisták, üres találatok és részben ismétlődő oldalak is vannak
+köztük. Mind a16 Zden-katalógusrekordot átnéztük, hét megoldóábrát
+vizuálisan ellenőriztünk. A hét ábra bájtmérete és SHA-256 értéke egyezik a
+katalóguséval. A fő források közül28 válasz bájtazonosságát teljes commitra
+mutató URL-lel is újraellenőriztük.
+
+**A teljes fórum- és csoportkutatás még nincs kész.** A futó környezet
+csak csomagkezelő/GitHub hálózati engedélyeket kapott. A szerzői oldal,
+a Google és DuckDuckGo, Reddit, Bitcointalk, Steemit, Medium és echo.ls
+kéréseit a proxy403-mal blokkolta. Ez nem404 és nem bizonyítja, hogy az
+ottani információ nem létezik. Privát csoportokhoz nincs hozzáférés;
+nem léptünk kapcsolatba emberekkel és nem küldtünk üzenetet.
+
+A szükséges20 domain bővítését elmentettük a környezet konfigurációs
+tervezetébe, az előre beállított csomagkezelő-csoport megtartásával.
+A tervezet mentése nem alkalmazta a hálózati szabályt. Az internetes kör
+lezárásához a felhasználónak a környezet beállításaiban mentenie kell a
+módosítást; csak utána tekinthetők újrapróbálhatónak a blokkolt műveletek.
+A publikálás a környezet termékbeli lépése, nem a GitHub-push.
+
+Az audit, a kérésenkénti URL/időpont/státusz/hash és a pontos archivált
+szövegek megmaradnak. A HTML-ből a látható szöveget őrizzük, nem a
+bejelentkezési felület tokenjeit. Egy nyilvánosan idézett GitHub-leiratkozó
+linket kitakartunk. A választest eredeti hash-e és az archivált kivonat
+hash-e külön mező, ahol ez szükséges.
+
+### 2. HALV: mit találtunk ténylegesen?
+
+| Forrás | Ellenőrzött tartalom | Következtetés és korlát |
+| --- | --- | --- |
+| [floflo777 HALV-leírás](https://github.com/floflo777/open-crypto-puzzles/tree/43b5882716852e7b23dd733d0bc65b2ca6a158f9/2-mid-prizes/zden-haluska-halv-312ksats) | 59 lobusz, választott kör/rombusz olvasat, korábbi negatív próbák, a312500satoshis célcím | Már ismert külső elemzés; nem új dekóder. A sok korábbi próba nem saját új futásunk. |
+| [agntn aktuális HALV-rekord](https://github.com/agntn/puzzles/blob/38025a53495a6816ae81388d3e7ca3ca9e7b195d/src/collections/zden/level-halv.ts) | Célcím, a2024-04-18-i finanszírozás adata, szerzői idézet és kép-hash | A kép61566bájtos SHA-256 értéke egyezik a nálunk használt PNG-vel; közvetlen szerzői letöltés továbbra sem történt. |
+| [fernandesrobert/ZDEN-HALV-PUZZLE](https://github.com/fernandesrobert/ZDEN-HALV-PUZZLE) | Leírás szerint kutatórepó, a megnyitott fájlnézet szerint üres | Nem tartalmaz új algoritmust vagy kutatási adatot. A név önmagában nem eredmény. |
+| [agntn issue5](https://github.com/agntn/puzzles/issues/5) és [issue346](https://github.com/agntn/puzzles/issues/346) | Katalógusfelvétel, illetve cím szerinti keresés szűrőhibája | A HALV-cím nyitott rekordként szerepel; a hibajegy nem megfejtési beszámoló. |
+| [GitHub Fibonacci-keresés](https://github.com/search?q=%22HALV%22+%22Fibonacci%22&type=issues) | Nulla találat az adott keresésben | Nem bizonyítja, hogy más fórumon nincs ilyen hozzászólás. |
+| [GitHub HALV-vitakeresés](https://github.com/search?q=%22HALV%22+%22zden%22&type=discussions) | Nulla találat az adott keresésben | Csak a nyilvános, kereshető GitHub Discussions hatóköre. |
+
+A `Cracked it … Fibonacci and morse code, and audio decryption` állítás
+hiteles eredeti szálát vagy reprodukálható algoritmusát most sem sikerült
+azonosítani az elérhető anyagokban. Nem emeljük szerzői utasítássá.
+A GitHub teljes kódkeresése bejelentkezés nélkül nem ad hozzáférhető
+kódtalálatokat; nem tekintjük ezt teljes internetes negatívumnak.
+A hasonló skandináv szavakat vagy általános algoritmusokat találó, HALV-hoz
+nem kapcsolódó issue-kat nem visszük tovább nyomként.
+
+Az elérhető forrásokban nem találtunk új, ellenőrzött HALV-megfejtést.
+A nyitott státusz nem friss, saját on-chain bizonyíték: a mempool/aktuális
+költési állapotot ebben a körben nem ellenőriztük élőben.
+A szerző „way easier than LVL5” mondata katalógusban megőrzött idézet;
+egy rövid műveleti láncot motiválhat, de nem bizonyítja egyik hipotézist sem.
+
+### 3. Forráskritikai javítások: mit nem szabad átvenni?
+
+**118bit nem általános lehetetlenségi bizonyíték.** A külső elemzés a saját
+59lobuszos kör/rombusz és amplitúdó értelmezésére ad kapacitásbecslést.
+Ez nem a teljes PNG és nem a mi q/A/R rendszerünk felső információkorlátja.
+Ráadásul egy256bites kulcsnak nem szükségszerűen van256bit független
+entrópiája: rövid determinisztikus generátor is előállíthat ilyen kulcsot.
+A hipotézisek értékét a konkrét előrejelzés és a pontos cím dönti el.
+
+**A katalógusok státuszai nem egységesek.** A cbman0 leírásban HALV egyszer
+megoldottként szerepel, a korábban archivált szlovák lap mást állít.
+A Level5 friss leírásában a megoldott fejléc mellett régi OPEN táblázat és
+sikertelen kutatási rész is megmaradt. Az általános táblázatot nem tekintjük
+publikált kulcs, megoldási út vagy friss láncbeli állapot helyettesítőjének.
+
+**HomelessPhD kódja közösségi kód.** A README saját MATLAB- és ellenőrző
+programról ír. Nem állapítottuk meg, hogy ez Zden eredeti kódja lenne.
+Az a másodlagos mondat, amely „the author's own measurement script”-nek
+nevezi, nem elég a szerzőség igazolásához. A mi Level5 pozitív kontrollunk
+értékét a saját képmérés és a pontos cím adja, nem ez a szerzőségi állítás.
+
+**A jól hangzó flag nem megfejtés.** A HomelessPhD repó issue1 és issue2
+oldalain flagjelöltek és filozófiai következtetések vannak, de nincs
+ellenőrzött privátkulcs→célcím levezetés. Nem használjuk őket bizonyítékként.
+
+**Nincs univerzális „csak a kép, soha külső oldal” szabály.** Az SFX
+megoldóábrája kifejezetten URL-mini-puzzle-t és külső pluginoldalt mutat.
+A WhitePaper külön közjegyzői/notarizáló tárcához rendeli a képfájl hash-ét;
+ebből nem következik, hogy a jutalomkulcs ugyanaz a hash.
+
+### 4. Zden korábbi feladványai: konkrét, ellenőrzött lépések
+
+Az alábbiaknál három bizonyítékszintet különítünk el: saját teljes képi
+reprodukció; megoldóábra megtekintése és ismert kulcs ellenőrzése;
+másodlagos leírás vagy még nem hozzáférhető elsődleges szöveg.
+Az ábrák a szerzőnek tulajdonított, eredeti URL-lel és hash-sel rögzített
+GitHub-másolatok. A szerzői szerverrel való közvetlen összevetés blokkolt.
+
+| Puzzle | Tényleges műveleti út / csavar | Mostani ellenőrzés |
+| --- | --- | --- |
+| Level1 | A karakter ASCII-értékéből a`'0'` értékét kivonja,12-vel skálázza és téglalapgeometriává rajzolja; az51karakter és a kezdő5 segíti az értelmezést | Szerzői megoldóábra olvasva; publikált kulcs/WIF/cím ellenőrizve. Nem új teljes képi dekóder. |
+| Level2 | Szomszédos komplementer bitek; központi flag; feltételes inverzió; WIF-sorrend | A korábbi saját teljes képi kódot újrafuttattuk:306/306 kényszer, checksum és régi cím pontos. |
+| Level3 | 32blokk32bájtot ad; a vonalak iránya és kezdőorientációja határozza meg a bitolvasást | Ábra olvasva; az aljára nyomtatott32bájtos sor és publikált WIF a régi címet adja. A teljes pixelfeldolgozást most nem implementáltuk újra. |
+| Level4 | Két átfedő rács;17másodfokú Bézier-görbe, görbénként3karakter; körsugár szerinti sorrend | A győztes cikkének közösségi összefoglalója olvasva; a Steemit-cikk közvetlen elérése blokkolt. A bevezető példa-WIF nem a megfejtés. |
+| Level5 | Két vonal két szélességet korrigál;`(10*w+left−1)/64`, illetve magassági párja; kerekített területek páros összege | Saját teljes képi reprodukció újrafuttatva:64/64méret, minden korrekció és a régi cím pontos. |
+| SFX | URL-mini-puzzle→Satori PixelStretch; fehér pixelek8px-re nyújtása és szomszéd-interpoláció; inverz képi művelet; WIF kezdő5 kihagyva | A teljes megoldóábra olvasva; az inverz renderelést most nem futtattuk újra. A kihagyott5 itt ténylegesen dokumentált. |
+| XM17 | Base58-index6biten, hatszögön; bitkezdet karakterenként eggyel továbbfordul; animált skála; a nulla indexű`1` karakterhez nincs alakzat | Szerzői megoldóábra olvasva. Nem általános0-karaktercsere; teljes GIF-dekódolás most nem futott. |
+| Nethemba | Összetett szimbólumonként8bit; körméret/szín/kitöltés és nyilak külön csatornák; a kulcs kezdete a felső sor7.helyén | Megoldóábra olvasva, a pontos bitpozíciós legenda látszik. Nem általános utasítás minden kép elforgatására. |
+| XIXOIO |32szegmensben két eltérő félbájt: ternáris adat és vonaltávolság; távolságnál+1; zárójel vezérli az összefűzést; logóértékek vezérelnek végső aritmetikát | A szándékosan részleges szerzői ábra olvasva; a fennmaradó műveleteket nem állítjuk saját megfejtésnek. |
+| Codex | A publikált megjegyzés szerint4lépés256szor, egyenként biteket gyűjtve | A publikált kulcsra mutató forrás olvasva. A pontos4lépést és Fibonacci-szerepet az eredeti blog nélkül még nem igazoltuk. |
+| WhitePaper | A publikált kulcs ismert; a képfájl hash-e külön notarizáló tárcához kapcsolódik | Kulcs/WIF/cím ellenőrizve. A győztes részletes cikke blokkolt, ezért a teljes kép→kulcs út itt még nincs újraellenőrizve. |
+| Demobit, Janus, LTC | Köztes adatblokkhash,`33*bbb` és külön SVG-hintek szerepelnek a katalógusban | Forráshivatkozások összegyűjtve; nem teljes megfejtési utak. Nem találunk ki hiányzó műveleteket. |
+
+#### SFX: a forrásképi transzformáció pontos tanulsága
+
+A megoldóábra PixelStretch=7.0, PixelSize=1.0, Linear Ramp Up paraméterekkel
+írja le a nyújtást; a visszaalakításnál görbeszűrő és küszöbölés után
+PixelStretch=0.875, PixelSize=0.125, Linear Ramp Down szerepel.
+A képben a szöveg először visszaállítandó bitmap, nem közvetlen amplitúdóbájt.
+Az5 kihagyásának leírt oka az azonos sorhossz és a kevésbé feltűnő megjelenés.
+Ezek SFX-paraméterek, nem HALV-ra automatikusan átemelendő konstansok.
+
+#### XM17: valódi rejtett nullák és mozgó kezdőpont
+
+A megoldóábra kifejezetten Base58-ábécéindexet használ, alacsony bittől
+magas felé, óramutatóval ellentétes irányban. A következő karakter kezdete
+ugyanebben az irányban eggyel elfordul. A nulla indexhez tartozó`1` karakter
+nem generál alakzatot. Ez konkrét előzmény arra, hogy egy vizuális objektum
+hiánya adatot is jelenthet. Nem jogosít önkényes üres cellák hozzáadására.
+
+#### XIXOIO: a képi utasítás és két adatcsatorna összekapcsolása
+
+A távolságcsatorna1…16tartománya a0 elkerülése miatt van eltolva.
+A zárójel nem egyszerű dísz: például az ábra szerint az egyik változat
+`B1 B2 A1 A2 A3 A4 B3 B4` sorrendben egyesíti a két félbájtot.
+A logó`XIXOIO` betűértékei2,1,2,0,1,0; ezek a végső egyszerű aritmetikát
+irányítják. Az ábra a többi választást részben nyitva hagyja.
+Ez erős, tényleges előzmény a több képelem→műveleti sorrend gondolatára.
+
+### 5. Saját ellenőrzések és a bizonyítás pontos határa
+
+Öt publikált történeti Bitcoin-kulcsot ellenőriztünk: Level1,2,3,5 és
+WhitePaper. Mind az öt a megadott tömörítetlen célcímet adja, a hozzájuk
+közölt WIF-ek checksuma és kulcstartalma is megfelelő.
+A Level3ábra alján közölt32bájtos sort kézzel átírtuk és címmel ellenőriztük.
+Ez az átírás nem automatikus OCR vagy teljes képi visszafejtés.
+
+A Level2 és Level5 meglévő képi reprodukcióját ideiglenes másolatban
+újrafuttattuk. Mindkettő sikeres; a korábbi kutatási adatfájlok nem változtak.
+A két futás teljes eredményét külön JSON őrzi. A forrásaudit mind a83
+archivált fájl méretét és hash-ét ellenőrzi. A hét solver-PNG megegyezik
+a nyilvános katalógusban megadott digesttel. A28 commitra rögzített URL
+azonos válaszbájtokat adott, tehát nem csak egy mozgó HEAD név maradt meg.
+
+Az agntn forráscommitja: `38025a53495a6816ae81388d3e7ca3ca9e7b195d`.
+A floflo forráscommitja: `43b5882716852e7b23dd733d0bc65b2ca6a158f9`.
+A hash-egyezés a forrás azonosságát igazolja, nem minden abban szereplő
+állítás helyességét vagy a szerzői szerver friss állapotát.
+
+### 6. Összevetés a mi HALV-eredményeinkkel
+
+| Külső tanulság | Saját eredmény | Mi maradt valóban nyitva? |
+| --- | --- | --- |
+| Több adatcsatorna és képi utasítás, XIXOIO/Level2 | A/R veszteségmentes; C45-ben0/144 teljes R-jóslat; C46-ban23teljes inverz, de nincs közvetlen bájtkulcs | R tényleges generálása és a művelet képi kiválasztása. A puszta invertálható XOR/forgatás nem elég. |
+| Forráskép visszaalakítása, SFX | C42ben egy közelítő marker-rasztercsalád elbukott a kihagyott pixeleken | Más, konkrétan indokolt képi előállító művelet nincs általánosan kizárva. |
+| Mozgó bitkezdés és nem rajzolt0index, XM17 | A fázisóra ismert; C44–46 engedett blokkon átívelő kódszavakat | Az óra és a kódolási objektum kapcsolata. Objektumhiányból nem lehet képi indok nélkül karaktert beilleszteni. |
+| Pontos geometriai normalizálás, Level5 | C43megtartja a teljes cellainformációt; a64→32ág aktív | A geometriai mennyiségek kulcsból való generálása és az indokolt normalizálás. |
+| Formátumkonvenció szándékos eltérése, SFX | C44–46közvetlen byte/WIF/hex kapuin nincs új jelölt | Dokumentált50karakteresWIF esetén vezető5 visszaállítható; most ilyen jelölt nem keletkezett. |
+| Fibonaccihoz kapcsolt konkrét útvonal, esetleges Codex-kapcsolat | C40fixnibble-delta és C44–46egészkód-családok ellenőrizve | Az eredeti Codex-szabály elolvasása; ne helyettesítsük a Fibonacci nevéből kitalált algoritmussal. |
+
+A mostani előzmények alapján Zden többféle módszert használ: geometria,
+bitpozíció, feltételes vezérlés, grafikus transzformáció, formátumhoz igazított
+kihagyás és olvasási sorrend is előfordul. Nem állapítható meg egyetlen
+„pontos univerzális Zden-algoritmus”. A közös, megfigyelt minta a külön
+adat és utasítás összekapcsolása, valamint a köztes korlátokkal ellenőrizhető
+rövid műveleti lánc. Ez támpont, nem a HALV megoldásának bizonyítása.
+
+### 7. Új és megerősített irányok – döntésre, még nem végrehajtva
+
+**Első lépés: a forráskör lezárása a hálózati hozzáférés után.**
+A Codex szerzői blogja, a WhitePaper és Level4 nyertes cikkei, az eredeti
+HALV-bejegyzés és a Fibonacci/Morse-komment teljes szála a legértékesebb
+hiányzó források. A kereső- és fórumhozzáférés után az itt rögzített
+blokkolásokat újra kell ellenőrizni. Általános katalógusmásolatok gyűjtése
+helyett ezek az elsődleges, algoritmust tartalmazó beszámolók fontosak.
+
+**A – XIXOIO-szerű, képi utasítással kiválasztott csatornaegyesítés.**
+A jelölő vagy aláírás azonosítható geometriája döntsön az A/R-bitek
+összefűzéséről vagy egy kicsi, rögzített aritmetikai láncról. A teljes R-t
+nem szabad mellékcsatornaként korlátlanul magunkkal vinni, majd ezt a
+szerepe megfejtésének nevezni. Szükséges a teljes R vagy előre kijelölt
+minták jóslata, a teljes q inverze és utána a formátum/címellenőrzés.
+Ez **megerősített architektúra**, nem állítjuk teljesen új ötletnek:
+a korábbi Level2-ág és C45–46részben már foglalkozott vele. Új eleme a
+XIXOIO-ból konkrétan dokumentált képi zárójel→bitillesztés→logóaritmetika.
+
+**B – SFX-szerű, indokolt képi előállító művelet inverze.**
+A hullámot és markert előbb egy egységes képi transzformáció kimeneteként
+kezeljük. Csak konkrét paraméterezett renderelő/szűrő/cellaalakítás jöhet
+szóba, amely a megőrzött ellenőrzőpixeleket is megjósolja. A7.0/0.875
+SFX-konstansokat nem másoljuk át. Új értéke az eddig általános renderer-
+feltevéshez képest a ténylegesen dokumentált szerzői PixelStretch-példa.
+
+**C – Pontos Codex-művelet átvételi vizsgálata.**
+Előbb az eredeti4lépést és a Fibonacci-szerepet kell hitelesíteni.
+Ha ez ténylegesen indexléptetés, navigáció vagy állapotsor, külön kell
+választani a negatív8SVX-delta és Fibonacci-egészkód próbáinktól.
+Új nagy keresést az algoritmus ismerete előtt nem javaslunk.
+
+Előzetes ajánlás: forráskör lezárása, majd **A**, B párhuzamosan megtartva;
+ha az eredeti Codex-szöveg konkrét és jobban illő műveletet ad, ez a
+sorrend megváltozhat. A felhasználó döntése előtt egyik új irányhoz sem
+indítottunk automatikusan új HALV-kulcskeresést.
+
+### 8. Reprodukció, mentés és még nyitott feladat
+
+```sh
+cd /workspace/HALV
+python3 tools/audit_public_zden_review.py
+```
+
+A források URL-je, a pontos hash-ek és a blokkolások:
+`sources/public_web_review_20261101.json`.
+A géppel ellenőrzött állapot: `data/public_zden_review_integrity.json`.
+A teljes történeti képi újrafutások: `data/public_zden_historical_rerun.json`.
+A strukturált megállapítások és döntési irányok:
+`data/public_zden_review_findings.json`.
+
+A meglévő MD korábbi bájtjai változatlanul maradnak. A következő fejezet
+akkor egészíti ki ezt az összképet, amikor a blokkolt elsődleges és fórum-
+források elérhetővé válnak. Nem állítjuk, hogy a teljes internetet vagy
+zárt csoportokat átnéztük. A GitHub-publikálást csak sikeres push után
+tekintjük megtörténtnek. Ebben a körben nincs HALV-megfejtés.
+
+
+### A fejezet adatai és reprodukciós programjai
+
+
+| Fájl | Bájt | SHA-256 |
+| --- | ---: | --- |
+| [research/sources/public_web_review_20261101.json](sources/public_web_review_20261101.json) | 209419 | `33fe1c784bca890f62abacd3858dc06e42b74872ae146341ee2f9efe9bfd3f17` |
+| [research/data/public_zden_review_integrity.json](data/public_zden_review_integrity.json) | 2081 | `7bc345aac559b32a8b6c1d6bb4033cce293d8a6c04b5fad3f4f366f4502eb474` |
+| [research/data/public_zden_historical_rerun.json](data/public_zden_historical_rerun.json) | 145187 | `533855bfa5f2a0cacc405011ea1f482b25875b65cf2eb93d980723a27984ef97` |
+| [research/data/public_zden_review_findings.json](data/public_zden_review_findings.json) | 6209 | `23b461a82bbd8742d3e916a4a4cfc3057796bb30973ac08e6593fa77c9e524d9` |
+| [tools/audit_public_zden_review.py](../tools/audit_public_zden_review.py) | 3165 | `3a1c7e3f714fdc07479faf91f9acda8fe6a714af2a6051c0c9fbebd1428191b1` |
+| [research/sources/webreview_halv_repo_tree.txt](sources/webreview_halv_repo_tree.txt) | 2263 | `3aeddb32b02a24f4756a76d26f73bba3848beec6a3eeb30d34ca512a6b679379` |
+| [research/sources/webreview_search_halv_repos.txt](sources/webreview_search_halv_repos.txt) | 3004 | `8635169a0ec5e3263d5077d5e2e28e67715e978e7b16b8db9926bd098512fd8a` |
+| [research/sources/webreview_search_halv_issues.txt](sources/webreview_search_halv_issues.txt) | 3175 | `532503497c730899212d0e4cfd275b04deb442b2ba05589f77ecf94da2799e14` |
+| [research/sources/webreview_search_halv_discussions.txt](sources/webreview_search_halv_discussions.txt) | 2335 | `f19b59fec6a3bb2ac700774beafbf9b1f3edf8d2d754eace0ca028b2857fd80a` |
+| [research/sources/webreview_search_cryptoHALV_repos.txt](sources/webreview_search_cryptoHALV_repos.txt) | 2980 | `17c49958702181eb6050d9c07f9ed12ebd9a8af00208926cd90465c4ba7cf9d0` |
+| [research/sources/webreview_search_zden_solvers.txt](sources/webreview_search_zden_solvers.txt) | 3478 | `be67d9fce97c5346020399abfb46979321e97b6a65307c0d4259cb0f42e0712d` |
+| [research/sources/webreview_halv_current_readme.txt](sources/webreview_halv_current_readme.txt) | 6501 | `48802a2390e4fc0839908b020866cc1dfe26142d7e5347f67a585fe301a7a2d6` |
+| [research/sources/webreview_lvl5_current_readme.txt](sources/webreview_lvl5_current_readme.txt) | 8800 | `ecd5707fa4773088f76d1d8122a09287488009f6c237faddd0b03cdd3d1a5d69` |
+| [research/sources/webreview_historical_solver_tree.txt](sources/webreview_historical_solver_tree.txt) | 2969 | `dfef050d374ebe98eb7d3fad8727951c76777af35d36d61f7704430487bb1e5a` |
+| [research/sources/webreview_lvl5_measurement_readme.txt](sources/webreview_lvl5_measurement_readme.txt) | 10514 | `7807c21f1bf098d3cea4f0ab3db3a287c94cbccbd767087ccfcdaa214bd3de1d` |
+| [research/sources/webreview_search_halv_fibonacci.txt](sources/webreview_search_halv_fibonacci.txt) | 2315 | `d9437043c73080b035f4fa112efbd0d4854edb475e749781bbfbf74d3ae3db1f` |
+| [research/sources/webreview_search_halv_morse.txt](sources/webreview_search_halv_morse.txt) | 3091 | `a8d7fd336d5ee1d3c6a61414221512cd01055832eb23b5990e2bfdd32a369c6b` |
+| [research/sources/webreview_search_target_issues.txt](sources/webreview_search_target_issues.txt) | 3430 | `7c9786885878d433f51c8e41c0469db23e995245e74e68d062690fbb69b8158a` |
+| [research/sources/webreview_search_zden_codex.txt](sources/webreview_search_zden_codex.txt) | 2316 | `6d8292b2a4dc5cdda48d6764671a5cfe457d28d9ddb6938eab2019ef8a3b198e` |
+| [research/sources/webreview_search_zden_whitepaper.txt](sources/webreview_search_zden_whitepaper.txt) | 2316 | `97ac0e1d5751a2037b5a1c914d3621c56e9c58848fbd50853f32fcfea1c6912c` |
+| [research/sources/webreview_search_zden_issues.txt](sources/webreview_search_zden_issues.txt) | 5260 | `e3d45fbd9ec07cded6f80b2dc9566b7886665b334ecba7cfeaecd6f85503ef82` |
+| [research/sources/webreview_agntn_collection_issue.txt](sources/webreview_agntn_collection_issue.txt) | 4534 | `b3a57b12bd07efa4786fddea24d709d32db15ee22d1bce1158739b522bf63759` |
+| [research/sources/webreview_agntn_lookup_issue.txt](sources/webreview_agntn_lookup_issue.txt) | 5000 | `1e72a67f4b995274077d1f9925b7db1c2a09d245332309f77181445b6183b9a6` |
+| [research/sources/webreview_agntn_readme.txt](sources/webreview_agntn_readme.txt) | 17695 | `62a5118c24411c8fb3a04067e47c1a5dc09adab09435d239be7c4fd8a4b5b7f7` |
+| [research/sources/webreview_floflo_tree.txt](sources/webreview_floflo_tree.txt) | 17423 | `eade0b135da7857fbc448ed9cdc79a4b35f60be2a4244c7fedcba2c49912bd7d` |
+| [research/sources/webreview_floflo_lvl5_issue34.txt](sources/webreview_floflo_lvl5_issue34.txt) | 3994 | `6254aa35e6429e5aaba6947a2b028bef9d06972d2adce680d002269f16e64cc7` |
+| [research/sources/webreview_historical_crypto2_readme.txt](sources/webreview_historical_crypto2_readme.txt) | 684 | `50b60222bb2414e5084239876e3a9b7b5593d871cf8f06a04a4cc7f46f36d6e9` |
+| [research/sources/webreview_lvl5_issues.txt](sources/webreview_lvl5_issues.txt) | 2774 | `4dfc7d94263ee32466dd62eb8a6c09fc813edca503dd5f6d79688e2687114fc7` |
+| [research/sources/webreview_consig_lvl5_readme.txt](sources/webreview_consig_lvl5_readme.txt) | 3851 | `32046d66522a86f6feb619996a66e829371c09da40dfae6280475d471d1013f5` |
+| [research/sources/webreview_agntn_tree.txt](sources/webreview_agntn_tree.txt) | 15786 | `b3af614b6049c71fac47adaf5ce5a7f94ac006fd2e7b56447a72a9d412cb1f13` |
+| [research/sources/webreview_zden_issues_page2.txt](sources/webreview_zden_issues_page2.txt) | 4794 | `18f7ec4aa9544556c5cc3b93c6faa79cf4ca59d3c851b37c9f57e5991251823d` |
+| [research/sources/webreview_zden_issues_page3.txt](sources/webreview_zden_issues_page3.txt) | 3759 | `47f43dbfd1d3c74e5ec7ebb8578a97128cea875efe6aa467d919f5e976371f74` |
+| [research/sources/webreview_lvl5_issue1.txt](sources/webreview_lvl5_issue1.txt) | 4231 | `6c644f5f25f921eacc7f4f2cacabb7e06386c2a8bf12da02c30209fb8ac885b9` |
+| [research/sources/webreview_lvl5_issue2.txt](sources/webreview_lvl5_issue2.txt) | 5074 | `a800fd5659401b218e070f9c30da058d78477885c40e4f6f2e17f425ecff9297` |
+| [research/sources/webreview_search_fibonacci_morse.txt](sources/webreview_search_fibonacci_morse.txt) | 6002 | `cea09980a14dc07f2c604a38fd0ccab816ff638c324b89aa6a6260d66387a9c7` |
+| [research/sources/webreview_search_halv_alt.txt](sources/webreview_search_halv_alt.txt) | 3839 | `7994aa1a9555ec5538132e1e31d13b088c2b5294d1d46493a899c75d73f2684c` |
+| [research/sources/webreview_author_site_archive_tree.txt](sources/webreview_author_site_archive_tree.txt) | 3108 | `2e1de62837046b47bd8e51e020a1867cc92d9b05af974b54b58bd06736f41ceb` |
+| [research/sources/webreview_agntn_lvl1_key_issue.txt](sources/webreview_agntn_lvl1_key_issue.txt) | 3269 | `761b4956733d6d4873bc8207d40817d4c7301ead6311cb792dba14d67cc0dca5` |
+| [research/sources/webreview_agntn_lvl2_key_issue.txt](sources/webreview_agntn_lvl2_key_issue.txt) | 3489 | `905d55ceb13217b9f10ca63fddb213a09b9bdf175e402ecc1a694ccedfc358dd` |
+| [research/sources/webreview_agntn_lvl3_key_issue.txt](sources/webreview_agntn_lvl3_key_issue.txt) | 3321 | `0de0dc5ba4b06617d4fe9b535f7cff8de2215eb5fc68a9c62477d5ee1e5f34fa` |
+| [research/sources/webreview_search_xm17_repos.txt](sources/webreview_search_xm17_repos.txt) | 2310 | `0ae94214a4e8d0c944f80407f111b5289b9f0a3b2bcafb14e7ffd17cab371147` |
+| [research/sources/webreview_search_sfx_repos.txt](sources/webreview_search_sfx_repos.txt) | 2308 | `0cea52c96619c73fdabd78c4689a96590a4ef1dc96edad8921730976b0200c6c` |
+| [research/sources/webreview_search_litecoin_zden.txt](sources/webreview_search_litecoin_zden.txt) | 2313 | `ce5163e403ca2c96d478097b37ca8b14dc020220bbb41ad5c8ae0b7eae5039c0` |
+| [research/sources/webreview_archive_solver_code.txt](sources/webreview_archive_solver_code.txt) | 649 | `cf920629e704965132603bfed1ad87088518d30c19f7fae4ce4398a8ee51078e` |
+| [research/sources/webreview_agntn_src_tree.txt](sources/webreview_agntn_src_tree.txt) | 2790 | `972c9dcb9bb41bd087b6dfa0ec56fe85190a5f8dfc0d6a9d7bb1742cbbaa6d16` |
+| [research/sources/webreview_agntn_historical_zden.txt](sources/webreview_agntn_historical_zden.txt) | 14951 | `c2c4a6cfd29e47af4ba03e29f91125138c6d3765650e7317ec2f8b9675421647` |
+| [research/sources/webreview_lvl5_issue34_comment.txt](sources/webreview_lvl5_issue34_comment.txt) | 3994 | `6254aa35e6429e5aaba6947a2b028bef9d06972d2adce680d002269f16e64cc7` |
+| [research/sources/webreview_cbman_series_current.txt](sources/webreview_cbman_series_current.txt) | 5027 | `86a194c4166a2228b7192c0047b886817e9c52da1262f4c30e37c393c34329dc` |
+| [research/sources/webreview_halv_code_search_limit.txt](sources/webreview_halv_code_search_limit.txt) | 2204 | `883f89558f84f69ce9ec891eb2ef50c2972e38b687c6bb75c5de4dbbe322dcde` |
+| [research/sources/webreview_fibonacci_comment_search.txt](sources/webreview_fibonacci_comment_search.txt) | 4517 | `8c72898f58f9790b304534aba9a933765b97a877fb581d5f32f13529cc0b1cf8` |
+| [research/sources/webreview_agntn_collections_tree.txt](sources/webreview_agntn_collections_tree.txt) | 4772 | `24df9b78f0d298a2665a03ee05ead4fa377b11d68d01d74568659a7794b9b2ec` |
+| [research/sources/webreview_agntn_zden_tree.txt](sources/webreview_agntn_zden_tree.txt) | 3085 | `f01e210e06c59e9bb0cf4560677903fc3dd987097a722516cef4838b05ac1749` |
+| [research/sources/webreview_agntn_zden_asset_tree.txt](sources/webreview_agntn_zden_asset_tree.txt) | 2960 | `204a1906b6f14c73130ad5fa55f0f54b53ec70fe3f8d25c4b791104032658ef9` |
+| [research/sources/webreview_search_HALV_named_issues.txt](sources/webreview_search_HALV_named_issues.txt) | 3716 | `f6be6ebb175b1d279dfcda0eafbe28e0ace9f00c1bbe1b903cdd05c58c3720d7` |
+| [research/sources/webreview_search_zden_solutions_repos.txt](sources/webreview_search_zden_solutions_repos.txt) | 2317 | `75323af1a8a32f04dcf902bf9f1de32544ca28e709c5144950dc31d82402732f` |
+| [research/sources/webreview_search_whitepaper_issue.txt](sources/webreview_search_whitepaper_issue.txt) | 3688 | `7062681e332a6905cdac131b99af2c68c49c03abbf9a169b28ebd38ec56926d7` |
+| [research/sources/webreview_catalog_level-1.txt](sources/webreview_catalog_level-1.txt) | 2120 | `80d355572e2fb01dd0bba64a0579ed83d9ac7d5d277dcf1a3e5edf06a83363a7` |
+| [research/sources/webreview_catalog_level-2.txt](sources/webreview_catalog_level-2.txt) | 1971 | `f9fdd02f4d1a624c0597aae004d0253d7726ec1e5cd79bd5426aa4cad14995bd` |
+| [research/sources/webreview_catalog_level-3.txt](sources/webreview_catalog_level-3.txt) | 1968 | `2158760ecd9c9b03280abee0cef63f7f229ff22002c6ecf710875ce4044d7f53` |
+| [research/sources/webreview_catalog_level-4.txt](sources/webreview_catalog_level-4.txt) | 2166 | `1ba363eb0b5c77d76a385d9b47834360267bc9ce7991fb5eb2a4363541daf503` |
+| [research/sources/webreview_catalog_level-5.txt](sources/webreview_catalog_level-5.txt) | 4372 | `0711d93ad16aedcc41bd273dee4ab93a7323e123b9b72c9f26108b2b2f1abff7` |
+| [research/sources/webreview_catalog_level-halv.txt](sources/webreview_catalog_level-halv.txt) | 1466 | `89cd778ffb8d208978bff537a4a09953c83f2024eda2fb5b6ab774855317b6d3` |
+| [research/sources/webreview_catalog_level-sfx.txt](sources/webreview_catalog_level-sfx.txt) | 2014 | `d81a872c1cf7799fc115e17c29fa0bb4748c376b79074ad95222309b1c593d71` |
+| [research/sources/webreview_catalog_level-xm17.txt](sources/webreview_catalog_level-xm17.txt) | 2371 | `480546242adaaa3d2a26026301f4b2d5ecadb971fe5a6e56f542e5f65a7cfa49` |
+| [research/sources/webreview_catalog_1bitcoin-white-paper.txt](sources/webreview_catalog_1bitcoin-white-paper.txt) | 2575 | `ed29c15934cf7005c2d585ffbbf44d56f689b2f21b0afd780341f807ae8a9435` |
+| [research/sources/webreview_catalog_codex-protocol.txt](sources/webreview_catalog_codex-protocol.txt) | 2446 | `2c49782f167a4ba98c1b379e0c6d25dee0c61a8666a865151d540293ac2013df` |
+| [research/sources/webreview_catalog_decred-janus.txt](sources/webreview_catalog_decred-janus.txt) | 2789 | `5057601507e7ed2b2313c31d2aed319a4bdb5d69afa84de811d7aa83e077ea57` |
+| [research/sources/webreview_catalog_demobit-2018.txt](sources/webreview_catalog_demobit-2018.txt) | 3083 | `591e34d56137f09ae74de2ccad927b2d5f030ea88f1dc18166af5a74f34a3137` |
+| [research/sources/webreview_catalog_litecoin-segwit.txt](sources/webreview_catalog_litecoin-segwit.txt) | 3207 | `b52a4f84d02a16db5a0ee96c692c26265c9ef46632c45a74f2b4a20e162ac5a3` |
+| [research/sources/webreview_catalog_nethemba.txt](sources/webreview_catalog_nethemba.txt) | 1884 | `0d5594479d64874c3726947d8ff7a452b1ab4f1dc95fee426cf41d9957ef9880` |
+| [research/sources/webreview_catalog_xixoio.txt](sources/webreview_catalog_xixoio.txt) | 2292 | `d27f2801063389d54bc12038ca5ed7db26adaab1270f462bc3fd06f0d3a7a5fa` |
+| [research/sources/webreview_catalog_decred-autonomy.txt](sources/webreview_catalog_decred-autonomy.txt) | 3659 | `48c684d6943edc508ad1866046a8173931034254c43df957e1ad508754da3944` |
+| [research/sources/webreview_assets_level-1.txt](sources/webreview_assets_level-1.txt) | 2638 | `d2361b4a1ca2ce561b7957e8793e494d6ddff2121843ae930edd239fb8331a51` |
+| [research/sources/webreview_assets_level-3.txt](sources/webreview_assets_level-3.txt) | 2638 | `3c2296dde6533ed67cec19077e971da27481eff2f354475c8ef77c3d933276c0` |
+| [research/sources/webreview_assets_level-4.txt](sources/webreview_assets_level-4.txt) | 2640 | `ec30f17d7f9ddb1e3f4e0a4d223d719da05b583af93f9c33e3f6392dd13416f2` |
+| [research/sources/webreview_assets_level-sfx.txt](sources/webreview_assets_level-sfx.txt) | 2644 | `b076cb99e3093b09cf1334df8f6ecc915cc1b12a4b8987bb21660c8e88fd599d` |
+| [research/sources/webreview_assets_1bitcoin-white-paper.txt](sources/webreview_assets_1bitcoin-white-paper.txt) | 2653 | `58656c11cfb86619ba9c6ed05a8d78729dbaff7a4534c81785e938803df054a6` |
+| [research/sources/webreview_assets_codex-protocol.txt](sources/webreview_assets_codex-protocol.txt) | 2709 | `a2077dd016c0e6d4776d8759d5f874e3b1fe4371a91c594f63788f8023642eb6` |
+| [research/sources/webreview_assets_level-halv.txt](sources/webreview_assets_level-halv.txt) | 2623 | `20695ef40bd78bd3eb94fd6097302e82bd79e1da4359736a446efebe09f83b5d` |
+| [research/sources/webreview_codex_solution_note.txt](sources/webreview_codex_solution_note.txt) | 722 | `f0a33c6e59006c6706b7133f507646b327fa7ee01f0acf3fc4ce478778dba08e` |
+| [research/sources/webreview_lvl4_solution_note.txt](sources/webreview_lvl4_solution_note.txt) | 916 | `5cdb68b30249f057ecc71a4858200a6f15580846407daa6422b089cd9676c447` |
+| [research/sources/webreview_level-1_solver.png](sources/webreview_level-1_solver.png) | 33913 | `4390fc4163b5e39ce9207b4a8bddb2c094e425e70c2064c67742c0896ffe0ac5` |
+| [research/sources/webreview_level-3_solver.png](sources/webreview_level-3_solver.png) | 24826 | `9a5c1457f575c638cd07998ce582a026d8608cb19712983fb9965ea766ad767a` |
+| [research/sources/webreview_level-sfx_solver.png](sources/webreview_level-sfx_solver.png) | 469281 | `fb4f9da4254f286250fc83feea84e79cae3f24ad98a710282c11b1006723da3a` |
+| [research/sources/webreview_level-2_solver.png](sources/webreview_level-2_solver.png) | 145160 | `389ee4e8668ca1e1f59333071b3216ddff53b8b1d77a7e3eeb43850a209ced27` |
+| [research/sources/webreview_level-xm17_solver.png](sources/webreview_level-xm17_solver.png) | 72267 | `7532efab1506bd686135b96e0546cd3d1229702c55cc3b2e74c54773c24a9d0d` |
+| [research/sources/webreview_nethemba_solver.png](sources/webreview_nethemba_solver.png) | 502693 | `81d7977df3f4f3200b9bb970ed7c64f464f7c8b0a8f7baba105cc4aaa8155854` |
+| [research/sources/webreview_xixoio_solver.png](sources/webreview_xixoio_solver.png) | 241224 | `8500c68bfec5fb9dd3078104405a30d645c46c90a71d09e0827fcca99af6b099` |

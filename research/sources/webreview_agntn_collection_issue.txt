@@ -1,0 +1,332 @@
+
+
+ Add Zden crypto puzzles collection · Issue #5 · agntn/puzzles · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+agntn
+puzzles
+
+Repository navigation
+
+Code
+Issues10 (10)
+Pull requests3 (3)Only collaborators can create PRs
+Actions
+Security and quality
+Insights
+
+More items
+
+Add Zden crypto puzzles collection #5
+
+New issueCopy link
+
+New issueCopy link
+
+Closed
+#57
+
+Closed
+
+Add Zden crypto puzzles collection#5
+
+#57
+
+Copy link
+
+Assignees
+
+Description
+
+oritwoen
+opened on Dec 30, 2025
+
+Issue body actions
+
+Summary
+
+Add Zden's visual crypto puzzles collection from https://crypto.haluska.sk/
+
+About
+
+Zden creates artistic visual puzzles where the private key is encoded in images/animations. Multi-cryptocurrency collection spanning BTC, ETH, LTC, XMR, and DCR.
+
+Puzzles (16 total)
+
+Unsolved (2)
+
+Puzzle
+Crypto
+Address
+Prize
+
+Level HALV
+BTC
+1crypto24HCr178iMcKd5iUi5D4rsg1nK
+~0.003 BTC
+
+Level 5 (fixed)
+BTC
+1cryptoGeCRiTzVgxBQcKFFjSVydN1GW7
+~0.006 BTC
+
+Solved (14)
+
+Puzzle
+Crypto
+Address
+Solve Time
+
+1BiTCoiN WHiTe PaPeR
+BTC
+1BiTCoiNsuFnkCFGkv6AGgwWxN31GUwY6W
+72 hours
+
+Level SFX
+BTC
+1crypto92aYKxdzD6VSAKwpEJnXcA2s9t
+21 hours
+
+XIXOIO
+ETH
+0x5d663791e869ca70c71e0a5f4cfd707f596265aa
+1 year
+
+Codex Protocol
+ETH
+0x6b2560b34c7469c561a8fce581c88bfb8cce73b2
+20 days
+
+Demobit 2018
+BTC
+1cryptotnptVK1ZbpZFyEqcR5EVp5hjfk
+51 days
+
+Level XM17
+BTC
+1cryptozWJAE7UzDZF1eSgsT7mVjUsu7g
+22 hours
+
+HCPP17
+XMR
+(Monero seed puzzle)
+3 months
+
+Level 4
+BTC
+1cryptoRMRnj7Q9fgToxTRvejLnx3QRPq
+52 hours
+
+Litecoin SegWit
+LTC
+LartGjF6UjmvmF1JXBhFf5wtM9uZX7LzeS
+2 weeks
+
+Decred Autonomy
+DCR
+(wheels puzzle)
+-
+
+Decred Janus
+DCR
+DsRaAja82UvgnqYaBHYFuyCKURFX2rCyEJ8
+10 days
+
+Nethemba
+BTC
+1cryptoP5yMdKcz1bjzUqnbs3LsasVRX6
+5 days
+
+Level 3
+BTC
+1cryptoJzomVVJUSys8Qv1gKPCXFoZy1U
+38 hours
+
+Level 2
+BTC
+1cryptoTuax4qeedzVC35eYf4c16v4reJ
+29 hours
+
+Level 1
+BTC
+1cryptommoqPHVNHuxVQG3bzujnRJYB1D
+6 hours
+
+Implementation Notes
+
+Multi-cryptocurrency collection (BTC, ETH, LTC, XMR, DCR)
+
+Requires extending AddressType enum or adding crypto field
+
+Consider adding Chain enum: Bitcoin, Ethereum, Litecoin, Monero, Decred
+
+References
+
+https://crypto.haluska.sk/
+
+Author: https://twitter.com/zd3n
+
+Activity
+
+oritwoen
+self-assigned thison Jan 2, 2026
+
+oritwoenclosed this as completedin #57on Jan 2, 2026
+
+Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment
+
+Metadata
+Metadata
+
+Assignees
+
+oritwoen
+
+LabelsNo labels
+
+No labels
+
+TypeNo type
+
+ProjectsNo projects
+
+MilestoneNo milestone
+
+RelationshipsNone yet
+
+DevelopmentNo branches or pull requests
+
+Issue actions
+Open in GitHub Copilot app
+
+Footer
+
+ © 2026 GitHub, Inc.
+
+Footer navigation
+
+ Terms
+
+ Privacy
+
+ Security
+
+ Status
+
+ Community
+
+ Docs
+
+ Contact
+
+ Manage cookies
+
+ Do not share my personal information
+
+ You can’t perform that action at this time.
+

@@ -1,0 +1,229 @@
+
+
+ data: add private key for zden/Level 2 puzzle · Issue #84 · agntn/puzzles · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+agntn
+puzzles
+
+Repository navigation
+
+Code
+Issues10 (10)
+Pull requests3 (3)Only collaborators can create PRs
+Actions
+Security and quality
+Insights
+
+More items
+
+data: add private key for zden/Level 2 puzzle #84
+
+New issueCopy link
+
+New issueCopy link
+
+Closed
+#85
+
+Closed
+
+data: add private key for zden/Level 2 puzzle#84
+
+#85
+
+Copy link
+
+Assignees
+
+Description
+
+oritwoen
+opened on Jan 6, 2026
+
+Issue body actions
+
+Problem
+
+The zden/Level 2 puzzle is marked as solved but missing the private key data.
+
+Proposed Solution
+
+Add the verified private key, public key, and key metadata to the puzzle entry.
+
+Key was verified by deriving address from WIF and confirming it matches:
+
+Address: 1cryptoTuax4qeedzVC35eYf4c16v4reJ ✓
+
+HASH160: 06c84797d2819c984eb9045c1510b0e4fe8d7bf0 ✓
+
+Activity
+
+oritwoenadded a commit that references this issue on Jan 6, 2026
+
+data(zden): add private key for Level 2 puzzle...
+This issue will close once commit 290d410 is merged into the 'main' branch.
+290d410
+
+oritwoenclosed this as completedin #85on Jan 6, 2026
+
+oritwoen
+self-assigned thison Jan 6, 2026
+
+Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment
+
+Metadata
+Metadata
+
+Assignees
+
+oritwoen
+
+LabelsNo labels
+
+No labels
+
+TypeNo type
+
+ProjectsNo projects
+
+MilestoneNo milestone
+
+RelationshipsNone yet
+
+DevelopmentNo branches or pull requests
+
+Issue actions
+Open in GitHub Copilot app
+
+Footer
+
+ © 2026 GitHub, Inc.
+
+Footer navigation
+
+ Terms
+
+ Privacy
+
+ Security
+
+ Status
+
+ Community
+
+ Docs
+
+ Contact
+
+ Manage cookies
+
+ Do not share my personal information
+
+ You can’t perform that action at this time.
+

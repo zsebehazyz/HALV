@@ -1,0 +1,299 @@
+
+
+ Issue search results · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+issues Search Results · "zden" "puzzle"
+
+Filter by
+
+Code... (...)results
+Repositories
+results
+Issues23 (23)results
+Pull requests
+results
+AI resources
+results
+Discussions
+results
+More
+
+State
+
+Open
+
+Closed
+
+Advanced
+
+Owner
+
+State
+
+Close reason
+
+Has linked pull request
+
+Author
+
+Assignee
+
+Mentioned user
+
+Mentioned team
+
+Commenter
+
+Involved user
+
+Label
+
+Milestone
+
+Number of comments
+
+Number of interactions
+
+Advanced search
+
+Filter:Issues23 (23)23 results  (129 ms)
+23 results 
+
+Sort by: Best match
+Filter
+
+HomelessPhD/Zden_LVL5
+zden-puzzle-analysis
+CONCLUSION — THE TRUE MEANING OF ZDEN’S PUZZLE (LEVEL 5)
+
+1. Zden Is Not Hiding a Key — He Is Hiding a Way of Thinking This puzzle is not about discovering a private key. It is
+ about realizing ...
+aksara1237-bit·
+Opened  
+on Dec 31, 2025·
+#2
+
+HomelessPhD/Zden_LVL5
+[Flag Submission] LVL5 — Possible Solution
+Hello ZDEN team,
+
+I d like to submit my solution to the Level 5 puzzle.
+
+Primary Flag Candidate: zden{PPYTPSPZYS}
+
+Derived via:
+
+ - Rectangle geometry → sorted by row tolerance
+ - Area-based ...
+Ateammods·
+1·
+Opened  
+on Jun 27, 2025·
+#1
+
+agntn/puzzles
+assetUrl() points at main, so moved assets break published versions
+
+bug
+aeitwoen·
+Opened  
+on Sep 26·
+#324
+
+agntn/puzzles
+Address lookup hides a match its filters dropped
+... , collection: zden , chain: bitcoin , status: solved , withPubkey: false });
+
+Expected
+
+When an address matches a puzzle that the filters exclude, the answer says so, for example 0 matching
+puzzles ...
+
+enhancement
+aeitwoen·
+Opened  
+on Sep 28·
+#346
+
+agntn/keys
+Derive keys for TON, Monero, XRP and others
+
+enhancement
+aeitwoen·
+Opened  
+on Oct 1·
+#189
+
+agntn/puzzles
+Pin author URLs for the remaining asset files
+What s missing?
+
+puzzles assets --live can t check 28 files from #401, because their records name no URL that serves those exact bytes,
+so they come back NO_ORIGIN. Each group needs something ...
+
+enhancement
+oritwoen·
+Opened  
+on Oct 1·
+#402
+
+agntn/puzzles
+Add Decred Autonomy puzzle (wheels puzzle)
+Summary
+
+Add the Decred Autonomy wheels puzzle from Zden s collection.
+
+Context
+
+From issue #5 (Zden collection), this puzzle doesn t have a standard address format. It s a visual puzzle with ...
+oritwoen·
+Opened  
+on Jan 2·
+#53
+
+agntn/puzzles
+Balance fetching for Litecoin and Decred
+`balance::fetch()` only supports Bitcoin (mempool.space) and Ethereum (Etherscan). All other chains return
+`UnsupportedChain`.
+
+The project already has puzzles on Litecoin and Decred (zden collection ...
+
+enhancement
+oritwoen·
+Opened  
+on Mar 8·
+#117
+
+agntn/puzzles
+refactor: zden snake_case names
+
+enhancement
+refactor
+oritwoen·
+Opened  
+on Feb 21·
+#113
+
+agntn/puzzles
+Add Zden crypto puzzles collection
+oritwoen·
+Opened  
+on Dec 30, 2025·
+#5
+
+Previous123Next
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Restrict your search to the title by using the in:title qualifier.
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+ You can’t perform that action at this time.
+

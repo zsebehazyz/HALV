@@ -1,0 +1,277 @@
+
+
+ Repository search results · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+repositories Search Results · "haluska"
+
+Filter by
+
+Code... (...)results
+Repositories18 (18)results
+Issues
+results
+Pull requests
+results
+AI resources
+results
+Discussions
+results
+More
+
+Languages
+
+Python
+
+TypeScript
+
+HTML
+
+JavaScript
+
+AMPL
+
+C#
+
+CSS
+
+More languages...
+
+Advanced
+
+Owner
+
+Size
+
+Number of followers
+
+Number of forks
+
+Number of stars
+
+Date created
+
+Date pushed
+
+Topic
+
+License
+
+Archived
+
+Public
+
+Private
+
+Advanced search
+
+Filter:Repositories18 (18)18 results  (139 ms)
+18 results 
+
+Sort by: Best match
+Filter
+
+zden/face.haluska.sk
+Geometric Photo Filter
+
+JavaScript·
+14·
+Updated 
+on Mar 7, 2015
+
+Star
+
+zden/fulla.haluska.sk
+Geometric Toy - Fulla
+
+JavaScript·
+3·
+Updated 
+on Dec 2, 2014
+
+Star
+
+Uni-Sopron/dtr-o21-beadando-haluska-productmix--
+Haluska Mate
+
+AMPL·
+0·
+Updated 
+on Dec 16, 2021
+
+Star
+
+haluska/haluska
+My GitHub profile README
+0·
+Updated 
+on Sep 10, 2024
+
+Star
+
+the-domains/stephan-haluska
+0·
+Updated 
+on Sep 7, 2016
+
+Star
+
+chaluska4/haluska-hoops
+
+TypeScript·
+0·
+Updated 
+on Jun 28
+
+Star
+
+haluska/haluska.github.io
+0·
+Updated 
+on Feb 10
+
+Star
+
+benjaminmorozov/haluskar-bot
+discord bot written in C# (using DiscordNET)
+
+C#·
+0·
+Updated 
+on Jun 3, 2024
+
+Star
+
+suhailvs-archive/crypto.haluska.sk
+Bitcoin Puzzles
+
+Python·
+0·
+Updated 
+on Apr 13, 2025
+
+Star
+
+ondrejvdf/lan-pkt-haluska
+Cisco Packet Tracer LAN project (DHCP, DNS, WEB)
+0·
+Updated 
+on Apr 12
+
+Star
+
+Previous12Next
+
+Sponsor open source projects you depend onContributors are working behind the scenes to make open source better for everyone—give them the help and recognition they deserve.Explore sponsorable projects 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+Sponsor open source projects you depend onContributors are working behind the scenes to make open source better for everyone—give them the help and recognition they deserve.Explore sponsorable projects 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+ You can’t perform that action at this time.
+

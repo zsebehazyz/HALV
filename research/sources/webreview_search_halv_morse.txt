@@ -1,0 +1,188 @@
+
+
+ Issue search results · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+issues Search Results · "HALV" "morse"
+
+Filter by
+
+Code... (...)results
+Repositories
+results
+Issues1 (1)results
+Pull requests
+results
+AI resources
+results
+Discussions
+results
+More
+
+State
+
+Open
+
+Closed
+
+Advanced
+
+Owner
+
+State
+
+Close reason
+
+Has linked pull request
+
+Author
+
+Assignee
+
+Mentioned user
+
+Mentioned team
+
+Commenter
+
+Involved user
+
+Label
+
+Milestone
+
+Number of comments
+
+Number of interactions
+
+Advanced search
+
+Filter:Issues1 (1)1 result  (196 ms)
+1 result 
+
+Sort by: Best match
+Filter
+
+solwation/lunden-3d-apartment
+Orkester-status: vem jobbar med vad
+
+orkester
+solwation·
+385·
+Opened  
+28 days ago·
+#420
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Restrict your search to the title by using the in:title qualifier.
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+ You can’t perform that action at this time.
+

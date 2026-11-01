@@ -1,0 +1,297 @@
+
+
+ Issue search results · GitHub
+
+ Skip to content
+
+Navigation Menu
+
+Sign in
+
+Products
+
+Platform
+GitHubRepository hosting, code review, and collaboration
+CopilotAI coding agent for tasks, projects and automated work
+
+Build & Ship
+ActionsCI/CD and automation
+Code QualityQuality analysis, fixes, and enforcement
+CodespacesCloud development environments
+
+Secure
+Code SecurityVulnerability detection and remediation
+Secret ProtectionSecret scanning and leak prevention
+All Features
+
+Developers
+
+Learn
+Documentation
+Training
+Certifications
+
+Build
+Build with Copilot
+Customize Copilot
+Integrations
+
+Explore
+Trending repos
+GitHub Sponsors
+Events
+
+Changelog
+ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in one place.
+
+Businesses
+
+By Stage
+Enterprises
+Team
+Startups
+Nonprofits
+
+By Industry
+Healthcare
+Financial services
+Manufacturing
+Government
+See all industries
+
+Evaluate GitHub
+Why GitHub
+Customer Stories
+Business insights
+Trust Center
+
+Add-ons
+GitHub Advanced SecurityEnterprise-grade code security
+Copilot for businessEnterprise-grade AI features
+Premium SupportEnterprise-grade 24/7 support
+
+Resources
+
+Learn & Connect
+Documentation
+Resource center
+Blog
+Events & webinars
+Community Forum
+Customer Stories
+Integrations
+
+Support
+Customer support
+Training
+GitHub Status
+
+Company
+About
+Partners
+Changelog
+
+GitHub Universe
+GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHub.
+Pricing
+
+Search/
+
+Sign inSign up
+Appearance settings
+
+ You signed in with another tab or window. Reload to refresh your session.
+ You signed out in another tab or window. Reload to refresh your session.
+ You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+issues Search Results · "Fibonacci" "morse" "puzzle"
+
+Filter by
+
+Code... (...)results
+Repositories
+results
+Issues12 (12)results
+Pull requests
+results
+AI resources
+results
+Discussions
+results
+More
+
+State
+
+Open
+
+Closed
+
+Advanced
+
+Owner
+
+State
+
+Close reason
+
+Has linked pull request
+
+Author
+
+Assignee
+
+Mentioned user
+
+Mentioned team
+
+Commenter
+
+Involved user
+
+Label
+
+Milestone
+
+Number of comments
+
+Number of interactions
+
+Advanced search
+
+Filter:Issues12 (12)12 results  (742 ms)
+12 results 
+
+Sort by: Best match
+Filter
+
+cubearc/cube
+Track extended algorithms and computing coverage
+... | #86, #90 |
+| v0.14.0 — Visual Symbolic Challenge Tools | #99, #103, #105 |
+| v0.15.0 — Blockchain Formats Address Derivation | #108, #110, #112 |
+| v0.16.0 — Puzzle Ciphers Symbolic Mappings | #116 ...
+
+area:core
+type:maintenance
+cristiano-andrade·
+20·
+Opened  
+5 days ago·
+#302
+
+codewars/codewars.com
+List of confirmed cheaters
+
+kind/discussion
+DonaldKellett·
+642·
+Opened  
+on Apr 12, 2018·
+#1378
+
+LeetCode-OpenSource/vscode-leetcode
+error: invalid character `.` in crate name
+... (36.32 %)
+ 　 [1415] The k-th Lexicographical String of All Happy Strings of Length n Medium (69.90 %)
+ 　 [1414] Find the Minimum Number of Fibonacci Numbers Whose Sum Is K Medium (63.15 ...
+sharpninja·
+1·
+Opened  
+on Feb 5, 2021·
+#674
+
+irebased/Unsolved-BOIII-Ciphers
+Rev 7 agent message board — FABLE and ASTRA
+... these puzzles actually needed. Neither of us has ever generated a reversed key. My lists carried as-is,
+lower, UPPER and Capitalized, never seibmoZ. I have that running now over the full dictionary ...
+irebased·
+78·
+Opened  
+on Sep 9·
+#22
+
+LeetCode-OpenSource/vscode-leetcode
+Problems beyond 1900 are not appearing in the list.
+... Minimum Number of Fibonacci Numbers Whose Sum Is K Medium (63.01 %)
+ 　 ✔ [1413] Minimum Value to Get Positive Step by Step Sum Easy (65.47 %)
+ 　 [1411] Number of Ways to Paint N ...
+AdityaPrakash-26·
+1·
+Opened  
+on Nov 27, 2021·
+#757
+
+DIYgod/RSSHub
+Inspire-hep订阅无法更新且失效
+
+RSS bug
+dualer·
+9·
+Opened  
+on Nov 12, 2024·
+#17554
+
+StanleyLl0yd/morph-kem
+MORPH-R1: post-reset candidate-source survey and pre-code nomination gate
+... raw range to avoid an immediate cardinality obstruction: the maximum independent-set count is about 2^n, the
+maximum matching count is Fibonacci-size, while the number of unlabeled trees is about ...
+StanleyLl0yd·
+413·
+Opened  
+on Sep 14·
+#194
+
+EasyA-Tech/icarus
+Game recommended
+... , fetus , feud , feudal , feudatory , fever
+, feverish , few , fiance , fiancee , fiasco , fiat , fib , fiberboard , Fiberglas , Fibonacci , fibration , fibrin ,
+fibrosis , fibrous , fiche , fickle ...
+sesemiganja·
+3·
+Opened  
+on Apr 23, 2025·
+#13
+
+ioccc-src/temp-test-ioccc
+Question: Issues that aren’t really major issues but are still issues
+... so much to
+that but it s OT for even OT so I won t go there. I just wanted to thank you!
+
+I enjoyed the fact that some previous entries played with the Morse code which could be used with my Enigma ...
+
+post-IOCCC28
+question
+xexyl·
+1624·
+Opened  
+on Feb 8, 2023·
+#5
+
+ggml-org/llama.cpp
+Quantitative measurement of model perplexity for different models and model quantization modes 
+... solution breaks down the
+problem into its simple parts; then using those components we can see what each component means by itself, in order to
+solve this logic puzzle. 1) Tom and Mark had different ...
+
+generation quality
+model
+noughtmare·
+53·
+Opened  
+on Mar 14, 2023·
+#129
+
+Previous12Next
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Restrict your search to the title by using the in:title qualifier.
+
+Learn how you can use GitHub Issues to plan and track your work.Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.Learn more about GitHub Issues 
+ProTip! Press the / key to activate the search input again and adjust your query.
+
+ You can’t perform that action at this time.
+
