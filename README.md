@@ -20,11 +20,19 @@ visszakódoltuk. Részletek a napló tizenegyedik körében és a
 [C18](research/data/signature_phase_decode_check.json),
 [C19](research/data/reward_staircase_check.json) eredményekben.
 
-A legfrissebb [C20](research/data/uniform_phase_layers_check.json)
+A [C20](research/data/uniform_phase_layers_check.json)
 ugyanazzal a szabállyal bontja az összes cellát főcsatornára és maradékra:
 32+12 bájt, teljes veszteségmentességgel. **44 cella szabályos,20 eltérő**;
 a12 kiemelt nemnulla minta mellett17 további alsó egyes is megmarad.
 A közvetlen főcsatorna96 olvasata nem adta a kulcsot; a maradék szerepe nyitott.
+
+A legfrissebb **C21–C23** a teljes maradék előrejelzését és képi szerepét
+vizsgálja. A helyi szabályok, a rögzített ellenőrzőkódok és közvetlen
+deltaolvasatok nem adtak teljes előrejelzést. Fontos mérési javítás:
+az utolsó blokk hibájából kivettük az aláírás pixeleit. Hullámkivágáson a
+maradék elhagyása 2,3–4,8-szoros ellenőrzési hibát ad; mind a hat szabad
+újraillesztés ugyanazt a 256 mintát állítja vissza. A generátor és a kulcs
+továbbra sincs azonosítva. Részletek a napló tizenharmadik körében.
 
 ## Reprodukálás
 
@@ -236,3 +244,27 @@ Ez egységes, veszteségmentes felbontás; a maradékértékeket előrejelző
 generátort továbbra sem azonosítottuk.
 
 ![Mind a64 cella két csatornája](research/data/uniform_phase_layers.png)
+
+## Maradék-előrejelzés és javított képi ellenőrzés
+
+```sh
+python3 tools/check_residual_predictors.py
+python3 tools/check_residual_codes.py
+python3 tools/check_residual_physics.py
+MPLCONFIGDIR=/tmp/halv_mpl XDG_CACHE_HOME=/tmp/halv_cache python3 tools/plot_residual_followup.py
+```
+
+C21 külön abszolút és fázishoz forgatott csatornákat használ, és egész
+szélső blokkokat hagy ki a tanításból. C22 a 32 adatbájt→12 ellenőrzőbájt
+RS-/CRC-modelleket és Fibonacci-rekurziókat teszteli pontos előrejelzéssel.
+A főprogramhoz nem kell reedsolo: nyolc, külön implementációból mentett
+referenciavektor ellenőrzi az RS-magot. A referenciák újragenerálása
+opcionális, a `tools/capture_rs_reference.py` és a reedsolo 1.7.0 használatával.
+
+C23 a legjobb R=0 képi modellnél is újrailleszti az összes megengedett
+amplitúdót. A maradék megtartását mindkét ellenőrzési oszlop és mindhárom
+vonalvastagság támogatja. A q/2 geometriai felbontásban R 26 fél- és 3 egész
+egységnyi csúcskorrekciót hordoz; pontos normalizált sugárterülete 48.
+Ez továbbra is mért, modellfüggő összefüggés, nem igazolt kulcsdekóder.
+
+![Maradék-előrejelzés és hullámkivágás](research/data/residual_followup_audit.png)

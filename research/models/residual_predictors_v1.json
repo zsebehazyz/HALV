@@ -1,0 +1,17 @@
+{
+  "model":"C21",
+  "question":"Can one memoryless or sparse contextual Boolean rule predict the full residual without fitting each block separately?",
+  "source":"Nominal256 states, unchanged; phases z=(3-b)mod4,r=z-1mod4",
+  "frames":{
+    "absolute":"C20: A=[H at non-z positions in increasing local order,L[r]], R=[H[z],L at non-r positions in increasing order]",
+    "phase_relative":"A=[H[r],H[r+2],H[r+3],L[r]], R=[H[z],L[z],L[z+1],L[z+2]]; all indices mod4"
+  },
+  "memoryless":"Test all exact A->R lookup functions by repeated-input consistency; training-majority lookup only for heldout comparison",
+  "sparse_parity_inputs":["A current4bits","A previous cell4bits","A next cell4bits","block index3bits","cell index3bits"],
+  "neighbor_boundary":"Continuous64-cell stream; missing first/last neighbor=0",
+  "sparse_parity_rules":"For each of4 residual bits, XOR of at most3 of the18 inputs, optionally complemented; select minimum training bit errors, then fewest terms, then mask and complement order",
+  "validation":"Leave one entire edge block(1,2,8) out; no heldout targets used to select parity or lookup parameters",
+  "metrics":["Heldout cell exact matches/24","Heldout residual bits correct/96","Recall of29 heldout residual1 bits","Exact recovery of12 nonzero zero-phase values","All64 cells in full-data exact-feasibility audit"],
+  "primary_key_check":"Both frames; all24 common primary-bit permutations and fixed cell/bit/block reversals as inC20; direct32 bytes, no hash",
+  "limitations":["Model family choices are exploratory; crossvalidation is within the same image","A successful lookup interpolation would not by itself identify author intent","No unrestricted learned function or per-block lookup","Both frames retain all data and exact roundtrip"]
+}

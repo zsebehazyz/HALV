@@ -94,6 +94,13 @@
       "target_or_exact_matches": 0
     },
     {
+      "result": "research/data/residual_predictors_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 192,
+      "unit": "valid private scalars; includes the96 C20 controls",
+      "target_or_exact_matches": 0
+    },
+    {
       "result": "research/data/marker_glyph_relation.json",
       "count_field": "attempts_including_duplicates",
       "count": 61200,
@@ -102,6 +109,18 @@
     }
   ],
   "files": [
+    {
+      "path": "research/data/absolute_primary32.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 32,
+      "sha256": "7a0a7c69b8c6de6fa86940d1edcc243dcd1ab149f5734c3a3c33e7a601fca570"
+    },
+    {
+      "path": "research/data/absolute_residual12.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 12,
+      "sha256": "d11f2a7e0295f65967cd3afc51c5f784ba9131f5a9efe6d2c989c1d68335c4b1"
+    },
     {
       "path": "research/data/bd_halving_check.json",
       "role": "executed_result_or_artifact",
@@ -355,6 +374,18 @@
       "sha256": "ac51a8544128da09b60ab94c310292b8fb1cc91f6273f4ed62fd5764481dbe2d"
     },
     {
+      "path": "research/data/phase_relative_primary32.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 32,
+      "sha256": "09dc31883193c377fefb68851b93b0f015b3e871d8e393d8bda36dbf34f4a013"
+    },
+    {
+      "path": "research/data/phase_relative_residual12.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 12,
+      "sha256": "4a1515e510ef52ee0e387b32757705fb7b469918249f6cbe2bc641c694eccbfc"
+    },
+    {
       "path": "research/data/pixel_measurements.json",
       "role": "executed_result_or_artifact",
       "bytes": 173640,
@@ -383,6 +414,30 @@
       "role": "executed_result_or_artifact",
       "bytes": 350164,
       "sha256": "53970e5db54a5783c97f66a2011aa7e3443f2f4c554b7005d55eece52b093cdc"
+    },
+    {
+      "path": "research/data/residual_codes_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 11325,
+      "sha256": "f895e6bbe9ae05f60e2dd1820884d526519799eab69030ee3c5fe439f1dbe2ca"
+    },
+    {
+      "path": "research/data/residual_followup_audit.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 170078,
+      "sha256": "d9b3d73c508f408173a1c6de9b6bd70c7796d40917e0c1828d8e919d35fc1330"
+    },
+    {
+      "path": "research/data/residual_physics_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 427664,
+      "sha256": "3d1d28bb216f865e4395dd692f3f320c5b9aedda5d0931bbb6cf19342ea6525b"
+    },
+    {
+      "path": "research/data/residual_predictors_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 28295,
+      "sha256": "5a17c0e0ccb4a1c26d18602e114ba9e4b0c696ded029620111a5a8c937425a3f"
     },
     {
       "path": "research/data/reward_staircase_check.json",
@@ -637,6 +692,12 @@
       "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
     },
     {
+      "path": "research/sources/rs_reference_vectors.json",
+      "role": "source_or_reference",
+      "bytes": 2206,
+      "sha256": "366a1dbf5e584117414023d7a70d137fe991ff94ae8885f0c68bcce1f0ea4e4e"
+    },
+    {
       "path": "research/sources/user_exception_layer_note_20261031.md",
       "role": "source_or_reference",
       "bytes": 801,
@@ -763,6 +824,24 @@
       "sha256": "8ef1a0cd2f94998635e90bbb4f3668f65cc3a28b860f8fbc475afe00665129dc"
     },
     {
+      "path": "research/models/residual_codes_v1.json",
+      "role": "model_specification",
+      "bytes": 1755,
+      "sha256": "6840e944e83f9860b026eea2b501c742b1b6da6d94944aa1485321ce15911f4c"
+    },
+    {
+      "path": "research/models/residual_physics_v1.json",
+      "role": "model_specification",
+      "bytes": 1790,
+      "sha256": "28d48e2c8999e64736c7769954fc6d66bdde0b50035f75ca0fccf42a26044803"
+    },
+    {
+      "path": "research/models/residual_predictors_v1.json",
+      "role": "model_specification",
+      "bytes": 1783,
+      "sha256": "b91c51a8c180b053f7c5e6f60217f6b9884718a040e360aef9618c09fd5c7ec3"
+    },
+    {
       "path": "research/models/reward_staircase_v1.json",
       "role": "model_specification",
       "bytes": 901,
@@ -801,8 +880,14 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 3506,
-      "sha256": "8af81a080b8d2798dcc240cdf67ae77a64050a63e93bcc5194daf754ed3a9f3e"
+      "bytes": 3626,
+      "sha256": "c66ca80ea64e9d3de2f01121ccac1530f7e7db7939269b06e761c8f8269c9de3"
+    },
+    {
+      "path": "tools/capture_rs_reference.py",
+      "role": "reproduction_tool",
+      "bytes": 1692,
+      "sha256": "f3bffa65bd841910e63bd9cafdacec72e44def4fc814ca843e6b23f9d81a7525"
     },
     {
       "path": "tools/check_bd_halving.py",
@@ -919,6 +1004,24 @@
       "sha256": "300aa8f1863679af071614481fb55858f7bf2f29c859287b9219d3f568c7d4e2"
     },
     {
+      "path": "tools/check_residual_codes.py",
+      "role": "reproduction_tool",
+      "bytes": 8770,
+      "sha256": "7296c1c3f657aba58b8b6a635c42e7084b84061399ac46532172f0b6e4e601ec"
+    },
+    {
+      "path": "tools/check_residual_physics.py",
+      "role": "reproduction_tool",
+      "bytes": 7168,
+      "sha256": "6a4ba8752ad6ab1fa483a996f22c1888ace4d6311f4e49ef08736850172ad3bd"
+    },
+    {
+      "path": "tools/check_residual_predictors.py",
+      "role": "reproduction_tool",
+      "bytes": 8761,
+      "sha256": "6a255af2163b97da9f211bbb1d50dc78ef5c8951617aa25b1800e98aa4314df2"
+    },
+    {
       "path": "tools/check_reward_staircase.py",
       "role": "reproduction_tool",
       "bytes": 3262,
@@ -1009,6 +1112,12 @@
       "sha256": "768a96819fdbc28f1c5cf1d6e149a44bee770f5caabc09ed7136e97a060a434a"
     },
     {
+      "path": "tools/plot_residual_followup.py",
+      "role": "reproduction_tool",
+      "bytes": 2574,
+      "sha256": "a3aff1b8d5658bc8adc04839a9288f19e706fdca57037c8f36cdeacf8d60e46d"
+    },
+    {
       "path": "tools/plot_signature_phase.py",
       "role": "reproduction_tool",
       "bytes": 2319,
@@ -1021,6 +1130,12 @@
       "sha256": "d8329c3909d7cd04693a994e7e3ac64eccf9f7a7dbd06aea702c7cb6d566bf9c"
     },
     {
+      "path": "tools/residual_channels.py",
+      "role": "reproduction_tool",
+      "bytes": 1652,
+      "sha256": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+    },
+    {
       "path": "tools/verify_level5_geometry.py",
       "role": "reproduction_tool",
       "bytes": 4130,
@@ -1029,8 +1144,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 11737,
-      "sha256": "cfe739b4b5334b137c74f7c89c80bf12225f87c440bc6ae7e73959877eef3e39"
+      "bytes": 13548,
+      "sha256": "c02d6270a24711073fc285a3aa16c36de6fc70528754f4fa080fe1fb13a5bfd4"
     },
     {
       "path": "AGENTS.md",
@@ -1041,14 +1156,14 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 21923,
-      "sha256": "17599fe1ee9c241f7811afb87d892d4b6735b0bc0a15c4916e193156c748a159"
+      "bytes": 24839,
+      "sha256": "13bc9c710d2c290463d89809aaa826034ec3def1617587ad72ed894d92e51e53"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 86272,
-      "sha256": "b212a65127e7b4023457bf7c3cdb039b151f4ae92ab46a5c6c72757c96899b7c"
+      "bytes": 94462,
+      "sha256": "a66bc2f114da6fa3e2874d6453911005e6c3e3b186b986ca0c7e75fdc268c46c"
     }
   ]
 }

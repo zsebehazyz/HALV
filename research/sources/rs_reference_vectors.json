@@ -1,0 +1,66 @@
+{
+  "reference_package": "reedsolo",
+  "version": "1.7.0",
+  "package_source": "https://pypi.org/project/reedsolo/1.7.0/",
+  "module_sha256": "8cafe0cec313c70801f5086c66c07f760011688b691c5fd732ace03926f8e4e4",
+  "generation_script_sha256": "f3bffa65bd841910e63bd9cafdacec72e44def4fc814ca843e6b23f9d81a7525",
+  "vectors": [
+    {
+      "field_polynomial": 285,
+      "generator": 2,
+      "first_root": 0,
+      "data_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "parity_hex": "a04c470d3ffcb203dae9f413"
+    },
+    {
+      "field_polynomial": 285,
+      "generator": 2,
+      "first_root": 0,
+      "data_hex": "0b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4",
+      "parity_hex": "bb4e6ec38dc7b6aa2449a300"
+    },
+    {
+      "field_polynomial": 285,
+      "generator": 2,
+      "first_root": 1,
+      "data_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "parity_hex": "9832c3679739a5bc848bb1de"
+    },
+    {
+      "field_polynomial": 285,
+      "generator": 2,
+      "first_root": 1,
+      "data_hex": "0b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4",
+      "parity_hex": "6fce856a9beca4aeb5a3cc68"
+    },
+    {
+      "field_polynomial": 283,
+      "generator": 3,
+      "first_root": 0,
+      "data_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "parity_hex": "77f215542ba876303680a81f"
+    },
+    {
+      "field_polynomial": 283,
+      "generator": 3,
+      "first_root": 0,
+      "data_hex": "0b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4",
+      "parity_hex": "df3f28b8c478de7b50de0720"
+    },
+    {
+      "field_polynomial": 283,
+      "generator": 3,
+      "first_root": 1,
+      "data_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "parity_hex": "e4737bfcff3872e0947097d7"
+    },
+    {
+      "field_polynomial": 283,
+      "generator": 3,
+      "first_root": 1,
+      "data_hex": "0b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4",
+      "parity_hex": "3382403376c6eff82cce5105"
+    }
+  ],
+  "purpose": "Independent implementation known answers; messages are fixed synthetic data, not HALV"
+}

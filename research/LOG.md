@@ -1503,3 +1503,136 @@ művelethez kötni és lehetőleg új képoszlopokat vagy részmintákat jósoln
 Fibonacci/hang/Morse műveletet ennek indokolt helyére érdemes tenni.
 Az R egyszerűen elhagyva nem adta a kulcsot. Az eddigi geometriai terület-,
 BD-, dátum- és aláírásadatok továbbra is megvannak a közös térképen.
+
+## 2026-11-01 – tizenharmadik kör: a 12 bájt előrejelzése és a tail-ROI javítása
+
+A felhasználó a teljes maradék szerepének levezetését kérte, a geometriai
+és Fibonacci–hang–Morse ágak megőrzésével, majd a kutatási kör befejezését.
+A C21–C23 specifikációk futás előtt fájlba kerültek. Az eredeti mérések
+és a C20 ábrázolása megmaradt; az új eredmények nem írják felül a régi JSON-okat.
+
+### C21 – két koordinátakeret, visszatartott teljes blokkok
+
+A C20 növekvő fizikai pozíciósorrendjét és az r-fázishoz forgatott
+sorrendet külön kezeltük. A relatív változat főbitjei H[r], H[r+2], H[r+3], L[r],
+maradékbitjei H[z], L[z], L[z+1], L[z+2]. Mindkét keretben pontos a 256
+állapot visszakódolása. A fázishoz igazított maradék 12 bájt:
+`5114a1784080104106127552`; az abszolút továbbra is
+`3221c2782080402406127552`.
+
+Mindkét keretben 10 olyan A-érték van, amelyhez több eltérő R tartozik.
+Például az abszolút 9-es A-hoz 0, 2, 3 is előfordul. Ez egyértelműen kizárja
+a pozíciófüggetlen, memóriátlan R=f(A) szabályt ezen a felbontáson.
+A négybites A affine bináris függvénye sem konzisztens a teljes adaton.
+
+Előrejelzési család: aktuális/előző/következő A 4-4 bitje, blokkindex 3 és
+cellaindex 3 bitje, összesen 18 bemenet. Minden R-kimenetre legfeljebb 3
+XOR-tag, opcionális komplement, minimum tanítóhibával és rögzített
+egyszerűségi sorrenddel választva. Az 1976 jelöltet kimenetenként a tanító
+adatokon hasonlítottuk össze. Külön 1., 2., 8. egész blokk volt kihagyva;
+a tanítás 56 cella, az ellenőrzés 8. A szomszédos A megengedett bemenet,
+a kihagyott R-értékek nem szerepelnek a modellválasztásban.
+
+Mindkét keretben a minimumhibás szabály és a tanító többségi lookup is
+nulla R-t jósolt az összes kihagyott cellán. Ez 4/24 teljes cellát és 67/96
+bitet talál el, de **a 29 nemnulla R-bitből és 12 nemnulla nullahelyből egyet
+sem állít helyre**. Nem értékeljük pozitív eredményként a nullákból adódó
+bitpontosságot. A nulla-osztály dominálja ezt a célfüggvényt; más,
+nemlineáris vagy súlyozott család ettől még nincs kizárva.
+
+A főcsatorna-kulcs kontrollja 192 skalár, két P2PKH-formátummal: 0 egyezés.
+Ebből 96 az előző C20 kontrollkészlet pontos ismétlése, hash-azonossággal
+ellenőrizve; 96 a mostani relatív keret új változata. A darabszámot nem
+adjuk hozzá más futásokhoz globális egyediként. Nincs hash-véglegesítés.
+
+### C22 – teljes csomagra rögzített ellenőrzőkódok és rekurziók
+
+A 32 adatbájt + 12 maradékbájt rövidített RS(44,32) lehetőségét vizsgáltuk
+két GF256 mező-/generátorváltozattal és 0/1 kezdőgyökkel. A két keretben
+96-96 egyedi A- és R-olvasatot adott a 24 közös bitpermutáció és az előre
+megadott irányok. **73728 teljes 12 bájtos összevetés, 0 egyezés.**
+
+Külön ellenőrzőbankok: CRC32 IEEE, Castagnoli, BZIP2, MPEG2 és Adler32.
+Három deklarált felosztás: a három szélső szó önálló ellenőrzése;
+első 16 / utolsó 16 / teljes 32 bájt; szélső 12 / középső 20 / teljes 32 bájt.
+Mindkét szó-bájtsorrenddel és azonos olvasati családdal **552960 teljes
+96 bites összevetés, 0 egyezés**. Ezek ellenőrzőkód-előrejelzések,
+nem privátkulcs-próbák, és nem fednek le minden lehetséges ECC-/CRC-kódot.
+
+A három 32 bites R-szó első kettőjéből az összeadó Fibonacci-rekurzió
+mod 2^32 a harmadikat sem közvetlen következő elemként, sem a tényleges
+7-es blokkindexre léptetve nem találja el, egyik bájtsorrendben sem.
+A bináris Fibonacci/LFSR irányban a 64 első bitből Berlekamp–Massey
+eljárással kapott rekurziók 31–33 fokúak, tehát nem legfeljebb 16 fokúak;
+a 32 visszatartott bit egyik változatban sem egyezik teljesen.
+Ez nem általános Fibonacci-, véletlenszám-generátor- vagy rekurziókizárás.
+
+Validálás: 8 RS-referenciavektor egy külön implementációból, 5 szabványos
+`123456789` ellenőrzővektor, ismert harmadfokú bináris rekurzió és zérussorozat.
+Mind sikeres. A reedsolo 1.7.0 referencia ideiglenes /tmp telepítésből származik,
+verziója és modulhash-e archiválva. A fő kutatóprogram saját GF256-magot
+használ; a mentett referenciák miatt nincs reedsolo futásidejű függősége.
+
+### C23 – az aláírás korábban felhígította a hullám hibaarányát
+
+A korábbi y85…865 ROI a legutolsó hullámblokk oszlopain az alatta levő
+BTCrypto-aláírást is tartalmazza. A hullámmodell ott feketét jósol, így
+az aláírás állandó hibája mindkét modell alap-hibaszintjét megemeli. Ez az
+amplitúdóállapotok minimumhelyét nem változtatja meg, de a relatív
+százalékos eltérést lényegesen kisebbnek mutatja.
+
+Az új, előre rögzített végblokk-ROI x≥764 esetén y450…500; az összes
+megengedett 0…3 amplitúdó és a vonaludvar is elfér benne. Más oszlopoknál
+a régi ROI marad. Két irányban az egyik köztes képoszlopon illesztettünk,
+a másikon ellenőriztünk, a 7 blokkhatáros szegmens kizárásával: 248+248
+oszlop. Három fix vonalskála: 0,85; 1; 1,15. A kényszeres modellek minden
+megengedett állapotát újraoptimalizáltuk; nem csak az eredeti R-biteket töröltük.
+
+**Mind a hat szabad újraillesztés ugyanazt a 256 névleges állapotot adta.**
+Ez a megadott modellcsaládon belüli stabilitás, nem raszterizálótól független
+konfidenciaintervallum. A teljes R=0 kényszer ellenőrzőhiba-aránya:
+
+| Blokk | Hullám-ROI: legkisebb/legnagyobb arány a szabad illesztéshez |
+|---:|---:|
+| 1 | 9,191…22,162 |
+| 2 | 4,320…8,799 |
+| 8 | 2,277…4,811 |
+
+Névleges 1-es vonalskálán, +1-en tanítva, +2-n ellenőrizve a 8. blokkban
+ugyanaz az R=0 kényszer a régi ROI-val 1,034-szeres, hullám-ROI-val 4,279-szeres
+hibát ad. A korábbi kicsi tail-százalékból ezért nem helyes a maradék
+lényegtelenségére következtetni. A régi 2,82%-os C12 adat csak páratlanfázis-
+kényszerre vonatkozott; az itt számított 1,034/4,279 a teljes R=0 feltétel,
+ezeket nem azonos kényszerként hasonlítjuk össze.
+
+### Geometriai és közvetlen hang-delta kapcsolat
+
+Az A-ból R=0-val rekonstruált q0 és a teljes q között 26 egyegységnyi és
+3 kétegységnyi csúcskülönbség van. A BD után vizsgált q/2 koordinátában
+ez 26 fél- és 3 egész egység. A 64 cellából 22 normalizált sugárterülete változik,
+a teljes pontos területkorrekció 48. Fizikai csúcskálával, felezett magasságon
+az összeg 3282 px². Cellánként egzakt racionális integrálással ellenőriztük
+Area(q/2)=Area(q0/2)+Area((q−q0)/2) azonosságot. Ez előállítási azonosság,
+nem annak bizonyítéka, hogy a szerző valóban területeket kódolt.
+
+A közvetlen hanghipotézisben R mint deltaindex határozná meg az egymást
+követő A-k különbségét. Mindkét keretben R=0-hoz többféle nemnulla belső
+amplitúdókülönbség tartozik, saturációval nem érintett mintákon is;
+ezért egyetlen állandó delta-lookup sem írja le ezt a konkrét kapcsolatot.
+A dokumentált Fibonacci/exponenciális táblák plain/xor8 indexe, 15/255
+klippeléssel, sem adnak teljes egyezést. Ez **nem** zárja ki, hogy R
+paramétereket, sorrendet, hangdemodulációt vagy egy előző dekódolási lépést vezérel.
+
+### A kör eredménye és a megmaradt bizonytalanság
+
+A maradék képi szerepét és stabilitását sikerült pontosabban alátámasztani;
+az előállítási szerepét nem sikerült levezetni. A vizsgált helyi, RS-/CRC-,
+Fibonacci-rekurziós és közvetlen delta-család nem adott teljes előrejelzést.
+**A közös generátor és a HALV-privát kulcs nincs meg.** Nem állítjuk, hogy
+a tesztek az összes több lépéses megoldást kizárják.
+
+Mentések: `data/residual_predictors_check.json`, `data/residual_codes_check.json`,
+`data/residual_physics_check.json`, `data/residual_followup_audit.png`,
+a két keret primary32/residual12 bináris fájljai; a három models/ specifikáció,
+`sources/rs_reference_vectors.json`, valamint a megfelelő tools/ programok.
+A teljes bizonyítékjegyzék frissítve; a régi geometriai és hang-/Morse-ágak megmaradnak.

@@ -1,0 +1,13 @@
+{
+  "model":"C23",
+  "question":"Are residual states required by heldout wave pixels, and can the same residual be a geometric rounding or direct audio-delta channel?",
+  "image_source":"cryptoHALV.png nominal coordinate grid92+3i, amplitude128/2**block, center475",
+  "renderer":"Same normal-distance stroke profile as C12, fixed widths0.85,1,1.15; no per-block tuning",
+  "roi_comparison":{"legacy":"y85..865 for all columns","wave_only_tail":"y450..500 at x>=764; y85..865 elsewhere; all allowed tail curves plus raster halo lie inside this fixed ROI"},
+  "pixel_validation":"Fit on offset1 or2 columns, validate the other; exclude7 cross-block segments from both sets;248 columns each",
+  "constraints":["free","full_R_zero_in_block1","full_R_zero_in_block2","full_R_zero_in_block8","full_R_zero_everywhere"],
+  "full_R_zero":"q[z]=0; q non-r positions even; q[r] unrestricted0..3; reoptimize ALL allowed states rather than just deleting nominal bits",
+  "geometry":"Nominal A-only zero-residual states vs full nominal q; exact q/2 radius areas in64 cells, anchor92, normalized and physical node scales; preserve rational correction profiles",
+  "audio_delta":"Both A/R frames; test whether any fixed lookup D(R) could give first differences of A, including interior samples unaffected by saturation; also test archived Fibonacci/exponential tables, plain/xor8 indices and clipping15/255",
+  "limitations":["Approximate rasterizer; width variants diagnose model sensitivity, not statistical confidence bounds","Crossfit is within the same PNG, not independent author data","A bit-derived additive correction is not proof of the intended geometric statistic","Direct R-as-delta negatives do not exclude residual-controlled decoding or other audio pipelines","No key-candidate search"]
+}

@@ -344,3 +344,49 @@ A16-modelles, hisztogramot megőrző új kontrollban20000 permutáció közül
 egyik sem érte el az52-es maximumot vagy a14-es első–második különbséget.
 Ez feltételes, feltáró kontroll;0 esemény nem nulla valószínűség és nem
 globális szándékbizonyíték. A kontrollpontszámok mentve vannak.
+
+## C21–C23: teljes maradék, előrejelzés és képi kontroll
+
+Két veszteségmentes keret: a C20 abszolút helyi bitsorrendje, illetve az
+r-fázishoz forgatott sorrend. Utóbbi:
+`A=[H[r],H[r+2],H[r+3],L[r]]`,
+`R=[H[z],L[z],L[z+1],L[z+2]]` (pozíciók mod4).
+Mindkettő visszaadja az összes 256 állapotot; nem dobunk el maradékbitet.
+
+C21-ben mindkét keretben 10 főnibble-értékhez több különböző R tartozik.
+Ez pontos ellenpélda bármely pozíciófüggetlen `R=f(A)` táblához.
+A szomszédok és koordináták 18 bitjéből kimenetenként legfeljebb 3 XOR-tagot
+használó, minimum tanítóhibára választott szabályok a kihagyott teljes
+szélső blokkokon sem jósoltak meg nemnulla kivételt. Ez csak a deklarált,
+korlátozott család negatívuma, nem minden kontextusos szabály kizárása.
+A 192 közvetlen főcsatorna-kulcs között 96 korábbi kontroll és 96 új,
+fázisrelatív változat van; nincs célcímegyezés.
+
+C22 a 32+12 bájtos szerkezetet szabványos ellenőrzőkód lehetőségeként
+vizsgálta. A rögzített RS(44,32), CRC32/Adler-bank és Fibonacci-rekurziós
+család egyik olvasatban sem jósolta meg a 12 bájtot. RS: 73728 teljes
+csomag-összevetés; ellenőrzőbankok: 552960. Ezek 96 bites előrejelzési
+összevetések, **nem privátkulcs-próbák**. A 64 bitből tanult bináris
+rekurziók 31–33 fokúak és a visszatartott 32 bitet sem találták el pontosan.
+Ez nem általános hibajavítókód-, rekurzió- vagy Fibonacci-kizárás.
+
+C23 fontos képi javítást ad: a korábbi magas tail-ROI az aláírást is
+tartalmazta. Az x≥764 oszlopokra rögzített y450…500 hullám-ROI az összes
+megengedett végblokk-görbét és vonaludvarát tartalmazza, az aláírást nem.
+Azonos R=0 kényszer mellett a névleges ellenőrzőhiba-arány így 1,034-ről
+4,279-re nő. Ez a háttérből eredő százaléktorzítás javítása; a korábbi
+névleges állapotsor nem változik. Három vonalskála és két oszlopszerep
+mind ugyanazt a 256 szabadon illesztett mintát adja. A maradék eltörlése
+az utolsó blokkban 2,277–4,811-szeres hibát okoz ebben a modellcsaládban.
+
+A q/2 geometriai eltérés 26 fél- és 3 egész egységnyi csúcskorrekció.
+64 cellából 22 területe változik; a normalizált sugárterület-korrekció
+pontos összege 48, a felezett fizikai magasság modelljében 3282 px².
+Az R ezért ebben a felbontásban nem kizárólag fél egységnyi törtrész.
+Az R-ből közvetlenül A-különbséget előállító állandó táblák is ellentmondásosak,
+a vizsgált Fibonacci/exponenciális táblák sem adnak teljes egyezést.
+
+**Nyitva marad:** állapottal, távolabbi összefüggéssel vagy más sorrenddel
+működő közös generátor; R esetleges utasítás-/paraméter-szerepe; a megfelelő
+geometriai normalizálás; összetettebb Fibonacci–hang–Morse műveletsorrend.
+Az eddigi tesztek nem igazolnak kész dekódolási láncot.

@@ -1,0 +1,14 @@
+{
+  "model":"C22",
+  "question":"Do fixed packet checksums, Reed-Solomon parity or a short Fibonacci-style recurrence predict all12 residual bytes?",
+  "frames":["absolute","phase_relative"],
+  "packet_views":"All24 common nibble-bit permutations; cell order forward/reverse within each8-cell block; bit direction forward/reverse per32bit block; original/reversed block order; deduplicate byte strings independently for primary and residual",
+  "reed_solomon":{"data_bytes":32,"parity_bytes":12,"field_variants":[[285,2],[283,3]],"first_roots":[0,1],"model":"Shortened systematic RS(44,32); compare all12 predicted parity bytes exactly"},
+  "checksum_bank_algorithms":["CRC32_IEEE","CRC32_CASTAGNOLI","CRC32_BZIP2","CRC32_MPEG2","ADLER32"],
+  "checksum_banks":["primary edge words0,1,7 independently","first16bytes,last16bytes,whole32bytes","edge12bytes,middle20bytes,whole32bytes"],
+  "checksum_word_byte_order":["big","little"],
+  "fibonacci_word_prediction":"First two32bit residual words initialize x[n]=x[n-1]+x[n-2] mod2**32; predict third field either index2 or actual block index7; both byte orders, no fitted coefficient",
+  "binary_fibonacci_recurrence":"Berlekamp-Massey on first64 residual bits, predict final32; byte order forward/reverse and bit order MSB/LSB; flag degrees>16 as non-short",
+  "reference_validation":"Independent reedsolo1.7.0 reference vectors; standard123456789 checksum vectors; known degree3 binary recurrence",
+  "limitations":["Only the specified standard families, not every possible checksum or error-correcting code","Single packet cannot identify an arbitrary unknown96bit check polynomial","Recurrences learned on64bits can overfit; only heldout32bit predictions count","No key-candidate search in this model"]
+}

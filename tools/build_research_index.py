@@ -35,6 +35,7 @@ def main():
         ('fractional_area_check.json','unique_valid_scalars','valid private scalars'),
         ('signature_phase_decode_check.json','unique_valid_scalars','valid private scalars'),
         ('uniform_phase_layers_check.json','unique_valid_scalars','valid private scalars'),
+        ('residual_predictors_check.json','unique_valid_scalars','valid private scalars; includes the96 C20 controls'),
         ('marker_glyph_relation.json','attempts_including_duplicates','structural comparisons, not private keys')]:
         p=ROOT/'research/data'/filename
         if p.exists():

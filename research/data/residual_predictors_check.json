@@ -1,0 +1,1200 @@
+{
+  "model": "C21",
+  "input_sha256": {
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/data/uniform_phase_layers_check.json": "b20f8017dc15961073195d9ef9a3b34cb5e930cd4a790699b0e6ef980b75f110",
+    "research/models/residual_predictors_v1.json": "b91c51a8c180b053f7c5e6f60217f6b9884718a040e360aef9618c09fd5c7ec3",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006",
+    "tools/check_residual_predictors.py": "6a255af2163b97da9f211bbb1d50dc78ef5c8951617aa25b1800e98aa4314df2",
+    "tools/bitcoin_oracle.py": "23fc132483bbee26271c5bfdfe745e590ddf431ca92fb3897b696e46c198f5ec"
+  },
+  "frames": {
+    "absolute": {
+      "primary_hex": "9f471963c5fffefef76dd5a443ad8c6463dcc29879cd433922412af1f4f035b0",
+      "residual_hex": "3221c2782080402406127552",
+      "states_roundtrip_checked": 256,
+      "memoryless_conflicting_primary_values": 10,
+      "memoryless_conflicts": {
+        "9": [
+          {
+            "cell": 0,
+            "residual": 3
+          },
+          {
+            "cell": 5,
+            "residual": 2
+          },
+          {
+            "cell": 38,
+            "residual": 0
+          },
+          {
+            "cell": 41,
+            "residual": 0
+          },
+          {
+            "cell": 47,
+            "residual": 0
+          }
+        ],
+        "15": [
+          {
+            "cell": 1,
+            "residual": 2
+          },
+          {
+            "cell": 10,
+            "residual": 8
+          },
+          {
+            "cell": 11,
+            "residual": 0
+          },
+          {
+            "cell": 12,
+            "residual": 4
+          },
+          {
+            "cell": 14,
+            "residual": 2
+          },
+          {
+            "cell": 16,
+            "residual": 0
+          },
+          {
+            "cell": 54,
+            "residual": 0
+          },
+          {
+            "cell": 56,
+            "residual": 0
+          },
+          {
+            "cell": 58,
+            "residual": 1
+          }
+        ],
+        "4": [
+          {
+            "cell": 2,
+            "residual": 2
+          },
+          {
+            "cell": 23,
+            "residual": 0
+          },
+          {
+            "cell": 24,
+            "residual": 0
+          },
+          {
+            "cell": 31,
+            "residual": 0
+          },
+          {
+            "cell": 44,
+            "residual": 0
+          },
+          {
+            "cell": 50,
+            "residual": 0
+          },
+          {
+            "cell": 57,
+            "residual": 6
+          }
+        ],
+        "7": [
+          {
+            "cell": 3,
+            "residual": 1
+          },
+          {
+            "cell": 17,
+            "residual": 0
+          },
+          {
+            "cell": 40,
+            "residual": 0
+          }
+        ],
+        "1": [
+          {
+            "cell": 4,
+            "residual": 12
+          },
+          {
+            "cell": 51,
+            "residual": 0
+          },
+          {
+            "cell": 55,
+            "residual": 0
+          }
+        ],
+        "6": [
+          {
+            "cell": 6,
+            "residual": 7
+          },
+          {
+            "cell": 18,
+            "residual": 0
+          },
+          {
+            "cell": 30,
+            "residual": 0
+          },
+          {
+            "cell": 32,
+            "residual": 0
+          }
+        ],
+        "3": [
+          {
+            "cell": 7,
+            "residual": 8
+          },
+          {
+            "cell": 25,
+            "residual": 0
+          },
+          {
+            "cell": 33,
+            "residual": 0
+          },
+          {
+            "cell": 45,
+            "residual": 0
+          },
+          {
+            "cell": 46,
+            "residual": 0
+          },
+          {
+            "cell": 60,
+            "residual": 7
+          }
+        ],
+        "12": [
+          {
+            "cell": 8,
+            "residual": 2
+          },
+          {
+            "cell": 29,
+            "residual": 0
+          },
+          {
+            "cell": 35,
+            "residual": 0
+          },
+          {
+            "cell": 36,
+            "residual": 0
+          },
+          {
+            "cell": 42,
+            "residual": 0
+          }
+        ],
+        "5": [
+          {
+            "cell": 9,
+            "residual": 0
+          },
+          {
+            "cell": 21,
+            "residual": 0
+          },
+          {
+            "cell": 61,
+            "residual": 5
+          }
+        ],
+        "14": [
+          {
+            "cell": 13,
+            "residual": 0
+          },
+          {
+            "cell": 15,
+            "residual": 4
+          }
+        ]
+      },
+      "affine_current_nibble_feasibility": {
+        "design_rank": 5,
+        "output_relation_consistent": false,
+        "contradictory_reduced_rows": 52
+      },
+      "parity_candidates_per_output_bit": 1976,
+      "full_data_minimum_bit_errors": [
+        3,
+        8,
+        11,
+        7
+      ],
+      "folds": [
+        {
+          "heldout_block_1based": 1,
+          "training_cells": 56,
+          "selected_parity_rules": [
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 1,
+              "heldout_errors": 2
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 6,
+              "heldout_errors": 2
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 6,
+              "heldout_errors": 5
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 4,
+              "heldout_errors": 3
+            }
+          ],
+          "lookup": {
+            "12": 0,
+            "5": 0,
+            "15": 0,
+            "14": 0,
+            "7": 0,
+            "6": 0,
+            "13": 0,
+            "10": 0,
+            "4": 0,
+            "3": 0,
+            "8": 0,
+            "2": 0,
+            "9": 0,
+            "1": 0,
+            "0": 2,
+            "11": 5
+          },
+          "lookup_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 0,
+            "tested_residual_bits": 32,
+            "correct_bits": 20,
+            "true_one_bits": 12,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 3,
+            "nonzero_zero_phase_values": 5,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          },
+          "parity_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 0,
+            "tested_residual_bits": 32,
+            "correct_bits": 20,
+            "true_one_bits": 12,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 3,
+            "nonzero_zero_phase_values": 5,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          }
+        },
+        {
+          "heldout_block_1based": 2,
+          "training_cells": 56,
+          "selected_parity_rules": [
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 2,
+              "heldout_errors": 1
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 6,
+              "heldout_errors": 2
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 9,
+              "heldout_errors": 2
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 7,
+              "heldout_errors": 0
+            }
+          ],
+          "lookup": {
+            "9": 0,
+            "15": 0,
+            "4": 0,
+            "7": 0,
+            "1": 0,
+            "6": 0,
+            "3": 0,
+            "13": 0,
+            "5": 0,
+            "10": 0,
+            "8": 0,
+            "12": 0,
+            "2": 0,
+            "0": 2,
+            "11": 5
+          },
+          "lookup_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 3,
+            "tested_residual_bits": 32,
+            "correct_bits": 27,
+            "true_one_bits": 5,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 5,
+            "nonzero_zero_phase_values": 3,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          },
+          "parity_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 3,
+            "tested_residual_bits": 32,
+            "correct_bits": 27,
+            "true_one_bits": 5,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 5,
+            "nonzero_zero_phase_values": 3,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          }
+        },
+        {
+          "heldout_block_1based": 8,
+          "training_cells": 56,
+          "selected_parity_rules": [
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 3,
+              "heldout_errors": 0
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 4,
+              "heldout_errors": 4
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 7,
+              "heldout_errors": 4
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 3,
+              "heldout_errors": 4
+            }
+          ],
+          "lookup": {
+            "9": 0,
+            "15": 0,
+            "4": 0,
+            "7": 0,
+            "1": 0,
+            "6": 0,
+            "3": 0,
+            "12": 0,
+            "5": 0,
+            "14": 0,
+            "13": 0,
+            "10": 0,
+            "8": 0,
+            "2": 0
+          },
+          "lookup_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 1,
+            "tested_residual_bits": 32,
+            "correct_bits": 20,
+            "true_one_bits": 12,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 4,
+            "nonzero_zero_phase_values": 4,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          },
+          "parity_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 1,
+            "tested_residual_bits": 32,
+            "correct_bits": 20,
+            "true_one_bits": 12,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 4,
+            "nonzero_zero_phase_values": 4,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          }
+        }
+      ],
+      "heldout_zero_baseline": {
+        "tested_cells": 24,
+        "exact_cells": 4,
+        "tested_residual_bits": 96,
+        "correct_bits": 67,
+        "true_one_bits": 29,
+        "true_one_bits_recovered": 0,
+        "false_one_bits": 0,
+        "zero_phase_values_exact": 12,
+        "nonzero_zero_phase_values": 12,
+        "nonzero_zero_phase_values_exact": 0,
+        "false_nonzero_zero_phase_values": 0
+      },
+      "heldout_lookup": {
+        "tested_cells": 24,
+        "exact_cells": 4,
+        "tested_residual_bits": 96,
+        "correct_bits": 67,
+        "true_one_bits": 29,
+        "true_one_bits_recovered": 0,
+        "false_one_bits": 0,
+        "zero_phase_values_exact": 12,
+        "nonzero_zero_phase_values": 12,
+        "nonzero_zero_phase_values_exact": 0,
+        "false_nonzero_zero_phase_values": 0
+      },
+      "heldout_sparse_parity": {
+        "tested_cells": 24,
+        "exact_cells": 4,
+        "tested_residual_bits": 96,
+        "correct_bits": 67,
+        "true_one_bits": 29,
+        "true_one_bits_recovered": 0,
+        "false_one_bits": 0,
+        "zero_phase_values_exact": 12,
+        "nonzero_zero_phase_values": 12,
+        "nonzero_zero_phase_values_exact": 0,
+        "false_nonzero_zero_phase_values": 0
+      },
+      "oof_predictions": {
+        "cell_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "lookup_residual_nibbles": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "parity_residual_nibbles": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "phase_relative": {
+      "primary_hex": "5f2b15a9a9fffefef76dd5a429c746a2a9766854d3ab855322412af1f2f093d0",
+      "residual_hex": "5114a1784080104106127552",
+      "states_roundtrip_checked": 256,
+      "memoryless_conflicting_primary_values": 10,
+      "memoryless_conflicts": {
+        "5": [
+          {
+            "cell": 0,
+            "residual": 5
+          },
+          {
+            "cell": 5,
+            "residual": 1
+          },
+          {
+            "cell": 21,
+            "residual": 0
+          },
+          {
+            "cell": 38,
+            "residual": 0
+          },
+          {
+            "cell": 45,
+            "residual": 0
+          },
+          {
+            "cell": 46,
+            "residual": 0
+          }
+        ],
+        "15": [
+          {
+            "cell": 1,
+            "residual": 1
+          },
+          {
+            "cell": 10,
+            "residual": 8
+          },
+          {
+            "cell": 11,
+            "residual": 0
+          },
+          {
+            "cell": 12,
+            "residual": 1
+          },
+          {
+            "cell": 14,
+            "residual": 4
+          },
+          {
+            "cell": 16,
+            "residual": 0
+          },
+          {
+            "cell": 54,
+            "residual": 0
+          },
+          {
+            "cell": 56,
+            "residual": 0
+          },
+          {
+            "cell": 58,
+            "residual": 1
+          }
+        ],
+        "2": [
+          {
+            "cell": 2,
+            "residual": 1
+          },
+          {
+            "cell": 24,
+            "residual": 0
+          },
+          {
+            "cell": 31,
+            "residual": 0
+          },
+          {
+            "cell": 48,
+            "residual": 0
+          },
+          {
+            "cell": 49,
+            "residual": 0
+          },
+          {
+            "cell": 52,
+            "residual": 0
+          },
+          {
+            "cell": 57,
+            "residual": 6
+          }
+        ],
+        "11": [
+          {
+            "cell": 3,
+            "residual": 4
+          },
+          {
+            "cell": 43,
+            "residual": 0
+          }
+        ],
+        "1": [
+          {
+            "cell": 4,
+            "residual": 10
+          },
+          {
+            "cell": 51,
+            "residual": 0
+          },
+          {
+            "cell": 55,
+            "residual": 0
+          }
+        ],
+        "10": [
+          {
+            "cell": 6,
+            "residual": 7
+          },
+          {
+            "cell": 8,
+            "residual": 4
+          },
+          {
+            "cell": 22,
+            "residual": 0
+          },
+          {
+            "cell": 30,
+            "residual": 0
+          },
+          {
+            "cell": 32,
+            "residual": 0
+          },
+          {
+            "cell": 42,
+            "residual": 0
+          },
+          {
+            "cell": 53,
+            "residual": 0
+          }
+        ],
+        "9": [
+          {
+            "cell": 7,
+            "residual": 8
+          },
+          {
+            "cell": 9,
+            "residual": 0
+          },
+          {
+            "cell": 25,
+            "residual": 0
+          },
+          {
+            "cell": 33,
+            "residual": 0
+          },
+          {
+            "cell": 60,
+            "residual": 7
+          }
+        ],
+        "14": [
+          {
+            "cell": 13,
+            "residual": 0
+          },
+          {
+            "cell": 15,
+            "residual": 1
+          }
+        ],
+        "13": [
+          {
+            "cell": 19,
+            "residual": 0
+          },
+          {
+            "cell": 20,
+            "residual": 0
+          },
+          {
+            "cell": 40,
+            "residual": 0
+          },
+          {
+            "cell": 62,
+            "residual": 5
+          }
+        ],
+        "3": [
+          {
+            "cell": 41,
+            "residual": 0
+          },
+          {
+            "cell": 47,
+            "residual": 0
+          },
+          {
+            "cell": 61,
+            "residual": 5
+          }
+        ]
+      },
+      "affine_current_nibble_feasibility": {
+        "design_rank": 5,
+        "output_relation_consistent": false,
+        "contradictory_reduced_rows": 54
+      },
+      "parity_candidates_per_output_bit": 1976,
+      "full_data_minimum_bit_errors": [
+        3,
+        9,
+        6,
+        11
+      ],
+      "folds": [
+        {
+          "heldout_block_1based": 1,
+          "training_cells": 56,
+          "selected_parity_rules": [
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 1,
+              "heldout_errors": 2
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 6,
+              "heldout_errors": 3
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 4,
+              "heldout_errors": 2
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 6,
+              "heldout_errors": 5
+            }
+          ],
+          "lookup": {
+            "10": 0,
+            "9": 0,
+            "15": 0,
+            "14": 0,
+            "7": 0,
+            "6": 0,
+            "13": 0,
+            "5": 0,
+            "4": 0,
+            "2": 0,
+            "12": 0,
+            "8": 0,
+            "3": 0,
+            "11": 0,
+            "1": 0,
+            "0": 2
+          },
+          "lookup_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 0,
+            "tested_residual_bits": 32,
+            "correct_bits": 20,
+            "true_one_bits": 12,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 3,
+            "nonzero_zero_phase_values": 5,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          },
+          "parity_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 0,
+            "tested_residual_bits": 32,
+            "correct_bits": 20,
+            "true_one_bits": 12,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 3,
+            "nonzero_zero_phase_values": 5,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          }
+        },
+        {
+          "heldout_block_1based": 2,
+          "training_cells": 56,
+          "selected_parity_rules": [
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 2,
+              "heldout_errors": 1
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 7,
+              "heldout_errors": 2
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 6,
+              "heldout_errors": 0
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 9,
+              "heldout_errors": 2
+            }
+          ],
+          "lookup": {
+            "5": 0,
+            "15": 0,
+            "2": 0,
+            "11": 0,
+            "1": 0,
+            "10": 0,
+            "9": 0,
+            "7": 0,
+            "6": 0,
+            "13": 0,
+            "4": 0,
+            "12": 0,
+            "8": 0,
+            "3": 0,
+            "0": 2
+          },
+          "lookup_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 3,
+            "tested_residual_bits": 32,
+            "correct_bits": 27,
+            "true_one_bits": 5,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 5,
+            "nonzero_zero_phase_values": 3,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          },
+          "parity_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 3,
+            "tested_residual_bits": 32,
+            "correct_bits": 27,
+            "true_one_bits": 5,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 5,
+            "nonzero_zero_phase_values": 3,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          }
+        },
+        {
+          "heldout_block_1based": 8,
+          "training_cells": 56,
+          "selected_parity_rules": [
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 3,
+              "heldout_errors": 0
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 5,
+              "heldout_errors": 4
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 2,
+              "heldout_errors": 4
+            },
+            {
+              "input_mask": 0,
+              "indices": [],
+              "complement": 0,
+              "training_errors": 7,
+              "heldout_errors": 4
+            }
+          ],
+          "lookup": {
+            "5": 0,
+            "15": 0,
+            "2": 0,
+            "11": 0,
+            "1": 0,
+            "10": 0,
+            "9": 0,
+            "14": 0,
+            "7": 0,
+            "6": 0,
+            "13": 0,
+            "4": 0,
+            "12": 0,
+            "8": 0,
+            "3": 0
+          },
+          "lookup_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 1,
+            "tested_residual_bits": 32,
+            "correct_bits": 20,
+            "true_one_bits": 12,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 4,
+            "nonzero_zero_phase_values": 4,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          },
+          "parity_metrics": {
+            "tested_cells": 8,
+            "exact_cells": 1,
+            "tested_residual_bits": 32,
+            "correct_bits": 20,
+            "true_one_bits": 12,
+            "true_one_bits_recovered": 0,
+            "false_one_bits": 0,
+            "zero_phase_values_exact": 4,
+            "nonzero_zero_phase_values": 4,
+            "nonzero_zero_phase_values_exact": 0,
+            "false_nonzero_zero_phase_values": 0
+          }
+        }
+      ],
+      "heldout_zero_baseline": {
+        "tested_cells": 24,
+        "exact_cells": 4,
+        "tested_residual_bits": 96,
+        "correct_bits": 67,
+        "true_one_bits": 29,
+        "true_one_bits_recovered": 0,
+        "false_one_bits": 0,
+        "zero_phase_values_exact": 12,
+        "nonzero_zero_phase_values": 12,
+        "nonzero_zero_phase_values_exact": 0,
+        "false_nonzero_zero_phase_values": 0
+      },
+      "heldout_lookup": {
+        "tested_cells": 24,
+        "exact_cells": 4,
+        "tested_residual_bits": 96,
+        "correct_bits": 67,
+        "true_one_bits": 29,
+        "true_one_bits_recovered": 0,
+        "false_one_bits": 0,
+        "zero_phase_values_exact": 12,
+        "nonzero_zero_phase_values": 12,
+        "nonzero_zero_phase_values_exact": 0,
+        "false_nonzero_zero_phase_values": 0
+      },
+      "heldout_sparse_parity": {
+        "tested_cells": 24,
+        "exact_cells": 4,
+        "tested_residual_bits": 96,
+        "correct_bits": 67,
+        "true_one_bits": 29,
+        "true_one_bits_recovered": 0,
+        "false_one_bits": 0,
+        "zero_phase_values_exact": 12,
+        "nonzero_zero_phase_values": 12,
+        "nonzero_zero_phase_values_exact": 0,
+        "false_nonzero_zero_phase_values": 0
+      },
+      "oof_predictions": {
+        "cell_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "lookup_residual_nibbles": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "parity_residual_nibbles": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "unique_valid_scalars": 192,
+  "unique_scalars_per_frame": {
+    "absolute": 96,
+    "phase_relative": 96
+  },
+  "absolute_frame_reproduces_c20_candidate_set": true,
+  "candidate_set_sha256": "5a2f988c1e7b3919aa028342da0096c6c9d262ed651484854a0cde8f1c1060be",
+  "public_key_formats": 2,
+  "hash_finalization_used": false,
+  "oracle_selftest": {
+    "scalar_1_both_formats": "passed",
+    "target_base58check": "passed",
+    "invalid_scalars": "passed",
+    "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+  },
+  "matches": [],
+  "limitations": [
+    "Model family choices are exploratory; crossvalidation is within the same image",
+    "A successful lookup interpolation would not by itself identify author intent",
+    "No unrestricted learned function or per-block lookup",
+    "Both frames retain all data and exact roundtrip"
+  ]
+}
