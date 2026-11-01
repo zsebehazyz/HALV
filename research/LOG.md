@@ -1928,3 +1928,29 @@ Jelentés: `REPORT_20261101_STATEFUL_BRIDGE.md`. Reprodukció:
 Eredmények: `data/stateful_bridge_*`, `data/nonlinear_context_*`,
 `data/stateful_area_cancellations.png`; a pontos hash-ek a RUN_INDEX-ben.
 **Nincs megjósolt teljes javítás, közös generátor vagy HALV-kulcs.**
+
+## 2026-11-01 – tizennyolcadik kör: folytatási terv és előzményellenőrzés
+
+A felhasználó kérdése: „folytassuk, hogyan haladjunk tovább”. A repó naplóját,
+eredményjegyzékét és a C12/C15/C16, illetve C25/C31–C34 kapcsolódó forrásait
+áttekintettük. Új generátorfutás, kulcskeresés vagy hangdekódolás nem történt.
+
+A lag2 modell hét középső H-eltérése nem bizonyított javítókód-feladat;
+a közös10-es eltolás teljes kiterjesztése a szélső párokon nem működik.
+Az R lehet a közös előállító eljárás következménye. Skálázás/kvantálás,
+közös adatfolyam/fázis és geometriai kódolás versengő családjai kerültek
+a tervbe, még nem lezárt C35-ként.
+
+Elvárás a jövőbeli tesztekhez: rögzített egyenlet és paramétertartomány,
+külső minták kihagyása az illesztésből, minden q és R-bit számonkérése,
+majd közös vonalmodellel történő PNG-visszarajzolás. A visszatartott ismert
+kép nem új független mérés; a q visszarajzolása nem kulcsból dolgozó generátor.
+A kulcsellenőrzés a szerkezeti siker után jön.
+
+A33pontos határértelmezés korábbi C12/C15 vizsgálatát azonosítottuk;
+nem jelentjük új ötletként vagy eredményként. Az összetett képi szerepek,
+geometriai és Fibonacci–hang–Morse ágak megmaradnak. Új próbához konkrét
+megkülönböztető következmény szükséges. Nincs megfejtés.
+
+Mentett terv: `REPORT_20261101_GENERATOR_PLAN.md`; README és hipotézistérkép
+frissítve. A korábbi mérések és eredményfájlok változatlanok.

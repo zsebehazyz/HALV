@@ -520,3 +520,20 @@ nincs rá új támogató eredmény. Következő prioritás a hullámot és R-t e
 előállító szabály, a képi koordináták és felezés közös levezetésével.
 A geometriai és Fibonacci–hang–Morse ág megmarad. Nincs új kulcskeresés,
 teljes generátor vagy HALV-kulcs. Jelentés: `REPORT_20261101_STATEFUL_BRIDGE.md`.
+
+## Tervezett folytatás: közös generátor, nyitott R-szerep
+
+A lag2 modell teljes kiterjesztése7,17,26,24,25,8 egyezést ad32-ből;
+a hét középső hibát ezért nem kezeljük igazoltan javítandó kódhibának.
+Három versengő család: skálázás/kvantálás sorrendje; közös adatfolyam
+képből indokolt fázissal; geometriai kódolás levezetett normalizálással.
+Ezek tervek, nem végrehajtott C35-modellek.
+
+Sikerhez kihagyott külső minták, minden R-bit és végül a teljes hullám
+közös előállítása szükséges. A tárolt q visszarajzolása rajzolókontroll,
+nem kulcsból dolgozó generátor. A BD, lépcső és dátum szerepe konkrét
+új jóslattal igazolandó; nem kötelező mindegyiknek külön kulcsadatnak lennie.
+
+A33pontos határértelmezés már C12/C15 tárgya volt; új bizonyíték nélkül
+nem ismételjük. A geometriai és Fibonacci–hang–Morse ág megmarad.
+Ebben a tervezési körben új futás nincs. Sorrend: `REPORT_20261101_GENERATOR_PLAN.md`.

@@ -65,6 +65,12 @@ mintaszintű eltérésekből eredő pontos területi kioltást: a geometria
 [Állapotos vizsgálat, korlátok és területi ábra](research/REPORT_20261101_STATEFUL_BRIDGE.md).
 Új kulcskeresés ebben a körben nem futott; a közös generáló szabály nyitott.
 
+A következő lépések [kutatási terve](research/REPORT_20261101_GENERATOR_PLAN.md)
+a közös előállítási egyenletet helyezi előre: skálázás/kvantálás, közös
+adatfolyam/fázis és geometriai kódolás versengő modelljei. A külső minták
+előrejelzése és a teljes R magyarázata szükséges a kulcsolvasás előtt.
+Ez terv; új generátorfutás eredményét nem tartalmazza.
+
 ## Reprodukálás
 
 Python 3, külső csomag nélkül:
