@@ -5549,3 +5549,153 @@ Forrás: [cell_moment_identifiability_v1.json](models/cell_moment_identifiabilit
 | [tools/check_marker_raster.py](../tools/check_marker_raster.py) | 10036 | `9dc67e46961a4a9ae41a929726203a5d0990da7b4a38f56aa17e2d78b7021054` |
 | [tools/plot_cell_moments.py](../tools/plot_cell_moments.py) | 1388 | `692d02637b8d3e4b5ce0bef793530eace8c50e37d750efc3ac7421af1070ce6b` |
 | [tools/plot_marker_raster.py](../tools/plot_marker_raster.py) | 2129 | `80981e4ab5be47dced0b1ad7f4e509454013eb740e6dcbf2bc8b5c36f0eda067` |
+
+
+---
+
+<a id="round-24"></a>
+
+## 2026-11-01 – huszonnegyedik kör: változó hosszúságú Fibonacci-egészkód, C44
+
+### 1. Kiindulás a 23. fejezet után
+
+A felhasználó a változó hosszúságú Fibonacci-kód vizsgálatát kérte.
+A C40 rögzített 4 bites 8SVX-deltaindexet és PCM-kimenetet vizsgált;
+ez a mostani önhatároló egészkód külön hipotézis, nem a C40 megismétlése.
+A C43 teljes q/R-információt őrző geometriai eredménye megmarad.
+A Fibonacci-említés és az eljárás neve nem bizonyítja, hogy a kép ezt használja.
+
+Modell: C44, recept: `models/fibonacci_vlc_v1.json`. A recept a futás előtt
+rögzített véges családot írja le; a forrásválasztás a már ismert képen alapul,
+tehát nem prospektív felfedezés. Új külső állítást vagy hangforrást nem vettünk át.
+
+### 2. Pontos kód és keretezés
+
+Súlyok: 1,2,3,5,8,…; a pozitív n Zeckendorf-együtthatói növekvő súlysorrendben,
+majd egy további 1 lezáróbit. Például 1→11, 2→011, 3→0011, 4→1011,
+5→00011. Az első 11 mindkét bitje elfogy; 1111 két darab 1, nem három.
+A dekóder minden szónál pontos visszakódolást ellenőriz.
+A szóvégi lezárás nélküli maradék hibás keretezés akkor is, ha csupa nulla.
+Nincs levágott prefix, utólag választott eltolás, paddingtörlés vagy javítóbit.
+
+Bemenet: mind a 24 q→bitpár bijekció (512 bit), H és L (256–256 bit),
+valamint az abszolút és fázisrelatív A256, teljes R256 és külső R96.
+Utóbbi csak az öt pontosan nulla középső blokkot hagyja ki a már definiált
+veszteségmentes felbontásból; a teljes R-t külön is vizsgáljuk.
+32 forrás × 2 teljes bitsorirány × 2 polaritás × 2 keretezés = 256 recept.
+A keretezés folyamatos, vagy nyolc egyenlő rész határán újraindított.
+Az R96 nyolcadolása 12 bites szeleteket jelent, nem a három eredeti
+szélső hullámblokkot; ez deklarált technikai kontroll, nem képi blokkazonosítás.
+A receptek részben azonos bitsort adnak; a számuk nem független próbák száma.
+
+### 3. Lefuttatott eredmény
+
+| Ellenőrzés | Eredmény |
+| --- | ---: |
+| Vizsgált recept | 256 |
+| Hiánytalan folyamatos keretezés | 22 |
+| Hiánytalan, nyolc részben újraindított keretezés | 0 |
+| Teljes bájtsor n vagy n−1 megfeleltetéssel | 0 |
+| Hiánytalan 32 egészből álló sor | 0 |
+| Kulcsformátum-ellenőrzésig jutó jelölt | 0 |
+
+Mind a 22 teljes olvasat tartalmaz legalább 257-nél nagyobb egészet;
+az n−1 megfeleltetés is kívül esik a bájttartományon. A legközelebbi
+szélső maradékpélda az abszolút R96 fordított és komplementált olvasata:
+29 egész, maximum 287. Nem módosítjuk modulo256-tal, nem hagyjuk el
+a kiugró értéket, és nem egészítjük ki 32 bájtra. Ez nem kulcsjelölt.
+A teljes R256 ugyanebben az orientációban 109 egész, maximum 287.
+Az abszolút A256 teljes olvasata 40, a fázisrelatívé 34 egészet ad,
+igen nagy maximumokkal. A teljes q-olvasatok sem közvetlen bájtkódok.
+Minden bitsor, kódszóhatár, dekódolt egész és befejezetlen utótag a
+`data/fibonacci_vlc_check.json` fájlban szerepel.
+
+A kapu kizárólag teljes 32 nyers bájtot, teljes 64 ASCII hexkaraktert vagy
+ellenőrzőösszeges 51/52 ASCII WIF-et engedne címellenőrzésre, n vagy n−1
+leképezéssel. Egyik sem keletkezett. A nulla címegyezéshez ebben a körben
+**nulla jelölt** tartozik; nem új privátkulcs-keresési volumen.
+
+### 4. Miért nem bizonyíték a 22 teljes felbontás?
+
+A szabványos Fibonacci-egészkód tetszőleges bitsor lezárt prefixét fel tudja
+bontani; a teljes felbontás önmagában gyenge szűrő. 128 determinisztikus
+kontrollban minden 32 mintás blokkon belül megkevertük a q-kat, a blokk
+hisztogramját megőrizve, és ugyanazt a teljes receptcsaládot futtattuk.
+Seed: 441101. A kontrollok teljes felbontásainak száma 17…28;
+47/128 kontroll legalább a megfigyelt 22-t adja. Ez feltáró referenciaarány,
+nem a szerző szándékára vonatkozó p-érték. A kontrollcsalád minden receptjét
+újrafuttattuk; nem egy kiválasztott olvasatot hasonlítottunk véletlenhez.
+A kontrollok teljes bájtleképezéseinek száma 0…12, az eredetiben nulla.
+Ezek alapján a puszta szintaktikai Fibonacci-kompatibilitás nem támogatja
+az eredeti sor kiváltságosságát ebben a családban.
+
+### 5. Pozitív kontroll és független audit
+
+A főprogram az 1…10 ismert kódszót, az 1…4096 egész pontos oda-vissza
+kódolását, a lezárók elfogyasztását és két befejezetlen utótagot ellenőriz.
+A meglévő Bitcoin-orákulum ismertválaszos önellenőrzése is sikeres.
+A külön audit más keretezést használ: `(?:0|10)*11` reguláris kifejezéssel
+választja ki a szavakat, majd saját Fibonacci-súlyokkal összegez.
+Az összes 0…12 bit hosszú 8191 bináris soron a két parser azonos értéket,
+határt és maradékot ad. Mind a 256 mentett receptet függetlenül újraolvassa,
+és a bemeneti hash-eket is ellenőrzi. Minden ellenőrzés sikeres.
+A kevert kontrollokat a főprogram futtatta; az audit az eredeti receptek
+szintaxisát és összesítéseit ellenőrzi, nem állítunk két független kontrollfutást.
+
+### 6. Hatókör és következő indokolt lépés
+
+Negatív eredmény: a deklarált közvetlen bitsorok szabványos Fibonacci-
+egészkódja nem ad hiánytalan közvetlen bájt-/WIF-/hex-kulcsot. Ez nem zár ki
+előjeles/deltaértékeket, egynél több összekapcsolt csatornát, más keretezést
+vagy valódi hangkodeket. Ezekhez új, konkrét műveleti indok kell.
+Nem vizsgáltunk tetszőleges XOR-maszkot, jelölőből választott prefixet,
+modulózást, számjegyszöveg-összefűzést vagy hash-véglegesítést.
+A teljes q/R és a geometriai 64→32 ág aktív marad. A következő érdemi
+Fibonacci-hipotézisnek a keretezést és az egészértékek szerepét is előre kell
+indokolnia, és a teljes bemenetet, a szélső maradékot is meg kell őriznie.
+Hang, Morse-üzenet, teljes generátor vagy HALV-megfejtés nem született.
+
+### 7. Reprodukció
+
+```sh
+cd /workspace/HALV
+OPENBLAS_NUM_THREADS=1 python3 tools/check_fibonacci_vlc.py
+python3 tools/audit_fibonacci_vlc.py
+```
+
+Az új fejezet a meglévő fő MD végéhez kerül. A korábbi 362930 bájt
+változatlan marad; ezt az append-nyilvántartás és az indexelő ellenőrzi.
+
+
+### A fejezethez rögzített pontos modellreceptek
+
+
+#### fibonacci_vlc_v1.json
+
+Forrás: [fibonacci_vlc_v1.json](models/fibonacci_vlc_v1.json), SHA-256: `81dd0ade4b69b07c8e2b1560deb84e50b413fe65fe5cbff84148fd731443372f`.
+
+```json
+{
+  "model": "C44",
+  "question": "Does a standard variable-length Fibonacci integer code explain a complete existing HALV bitstream?",
+  "definition": "Positive integer Zeckendorf coefficients for weights 1,2,3,5,..., least weight first, followed by one terminal 1. First 11 ends each word, both bits consumed. No shared terminator.",
+  "sources": "All 24 q-to-dibit bijections in sample order; H and L planes; A256, R256 and outer R96 in absolute and phase_relative frames. R96 omits only the five structurally zero middle blocks; full R256 also tested.",
+  "orientations": "Forward/reversed entire bitstream, original/complemented polarity. No rotation, skipped prefix, padding deletion or per-block polarity.",
+  "framing": "Continuous whole stream, or eight equal blocks with parser reset at each boundary; block framing only if length divisible by eight. Reject any unfinished suffix, including all-zero suffixes.",
+  "outputs": "Positive n and zero-based n-1 byte mappings only; require all integers in range, complete canonical re-encoding and no discarded bits. Exact32byte scalar; full51/52ASCII WIF with checksum; full64ASCII hex. Check exact target for valid keys, no hash-finalization.",
+  "controls": "128 deterministic within-block q permutations (seed441101), preserving each block histogram and rerunning the identical recipe family. Report whole-family counts and max-event reference rates, not author-intent p-values.",
+  "calibration": "Known codes1..10, concatenation including1111->1,1; roundtrip1..4096; incomplete suffix rejection; independent codebook decoder audit.",
+  "limitations": ["Posthoc finite family, not general Fibonacci exclusion", "Complete parsing is weak evidence because any terminated bitstream is parsable", "No audio sample rate, sign or renderer is established", "Fibonacci integer coding is distinct from 8SVX fixed-nibble delta coding", "Full q/R and geometric branches retained"]
+}
+```
+
+
+### A fejezet adatai és reprodukciós programjai
+
+
+| Fájl | Bájt | SHA-256 |
+| --- | ---: | --- |
+| [research/data/fibonacci_vlc_check.json](data/fibonacci_vlc_check.json) | 1507317 | `2576981800b83c8b111291585a0ef1b044d53b4bc9fa566cd76a3c48a29cfa96` |
+| [research/data/fibonacci_vlc_integrity.json](data/fibonacci_vlc_integrity.json) | 475 | `07f7228beb4c736d0d94a2862e1b639eb65d5fea96ec82b313bb677a8ba1b46b` |
+| [tools/check_fibonacci_vlc.py](../tools/check_fibonacci_vlc.py) | 6246 | `1a1c86e7d3d71ea4dce97bae7df189bcac0557f1e108506df4810d9ad7c065c0` |
+| [tools/audit_fibonacci_vlc.py](../tools/audit_fibonacci_vlc.py) | 2562 | `b6b55bbec4c924a9acb4fc4ebc192d7d0dfa707198bb0313053f66ffbe0bfe14` |

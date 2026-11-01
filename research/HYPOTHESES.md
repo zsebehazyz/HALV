@@ -680,3 +680,16 @@ Minden64 cella azonos szabály szerint ellenőrzött, de hárommomentumos
 ábrázolásból még nem következik64adat→32kulcsbájt művelet. Nincs privátkulcs-
 próba. A további generátornak a teljes q/R mellett a geometriai értékeket
 is elő kell állítania egy megindokolt kulcskódolásból. Részletek a fő MD23. körében.
+
+
+## C44: változó hosszúságú Fibonacci-egészkód
+
+A 23. fejezet utáni célzott folytatás a szabványos, 11 lezárású
+Zeckendorf-egészkódot tesztelte, a C40 fixnibble-deltakódjától külön.
+256 receptből 22 hiánytalan, mind folyamatos keretezésű; egyik sem teljes
+bájtsor n vagy n−1 olvasattal. A 128 blokkon belül kevert kontroll közül
+47 legalább ennyi teljes felbontást ad. Nincs új kulcsjelölt.
+8191 rövid bináris sor és mind a 256 recept külön parserauditja sikeres.
+Ez a közvetlen kódcsalád negatívuma; előjeles/delta-, csatornakapcsolt és
+hangértelmezéshez továbbra is külön indokolt műveleti szabály kell.
+A teljes q/R és geometriai ág megmarad. Részletek a fő MD 24. fejezetében.

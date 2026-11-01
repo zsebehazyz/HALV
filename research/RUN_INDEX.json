@@ -458,6 +458,18 @@
       "sha256": "5a5d170aaecd64ebe56b99a9c8cc981f1081104403004f17a00879b07230d4d2"
     },
     {
+      "path": "research/data/fibonacci_vlc_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1507317,
+      "sha256": "2576981800b83c8b111291585a0ef1b044d53b4bc9fa566cd76a3c48a29cfa96"
+    },
+    {
+      "path": "research/data/fibonacci_vlc_integrity.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 475,
+      "sha256": "07f7228beb4c736d0d94a2862e1b639eb65d5fea96ec82b313bb677a8ba1b46b"
+    },
+    {
       "path": "research/data/five_sample_wif_check.json",
       "role": "executed_result_or_artifact",
       "bytes": 1716,
@@ -664,14 +676,14 @@
     {
       "path": "research/data/master_append_state.json",
       "role": "executed_result_or_artifact",
-      "bytes": 72027,
-      "sha256": "faaec0e0c0a0abebdda67fc1840aad301b665735b3d4b8256a51064623d229dd"
+      "bytes": 73312,
+      "sha256": "8d0e8990cb4a7c5e1e8162553cb2797291c397a8539a3c9c1e4e23a54682db3a"
     },
     {
       "path": "research/data/master_document_manifest.json",
       "role": "executed_result_or_artifact",
-      "bytes": 78800,
-      "sha256": "6db56ec87ab39c5bfb7f8da4deb9fa84603642b2ef31d9509e26b1a796454c71"
+      "bytes": 81130,
+      "sha256": "57b1f4594eb26c059dfddb87b04c17e5eb6cae4722875610c02418440cb7d677"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -1502,6 +1514,12 @@
       "sha256": "039514230c1374bef743f930df63cd821db3fddf77c10dcf340f68b0d3868203"
     },
     {
+      "path": "research/models/fibonacci_vlc_v1.json",
+      "role": "model_specification",
+      "bytes": 1931,
+      "sha256": "81dd0ade4b69b07c8e2b1560deb84e50b413fe65fe5cbff84148fd731443372f"
+    },
+    {
       "path": "research/models/fractional_area_v1.json",
       "role": "model_specification",
       "bytes": 1755,
@@ -1688,6 +1706,12 @@
       "sha256": "5da265f6d07c8c0edd4ca5b6006b6b70bd4c9c6b6044d2a185b45744f2cc6881"
     },
     {
+      "path": "tools/audit_fibonacci_vlc.py",
+      "role": "reproduction_tool",
+      "bytes": 2562,
+      "sha256": "b6b55bbec4c924a9acb4fc4ebc192d7d0dfa707198bb0313053f66ffbe0bfe14"
+    },
+    {
       "path": "tools/audit_halving_phase_ascii.py",
       "role": "reproduction_tool",
       "bytes": 2825,
@@ -1782,6 +1806,12 @@
       "role": "reproduction_tool",
       "bytes": 8771,
       "sha256": "f17963fd47ea8bb1b6e81b2cceaf70827f1a578e11669585fb938da98bef532c"
+    },
+    {
+      "path": "tools/check_fibonacci_vlc.py",
+      "role": "reproduction_tool",
+      "bytes": 6246,
+      "sha256": "1a1c86e7d3d71ea4dce97bae7df189bcac0557f1e108506df4810d9ad7c065c0"
     },
     {
       "path": "tools/check_five_sample_wif.py",
@@ -2152,26 +2182,26 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 43291,
-      "sha256": "8956b977c8aef52cc0d74c121661d99140ef132ed3c7e692c1864e8efe8a85eb"
+      "bytes": 44031,
+      "sha256": "3acbc326a487696cac141e5c2cef76f45d82f2105eb792da89e55758aae5ef55"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 159486,
-      "sha256": "43d9fa0893cbf75683a3f205da23c4ab01cc7da00e4d94573b90ff1e0ace2050"
+      "bytes": 165765,
+      "sha256": "2370b71c9747d0a46b25a247186480115baf80ab29d9b3dc935eb69c846405f9"
     },
     {
       "path": "research/MASTER_OVERVIEW.md",
       "role": "research_map_or_log",
-      "bytes": 4921,
-      "sha256": "735b3d02c8103f7c3cc9c2df323762cd29e1a4cff64d51a5c7f752b6eb697500"
+      "bytes": 5369,
+      "sha256": "166f15eb72f7efad69a8fd020c5f4b79079663463de76f98fce9345e98983387"
     },
     {
       "path": "research/HALV_TELJES_KUTATAS.md",
       "role": "research_map_or_log",
-      "bytes": 362930,
-      "sha256": "6cb960f96e2cbeb54efb00598666ba6a50ab04b26fb88cf87b3f0e7fca9aa39d"
+      "bytes": 372110,
+      "sha256": "8e0779e7d10b66f8afa1f52f272fedc827d44cd65b7c02e7ce32fd514b238058"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",

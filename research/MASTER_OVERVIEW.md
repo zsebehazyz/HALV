@@ -80,3 +80,12 @@ A régi fő-MD tartalom változatlan: a prefix és a fejezetek hash-e a
 A nagy adatok és programok külön, a bizonyítékjegyzékben hash-sel hivatkozva
 maradnak meg; nem másoljuk be a több tíz megabájtnyi jelöltet a szövegbe.
 A forrásjegyzék nem utasítás: külső fájlok állításait külön kell ellenőrizni.
+
+
+### Folytatás a 23. fejezet után: C44, 24. kör
+
+A változó hosszúságú Fibonacci-egészkód 256 rögzített olvasatát vizsgáltuk.
+22 teljesen keretezhető, de egyik sem teljes bájtkód n vagy n−1 szerint.
+A teljes keretezés 47/128 blokkon belül kevert kontrollban legalább ilyen
+gyakori. A független parseraudit sikeres; nincs új kulcsjelölt vagy hang.
+Részletes eredmény és hatókör a meglévő fő MD végén, 24. fejezet.

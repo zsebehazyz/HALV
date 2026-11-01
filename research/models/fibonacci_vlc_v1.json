@@ -1,0 +1,12 @@
+{
+  "model": "C44",
+  "question": "Does a standard variable-length Fibonacci integer code explain a complete existing HALV bitstream?",
+  "definition": "Positive integer Zeckendorf coefficients for weights 1,2,3,5,..., least weight first, followed by one terminal 1. First 11 ends each word, both bits consumed. No shared terminator.",
+  "sources": "All 24 q-to-dibit bijections in sample order; H and L planes; A256, R256 and outer R96 in absolute and phase_relative frames. R96 omits only the five structurally zero middle blocks; full R256 also tested.",
+  "orientations": "Forward/reversed entire bitstream, original/complemented polarity. No rotation, skipped prefix, padding deletion or per-block polarity.",
+  "framing": "Continuous whole stream, or eight equal blocks with parser reset at each boundary; block framing only if length divisible by eight. Reject any unfinished suffix, including all-zero suffixes.",
+  "outputs": "Positive n and zero-based n-1 byte mappings only; require all integers in range, complete canonical re-encoding and no discarded bits. Exact32byte scalar; full51/52ASCII WIF with checksum; full64ASCII hex. Check exact target for valid keys, no hash-finalization.",
+  "controls": "128 deterministic within-block q permutations (seed441101), preserving each block histogram and rerunning the identical recipe family. Report whole-family counts and max-event reference rates, not author-intent p-values.",
+  "calibration": "Known codes1..10, concatenation including1111->1,1; roundtrip1..4096; incomplete suffix rejection; independent codebook decoder audit.",
+  "limitations": ["Posthoc finite family, not general Fibonacci exclusion", "Complete parsing is weak evidence because any terminated bitstream is parsable", "No audio sample rate, sign or renderer is established", "Fibonacci integer coding is distinct from 8SVX fixed-nibble delta coding", "Full q/R and geometric branches retained"]
+}

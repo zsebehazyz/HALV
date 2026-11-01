@@ -1971,6 +1971,42 @@
           "sha256": "80981e4ab5be47dced0b1ad7f4e509454013eb740e6dcbf2bc8b5c36f0eda067"
         }
       ]
+    },
+    {
+      "journal_round": 24,
+      "offset": 362930,
+      "bytes": 9180,
+      "sha256": "5fee39dae57dfe88b47e841b289bd0559308118cf86e35ebb86a2ccaf72339db",
+      "journal_section_sha256": "7ea7008b1500d36888a0a6222963ac81991adb251f663f84d41ece95db30a01e",
+      "model_inputs": [
+        {
+          "path": "research/models/fibonacci_vlc_v1.json",
+          "bytes": 1931,
+          "sha256": "81dd0ade4b69b07c8e2b1560deb84e50b413fe65fe5cbff84148fd731443372f"
+        }
+      ],
+      "artifact_inputs": [
+        {
+          "path": "research/data/fibonacci_vlc_check.json",
+          "bytes": 1507317,
+          "sha256": "2576981800b83c8b111291585a0ef1b044d53b4bc9fa566cd76a3c48a29cfa96"
+        },
+        {
+          "path": "research/data/fibonacci_vlc_integrity.json",
+          "bytes": 475,
+          "sha256": "07f7228beb4c736d0d94a2862e1b639eb65d5fea96ec82b313bb677a8ba1b46b"
+        },
+        {
+          "path": "tools/check_fibonacci_vlc.py",
+          "bytes": 6246,
+          "sha256": "1a1c86e7d3d71ea4dce97bae7df189bcac0557f1e108506df4810d9ad7c065c0"
+        },
+        {
+          "path": "tools/audit_fibonacci_vlc.py",
+          "bytes": 2562,
+          "sha256": "b6b55bbec4c924a9acb4fc4ebc192d7d0dfa707198bb0313053f66ffbe0bfe14"
+        }
+      ]
     }
   ]
 }

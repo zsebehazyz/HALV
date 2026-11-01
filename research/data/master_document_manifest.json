@@ -2,11 +2,11 @@
   "purpose": "Append-only full research MD; old snapshot plus new end chapters",
   "mode": "append_only",
   "master_path": "research/HALV_TELJES_KUTATAS.md",
-  "master_sha256": "6cb960f96e2cbeb54efb00598666ba6a50ab04b26fb88cf87b3f0e7fca9aa39d",
+  "master_sha256": "8e0779e7d10b66f8afa1f52f272fedc827d44cd65b7c02e7ce32fd514b238058",
   "frozen_prefix_bytes": 298373,
   "frozen_prefix_sha256": "c08809df3d1725dde612e150008d00ca8caf76fa89fcb9523a2650ff9d6fadb2",
   "base_snapshot_journal_rounds": 19,
-  "journal_round_headings": 23,
+  "journal_round_headings": 24,
   "all_journal_rounds_present": true,
   "full_journal_embedded_as_one_current_snapshot": false,
   "full_reports_embedded": [
@@ -50,7 +50,8 @@
     "research/models/fibonacci_audio_probe_v1.json",
     "research/models/price_shape_revisit_v1.json",
     "research/models/marker_raster_v1.json",
-    "research/models/cell_moment_identifiability_v1.json"
+    "research/models/cell_moment_identifiability_v1.json",
+    "research/models/fibonacci_vlc_v1.json"
   ],
   "appended_chapters": [
     {
@@ -370,6 +371,42 @@
           "sha256": "80981e4ab5be47dced0b1ad7f4e509454013eb740e6dcbf2bc8b5c36f0eda067"
         }
       ]
+    },
+    {
+      "journal_round": 24,
+      "offset": 362930,
+      "bytes": 9180,
+      "sha256": "5fee39dae57dfe88b47e841b289bd0559308118cf86e35ebb86a2ccaf72339db",
+      "journal_section_sha256": "7ea7008b1500d36888a0a6222963ac81991adb251f663f84d41ece95db30a01e",
+      "model_inputs": [
+        {
+          "path": "research/models/fibonacci_vlc_v1.json",
+          "bytes": 1931,
+          "sha256": "81dd0ade4b69b07c8e2b1560deb84e50b413fe65fe5cbff84148fd731443372f"
+        }
+      ],
+      "artifact_inputs": [
+        {
+          "path": "research/data/fibonacci_vlc_check.json",
+          "bytes": 1507317,
+          "sha256": "2576981800b83c8b111291585a0ef1b044d53b4bc9fa566cd76a3c48a29cfa96"
+        },
+        {
+          "path": "research/data/fibonacci_vlc_integrity.json",
+          "bytes": 475,
+          "sha256": "07f7228beb4c736d0d94a2862e1b639eb65d5fea96ec82b313bb677a8ba1b46b"
+        },
+        {
+          "path": "tools/check_fibonacci_vlc.py",
+          "bytes": 6246,
+          "sha256": "1a1c86e7d3d71ea4dce97bae7df189bcac0557f1e108506df4810d9ad7c065c0"
+        },
+        {
+          "path": "tools/audit_fibonacci_vlc.py",
+          "bytes": 2562,
+          "sha256": "b6b55bbec4c924a9acb4fc4ebc192d7d0dfa707198bb0313053f66ffbe0bfe14"
+        }
+      ]
     }
   ],
   "inputs": [
@@ -388,20 +425,20 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "dokumentum",
-      "bytes": 43291,
-      "sha256": "8956b977c8aef52cc0d74c121661d99140ef132ed3c7e692c1864e8efe8a85eb"
+      "bytes": 44031,
+      "sha256": "3acbc326a487696cac141e5c2cef76f45d82f2105eb792da89e55758aae5ef55"
     },
     {
       "path": "research/LOG.md",
       "role": "dokumentum",
-      "bytes": 159486,
-      "sha256": "43d9fa0893cbf75683a3f205da23c4ab01cc7da00e4d94573b90ff1e0ace2050"
+      "bytes": 165765,
+      "sha256": "2370b71c9747d0a46b25a247186480115baf80ab29d9b3dc935eb69c846405f9"
     },
     {
       "path": "research/MASTER_OVERVIEW.md",
       "role": "dokumentum",
-      "bytes": 4921,
-      "sha256": "735b3d02c8103f7c3cc9c2df323762cd29e1a4cff64d51a5c7f752b6eb697500"
+      "bytes": 5369,
+      "sha256": "166f15eb72f7efad69a8fd020c5f4b79079663463de76f98fce9345e98983387"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",
@@ -582,6 +619,18 @@
       "role": "eredmény/adat",
       "bytes": 885894,
       "sha256": "5a5d170aaecd64ebe56b99a9c8cc981f1081104403004f17a00879b07230d4d2"
+    },
+    {
+      "path": "research/data/fibonacci_vlc_check.json",
+      "role": "eredmény/adat",
+      "bytes": 1507317,
+      "sha256": "2576981800b83c8b111291585a0ef1b044d53b4bc9fa566cd76a3c48a29cfa96"
+    },
+    {
+      "path": "research/data/fibonacci_vlc_integrity.json",
+      "role": "eredmény/adat",
+      "bytes": 475,
+      "sha256": "07f7228beb4c736d0d94a2862e1b639eb65d5fea96ec82b313bb677a8ba1b46b"
     },
     {
       "path": "research/data/five_sample_wif_check.json",
@@ -790,8 +839,8 @@
     {
       "path": "research/data/master_append_state.json",
       "role": "eredmény/adat",
-      "bytes": 72027,
-      "sha256": "faaec0e0c0a0abebdda67fc1840aad301b665735b3d4b8256a51064623d229dd"
+      "bytes": 73312,
+      "sha256": "8d0e8990cb4a7c5e1e8162553cb2797291c397a8539a3c9c1e4e23a54682db3a"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -1254,6 +1303,12 @@
       "role": "rögzített modell",
       "bytes": 2149,
       "sha256": "039514230c1374bef743f930df63cd821db3fddf77c10dcf340f68b0d3868203"
+    },
+    {
+      "path": "research/models/fibonacci_vlc_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1931,
+      "sha256": "81dd0ade4b69b07c8e2b1560deb84e50b413fe65fe5cbff84148fd731443372f"
     },
     {
       "path": "research/models/fractional_area_v1.json",
@@ -1808,6 +1863,12 @@
       "sha256": "5da265f6d07c8c0edd4ca5b6006b6b70bd4c9c6b6044d2a185b45744f2cc6881"
     },
     {
+      "path": "tools/audit_fibonacci_vlc.py",
+      "role": "program",
+      "bytes": 2562,
+      "sha256": "b6b55bbec4c924a9acb4fc4ebc192d7d0dfa707198bb0313053f66ffbe0bfe14"
+    },
+    {
       "path": "tools/audit_halving_phase_ascii.py",
       "role": "program",
       "bytes": 2825,
@@ -1902,6 +1963,12 @@
       "role": "program",
       "bytes": 8771,
       "sha256": "f17963fd47ea8bb1b6e81b2cceaf70827f1a578e11669585fb938da98bef532c"
+    },
+    {
+      "path": "tools/check_fibonacci_vlc.py",
+      "role": "program",
+      "bytes": 6246,
+      "sha256": "1a1c86e7d3d71ea4dce97bae7df189bcac0557f1e108506df4810d9ad7c065c0"
     },
     {
       "path": "tools/check_five_sample_wif.py",

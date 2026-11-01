@@ -1,0 +1,14 @@
+{
+  "model": "C44",
+  "exhaustive_binary_strings_through12bits": 8191,
+  "independently_decoded_recipes": 256,
+  "complete_by_framing": {
+    "continuous": 22
+  },
+  "complete_byte_mappings": 0,
+  "all_input_hashes_verified": true,
+  "input_sha256": {
+    "research/data/fibonacci_vlc_check.json": "2576981800b83c8b111291585a0ef1b044d53b4bc9fa566cd76a3c48a29cfa96",
+    "tools/audit_fibonacci_vlc.py": "b6b55bbec4c924a9acb4fc4ebc192d7d0dfa707198bb0313053f66ffbe0bfe14"
+  }
+}
