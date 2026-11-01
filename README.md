@@ -55,6 +55,16 @@ A következő szerkezeti feladat a maradékból vezetett közös állapotszabál
 és a hét magasbit-eltérés előrejelzése, a geometriai ág megtartásával.
 [Teljes lánc, köztes eredmények és reprodukció](research/REPORT_20261101_ORDERED_SEQUENCE.md).
 
+A **C31–C34** az R-t rövid memóriájú visszacsatolás, továbbvitt aritmetikai
+állapot és nemlineáris előzménytábla bemeneteként tesztelte. Nem született
+a harmadik átmenet egészét megjósló szabály. A nemlineáris család sok
+tanítóillesztése legfeljebb 4/8 ellenőrző cellára ad jóslatot; tanítóadat
+megjegyzését nem tekintjük dekódolásnak. Mindhárom lag2 párban találtunk
+mintaszintű eltérésekből eredő pontos területi kioltást: a geometria
+összegzett azonossága önmagában nem hullámazonosság.
+[Állapotos vizsgálat, korlátok és területi ábra](research/REPORT_20261101_STATEFUL_BRIDGE.md).
+Új kulcskeresés ebben a körben nem futott; a közös generáló szabály nyitott.
+
 ## Reprodukálás
 
 Python 3, külső csomag nélkül:

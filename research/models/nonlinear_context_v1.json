@@ -1,0 +1,15 @@
+{
+  "model":"C34",
+  "question":"Does a common nonlinear nibble rule with explicitly observed previous state predict the third correction word?",
+  "coordinates":"The576 unchanged coordinate views fromC31; both xor and word-subtraction corrections",
+  "contexts":["Rcurrent","Rcurrent_Rprevious","Rcurrent_Yprevious","Rcurrent_Rprevious_Yprevious","Rcurrent_Yprevious2"],
+  "source_conditioning":[false,true],
+  "directions":["forward","reverse_each_word"],
+  "boundaries":["continuous24cells","reset_each8cells"],
+  "initial_history":"Known zero for missing input/output state, not a fitted seed",
+  "training":"Exact deterministic lookup consistency on first16 cells; reject conflicting contexts",
+  "forecast":"Last8 cells in causal order; lookup only contexts actually seen in training; previous predicted outputs must be used; an unseen state is unknown, with no zero/default fill",
+  "strong_success":"All8 outputs uniquely predicted and correct; training interpolation alone insufficient",
+  "selection":"First training-consistent configuration fixed by enumeration order is primary; all other successes exploratory",
+  "limitations":["Family chosen after negativeC31-C33; same image not new independent data","Previous output is the only output-state variable, no arbitrary hidden state","Unused residual nibble bits not discarded from original data","No new private-key search"]
+}

@@ -1,0 +1,41 @@
+{
+  "models": ["C31", "C32", "C33"],
+  "question": "Can one causal state rule map all outer residual bits to the three middle lag2 corrections, fitted only on first two transitions?",
+  "source": "Unchanged 256 nominal states, full residual; inherited C25 shifts26,18,14 and fitted offset10 remain posthoc",
+  "coordinates": {
+    "residual_frames": ["absolute", "phase_relative"],
+    "middle_frames": ["absolute", "phase_relative", "filled_zero_position"],
+    "residual_word_assignments": "All6 permutations of outer blocks1,2,8",
+    "residual_cell_order": "Forward/reversed and one common rotation0..7; no per-word tuning"
+  },
+  "C31": {
+    "targets": ["xor", "word_subtract_mod2pow32"],
+    "bit_orders": ["MSB", "LSB_within_nibble"],
+    "recurrence": "y[t]=bias XOR sum(a[i]*x[t-i],i0..input_memory) XOR sum(b[j]*y[t-j],j1..output_memory), overGF2",
+    "input_memory": [0,1,2,3,4],
+    "output_memory": [0,1,2,3,4],
+    "boundaries": ["continuous96bits", "reset_each32bits"],
+    "initial_history": "Zero, not fitted; both first two target words used for exact linear consistency",
+    "fit": "First64 output bits only; exact consistency required; all free coefficient solutions enumerated",
+    "forecast": "Last32 bits generated causally from own predictions; no teacher-forced heldout outputs",
+    "selection": "First exact training configuration in fixed enumeration is primary; all full heldout successes separately exploratory"
+  },
+  "C32": {
+    "target": "Actual target main nibbles; source nibbles from shifted-source comparison; same shared coordinate views asC31",
+    "modes": ["add_carry", "subtract_borrow", "prefix_xor_R", "prefix_sum_R", "prefix_subtract_R"],
+    "seed": "One common state0..15 fitted on first two words; no separately fitted word seed",
+    "boundaries": ["continuous24nibbles", "reset_each8nibbles"],
+    "directions": ["forward", "reverse"],
+    "fit": "Require all16 training nibbles exact before predicting final8; no target-specific repair",
+    "definitions": "add/sub output=(S+/-R+/-state)mod16, state=carry/borrow; prefix update state=(state XOR R) or(state+/-R)mod16, then output=S XOR state or(S+state)mod16"
+  },
+  "C33": {
+    "purpose": "Exact geometric consequence audit, not independent discovery",
+    "signal": "Three aligned middle target minus source signals; q/2,3px sampling; extend each32sample block with constant final node",
+    "cell_area": "8 cells per32sample transition,4 intervals each; exact numerator over4",
+    "comparison": "Compare8 signed radius-area corrections per transition with8 raw residual nibbles, exact affine real map per shared view fitted on first two transitions",
+    "scales": "Common normalized coordinates only; do not confuse aligned phase coordinates with original physical image area",
+    "forecast": "All8 heldout signed areas must match; exact rational arithmetic"
+  },
+  "limitations": ["All data already observed; heldout means withheld from parameter fitting, not prospective measurement", "Finite low-memory/low-state families only", "A negative result does not exclude nonlinear state machines or different clue-derived coordinates", "No new key search unless a full structural rule succeeds", "No independent derivation of10, no assumption that R is truly a correction channel"]
+}

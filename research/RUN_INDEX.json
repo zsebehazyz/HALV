@@ -186,6 +186,31 @@
         }
       },
       "payloads_are_not_independent_key_tests": true
+    },
+    {
+      "result": "research/data/stateful_bridge_check.json",
+      "kind": "causal_residual_transition_bridge",
+      "configuration_counts": {
+        "C31_configurations": 115200,
+        "C32_configurations": 184320,
+        "C33_configurations": 576
+      },
+      "C31_exact_training_fits": 0,
+      "C32_exact_training_fits": 0,
+      "C33_exact_training_fits": 0,
+      "not_private_key_search": true
+    },
+    {
+      "result": "research/data/nonlinear_context_check.json",
+      "kind": "nonlinear_causal_context_coverage",
+      "configuration_counts": {
+        "configurations": 46080,
+        "training_exact": 30388
+      },
+      "full_heldout_successes": 0,
+      "max_known_heldout_cells": 4,
+      "max_correct_heldout_cells": 2,
+      "not_private_key_search": true
     }
   ],
   "files": [
@@ -428,6 +453,18 @@
       "role": "executed_result_or_artifact",
       "bytes": 969,
       "sha256": "91434f6b3e0f2ce4bd85fc864a2cb18b40ecc63e55fcda85181db7bc15927d5e"
+    },
+    {
+      "path": "research/data/nonlinear_context_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 3094,
+      "sha256": "1ba3926721d15da497fd6f04a17874d1e9dedaa6ac065565b7fdc6301073e44a"
+    },
+    {
+      "path": "research/data/nonlinear_context_trials.jsonl.gz",
+      "role": "executed_result_or_artifact",
+      "bytes": 194970,
+      "sha256": "41674942a59fd9a9b5d2dc3b36c43a8eaa00b0c5c827159474ec4ee88353c48d"
     },
     {
       "path": "research/data/ordered_arithmetic_check.json",
@@ -680,6 +717,30 @@
       "role": "executed_result_or_artifact",
       "bytes": 72925,
       "sha256": "4c8be47411a6a2ded8ef435c9e71c21970838872cc79d17ed56034b020e9f6cc"
+    },
+    {
+      "path": "research/data/stateful_area_cancellations.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 103867,
+      "sha256": "60da2c379f3d49f624757922bf6779b7074c03cf55a46f32b22bf15850fa3d46"
+    },
+    {
+      "path": "research/data/stateful_bridge_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 127365,
+      "sha256": "2a2f8141b79153d9704f70a8f582eae675c15233bc1e2a6b9280b9b451b8ad82"
+    },
+    {
+      "path": "research/data/stateful_bridge_integrity.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1433,
+      "sha256": "8b4add52e897ccab23813852cf9fbae57d2661e3c01cb6d35f5e2c7505f49dfd"
+    },
+    {
+      "path": "research/data/stateful_bridge_trials.jsonl.gz",
+      "role": "executed_result_or_artifact",
+      "bytes": 1084993,
+      "sha256": "2d6315a3e09c908d5928ef0bf18aadaa3cf33c2c40bc29cb4e67aa72cdfea46c"
     },
     {
       "path": "research/data/timing_lattice_check.json",
@@ -1180,6 +1241,12 @@
       "sha256": "c65428f11fe91d8c65d2eb9f4e2c8fb712bad89d15829f2b988b3f542f9c92d9"
     },
     {
+      "path": "research/models/nonlinear_context_v1.json",
+      "role": "model_specification",
+      "bytes": 1390,
+      "sha256": "14613aeae01ea3ff7992cb3eb6b29960085a5019345dbd882f7696104d52488a"
+    },
+    {
       "path": "research/models/ordered_decode_v1.json",
       "role": "model_specification",
       "bytes": 4055,
@@ -1234,6 +1301,12 @@
       "sha256": "6fad05ce8c3386fe4631196704471046dbecf2c63f0f622207ae506c7e2d0182"
     },
     {
+      "path": "research/models/stateful_bridge_v1.json",
+      "role": "model_specification",
+      "bytes": 3295,
+      "sha256": "c03fd8461d56ca35785e9e3e720013f34e7d739853e6aa88b69d1fae29cd55c1"
+    },
+    {
       "path": "research/models/timing_lattice_v1.json",
       "role": "model_specification",
       "bytes": 1197,
@@ -1264,6 +1337,12 @@
       "sha256": "1fdf1e308bd4d4b17221ac39ea206cc5c2e7bf91a7e786055b98beaf1447aaa9"
     },
     {
+      "path": "tools/audit_stateful_bridge.py",
+      "role": "reproduction_tool",
+      "bytes": 3503,
+      "sha256": "948c92ca4060a87eeb98a25545edfdc7780eb20a1a3f3a767033057c7f763920"
+    },
+    {
       "path": "tools/bitcoin_oracle.py",
       "role": "reproduction_tool",
       "bytes": 2264,
@@ -1272,8 +1351,8 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 7148,
-      "sha256": "e86054f888f2fb23607cc69c9b39ee39bed658175580b563863211a7da7b2d74"
+      "bytes": 8238,
+      "sha256": "c4949cf13c56c249bf232fde0f74838437eb4326874872c3685a56e3355ad74d"
     },
     {
       "path": "tools/capture_rs_reference.py",
@@ -1378,6 +1457,12 @@
       "sha256": "5e7dd187694ceecb109f03f32a904f3b496ffedf4b09b34248cd74aa013dcd9c"
     },
     {
+      "path": "tools/check_nonlinear_context.py",
+      "role": "reproduction_tool",
+      "bytes": 5975,
+      "sha256": "cb005bb9e6c0ffaa544dac97d92c52fb28e26d4a35e234d501734ab0452c10b7"
+    },
+    {
       "path": "tools/check_ordered_arithmetic.py",
       "role": "reproduction_tool",
       "bytes": 8451,
@@ -1460,6 +1545,12 @@
       "role": "reproduction_tool",
       "bytes": 1512,
       "sha256": "158eb792b7792c8574efe449dd933e2e66092ac58db978452074551ee811280a"
+    },
+    {
+      "path": "tools/check_stateful_bridge.py",
+      "role": "reproduction_tool",
+      "bytes": 12174,
+      "sha256": "31683a396fb8f605cf0f7c1ea89fc33a9b564e6b7601163ac65cc8798e771115"
     },
     {
       "path": "tools/check_timing_lattice.py",
@@ -1564,6 +1655,12 @@
       "sha256": "3aff43d872bae650d4f4d6783d795234d9a3bba60e7585eb87a7463e9166b86c"
     },
     {
+      "path": "tools/plot_stateful_bridge.py",
+      "role": "reproduction_tool",
+      "bytes": 1682,
+      "sha256": "24724765ccb39405401fcedf2c9b693fdfce121b3a0466e7f83efa7c3a6279f5"
+    },
+    {
       "path": "tools/plot_uniform_layers.py",
       "role": "reproduction_tool",
       "bytes": 1580,
@@ -1596,8 +1693,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 16219,
-      "sha256": "68e43077e9363b64d9ec6e9f0344d8bf6508dd78f86c45bf4c496c4becfff5a7"
+      "bytes": 16950,
+      "sha256": "c19a2932469ab3ca4fd1de0144c6fd30f4198614fd3181d010a9ccba80af7d1b"
     },
     {
       "path": "AGENTS.md",
@@ -1608,20 +1705,26 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 30785,
-      "sha256": "48ad068d91583546ec9999868326cbf371ccc2c2c717f38b3f5bb9ac2455203a"
+      "bytes": 33161,
+      "sha256": "30680db210aa98af0782f6fcd5d052c022bea01fa46ce2a78362e82c4df38709"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 109038,
-      "sha256": "5ae8485d54a1cd4320ead2ecfd9d68ee2cf910ab9ccd00b016b87c26ca60bd18"
+      "bytes": 112480,
+      "sha256": "7fd00629dea91e5e84023afea387985614305b5569cf946345fa4bf9c91d964b"
     },
     {
       "path": "research/REPORT_20261101_ORDERED_SEQUENCE.md",
       "role": "research_report",
       "bytes": 9898,
       "sha256": "970c77c385565a59a4183510d83428de1a8d0a6ec4ff64c473c09388b4732b4b"
+    },
+    {
+      "path": "research/REPORT_20261101_STATEFUL_BRIDGE.md",
+      "role": "research_report",
+      "bytes": 8217,
+      "sha256": "50e9602235f939b2db7e3027bb8599496399aaa721ff49c2f620564278f3e585"
     },
     {
       "path": "research/REPORT_20261101_UPLOAD_AUDIT.md",

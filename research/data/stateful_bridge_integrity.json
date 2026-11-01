@@ -1,0 +1,65 @@
+{
+  "purpose": "Integrity and mathematical consequence audit, not new key search",
+  "verified_input_files": 9,
+  "trial_records": {
+    "C31": 115200,
+    "C32": 184320,
+    "C33": 576,
+    "C34": 46080
+  },
+  "C31_maximal_feature_spaces_inconsistent": 4608,
+  "C31_nested_lower_memories_also_inconsistent": true,
+  "C34_training_exact": 30388,
+  "C34_max_known_heldout_cells": 4,
+  "C34_max_correct_heldout_cells": 2,
+  "exact_area_cells_checked": 24,
+  "nontrivial_zero_area_cells": [
+    {
+      "blocks_1based": [
+        3,
+        5
+      ],
+      "cell_zero_based": 6,
+      "five_difference_nodes": [
+        -2,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "blocks_1based": [
+        4,
+        6
+      ],
+      "cell_zero_based": 0,
+      "five_difference_nodes": [
+        0,
+        0,
+        -2,
+        2,
+        0
+      ]
+    },
+    {
+      "blocks_1based": [
+        5,
+        7
+      ],
+      "cell_zero_based": 5,
+      "five_difference_nodes": [
+        0,
+        2,
+        -2,
+        0,
+        0
+      ]
+    }
+  ],
+  "input_sha256": {
+    "research/data/stateful_bridge_check.json": "2a2f8141b79153d9704f70a8f582eae675c15233bc1e2a6b9280b9b451b8ad82",
+    "research/data/nonlinear_context_check.json": "1ba3926721d15da497fd6f04a17874d1e9dedaa6ac065565b7fdc6301073e44a",
+    "tools/audit_stateful_bridge.py": "948c92ca4060a87eeb98a25545edfdc7780eb20a1a3f3a767033057c7f763920"
+  }
+}

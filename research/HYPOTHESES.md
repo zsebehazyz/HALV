@@ -484,3 +484,39 @@ magasbit-hibát. A következő elsődleges követelmény e korrekciók közös
 generáló szabályból történő előrejelzése, nem újabb paraméterenkénti javítás.
 A dátum és a Fibonacci–hang–Morse szerepe nyitott; új hangteszt most nem futott.
 Részletek és hatókör: `REPORT_20261101_ORDERED_SEQUENCE.md`.
+
+## C31–C34: kauzális maradékkapcsolat és a megjegyzés korlátja
+
+A három külső R-szót a három középső lag2 javítás bemeneteként vizsgáltuk,
+nem független kulcsrésznek feltételezve. Az első két átmenet illesztési,
+a harmadik ellenőrzési adat. A 10-es alap továbbra is poszthoc, és a teljes
+kép ismert; visszatartott részhalmaz nem jelent független új mérést.
+
+C31: aktuális és legfeljebb4 múltbeli R-bit, legfeljebb4 múltbeli kimeneti
+bit és konstans GF(2)-rekurziója. Két határkezelés és bitirány, XOR/szókivonás
+cél. Mind a4608 maximális jellemzőtér ellentmondásos az első64 célbiten;
+a115200 könyvelt kisebb/nagyobb memóriaváltozat között nincs pontos illesztés.
+Ez nem minden rekurzió vagy Fibonacci-delta hangkodek kizárása.
+
+C32: R-rel és forrással végzett nibble-carry/borrow, prefix-XOR/összeg/különbség,
+egy közös0..15 kezdőállapot, két irány és határkezelés. A184320 konfiguráció
+közül egyik sem írja le pontosan az első16 cellát. Tetszőleges R-ből képzett
+kezdőszó vagy más rejtett állapot ettől még nyitott.
+
+C33: a normalizált, igazított q/2 cellaterület-változás és R-nibble közös
+affin kapcsolata sem illeszthető pontosan. A geometriai következmény szerint
+mindhárom párban van nemnulla mintakülönbségű, mégis nulla területváltozású
+cella. Az5–7. pár5. cellájának [0,+2,−2,0,0] különbsége két H-eltérést rejt
+el az integrált terület elől. Ez levezetett azonosság, nem új R-kódolás.
+
+C34: nemlineáris R/előzőR/előzőkimenet kontextustáblák, opcionális forrásnibble.
+46080 konfigurációból30388 konzisztens a tanításban, de nincs8/8 teljes
+ellenőrzőjóslat. A legnagyobb lefedettség4/8; a legtöbb helyes cella2/8,
+eltérő konfigurációkban. Ismeretlen kontextust nem töltünk ki és nem tanítunk
+az ellenőrző kimenetekből. A sok tanítóillesztés itt nem dekódolási bizonyíték.
+
+A három R-szó↔három javítás hozzárendelése továbbra is hipotézis, most
+nincs rá új támogató eredmény. Következő prioritás a hullámot és R-t együtt
+előállító szabály, a képi koordináták és felezés közös levezetésével.
+A geometriai és Fibonacci–hang–Morse ág megmarad. Nincs új kulcskeresés,
+teljes generátor vagy HALV-kulcs. Jelentés: `REPORT_20261101_STATEFUL_BRIDGE.md`.

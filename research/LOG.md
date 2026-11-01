@@ -1874,3 +1874,57 @@ Részletes jelentés: `REPORT_20261101_ORDERED_SEQUENCE.md`. Programok:
 közös primitívek: `tools/ordered_decode_common.py`.
 Eredmények a `data/ordered_*` fájlokban, pontos hash-ek a RUN_INDEX-ben.
 **Nincs HALV-kulcs, teljes R-előrejelzés vagy igazolt közös generátor.**
+
+## 2026-11-01 – tizenhetedik kör: állapotos kapcsolat és előrejelzési lefedettség
+
+A felhasználó folytatást kért. A korábbi sorrend következő feladatát
+vizsgáltuk: a teljes96bites maradék és a lag2 átmenetek közös állapotszabályát.
+Nem futtattunk újabb kulcscsaládot szerkezeti siker nélkül.
+
+Előzetes modell: `models/stateful_bridge_v1.json`. Az első két átmenet
+illesztési adat, a harmadik ellenőrzés. A C25-ből átvett10-es alap továbbra
+sem képi levezetés, a visszatartott ismert kép nem vak új mérés.
+
+C31:576 koordinátanézet, XOR/szókivonás cél, két bitirány és határkezelés,
+0..4 bemeneti és kimeneti bitmemória. Az összes115200 konfiguráció
+tanításkor inkonzisztens. A4608 maximális lineáris tér kudarca már a kisebb
+memóriákat is kizárja az adott keretben. A GF(2)-megoldó100 teljesenumerációs
+kontrollt és egy ismert kauzális generátor előrejelzését teljesíti.
+
+C32: carry/borrow és prefix-XOR/összeg/különbség, egy közös kezdeti0..15
+állapot, két irány és határkezelés. A184320 konfigurációból nincs pontos
+illesztés az első16 cellára. Négy független egészaritmetikai kontroll sikeres.
+
+C33: az igazított, normalizált q/2 sugarú hullámterület változása és R
+közös affin kapcsolata nem illeszthető. A576 könyvelt nézetben a geometriai
+adatok három főcsatorna-keretben ismétlődnek;192 nyers R-nézet különböző.
+Mindhárom párban van nemtriviális, nulla területváltozású cella. Az5–7.
+pár5. cellájának q-különbsége [0,+2,−2,0,0], tehát két H-eltérés területe
+pontosan kioltja egymást. Ez levezetett azonosság, nem független új mérés
+vagy az R-rel talált kódolási kapcsolat. A mintaszintű és területszintű
+ellenőrzéseket ezért külön kell kezelni.
+
+A C31–C33 negatívuma után külön rögzített C34:
+`models/nonlinear_context_v1.json`. R-ből, előzőR-ből, egy/két előző kimenetből
+és opcionális aktuális forrásból nemlineáris kontextustábla.46080 konfiguráció,
+30388 pontos tanítóillesztés,0 teljes harmadik-szó-jóslat.25618 tanítóillesztés
+egy ellenőrző cellára sem ad választ. Maximum4/8 ismert, maximum2/8 helyes
+cella, eltérő változatokban. Az első kiválasztott tanítóillesztés1/8 jóslata
+hibás. Ismeretlen kontextus kitöltése és ellenőrzőcél visszatáplálása nincs.
+Az ismert nemlineáris szabály és ismeretlenállapot-kezelés kontrollja sikeres.
+
+Külön audit ellenőrizte a forráshasheket, mind a346176 naplórekordot és
+a C34 lefedettségi hisztogramját;24 területértéket külön trapézösszegből
+is visszaállított. Az eredeti q és minden R-bit változatlan.
+
+A három külső R-szó↔három középső javítás hozzárendeléséhez nem született
+támogató szabály. Következő prioritás a hullám és maradék közös előállítása,
+nem újabb kivételenkénti javítás. A geometriai, BD/aláírás/dátum és
+Fibonacci–hang–Morse ág megmarad; új hangteszt nem futott.
+
+Jelentés: `REPORT_20261101_STATEFUL_BRIDGE.md`. Reprodukció:
+`tools/check_stateful_bridge.py`, `tools/check_nonlinear_context.py`,
+`tools/audit_stateful_bridge.py`, `tools/plot_stateful_bridge.py`.
+Eredmények: `data/stateful_bridge_*`, `data/nonlinear_context_*`,
+`data/stateful_area_cancellations.png`; a pontos hash-ek a RUN_INDEX-ben.
+**Nincs megjósolt teljes javítás, közös generátor vagy HALV-kulcs.**

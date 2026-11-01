@@ -1,0 +1,6672 @@
+{
+  "models": [
+    "C31",
+    "C32",
+    "C33"
+  ],
+  "input_sha256": {
+    "research/models/stateful_bridge_v1.json": "c03fd8461d56ca35785e9e3e720013f34e7d739853e6aa88b69d1fae29cd55c1",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/data/lag2_halving_check.json": "2de6d22982c31fd1654999cce510b5860aa4b6118eece6b1f3c62f54e983394f",
+    "tools/check_stateful_bridge.py": "31683a396fb8f605cf0f7c1ea89fc33a9b564e6b7601163ac65cc8798e771115",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006",
+    "tools/check_lag2_residual_bridge.py": "19b6373d7fe98972eba06dc4b26cc6d629c96cf495a18781e0ac91a9a51bfa98"
+  },
+  "calibration": {
+    "GF2_bruteforce_cases": 100,
+    "known_causal_generator_forecast": true,
+    "carry_integer_checks": 4
+  },
+  "counts": {
+    "C31_configurations": 115200,
+    "C32_configurations": 184320,
+    "C33_configurations": 576
+  },
+  "coordinate_views": [
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "absolute",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "absolute",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "phase_relative",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        1,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        0,
+        2,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        0,
+        2
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        1,
+        2,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        0,
+        1
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": false,
+      "common_rotation": 7
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 0
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 1
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 2
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 3
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 4
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 5
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 6
+    },
+    {
+      "residual_frame": "phase_relative",
+      "middle_frame": "filled_zero_position",
+      "assignment": [
+        2,
+        1,
+        0
+      ],
+      "reverse_cells": true,
+      "common_rotation": 7
+    }
+  ],
+  "C31_exact_training_fits": [],
+  "C31_first_training_fit": null,
+  "C31_unique_exact_heldout": [],
+  "C32_exact_training_fits": [],
+  "C32_first_training_fit": null,
+  "C33_exact_training_fits": [],
+  "geometric_consequences": [
+    {
+      "blocks_1based": [
+        3,
+        5
+      ],
+      "shift_right_target": 26,
+      "source_samples": [
+        3,
+        0,
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2,
+        3,
+        0,
+        2,
+        0,
+        3,
+        0,
+        2,
+        0,
+        1,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      "aligned_target_samples": [
+        3,
+        0,
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "high_error_positions_aligned": [
+        12,
+        14,
+        24,
+        28,
+        30
+      ],
+      "low_error_positions_aligned": [
+        12,
+        16
+      ],
+      "signed_area_change_quarter_numerators": [
+        0,
+        0,
+        -9,
+        -24,
+        -3,
+        -6,
+        0,
+        -6
+      ]
+    },
+    {
+      "blocks_1based": [
+        4,
+        6
+      ],
+      "shift_right_target": 18,
+      "source_samples": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      "aligned_target_samples": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        0,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        3,
+        0,
+        2,
+        2,
+        1,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        3
+      ],
+      "high_error_positions_aligned": [
+        2,
+        3,
+        7,
+        11,
+        17,
+        19,
+        31
+      ],
+      "low_error_positions_aligned": [
+        11,
+        19,
+        23,
+        31
+      ],
+      "signed_area_change_quarter_numerators": [
+        0,
+        -12,
+        -6,
+        0,
+        6,
+        6,
+        0,
+        27
+      ]
+    },
+    {
+      "blocks_1based": [
+        5,
+        7
+      ],
+      "shift_right_target": 14,
+      "source_samples": [
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        3,
+        0,
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "aligned_target_samples": [
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        3,
+        0,
+        2,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_error_positions_aligned": [
+        5,
+        12,
+        13,
+        16,
+        21,
+        22,
+        28
+      ],
+      "low_error_positions_aligned": [],
+      "signed_area_change_quarter_numerators": [
+        0,
+        12,
+        -6,
+        -24,
+        -6,
+        0,
+        -6,
+        -6
+      ]
+    }
+  ],
+  "trial_log": "research/data/stateful_bridge_trials.jsonl.gz",
+  "trial_log_sha256": "2d6315a3e09c908d5928ef0bf18aadaa3cf33c2c40bc29cb4e67aa72cdfea46c",
+  "no_private_key_search": true,
+  "limitations": [
+    "All data already observed; heldout means withheld from parameter fitting, not prospective measurement",
+    "Finite low-memory/low-state families only",
+    "A negative result does not exclude nonlinear state machines or different clue-derived coordinates",
+    "No new key search unless a full structural rule succeeds",
+    "No independent derivation of10, no assumption that R is truly a correction channel"
+  ]
+}
