@@ -253,6 +253,35 @@
       },
       "full_heldout_successes": 0,
       "not_private_key_search": true
+    },
+    {
+      "result": "research/data/marker_pixel_revisit_check.json",
+      "kind": "marker_and_interpolation_revisit",
+      "Morse_target_recipe_counts": {
+        "XEX": 0,
+        "NMRM": 309
+      },
+      "exact_standard_Morse_timing_recipes": 0,
+      "canonical_vertices": 256,
+      "pixel_delta_triplication": true,
+      "not_private_key_search": true
+    },
+    {
+      "result": "research/data/fibonacci_audio_probe_check.json",
+      "kind": "hypothetical_bare_codec_and_Morse_probe",
+      "decoded_PCM_arrays": 24576,
+      "initial_predictors_per_stream": 256,
+      "qualified_strict_Morse_messages": 0,
+      "not_private_key_search": true
+    },
+    {
+      "result": "research/data/price_shape_revisit_check.json",
+      "kind": "fixed_price_curve_shape_comparison",
+      "models": 24,
+      "best_exploratory_heldout_skill": 0.03344667023019898,
+      "conditional_shift_reference_fraction": 0.40234375,
+      "not_global_p_value": true,
+      "not_private_key_search": true
     }
   ],
   "files": [
@@ -267,6 +296,12 @@
       "role": "executed_result_or_artifact",
       "bytes": 12,
       "sha256": "d11f2a7e0295f65967cd3afc51c5f784ba9131f5a9efe6d2c989c1d68335c4b1"
+    },
+    {
+      "path": "research/data/audio_revisit_integrity.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 917,
+      "sha256": "afe1f1000a845c42811626da639fc02deab855f9e20ecaf01742fce43c437243"
     },
     {
       "path": "research/data/bd_halving_check.json",
@@ -305,6 +340,36 @@
       "sha256": "833514beb3118e183808767cb1068e7380e4567d403ce49a0800087bf80a8d2c"
     },
     {
+      "path": "research/data/canonical_fib_delta_low_first.bin",
+      "role": "executed_result_or_artifact",
+      "bytes": 128,
+      "sha256": "894b37a69954a632edfd54aff4132b4edef04fe1fa25efb4d73b2d08e657feb1"
+    },
+    {
+      "path": "research/data/canonical_physical_polyline_pixels.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 12341,
+      "sha256": "eea766cf83c61c19b5f8b6da10f2cf84eb33b069c4506fbd701f8c4a4233bbdf"
+    },
+    {
+      "path": "research/data/canonical_q256.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 7665,
+      "sha256": "a46a75032b110c9e9234338c575da70795c86d1cac5d150d17c4e91346cd1a18"
+    },
+    {
+      "path": "research/data/canonical_q256.txt",
+      "role": "executed_result_or_artifact",
+      "bytes": 734,
+      "sha256": "103e95a19881b1b042fd763a7c902f518deb32dd6eeee807b16f404f0718aea8"
+    },
+    {
+      "path": "research/data/canonical_within_block_pixels.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 12426,
+      "sha256": "2e7fe4452aa46c65096f1831779994cb8ea706c63d4dde6c5ec8064e65fff877"
+    },
+    {
       "path": "research/data/composite_masks.json",
       "role": "executed_result_or_artifact",
       "bytes": 88453,
@@ -333,6 +398,18 @@
       "role": "executed_result_or_artifact",
       "bytes": 75633,
       "sha256": "62a3a071fecc4d5534d3e8f13fb6f6790c6c2b88cd42ef02fe919af868ca80ce"
+    },
+    {
+      "path": "research/data/fibonacci_audio_probe_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 19809,
+      "sha256": "ea70b774b388815df087b84d04f1d8d5c4ed925286405ceeb9c995256782a3b6"
+    },
+    {
+      "path": "research/data/fibonacci_pcm128_all_seeds.npz",
+      "role": "executed_result_or_artifact",
+      "bytes": 885894,
+      "sha256": "5a5d170aaecd64ebe56b99a9c8cc981f1081104403004f17a00879b07230d4d2"
     },
     {
       "path": "research/data/five_sample_wif_check.json",
@@ -405,6 +482,12 @@
       "role": "executed_result_or_artifact",
       "bytes": 99342,
       "sha256": "ab45489f7a31f666ba50766d67cfff1ee6c45ef7a1c25da19cb6e45c4361c916"
+    },
+    {
+      "path": "research/data/hypothetical_pcm128_identity_seed128.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 7499,
+      "sha256": "25ff02c98056b136a36e739f7fcca62ac7a4ee7978644323f0a752f96fa02bb9"
     },
     {
       "path": "research/data/lag2_control_scores.npz",
@@ -485,22 +568,34 @@
       "sha256": "bc483972863368ff7b4f6a4fffb6ce0aa6dfda4a6aa1632475bd08ac074d95e6"
     },
     {
+      "path": "research/data/marker_pixel_revisit_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 184061,
+      "sha256": "4edcd8f9536e7905117bbdf441fccb61cef3fbdc5ae036fa825943b9d16808b3"
+    },
+    {
       "path": "research/data/marker_pixels.csv",
       "role": "executed_result_or_artifact",
       "bytes": 917,
       "sha256": "305bf4febd4cb6615063c84884d97162275bd3e421f559a9b9f97e4c980b05d5"
     },
     {
+      "path": "research/data/marker_x91_rows443_506.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 860,
+      "sha256": "7374def260b7e33fed6e6808fe6b40cf7c944669ef5d541b72af993371ecff75"
+    },
+    {
       "path": "research/data/master_append_state.json",
       "role": "executed_result_or_artifact",
-      "bytes": 62449,
-      "sha256": "8170152334628b5fe6d8d78df753f64b45eb2a845ae24c7009e8cdfd29b82a83"
+      "bytes": 66909,
+      "sha256": "c27f7a7469c265727d938ceaa515e972bac34aeddf9f5cff12909b1791b34f6e"
     },
     {
       "path": "research/data/master_document_manifest.json",
       "role": "executed_result_or_artifact",
-      "bytes": 61368,
-      "sha256": "02aff7360e61c14915e324b44d8855a152868cafc6f3244c761731b65d7ae018"
+      "bytes": 70147,
+      "sha256": "8dd8c3c9b16d87701ec10ded393b62a62b3aed4051a14c8b4169ec148caeecc1"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -693,6 +788,18 @@
       "role": "executed_result_or_artifact",
       "bytes": 3087,
       "sha256": "d6369c2c3c0f840e1408b11add6be442830b56b70fd32fe4fdaa57c0b9c6c7ce"
+    },
+    {
+      "path": "research/data/price_shape_resampled256.csv",
+      "role": "executed_result_or_artifact",
+      "bytes": 74908,
+      "sha256": "29a0baac62fb8e9434ed2d661dd4bac0178353879413be928c1f69caf7cd944d"
+    },
+    {
+      "path": "research/data/price_shape_revisit_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 37768,
+      "sha256": "479a1d5d22993a2e915bab8da1ac40e36d878f0801b669b874aba158f00386f3"
     },
     {
       "path": "research/data/reconstructed_states.csv",
@@ -1301,6 +1408,12 @@
       "sha256": "fb0fcf731f0436cb6cd53bff8255296a83cec903ab66ffa822386a63746c2524"
     },
     {
+      "path": "research/models/fibonacci_audio_probe_v1.json",
+      "role": "model_specification",
+      "bytes": 2149,
+      "sha256": "039514230c1374bef743f930df63cd821db3fddf77c10dcf340f68b0d3868203"
+    },
+    {
       "path": "research/models/fractional_area_v1.json",
       "role": "model_specification",
       "bytes": 1755,
@@ -1343,6 +1456,12 @@
       "sha256": "c65428f11fe91d8c65d2eb9f4e2c8fb712bad89d15829f2b988b3f542f9c92d9"
     },
     {
+      "path": "research/models/marker_pixel_revisit_v1.json",
+      "role": "model_specification",
+      "bytes": 1886,
+      "sha256": "abd0753e706cca10a3828716090a54eac073d084ec14a5e57df6c37cd2659992"
+    },
+    {
       "path": "research/models/nonlinear_context_v1.json",
       "role": "model_specification",
       "bytes": 1390,
@@ -1377,6 +1496,12 @@
       "role": "model_specification",
       "bytes": 1714,
       "sha256": "8ef1a0cd2f94998635e90bbb4f3668f65cc3a28b860f8fbc475afe00665129dc"
+    },
+    {
+      "path": "research/models/price_shape_revisit_v1.json",
+      "role": "model_specification",
+      "bytes": 1552,
+      "sha256": "f14a2be84f57693d3a943d846555b33bfc452b73661174e73d5320799ada5b5d"
     },
     {
       "path": "research/models/residual_codes_v1.json",
@@ -1457,10 +1582,22 @@
       "sha256": "8572f99e61e4a69054aafcf0969bbd5c0460b47adfacb2415c5684014baa91be"
     },
     {
+      "path": "tools/audit_audio_revisit_results.py",
+      "role": "reproduction_tool",
+      "bytes": 6563,
+      "sha256": "7b22e71bad09d59787e327ddcd6468ab8bc3847b3f9c0cebac994a70257bdf6f"
+    },
+    {
       "path": "tools/audit_halving_phase_ascii.py",
       "role": "reproduction_tool",
       "bytes": 2825,
       "sha256": "4eb68d36a185bb0979d7acba6582ef49599dc9e792651d0456bb0810b299860c"
+    },
+    {
+      "path": "tools/audit_marker_pixel_revisit.py",
+      "role": "reproduction_tool",
+      "bytes": 8314,
+      "sha256": "55e9be5c7db65a3d7029eb636c9190ac1c3d70aebc57801d8b26a68c55a9f92d"
     },
     {
       "path": "tools/audit_ordered_results.py",
@@ -1495,8 +1632,8 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 10599,
-      "sha256": "2453eff540cc33d2df6929bb2b3e7e6e40d378da029fb774f74d583bfab72765"
+      "bytes": 12134,
+      "sha256": "1a1fabfb2a06192b614fcad4ddd6296399b2412a9bca62bbe4e65744156dc83c"
     },
     {
       "path": "tools/capture_rs_reference.py",
@@ -1659,6 +1796,12 @@
       "role": "reproduction_tool",
       "bytes": 1681,
       "sha256": "08fef3b7ba36fd29a3944b021b2dec8567571c75b3626bbdf9e9e42ee017102e"
+    },
+    {
+      "path": "tools/check_price_shape_revisit.py",
+      "role": "reproduction_tool",
+      "bytes": 4234,
+      "sha256": "b799331953c1c85dc2e912000cb1b86a6c07f4ec69464322be12642d67002303"
     },
     {
       "path": "tools/check_reconstruction_candidates.py",
@@ -1835,6 +1978,12 @@
       "sha256": "d8329c3909d7cd04693a994e7e3ac64eccf9f7a7dbd06aea702c7cb6d566bf9c"
     },
     {
+      "path": "tools/probe_fibonacci_audio.py",
+      "role": "reproduction_tool",
+      "bytes": 7797,
+      "sha256": "6e881c9ad7cd98cca485f6eefdd2cf2e63f12338e090c47947daca1f7030b341"
+    },
+    {
       "path": "tools/reproduce_uploaded_audits.py",
       "role": "reproduction_tool",
       "bytes": 5257,
@@ -1861,8 +2010,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 18392,
-      "sha256": "1dea650e4e2717385b1692be661c66f16da80188376f2912e906981585dea6ea"
+      "bytes": 18753,
+      "sha256": "41ad4c906d4bbcb3ff207caa406eca6ac1aaf13eb2090364798422bcb6f182d2"
     },
     {
       "path": "AGENTS.md",
@@ -1873,26 +2022,26 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 37341,
-      "sha256": "826e54afb81a15caecd72099b434043e8076eb3b20a7074c5f392387705554ac"
+      "bytes": 39895,
+      "sha256": "012710937a6f0057c249bcfeaabccb9a9e5275e5e5f65dcec01fe06d5b0b27c1"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 127788,
-      "sha256": "926c1afe3a048e77b127c1438723e6e5095786b0f828a9ce93f413f1d40b4306"
+      "bytes": 141463,
+      "sha256": "76ae59749f9ebb09ec53eccd3f49777356a6c665b84631b0320240920609f6c3"
     },
     {
       "path": "research/MASTER_OVERVIEW.md",
       "role": "research_map_or_log",
-      "bytes": 3977,
-      "sha256": "4894e44a410c7f37248876268c2d25b5cd4fd9bfc74c0807cbe98ea3fce20d3e"
+      "bytes": 4627,
+      "sha256": "5154e8992cf2ed7ff27e32cf2212286d880018285f9438939099ffc9c450bea9"
     },
     {
       "path": "research/HALV_TELJES_KUTATAS.md",
       "role": "research_map_or_log",
-      "bytes": 312963,
-      "sha256": "9e380a379296545cc18ababfe87625a34af48e27e85a562204b72adff0816936"
+      "bytes": 335921,
+      "sha256": "93cd3b51ee9aee40f70ccde7c8d951a51916247ef2f80055de82caf66e4c1344"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",

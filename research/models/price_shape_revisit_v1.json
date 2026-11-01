@@ -1,0 +1,15 @@
+{
+  "model":"C41",
+  "purpose":"A fixed actual curve-shape comparison for the repeated2020-2024price hypothesis, beyond the old8block envelope test",
+  "data":"ArchivedCoinMetrics daily prices, latest2024-04-19; do not use later2024 data",
+  "starts":["2020-01-01","2020-05-11"],
+  "signals":["price","log_price","absolute_daily_log_return"],
+  "resampling":"Derive each daily signal first, then interpolate linearly to256 equal-count positions over its valid window; returns start on the second day",
+  "directions":["forward","reverse"],
+  "targets":["normalized_q","physical_height_q_times_scale"],
+  "fit":"One affine gain+offset per case, fitted only on blocks3..6; no time-warp, extra phase, smoothing, clipping or rounding repair",
+  "validation":"Blocks1,2,7,8; report heldoutMSE against constant training-mean baseline and Pearson correlation; positive skill is not generator proof",
+  "reference":"All255 nonzero cyclic shifts, same shift for all signal alternatives; refit training only and take max heldout skill across the full24model family; descriptive conditional reference, not global discovery p-value",
+  "calibration":"Known affine target on heldout samples, constant input, identity shift reproduces observed family",
+  "limitations":["Today's archived historical source may contain revisions, not a2024snapshot","The image-date interpretation is conditional","Curve transforms and family chosen after observing the image","Tests these24 fixed signal models only, not arbitrary encoded price references","No private-key search"]
+}

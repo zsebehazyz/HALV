@@ -25,21 +25,29 @@ korábban nem naplózott számításokat vagy forrásokat.
 - A Level 2 és Level 5 történeti pozitív kontrolljai reprodukáltak; a régi
   nyilvános megoldási kulcsok nem HALV-találatok.
 
-### Legutóbbi végrehajtott kör: C37–C38
+### Legutóbbi végrehajtott kör: C39–C41
 
-Hosszabb közös adatfolyam pontos ablakait vizsgáltuk, így a blokkok eltérő
-hisztogramja megengedett. A két paritás külön sablont kap, a felezési skálák
-és közös fázisképlet határozza meg az ablakkezdeteket. A 96 konfiguráció
-egyike sem illeszkedik pontosan a négy középső tanítóblokkra.
+A felhasználó újra a jelölő, Fibonacci–Morse–hang és árfolyam ágát kérte.
+A hét fényességszint mind a 43 erősebb markerpixelre ±1 pontossággal illik,
+de egyetlen rögzített hét­soros fázis csak 26-ot magyaráz. Az x=91 oszlop
+globális küszöbös családjában XEX nem jön ki, NMRM 309 ismétlődéseket is
+tartalmazó receptből kijön; egyik kilencjeles kivágat sem pontos 1:3:7 Morse.
 
-Külön magas/alacsony bináris síkkal, független ablakkoordinátákkal sem
-született pontos illesztés a 192 síkonkénti konfigurációban. Nem készült
-teljes, szélső blokkokat megjósló generátor vagy új kulcsjelölt.
+A 256 csúcsérték teljes szöveges és CSV-exportja elkészült. A blokkon belüli
+744 pixeldelta a 248 csúcsdelta háromszoros ismétlése a modellben. Az így
+képzett Fibonacci-indexek alsó bitje egyszerű paritáskülönbség, nem új adat.
 
-A teljesen hibátlan HATÁRÁTFEDÉS legnagyobb hossza a 3–5., 4–6., 5–7.
-párokra 1, 2, 3 minta. Ez nem a leghosszabb közös belső részlet: a 3. és
-5. blokkban például igazolt 12 mintás belső egyezés van. Az eredmény csak
-a rögzített ablakozó/indexelő családot szűkíti.
+A teljes kétbites bemenet 96 Fibonacci-dekódercsaládjában mind a 256 kezdeti
+állapotot lefuttattuk: 24 576 feltételezett, 128 mintás PCM-kimenet,
+13 299 különböző amplitúdóaktivitás-maszk. A rögzített szigorú, legalább
+8 jelből és 3 karakterből álló Morse-feltételt egyik sem teljesíti.
+Eredeti hangformátumot, időalapot vagy titkosítást továbbra sem azonosítottunk.
+
+A 24 rögzített árfolyamalak-modell legjobbja 3,34% javulást ad az alapjóslathoz
+képest a kihagyott blokkokon; a család szintjén eltolásos referenciák 40,2%-a
+legalább ilyen jó. Ez nem érdemi támasz az árfolyamhipotézishez, de nem
+tetszőleges árfolyamkódolás kizárása. A „Cracked it…” idézet már a kezdeti
+felhasználói jegyzetben is szerepelt; önállóan ellenőrzött forrás továbbra sincs.
 
 ### Nyitott munkafeladat
 

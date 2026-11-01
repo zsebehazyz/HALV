@@ -1,0 +1,20 @@
+{
+  "purpose": "C39-C41 independent archive and calculation audit",
+  "verified_input_files": 12,
+  "Morse_recipe_counts_by_independent_inequalities": {
+    "XEX": 0,
+    "NMRM": 309
+  },
+  "canonical_vertices": 256,
+  "within_block_model_pixels": 752,
+  "whole_polyline_pixels": 766,
+  "independently_replayed_PCM_arrays": 24576,
+  "independent_price_models": 24,
+  "independent_price_family_shift_references": 255,
+  "input_sha256": {
+    "research/data/marker_pixel_revisit_check.json": "4edcd8f9536e7905117bbdf441fccb61cef3fbdc5ae036fa825943b9d16808b3",
+    "research/data/fibonacci_audio_probe_check.json": "ea70b774b388815df087b84d04f1d8d5c4ed925286405ceeb9c995256782a3b6",
+    "research/data/price_shape_revisit_check.json": "479a1d5d22993a2e915bab8da1ac40e36d878f0801b669b874aba158f00386f3",
+    "tools/audit_audio_revisit_results.py": "7b22e71bad09d59787e327ddcd6468ab8bc3847b3f9c0cebac994a70257bdf6f"
+  }
+}

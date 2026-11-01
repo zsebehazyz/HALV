@@ -141,6 +141,26 @@ def main():
             'kind':'independent_binary_plane_window_generator','plane_configurations':d['plane_configurations'],
             'exact_training_fits_by_plane':{k:len(v['exact_training_fits']) for k,v in d['planes'].items()},
             'full_heldout_successes':len(d['full_heldout_successes']),'not_private_key_search':True})
+    p=ROOT/'research/data/marker_pixel_revisit_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'marker_and_interpolation_revisit','Morse_target_recipe_counts':d['marker']['global_morse_target_recipe_counts'],
+            'exact_standard_Morse_timing_recipes':len(d['marker']['exact_standard_Morse_timing_recipes']),
+            'canonical_vertices':d['wave']['vertices'],'pixel_delta_triplication':d['wave']['triplication_identity'],
+            'not_private_key_search':True})
+    p=ROOT/'research/data/fibonacci_audio_probe_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'hypothetical_bare_codec_and_Morse_probe','decoded_PCM_arrays':d['decoded_PCM_arrays'],
+            'initial_predictors_per_stream':d['initial_predictors_per_stream'],
+            'qualified_strict_Morse_messages':len(d['messages']),'not_private_key_search':True})
+    p=ROOT/'research/data/price_shape_revisit_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'fixed_price_curve_shape_comparison','models':d['model_count'],
+            'best_exploratory_heldout_skill':d['best_exploratory_model']['heldout_skill'],
+            'conditional_shift_reference_fraction':d['shift_reference_fraction_including_identity'],
+            'not_global_p_value':True,'not_private_key_search':True})
     out={'purpose':'Persistent evidence index; read together with HYPOTHESES.md and LOG.md.',
          'counting_rule':'Do not sum per-run unique candidates as global uniques; overlap across runs has not been measured. Structural comparisons, WIF strings, hypotheses and private scalars are separate units.',
          'result_summaries':summaries,'structural_summaries':structural,'files':files}

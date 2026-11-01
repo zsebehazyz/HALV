@@ -4764,3 +4764,376 @@ Forrás: [two_plane_window_v1.json](models/two_plane_window_v1.json), SHA-256: `
 | [tools/append_master_chapter.py](../tools/append_master_chapter.py) | 4008 | `8572f99e61e4a69054aafcf0969bbd5c0460b47adfacb2415c5684014baa91be` |
 | [tools/build_master_document.py](../tools/build_master_document.py) | 8471 | `f85407d24b472b2b37671cdb4d1c669da5d6159d5a479fa81a7178fe4625fe77` |
 | [tools/build_research_index.py](../tools/build_research_index.py) | 10599 | `2453eff540cc33d2df6929bb2b3e7e6e40d378da029fb774f74d583bfab72765` |
+
+
+---
+
+<a id="round-21"></a>
+
+## 2026-11-01 – huszonegyedik kör: jelölő, Fibonacci–Morse–hang és árfolyam, C39–C41
+
+### 1. Kérés, forrás és előzmények
+
+A felhasználó ismét a 2020–2024-es BTC-árfolyam, a kilencjelű marker és a
+Fibonacci/hang/Morse irány ellenőrzését kérte, továbbra is a meglévő fő MD
+végéhez fűzve, új MD nélkül. Az ezt követő „folytasd” üzenet ugyanezt a
+munkát folytatta. A fő MD addigi 312 963 bájtja változatlan marad;
+SHA-256: `9e380a379296545cc18ababfe87625a34af48e27e85a562204b72adff0816936`.
+
+A „Cracked it. I dont want the balance…” idézetet az eredeti
+`sources/user_prior_notes.txt` már szó szerint tartalmazta. Ez nem új,
+független megerősítés. Nem kaptunk hozzá ellenőrizhető eredeti URL-t,
+megfejtési láncot vagy címegyezési bizonyítékot; HALV-ra vonatkozása sem
+lett önállóan hitelesítve. Kutatási nyomként megőrizzük.
+
+A közölt 2186×4 jelölt és a négy kezdeti Fibonacci-érték eredményeit nem
+számoljuk saját új futásnak: a mostani reprodukálható programok pontos
+bemeneteit és számlálási egységeit külön rögzítjük. Elolvastuk a korábbi
+árfolyam-, marker-, delta- és 8SVX-teszteket, hogy az ismétlést elkülönítsük
+az új, összekapcsolt ellenőrzéstől. Az eredeti q és teljes R változatlan.
+
+### 2. C39 – a fényességrámpa új, pontos ellenőrzése
+
+Rögzített specifikáció: `models/marker_pixel_revisit_v1.json`.
+A tárolt PNG x=91 oszlopának y=443..506 szakaszát mind a 64 sorral
+kiexportáltuk. A 3 vagy nagyobb fényességű 43 pixel mind a következő
+hét névleges érték egyikéhez illeszkedik legfeljebb 1 eltéréssel:
+
+```
+23,47,75,107,141,178,216
+```
+
+Tehát a hét fényességszint megfigyelése reprodukálható. A szó szerint vett,
+rögzített fázisú hét­soros rámpa×bináris maszk már nem teljes magyarázat:
+a hét lehetséges közös fázis legjobbja csak 26/43 erős pixelt ír le ±1-re.
+A másik kedvező fázis 17/43-at. További fáziskorrekciót nem illesztettünk
+utólag, és nem nevezzük ezt bizonyított, kizárólag kitakarást hordozó kódnak.
+
+A 64 sorhoz négy konkrét bináris maszkot is eltettünk:
+
+| Fényességküszöb (>=) | Egyes bitek | Maszk, hexadecimálisan |
+| --- | ---: | --- |
+| 1 | 49 | fff07ffc1fff07ff |
+| 3 | 43 | 7ff07df817ef07bf |
+| 32 | 37 | 3f707cf813e7079f |
+| 178 | 9 | 03000c1810200080 |
+
+Ezek 64 bites láthatósági nézetek, nem 64 független nibble-adat bizonyítékai.
+A 64 sorból kivágott maszk, a korábbi 63 aktív soros nézet és a BD
+nyolc rácspozíciója külön reprezentáció; nem cseréljük fel őket.
+
+### 3. XEX és NMRM: egységes szabállyal vizsgálva
+
+Mind a 255 fényességküszöbön, két függőleges irányban megmértük az
+összefüggő jeleket. A kilenc jelet adó küszöbök ismét 24..107.
+Ezeknél végigvettük az összes egyetlen közös hosszúsági küszöböt
+(pont/vonás), és egyetlen közös üresszakasz-küszöböt (betűhatár).
+Nem választottunk külön határt az egyes betűkhöz.
+
+| Keresett szöveg | Megfelelő küszöb-/irány-/hossz-/szünetreceptek |
+| --- | ---: |
+| XEX | 0 |
+| NMRM | 309 |
+
+A 309 ismétlődő bináris nézeteket is tartalmaz; nem ennyi független bizonyíték.
+A korábbi konkrét NMRM reprodukálható: fényesség>=32, vonás legalább4px,
+betűszünet legalább5 üres pixel. Magasságok és tényleges üres sorok:
+
+```
+magasság: 6,3,5,5,1,5,3,4,5
+szünet:   1,5,2,6,2,2,5,2
+csoport:  -. | -- | .-. | --
+```
+
+Az XEX ebben a nézetben nem pusztán egy 5px-es jel besorolásán múlik:
+azonos 5px-es jelekhez egyszer pontot, másszor vonást kérne, és a kívánt
+betűszünetek között olyan rövid szünet is van, amelynél egy belső szünet
+hosszabb. Egy közös hossz- és szünetküszöb ezt nem tudja megvalósítani.
+A tükörszimmetria önmagában nem teszi helyessé az olvasatot.
+
+Az első audit után külön pontos időzítési diagnosztikát is rögzítettünk:
+az első jelből lehetséges minden racionális globális egységgel az összes
+jelhossz 1 vagy3, az összes belső szünet 1,3 vagy7 egység legyen.
+A kilencjeles kivágatok egyikénél sincs pontos megoldás. Ezért az NMRM
+továbbra is feltételes alakolvasat, nem bizonyított szabályos Morse-üzenet.
+Az XEX-negatívum a rögzített x=91 oszlop/globális küszöbcsaládra vonatkozik,
+nem minden elképzelhető grafikus vagy többlépcsős Morse-kódolóra.
+
+### 4. A kért pontos rekonstrukció szövegként és CSV-ben
+
+A stabil névleges rekonstrukció **256 csúcsérték**, nem 128 mért minta.
+`x_i=92+3i`, középvonal y=475; egy blokk 32 csúcs, skálái rendre
+128,64,32,16,8,4,2,1 pixel. Az összes csúcs egy helyen, blokkonként:
+
+```
+2,1,1,1,2,3,3,0,0,3,0,0,0,2,3,1,1,0,1,2,2,1,1,0,1,3,2,1,0,0,3,2
+2,2,1,0,0,3,0,0,2,3,2,2,2,3,0,2,3,3,0,2,2,2,0,2,2,3,1,2,3,2,0,2
+3,0,2,2,1,0,2,2,0,0,2,2,3,0,2,0,3,0,2,0,1,0,2,0,2,0,0,2,0,0,2,0
+0,0,2,0,0,0,0,3,0,2,0,2,0,2,2,1,0,2,0,0,0,2,2,0,0,0,2,2,0,0,2,0
+0,2,2,0,0,0,3,0,2,2,1,0,2,2,0,0,2,2,0,0,0,0,2,0,2,0,1,0,2,0,0,0
+0,3,0,2,2,1,0,0,2,2,0,0,2,3,0,0,0,2,0,0,0,1,0,2,0,1,0,2,2,1,0,0
+0,0,0,2,0,0,0,2,0,0,2,0,1,0,0,0,0,0,0,2,2,0,0,2,3,0,2,2,1,0,0,0
+0,2,2,3,1,1,2,0,0,2,3,3,0,1,0,0,1,1,1,3,1,0,3,1,1,2,1,3,0,1,0,0
+```
+
+A `data/canonical_q256.txt` másolható szöveg, a `data/canonical_q256.csv`
+indexet, blokkot, x-et, skálát, magasságot, deltát és Fibonacci-indexet is
+tartalmaz. A `data/canonical_physical_polyline_pixels.csv` a teljes
+x=92..857 közötti 766 oszlop modell szerinti pontos racionális magassága.
+Ezek modellből visszaállított számok; nem 766 új, független hangminta.
+A nyolc blokkon belüli 94-94 oszlop külön exportban is megvan; a
+skálaváltások közötti két-két köztes oszlopot nem keverjük ezek közé.
+
+### 5. Mitől látszik hét delta a pixelenkénti jelben?
+
+Két szomszédos csúcs között három pixelintervallum van. Az adott blokk
+S/3 egységében az interpolált magasság:
+
+```
+u(3i+t) = 3*q_i + t*(q_(i+1)-q_i), t=0,1,2,3
+```
+
+Az első blokk S/3 értéke valóban 128/3=42,666…px, a q=3 csúcs pedig
+ebben az egységben9. Minden pixellépés ugyanaz a delta, háromszor:
+
+```
+pixel_delta = repeat(vertex_delta,3)
+```
+
+Nyolc blokkon belül 248 eredeti deltából 744 pixeldelta lesz, pontosan
+háromszoros hisztogrammal. Az alábbi számok az összes nyolc blokkot jelentik,
+nem a felhasználó hozzávetőleges első négyszakaszos pixelmérését:
+
+| Delta | Csúcsok között | Modell pixellépései között |
+| --- | ---: | ---: |
+| -3 | 15 | 45 |
+| -2 | 35 | 105 |
+| -1 | 33 | 99 |
+| 0 | 83 | 249 |
+| +1 | 27 | 81 |
+| +2 | 47 | 141 |
+| +3 | 8 | 24 |
+
+A hétértékű ábécé itt tehát a négy szint és az egyenes interpoláció
+következménye is. Önmagában nem független Fibonacci-kodekbizonyíték,
+és a nagyobb pixelszám nem jelent ennyi új információt.
+
+A dokumentált Fibonacci-táblában ezen a tartományon `I=8+delta`.
+Ezért `I&1=(q_i&1) XOR (q_(i-1)&1)`. Az alsó deltaindexbit nem új
+adatcsatorna, hanem a q alsó bitjének első paritáskülönbsége. Az I!=8
+feltétel pedig pontosan a már korábban vizsgált változásjelző.
+Ezek korábbi delta-projekciós családokkal átfednek; nem új független
+kulcskeresési találatként jelentjük őket.
+
+A q-deltákból készített 256 Fibonacci-indexet két nibble/bájttal csomagolva
+**128 bájt** keletkezik: `data/canonical_fib_delta_low_first.bin`.
+Visszadekódolása 0 kezdőállapottal pontosan visszaadja q-t. Ez önmagunk
+kódolásának megfordítása, nem bizonyíték az eredeti kodekre.
+
+### 6. C40 – teljes, minden kezdőértékes Fibonacci-hangpróba
+
+Specifikáció: `models/fibonacci_audio_probe_v1.json`. Itt más a bemenet:
+a képi 256 kétbites állapotot közvetlenül csomagoljuk 64 bájtba, és ezt
+tekintjük hipotetikus tömörített adatnak. A Fibonacci-dekóder ebből
+128 PCM-mintát ad. Ez a 128-as szám nem azonos a 256 mért csúccsal
+vagy a külön, deltákból előállított 128 bájtos fájllal.
+
+24 közös állapot→bitpár leképezés, két olvasási irány, két nibblesorrend:
+96 kódsorozat. Mindegyikhez **mind a 256 kezdeti állapot** szerepelt,
+összesen 24 576 PCM-tömb. Az archivált FFmpeg tábláját és minden
+deltalépés utáni 0..255 telítést használtuk. Ez nyers dekódermag-próba,
+nem azonosított IFF/8SVX fájl vagy általános audio-decryption megoldás.
+
+A Morse-próba négy globális aktivitási szabályt használ:
+`abs(PCM−128)>0,8,16,32`. Azonos aktivitásmaszkot egyszer vizsgálunk,
+első receptjét és előfordulásszámát megőrizzük. 98 304 aktivitási
+előállításból 13 299 különböző 128 bites maszk adódik.
+
+Globális időegységek:1..8 minta; pontos pont/vonás1:3, szünet1:3:7;
+csak külső némaságot vágunk le. Legalább8 jel, legalább3 értelmes
+alfa-numerikus Morse-karakter és minden belső szakasz hibátlan időzítése kell.
+**Egyetlen minősített Morse-üzenet sincs.** Az előre rögzített feltétel
+szerint emiatt a csak pozitív megfigyeléskor szükséges16 kevert kontrollt
+nem futtattuk; nem állítunk ebből statisztikai kizárást.
+
+A dekódert szintetikus SOS-szal ellenőriztük: +21/−21/0 Fibonacci-deltákkal
+kódolt burkoló pontosan visszajön és SOS-ként olvasható. Két telítési
+kontroll is sikeres. Az összes PCM-tömb a
+`data/fibonacci_pcm128_all_seeds.npz` fájlban van, alakja(96,256,128).
+Az egyértelműen hipotetikus, közvetlen állapotleképezésű,128-as kezdetű
+példa CSV-ben is elérhető. Eredeti mintavételi frekvencia, előjel és
+hangfájl továbbra sincs azonosítva.
+
+Külön a q-delták saját visszadekódolásánál is megvizsgáltuk az összes
+kezdeti értéket:0..252 között csak DC-eltolás keletkezik;253..255 között
+a telítődés egy második relatív alakot eredményez. A256 kezdőérték
+itt csak két DC-mentes alakot ad, nem256 új független hangot.
+Ez a saját delta-kódolásra igaz, nem minden 8SVX bemenetre.
+
+Standard Morse-nál egy karakter legalább1 jel, két karakter közt legalább
+3 egység kell. L karakter legalább4L−3 egység:51 karakterhez minimum201,
+64-hez253 mintapont kellene, ha az egység legalább1 minta. A128mintás
+hipotetikus PCM ezért ebben a natív, pontos időzítésű modellben nem lehet
+közvetlen51karakteres WIF vagy64karakteres hexszöveg Morse-hordozója.
+Rövid utasítás vagy más demoduláció lehetőségét ez nem zárja ki.
+
+### 7. C41 – tényleges görbealak-összevetés az árfolyammal
+
+A régi napi burkolóteszten túl most a 256 hullámponttal is összevetettük
+a rögzített árfolyamjeleket. A `models/price_shape_revisit_v1.json`
+futtatás előtt rögzíti a két kezdődátumot (2020-01-01,2020-05-11),
+a legkésőbbi 2024-04-19-i adatot, a napi ár/logár/abszolút loghozam
+jeleket, két irányt és két célt (q, fizikai q*S magasság). Összesen24 modell.
+
+A jeleket először napi szinten képezzük, majd256 egyenletes pozícióra
+interpoláljuk. Csak a 3–6. blokkon illesztünk egy gain+offset egyenest;
+az1,2,7,8. blokkon ellenőrizzük. Nincs szabad időtorzítás, simítás vagy
+külön fáziskorrekció. A későbbi2024-es árfolyam nem kerül a tesztbe;
+a feltételezett megjelenési dátum és a mai történeti forrás revíziói korlátok.
+
+A legjobb feltáró változat:2020-05-11-től abszolút napi loghozam,
+fordított sorrendben, negatív gainnel a normalizált q-ra illesztve.
+Ez eleve nem közvetlen időrendi árfolyamgörbe.
+
+| Ellenőrző mutató | Érték |
+| --- | ---: |
+| Modell MSE | 1,2775683 |
+| Tanítóátlagot jósló alapmodell MSE | 1,3217773 |
+| Relatív javulás | 0,0334467, azaz3,34% |
+| Jóslat–cél korreláció | 0,1722444 |
+
+A 255 nemnulla körkörös eltolás mindegyikén újraillesztjük a teljes
+24modell-családot a tanítóadatokon, és a legjobb kihagyott javulást vesszük.
+102 referencia legalább ilyen jó. Az identitást is beleszámító feltételes
+arány103/256=0,40234375. Ez leíró eltolásos családreferencia, nem globális
+p-érték vagy általános árfolyamkódolási kizárás. A vizsgált alakmodellek
+nem adnak érdemi támogatást az árfolyamhipotézishez.
+
+### 8. Független audit és a korlátok összekapcsolása
+
+Az audit12 bemeneti/programfájl hashét ellenőrzi. A marker XEX/NMRM
+receptszámát külön, egyenlőtlenségekből számolja vissza, nem a szövegdekóder
+újrahívásával. Ellenőrzi a256 csúcsot,752 blokkon belüli és766 teljes
+modellpixelt, valamint a128bájtos deltafájl visszaállítását.
+
+Mind a24 576 PCM-tömböt külön Python-állapotgéppel újradekódolja és
+összeveti. A24 árfolyammodellt és mind a255 teljes családreferenciát
+független least-squares számítással is visszaállítja. Minden ellenőrzés sikeres.
+
+A mostani hangpróba teljes kezdetiállapot-keresése más, pontosan rögzített
+bemenetcsalád, mint a felhasználó korábbi2186jelöltes vizsgálata; annak
+minden változatát nem állítjuk reprodukáltnak. Új privátkulcs-jelöltet nem
+állítottunk elő. A geometriai, több képelemet összekötő és más konkrét
+Fibonacci/demodulációs ágak megmaradnak.
+
+### 9. Reprodukció és folyamatos naplózás
+
+```sh
+python tools/audit_marker_pixel_revisit.py
+python tools/probe_fibonacci_audio.py
+python tools/check_price_shape_revisit.py
+python tools/audit_audio_revisit_results.py
+```
+
+A teljes új fejezet, három rögzített modell és minden új adat/program hash-e
+a meglévő fő MD VÉGÉHEZ kerül az append-programmal,21. körként. Új MD nincs.
+Az indexelő csak ellenőrzi a régi prefixet és frissíti az aktuális jegyzéket.
+
+**Nincs igazolt Morse-üzenet, eredeti hangdekódolás, teljes generátor vagy HALV-kulcs.**
+
+
+### A fejezethez rögzített pontos modellreceptek
+
+
+#### marker_pixel_revisit_v1.json
+
+Forrás: [marker_pixel_revisit_v1.json](models/marker_pixel_revisit_v1.json), SHA-256: `abd0753e706cca10a3828716090a54eac073d084ec14a5e57df6c37cd2659992`.
+
+```json
+{
+  "model":"C39",
+  "purpose":"Audit the repeated user-supplied marker/raster notes against the stored PNG; export exact canonical data",
+  "marker_column":91,
+  "marker_rows_inclusive":[443,506],
+  "claimed_ramp":[23,47,75,107,141,178,216],
+  "ramp_audit":"Nearest ramp value for intensities>=3, tolerance1; separately test a fixed7row carrier phase, without silently adding phase corrections",
+  "threshold_scan":"All brightness>=threshold, threshold1..255, ROI438..512; both vertical directions; nine-component cases only",
+  "morse_scan":"One global minimum dash height and one global minimum interletter blank gap per reading; enumerate all possible cuts; targetXEX andNMRM; symmetry not a selection criterion",
+  "exact_timing_followup":"After the first marker audit, additionally test every9component threshold/direction with rational globalunit=first_mark orfirst_mark/3; all on/off durations must obey1,3 and1,3,7 exactly",
+  "wave_export":"Nominal256 vertices atx92+3i; per-block exact3q interpolation over31 intervals,94 pixels, no invented endpoint; physical whole-polyline766columns viaFractions",
+  "fib_export":"Archived16entryFibonacci table; global256deltaindices with initialstate0, low-first nibble packing128bytes;248 within-block deltas separately",
+  "analytic_checks":["Every within-block pixel delta is the original vertex delta repeated3times","IndexLSB equals current amplitude parity XOR previous amplitude parity","Encoding q deltas then decoding recovers q by construction, not independent codec proof"],
+  "limitations":["PNG provenance is the existing public mirror, not a new byte-verified user attachment","Brightness ramp need not have exactly fixed global7row phase","Conditional Morse threshold rules do not identify author intent","Per-pixel interpolated values are model-derived, not additional independent samples","No new private-key search"]
+}
+```
+
+
+#### fibonacci_audio_probe_v1.json
+
+Forrás: [fibonacci_audio_probe_v1.json](models/fibonacci_audio_probe_v1.json), SHA-256: `039514230c1374bef743f930df63cd821db3fddf77c10dcf340f68b0d3868203`.
+
+```json
+{
+  "model":"C40",
+  "question":"Does a full512bit two-bit-packed source interpreted as8SVX delta codes yield strict amplitude-gated Morse, with all256 initial predictors?",
+  "source":"Unchanged256 q states; all24 shared state-to-dibit bijections, both directions, two within-byte nibble orders:96 compressed-code streams",
+  "codec":"ArchivedFFmpegFibonacci table, unsigned0..255 saturation after every delta; all initial0..255; bare decoder core, not an identifiedIFF file",
+  "decoded_samples":128,
+  "activities":"abs(decoded_PCM-128)>threshold, thresholds0,8,16,32; no per-segment threshold changes",
+  "morse":"Native units1..8samples, exact on lengths1or3 units, exact inner gaps1,3,7; trim only exterior silence; require>=8marks,>=3 alphanumeric letters, no invalid code groups",
+  "dedup":"Deduplicate identical128bit activity masks across seed/threshold/source recipes before detection; retain one witness and occurrence count",
+  "controls":"If any qualified observed message exists, run16 within-block histogram-preserving q shuffles and the same full search; report selected-family reference fractions, not a global discovery p-value. If none, explicitly skip conditional controls.",
+  "separate_identity_probe":"Encode original q vertex deltas toFibonacci indices then decode all256 seeds; measure DC-equivalence classes; this is an encode/decode identity, not new decryption",
+  "calibration":"Synthetic SOS envelope encoded with +/-21 and0 deltas must roundtrip and pass exact Morse; known clipping vectors; no fake zero fill",
+  "exports":"All observed decoded PCM arrays and recipes; one explicitly hypothetical128sample PCM CSV; no invented sample rate or claim of recovered original sound",
+  "limitations":["No original audio file, sample rate, sign or encryption scheme identified","State relabeling and Morse activity choices are exploratory","Strict amplitude gating is not a complete frequency-domain demodulator","Morse-like short text alone is not a key or proof","At unit>=1sample,51 Morse characters need at least201 samples,64 characters253; a128sample stream cannot directly contain them under these timing rules"]
+}
+```
+
+
+#### price_shape_revisit_v1.json
+
+Forrás: [price_shape_revisit_v1.json](models/price_shape_revisit_v1.json), SHA-256: `f14a2be84f57693d3a943d846555b33bfc452b73661174e73d5320799ada5b5d`.
+
+```json
+{
+  "model":"C41",
+  "purpose":"A fixed actual curve-shape comparison for the repeated2020-2024price hypothesis, beyond the old8block envelope test",
+  "data":"ArchivedCoinMetrics daily prices, latest2024-04-19; do not use later2024 data",
+  "starts":["2020-01-01","2020-05-11"],
+  "signals":["price","log_price","absolute_daily_log_return"],
+  "resampling":"Derive each daily signal first, then interpolate linearly to256 equal-count positions over its valid window; returns start on the second day",
+  "directions":["forward","reverse"],
+  "targets":["normalized_q","physical_height_q_times_scale"],
+  "fit":"One affine gain+offset per case, fitted only on blocks3..6; no time-warp, extra phase, smoothing, clipping or rounding repair",
+  "validation":"Blocks1,2,7,8; report heldoutMSE against constant training-mean baseline and Pearson correlation; positive skill is not generator proof",
+  "reference":"All255 nonzero cyclic shifts, same shift for all signal alternatives; refit training only and take max heldout skill across the full24model family; descriptive conditional reference, not global discovery p-value",
+  "calibration":"Known affine target on heldout samples, constant input, identity shift reproduces observed family",
+  "limitations":["Today's archived historical source may contain revisions, not a2024snapshot","The image-date interpretation is conditional","Curve transforms and family chosen after observing the image","Tests these24 fixed signal models only, not arbitrary encoded price references","No private-key search"]
+}
+```
+
+
+### A fejezet adatai és reprodukciós programjai
+
+
+| Fájl | Bájt | SHA-256 |
+| --- | ---: | --- |
+| [research/data/canonical_q256.txt](data/canonical_q256.txt) | 734 | `103e95a19881b1b042fd763a7c902f518deb32dd6eeee807b16f404f0718aea8` |
+| [research/data/canonical_q256.csv](data/canonical_q256.csv) | 7665 | `a46a75032b110c9e9234338c575da70795c86d1cac5d150d17c4e91346cd1a18` |
+| [research/data/canonical_within_block_pixels.csv](data/canonical_within_block_pixels.csv) | 12426 | `2e7fe4452aa46c65096f1831779994cb8ea706c63d4dde6c5ec8064e65fff877` |
+| [research/data/canonical_physical_polyline_pixels.csv](data/canonical_physical_polyline_pixels.csv) | 12341 | `eea766cf83c61c19b5f8b6da10f2cf84eb33b069c4506fbd701f8c4a4233bbdf` |
+| [research/data/canonical_fib_delta_low_first.bin](data/canonical_fib_delta_low_first.bin) | 128 | `894b37a69954a632edfd54aff4132b4edef04fe1fa25efb4d73b2d08e657feb1` |
+| [research/data/marker_x91_rows443_506.csv](data/marker_x91_rows443_506.csv) | 860 | `7374def260b7e33fed6e6808fe6b40cf7c944669ef5d541b72af993371ecff75` |
+| [research/data/marker_pixel_revisit_check.json](data/marker_pixel_revisit_check.json) | 184061 | `4edcd8f9536e7905117bbdf441fccb61cef3fbdc5ae036fa825943b9d16808b3` |
+| [research/data/fibonacci_audio_probe_check.json](data/fibonacci_audio_probe_check.json) | 19809 | `ea70b774b388815df087b84d04f1d8d5c4ed925286405ceeb9c995256782a3b6` |
+| [research/data/fibonacci_pcm128_all_seeds.npz](data/fibonacci_pcm128_all_seeds.npz) | 885894 | `5a5d170aaecd64ebe56b99a9c8cc981f1081104403004f17a00879b07230d4d2` |
+| [research/data/hypothetical_pcm128_identity_seed128.csv](data/hypothetical_pcm128_identity_seed128.csv) | 7499 | `25ff02c98056b136a36e739f7fcca62ac7a4ee7978644323f0a752f96fa02bb9` |
+| [research/data/price_shape_revisit_check.json](data/price_shape_revisit_check.json) | 37768 | `479a1d5d22993a2e915bab8da1ac40e36d878f0801b669b874aba158f00386f3` |
+| [research/data/price_shape_resampled256.csv](data/price_shape_resampled256.csv) | 74908 | `29a0baac62fb8e9434ed2d661dd4bac0178353879413be928c1f69caf7cd944d` |
+| [research/data/audio_revisit_integrity.json](data/audio_revisit_integrity.json) | 917 | `afe1f1000a845c42811626da639fc02deab855f9e20ecaf01742fce43c437243` |
+| [tools/audit_marker_pixel_revisit.py](../tools/audit_marker_pixel_revisit.py) | 8314 | `55e9be5c7db65a3d7029eb636c9190ac1c3d70aebc57801d8b26a68c55a9f92d` |
+| [tools/probe_fibonacci_audio.py](../tools/probe_fibonacci_audio.py) | 7797 | `6e881c9ad7cd98cca485f6eefdd2cf2e63f12338e090c47947daca1f7030b341` |
+| [tools/check_price_shape_revisit.py](../tools/check_price_shape_revisit.py) | 4234 | `b799331953c1c85dc2e912000cb1b86a6c07f4ec69464322be12642d67002303` |
+| [tools/audit_audio_revisit_results.py](../tools/audit_audio_revisit_results.py) | 6563 | `7b22e71bad09d59787e327ddcd6468ab8bc3847b3f9c0cebac994a70257bdf6f` |
+| [tools/build_research_index.py](../tools/build_research_index.py) | 12134 | `1a1fabfb2a06192b614fcad4ddd6296399b2412a9bca62bbe4e65744156dc83c` |

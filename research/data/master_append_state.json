@@ -1719,6 +1719,122 @@
           "sha256": "2453eff540cc33d2df6929bb2b3e7e6e40d378da029fb774f74d583bfab72765"
         }
       ]
+    },
+    {
+      "journal_round": 21,
+      "offset": 312963,
+      "bytes": 22958,
+      "sha256": "6f490c6e6c4a1e37c8533f1e45da62ef830c70dbc67dcbd8280ac433ac67826d",
+      "journal_section_sha256": "42e048e6c2e2c9260f9db2757a107c1e6ebd94f326962c8a86201ed981abec71",
+      "model_inputs": [
+        {
+          "path": "research/models/marker_pixel_revisit_v1.json",
+          "bytes": 1886,
+          "sha256": "abd0753e706cca10a3828716090a54eac073d084ec14a5e57df6c37cd2659992"
+        },
+        {
+          "path": "research/models/fibonacci_audio_probe_v1.json",
+          "bytes": 2149,
+          "sha256": "039514230c1374bef743f930df63cd821db3fddf77c10dcf340f68b0d3868203"
+        },
+        {
+          "path": "research/models/price_shape_revisit_v1.json",
+          "bytes": 1552,
+          "sha256": "f14a2be84f57693d3a943d846555b33bfc452b73661174e73d5320799ada5b5d"
+        }
+      ],
+      "artifact_inputs": [
+        {
+          "path": "research/data/canonical_q256.txt",
+          "bytes": 734,
+          "sha256": "103e95a19881b1b042fd763a7c902f518deb32dd6eeee807b16f404f0718aea8"
+        },
+        {
+          "path": "research/data/canonical_q256.csv",
+          "bytes": 7665,
+          "sha256": "a46a75032b110c9e9234338c575da70795c86d1cac5d150d17c4e91346cd1a18"
+        },
+        {
+          "path": "research/data/canonical_within_block_pixels.csv",
+          "bytes": 12426,
+          "sha256": "2e7fe4452aa46c65096f1831779994cb8ea706c63d4dde6c5ec8064e65fff877"
+        },
+        {
+          "path": "research/data/canonical_physical_polyline_pixels.csv",
+          "bytes": 12341,
+          "sha256": "eea766cf83c61c19b5f8b6da10f2cf84eb33b069c4506fbd701f8c4a4233bbdf"
+        },
+        {
+          "path": "research/data/canonical_fib_delta_low_first.bin",
+          "bytes": 128,
+          "sha256": "894b37a69954a632edfd54aff4132b4edef04fe1fa25efb4d73b2d08e657feb1"
+        },
+        {
+          "path": "research/data/marker_x91_rows443_506.csv",
+          "bytes": 860,
+          "sha256": "7374def260b7e33fed6e6808fe6b40cf7c944669ef5d541b72af993371ecff75"
+        },
+        {
+          "path": "research/data/marker_pixel_revisit_check.json",
+          "bytes": 184061,
+          "sha256": "4edcd8f9536e7905117bbdf441fccb61cef3fbdc5ae036fa825943b9d16808b3"
+        },
+        {
+          "path": "research/data/fibonacci_audio_probe_check.json",
+          "bytes": 19809,
+          "sha256": "ea70b774b388815df087b84d04f1d8d5c4ed925286405ceeb9c995256782a3b6"
+        },
+        {
+          "path": "research/data/fibonacci_pcm128_all_seeds.npz",
+          "bytes": 885894,
+          "sha256": "5a5d170aaecd64ebe56b99a9c8cc981f1081104403004f17a00879b07230d4d2"
+        },
+        {
+          "path": "research/data/hypothetical_pcm128_identity_seed128.csv",
+          "bytes": 7499,
+          "sha256": "25ff02c98056b136a36e739f7fcca62ac7a4ee7978644323f0a752f96fa02bb9"
+        },
+        {
+          "path": "research/data/price_shape_revisit_check.json",
+          "bytes": 37768,
+          "sha256": "479a1d5d22993a2e915bab8da1ac40e36d878f0801b669b874aba158f00386f3"
+        },
+        {
+          "path": "research/data/price_shape_resampled256.csv",
+          "bytes": 74908,
+          "sha256": "29a0baac62fb8e9434ed2d661dd4bac0178353879413be928c1f69caf7cd944d"
+        },
+        {
+          "path": "research/data/audio_revisit_integrity.json",
+          "bytes": 917,
+          "sha256": "afe1f1000a845c42811626da639fc02deab855f9e20ecaf01742fce43c437243"
+        },
+        {
+          "path": "tools/audit_marker_pixel_revisit.py",
+          "bytes": 8314,
+          "sha256": "55e9be5c7db65a3d7029eb636c9190ac1c3d70aebc57801d8b26a68c55a9f92d"
+        },
+        {
+          "path": "tools/probe_fibonacci_audio.py",
+          "bytes": 7797,
+          "sha256": "6e881c9ad7cd98cca485f6eefdd2cf2e63f12338e090c47947daca1f7030b341"
+        },
+        {
+          "path": "tools/check_price_shape_revisit.py",
+          "bytes": 4234,
+          "sha256": "b799331953c1c85dc2e912000cb1b86a6c07f4ec69464322be12642d67002303"
+        },
+        {
+          "path": "tools/audit_audio_revisit_results.py",
+          "bytes": 6563,
+          "sha256": "7b22e71bad09d59787e327ddcd6468ab8bc3847b3f9c0cebac994a70257bdf6f"
+        },
+        {
+          "path": "tools/build_research_index.py",
+          "bytes": 12134,
+          "sha256": "1a1fabfb2a06192b614fcad4ddd6296399b2412a9bca62bbe4e65744156dc83c"
+        }
+      ]
     }
   ]
 }

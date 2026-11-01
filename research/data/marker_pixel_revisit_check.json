@@ -1,0 +1,10480 @@
+{
+  "model": "C39",
+  "input_sha256": {
+    "research/models/marker_pixel_revisit_v1.json": "abd0753e706cca10a3828716090a54eac073d084ec14a5e57df6c37cd2659992",
+    "research/sources/cryptoHALV.png": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/sources/ffmpeg_8svx.c": "2b873e391d1e2747fd3d2f696c08054489e502e26cd0e1b7f117f15fa619084f",
+    "tools/audit_marker_pixel_revisit.py": "55e9be5c7db65a3d7029eb636c9190ac1c3d70aebc57801d8b26a68c55a9f92d",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+  },
+  "marker": {
+    "raw_intensities": [
+      1,
+      23,
+      47,
+      75,
+      107,
+      141,
+      178,
+      216,
+      23,
+      47,
+      75,
+      107,
+      0,
+      0,
+      0,
+      0,
+      0,
+      75,
+      107,
+      141,
+      178,
+      216,
+      2,
+      23,
+      75,
+      106,
+      141,
+      178,
+      217,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      216,
+      1,
+      23,
+      47,
+      75,
+      140,
+      177,
+      217,
+      1,
+      23,
+      47,
+      75,
+      107,
+      0,
+      0,
+      0,
+      0,
+      0,
+      75,
+      106,
+      141,
+      216,
+      2,
+      23,
+      47,
+      75,
+      106,
+      140,
+      177
+    ],
+    "strong_points": 43,
+    "near_claimed_ramp_tolerance1": 43,
+    "fixed7row_carrier_fits": [
+      {
+        "phase_y_mod7": 0,
+        "strong_points_fitting_tolerance1": 0,
+        "strong_points": 43,
+        "strong_L1_residual": 5015
+      },
+      {
+        "phase_y_mod7": 1,
+        "strong_points_fitting_tolerance1": 0,
+        "strong_points": 43,
+        "strong_L1_residual": 4433
+      },
+      {
+        "phase_y_mod7": 2,
+        "strong_points_fitting_tolerance1": 0,
+        "strong_points": 43,
+        "strong_L1_residual": 3003
+      },
+      {
+        "phase_y_mod7": 3,
+        "strong_points_fitting_tolerance1": 26,
+        "strong_points": 43,
+        "strong_L1_residual": 531
+      },
+      {
+        "phase_y_mod7": 4,
+        "strong_points_fitting_tolerance1": 17,
+        "strong_points": 43,
+        "strong_L1_residual": 1189
+      },
+      {
+        "phase_y_mod7": 5,
+        "strong_points_fitting_tolerance1": 0,
+        "strong_points": 43,
+        "strong_L1_residual": 3246
+      },
+      {
+        "phase_y_mod7": 6,
+        "strong_points_fitting_tolerance1": 0,
+        "strong_points": 43,
+        "strong_L1_residual": 4553
+      }
+    ],
+    "nine_component_thresholds": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107
+    ],
+    "masks": [
+      {
+        "threshold": 1,
+        "bits": "1111111111110000011111111111110000011111111111110000011111111111",
+        "hex": "fff07ffc1fff07ff",
+        "ones": 49
+      },
+      {
+        "threshold": 3,
+        "bits": "0111111111110000011111011111100000010111111011110000011110111111",
+        "hex": "7ff07df817ef07bf",
+        "ones": 43
+      },
+      {
+        "threshold": 32,
+        "bits": "0011111101110000011111001111100000010011111001110000011110011111",
+        "hex": "3f707cf813e7079f",
+        "ones": 37
+      },
+      {
+        "threshold": 178,
+        "bits": "0000001100000000000011000001100000010000001000000000000010000000",
+        "hex": "03000c1810200080",
+        "ones": 9
+      }
+    ],
+    "exact_standard_Morse_timing_recipes": [],
+    "global_morse_target_recipe_counts": {
+      "XEX": 0,
+      "NMRM": 309
+    },
+    "global_morse_target_recipes": {
+      "XEX": [],
+      "NMRM": [
+        {
+          "brightness_threshold": 24,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 24,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 24,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 25,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 25,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 25,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 26,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 26,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 26,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 27,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 27,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 27,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 28,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 28,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 28,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 29,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 29,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 29,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 30,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 30,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 30,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 31,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 31,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 31,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 32,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 32,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 32,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 33,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 33,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 33,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 34,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 34,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 34,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 35,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 35,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 35,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 36,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 36,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 36,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 37,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 37,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 37,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 38,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 38,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 38,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 39,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 39,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 39,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 40,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 40,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 40,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 41,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 41,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 41,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 42,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 42,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 42,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 43,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 43,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 43,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 44,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 44,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 44,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 45,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 45,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 45,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 46,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 46,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 46,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 47,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 3,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 47,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 47,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            6,
+            3,
+            5,
+            5,
+            1,
+            5,
+            3,
+            4,
+            5
+          ],
+          "gaps": [
+            1,
+            5,
+            2,
+            6,
+            2,
+            2,
+            5,
+            2
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 48,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 48,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 48,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 48,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 49,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 49,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 49,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 49,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 50,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 50,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 50,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 50,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 51,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 51,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 51,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 51,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 52,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 52,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 52,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 52,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 53,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 53,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 53,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 53,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 54,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 54,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 54,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 54,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 55,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 55,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 55,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 55,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 56,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 56,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 56,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 56,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 57,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 57,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 57,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 57,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 58,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 58,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 58,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 58,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 59,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 59,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 59,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 59,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 60,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 60,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 60,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 60,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 61,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 61,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 61,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 61,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 62,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 62,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 62,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 62,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 63,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 63,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 63,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 63,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 64,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 64,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 64,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 64,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 65,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 65,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 65,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 65,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 66,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 66,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 66,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 66,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 67,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 67,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 67,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 67,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 68,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 68,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 68,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 68,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 69,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 69,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 69,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 69,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 70,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 70,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 70,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 70,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 71,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 71,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 71,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 71,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 72,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 72,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 72,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 72,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 73,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 73,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 73,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 73,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 74,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 74,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 74,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 74,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 75,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 75,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 75,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 4,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 75,
+          "reverse": false,
+          "dash_min_height": 4,
+          "letter_gap_min": 5,
+          "heights": [
+            5,
+            2,
+            5,
+            5,
+            1,
+            4,
+            2,
+            4,
+            4
+          ],
+          "gaps": [
+            2,
+            5,
+            2,
+            6,
+            3,
+            3,
+            5,
+            3
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 76,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 76,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 76,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 76,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 77,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 77,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 77,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 77,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 78,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 78,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 78,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 78,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 79,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 79,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 79,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 79,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 80,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 80,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 80,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 80,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 81,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 81,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 81,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 81,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 82,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 82,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 82,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 82,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 83,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 83,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 83,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 83,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 84,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 84,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 84,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 84,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 85,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 85,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 85,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 85,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 86,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 86,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 86,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 86,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 87,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 87,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 87,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 87,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 88,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 88,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 88,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 88,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 89,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 89,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 89,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 89,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 90,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 90,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 90,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 90,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 91,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 91,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 91,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 91,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 92,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 92,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 92,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 92,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 93,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 93,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 93,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 93,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 94,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 94,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 94,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 94,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 95,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 95,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 95,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 95,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 96,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 96,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 96,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 96,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 97,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 97,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 97,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 97,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 98,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 98,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 98,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 98,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 99,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 99,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 99,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 99,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 100,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 100,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 100,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 100,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 101,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 101,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 101,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 101,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 102,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 102,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 102,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 102,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 103,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 103,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 103,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 103,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 104,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 104,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 104,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 104,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 105,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 105,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 105,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 105,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 106,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 106,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 106,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 5,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 106,
+          "reverse": false,
+          "dash_min_height": 3,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            4,
+            1,
+            3,
+            1,
+            3,
+            3
+          ],
+          "gaps": [
+            3,
+            6,
+            3,
+            6,
+            4,
+            4,
+            6,
+            4
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        },
+        {
+          "brightness_threshold": 107,
+          "reverse": false,
+          "dash_min_height": 2,
+          "letter_gap_min": 6,
+          "heights": [
+            4,
+            1,
+            4,
+            3,
+            1,
+            3,
+            1,
+            2,
+            2
+          ],
+          "gaps": [
+            3,
+            6,
+            4,
+            6,
+            4,
+            4,
+            7,
+            5
+          ],
+          "groups": [
+            "-.",
+            "--",
+            ".-.",
+            "--"
+          ]
+        }
+      ]
+    }
+  },
+  "wave": {
+    "vertices": 256,
+    "packed_delta_bytes": 128,
+    "within_block_vertex_deltas": 248,
+    "within_block_pixels": 752,
+    "within_block_pixel_deltas": 744,
+    "whole_polyline_pixels": 766,
+    "triplication_identity": true,
+    "vertex_delta_histogram": {
+      "-3": 15,
+      "-2": 35,
+      "-1": 33,
+      "0": 83,
+      "1": 27,
+      "2": 47,
+      "3": 8
+    },
+    "pixel_delta_histogram": {
+      "-3": 45,
+      "-2": 105,
+      "-1": 99,
+      "0": 249,
+      "1": 81,
+      "2": 141,
+      "3": 24
+    },
+    "fib_delta_LSB_is_parity_difference": true,
+    "encode_decode_identity": true
+  },
+  "limitations": [
+    "PNG provenance is the existing public mirror, not a new byte-verified user attachment",
+    "Brightness ramp need not have exactly fixed global7row phase",
+    "Conditional Morse threshold rules do not identify author intent",
+    "Per-pixel interpolated values are model-derived, not additional independent samples",
+    "No new private-key search"
+  ]
+}

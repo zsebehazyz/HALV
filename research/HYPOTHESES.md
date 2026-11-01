@@ -587,3 +587,42 @@ Ezek a kötött indexelésű, értékváltoztatás nélküli ablakmodellek negat
 nem minden adatfolyam vagy nemlineáris kódoló kizárásai. A geometriai és
 Fibonacci–hang–Morse ág megmarad. Részletes folytatás a meglévő fő MD
 végén: `HALV_TELJES_KUTATAS.md#round-20`. Új jelentés-MD nem készült.
+
+## C39–C41: a megismételt Fibonacci/Morse/hang és árfolyamnyom ellenőrzése
+
+C39: x=91, y443..506 pontos adatok exportálva. A43 erős pixel hét névleges
+fényességszinthez illik±1 mellett, de egyetlen globális7soros fázis csak26-ot
+ír le pontosan. Ez gyengíti a szó szerint vett rögzített rámpa×maszk modellt;
+a fényesség önmagában nem igazolt64független nibble-adatforrás.
+
+Mind a255 fényességküszöb, két irány és összes közös hossz-/szünetküszöb
+kilencjeles eseteiben XEX-re0, NMRM-re309 recept adódik. A kilencjeles
+kivágatok pontos racionális1:3 és1:3:7 időzítésének nincs megoldása.
+A feltételes NMRM nem igazolt üzenet; XEX kizárása e konkrét globális
+oszlop-/küszöbmodellre vonatkozik, nem minden grafikus Morse-kódolóra.
+
+A kanonikus rekonstrukció256 csúcs. A128bájtos Fibonacci-deltafájl256
+nibble-t tárol, nem128mért mintát. A blokkon belüli744 pixeldelta a248
+eredeti delta triplikálása; a−3..+3 ábécé itt nem önálló kodekbizonyíték.
+I=8+delta, ezért I alsóbitje a q-paritás első különbsége. A nemnulla delta
+pontosan az I!=8 feltétel, a korábban is vizsgált változásjelző.
+
+C40: a teljes512bites képi állapotcsomag64bájtját nyers Fibonacci-kódnak
+tekintve128PCM-minta adódik.96 közösállapot-/irány-/nibblesorrend-recept,
+mind256 kezdőérték:24576 PCM-tömb. A13299 különböző aktivitásmaszkból
+nincs legalább8jeles,3karakteres, pontos standardidőzítésű Morse-üzenet.
+Ez FFmpeg-szerű telítődő dekódermag és rögzített amplitúdókapuzás tesztje,
+nem minden hangmoduláció, titkosítás vagy Fibonacci-eljárás kizárása.
+Külön q-delta visszakódolásnál253 kezdőérték csak DC-eltolást ad;
+a három felső kezdőállapot telítődése egy második relatív alakot hoz létre.
+
+C41: napi ár, logár és abszolút loghozam, két kezdődátum, két irány,
+két hullámnormalizálás; csak középső blokkokon illesztett gain/offset.
+A24 modell legjobb kihagyott javulása0,03345, az egész családot újraillesztő
+255 körkörös referencia közül102 legalább ilyen jó: feltételes arány0,40234.
+Ez nem globális p-érték és nem erős árfolyamjel.2024-04-19utáni adat nincs.
+
+A „Cracked it…” idézet a kezdeti user_prior_notes.txt-ben már benne volt,
+nem új független megerősítés. A közölt2186×4 jelöltet nem könyveljük el
+saját új futásként. A geometriai ág és a konkrét további hangkodek/
+demoduláció lehetősége megmarad. Részletek a meglévő fő MD végén,21. kör.

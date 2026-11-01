@@ -1,0 +1,15 @@
+{
+  "model":"C39",
+  "purpose":"Audit the repeated user-supplied marker/raster notes against the stored PNG; export exact canonical data",
+  "marker_column":91,
+  "marker_rows_inclusive":[443,506],
+  "claimed_ramp":[23,47,75,107,141,178,216],
+  "ramp_audit":"Nearest ramp value for intensities>=3, tolerance1; separately test a fixed7row carrier phase, without silently adding phase corrections",
+  "threshold_scan":"All brightness>=threshold, threshold1..255, ROI438..512; both vertical directions; nine-component cases only",
+  "morse_scan":"One global minimum dash height and one global minimum interletter blank gap per reading; enumerate all possible cuts; targetXEX andNMRM; symmetry not a selection criterion",
+  "exact_timing_followup":"After the first marker audit, additionally test every9component threshold/direction with rational globalunit=first_mark orfirst_mark/3; all on/off durations must obey1,3 and1,3,7 exactly",
+  "wave_export":"Nominal256 vertices atx92+3i; per-block exact3q interpolation over31 intervals,94 pixels, no invented endpoint; physical whole-polyline766columns viaFractions",
+  "fib_export":"Archived16entryFibonacci table; global256deltaindices with initialstate0, low-first nibble packing128bytes;248 within-block deltas separately",
+  "analytic_checks":["Every within-block pixel delta is the original vertex delta repeated3times","IndexLSB equals current amplitude parity XOR previous amplitude parity","Encoding q deltas then decoding recovers q by construction, not independent codec proof"],
+  "limitations":["PNG provenance is the existing public mirror, not a new byte-verified user attachment","Brightness ramp need not have exactly fixed global7row phase","Conditional Morse threshold rules do not identify author intent","Per-pixel interpolated values are model-derived, not additional independent samples","No new private-key search"]
+}

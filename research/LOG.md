@@ -2206,3 +2206,274 @@ parancs fűzi a fő MD végéhez; ezután `python tools/build_research_index.py`
 A pontos források és hash-ek közvetlenül e fejezet után szerepelnek.
 
 **Nincs igazolt közös generátor, megjósolt teljes javítás vagy HALV-kulcs.**
+
+## 2026-11-01 – huszonegyedik kör: jelölő, Fibonacci–Morse–hang és árfolyam, C39–C41
+
+### 1. Kérés, forrás és előzmények
+
+A felhasználó ismét a 2020–2024-es BTC-árfolyam, a kilencjelű marker és a
+Fibonacci/hang/Morse irány ellenőrzését kérte, továbbra is a meglévő fő MD
+végéhez fűzve, új MD nélkül. Az ezt követő „folytasd” üzenet ugyanezt a
+munkát folytatta. A fő MD addigi 312 963 bájtja változatlan marad;
+SHA-256: `9e380a379296545cc18ababfe87625a34af48e27e85a562204b72adff0816936`.
+
+A „Cracked it. I dont want the balance…” idézetet az eredeti
+`sources/user_prior_notes.txt` már szó szerint tartalmazta. Ez nem új,
+független megerősítés. Nem kaptunk hozzá ellenőrizhető eredeti URL-t,
+megfejtési láncot vagy címegyezési bizonyítékot; HALV-ra vonatkozása sem
+lett önállóan hitelesítve. Kutatási nyomként megőrizzük.
+
+A közölt 2186×4 jelölt és a négy kezdeti Fibonacci-érték eredményeit nem
+számoljuk saját új futásnak: a mostani reprodukálható programok pontos
+bemeneteit és számlálási egységeit külön rögzítjük. Elolvastuk a korábbi
+árfolyam-, marker-, delta- és 8SVX-teszteket, hogy az ismétlést elkülönítsük
+az új, összekapcsolt ellenőrzéstől. Az eredeti q és teljes R változatlan.
+
+### 2. C39 – a fényességrámpa új, pontos ellenőrzése
+
+Rögzített specifikáció: `models/marker_pixel_revisit_v1.json`.
+A tárolt PNG x=91 oszlopának y=443..506 szakaszát mind a 64 sorral
+kiexportáltuk. A 3 vagy nagyobb fényességű 43 pixel mind a következő
+hét névleges érték egyikéhez illeszkedik legfeljebb 1 eltéréssel:
+
+```
+23,47,75,107,141,178,216
+```
+
+Tehát a hét fényességszint megfigyelése reprodukálható. A szó szerint vett,
+rögzített fázisú hét­soros rámpa×bináris maszk már nem teljes magyarázat:
+a hét lehetséges közös fázis legjobbja csak 26/43 erős pixelt ír le ±1-re.
+A másik kedvező fázis 17/43-at. További fáziskorrekciót nem illesztettünk
+utólag, és nem nevezzük ezt bizonyított, kizárólag kitakarást hordozó kódnak.
+
+A 64 sorhoz négy konkrét bináris maszkot is eltettünk:
+
+| Fényességküszöb (>=) | Egyes bitek | Maszk, hexadecimálisan |
+| --- | ---: | --- |
+| 1 | 49 | fff07ffc1fff07ff |
+| 3 | 43 | 7ff07df817ef07bf |
+| 32 | 37 | 3f707cf813e7079f |
+| 178 | 9 | 03000c1810200080 |
+
+Ezek 64 bites láthatósági nézetek, nem 64 független nibble-adat bizonyítékai.
+A 64 sorból kivágott maszk, a korábbi 63 aktív soros nézet és a BD
+nyolc rácspozíciója külön reprezentáció; nem cseréljük fel őket.
+
+### 3. XEX és NMRM: egységes szabállyal vizsgálva
+
+Mind a 255 fényességküszöbön, két függőleges irányban megmértük az
+összefüggő jeleket. A kilenc jelet adó küszöbök ismét 24..107.
+Ezeknél végigvettük az összes egyetlen közös hosszúsági küszöböt
+(pont/vonás), és egyetlen közös üresszakasz-küszöböt (betűhatár).
+Nem választottunk külön határt az egyes betűkhöz.
+
+| Keresett szöveg | Megfelelő küszöb-/irány-/hossz-/szünetreceptek |
+| --- | ---: |
+| XEX | 0 |
+| NMRM | 309 |
+
+A 309 ismétlődő bináris nézeteket is tartalmaz; nem ennyi független bizonyíték.
+A korábbi konkrét NMRM reprodukálható: fényesség>=32, vonás legalább4px,
+betűszünet legalább5 üres pixel. Magasságok és tényleges üres sorok:
+
+```
+magasság: 6,3,5,5,1,5,3,4,5
+szünet:   1,5,2,6,2,2,5,2
+csoport:  -. | -- | .-. | --
+```
+
+Az XEX ebben a nézetben nem pusztán egy 5px-es jel besorolásán múlik:
+azonos 5px-es jelekhez egyszer pontot, másszor vonást kérne, és a kívánt
+betűszünetek között olyan rövid szünet is van, amelynél egy belső szünet
+hosszabb. Egy közös hossz- és szünetküszöb ezt nem tudja megvalósítani.
+A tükörszimmetria önmagában nem teszi helyessé az olvasatot.
+
+Az első audit után külön pontos időzítési diagnosztikát is rögzítettünk:
+az első jelből lehetséges minden racionális globális egységgel az összes
+jelhossz 1 vagy3, az összes belső szünet 1,3 vagy7 egység legyen.
+A kilencjeles kivágatok egyikénél sincs pontos megoldás. Ezért az NMRM
+továbbra is feltételes alakolvasat, nem bizonyított szabályos Morse-üzenet.
+Az XEX-negatívum a rögzített x=91 oszlop/globális küszöbcsaládra vonatkozik,
+nem minden elképzelhető grafikus vagy többlépcsős Morse-kódolóra.
+
+### 4. A kért pontos rekonstrukció szövegként és CSV-ben
+
+A stabil névleges rekonstrukció **256 csúcsérték**, nem 128 mért minta.
+`x_i=92+3i`, középvonal y=475; egy blokk 32 csúcs, skálái rendre
+128,64,32,16,8,4,2,1 pixel. Az összes csúcs egy helyen, blokkonként:
+
+```
+2,1,1,1,2,3,3,0,0,3,0,0,0,2,3,1,1,0,1,2,2,1,1,0,1,3,2,1,0,0,3,2
+2,2,1,0,0,3,0,0,2,3,2,2,2,3,0,2,3,3,0,2,2,2,0,2,2,3,1,2,3,2,0,2
+3,0,2,2,1,0,2,2,0,0,2,2,3,0,2,0,3,0,2,0,1,0,2,0,2,0,0,2,0,0,2,0
+0,0,2,0,0,0,0,3,0,2,0,2,0,2,2,1,0,2,0,0,0,2,2,0,0,0,2,2,0,0,2,0
+0,2,2,0,0,0,3,0,2,2,1,0,2,2,0,0,2,2,0,0,0,0,2,0,2,0,1,0,2,0,0,0
+0,3,0,2,2,1,0,0,2,2,0,0,2,3,0,0,0,2,0,0,0,1,0,2,0,1,0,2,2,1,0,0
+0,0,0,2,0,0,0,2,0,0,2,0,1,0,0,0,0,0,0,2,2,0,0,2,3,0,2,2,1,0,0,0
+0,2,2,3,1,1,2,0,0,2,3,3,0,1,0,0,1,1,1,3,1,0,3,1,1,2,1,3,0,1,0,0
+```
+
+A `data/canonical_q256.txt` másolható szöveg, a `data/canonical_q256.csv`
+indexet, blokkot, x-et, skálát, magasságot, deltát és Fibonacci-indexet is
+tartalmaz. A `data/canonical_physical_polyline_pixels.csv` a teljes
+x=92..857 közötti 766 oszlop modell szerinti pontos racionális magassága.
+Ezek modellből visszaállított számok; nem 766 új, független hangminta.
+A nyolc blokkon belüli 94-94 oszlop külön exportban is megvan; a
+skálaváltások közötti két-két köztes oszlopot nem keverjük ezek közé.
+
+### 5. Mitől látszik hét delta a pixelenkénti jelben?
+
+Két szomszédos csúcs között három pixelintervallum van. Az adott blokk
+S/3 egységében az interpolált magasság:
+
+```
+u(3i+t) = 3*q_i + t*(q_(i+1)-q_i), t=0,1,2,3
+```
+
+Az első blokk S/3 értéke valóban 128/3=42,666…px, a q=3 csúcs pedig
+ebben az egységben9. Minden pixellépés ugyanaz a delta, háromszor:
+
+```
+pixel_delta = repeat(vertex_delta,3)
+```
+
+Nyolc blokkon belül 248 eredeti deltából 744 pixeldelta lesz, pontosan
+háromszoros hisztogrammal. Az alábbi számok az összes nyolc blokkot jelentik,
+nem a felhasználó hozzávetőleges első négyszakaszos pixelmérését:
+
+| Delta | Csúcsok között | Modell pixellépései között |
+| --- | ---: | ---: |
+| -3 | 15 | 45 |
+| -2 | 35 | 105 |
+| -1 | 33 | 99 |
+| 0 | 83 | 249 |
+| +1 | 27 | 81 |
+| +2 | 47 | 141 |
+| +3 | 8 | 24 |
+
+A hétértékű ábécé itt tehát a négy szint és az egyenes interpoláció
+következménye is. Önmagában nem független Fibonacci-kodekbizonyíték,
+és a nagyobb pixelszám nem jelent ennyi új információt.
+
+A dokumentált Fibonacci-táblában ezen a tartományon `I=8+delta`.
+Ezért `I&1=(q_i&1) XOR (q_(i-1)&1)`. Az alsó deltaindexbit nem új
+adatcsatorna, hanem a q alsó bitjének első paritáskülönbsége. Az I!=8
+feltétel pedig pontosan a már korábban vizsgált változásjelző.
+Ezek korábbi delta-projekciós családokkal átfednek; nem új független
+kulcskeresési találatként jelentjük őket.
+
+A q-deltákból készített 256 Fibonacci-indexet két nibble/bájttal csomagolva
+**128 bájt** keletkezik: `data/canonical_fib_delta_low_first.bin`.
+Visszadekódolása 0 kezdőállapottal pontosan visszaadja q-t. Ez önmagunk
+kódolásának megfordítása, nem bizonyíték az eredeti kodekre.
+
+### 6. C40 – teljes, minden kezdőértékes Fibonacci-hangpróba
+
+Specifikáció: `models/fibonacci_audio_probe_v1.json`. Itt más a bemenet:
+a képi 256 kétbites állapotot közvetlenül csomagoljuk 64 bájtba, és ezt
+tekintjük hipotetikus tömörített adatnak. A Fibonacci-dekóder ebből
+128 PCM-mintát ad. Ez a 128-as szám nem azonos a 256 mért csúccsal
+vagy a külön, deltákból előállított 128 bájtos fájllal.
+
+24 közös állapot→bitpár leképezés, két olvasási irány, két nibblesorrend:
+96 kódsorozat. Mindegyikhez **mind a 256 kezdeti állapot** szerepelt,
+összesen 24 576 PCM-tömb. Az archivált FFmpeg tábláját és minden
+deltalépés utáni 0..255 telítést használtuk. Ez nyers dekódermag-próba,
+nem azonosított IFF/8SVX fájl vagy általános audio-decryption megoldás.
+
+A Morse-próba négy globális aktivitási szabályt használ:
+`abs(PCM−128)>0,8,16,32`. Azonos aktivitásmaszkot egyszer vizsgálunk,
+első receptjét és előfordulásszámát megőrizzük. 98 304 aktivitási
+előállításból 13 299 különböző 128 bites maszk adódik.
+
+Globális időegységek:1..8 minta; pontos pont/vonás1:3, szünet1:3:7;
+csak külső némaságot vágunk le. Legalább8 jel, legalább3 értelmes
+alfa-numerikus Morse-karakter és minden belső szakasz hibátlan időzítése kell.
+**Egyetlen minősített Morse-üzenet sincs.** Az előre rögzített feltétel
+szerint emiatt a csak pozitív megfigyeléskor szükséges16 kevert kontrollt
+nem futtattuk; nem állítunk ebből statisztikai kizárást.
+
+A dekódert szintetikus SOS-szal ellenőriztük: +21/−21/0 Fibonacci-deltákkal
+kódolt burkoló pontosan visszajön és SOS-ként olvasható. Két telítési
+kontroll is sikeres. Az összes PCM-tömb a
+`data/fibonacci_pcm128_all_seeds.npz` fájlban van, alakja(96,256,128).
+Az egyértelműen hipotetikus, közvetlen állapotleképezésű,128-as kezdetű
+példa CSV-ben is elérhető. Eredeti mintavételi frekvencia, előjel és
+hangfájl továbbra sincs azonosítva.
+
+Külön a q-delták saját visszadekódolásánál is megvizsgáltuk az összes
+kezdeti értéket:0..252 között csak DC-eltolás keletkezik;253..255 között
+a telítődés egy második relatív alakot eredményez. A256 kezdőérték
+itt csak két DC-mentes alakot ad, nem256 új független hangot.
+Ez a saját delta-kódolásra igaz, nem minden 8SVX bemenetre.
+
+Standard Morse-nál egy karakter legalább1 jel, két karakter közt legalább
+3 egység kell. L karakter legalább4L−3 egység:51 karakterhez minimum201,
+64-hez253 mintapont kellene, ha az egység legalább1 minta. A128mintás
+hipotetikus PCM ezért ebben a natív, pontos időzítésű modellben nem lehet
+közvetlen51karakteres WIF vagy64karakteres hexszöveg Morse-hordozója.
+Rövid utasítás vagy más demoduláció lehetőségét ez nem zárja ki.
+
+### 7. C41 – tényleges görbealak-összevetés az árfolyammal
+
+A régi napi burkolóteszten túl most a 256 hullámponttal is összevetettük
+a rögzített árfolyamjeleket. A `models/price_shape_revisit_v1.json`
+futtatás előtt rögzíti a két kezdődátumot (2020-01-01,2020-05-11),
+a legkésőbbi 2024-04-19-i adatot, a napi ár/logár/abszolút loghozam
+jeleket, két irányt és két célt (q, fizikai q*S magasság). Összesen24 modell.
+
+A jeleket először napi szinten képezzük, majd256 egyenletes pozícióra
+interpoláljuk. Csak a 3–6. blokkon illesztünk egy gain+offset egyenest;
+az1,2,7,8. blokkon ellenőrizzük. Nincs szabad időtorzítás, simítás vagy
+külön fáziskorrekció. A későbbi2024-es árfolyam nem kerül a tesztbe;
+a feltételezett megjelenési dátum és a mai történeti forrás revíziói korlátok.
+
+A legjobb feltáró változat:2020-05-11-től abszolút napi loghozam,
+fordított sorrendben, negatív gainnel a normalizált q-ra illesztve.
+Ez eleve nem közvetlen időrendi árfolyamgörbe.
+
+| Ellenőrző mutató | Érték |
+| --- | ---: |
+| Modell MSE | 1,2775683 |
+| Tanítóátlagot jósló alapmodell MSE | 1,3217773 |
+| Relatív javulás | 0,0334467, azaz3,34% |
+| Jóslat–cél korreláció | 0,1722444 |
+
+A 255 nemnulla körkörös eltolás mindegyikén újraillesztjük a teljes
+24modell-családot a tanítóadatokon, és a legjobb kihagyott javulást vesszük.
+102 referencia legalább ilyen jó. Az identitást is beleszámító feltételes
+arány103/256=0,40234375. Ez leíró eltolásos családreferencia, nem globális
+p-érték vagy általános árfolyamkódolási kizárás. A vizsgált alakmodellek
+nem adnak érdemi támogatást az árfolyamhipotézishez.
+
+### 8. Független audit és a korlátok összekapcsolása
+
+Az audit12 bemeneti/programfájl hashét ellenőrzi. A marker XEX/NMRM
+receptszámát külön, egyenlőtlenségekből számolja vissza, nem a szövegdekóder
+újrahívásával. Ellenőrzi a256 csúcsot,752 blokkon belüli és766 teljes
+modellpixelt, valamint a128bájtos deltafájl visszaállítását.
+
+Mind a24 576 PCM-tömböt külön Python-állapotgéppel újradekódolja és
+összeveti. A24 árfolyammodellt és mind a255 teljes családreferenciát
+független least-squares számítással is visszaállítja. Minden ellenőrzés sikeres.
+
+A mostani hangpróba teljes kezdetiállapot-keresése más, pontosan rögzített
+bemenetcsalád, mint a felhasználó korábbi2186jelöltes vizsgálata; annak
+minden változatát nem állítjuk reprodukáltnak. Új privátkulcs-jelöltet nem
+állítottunk elő. A geometriai, több képelemet összekötő és más konkrét
+Fibonacci/demodulációs ágak megmaradnak.
+
+### 9. Reprodukció és folyamatos naplózás
+
+```sh
+python tools/audit_marker_pixel_revisit.py
+python tools/probe_fibonacci_audio.py
+python tools/check_price_shape_revisit.py
+python tools/audit_audio_revisit_results.py
+```
+
+A teljes új fejezet, három rögzített modell és minden új adat/program hash-e
+a meglévő fő MD VÉGÉHEZ kerül az append-programmal,21. körként. Új MD nincs.
+Az indexelő csak ellenőrzi a régi prefixet és frissíti az aktuális jegyzéket.
+
+**Nincs igazolt Morse-üzenet, eredeti hangdekódolás, teljes generátor vagy HALV-kulcs.**

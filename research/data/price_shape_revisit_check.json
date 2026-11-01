@@ -1,0 +1,1401 @@
+{
+  "model": "C41",
+  "input_sha256": {
+    "research/models/price_shape_revisit_v1.json": "f14a2be84f57693d3a943d846555b33bfc452b73661174e73d5320799ada5b5d",
+    "research/data/btc_usd_daily_2020_to_halving.csv": "49437c19c61b57bb0426bd6372c64e7de554205a5d8eb818aa1e5e33a89cc1d4",
+    "research/sources/coinmetrics.json": "dd38b51ce10a808861c68ed5775cf52b2bdfa53836b37c061728364e7b295d8f",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "tools/check_price_shape_revisit.py": "b799331953c1c85dc2e912000cb1b86a6c07f4ec69464322be12642d67002303",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+  },
+  "calibration": {
+    "known_affine_heldout": true,
+    "constant_input_control": true
+  },
+  "model_count": 24,
+  "models": [
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "price",
+      "native_values": 1571,
+      "reverse": false,
+      "target": "normalized_q",
+      "gain": 8.587778544748356e-06,
+      "offset": 0.5950101010692435,
+      "heldout_mse": 1.4435400593627248,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": -0.09212044387693408,
+      "heldout_prediction_correlation": -0.10906912988369205
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "price",
+      "native_values": 1571,
+      "reverse": false,
+      "target": "physical_height_q_times_scale",
+      "gain": 0.000629805996074359,
+      "offset": -8.263048370019352,
+      "heldout_mse": 16046.726872185196,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.1481153230105159,
+      "heldout_prediction_correlation": -0.5231063359901346
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "price",
+      "native_values": 1571,
+      "reverse": true,
+      "target": "normalized_q",
+      "gain": -5.770526069874442e-06,
+      "offset": 1.1153865003657817,
+      "heldout_mse": 1.3202685927957043,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": 0.0011414562077567414,
+      "heldout_prediction_correlation": -0.11096102234163048
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "price",
+      "native_values": 1571,
+      "reverse": true,
+      "target": "physical_height_q_times_scale",
+      "gain": -0.0006383387022044649,
+      "offset": 37.69729232405261,
+      "heldout_mse": 14699.594633537388,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.051730360666953024,
+      "heldout_prediction_correlation": -0.5911732448857265
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "log_price",
+      "native_values": 1571,
+      "reverse": false,
+      "target": "normalized_q",
+      "gain": 0.2604364121468643,
+      "offset": -1.8061041324282487,
+      "heldout_mse": 1.5040591712171691,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": -0.1379066060778582,
+      "heldout_prediction_correlation": -0.13002108244729185
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "log_price",
+      "native_values": 1571,
+      "reverse": false,
+      "target": "physical_height_q_times_scale",
+      "gain": 21.04761128790936,
+      "offset": -204.64100915566766,
+      "heldout_mse": 17286.741061145392,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.23683617570748616,
+      "heldout_prediction_correlation": -0.5951956498115486
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "log_price",
+      "native_values": 1571,
+      "reverse": true,
+      "target": "normalized_q",
+      "gain": -0.19131758419387912,
+      "offset": 2.898755716911157,
+      "heldout_mse": 1.3248167389873429,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": -0.0022994759682593013,
+      "heldout_prediction_correlation": -0.11908829815347272
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "log_price",
+      "native_values": 1571,
+      "reverse": true,
+      "target": "physical_height_q_times_scale",
+      "gain": -23.10010763611542,
+      "offset": 255.1420406635477,
+      "heldout_mse": 15108.368150971446,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.0809773929586568,
+      "heldout_prediction_correlation": -0.5992748090390597
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "absolute_daily_log_return",
+      "native_values": 1570,
+      "reverse": false,
+      "target": "normalized_q",
+      "gain": 3.2203085452871183,
+      "offset": 0.8188394285991794,
+      "heldout_mse": 1.332988992008145,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": -0.008482251803723972,
+      "heldout_prediction_correlation": 0.06298986150625621
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "absolute_daily_log_return",
+      "native_values": 1570,
+      "reverse": false,
+      "target": "physical_height_q_times_scale",
+      "gain": 177.16728527489443,
+      "offset": 9.753552838065866,
+      "heldout_mse": 14074.909451749973,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.007035225329981243,
+      "heldout_prediction_correlation": 0.09483668234059323
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "absolute_daily_log_return",
+      "native_values": 1570,
+      "reverse": true,
+      "target": "normalized_q",
+      "gain": 3.5948005642047764,
+      "offset": 0.8086743897843285,
+      "heldout_mse": 1.3393767360794888,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": -0.013314944769410086,
+      "heldout_prediction_correlation": 0.03261105003953392
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2024-04-19",
+      "signal": "absolute_daily_log_return",
+      "native_values": 1570,
+      "reverse": true,
+      "target": "physical_height_q_times_scale",
+      "gain": -98.41715535671868,
+      "offset": 17.233889919442365,
+      "heldout_mse": 13868.722813896882,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": 0.007717069029156032,
+      "heldout_prediction_correlation": 0.0718849554770307
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "price",
+      "native_values": 1440,
+      "reverse": false,
+      "target": "normalized_q",
+      "gain": -1.4342580591530192e-06,
+      "offset": 0.9547012991201349,
+      "heldout_mse": 1.3250562251761053,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": -0.0024806609385532585,
+      "heldout_prediction_correlation": -0.07668261507652935
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "price",
+      "native_values": 1440,
+      "reverse": false,
+      "target": "physical_height_q_times_scale",
+      "gain": 0.0004989096737916518,
+      "offset": -2.2913860106410446,
+      "heldout_mse": 14787.329357061322,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.05800762713009222,
+      "heldout_prediction_correlation": -0.3435763131250938
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "price",
+      "native_values": 1440,
+      "reverse": true,
+      "target": "normalized_q",
+      "gain": -2.5089011906083625e-06,
+      "offset": 0.9910042890020877,
+      "heldout_mse": 1.3127220992566095,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": 0.006850809280555481,
+      "heldout_prediction_correlation": 0.08343647089672006
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "price",
+      "native_values": 1440,
+      "reverse": true,
+      "target": "physical_height_q_times_scale",
+      "gain": -0.0005717616306164014,
+      "offset": 33.87742984377631,
+      "heldout_mse": 14692.506256684726,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.05122319966492217,
+      "heldout_prediction_correlation": -0.3474630390675316
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "log_price",
+      "native_values": 1440,
+      "reverse": false,
+      "target": "normalized_q",
+      "gain": -0.028431910150458532,
+      "offset": 1.2005263511753796,
+      "heldout_mse": 1.3208626835941795,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": 0.0006919926114223873,
+      "heldout_prediction_correlation": -0.03726331036705307
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "log_price",
+      "native_values": 1440,
+      "reverse": false,
+      "target": "physical_height_q_times_scale",
+      "gain": 18.0991390345569,
+      "offset": -172.76746011593656,
+      "heldout_mse": 15479.412572497054,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.10752497423577934,
+      "heldout_prediction_correlation": -0.43925102308006825
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "log_price",
+      "native_values": 1440,
+      "reverse": true,
+      "target": "normalized_q",
+      "gain": -0.022269283944670086,
+      "offset": 1.1367418518610433,
+      "heldout_mse": 1.3180956906469699,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": 0.0027853807000390862,
+      "heldout_prediction_correlation": 0.05606535826733364
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "log_price",
+      "native_values": 1440,
+      "reverse": true,
+      "target": "physical_height_q_times_scale",
+      "gain": -18.332752349591498,
+      "offset": 204.31040789259194,
+      "heldout_mse": 14748.429126000403,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.05522438343775349,
+      "heldout_prediction_correlation": -0.3899241583930093
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "absolute_daily_log_return",
+      "native_values": 1439,
+      "reverse": false,
+      "target": "normalized_q",
+      "gain": 3.618762176765514,
+      "offset": 0.8167607869190537,
+      "heldout_mse": 1.3224240478990748,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": -0.0004892685989306145,
+      "heldout_prediction_correlation": 0.08775165693120547
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "absolute_daily_log_return",
+      "native_values": 1439,
+      "reverse": false,
+      "target": "physical_height_q_times_scale",
+      "gain": 204.8267671368833,
+      "offset": 9.497291148564162,
+      "heldout_mse": 14049.540531189525,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": -0.005220123306018065,
+      "heldout_prediction_correlation": 0.03943676798927687
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "absolute_daily_log_return",
+      "native_values": 1439,
+      "reverse": true,
+      "target": "normalized_q",
+      "gain": -6.182843089706022,
+      "offset": 1.0591469674363352,
+      "heldout_mse": 1.2775682928158454,
+      "constant_training_mean_mse": 1.32177734375,
+      "heldout_skill": 0.03344667023019898,
+      "heldout_prediction_correlation": 0.17224440188106235
+    },
+    {
+      "start": "2020-05-11",
+      "end": "2024-04-19",
+      "signal": "absolute_daily_log_return",
+      "native_values": 1439,
+      "reverse": true,
+      "target": "physical_height_q_times_scale",
+      "gain": -172.93258024268204,
+      "offset": 18.83899007202995,
+      "heldout_mse": 13877.542798797604,
+      "constant_training_mean_mse": 13976.5810546875,
+      "heldout_skill": 0.007086014491124781,
+      "heldout_prediction_correlation": 0.052408596084531675
+    }
+  ],
+  "best_exploratory_model": {
+    "start": "2020-05-11",
+    "end": "2024-04-19",
+    "signal": "absolute_daily_log_return",
+    "native_values": 1439,
+    "reverse": true,
+    "target": "normalized_q",
+    "gain": -6.182843089706022,
+    "offset": 1.0591469674363352,
+    "heldout_mse": 1.2775682928158454,
+    "constant_training_mean_mse": 1.32177734375,
+    "heldout_skill": 0.03344667023019898,
+    "heldout_prediction_correlation": 0.17224440188106235
+  },
+  "family_shift_references": [
+    {
+      "cyclic_shift": 1,
+      "selected_best_heldout_skill": 0.00601909472705886
+    },
+    {
+      "cyclic_shift": 2,
+      "selected_best_heldout_skill": 0.07164358120177272
+    },
+    {
+      "cyclic_shift": 3,
+      "selected_best_heldout_skill": 0.009207174550586061
+    },
+    {
+      "cyclic_shift": 4,
+      "selected_best_heldout_skill": 0.011792837000891288
+    },
+    {
+      "cyclic_shift": 5,
+      "selected_best_heldout_skill": 0.02001028638768676
+    },
+    {
+      "cyclic_shift": 6,
+      "selected_best_heldout_skill": 0.030724604002959066
+    },
+    {
+      "cyclic_shift": 7,
+      "selected_best_heldout_skill": 0.011120395156264284
+    },
+    {
+      "cyclic_shift": 8,
+      "selected_best_heldout_skill": 0.014126503074565089
+    },
+    {
+      "cyclic_shift": 9,
+      "selected_best_heldout_skill": 0.021124872596948063
+    },
+    {
+      "cyclic_shift": 10,
+      "selected_best_heldout_skill": 0.02674828977001642
+    },
+    {
+      "cyclic_shift": 11,
+      "selected_best_heldout_skill": 0.01871881502638373
+    },
+    {
+      "cyclic_shift": 12,
+      "selected_best_heldout_skill": 0.01452622860981656
+    },
+    {
+      "cyclic_shift": 13,
+      "selected_best_heldout_skill": 0.04019774265663012
+    },
+    {
+      "cyclic_shift": 14,
+      "selected_best_heldout_skill": 0.05148784545038165
+    },
+    {
+      "cyclic_shift": 15,
+      "selected_best_heldout_skill": 0.056145104770433885
+    },
+    {
+      "cyclic_shift": 16,
+      "selected_best_heldout_skill": 0.05053228886689909
+    },
+    {
+      "cyclic_shift": 17,
+      "selected_best_heldout_skill": 0.05126351142440322
+    },
+    {
+      "cyclic_shift": 18,
+      "selected_best_heldout_skill": 0.060506806515227884
+    },
+    {
+      "cyclic_shift": 19,
+      "selected_best_heldout_skill": 0.062418737370782185
+    },
+    {
+      "cyclic_shift": 20,
+      "selected_best_heldout_skill": 0.05636562053239158
+    },
+    {
+      "cyclic_shift": 21,
+      "selected_best_heldout_skill": 0.04826228982730285
+    },
+    {
+      "cyclic_shift": 22,
+      "selected_best_heldout_skill": 0.051676896477925505
+    },
+    {
+      "cyclic_shift": 23,
+      "selected_best_heldout_skill": 0.05080405701148594
+    },
+    {
+      "cyclic_shift": 24,
+      "selected_best_heldout_skill": 0.05841560334908891
+    },
+    {
+      "cyclic_shift": 25,
+      "selected_best_heldout_skill": 0.06397563426991038
+    },
+    {
+      "cyclic_shift": 26,
+      "selected_best_heldout_skill": 0.051357803426164694
+    },
+    {
+      "cyclic_shift": 27,
+      "selected_best_heldout_skill": 0.048713805653141984
+    },
+    {
+      "cyclic_shift": 28,
+      "selected_best_heldout_skill": 0.052695065075199166
+    },
+    {
+      "cyclic_shift": 29,
+      "selected_best_heldout_skill": 0.047990578432790976
+    },
+    {
+      "cyclic_shift": 30,
+      "selected_best_heldout_skill": 0.05000490885318243
+    },
+    {
+      "cyclic_shift": 31,
+      "selected_best_heldout_skill": 0.0528122181959606
+    },
+    {
+      "cyclic_shift": 32,
+      "selected_best_heldout_skill": 0.06241718532886975
+    },
+    {
+      "cyclic_shift": 33,
+      "selected_best_heldout_skill": 0.06740018262546832
+    },
+    {
+      "cyclic_shift": 34,
+      "selected_best_heldout_skill": 0.055805148434430185
+    },
+    {
+      "cyclic_shift": 35,
+      "selected_best_heldout_skill": 0.054968453268543827
+    },
+    {
+      "cyclic_shift": 36,
+      "selected_best_heldout_skill": 0.05111015487678072
+    },
+    {
+      "cyclic_shift": 37,
+      "selected_best_heldout_skill": 0.049246919091214814
+    },
+    {
+      "cyclic_shift": 38,
+      "selected_best_heldout_skill": 0.04315908968443638
+    },
+    {
+      "cyclic_shift": 39,
+      "selected_best_heldout_skill": 0.03968252411341833
+    },
+    {
+      "cyclic_shift": 40,
+      "selected_best_heldout_skill": 0.04838898485986998
+    },
+    {
+      "cyclic_shift": 41,
+      "selected_best_heldout_skill": 0.045154034530113574
+    },
+    {
+      "cyclic_shift": 42,
+      "selected_best_heldout_skill": 0.03628309622114101
+    },
+    {
+      "cyclic_shift": 43,
+      "selected_best_heldout_skill": 0.027424459627508835
+    },
+    {
+      "cyclic_shift": 44,
+      "selected_best_heldout_skill": 0.02735861088865943
+    },
+    {
+      "cyclic_shift": 45,
+      "selected_best_heldout_skill": 0.02755090741759092
+    },
+    {
+      "cyclic_shift": 46,
+      "selected_best_heldout_skill": 0.017435144819289428
+    },
+    {
+      "cyclic_shift": 47,
+      "selected_best_heldout_skill": 0.027937023412724304
+    },
+    {
+      "cyclic_shift": 48,
+      "selected_best_heldout_skill": 0.02087649050029139
+    },
+    {
+      "cyclic_shift": 49,
+      "selected_best_heldout_skill": 0.013014464072199972
+    },
+    {
+      "cyclic_shift": 50,
+      "selected_best_heldout_skill": 0.009567735677160738
+    },
+    {
+      "cyclic_shift": 51,
+      "selected_best_heldout_skill": 0.00898130624302007
+    },
+    {
+      "cyclic_shift": 52,
+      "selected_best_heldout_skill": 0.025177728882963213
+    },
+    {
+      "cyclic_shift": 53,
+      "selected_best_heldout_skill": 0.016836548685940644
+    },
+    {
+      "cyclic_shift": 54,
+      "selected_best_heldout_skill": 0.01399225469328702
+    },
+    {
+      "cyclic_shift": 55,
+      "selected_best_heldout_skill": 0.0220197526299295
+    },
+    {
+      "cyclic_shift": 56,
+      "selected_best_heldout_skill": 0.044171989382952526
+    },
+    {
+      "cyclic_shift": 57,
+      "selected_best_heldout_skill": 0.01849738352839192
+    },
+    {
+      "cyclic_shift": 58,
+      "selected_best_heldout_skill": 0.012243542030964116
+    },
+    {
+      "cyclic_shift": 59,
+      "selected_best_heldout_skill": 0.013821508979933728
+    },
+    {
+      "cyclic_shift": 60,
+      "selected_best_heldout_skill": 0.015591130422300647
+    },
+    {
+      "cyclic_shift": 61,
+      "selected_best_heldout_skill": 0.009716535183383557
+    },
+    {
+      "cyclic_shift": 62,
+      "selected_best_heldout_skill": 0.06602154238794233
+    },
+    {
+      "cyclic_shift": 63,
+      "selected_best_heldout_skill": 0.020737808501740895
+    },
+    {
+      "cyclic_shift": 64,
+      "selected_best_heldout_skill": 0.05297265353323999
+    },
+    {
+      "cyclic_shift": 65,
+      "selected_best_heldout_skill": 0.015972937672689036
+    },
+    {
+      "cyclic_shift": 66,
+      "selected_best_heldout_skill": 0.021746233073387522
+    },
+    {
+      "cyclic_shift": 67,
+      "selected_best_heldout_skill": 0.010378518242808
+    },
+    {
+      "cyclic_shift": 68,
+      "selected_best_heldout_skill": 0.02977635556606628
+    },
+    {
+      "cyclic_shift": 69,
+      "selected_best_heldout_skill": 0.02003903353118608
+    },
+    {
+      "cyclic_shift": 70,
+      "selected_best_heldout_skill": 0.007028218565177324
+    },
+    {
+      "cyclic_shift": 71,
+      "selected_best_heldout_skill": 0.01799352735328641
+    },
+    {
+      "cyclic_shift": 72,
+      "selected_best_heldout_skill": 0.028299939406342567
+    },
+    {
+      "cyclic_shift": 73,
+      "selected_best_heldout_skill": 0.010748804473825424
+    },
+    {
+      "cyclic_shift": 74,
+      "selected_best_heldout_skill": 0.008096601434189776
+    },
+    {
+      "cyclic_shift": 75,
+      "selected_best_heldout_skill": 0.020240830148076205
+    },
+    {
+      "cyclic_shift": 76,
+      "selected_best_heldout_skill": 0.02819277455725877
+    },
+    {
+      "cyclic_shift": 77,
+      "selected_best_heldout_skill": 0.03463173798315433
+    },
+    {
+      "cyclic_shift": 78,
+      "selected_best_heldout_skill": 0.031769459459172755
+    },
+    {
+      "cyclic_shift": 79,
+      "selected_best_heldout_skill": 0.03406895718978764
+    },
+    {
+      "cyclic_shift": 80,
+      "selected_best_heldout_skill": 0.02521673714358874
+    },
+    {
+      "cyclic_shift": 81,
+      "selected_best_heldout_skill": 0.014039902423542028
+    },
+    {
+      "cyclic_shift": 82,
+      "selected_best_heldout_skill": 0.012001584982376468
+    },
+    {
+      "cyclic_shift": 83,
+      "selected_best_heldout_skill": 0.03220018014242354
+    },
+    {
+      "cyclic_shift": 84,
+      "selected_best_heldout_skill": 0.007777993717155818
+    },
+    {
+      "cyclic_shift": 85,
+      "selected_best_heldout_skill": 0.022607036767811062
+    },
+    {
+      "cyclic_shift": 86,
+      "selected_best_heldout_skill": 0.003283879128363476
+    },
+    {
+      "cyclic_shift": 87,
+      "selected_best_heldout_skill": 0.030668626317996606
+    },
+    {
+      "cyclic_shift": 88,
+      "selected_best_heldout_skill": 0.01214283278094308
+    },
+    {
+      "cyclic_shift": 89,
+      "selected_best_heldout_skill": 0.012730865785733125
+    },
+    {
+      "cyclic_shift": 90,
+      "selected_best_heldout_skill": 0.008074592706997952
+    },
+    {
+      "cyclic_shift": 91,
+      "selected_best_heldout_skill": 0.0183028277713424
+    },
+    {
+      "cyclic_shift": 92,
+      "selected_best_heldout_skill": 0.01839057346693418
+    },
+    {
+      "cyclic_shift": 93,
+      "selected_best_heldout_skill": 0.03398491223382549
+    },
+    {
+      "cyclic_shift": 94,
+      "selected_best_heldout_skill": 0.01376979505590148
+    },
+    {
+      "cyclic_shift": 95,
+      "selected_best_heldout_skill": 0.016096194552334464
+    },
+    {
+      "cyclic_shift": 96,
+      "selected_best_heldout_skill": 0.016340519314541613
+    },
+    {
+      "cyclic_shift": 97,
+      "selected_best_heldout_skill": 0.024756298308254654
+    },
+    {
+      "cyclic_shift": 98,
+      "selected_best_heldout_skill": 0.030497636662264127
+    },
+    {
+      "cyclic_shift": 99,
+      "selected_best_heldout_skill": 0.021611416117632176
+    },
+    {
+      "cyclic_shift": 100,
+      "selected_best_heldout_skill": 0.024810831183810556
+    },
+    {
+      "cyclic_shift": 101,
+      "selected_best_heldout_skill": 0.01961271553311772
+    },
+    {
+      "cyclic_shift": 102,
+      "selected_best_heldout_skill": 0.03458445466877824
+    },
+    {
+      "cyclic_shift": 103,
+      "selected_best_heldout_skill": 0.052092275267866306
+    },
+    {
+      "cyclic_shift": 104,
+      "selected_best_heldout_skill": 0.02395141214313512
+    },
+    {
+      "cyclic_shift": 105,
+      "selected_best_heldout_skill": 0.0347658658451534
+    },
+    {
+      "cyclic_shift": 106,
+      "selected_best_heldout_skill": 0.01798861917845629
+    },
+    {
+      "cyclic_shift": 107,
+      "selected_best_heldout_skill": 0.030968822217817826
+    },
+    {
+      "cyclic_shift": 108,
+      "selected_best_heldout_skill": 0.03788978858567593
+    },
+    {
+      "cyclic_shift": 109,
+      "selected_best_heldout_skill": 0.027140585093190395
+    },
+    {
+      "cyclic_shift": 110,
+      "selected_best_heldout_skill": 0.024064136461920183
+    },
+    {
+      "cyclic_shift": 111,
+      "selected_best_heldout_skill": 0.022783848317247557
+    },
+    {
+      "cyclic_shift": 112,
+      "selected_best_heldout_skill": 0.020553465954014194
+    },
+    {
+      "cyclic_shift": 113,
+      "selected_best_heldout_skill": 0.0242104115876709
+    },
+    {
+      "cyclic_shift": 114,
+      "selected_best_heldout_skill": 0.012586323359259355
+    },
+    {
+      "cyclic_shift": 115,
+      "selected_best_heldout_skill": 0.021831582151127238
+    },
+    {
+      "cyclic_shift": 116,
+      "selected_best_heldout_skill": 0.029482362555275032
+    },
+    {
+      "cyclic_shift": 117,
+      "selected_best_heldout_skill": 0.03747616730801839
+    },
+    {
+      "cyclic_shift": 118,
+      "selected_best_heldout_skill": 0.029895218974917093
+    },
+    {
+      "cyclic_shift": 119,
+      "selected_best_heldout_skill": 0.023521101834237612
+    },
+    {
+      "cyclic_shift": 120,
+      "selected_best_heldout_skill": 0.033127206807684884
+    },
+    {
+      "cyclic_shift": 121,
+      "selected_best_heldout_skill": 0.05856374279676879
+    },
+    {
+      "cyclic_shift": 122,
+      "selected_best_heldout_skill": 0.04427434587017265
+    },
+    {
+      "cyclic_shift": 123,
+      "selected_best_heldout_skill": 0.039956356809347615
+    },
+    {
+      "cyclic_shift": 124,
+      "selected_best_heldout_skill": 0.04960417111915261
+    },
+    {
+      "cyclic_shift": 125,
+      "selected_best_heldout_skill": 0.028709180302809778
+    },
+    {
+      "cyclic_shift": 126,
+      "selected_best_heldout_skill": 0.031100109649071617
+    },
+    {
+      "cyclic_shift": 127,
+      "selected_best_heldout_skill": 0.02161547511661921
+    },
+    {
+      "cyclic_shift": 128,
+      "selected_best_heldout_skill": 0.027910131116564263
+    },
+    {
+      "cyclic_shift": 129,
+      "selected_best_heldout_skill": 0.03724363784603901
+    },
+    {
+      "cyclic_shift": 130,
+      "selected_best_heldout_skill": 0.028446892725372264
+    },
+    {
+      "cyclic_shift": 131,
+      "selected_best_heldout_skill": 0.024364672676473687
+    },
+    {
+      "cyclic_shift": 132,
+      "selected_best_heldout_skill": 0.029292772370966835
+    },
+    {
+      "cyclic_shift": 133,
+      "selected_best_heldout_skill": 0.03761037074659357
+    },
+    {
+      "cyclic_shift": 134,
+      "selected_best_heldout_skill": 0.043647818275775796
+    },
+    {
+      "cyclic_shift": 135,
+      "selected_best_heldout_skill": 0.025474152884711554
+    },
+    {
+      "cyclic_shift": 136,
+      "selected_best_heldout_skill": 0.032289685359651044
+    },
+    {
+      "cyclic_shift": 137,
+      "selected_best_heldout_skill": 0.02569259358524445
+    },
+    {
+      "cyclic_shift": 138,
+      "selected_best_heldout_skill": 0.02213113428134139
+    },
+    {
+      "cyclic_shift": 139,
+      "selected_best_heldout_skill": 0.023524171428899288
+    },
+    {
+      "cyclic_shift": 140,
+      "selected_best_heldout_skill": 0.04320487332155898
+    },
+    {
+      "cyclic_shift": 141,
+      "selected_best_heldout_skill": 0.01626731793147851
+    },
+    {
+      "cyclic_shift": 142,
+      "selected_best_heldout_skill": 0.01759037349915138
+    },
+    {
+      "cyclic_shift": 143,
+      "selected_best_heldout_skill": 0.03589927685565175
+    },
+    {
+      "cyclic_shift": 144,
+      "selected_best_heldout_skill": 0.023798659514478127
+    },
+    {
+      "cyclic_shift": 145,
+      "selected_best_heldout_skill": 0.021995147018004868
+    },
+    {
+      "cyclic_shift": 146,
+      "selected_best_heldout_skill": 0.021506455555031834
+    },
+    {
+      "cyclic_shift": 147,
+      "selected_best_heldout_skill": 0.0237912921580955
+    },
+    {
+      "cyclic_shift": 148,
+      "selected_best_heldout_skill": 0.03004641746300385
+    },
+    {
+      "cyclic_shift": 149,
+      "selected_best_heldout_skill": 0.024397501484466955
+    },
+    {
+      "cyclic_shift": 150,
+      "selected_best_heldout_skill": 0.023409467792283367
+    },
+    {
+      "cyclic_shift": 151,
+      "selected_best_heldout_skill": 0.02360827704575863
+    },
+    {
+      "cyclic_shift": 152,
+      "selected_best_heldout_skill": 0.07124040170966373
+    },
+    {
+      "cyclic_shift": 153,
+      "selected_best_heldout_skill": 0.03034202215872084
+    },
+    {
+      "cyclic_shift": 154,
+      "selected_best_heldout_skill": 0.021520054055474858
+    },
+    {
+      "cyclic_shift": 155,
+      "selected_best_heldout_skill": 0.021212259867852357
+    },
+    {
+      "cyclic_shift": 156,
+      "selected_best_heldout_skill": 0.021599417361708895
+    },
+    {
+      "cyclic_shift": 157,
+      "selected_best_heldout_skill": 0.020784169401097174
+    },
+    {
+      "cyclic_shift": 158,
+      "selected_best_heldout_skill": 0.021487135032401405
+    },
+    {
+      "cyclic_shift": 159,
+      "selected_best_heldout_skill": 0.020531996041007083
+    },
+    {
+      "cyclic_shift": 160,
+      "selected_best_heldout_skill": 0.035726384018408996
+    },
+    {
+      "cyclic_shift": 161,
+      "selected_best_heldout_skill": 0.02427950283209168
+    },
+    {
+      "cyclic_shift": 162,
+      "selected_best_heldout_skill": 0.01831956870516882
+    },
+    {
+      "cyclic_shift": 163,
+      "selected_best_heldout_skill": 0.01854124052324524
+    },
+    {
+      "cyclic_shift": 164,
+      "selected_best_heldout_skill": 0.017097509983934556
+    },
+    {
+      "cyclic_shift": 165,
+      "selected_best_heldout_skill": 0.016424785572438427
+    },
+    {
+      "cyclic_shift": 166,
+      "selected_best_heldout_skill": 0.02427502241440105
+    },
+    {
+      "cyclic_shift": 167,
+      "selected_best_heldout_skill": 0.06516547974111186
+    },
+    {
+      "cyclic_shift": 168,
+      "selected_best_heldout_skill": 0.07503309489230314
+    },
+    {
+      "cyclic_shift": 169,
+      "selected_best_heldout_skill": 0.013491595281658775
+    },
+    {
+      "cyclic_shift": 170,
+      "selected_best_heldout_skill": 0.023530591732668027
+    },
+    {
+      "cyclic_shift": 171,
+      "selected_best_heldout_skill": 0.01912346559744771
+    },
+    {
+      "cyclic_shift": 172,
+      "selected_best_heldout_skill": 0.011252787517830654
+    },
+    {
+      "cyclic_shift": 173,
+      "selected_best_heldout_skill": 0.03216610864499525
+    },
+    {
+      "cyclic_shift": 174,
+      "selected_best_heldout_skill": 0.04182791150717491
+    },
+    {
+      "cyclic_shift": 175,
+      "selected_best_heldout_skill": 0.07667675678039865
+    },
+    {
+      "cyclic_shift": 176,
+      "selected_best_heldout_skill": 0.0339344944994564
+    },
+    {
+      "cyclic_shift": 177,
+      "selected_best_heldout_skill": 0.021330482428039588
+    },
+    {
+      "cyclic_shift": 178,
+      "selected_best_heldout_skill": 0.043440872433098576
+    },
+    {
+      "cyclic_shift": 179,
+      "selected_best_heldout_skill": 0.045265011741579375
+    },
+    {
+      "cyclic_shift": 180,
+      "selected_best_heldout_skill": 0.02388186319566943
+    },
+    {
+      "cyclic_shift": 181,
+      "selected_best_heldout_skill": 0.012262322326800246
+    },
+    {
+      "cyclic_shift": 182,
+      "selected_best_heldout_skill": 0.013756527489916515
+    },
+    {
+      "cyclic_shift": 183,
+      "selected_best_heldout_skill": 0.04918592133629862
+    },
+    {
+      "cyclic_shift": 184,
+      "selected_best_heldout_skill": 0.010598054760193598
+    },
+    {
+      "cyclic_shift": 185,
+      "selected_best_heldout_skill": 0.028844630667958837
+    },
+    {
+      "cyclic_shift": 186,
+      "selected_best_heldout_skill": 0.01307843209970383
+    },
+    {
+      "cyclic_shift": 187,
+      "selected_best_heldout_skill": 0.026564001665122072
+    },
+    {
+      "cyclic_shift": 188,
+      "selected_best_heldout_skill": 0.016019760455631027
+    },
+    {
+      "cyclic_shift": 189,
+      "selected_best_heldout_skill": 0.03185624327942105
+    },
+    {
+      "cyclic_shift": 190,
+      "selected_best_heldout_skill": 0.03593726508428163
+    },
+    {
+      "cyclic_shift": 191,
+      "selected_best_heldout_skill": 0.03620132400749554
+    },
+    {
+      "cyclic_shift": 192,
+      "selected_best_heldout_skill": 0.018909086823179266
+    },
+    {
+      "cyclic_shift": 193,
+      "selected_best_heldout_skill": 0.017166039510981168
+    },
+    {
+      "cyclic_shift": 194,
+      "selected_best_heldout_skill": 0.028783225854771
+    },
+    {
+      "cyclic_shift": 195,
+      "selected_best_heldout_skill": 0.031245408874398084
+    },
+    {
+      "cyclic_shift": 196,
+      "selected_best_heldout_skill": 0.010600896931007076
+    },
+    {
+      "cyclic_shift": 197,
+      "selected_best_heldout_skill": 0.018149121397953882
+    },
+    {
+      "cyclic_shift": 198,
+      "selected_best_heldout_skill": 0.02709839423458249
+    },
+    {
+      "cyclic_shift": 199,
+      "selected_best_heldout_skill": 0.03901085206376542
+    },
+    {
+      "cyclic_shift": 200,
+      "selected_best_heldout_skill": 0.04042584508177882
+    },
+    {
+      "cyclic_shift": 201,
+      "selected_best_heldout_skill": 0.055994552848449675
+    },
+    {
+      "cyclic_shift": 202,
+      "selected_best_heldout_skill": 0.05933199525594568
+    },
+    {
+      "cyclic_shift": 203,
+      "selected_best_heldout_skill": 0.06273805006006994
+    },
+    {
+      "cyclic_shift": 204,
+      "selected_best_heldout_skill": 0.06290799443306605
+    },
+    {
+      "cyclic_shift": 205,
+      "selected_best_heldout_skill": 0.07053645310104006
+    },
+    {
+      "cyclic_shift": 206,
+      "selected_best_heldout_skill": 0.07145867243773218
+    },
+    {
+      "cyclic_shift": 207,
+      "selected_best_heldout_skill": 0.06694281406421665
+    },
+    {
+      "cyclic_shift": 208,
+      "selected_best_heldout_skill": 0.07454217354514692
+    },
+    {
+      "cyclic_shift": 209,
+      "selected_best_heldout_skill": 0.08690377223770718
+    },
+    {
+      "cyclic_shift": 210,
+      "selected_best_heldout_skill": 0.09729635305649165
+    },
+    {
+      "cyclic_shift": 211,
+      "selected_best_heldout_skill": 0.09785145252817262
+    },
+    {
+      "cyclic_shift": 212,
+      "selected_best_heldout_skill": 0.09958026496176553
+    },
+    {
+      "cyclic_shift": 213,
+      "selected_best_heldout_skill": 0.11338227052709582
+    },
+    {
+      "cyclic_shift": 214,
+      "selected_best_heldout_skill": 0.11691688857758253
+    },
+    {
+      "cyclic_shift": 215,
+      "selected_best_heldout_skill": 0.12345978016295456
+    },
+    {
+      "cyclic_shift": 216,
+      "selected_best_heldout_skill": 0.12144293149692276
+    },
+    {
+      "cyclic_shift": 217,
+      "selected_best_heldout_skill": 0.1333582507249702
+    },
+    {
+      "cyclic_shift": 218,
+      "selected_best_heldout_skill": 0.12381752426134607
+    },
+    {
+      "cyclic_shift": 219,
+      "selected_best_heldout_skill": 0.11743069101603731
+    },
+    {
+      "cyclic_shift": 220,
+      "selected_best_heldout_skill": 0.09958120435942586
+    },
+    {
+      "cyclic_shift": 221,
+      "selected_best_heldout_skill": 0.10185513461303586
+    },
+    {
+      "cyclic_shift": 222,
+      "selected_best_heldout_skill": 0.09129598900343927
+    },
+    {
+      "cyclic_shift": 223,
+      "selected_best_heldout_skill": 0.07313294611991927
+    },
+    {
+      "cyclic_shift": 224,
+      "selected_best_heldout_skill": 0.05844046096532263
+    },
+    {
+      "cyclic_shift": 225,
+      "selected_best_heldout_skill": 0.05698587974945801
+    },
+    {
+      "cyclic_shift": 226,
+      "selected_best_heldout_skill": 0.05441878254888166
+    },
+    {
+      "cyclic_shift": 227,
+      "selected_best_heldout_skill": 0.0506033090020912
+    },
+    {
+      "cyclic_shift": 228,
+      "selected_best_heldout_skill": 0.04955425699956706
+    },
+    {
+      "cyclic_shift": 229,
+      "selected_best_heldout_skill": 0.04794949671189652
+    },
+    {
+      "cyclic_shift": 230,
+      "selected_best_heldout_skill": 0.04670946044338242
+    },
+    {
+      "cyclic_shift": 231,
+      "selected_best_heldout_skill": 0.04436414876544592
+    },
+    {
+      "cyclic_shift": 232,
+      "selected_best_heldout_skill": 0.04029321498400518
+    },
+    {
+      "cyclic_shift": 233,
+      "selected_best_heldout_skill": 0.03829004420548465
+    },
+    {
+      "cyclic_shift": 234,
+      "selected_best_heldout_skill": 0.03476141503677821
+    },
+    {
+      "cyclic_shift": 235,
+      "selected_best_heldout_skill": 0.03907284137355571
+    },
+    {
+      "cyclic_shift": 236,
+      "selected_best_heldout_skill": 0.02817970523847868
+    },
+    {
+      "cyclic_shift": 237,
+      "selected_best_heldout_skill": 0.02461257763537905
+    },
+    {
+      "cyclic_shift": 238,
+      "selected_best_heldout_skill": 0.020469811215468314
+    },
+    {
+      "cyclic_shift": 239,
+      "selected_best_heldout_skill": 0.020957148714309315
+    },
+    {
+      "cyclic_shift": 240,
+      "selected_best_heldout_skill": 0.018542867294178755
+    },
+    {
+      "cyclic_shift": 241,
+      "selected_best_heldout_skill": 0.014885411969453033
+    },
+    {
+      "cyclic_shift": 242,
+      "selected_best_heldout_skill": 0.021225196462403506
+    },
+    {
+      "cyclic_shift": 243,
+      "selected_best_heldout_skill": 0.015145757636133461
+    },
+    {
+      "cyclic_shift": 244,
+      "selected_best_heldout_skill": 0.024422765151983605
+    },
+    {
+      "cyclic_shift": 245,
+      "selected_best_heldout_skill": 0.026490938515563167
+    },
+    {
+      "cyclic_shift": 246,
+      "selected_best_heldout_skill": 0.026977407021606004
+    },
+    {
+      "cyclic_shift": 247,
+      "selected_best_heldout_skill": 0.0218002861763259
+    },
+    {
+      "cyclic_shift": 248,
+      "selected_best_heldout_skill": 0.018077830283936502
+    },
+    {
+      "cyclic_shift": 249,
+      "selected_best_heldout_skill": 0.04718928870488326
+    },
+    {
+      "cyclic_shift": 250,
+      "selected_best_heldout_skill": 0.02754756152966864
+    },
+    {
+      "cyclic_shift": 251,
+      "selected_best_heldout_skill": 0.01688478619029854
+    },
+    {
+      "cyclic_shift": 252,
+      "selected_best_heldout_skill": 0.012254823201445442
+    },
+    {
+      "cyclic_shift": 253,
+      "selected_best_heldout_skill": 0.017927409912321557
+    },
+    {
+      "cyclic_shift": 254,
+      "selected_best_heldout_skill": 0.045241503554995344
+    },
+    {
+      "cyclic_shift": 255,
+      "selected_best_heldout_skill": 0.0105133940687967
+    }
+  ],
+  "shift_references_as_good": 102,
+  "shift_reference_fraction_including_identity": 0.40234375,
+  "reference_is_not_global_p_value": true,
+  "no_private_key_search": true,
+  "limitations": [
+    "Today's archived historical source may contain revisions, not a2024snapshot",
+    "The image-date interpretation is conditional",
+    "Curve transforms and family chosen after observing the image",
+    "Tests these24 fixed signal models only, not arbitrary encoded price references",
+    "No private-key search"
+  ]
+}

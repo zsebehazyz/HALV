@@ -1,0 +1,15 @@
+{
+  "model":"C40",
+  "question":"Does a full512bit two-bit-packed source interpreted as8SVX delta codes yield strict amplitude-gated Morse, with all256 initial predictors?",
+  "source":"Unchanged256 q states; all24 shared state-to-dibit bijections, both directions, two within-byte nibble orders:96 compressed-code streams",
+  "codec":"ArchivedFFmpegFibonacci table, unsigned0..255 saturation after every delta; all initial0..255; bare decoder core, not an identifiedIFF file",
+  "decoded_samples":128,
+  "activities":"abs(decoded_PCM-128)>threshold, thresholds0,8,16,32; no per-segment threshold changes",
+  "morse":"Native units1..8samples, exact on lengths1or3 units, exact inner gaps1,3,7; trim only exterior silence; require>=8marks,>=3 alphanumeric letters, no invalid code groups",
+  "dedup":"Deduplicate identical128bit activity masks across seed/threshold/source recipes before detection; retain one witness and occurrence count",
+  "controls":"If any qualified observed message exists, run16 within-block histogram-preserving q shuffles and the same full search; report selected-family reference fractions, not a global discovery p-value. If none, explicitly skip conditional controls.",
+  "separate_identity_probe":"Encode original q vertex deltas toFibonacci indices then decode all256 seeds; measure DC-equivalence classes; this is an encode/decode identity, not new decryption",
+  "calibration":"Synthetic SOS envelope encoded with +/-21 and0 deltas must roundtrip and pass exact Morse; known clipping vectors; no fake zero fill",
+  "exports":"All observed decoded PCM arrays and recipes; one explicitly hypothetical128sample PCM CSV; no invented sample rate or claim of recovered original sound",
+  "limitations":["No original audio file, sample rate, sign or encryption scheme identified","State relabeling and Morse activity choices are exploratory","Strict amplitude gating is not a complete frequency-domain demodulator","Morse-like short text alone is not a key or proof","At unit>=1sample,51 Morse characters need at least201 samples,64 characters253; a128sample stream cannot directly contain them under these timing rules"]
+}
