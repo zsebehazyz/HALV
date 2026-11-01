@@ -425,3 +425,28 @@ első két átmenettel sem. Ez e helyi család negatívuma, nem globális vagy
 
 Részletes audit: `REPORT_20261101_UPLOAD_AUDIT.md`. A korábbi geometriai,
 Fibonacci–hang–Morse és bitréteg-ágak megmaradnak. Közös generátor és kulcs nincs.
+
+## C27: történeti vezérlőjel-kontroll és új kutatási prioritás
+
+A felhasználó a korábbi Zden-feladatok összetett műveleteit és több képelem
+együttes szerepét kérte előtérbe helyezni. A most megtalált, commitra rögzített
+`jsn/btc-crypto` Level 2 megoldó közösségi implementáció, a szerző publikált
+megoldása után befejezve. Saját reprodukció: 51 szektor, 306/306 szomszédos
+komplementpár, központi flag szerinti inverzió, két WIF-irányból egy érvényes;
+a régi kép címe pontosan egyezik. Ez a HALV-tól független pozitív kontroll.
+
+A fő tanulság: a flagből vezérlés, a szomszédos adatból tartalom lesz.
+Az R=f(A) negatívumai nem zárják ki a dekódolt adat=f(A,R,előző állapot)
+szerkezetet. A következő elsődleges HALV-irány a marker/aláírás által
+indokolt feltételes inverzió és szomszédrekonstrukció, utána a felezéshez
+kötött carry/borrow vagy kerekítési állapot. Ez tervezett kutatás, ebben a
+körben nem új HALV-kulcscsalád.
+
+A Level 5 teljes geometriai pozitív kontrollja megmarad. A WIF vezető 5,
+a kihagyás vagy 0-kezelés csak konkrét formatálási/indexelési utasítás
+alapján alkalmazható. A Level 2-ben az 5 nem hiányzik: a forgatás horgonya.
+A más játékokban említett kihagyások pontos primer ellenőrzése részben
+nyitott; nem egységes, minden Zden-képre érvényes műveletként kezeljük.
+
+Részletes sorrend és falszifikációs feltételek:
+`REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md`.

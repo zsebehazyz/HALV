@@ -71,6 +71,14 @@ def main():
             'kind':'residual_transition_relationship','coordinate_configurations':d['coordinate_configurations'],
             'exact_training_fit_counts':d['exact_training_fit_counts'],'heldout_successes':len(d['full_heldout_successes']),
             'not_private_key_search':True})
+    p=ROOT/'research/data/historical_level2_control.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'historical_positive_control','puzzle':'Zden Level2',
+            'neighbor_constraints_passed':d['neighbor_constraints_passed'],
+            'neighbor_constraints_total':d['neighbor_constraints_total'],
+            'valid_wif_readings':sum(v['validation']=='valid' for v in d['candidate_readings']),
+            'historical_target_match':d['historical_target_match'],'not_HALV_key_search':True})
     out={'purpose':'Persistent evidence index; read together with HYPOTHESES.md and LOG.md.',
          'counting_rule':'Do not sum per-run unique candidates as global uniques; overlap across runs has not been measured. Structural comparisons, WIF strings, hypotheses and private scalars are separate units.',
          'result_summaries':summaries,'structural_summaries':structural,'files':files}

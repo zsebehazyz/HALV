@@ -41,6 +41,13 @@ változó alsó bitet eltalálja; a hét eltérés mind magasbit-eltérés.
 A külső maradék egyszerű cellánkénti hozzárendelése nem adja meg ezeket
 a javításokat. [Teljes audit és kontrollkorlátok](research/REPORT_20261101_UPLOAD_AUDIT.md).
 
+A legújabb történeti kontrollban a Level 2 teljes képi megoldását is
+reprodukáltuk: 306/306 szomszédos komplementellenőrzés, feltételes
+bitinverzió, érvényes WIF és a képen szereplő régi cím. Ez **nem HALV-találat**.
+A következő prioritás a vezérlőjeles, szomszédokra vagy állapotra épülő
+inverz művelet, a geometriai ág megtartásával.
+[Történeti módszer és konkrét kutatási sorrend](research/REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md).
+
 ## Reprodukálás
 
 Python 3, külső csomag nélkül:
@@ -291,3 +298,17 @@ a hiányzó CSV-t a repó rögzített mintáiból előállítva.
 
 ![Reprodukált blokkillesztés](research/data/lag2_pair_alignment.png)
 ![Előrejelzés és kontrollcsaládok](research/data/lag2_prediction_audit.png)
+
+## Történeti pozitív kontroll: Level 2
+
+```sh
+python3 tools/verify_historical_level2.py
+MPLCONFIGDIR=/tmp/halv_mpl XDG_CACHE_HOME=/tmp/halv_cache python3 tools/plot_historical_level2.py
+```
+
+A képi adatot a szomszédos szektorokból állítja össze, majd a központi
+flag vezérli az inverziót. Az 5 ebben a játékban jelen levő elforgatási
+horgony. A módszert a HALV-ra átvinni még vizsgálandó hipotézis; ebben a
+körben nem futott új HALV-kulcspróba.
+
+![Level 2 képi és kriptográfiai kontroll](research/data/historical_level2_audit.png)

@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/cbman0/BitcoinPuzzles/HEAD/zdens_crypto_puzzles_series_2015/README.md",
+    "path": "research/sources/zden_series_reference_20261101.md",
+    "sha256": "86a194c4166a2228b7192c0047b886817e9c52da1262f4c30e37c393c34329dc",
+    "bytes": 5027
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cbman0/BitcoinPuzzles/HEAD/lang_slovak/README.md",
+    "path": "research/sources/zden_slovak_reference_20261101.md",
+    "sha256": "bd58cc6de4cf90bc7ee7d006d71084ac111021f17449ef344c67e6374359cd08",
+    "bytes": 8498
+  }
+]

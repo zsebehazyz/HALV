@@ -1,0 +1,10 @@
+{
+  "model":"C27",
+  "purpose":"Reproduce an actual historical Zden decoder as a positive control for compound image/flag operations, not a new HALV key guess",
+  "reference":"jsn/btc-crypto at commit13b1d3279e42a3e0acf7042db21fed765fa7bb89; author of repository says finishing touches followed published solution",
+  "image_sampling":"51 sectors, center474,474, radius360 with32px ring spacing; sample13 raw bits per sector as in archived Go source",
+  "neighbor_reconstruction":"Six ring bits from next sector's first sample, checked against preceding sector's second sample; sum must equal1",
+  "center_flag":"Take center bit as flag; if1 complement all7 bits; if0 set the center bit to1",
+  "format":"51 ASCII7 characters; rotate to existing5 and evaluate both reading directions exactly as archived Ruby code; Base58Check WIF validation",
+  "limitations":["Community solver, not the author's own source code","A successful historical decoder does not establish the same method forHALV","The5 is present in this Level2 stream and fixes rotation; it is not omitted here","No blanket claim that every historical0/5 modification has now been verified"]
+}

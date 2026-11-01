@@ -140,6 +140,16 @@
       },
       "heldout_successes": 0,
       "not_private_key_search": true
+    },
+    {
+      "result": "research/data/historical_level2_control.json",
+      "kind": "historical_positive_control",
+      "puzzle": "Zden Level2",
+      "neighbor_constraints_passed": 306,
+      "neighbor_constraints_total": 306,
+      "valid_wif_readings": 1,
+      "historical_target_match": true,
+      "not_HALV_key_search": true
     }
   ],
   "files": [
@@ -268,6 +278,18 @@
       "role": "executed_result_or_artifact",
       "bytes": 6844,
       "sha256": "04557c09a16f6f3a41c503c883c93f0f1717675a4a240bb2bcd960d3186d82d1"
+    },
+    {
+      "path": "research/data/historical_level2_audit.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 57122,
+      "sha256": "ce92e8ae0459da1b8dc22f5ec86fed5419408b04d7e3473dfbb332142944943a"
+    },
+    {
+      "path": "research/data/historical_level2_control.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 99342,
+      "sha256": "ab45489f7a31f666ba50766d67cfff1ee6c45ef7a1c25da19cb6e45c4361c916"
     },
     {
       "path": "research/data/lag2_control_scores.npz",
@@ -744,6 +766,42 @@
       "sha256": "cc35ce174ec812f4ef8c2467e2e1985c20a0c917300a13094b99454cc8d7240e"
     },
     {
+      "path": "research/sources/history_level2_README.rst",
+      "role": "source_or_reference",
+      "bytes": 114,
+      "sha256": "0163c645922fa30fa55cf07bf94688d136ea406f80f2967c398afeb9aa131e82"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__README.rst",
+      "role": "source_or_reference",
+      "bytes": 684,
+      "sha256": "50b60222bb2414e5084239876e3a9b7b5593d871cf8f06a04a4cc7f46f36d6e9"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__crypto2.go",
+      "role": "source_or_reference",
+      "bytes": 2327,
+      "sha256": "17e784bedd4864b58f0c9fc1fe3b5853d1c82b05270e8542c2133500783c2950"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__crypto2.png",
+      "role": "source_or_reference",
+      "bytes": 120038,
+      "sha256": "d43ae2e2c6e50ed9a7ad486ba74a7c9065f7fb22cc1fcec1fc9d65b2469714f5"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__d.rb",
+      "role": "source_or_reference",
+      "bytes": 1377,
+      "sha256": "d9b81858d650378e1e8ef8cdb0693e91c349fdd47c52928904a9170bcd3056ce"
+    },
+    {
+      "path": "research/sources/history_level2_provenance.json",
+      "role": "source_or_reference",
+      "bytes": 1866,
+      "sha256": "0f705997cad8e7f3e368837095164c3c49091422863aef590970ddec89181bc9"
+    },
+    {
       "path": "research/sources/image_provenance.json",
       "role": "source_or_reference",
       "bytes": 1073,
@@ -954,6 +1012,24 @@
       "sha256": "379ab19a3f9b4cfcb706a66f5715c719c1eb74ab89ca785d3d33da51db328503"
     },
     {
+      "path": "research/sources/zden_history_fetch_20261101.json",
+      "role": "source_or_reference",
+      "bytes": 568,
+      "sha256": "dae1535f200174079e46e38fa9918155d0652143fb12134c25945787ce00f820"
+    },
+    {
+      "path": "research/sources/zden_series_reference_20261101.md",
+      "role": "source_or_reference",
+      "bytes": 5027,
+      "sha256": "86a194c4166a2228b7192c0047b886817e9c52da1262f4c30e37c393c34329dc"
+    },
+    {
+      "path": "research/sources/zden_slovak_reference_20261101.md",
+      "role": "source_or_reference",
+      "bytes": 8498,
+      "sha256": "bd58cc6de4cf90bc7ee7d006d71084ac111021f17449ef344c67e6374359cd08"
+    },
+    {
       "path": "research/models/bd_halving_v1.json",
       "role": "model_specification",
       "bytes": 928,
@@ -988,6 +1064,12 @@
       "role": "model_specification",
       "bytes": 788,
       "sha256": "675a0b0df22df87db0a879440c3b61abef4432f7dbc76ae2b588c4b99a100aed"
+    },
+    {
+      "path": "research/models/historical_level2_control_v1.json",
+      "role": "model_specification",
+      "bytes": 1156,
+      "sha256": "32907bf2af36842f844ec69b4ab2f0df66606088aba0aad17596e94037c140e7"
     },
     {
       "path": "research/models/lag2_halving_v1.json",
@@ -1088,8 +1170,8 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 5566,
-      "sha256": "4b665a639c6ad27cd2276df570ba2ee1b8e84943219f36074ab0c6267aba64c3"
+      "bytes": 6149,
+      "sha256": "2ef80696a90f4afcb03b65fd653d8618d03b52ef1d743dfc8ed13f0e88a38f6a"
     },
     {
       "path": "tools/capture_rs_reference.py",
@@ -1314,6 +1396,12 @@
       "sha256": "383ce9de03f221b8f7fa5a5fa1763395b0039f22a83b7307cf96652cf0860413"
     },
     {
+      "path": "tools/plot_historical_level2.py",
+      "role": "reproduction_tool",
+      "bytes": 1262,
+      "sha256": "d1bbfa8a02df3227c658d978c02a806f312407fef2f2740ee4314d3db454f12b"
+    },
+    {
       "path": "tools/plot_lag2_audit.py",
       "role": "reproduction_tool",
       "bytes": 3312,
@@ -1368,6 +1456,12 @@
       "sha256": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
     },
     {
+      "path": "tools/verify_historical_level2.py",
+      "role": "reproduction_tool",
+      "bytes": 4393,
+      "sha256": "d94cfbb8f96273bb15475b70d011193001523a3e3878ae60dc9de274b495c5e5"
+    },
+    {
       "path": "tools/verify_level5_geometry.py",
       "role": "reproduction_tool",
       "bytes": 4130,
@@ -1376,8 +1470,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 14662,
-      "sha256": "4391b7c19c4fcf31be3acd2ce107f00fb7d8227b20a24992ba0141a26da15aea"
+      "bytes": 15704,
+      "sha256": "0a2010cda0caa314b0ca6f1e760a73ebadf5bac54584557c11323393e9dda724"
     },
     {
       "path": "AGENTS.md",
@@ -1388,20 +1482,26 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 27063,
-      "sha256": "eabf9aa8427cd373604e958f52860d1dcfb4937baef2407c6b6aa985b5e3d6a2"
+      "bytes": 28573,
+      "sha256": "2795e53f58cb255cac83b304e9c1cc46f129cd712577dffc7fd8931c6c12b391"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 101340,
-      "sha256": "6d1578f5c3121bf81593dfb1d767de5aad18c67eb20c5424aa58bbf92c3edccb"
+      "bytes": 105477,
+      "sha256": "0a8132620eac6a53abb3a10cc17bd4932a909518f705702554113fc361d60a9e"
     },
     {
       "path": "research/REPORT_20261101_UPLOAD_AUDIT.md",
       "role": "research_report",
       "bytes": 8336,
       "sha256": "619d7823f4427cb443c943fb3e1b3de77a5d4c8c5f7e6a69a00b1947164664af"
+    },
+    {
+      "path": "research/REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md",
+      "role": "research_report",
+      "bytes": 6805,
+      "sha256": "1b58c80e90296ede8b44df92de0b749fd0b400a63f9df948f8d04474347ba5a0"
     }
   ]
 }

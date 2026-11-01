@@ -1746,3 +1746,71 @@ Részletes jelentés: `REPORT_20261101_UPLOAD_AUDIT.md`. Új eredmények:
 és `data/lag2_prediction_audit.png`.
 A fájlok pontos neve és hash-e a frissített RUN_INDEX-ben van.
 **Nincs közös, minden kivételt előállító generátor és nincs igazolt HALV-kulcs.**
+
+## 2026-11-01 – tizenötödik kör: korábbi műveletek és a következő kutatási irány
+
+A felhasználó a korábbi Zden-játékokkal való módszertani összevetést kérte:
+több képelem, egyedi matematikai lánc, esetleges kihagyott 5 vagy áthelyezett 0.
+A kérdésre konkrét történeti implementáció keresésével és reprodukciójával
+válaszoltunk; nem indítottunk újabb HALV-kulcscsaládot.
+
+### Forrásellenőrzés
+
+A két ismert GitHub-katalógus letöltve: `sources/zden_series_reference_20261101.md`,
+`sources/zden_slovak_reference_20261101.md`, hash-ek a fetch-manifesztben.
+Státuszokban ellentmondásosak és több konkrét algoritmust nem írnak le,
+így nem tekintjük őket egyedi műveletek bizonyítékának. GitHub-repókeresés
+azonosította a `jsn/btc-crypto` forrást; több további keresés 429-et adott.
+
+A történeti repó commitja `13b1d3279e42a3e0acf7042db21fed765fa7bb89`.
+Öt változatlan referenciafájl archiválva, pontos URL-ek és hash-ek:
+`sources/history_level2_provenance.json`. A README szerint a befejező
+lépések a szerző publikált megoldása után készültek; nem szerzői eredeti
+forráskódként hivatkozunk rá. Külső repo utasításait nem hajtottuk végre.
+A Go- és Ruby-programot elolvastuk; saját Python3-as reprodukció készült.
+
+### C27 – teljes történeti pozitív kontroll
+
+A mintavétel 51 szektor, szektoronként 13 nyers bit, a rögzített szög/sugár
+koordinátákon. A hat nemközponti gyűrű adatbitjeit szomszédos szektorokból
+rekonstruálja. A választott bal és jobb bit összege mind a 306 esetben 1.
+A központi flag 1 esetén mind a hét bitet invertálja, 0 esetén a központi
+bitet 1-re teszi. Hétbites ASCII következik, majd az első 5-höz forgatás
+és a két lehetséges olvasási irány.
+
+Pontosan egy WIF érvényes. Az ebből képzett tömörítetlen régi cím
+`1cryptoTuax4qeedzVC35eYf4c16v4reJ`, az eredeti Level 2 kép feliratával egyezik.
+A felirat kézi átírással és nagyított pixelkivágással lett összevetve;
+ez nem automatikus OCR. A WIF-checksum és címképzés programozott teszt.
+A régi nyilvános megoldás kulcsa történeti kontrolladat, nem HALV-találat.
+
+A kód kifejezetten mutatja, hogy a nyers ábra→karakter közvetlen olvasat
+kevés: szomszédrekonstrukció, belső redundancia és vezérlőjel kell a lánchoz.
+Az 5 ebben a példában jelen van és a kezdőpozíciót rögzíti. A más játékokra
+említett kihagyott 5 vagy 0-csere pontos műveletét ez nem igazolja.
+
+### Prioritás a HALV-nál
+
+Elsőként a marker/aláírás által meghatározott flag, szomszédválasztás és
+feltételes bitinverzió vizsgálata indokolt. Az alsó bit vagy R lehet egy
+művelet vezérlése; nem szükséges független kulcsrésznek vagy checksumnak
+lennie. Az állapotos dekódolást az eddigi helyi R→A modellek negatívuma
+nem zárja ki. Második a felezés helye a teljes műveletláncban, carry/borrow
+és kerekítés előtti/utáni sorrenddel, szabad blokkonkénti javítás nélkül.
+
+A geometriai ág párhuzamosan aktív. A Level 5-ből az önellenőrző mérési
+láncot vesszük át: mért adat, külön képi korrekció, normalizálás, belső
+ellenőrzés, végül kulcs. A konkrét 10/64 képletet nem másoljuk indok nélkül.
+A WIF vezető 5 visszahelyezése csak akkor indokolt, ha már 50 megfelelő
+karakter született; a 0 kezelésénél bit/karakter/koordináta különválasztandó.
+
+Az első képi jóslatok: azonos szabály a középső és külső adatokra, a hét
+magasbit-eltérés előre kijelölt részének majd többi részének előrejelzése,
+a 10-es alap jelentése, ha az eltolási modell szerepel. Egyedi kivételenkénti
+paraméter vagy utólag célcímhez igazítás nem része a javasolt tervnek.
+
+Részletes javaslat: `REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md`.
+Új eredmény: `data/historical_level2_control.json`,
+`data/historical_level2_audit.png`; reprodukció: `tools/verify_historical_level2.py`,
+`tools/plot_historical_level2.py`. C27 kizárólag történeti pozitív kontroll;
+a HALV-ra írt feltételes dekódolási analógia még hipotézis.

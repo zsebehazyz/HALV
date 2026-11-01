@@ -1,0 +1,37 @@
+{
+  "repository": "https://github.com/jsn/btc-crypto",
+  "commit": "13b1d3279e42a3e0acf7042db21fed765fa7bb89",
+  "scope": "Community implementation; README says finishing touches followed author publication; original historical files, not HALV inputs",
+  "files": [
+    {
+      "path": "research/sources/history_level2_README.rst",
+      "repository_path": "README.rst",
+      "sha256": "0163c645922fa30fa55cf07bf94688d136ea406f80f2967c398afeb9aa131e82",
+      "url": "https://github.com/jsn/btc-crypto/blob/13b1d3279e42a3e0acf7042db21fed765fa7bb89/README.rst"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__README.rst",
+      "repository_path": "crypto2/README.rst",
+      "sha256": "50b60222bb2414e5084239876e3a9b7b5593d871cf8f06a04a4cc7f46f36d6e9",
+      "url": "https://github.com/jsn/btc-crypto/blob/13b1d3279e42a3e0acf7042db21fed765fa7bb89/crypto2/README.rst"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__crypto2.go",
+      "repository_path": "crypto2/crypto2.go",
+      "sha256": "17e784bedd4864b58f0c9fc1fe3b5853d1c82b05270e8542c2133500783c2950",
+      "url": "https://github.com/jsn/btc-crypto/blob/13b1d3279e42a3e0acf7042db21fed765fa7bb89/crypto2/crypto2.go"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__d.rb",
+      "repository_path": "crypto2/d.rb",
+      "sha256": "d9b81858d650378e1e8ef8cdb0693e91c349fdd47c52928904a9170bcd3056ce",
+      "url": "https://github.com/jsn/btc-crypto/blob/13b1d3279e42a3e0acf7042db21fed765fa7bb89/crypto2/d.rb"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__crypto2.png",
+      "repository_path": "crypto2/crypto2.png",
+      "sha256": "d43ae2e2c6e50ed9a7ad486ba74a7c9065f7fb22cc1fcec1fc9d65b2469714f5",
+      "url": "https://github.com/jsn/btc-crypto/blob/13b1d3279e42a3e0acf7042db21fed765fa7bb89/crypto2/crypto2.png"
+    }
+  ]
+}
