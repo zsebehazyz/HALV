@@ -1,0 +1,14 @@
+{
+  "model":"C35",
+  "purpose":"Exact feasibility audit for G1/G2: pure dyadic halving, quantizer placement, and a repeated normalized template",
+  "inputs":"Unchanged nominal256 states, scales128,64,32,16,8,4,2,1; C25 lag2 shifts from inherited fitted offset10",
+  "quantizers":["floor","ceil","nearest_ties_even","nearest_ties_up"],
+  "chains":["divide physical height by4 then quantize","quantize after each of two divisions by2"],
+  "analytic_check":"For integerq and integer target scaleS, source heightq*(4*S) divided by4 is integerq*S; all four quantizers and both chains must agree",
+  "lag2_comparison":"All6 lag2 pairs, shifts(a+source_scale/2)mod32 from frozen C25a; do not refit on target",
+  "permutation_invariant":"All28 block pairs: histogram intersection gives the exact maximum matches under any permutation of32 discrete samples; store a constructive optimal matching witness",
+  "primary_consequences":["Are the seven H differences consistent with simple pixel rounding?","Can one32sample normalized template, or one per block parity, generate all blocks by permutation and exact amplitude halving?"],
+  "scope":"Same32 values may be arbitrarily permuted, but not interpolated, resampled, clipped, modulated or replaced by a different window of a longer stream",
+  "calibration":"Rational quantizer ties and non-ties; histogram bound vs exhaustive permutations on small arrays",
+  "limitations":["Known image, deterministic feasibility audit rather than prospective discovery","Nominal q and physical scales are model-based measurements; conclusion conditional on them","Not a test of arbitrary pre-encoding quantization or an unknown nonlinear encoder","No generator recovered, no new private-key search","No alteration of original q or omission of residual bits"]
+}

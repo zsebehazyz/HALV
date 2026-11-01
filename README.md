@@ -2,6 +2,11 @@
 
 A bitcoin puzzle vizsgálata. **Nincs ellenőrzött megfejtés vagy privát kulcs.**
 
+**[Teljes kutatási MD – minden mentett lépés az elejétől](research/HALV_TELJES_KUTATAS.md).**
+Tartalmazza a teljes naplót, hipotéziseket, részletes jelentéseket és
+modellrecepteket. Minden kutatási körben frissül; a forrásadatok és programok
+hash-sel hivatkozva megmaradnak. A kézi állapotkép: [MASTER_OVERVIEW.md](research/MASTER_OVERVIEW.md).
+
 A kutatás fő térképe az [összefüggések és hipotézisek](research/HYPOTHESES.md)
 fájl: a jelölő, az aláírás, a hullám és a dátum lehetséges adat-, maszk-,
 vezérlő- és sorrendi szerepeit együtt kezeli. A korábbi eredmények hash-sel
@@ -70,6 +75,14 @@ a közös előállítási egyenletet helyezi előre: skálázás/kvantálás, k�
 adatfolyam/fázis és geometriai kódolás versengő modelljei. A külső minták
 előrejelzése és a teljes R magyarázata szükséges a kulcsolvasás előtt.
 Ez terv; új generátorfutás eredményét nem tartalmazza.
+
+A terv első **C35–C36** tesztjei lefutottak. A deklarált fizikai
+kerekítés nem magyarázza az5–7. pár hét4px-es eltérését; a nyolc eltérő
+hisztogram kizár egy változatlan32mintás sablont puszta felezéssel és
+tetszőleges permutációval. A teljes512bites fázis/ASCII/flag lánc12672
+formátumpróbája sem ad teljes64karakteres hexszöveget. Ez a rögzített
+család negatívuma, nem minden közösadatfolyam-generátor kizárása.
+[Pontos számítások és korlátok](research/REPORT_20261101_HALVING_AND_PHASE_ASCII.md).
 
 ## Reprodukálás
 

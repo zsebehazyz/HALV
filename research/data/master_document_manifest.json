@@ -1,0 +1,1649 @@
+{
+  "purpose": "Inputs and completeness of the continuously refreshed full research MD",
+  "master_path": "research/HALV_TELJES_KUTATAS.md",
+  "master_sha256": "c08809df3d1725dde612e150008d00ca8caf76fa89fcb9523a2650ff9d6fadb2",
+  "journal_round_headings": 19,
+  "full_journal_embedded": true,
+  "full_hypothesis_map_embedded": true,
+  "full_reports_embedded": [
+    "research/REPORT_20261101_GENERATOR_PLAN.md",
+    "research/REPORT_20261101_HALVING_AND_PHASE_ASCII.md",
+    "research/REPORT_20261101_ORDERED_SEQUENCE.md",
+    "research/REPORT_20261101_STATEFUL_BRIDGE.md",
+    "research/REPORT_20261101_UPLOAD_AUDIT.md",
+    "research/REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md"
+  ],
+  "full_model_specs_embedded": [
+    "research/models/bd_halving_v1.json",
+    "research/models/bd_pair64_v1.json",
+    "research/models/boundary33_v1.json",
+    "research/models/composite_v1.json",
+    "research/models/fractional_area_v1.json",
+    "research/models/halving_invariants_v1.json",
+    "research/models/halving_pairs_v1.json",
+    "research/models/historical_level2_control_v1.json",
+    "research/models/lag2_halving_v1.json",
+    "research/models/lag2_residual_bridge_v1.json",
+    "research/models/layered_structure_v1.json",
+    "research/models/nonlinear_context_v1.json",
+    "research/models/ordered_decode_v1.json",
+    "research/models/pair64_v1.json",
+    "research/models/parity_phase_v1.json",
+    "research/models/phase_ascii_generator_v1.json",
+    "research/models/phase_decode_v1.json",
+    "research/models/residual_codes_v1.json",
+    "research/models/residual_physics_v1.json",
+    "research/models/residual_predictors_v1.json",
+    "research/models/reward_staircase_v1.json",
+    "research/models/signature_phase_decode_v1.json",
+    "research/models/stateful_bridge_v1.json",
+    "research/models/timing_lattice_v1.json",
+    "research/models/uniform_phase_layers_v1.json",
+    "research/models/upload_audit_v1.json"
+  ],
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "role": "dokumentum",
+      "bytes": 2218,
+      "sha256": "5e0e02697905e64e58f99291cf3f4b7feec384b55ffdc8e9c29daea70efe5058"
+    },
+    {
+      "path": "README.md",
+      "role": "dokumentum",
+      "bytes": 18255,
+      "sha256": "5c5fc35199dedb57c2870231982c4c0ca74d4f11424a9df88631c6692204ce4a"
+    },
+    {
+      "path": "research/HYPOTHESES.md",
+      "role": "dokumentum",
+      "bytes": 35804,
+      "sha256": "d4adbaa53823b133b333e99d76d9886ab81b0560b71ffebc77da254a03ea716e"
+    },
+    {
+      "path": "research/LOG.md",
+      "role": "dokumentum",
+      "bytes": 118644,
+      "sha256": "cc8371188f5880136cfec69949f5975a434c8cde11d9403dbc04952285f3b882"
+    },
+    {
+      "path": "research/MASTER_OVERVIEW.md",
+      "role": "dokumentum",
+      "bytes": 3638,
+      "sha256": "344f6d44bf21121b98bb06dfe78da80f8601ae936a6b15df24bca6c21b7dcad9"
+    },
+    {
+      "path": "research/REPORT_20261101_GENERATOR_PLAN.md",
+      "role": "dokumentum",
+      "bytes": 6007,
+      "sha256": "b20b8ecda8a1c9929f1c50c4ee87d0c5e64b77ecdf64276abdfd1112aee47818"
+    },
+    {
+      "path": "research/REPORT_20261101_HALVING_AND_PHASE_ASCII.md",
+      "role": "dokumentum",
+      "bytes": 6958,
+      "sha256": "d6832ed85ebfd7f89ff8ee07ae623d3c3b95837ef0f6ae375bf326449ff08c02"
+    },
+    {
+      "path": "research/REPORT_20261101_ORDERED_SEQUENCE.md",
+      "role": "dokumentum",
+      "bytes": 9898,
+      "sha256": "970c77c385565a59a4183510d83428de1a8d0a6ec4ff64c473c09388b4732b4b"
+    },
+    {
+      "path": "research/REPORT_20261101_STATEFUL_BRIDGE.md",
+      "role": "dokumentum",
+      "bytes": 8217,
+      "sha256": "50e9602235f939b2db7e3027bb8599496399aaa721ff49c2f620564278f3e585"
+    },
+    {
+      "path": "research/REPORT_20261101_UPLOAD_AUDIT.md",
+      "role": "dokumentum",
+      "bytes": 8336,
+      "sha256": "619d7823f4427cb443c943fb3e1b3de77a5d4c8c5f7e6a69a00b1947164664af"
+    },
+    {
+      "path": "research/REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md",
+      "role": "dokumentum",
+      "bytes": 6805,
+      "sha256": "1b58c80e90296ede8b44df92de0b749fd0b400a63f9df948f8d04474347ba5a0"
+    },
+    {
+      "path": "research/data/absolute_primary32.bin",
+      "role": "eredmény/adat",
+      "bytes": 32,
+      "sha256": "7a0a7c69b8c6de6fa86940d1edcc243dcd1ab149f5734c3a3c33e7a601fca570"
+    },
+    {
+      "path": "research/data/absolute_residual12.bin",
+      "role": "eredmény/adat",
+      "bytes": 12,
+      "sha256": "d11f2a7e0295f65967cd3afc51c5f784ba9131f5a9efe6d2c989c1d68335c4b1"
+    },
+    {
+      "path": "research/data/bd_halving_check.json",
+      "role": "eredmény/adat",
+      "bytes": 1610,
+      "sha256": "336a3da88d311dca591150fe7d76812915f5a7f0b7b21fe36ac90b0b783674a8"
+    },
+    {
+      "path": "research/data/bd_pair64_check.json",
+      "role": "eredmény/adat",
+      "bytes": 2735,
+      "sha256": "7e94c85ef372058a409801edd6c15c0006ae0f4702214252d971390a49fbe941"
+    },
+    {
+      "path": "research/data/boundary33_audit.png",
+      "role": "eredmény/adat",
+      "bytes": 241770,
+      "sha256": "089965516773d72f48ec6febeabaf511d882f6587fb71f7c7cbbd85ef605ab29"
+    },
+    {
+      "path": "research/data/boundary33_check.json",
+      "role": "eredmény/adat",
+      "bytes": 48516,
+      "sha256": "5b9d46542260c43f548f02e2ffd6ff798414a4c3a7c1143e3281fdd36b46e36b"
+    },
+    {
+      "path": "research/data/btc_usd_daily_2020_to_halving.csv",
+      "role": "eredmény/adat",
+      "bytes": 45504,
+      "sha256": "49437c19c61b57bb0426bd6372c64e7de554205a5d8eb818aa1e5e33a89cc1d4"
+    },
+    {
+      "path": "research/data/candidate_check.json",
+      "role": "eredmény/adat",
+      "bytes": 955,
+      "sha256": "833514beb3118e183808767cb1068e7380e4567d403ce49a0800087bf80a8d2c"
+    },
+    {
+      "path": "research/data/composite_masks.json",
+      "role": "eredmény/adat",
+      "bytes": 88453,
+      "sha256": "cb5f1ed3882e6d63dad59b91672f8febd095a3f20b579b522ffb953bf748f267"
+    },
+    {
+      "path": "research/data/composite_model_check.json",
+      "role": "eredmény/adat",
+      "bytes": 2563,
+      "sha256": "ae558bcecbd36d09dcacce1ec58530848e15dfd5f1607332178c60b1e863614d"
+    },
+    {
+      "path": "research/data/composite_run.log",
+      "role": "eredmény/adat",
+      "bytes": 3493,
+      "sha256": "61a28cf42f637621781d5c50be16475e53bbbf2e4e9fc562bde26d556ac9d5df"
+    },
+    {
+      "path": "research/data/corner_check.json",
+      "role": "eredmény/adat",
+      "bytes": 4040,
+      "sha256": "904e86defa775c8bfd375fe7b93ef8b2bd5f959eab59a2da0e5571851a6d6159"
+    },
+    {
+      "path": "research/data/corner_comparison.png",
+      "role": "eredmény/adat",
+      "bytes": 75633,
+      "sha256": "62a3a071fecc4d5534d3e8f13fb6f6790c6c2b88cd42ef02fe919af868ca80ce"
+    },
+    {
+      "path": "research/data/five_sample_wif_check.json",
+      "role": "eredmény/adat",
+      "bytes": 1716,
+      "sha256": "0060745795c50fc9237bbfbf09041164cbbba3b540fe87fae253f250e2c04e40"
+    },
+    {
+      "path": "research/data/fractional_area_audit.png",
+      "role": "eredmény/adat",
+      "bytes": 231730,
+      "sha256": "848f9d675eea83188e96f911de947f923080720a3cf35807728801df253d0299"
+    },
+    {
+      "path": "research/data/fractional_area_check.json",
+      "role": "eredmény/adat",
+      "bytes": 9981,
+      "sha256": "6e093e315aad88b94be704bf1ee3195cf3b3913c52c664bcb4aede7b02ed4b56"
+    },
+    {
+      "path": "research/data/fractional_area_profiles.json",
+      "role": "eredmény/adat",
+      "bytes": 17251,
+      "sha256": "2f1b2125dd465492c54f2a02fe5464d186ad7ac743cefac8723f785cd4faec9f"
+    },
+    {
+      "path": "research/data/fractional_area_recipes.json",
+      "role": "eredmény/adat",
+      "bytes": 385727,
+      "sha256": "31c8b7a587f2e414d36af64807202303219833f83b6881197b7730bd1ea5e3da"
+    },
+    {
+      "path": "research/data/halv_64_cells.csv",
+      "role": "eredmény/adat",
+      "bytes": 2407,
+      "sha256": "5fe73347aa4952ee8aa29de6b7d7e3324d4c2e0738aecb8f9d99684ebc63cdd6"
+    },
+    {
+      "path": "research/data/halving_invariants_check.json",
+      "role": "eredmény/adat",
+      "bytes": 26953,
+      "sha256": "4b459ed6aedbd7143b533f7960919fdae2033cc26323e8bf05d0631f4795dc87"
+    },
+    {
+      "path": "research/data/halving_pairs_check.json",
+      "role": "eredmény/adat",
+      "bytes": 2146,
+      "sha256": "360c0eef3b83442e314ff2c41d643a707c2a53dfa7a81508c3943bd6bfb5e657"
+    },
+    {
+      "path": "research/data/halving_phase_ascii_integrity.json",
+      "role": "eredmény/adat",
+      "bytes": 707,
+      "sha256": "8673e3dde33ca2c1f9da7f526329da81d4e7b55c01aee9c296ef275bfda177ae"
+    },
+    {
+      "path": "research/data/hex_text_check.json",
+      "role": "eredmény/adat",
+      "bytes": 6844,
+      "sha256": "04557c09a16f6f3a41c503c883c93f0f1717675a4a240bb2bcd960d3186d82d1"
+    },
+    {
+      "path": "research/data/historical_level2_audit.png",
+      "role": "eredmény/adat",
+      "bytes": 57122,
+      "sha256": "ce92e8ae0459da1b8dc22f5ec86fed5419408b04d7e3473dfbb332142944943a"
+    },
+    {
+      "path": "research/data/historical_level2_control.json",
+      "role": "eredmény/adat",
+      "bytes": 99342,
+      "sha256": "ab45489f7a31f666ba50766d67cfff1ee6c45ef7a1c25da19cb6e45c4361c916"
+    },
+    {
+      "path": "research/data/lag2_control_scores.npz",
+      "role": "eredmény/adat",
+      "bytes": 100509,
+      "sha256": "10d7ec9480aec7c8f3e78adbc1c0faf90e1063bb51f157269cd0695496eec786"
+    },
+    {
+      "path": "research/data/lag2_halving_check.json",
+      "role": "eredmény/adat",
+      "bytes": 13729,
+      "sha256": "2de6d22982c31fd1654999cce510b5860aa4b6118eece6b1f3c62f54e983394f"
+    },
+    {
+      "path": "research/data/lag2_pair_alignment.png",
+      "role": "eredmény/adat",
+      "bytes": 114594,
+      "sha256": "1f715b47426c49b4c20191c2da80a7792be7bb440c5f153f8c658f8d4e4e91e9"
+    },
+    {
+      "path": "research/data/lag2_prediction_audit.png",
+      "role": "eredmény/adat",
+      "bytes": 155134,
+      "sha256": "73f62a05d86fa1448be074e3186a00f931cef65b68d6d9fffcbcf23f50555211"
+    },
+    {
+      "path": "research/data/lag2_residual_bridge_check.json",
+      "role": "eredmény/adat",
+      "bytes": 5953,
+      "sha256": "c2eb26a26c0435335936ecec5c2bd1735065db5d894c68adb31ba7ee78bd2ea4"
+    },
+    {
+      "path": "research/data/layered_lossless44.bin",
+      "role": "eredmény/adat",
+      "bytes": 44,
+      "sha256": "6613982c04744eaba5ebcf0fc7fdff6f5fc83da3ecd7163fef59542b5fbc91e5"
+    },
+    {
+      "path": "research/data/layered_structure_check.json",
+      "role": "eredmény/adat",
+      "bytes": 14272,
+      "sha256": "28e194c97c4c1ccb156cede9f50dd2e8d095fd4bc3777ef0d5c4bd0d1465591b"
+    },
+    {
+      "path": "research/data/layered_zero_surrogates.npz",
+      "role": "eredmény/adat",
+      "bytes": 19777,
+      "sha256": "566d01d1153f710546833b6c267aad78b2a14a0bbf30df6e87fade14c77df2a8"
+    },
+    {
+      "path": "research/data/level5_geometry_verification.json",
+      "role": "eredmény/adat",
+      "bytes": 2511,
+      "sha256": "197d7ea1dd7a875e3c487e632c36459985c8a22e2a408c48eaf8d390c112217f"
+    },
+    {
+      "path": "research/data/level5_remeasured_rectangles.csv",
+      "role": "eredmény/adat",
+      "bytes": 4816,
+      "sha256": "528e359ad2e4f18fd651fc184115482ee50b1c54bd76c3dadc713ffc8fa1a88a"
+    },
+    {
+      "path": "research/data/lobes_centerline_t1.csv",
+      "role": "eredmény/adat",
+      "bytes": 1173,
+      "sha256": "156ff4371693e54116d23216ecb7f5badb9d8aba3ea8dc187c5105717579519d"
+    },
+    {
+      "path": "research/data/marker_glyph_relation.json",
+      "role": "eredmény/adat",
+      "bytes": 5084,
+      "sha256": "dcf5ce536011d595490b67983cba3d25665961df63dd4fd6887a950382a391a8"
+    },
+    {
+      "path": "research/data/marker_grid_check.json",
+      "role": "eredmény/adat",
+      "bytes": 21368,
+      "sha256": "bc483972863368ff7b4f6a4fffb6ce0aa6dfda4a6aa1632475bd08ac074d95e6"
+    },
+    {
+      "path": "research/data/marker_pixels.csv",
+      "role": "eredmény/adat",
+      "bytes": 917,
+      "sha256": "305bf4febd4cb6615063c84884d97162275bd3e421f559a9b9f97e4c980b05d5"
+    },
+    {
+      "path": "research/data/miner_revenue_check.json",
+      "role": "eredmény/adat",
+      "bytes": 1323,
+      "sha256": "443a0a9e513b8c94074e3832964b70467007fe146fc4b7d01d87eaedb2062eac"
+    },
+    {
+      "path": "research/data/miner_revenue_daily.csv",
+      "role": "eredmény/adat",
+      "bytes": 110584,
+      "sha256": "50447e8cba448c8a7e2d02888ed388ce257e330df94b4297501e77ed6b517523"
+    },
+    {
+      "path": "research/data/morse_ambiguity.json",
+      "role": "eredmény/adat",
+      "bytes": 969,
+      "sha256": "91434f6b3e0f2ce4bd85fc864a2cb18b40ecc63e55fcda85181db7bc15927d5e"
+    },
+    {
+      "path": "research/data/nonlinear_context_check.json",
+      "role": "eredmény/adat",
+      "bytes": 3094,
+      "sha256": "1ba3926721d15da497fd6f04a17874d1e9dedaa6ac065565b7fdc6301073e44a"
+    },
+    {
+      "path": "research/data/nonlinear_context_trials.jsonl.gz",
+      "role": "eredmény/adat",
+      "bytes": 194970,
+      "sha256": "41674942a59fd9a9b5d2dc3b36c43a8eaa00b0c5c827159474ec4ee88353c48d"
+    },
+    {
+      "path": "research/data/ordered_arithmetic_check.json",
+      "role": "eredmény/adat",
+      "bytes": 111620,
+      "sha256": "d5a24871ac01ed251beb5bb4df7bb482a31ae09128cbcecd3134d7b92c6e1a02"
+    },
+    {
+      "path": "research/data/ordered_arithmetic_payloads.json",
+      "role": "eredmény/adat",
+      "bytes": 8128024,
+      "sha256": "9c04d516dcbf815e2e3ff041286b1ede0b488c312f389a99c0a15e0382b9edf9"
+    },
+    {
+      "path": "research/data/ordered_arithmetic_recipes.jsonl.gz",
+      "role": "eredmény/adat",
+      "bytes": 691832,
+      "sha256": "28fb5aad4ceaf4a3abeb0ed6db00d4275bc3db99e81ffa8bfd0caf2747696ff5"
+    },
+    {
+      "path": "research/data/ordered_control_cases.json",
+      "role": "eredmény/adat",
+      "bytes": 569080,
+      "sha256": "5f917831393c13ac9f95066472696e9a2b06d8e61ef1ee2ab8ffd4ef7ecd63e2"
+    },
+    {
+      "path": "research/data/ordered_control_check.json",
+      "role": "eredmény/adat",
+      "bytes": 2189,
+      "sha256": "8dc783db0164a510172fd72ea0ecd7d8ba68922e55442d4c2d52c4e29a2d2554"
+    },
+    {
+      "path": "research/data/ordered_format_check.json",
+      "role": "eredmény/adat",
+      "bytes": 3571,
+      "sha256": "1bd6cbb83179d98dc8e116dc85b554119e374f5320844e68aab3f02af0cc6015"
+    },
+    {
+      "path": "research/data/ordered_format_trials.jsonl.gz",
+      "role": "eredmény/adat",
+      "bytes": 64496,
+      "sha256": "6f42e5fbbfee165c7d17a2f735ea0709763c9cddd9050606c536ffff42c38afb"
+    },
+    {
+      "path": "research/data/ordered_integrity_audit.json",
+      "role": "eredmény/adat",
+      "bytes": 987,
+      "sha256": "c17138a9aaee8dedeb9542c927569ccb5c3f2f1e4e56ce683fd819bd4e8b8f40"
+    },
+    {
+      "path": "research/data/ordered_key_candidates.json.gz",
+      "role": "eredmény/adat",
+      "bytes": 2676845,
+      "sha256": "09ba0ac405f0319ae2c5245ca29e36a18cccd6dcfb6cb8a5b20522b874edc872"
+    },
+    {
+      "path": "research/data/pair64_check.json",
+      "role": "eredmény/adat",
+      "bytes": 3641,
+      "sha256": "a1e23fd9246811a493ff628cdb8adda0a12eb2c0d56baf1c5632dc4e7ce9b9b0"
+    },
+    {
+      "path": "research/data/pair64_control_comparison.png",
+      "role": "eredmény/adat",
+      "bytes": 249031,
+      "sha256": "52ec6d0a490c51b770591d39454f0394ef4670c34e9d092cc47a36f91260736c"
+    },
+    {
+      "path": "research/data/pair64_profiles.json",
+      "role": "eredmény/adat",
+      "bytes": 108292,
+      "sha256": "3a17619e6db0b2abe67b54bdf0f7892606477356700700eee289e152ae51e159"
+    },
+    {
+      "path": "research/data/pair64_range_diagnostics.json",
+      "role": "eredmény/adat",
+      "bytes": 2124,
+      "sha256": "48f14cc63e0088e38470e143730d90633b85c7d33d19a4caa31eaddea2f50c17"
+    },
+    {
+      "path": "research/data/parity_phase_audit.png",
+      "role": "eredmény/adat",
+      "bytes": 105483,
+      "sha256": "bedee4da023e85e2eb775eb21b293a720ef1fb9eac2efc4c2408ca033ec935b5"
+    },
+    {
+      "path": "research/data/parity_phase_check.json",
+      "role": "eredmény/adat",
+      "bytes": 26593,
+      "sha256": "44d3c6cac70eede9a401abd90e6d085c0cfaf066d30872d55e0a2e021634c5fe"
+    },
+    {
+      "path": "research/data/phase_ascii_generator_check.json",
+      "role": "eredmény/adat",
+      "bytes": 2608,
+      "sha256": "d607b85b1efadc512724c4480c725013440c93c02ed16df481bb9266131c9138"
+    },
+    {
+      "path": "research/data/phase_ascii_generator_trials.jsonl.gz",
+      "role": "eredmény/adat",
+      "bytes": 55587,
+      "sha256": "8156704b7e9c69476879f90dcf59a2607fc43379cd2756955836d8952884b2e8"
+    },
+    {
+      "path": "research/data/phase_channels.png",
+      "role": "eredmény/adat",
+      "bytes": 82903,
+      "sha256": "bdc80c53b2ca2951154ba81e72d3bdde130ff17c7736812db9e665a0ff0437cc"
+    },
+    {
+      "path": "research/data/phase_decode_check.json",
+      "role": "eredmény/adat",
+      "bytes": 1921,
+      "sha256": "3fe0a1bcdad08e7a10d68af4a54d5ada3b9ad3d847ef169fee33fab73eebfe2d"
+    },
+    {
+      "path": "research/data/phase_decode_run.log",
+      "role": "eredmény/adat",
+      "bytes": 2403,
+      "sha256": "f03241f4e27147f194452488f7c3a6014392ee731811d90db61008b28c6c0a53"
+    },
+    {
+      "path": "research/data/phase_field_consistency.json",
+      "role": "eredmény/adat",
+      "bytes": 3782,
+      "sha256": "cf0719918022b5e790ff7a0c09050a9b4e9a72c95274ff0fe39cb6746402937a"
+    },
+    {
+      "path": "research/data/phase_law_diagnostics.json",
+      "role": "eredmény/adat",
+      "bytes": 7531,
+      "sha256": "ac51a8544128da09b60ab94c310292b8fb1cc91f6273f4ed62fd5764481dbe2d"
+    },
+    {
+      "path": "research/data/phase_relative_primary32.bin",
+      "role": "eredmény/adat",
+      "bytes": 32,
+      "sha256": "09dc31883193c377fefb68851b93b0f015b3e871d8e393d8bda36dbf34f4a013"
+    },
+    {
+      "path": "research/data/phase_relative_residual12.bin",
+      "role": "eredmény/adat",
+      "bytes": 12,
+      "sha256": "4a1515e510ef52ee0e387b32757705fb7b469918249f6cbe2bc641c694eccbfc"
+    },
+    {
+      "path": "research/data/pixel_measurements.json",
+      "role": "eredmény/adat",
+      "bytes": 173640,
+      "sha256": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79"
+    },
+    {
+      "path": "research/data/png_structure.json",
+      "role": "eredmény/adat",
+      "bytes": 455,
+      "sha256": "480d2cb89e65ccf9ee5b2c7f713656a3ff89d07adc7388cec438ec98169d4b0e"
+    },
+    {
+      "path": "research/data/price_check.json",
+      "role": "eredmény/adat",
+      "bytes": 3087,
+      "sha256": "d6369c2c3c0f840e1408b11add6be442830b56b70fd32fe4fdaa57c0b9c6c7ce"
+    },
+    {
+      "path": "research/data/reconstructed_states.csv",
+      "role": "eredmény/adat",
+      "bytes": 8939,
+      "sha256": "bf64567763d899d80ab75111068949ce6d6097fd9507ea0e0487a7b38a477359"
+    },
+    {
+      "path": "research/data/reconstruction.png",
+      "role": "eredmény/adat",
+      "bytes": 350164,
+      "sha256": "53970e5db54a5783c97f66a2011aa7e3443f2f4c554b7005d55eece52b093cdc"
+    },
+    {
+      "path": "research/data/reproduced_upload_dimensions.json",
+      "role": "eredmény/adat",
+      "bytes": 6841,
+      "sha256": "62509fd760450153f6b072b2441f335e75fd363f9efe57af982aa6a7a24d8ba6"
+    },
+    {
+      "path": "research/data/reproduced_upload_txid_control.json",
+      "role": "eredmény/adat",
+      "bytes": 820,
+      "sha256": "02c10184c4ace2a1904c5ff27f99e1b99656095974150bd8693c8724461b85d1"
+    },
+    {
+      "path": "research/data/reproduced_upload_txid_outputs.json",
+      "role": "eredmény/adat",
+      "bytes": 2132,
+      "sha256": "141afc3b3dd9d67785b8d608c3fe111bfc3e33a86349237e234b21eb6eb70237"
+    },
+    {
+      "path": "research/data/reproduced_upload_wif7.json",
+      "role": "eredmény/adat",
+      "bytes": 2872,
+      "sha256": "a62964ba1d47fe6abf7f65aef4e69c239237ad190e3c1a011523b74ec9b19de3"
+    },
+    {
+      "path": "research/data/residual_codes_check.json",
+      "role": "eredmény/adat",
+      "bytes": 11325,
+      "sha256": "f895e6bbe9ae05f60e2dd1820884d526519799eab69030ee3c5fe439f1dbe2ca"
+    },
+    {
+      "path": "research/data/residual_followup_audit.png",
+      "role": "eredmény/adat",
+      "bytes": 170078,
+      "sha256": "d9b3d73c508f408173a1c6de9b6bd70c7796d40917e0c1828d8e919d35fc1330"
+    },
+    {
+      "path": "research/data/residual_physics_check.json",
+      "role": "eredmény/adat",
+      "bytes": 427664,
+      "sha256": "3d1d28bb216f865e4395dd692f3f320c5b9aedda5d0931bbb6cf19342ea6525b"
+    },
+    {
+      "path": "research/data/residual_predictors_check.json",
+      "role": "eredmény/adat",
+      "bytes": 28295,
+      "sha256": "5a17c0e0ccb4a1c26d18602e114ba9e4b0c696ded029620111a5a8c937425a3f"
+    },
+    {
+      "path": "research/data/reward_staircase_check.json",
+      "role": "eredmény/adat",
+      "bytes": 5578,
+      "sha256": "b828d2179c0084b2de4ef02d0321875c867d12308c972208292566c9213d8354"
+    },
+    {
+      "path": "research/data/runtime_versions.json",
+      "role": "eredmény/adat",
+      "bytes": 99,
+      "sha256": "290c89c5fb05476b19de32a70d6a630193d1a97f78195f833664c6909805282d"
+    },
+    {
+      "path": "research/data/signature_phase_audit.png",
+      "role": "eredmény/adat",
+      "bytes": 175277,
+      "sha256": "55fce6b1e51a40cbf47b4046741b95f6328ecafcdd3d4527ae13a3d0b0fb0c02"
+    },
+    {
+      "path": "research/data/signature_phase_decode_check.json",
+      "role": "eredmény/adat",
+      "bytes": 7660,
+      "sha256": "a8413be924ba0bef0b53e5122eed5d66c9fd18349154008b386eb69236df844e"
+    },
+    {
+      "path": "research/data/signature_phase_decode_recipes.json",
+      "role": "eredmény/adat",
+      "bytes": 240579,
+      "sha256": "d09bbac32d6a4fc564f0b15c3ee57c453efc846b7e078126610e5bd75ccb3ae4"
+    },
+    {
+      "path": "research/data/signature_staircase_geometry.json",
+      "role": "eredmény/adat",
+      "bytes": 1849,
+      "sha256": "c6d00d8e9d0323b101060e85c5b5dbdadc38f8aa377c3ca86a1d2e7eb7762c88"
+    },
+    {
+      "path": "research/data/signed_model_check.json",
+      "role": "eredmény/adat",
+      "bytes": 72925,
+      "sha256": "4c8be47411a6a2ded8ef435c9e71c21970838872cc79d17ed56034b020e9f6cc"
+    },
+    {
+      "path": "research/data/stateful_area_cancellations.png",
+      "role": "eredmény/adat",
+      "bytes": 103867,
+      "sha256": "60da2c379f3d49f624757922bf6779b7074c03cf55a46f32b22bf15850fa3d46"
+    },
+    {
+      "path": "research/data/stateful_bridge_check.json",
+      "role": "eredmény/adat",
+      "bytes": 127365,
+      "sha256": "2a2f8141b79153d9704f70a8f582eae675c15233bc1e2a6b9280b9b451b8ad82"
+    },
+    {
+      "path": "research/data/stateful_bridge_integrity.json",
+      "role": "eredmény/adat",
+      "bytes": 1433,
+      "sha256": "8b4add52e897ccab23813852cf9fbae57d2661e3c01cb6d35f5e2c7505f49dfd"
+    },
+    {
+      "path": "research/data/stateful_bridge_trials.jsonl.gz",
+      "role": "eredmény/adat",
+      "bytes": 1084993,
+      "sha256": "2d6315a3e09c908d5928ef0bf18aadaa3cf33c2c40bc29cb4e67aa72cdfea46c"
+    },
+    {
+      "path": "research/data/timing_lattice_check.json",
+      "role": "eredmény/adat",
+      "bytes": 10270,
+      "sha256": "a3bdb2985d82cfdb99496a9bebbfffa29a8e356c39a6a2408fc2a21b4d29bafb"
+    },
+    {
+      "path": "research/data/timing_lattice_controls.png",
+      "role": "eredmény/adat",
+      "bytes": 316392,
+      "sha256": "4031998dc10915d56d8a35bb9a151a530909a7f5ab399b53519037e028944b9a"
+    },
+    {
+      "path": "research/data/timing_specificity.json",
+      "role": "eredmény/adat",
+      "bytes": 1576,
+      "sha256": "3610130e9bee85991afd51fd9c9d6ac164620fbd4bd9078d68f8c9e97a64ea0e"
+    },
+    {
+      "path": "research/data/timing_surrogate_scores.npz",
+      "role": "eredmény/adat",
+      "bytes": 637695,
+      "sha256": "84eb5d82a246cc6e6aa77e3531b7eb1ec474673d44f6d34cb79088a86c9d9ceb"
+    },
+    {
+      "path": "research/data/uniform_affine_surrogates.npz",
+      "role": "eredmény/adat",
+      "bytes": 25544,
+      "sha256": "0306c20ab766493922c8f7b45193410b112a247a0b0f05a5d88a57a17a7d8bc1"
+    },
+    {
+      "path": "research/data/uniform_edge_residual12.bin",
+      "role": "eredmény/adat",
+      "bytes": 12,
+      "sha256": "d11f2a7e0295f65967cd3afc51c5f784ba9131f5a9efe6d2c989c1d68335c4b1"
+    },
+    {
+      "path": "research/data/uniform_lossless44.bin",
+      "role": "eredmény/adat",
+      "bytes": 44,
+      "sha256": "2fa31fde801b3e8db72029926da90f223ae9ea98e8732fda3cb7071f1efa5613"
+    },
+    {
+      "path": "research/data/uniform_phase_layers.png",
+      "role": "eredmény/adat",
+      "bytes": 99662,
+      "sha256": "87453677d502d417a8a931cfefbe43dcf1ce3f8fec5eee00074d3ceed644b068"
+    },
+    {
+      "path": "research/data/uniform_phase_layers_check.json",
+      "role": "eredmény/adat",
+      "bytes": 14811,
+      "sha256": "b20f8017dc15961073195d9ef9a3b34cb5e930cd4a790699b0e6ef980b75f110"
+    },
+    {
+      "path": "research/data/uniform_phase_layers_recipes.json",
+      "role": "eredmény/adat",
+      "bytes": 22707,
+      "sha256": "3c16140835c1af333fa3bd84a1ce45cf3985f971a94e4cd08662e7c4d8085d19"
+    },
+    {
+      "path": "research/data/uniform_primary32.bin",
+      "role": "eredmény/adat",
+      "bytes": 32,
+      "sha256": "7a0a7c69b8c6de6fa86940d1edcc243dcd1ab149f5734c3a3c33e7a601fca570"
+    },
+    {
+      "path": "research/data/upload_audit_check.json",
+      "role": "eredmény/adat",
+      "bytes": 8514,
+      "sha256": "5fe91a22f3705ac3840441967771a93ac3f22843b33053fdd49638d29181c512"
+    },
+    {
+      "path": "research/models/bd_halving_v1.json",
+      "role": "rögzített modell",
+      "bytes": 928,
+      "sha256": "45d462345ff3e8dbe173d1c153546958f2beadb0455a40b6fe75de3324c93f70"
+    },
+    {
+      "path": "research/models/bd_pair64_v1.json",
+      "role": "rögzített modell",
+      "bytes": 940,
+      "sha256": "d456d49fad306a7a098ea12051327f0370eee9c3f546e6096d66dccaed5d5201"
+    },
+    {
+      "path": "research/models/boundary33_v1.json",
+      "role": "rögzített modell",
+      "bytes": 979,
+      "sha256": "112799d0ca3f6f1277d4c1f748d76c7c462f4183c61bd5876b1fb4930a713567"
+    },
+    {
+      "path": "research/models/composite_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1435,
+      "sha256": "fb0fcf731f0436cb6cd53bff8255296a83cec903ab66ffa822386a63746c2524"
+    },
+    {
+      "path": "research/models/fractional_area_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1755,
+      "sha256": "90d142fa5b470360d588c3fac914c0121c5ea8a60c7ee0c3406bcd5ff26d7cc0"
+    },
+    {
+      "path": "research/models/halving_invariants_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1788,
+      "sha256": "33acdc5d28070e8ba36d8f63bb93f2e13b7d3d28e012550617e2ae62d37c4fac"
+    },
+    {
+      "path": "research/models/halving_pairs_v1.json",
+      "role": "rögzített modell",
+      "bytes": 788,
+      "sha256": "675a0b0df22df87db0a879440c3b61abef4432f7dbc76ae2b588c4b99a100aed"
+    },
+    {
+      "path": "research/models/historical_level2_control_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1156,
+      "sha256": "32907bf2af36842f844ec69b4ab2f0df66606088aba0aad17596e94037c140e7"
+    },
+    {
+      "path": "research/models/lag2_halving_v1.json",
+      "role": "rögzített modell",
+      "bytes": 2251,
+      "sha256": "ee8e8374ccd91ba6385508f7a243e3891e89a30645a467b6405216db23958caa"
+    },
+    {
+      "path": "research/models/lag2_residual_bridge_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1486,
+      "sha256": "0504786b9be80f254e1b4f03726de2677c1611f2ff65365d306b39ef9934019e"
+    },
+    {
+      "path": "research/models/layered_structure_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1249,
+      "sha256": "c65428f11fe91d8c65d2eb9f4e2c8fb712bad89d15829f2b988b3f542f9c92d9"
+    },
+    {
+      "path": "research/models/nonlinear_context_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1390,
+      "sha256": "14613aeae01ea3ff7992cb3eb6b29960085a5019345dbd882f7696104d52488a"
+    },
+    {
+      "path": "research/models/ordered_decode_v1.json",
+      "role": "rögzített modell",
+      "bytes": 4055,
+      "sha256": "9887c4d7c8015e631ceff14c2a0712ebe05f371b29cc4461866710fac0ce8acc"
+    },
+    {
+      "path": "research/models/pair64_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1601,
+      "sha256": "a4ab67ee7db32438bba31f49bbc9d56c07bf6fa2e8bb863228de978e71996c6a"
+    },
+    {
+      "path": "research/models/parity_phase_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1106,
+      "sha256": "39e6d8ad0fdb6e1febd12ca8887ccaa98d6d2b89321f05b1deca77e2391d10e6"
+    },
+    {
+      "path": "research/models/phase_ascii_generator_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1991,
+      "sha256": "f90c29f90771cf7c40b3c071e49157cc27f5877dd1f3906aa80af44ce08b3d3d"
+    },
+    {
+      "path": "research/models/phase_decode_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1714,
+      "sha256": "8ef1a0cd2f94998635e90bbb4f3668f65cc3a28b860f8fbc475afe00665129dc"
+    },
+    {
+      "path": "research/models/residual_codes_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1755,
+      "sha256": "6840e944e83f9860b026eea2b501c742b1b6da6d94944aa1485321ce15911f4c"
+    },
+    {
+      "path": "research/models/residual_physics_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1790,
+      "sha256": "28d48e2c8999e64736c7769954fc6d66bdde0b50035f75ca0fccf42a26044803"
+    },
+    {
+      "path": "research/models/residual_predictors_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1783,
+      "sha256": "b91c51a8c180b053f7c5e6f60217f6b9884718a040e360aef9618c09fd5c7ec3"
+    },
+    {
+      "path": "research/models/reward_staircase_v1.json",
+      "role": "rögzített modell",
+      "bytes": 901,
+      "sha256": "10b68bf27bfc893997b0139f15bf9869ea4e33b54df3ec694304cc810e8cbdf3"
+    },
+    {
+      "path": "research/models/signature_phase_decode_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1653,
+      "sha256": "6fad05ce8c3386fe4631196704471046dbecf2c63f0f622207ae506c7e2d0182"
+    },
+    {
+      "path": "research/models/stateful_bridge_v1.json",
+      "role": "rögzített modell",
+      "bytes": 3295,
+      "sha256": "c03fd8461d56ca35785e9e3e720013f34e7d739853e6aa88b69d1fae29cd55c1"
+    },
+    {
+      "path": "research/models/timing_lattice_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1197,
+      "sha256": "1bcad4fa3800999aef86f722cde185dbf157c5aaf5821afd066f8cfb0a71704b"
+    },
+    {
+      "path": "research/models/uniform_phase_layers_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1318,
+      "sha256": "c07ba4450cade6ba2f64592acaace983edf897f7bdc7ee0a8ec3c12788c25ae0"
+    },
+    {
+      "path": "research/models/upload_audit_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1340,
+      "sha256": "0b6be6a18374352c1d9b342d0a1eb3abc9b88e5ef859d8898d6eb537cf9d8d23"
+    },
+    {
+      "path": "research/sources/author-posts.md",
+      "role": "forrás",
+      "bytes": 1046,
+      "sha256": "4e2c55c52dfbdf86f7097387c385c70585d5062f11147809e4fd04a4c9fbc0b3"
+    },
+    {
+      "path": "research/sources/benjacasas02__independent-cryptography-research_README.md",
+      "role": "forrás",
+      "bytes": 17459,
+      "sha256": "0bcce3305e4b8bc383815299e4192c3b43aa4d25ec4519bcd3d157a71bf01b2d"
+    },
+    {
+      "path": "research/sources/cbman0__BitcoinPuzzles_README.md",
+      "role": "forrás",
+      "bytes": 17756,
+      "sha256": "63e373d13c7075adb1d3f3689bd178f9049f5cbd1d9d451a82599b16be765323"
+    },
+    {
+      "path": "research/sources/coinmetrics.json",
+      "role": "forrás",
+      "bytes": 318,
+      "sha256": "dd38b51ce10a808861c68ed5775cf52b2bdfa53836b37c061728364e7b295d8f"
+    },
+    {
+      "path": "research/sources/crypto5.png",
+      "role": "forrás",
+      "bytes": 4874,
+      "sha256": "936c401fac266e245e40d5ae1705360746387be934ced4ee6c37fc30dfdd5d15"
+    },
+    {
+      "path": "research/sources/crypto5fix.png",
+      "role": "forrás",
+      "bytes": 6798,
+      "sha256": "5a62843597f0fd545e19a343b750c6cdfa8010ba2cb5b52d4ad29c7016e57cc6"
+    },
+    {
+      "path": "research/sources/cryptoHALV.png",
+      "role": "forrás",
+      "bytes": 61566,
+      "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
+    },
+    {
+      "path": "research/sources/earlier_levels_discovery.json",
+      "role": "forrás",
+      "bytes": 3245,
+      "sha256": "782d07734fa8e1424e7023379c6cc72ae1ed78bcbd3fbdaccd0d1d3d37ce1c03"
+    },
+    {
+      "path": "research/sources/external_analysis__leads.md",
+      "role": "forrás",
+      "bytes": 1668,
+      "sha256": "4011cd9a9aa06a6336ecae9be0324c185b8aecec5003e9529dfb22eb9210cee1"
+    },
+    {
+      "path": "research/sources/external_analysis__tested.md",
+      "role": "forrás",
+      "bytes": 3362,
+      "sha256": "f0e8def6d43abaedf1ba1e9c285e2a483265687a980c11fb5f2308082a886c03"
+    },
+    {
+      "path": "research/sources/external_data__lobe-shape-sequence.csv",
+      "role": "forrás",
+      "bytes": 624,
+      "sha256": "6f4beb65d6222bb06bd514f4295da7eb3f9515ba67c4162b0c1c075a173a119a"
+    },
+    {
+      "path": "research/sources/ffmpeg_8svx.c",
+      "role": "forrás",
+      "bytes": 6581,
+      "sha256": "2b873e391d1e2747fd3d2f696c08054489e502e26cd0e1b7f117f15fa619084f"
+    },
+    {
+      "path": "research/sources/ffmpeg_8svx_provenance.json",
+      "role": "forrás",
+      "bytes": 201,
+      "sha256": "37806d7dc70fb25a10378036ff7fa18ea915c677dac58ffe77a3e6b87691a295"
+    },
+    {
+      "path": "research/sources/floflo777__open-crypto-puzzles_README.md",
+      "role": "forrás",
+      "bytes": 18369,
+      "sha256": "d31b2d28d2b67fec52a073566c0fdfd16065ff29f452705f9dc6b54d1425755b"
+    },
+    {
+      "path": "research/sources/funding_readme_public_20261101.md",
+      "role": "forrás",
+      "bytes": 6501,
+      "sha256": "48802a2390e4fc0839908b020866cc1dfe26142d7e5347f67a585fe301a7a2d6"
+    },
+    {
+      "path": "research/sources/github_discovery.json",
+      "role": "forrás",
+      "bytes": 1300,
+      "sha256": "b789636bf6f43dfa0aca90be7830f6f41adb4abf2dba4e32a94e37b699d74bb7"
+    },
+    {
+      "path": "research/sources/gpt4omni__unsolved-crypto-puzzles_README.md",
+      "role": "forrás",
+      "bytes": 13517,
+      "sha256": "cc35ce174ec812f4ef8c2467e2e1985c20a0c917300a13094b99454cc8d7240e"
+    },
+    {
+      "path": "research/sources/history_level2_README.rst",
+      "role": "forrás",
+      "bytes": 114,
+      "sha256": "0163c645922fa30fa55cf07bf94688d136ea406f80f2967c398afeb9aa131e82"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__README.rst",
+      "role": "forrás",
+      "bytes": 684,
+      "sha256": "50b60222bb2414e5084239876e3a9b7b5593d871cf8f06a04a4cc7f46f36d6e9"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__crypto2.go",
+      "role": "forrás",
+      "bytes": 2327,
+      "sha256": "17e784bedd4864b58f0c9fc1fe3b5853d1c82b05270e8542c2133500783c2950"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__crypto2.png",
+      "role": "forrás",
+      "bytes": 120038,
+      "sha256": "d43ae2e2c6e50ed9a7ad486ba74a7c9065f7fb22cc1fcec1fc9d65b2469714f5"
+    },
+    {
+      "path": "research/sources/history_level2_crypto2__d.rb",
+      "role": "forrás",
+      "bytes": 1377,
+      "sha256": "d9b81858d650378e1e8ef8cdb0693e91c349fdd47c52928904a9170bcd3056ce"
+    },
+    {
+      "path": "research/sources/history_level2_provenance.json",
+      "role": "forrás",
+      "bytes": 1866,
+      "sha256": "0f705997cad8e7f3e368837095164c3c49091422863aef590970ddec89181bc9"
+    },
+    {
+      "path": "research/sources/image_provenance.json",
+      "role": "forrás",
+      "bytes": 1073,
+      "sha256": "e4f3402837bd1aee35c36ee24db03323a8e5a0c0fc4409aad001a77c56f5d84a"
+    },
+    {
+      "path": "research/sources/level5_README.md",
+      "role": "forrás",
+      "bytes": 8800,
+      "sha256": "ecd5707fa4773088f76d1d8122a09287488009f6c237faddd0b03cdd3d1a5d69"
+    },
+    {
+      "path": "research/sources/level5_data__rectangle-measurements.csv",
+      "role": "forrás",
+      "bytes": 1815,
+      "sha256": "7912c83353f7c5ae9bb6da27ca187e6d36002db1169c2cd81768c5a059caf17a"
+    },
+    {
+      "path": "research/sources/level5_image_provenance.json",
+      "role": "forrás",
+      "bytes": 682,
+      "sha256": "04b8fd64207bfc6efde89c6bb754dafcc82473009b0018b8c0f0b9c63b6f8421"
+    },
+    {
+      "path": "research/sources/level5_solution_provenance.json",
+      "role": "forrás",
+      "bytes": 611,
+      "sha256": "68ef60531a0b04fc301e64f7771a5cb1fa7644de7083de5b538a9fa587d606d3"
+    },
+    {
+      "path": "research/sources/lobe_reference_provenance.json",
+      "role": "forrás",
+      "bytes": 1038,
+      "sha256": "c5276f0ef3450222fe09865dc2957cc2a9bfff4bb39a5d5d0246a8d74908e564"
+    },
+    {
+      "path": "research/sources/miner_revenue.json",
+      "role": "forrás",
+      "bytes": 379,
+      "sha256": "2b357f4d0d3488be05830ad517aeb6e28761216fa9381d03eee35acdbcb91136"
+    },
+    {
+      "path": "research/sources/mirror_cryptoHALV.png",
+      "role": "forrás",
+      "bytes": 61566,
+      "sha256": "3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95"
+    },
+    {
+      "path": "research/sources/public_reference_fetch_20261101.json",
+      "role": "forrás",
+      "bytes": 679,
+      "sha256": "4b2d94da448ff267c93fc5a4757ae46cf6cfce3d0f80402072798d963617d02b"
+    },
+    {
+      "path": "research/sources/rs_reference_vectors.json",
+      "role": "forrás",
+      "bytes": 2206,
+      "sha256": "366a1dbf5e584117414023d7a70d137fe991ff94ae8885f0c68bcce1f0ea4e4e"
+    },
+    {
+      "path": "research/sources/upload_HALV_352bit_WIF7_audit_20261101.json",
+      "role": "forrás",
+      "bytes": 2871,
+      "sha256": "bedc922a8d947d45fb8d4393806e7f647f5e9f48318b961573e190916b8faf3f"
+    },
+    {
+      "path": "research/sources/upload_HALV_352bit_WIF7_audit_20261101.py",
+      "role": "forrás",
+      "bytes": 3414,
+      "sha256": "0db404ef7003353a09590b806be4ca61ba2df24c0737d15b9acf1590072fa980"
+    },
+    {
+      "path": "research/sources/upload_HALV_TXID_128_szimbólum_egyezes_kontroll_20261101.json",
+      "role": "forrás",
+      "bytes": 820,
+      "sha256": "02c10184c4ace2a1904c5ff27f99e1b99656095974150bd8693c8724461b85d1"
+    },
+    {
+      "path": "research/sources/upload_HALV_TXID_128_szimbólum_egyezes_kontroll_20261101.py",
+      "role": "forrás",
+      "bytes": 3008,
+      "sha256": "f15fd821bcbe7c885ae071557291917a1775e63a04bac048f980ca869a78cbda"
+    },
+    {
+      "path": "research/sources/upload_HALV_TXID_harom_kimenet_celzott_audit_20261101.json",
+      "role": "forrás",
+      "bytes": 2132,
+      "sha256": "0808da9db3156033698faee0332db65bee6a5dd73cabc22249d5faa3f3136c56"
+    },
+    {
+      "path": "research/sources/upload_HALV_TXID_harom_kimenet_celzott_audit_20261101.py",
+      "role": "forrás",
+      "bytes": 12413,
+      "sha256": "0413b16dea587e5571d17a585c1f47355a26dbdda42adc54c5e311e014985c9a"
+    },
+    {
+      "path": "research/sources/upload_HALV_egyesitett_kutatas_20261101.md",
+      "role": "forrás",
+      "bytes": 8259,
+      "sha256": "f53b785d4fba400c56cef9603193d63feb1ac41af5ee84f7b7590bed3a8076a1"
+    },
+    {
+      "path": "research/sources/upload_HALV_ketto_szal_kutatasi_jelentes_20261101.md",
+      "role": "forrás",
+      "bytes": 6568,
+      "sha256": "c87d28ea3fd2e2d85f76f50e0d004fcc74e6e5a58f0a3bfeb922e2125e8a5077"
+    },
+    {
+      "path": "research/sources/upload_HALV_kovetkezo_irany_20261101.md",
+      "role": "forrás",
+      "bytes": 3561,
+      "sha256": "2581b87061422a36bc6b6f66f5b6e2deb4c941abff87987cd8f7363f564facb5"
+    },
+    {
+      "path": "research/sources/upload_HALV_kulso_belso_dimenzio_ellenorzes_20261101.py",
+      "role": "forrás",
+      "bytes": 2639,
+      "sha256": "dd1fe709c64c05ffed7168603f922da13173b6c331da8821ba841560dddd2f71"
+    },
+    {
+      "path": "research/sources/upload_HALV_tranzakcio_TXID_DotPuz_eredmenyek_20261101.md",
+      "role": "forrás",
+      "bytes": 6641,
+      "sha256": "da5742197f64b526fc9bb7d590163dd4d79973b9ade83a1e44d675f5acf76b17"
+    },
+    {
+      "path": "research/sources/upload_HALV_uj_felezeses_blokkkapcsolat_jelentes_20261101.md",
+      "role": "forrás",
+      "bytes": 7858,
+      "sha256": "9517134f9ccb5e2ddf8e0fd7aea3409c51b8a555b23a685c93cc669b747e6327"
+    },
+    {
+      "path": "research/sources/upload_HALV_ujraertekeles_es_kutatasi_prioritas_20261101.md",
+      "role": "forrás",
+      "bytes": 7554,
+      "sha256": "7318798c61148c2fbf8c6c2e91bab553c233fe4e33fc0a0ba2a0a9a41076e5d1"
+    },
+    {
+      "path": "research/sources/upload_batch_20261101_manifest.json",
+      "role": "forrás",
+      "bytes": 6189,
+      "sha256": "525df00695e6d244d41a0ae43ba07d301ec5372dd42f0ffbf76e49cefa731a0d"
+    },
+    {
+      "path": "research/sources/user_exception_layer_note_20261031.md",
+      "role": "forrás",
+      "bytes": 801,
+      "sha256": "f5f7e2d85f59c98f3d40a3afef3820cd60f720fa865c14b4de50a24298d4d3af"
+    },
+    {
+      "path": "research/sources/user_lattice_controls_update_2026-10-31.json",
+      "role": "forrás",
+      "bytes": 1416,
+      "sha256": "38e4786d49afbd1c9aabda382ae6dc393f5281f9b6b3a169d782e5fc0c08fa83"
+    },
+    {
+      "path": "research/sources/user_layered_notes_20261031.txt",
+      "role": "forrás",
+      "bytes": 10328,
+      "sha256": "21eb0b7204288a8353a33ea1ff3b068d9291353534cc05276325fc77abcb86f5"
+    },
+    {
+      "path": "research/sources/user_level5_pairing_lead_2026-10-31.md",
+      "role": "forrás",
+      "bytes": 722,
+      "sha256": "3bb89c0778091cafed894c0b4a4d9006bcfee8b15145f5c71c027fbbde51465c"
+    },
+    {
+      "path": "research/sources/user_marker_wif_update_2026-10-31.json",
+      "role": "forrás",
+      "bytes": 1301,
+      "sha256": "032b78a0a9229ed80b34bc666a0e8c500fe3ade5d9543320e094d99c323ca3a0"
+    },
+    {
+      "path": "research/sources/user_phase_lead_2026-10-31.json",
+      "role": "forrás",
+      "bytes": 1000,
+      "sha256": "e78e4d6f4789817b9f2b3c2d904c0bf0df8ae59374a4d0465fafe8fe71bf8201"
+    },
+    {
+      "path": "research/sources/user_prior_notes.txt",
+      "role": "forrás",
+      "bytes": 11294,
+      "sha256": "fa0a67d90a13781f7a1467989458ff681096728ff19b47d9158026838e314938"
+    },
+    {
+      "path": "research/sources/user_research_method_2026-10-31.md",
+      "role": "forrás",
+      "bytes": 617,
+      "sha256": "98f0520a5e972467746a11deb91eb91114293656d6b5707a37099ca3b8543582"
+    },
+    {
+      "path": "research/sources/user_reward_staircase_note_20261031.md",
+      "role": "forrás",
+      "bytes": 447,
+      "sha256": "34bac0012ae1ed9654d1793c5d87a2d6db95f9756ad642fe21ddc3a1f0ef4463"
+    },
+    {
+      "path": "research/sources/user_signature_phase_note_20261031.md",
+      "role": "forrás",
+      "bytes": 699,
+      "sha256": "27e1d861967e8bac009c48023fb738de9e32127197d2e291117e4e4372527c66"
+    },
+    {
+      "path": "research/sources/user_wif_lead_2026-10-31.txt",
+      "role": "forrás",
+      "bytes": 972,
+      "sha256": "379ab19a3f9b4cfcb706a66f5715c719c1eb74ab89ca785d3d33da51db328503"
+    },
+    {
+      "path": "research/sources/zden_history_fetch_20261101.json",
+      "role": "forrás",
+      "bytes": 568,
+      "sha256": "dae1535f200174079e46e38fa9918155d0652143fb12134c25945787ce00f820"
+    },
+    {
+      "path": "research/sources/zden_series_reference_20261101.md",
+      "role": "forrás",
+      "bytes": 5027,
+      "sha256": "86a194c4166a2228b7192c0047b886817e9c52da1262f4c30e37c393c34329dc"
+    },
+    {
+      "path": "research/sources/zden_slovak_reference_20261101.md",
+      "role": "forrás",
+      "bytes": 8498,
+      "sha256": "bd58cc6de4cf90bc7ee7d006d71084ac111021f17449ef344c67e6374359cd08"
+    },
+    {
+      "path": "tools/analyze_parity_phase.py",
+      "role": "program",
+      "bytes": 8632,
+      "sha256": "d9f2bbd7792f4ba01986b9c565fcae41ab2f5b1b29304e5159434981381227ff"
+    },
+    {
+      "path": "tools/audit_halving_phase_ascii.py",
+      "role": "program",
+      "bytes": 2825,
+      "sha256": "4eb68d36a185bb0979d7acba6582ef49599dc9e792651d0456bb0810b299860c"
+    },
+    {
+      "path": "tools/audit_ordered_results.py",
+      "role": "program",
+      "bytes": 5566,
+      "sha256": "1fdf1e308bd4d4b17221ac39ea206cc5c2e7bf91a7e786055b98beaf1447aaa9"
+    },
+    {
+      "path": "tools/audit_stateful_bridge.py",
+      "role": "program",
+      "bytes": 3503,
+      "sha256": "948c92ca4060a87eeb98a25545edfdc7780eb20a1a3f3a767033057c7f763920"
+    },
+    {
+      "path": "tools/bitcoin_oracle.py",
+      "role": "program",
+      "bytes": 2264,
+      "sha256": "23fc132483bbee26271c5bfdfe745e590ddf431ca92fb3897b696e46c198f5ec"
+    },
+    {
+      "path": "tools/build_master_document.py",
+      "role": "program",
+      "bytes": 6273,
+      "sha256": "77357c39c9a1ea1e13eb637629c139d6c9f1dd944488f653ee65ec1e4464418a"
+    },
+    {
+      "path": "tools/build_research_index.py",
+      "role": "program",
+      "bytes": 9467,
+      "sha256": "fb2ca664c6de1bebfb620cff744b6521d2be7b2253f8ec352b00679e82771a82"
+    },
+    {
+      "path": "tools/capture_rs_reference.py",
+      "role": "program",
+      "bytes": 1692,
+      "sha256": "f3bffa65bd841910e63bd9cafdacec72e44def4fc814ca843e6b23f9d81a7525"
+    },
+    {
+      "path": "tools/check_bd_halving.py",
+      "role": "program",
+      "bytes": 3730,
+      "sha256": "19e879b5ca06d040743197d65e4e170873570dfe433996e7ed287c51dfaf80de"
+    },
+    {
+      "path": "tools/check_bd_pair64.py",
+      "role": "program",
+      "bytes": 3258,
+      "sha256": "26fd1bcab8ab5e4bea06bf295ffa6eb7bf1d8905cb6f6922776dbf8c1ac5d4f6"
+    },
+    {
+      "path": "tools/check_boundary33.py",
+      "role": "program",
+      "bytes": 5544,
+      "sha256": "946451423896405ba7e8bb75074cca7d2fec4542107b922dc32ab8ec3b37ecf0"
+    },
+    {
+      "path": "tools/check_composite_models.py",
+      "role": "program",
+      "bytes": 7893,
+      "sha256": "acf684085174dda3348793d08f3d43dc807195e1797c08b02ba5e628ade59eea"
+    },
+    {
+      "path": "tools/check_corners.py",
+      "role": "program",
+      "bytes": 8771,
+      "sha256": "f17963fd47ea8bb1b6e81b2cceaf70827f1a578e11669585fb938da98bef532c"
+    },
+    {
+      "path": "tools/check_five_sample_wif.py",
+      "role": "program",
+      "bytes": 6192,
+      "sha256": "2726b1417e4f1fa3674785f6191cdc635f8ceb197acf0c7fa96b8104dc2b09df"
+    },
+    {
+      "path": "tools/check_fractional_area.py",
+      "role": "program",
+      "bytes": 8302,
+      "sha256": "fc83cf50396ae709bab84ba342f3dbc37d7aed25fa2d46f40abc2d755f71bb13"
+    },
+    {
+      "path": "tools/check_halving_invariants.py",
+      "role": "program",
+      "bytes": 5069,
+      "sha256": "15af3dc14a5267d7307aa292d54d38340b090e86a189265e4446f9b14396282a"
+    },
+    {
+      "path": "tools/check_halving_pairs.py",
+      "role": "program",
+      "bytes": 3184,
+      "sha256": "ed700014657c43b44665f25dc71872165b6451cd1a5368c9ceff4cbe18b6b6fb"
+    },
+    {
+      "path": "tools/check_hex_text.py",
+      "role": "program",
+      "bytes": 1483,
+      "sha256": "2f25df4a1738e98db22241d16b29f697d993e3bc8171a875c9b9b1477a5d875f"
+    },
+    {
+      "path": "tools/check_lag2_halving.py",
+      "role": "program",
+      "bytes": 6848,
+      "sha256": "e2dc5ff6fd66a355fc1f2874066eaa9b92a1efbe43d3a45bc857b3e749b2e19f"
+    },
+    {
+      "path": "tools/check_lag2_residual_bridge.py",
+      "role": "program",
+      "bytes": 6711,
+      "sha256": "19b6373d7fe98972eba06dc4b26cc6d629c96cf495a18781e0ac91a9a51bfa98"
+    },
+    {
+      "path": "tools/check_layered_structure.py",
+      "role": "program",
+      "bytes": 6793,
+      "sha256": "199eef5462b3c959dc2af82a5473dc9398b02bf9ccb1591c510ccebc4597ca3b"
+    },
+    {
+      "path": "tools/check_marker_glyph_relation.py",
+      "role": "program",
+      "bytes": 3499,
+      "sha256": "f00c2e3571c384e989d68c6b3ac53e349f1a1b61b8041d3719a768963b6d85fc"
+    },
+    {
+      "path": "tools/check_marker_grid.py",
+      "role": "program",
+      "bytes": 3037,
+      "sha256": "3eef1b7295e33f0806decb4d033f74df93f1dcef98136df9339adb823102398a"
+    },
+    {
+      "path": "tools/check_miner_revenue.py",
+      "role": "program",
+      "bytes": 1008,
+      "sha256": "9bfa91c32d34408148d0a48307a1110726ccb7e9f7c53bbb04894fe82dabe0b6"
+    },
+    {
+      "path": "tools/check_morse_ambiguity.py",
+      "role": "program",
+      "bytes": 1330,
+      "sha256": "5e7dd187694ceecb109f03f32a904f3b496ffedf4b09b34248cd74aa013dcd9c"
+    },
+    {
+      "path": "tools/check_nonlinear_context.py",
+      "role": "program",
+      "bytes": 5975,
+      "sha256": "cb005bb9e6c0ffaa544dac97d92c52fb28e26d4a35e234d501734ab0452c10b7"
+    },
+    {
+      "path": "tools/check_ordered_arithmetic.py",
+      "role": "program",
+      "bytes": 8451,
+      "sha256": "8105250096372bf63fd8d09544a684cb5550863057a32bd1b578a764c9d2a40d"
+    },
+    {
+      "path": "tools/check_ordered_controls.py",
+      "role": "program",
+      "bytes": 4531,
+      "sha256": "8d0024f2491b87f5d209a210a5f39c637281769fa23da8ed61281e69cc71ebb3"
+    },
+    {
+      "path": "tools/check_ordered_formats.py",
+      "role": "program",
+      "bytes": 7712,
+      "sha256": "94a6f52dded1ce3b0935e59f63d8412486f2053dbca4255b894ba91dbe291a16"
+    },
+    {
+      "path": "tools/check_pair64.py",
+      "role": "program",
+      "bytes": 6053,
+      "sha256": "84eb83c0311e20dca8ca333c5cfff7d83766f3c86064004d965b22cefe93f523"
+    },
+    {
+      "path": "tools/check_phase_ascii_generator.py",
+      "role": "program",
+      "bytes": 6289,
+      "sha256": "d48acc3fa438907d82f037a985cdbe3a79d6bcc8c0d27c87d19d8ca6af15d958"
+    },
+    {
+      "path": "tools/check_phase_decode.py",
+      "role": "program",
+      "bytes": 7713,
+      "sha256": "3e357d413c9423748a73de70675801b700c06417678983a601351306b9f206cd"
+    },
+    {
+      "path": "tools/check_phase_field_consistency.py",
+      "role": "program",
+      "bytes": 4261,
+      "sha256": "2ee4e101c08957cb07c8761986500c8b0c1e269c215b88259c4cb22e76210853"
+    },
+    {
+      "path": "tools/check_price_hypothesis.py",
+      "role": "program",
+      "bytes": 1681,
+      "sha256": "08fef3b7ba36fd29a3944b021b2dec8567571c75b3626bbdf9e9e42ee017102e"
+    },
+    {
+      "path": "tools/check_reconstruction_candidates.py",
+      "role": "program",
+      "bytes": 4926,
+      "sha256": "300aa8f1863679af071614481fb55858f7bf2f29c859287b9219d3f568c7d4e2"
+    },
+    {
+      "path": "tools/check_residual_codes.py",
+      "role": "program",
+      "bytes": 8770,
+      "sha256": "7296c1c3f657aba58b8b6a635c42e7084b84061399ac46532172f0b6e4e601ec"
+    },
+    {
+      "path": "tools/check_residual_physics.py",
+      "role": "program",
+      "bytes": 7168,
+      "sha256": "6a4ba8752ad6ab1fa483a996f22c1888ace4d6311f4e49ef08736850172ad3bd"
+    },
+    {
+      "path": "tools/check_residual_predictors.py",
+      "role": "program",
+      "bytes": 8761,
+      "sha256": "6a255af2163b97da9f211bbb1d50dc78ef5c8951617aa25b1800e98aa4314df2"
+    },
+    {
+      "path": "tools/check_reward_staircase.py",
+      "role": "program",
+      "bytes": 3262,
+      "sha256": "d78de15297aca28d84ad767de4bf658c1a60e2971fc5e3a9666da3a6d9ecd091"
+    },
+    {
+      "path": "tools/check_signature_phase_decode.py",
+      "role": "program",
+      "bytes": 8730,
+      "sha256": "b37820e38618e0569550a245852902f2d34f8c1c6ee2d7935097a91d2cda6ac8"
+    },
+    {
+      "path": "tools/check_signed_models.py",
+      "role": "program",
+      "bytes": 1512,
+      "sha256": "158eb792b7792c8574efe449dd933e2e66092ac58db978452074551ee811280a"
+    },
+    {
+      "path": "tools/check_stateful_bridge.py",
+      "role": "program",
+      "bytes": 12174,
+      "sha256": "31683a396fb8f605cf0f7c1ea89fc33a9b564e6b7601163ac65cc8798e771115"
+    },
+    {
+      "path": "tools/check_timing_lattice.py",
+      "role": "program",
+      "bytes": 8331,
+      "sha256": "42994b08e2865b853d9b230cab27025587c054398bdb62e1abbc62b25e9479b4"
+    },
+    {
+      "path": "tools/check_uniform_phase_layers.py",
+      "role": "program",
+      "bytes": 7840,
+      "sha256": "d33085915223f4f670df32e11b23ad83f8650e5be716733e5f499498f13a99ff"
+    },
+    {
+      "path": "tools/diagnose_pair64_ranges.py",
+      "role": "program",
+      "bytes": 1721,
+      "sha256": "d1267cd113ae908678b617bbcfe04bed9a950010b0cd5f9a983098a8d914446a"
+    },
+    {
+      "path": "tools/diagnose_phase_law.py",
+      "role": "program",
+      "bytes": 3932,
+      "sha256": "68eaca08a5049ce5a7cc476811190cb6ae3c1351673648e304a9f5ac3ab59b2c"
+    },
+    {
+      "path": "tools/diagnose_timing_specificity.py",
+      "role": "program",
+      "bytes": 2348,
+      "sha256": "9fbca332834adb4a069e4d78d28fcc4f051834e3e16994979fd5366b23133d9e"
+    },
+    {
+      "path": "tools/inspect_png.py",
+      "role": "program",
+      "bytes": 809,
+      "sha256": "bd4b462d7d6c7203fe4966184b8543c1eec4756653f11d855db8bc94c01fbb21"
+    },
+    {
+      "path": "tools/measure_image.py",
+      "role": "program",
+      "bytes": 4889,
+      "sha256": "1ea915952a0490ac1b795c2a54920351923cfaac9da2bb6dff7a82a94d164a9a"
+    },
+    {
+      "path": "tools/measure_signature_staircase.py",
+      "role": "program",
+      "bytes": 2287,
+      "sha256": "874520a478a8ed200c6e9d38207eec8e74bc95e5e0e1067fe09c7f3c5e370cd3"
+    },
+    {
+      "path": "tools/ordered_decode_common.py",
+      "role": "program",
+      "bytes": 2629,
+      "sha256": "19fc09a7a999fa563dc640444f2fcb155d5e70f3f6e853dca0424bb6d935eff9"
+    },
+    {
+      "path": "tools/plot_boundary_fraction.py",
+      "role": "program",
+      "bytes": 4815,
+      "sha256": "383ce9de03f221b8f7fa5a5fa1763395b0039f22a83b7307cf96652cf0860413"
+    },
+    {
+      "path": "tools/plot_historical_level2.py",
+      "role": "program",
+      "bytes": 1262,
+      "sha256": "d1bbfa8a02df3227c658d978c02a806f312407fef2f2740ee4314d3db454f12b"
+    },
+    {
+      "path": "tools/plot_lag2_audit.py",
+      "role": "program",
+      "bytes": 3312,
+      "sha256": "6293e504dd712f6da7015544be4169b727b4c07e5514f4590b13ac1245fef9c8"
+    },
+    {
+      "path": "tools/plot_pair64.py",
+      "role": "program",
+      "bytes": 2707,
+      "sha256": "7de9c93d1d1acb983ca12df27f286ac2bf322a645ba1ea5d97ca8b6caa44b344"
+    },
+    {
+      "path": "tools/plot_phase_channels.py",
+      "role": "program",
+      "bytes": 1662,
+      "sha256": "c5e594da645077831b812ec597413acba48073b827782a9da067052f21738e73"
+    },
+    {
+      "path": "tools/plot_reconstruction.py",
+      "role": "program",
+      "bytes": 2040,
+      "sha256": "768a96819fdbc28f1c5cf1d6e149a44bee770f5caabc09ed7136e97a060a434a"
+    },
+    {
+      "path": "tools/plot_residual_followup.py",
+      "role": "program",
+      "bytes": 2574,
+      "sha256": "a3aff1b8d5658bc8adc04839a9288f19e706fdca57037c8f36cdeacf8d60e46d"
+    },
+    {
+      "path": "tools/plot_signature_phase.py",
+      "role": "program",
+      "bytes": 2319,
+      "sha256": "3aff43d872bae650d4f4d6783d795234d9a3bba60e7585eb87a7463e9166b86c"
+    },
+    {
+      "path": "tools/plot_stateful_bridge.py",
+      "role": "program",
+      "bytes": 1682,
+      "sha256": "24724765ccb39405401fcedf2c9b693fdfce121b3a0466e7f83efa7c3a6279f5"
+    },
+    {
+      "path": "tools/plot_uniform_layers.py",
+      "role": "program",
+      "bytes": 1580,
+      "sha256": "d8329c3909d7cd04693a994e7e3ac64eccf9f7a7dbd06aea702c7cb6d566bf9c"
+    },
+    {
+      "path": "tools/reproduce_uploaded_audits.py",
+      "role": "program",
+      "bytes": 5257,
+      "sha256": "d31b0e26b2b4db6690113c20b71ba298a2eb9f1a11618840f44ca6caeb8ee524"
+    },
+    {
+      "path": "tools/residual_channels.py",
+      "role": "program",
+      "bytes": 1652,
+      "sha256": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+    },
+    {
+      "path": "tools/verify_historical_level2.py",
+      "role": "program",
+      "bytes": 4393,
+      "sha256": "d94cfbb8f96273bb15475b70d011193001523a3e3878ae60dc9de274b495c5e5"
+    },
+    {
+      "path": "tools/verify_level5_geometry.py",
+      "role": "program",
+      "bytes": 4130,
+      "sha256": "e7a9785cfc0e9d559e992a1087779b8eb0588a8703f584d2b92c480c92fcb43f"
+    }
+  ],
+  "generator": "tools/build_master_document.py"
+}

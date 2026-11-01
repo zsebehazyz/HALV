@@ -211,6 +211,23 @@
       "max_known_heldout_cells": 4,
       "max_correct_heldout_cells": 2,
       "not_private_key_search": true
+    },
+    {
+      "result": "research/data/halving_invariants_check.json",
+      "kind": "exact_dyadic_and_permutation_invariants",
+      "quantizer_identity_checks": 192,
+      "all8_histograms_distinct": true,
+      "all_block_pair_bounds": 28,
+      "not_private_key_search": true
+    },
+    {
+      "result": "research/data/phase_ascii_generator_check.json",
+      "kind": "full512bit_phase_ASCII_flag_gate",
+      "format_trials": 12672,
+      "complete_hex_readings": 0,
+      "scalars_passing_format_gate": 0,
+      "target_matches": 0,
+      "full512bit_flag_roundtrips": 12288
     }
   ],
   "files": [
@@ -329,10 +346,22 @@
       "sha256": "5fe73347aa4952ee8aa29de6b7d7e3324d4c2e0738aecb8f9d99684ebc63cdd6"
     },
     {
+      "path": "research/data/halving_invariants_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 26953,
+      "sha256": "4b459ed6aedbd7143b533f7960919fdae2033cc26323e8bf05d0631f4795dc87"
+    },
+    {
       "path": "research/data/halving_pairs_check.json",
       "role": "executed_result_or_artifact",
       "bytes": 2146,
       "sha256": "360c0eef3b83442e314ff2c41d643a707c2a53dfa7a81508c3943bd6bfb5e657"
+    },
+    {
+      "path": "research/data/halving_phase_ascii_integrity.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 707,
+      "sha256": "8673e3dde33ca2c1f9da7f526329da81d4e7b55c01aee9c296ef275bfda177ae"
     },
     {
       "path": "research/data/hex_text_check.json",
@@ -435,6 +464,12 @@
       "role": "executed_result_or_artifact",
       "bytes": 917,
       "sha256": "305bf4febd4cb6615063c84884d97162275bd3e421f559a9b9f97e4c980b05d5"
+    },
+    {
+      "path": "research/data/master_document_manifest.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 56404,
+      "sha256": "adad3ffbfe797c7d471e41fed5c361eb30d13af4ece8249a8f89e3f186d05556"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -555,6 +590,18 @@
       "role": "executed_result_or_artifact",
       "bytes": 26593,
       "sha256": "44d3c6cac70eede9a401abd90e6d085c0cfaf066d30872d55e0a2e021634c5fe"
+    },
+    {
+      "path": "research/data/phase_ascii_generator_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 2608,
+      "sha256": "d607b85b1efadc512724c4480c725013440c93c02ed16df481bb9266131c9138"
+    },
+    {
+      "path": "research/data/phase_ascii_generator_trials.jsonl.gz",
+      "role": "executed_result_or_artifact",
+      "bytes": 55587,
+      "sha256": "8156704b7e9c69476879f90dcf59a2607fc43379cd2756955836d8952884b2e8"
     },
     {
       "path": "research/data/phase_channels.png",
@@ -1211,6 +1258,12 @@
       "sha256": "90d142fa5b470360d588c3fac914c0121c5ea8a60c7ee0c3406bcd5ff26d7cc0"
     },
     {
+      "path": "research/models/halving_invariants_v1.json",
+      "role": "model_specification",
+      "bytes": 1788,
+      "sha256": "33acdc5d28070e8ba36d8f63bb93f2e13b7d3d28e012550617e2ae62d37c4fac"
+    },
+    {
       "path": "research/models/halving_pairs_v1.json",
       "role": "model_specification",
       "bytes": 788,
@@ -1263,6 +1316,12 @@
       "role": "model_specification",
       "bytes": 1106,
       "sha256": "39e6d8ad0fdb6e1febd12ca8887ccaa98d6d2b89321f05b1deca77e2391d10e6"
+    },
+    {
+      "path": "research/models/phase_ascii_generator_v1.json",
+      "role": "model_specification",
+      "bytes": 1991,
+      "sha256": "f90c29f90771cf7c40b3c071e49157cc27f5877dd1f3906aa80af44ce08b3d3d"
     },
     {
       "path": "research/models/phase_decode_v1.json",
@@ -1331,6 +1390,12 @@
       "sha256": "d9f2bbd7792f4ba01986b9c565fcae41ab2f5b1b29304e5159434981381227ff"
     },
     {
+      "path": "tools/audit_halving_phase_ascii.py",
+      "role": "reproduction_tool",
+      "bytes": 2825,
+      "sha256": "4eb68d36a185bb0979d7acba6582ef49599dc9e792651d0456bb0810b299860c"
+    },
+    {
       "path": "tools/audit_ordered_results.py",
       "role": "reproduction_tool",
       "bytes": 5566,
@@ -1349,10 +1414,16 @@
       "sha256": "23fc132483bbee26271c5bfdfe745e590ddf431ca92fb3897b696e46c198f5ec"
     },
     {
+      "path": "tools/build_master_document.py",
+      "role": "reproduction_tool",
+      "bytes": 6273,
+      "sha256": "77357c39c9a1ea1e13eb637629c139d6c9f1dd944488f653ee65ec1e4464418a"
+    },
+    {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 8238,
-      "sha256": "c4949cf13c56c249bf232fde0f74838437eb4326874872c3685a56e3355ad74d"
+      "bytes": 9467,
+      "sha256": "fb2ca664c6de1bebfb620cff744b6521d2be7b2253f8ec352b00679e82771a82"
     },
     {
       "path": "tools/capture_rs_reference.py",
@@ -1401,6 +1472,12 @@
       "role": "reproduction_tool",
       "bytes": 8302,
       "sha256": "fc83cf50396ae709bab84ba342f3dbc37d7aed25fa2d46f40abc2d755f71bb13"
+    },
+    {
+      "path": "tools/check_halving_invariants.py",
+      "role": "reproduction_tool",
+      "bytes": 5069,
+      "sha256": "15af3dc14a5267d7307aa292d54d38340b090e86a189265e4446f9b14396282a"
     },
     {
       "path": "tools/check_halving_pairs.py",
@@ -1485,6 +1562,12 @@
       "role": "reproduction_tool",
       "bytes": 6053,
       "sha256": "84eb83c0311e20dca8ca333c5cfff7d83766f3c86064004d965b22cefe93f523"
+    },
+    {
+      "path": "tools/check_phase_ascii_generator.py",
+      "role": "reproduction_tool",
+      "bytes": 6289,
+      "sha256": "d48acc3fa438907d82f037a985cdbe3a79d6bcc8c0d27c87d19d8ca6af15d958"
     },
     {
       "path": "tools/check_phase_decode.py",
@@ -1693,32 +1776,50 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 17344,
-      "sha256": "017a5efab09d163e71d393bd1d6ba555c1e7283ac6417592819aacd9a5868e13"
+      "bytes": 18255,
+      "sha256": "5c5fc35199dedb57c2870231982c4c0ca74d4f11424a9df88631c6692204ce4a"
     },
     {
       "path": "AGENTS.md",
       "role": "research_map_or_log",
-      "bytes": 1737,
-      "sha256": "78be9b22ea489c0a5cbeb6fc400cebcfb62cb9a3591d6e59d1dd44cf31de3ee7"
+      "bytes": 2218,
+      "sha256": "5e0e02697905e64e58f99291cf3f4b7feec384b55ffdc8e9c29daea70efe5058"
     },
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 34158,
-      "sha256": "befd63d16ad76b35428d711942f5b3ef0b475db3663ae111c57c28002c88141d"
+      "bytes": 35804,
+      "sha256": "d4adbaa53823b133b333e99d76d9886ab81b0560b71ffebc77da254a03ea716e"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 114049,
-      "sha256": "3b9874f4e4be32c84680c5619d3619a00900f916201daddfffc5a1d7636b7c53"
+      "bytes": 118644,
+      "sha256": "cc8371188f5880136cfec69949f5975a434c8cde11d9403dbc04952285f3b882"
+    },
+    {
+      "path": "research/MASTER_OVERVIEW.md",
+      "role": "research_map_or_log",
+      "bytes": 3638,
+      "sha256": "344f6d44bf21121b98bb06dfe78da80f8601ae936a6b15df24bca6c21b7dcad9"
+    },
+    {
+      "path": "research/HALV_TELJES_KUTATAS.md",
+      "role": "research_map_or_log",
+      "bytes": 298373,
+      "sha256": "c08809df3d1725dde612e150008d00ca8caf76fa89fcb9523a2650ff9d6fadb2"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",
       "role": "research_report",
       "bytes": 6007,
       "sha256": "b20b8ecda8a1c9929f1c50c4ee87d0c5e64b77ecdf64276abdfd1112aee47818"
+    },
+    {
+      "path": "research/REPORT_20261101_HALVING_AND_PHASE_ASCII.md",
+      "role": "research_report",
+      "bytes": 6958,
+      "sha256": "d6832ed85ebfd7f89ff8ee07ae623d3c3b95837ef0f6ae375bf326449ff08c02"
     },
     {
       "path": "research/REPORT_20261101_ORDERED_SEQUENCE.md",

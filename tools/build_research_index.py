@@ -7,6 +7,9 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
+    if (ROOT/'research/MASTER_OVERVIEW.md').exists():
+        from build_master_document import main as build_master_document
+        build_master_document()
     files=[]
     for directory,role in [('research/data','executed_result_or_artifact'),
                            ('research/sources','source_or_reference'),
@@ -16,8 +19,10 @@ def main():
             if path.is_file():
                 files.append({'path':str(path.relative_to(ROOT)),'role':role,
                               'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
-    for name in ['README.md','AGENTS.md','research/HYPOTHESES.md','research/LOG.md']:
+    for name in ['README.md','AGENTS.md','research/HYPOTHESES.md','research/LOG.md',
+                 'research/MASTER_OVERVIEW.md','research/HALV_TELJES_KUTATAS.md']:
         p=ROOT/name
+        if not p.exists():continue
         files.append({'path':name,'role':'research_map_or_log','bytes':p.stat().st_size,
                       'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
     for p in sorted((ROOT/'research').glob('REPORT_*.md')):
@@ -109,6 +114,18 @@ def main():
             'max_known_heldout_cells':max(v['known_cells'] for v in d['heldout_coverage_histogram']),
             'max_correct_heldout_cells':max(v['correct_cells'] for v in d['heldout_coverage_histogram']),
             'not_private_key_search':True})
+    p=ROOT/'research/data/halving_invariants_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'exact_dyadic_and_permutation_invariants','quantizer_identity_checks':d['exact_quantizer_identity_checks'],
+            'all8_histograms_distinct':d['all8_histograms_distinct'],
+            'all_block_pair_bounds':len(d['all_block_pair_bounds']),'not_private_key_search':True})
+    p=ROOT/'research/data/phase_ascii_generator_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'full512bit_phase_ASCII_flag_gate','format_trials':d['all_trials'],
+            'complete_hex_readings':len(d['complete_hex_readings']),'scalars_passing_format_gate':d['unique_valid_scalars'],
+            'target_matches':len(d['matches']),'full512bit_flag_roundtrips':d['full512bit_flag_roundtrips']})
     out={'purpose':'Persistent evidence index; read together with HYPOTHESES.md and LOG.md.',
          'counting_rule':'Do not sum per-run unique candidates as global uniques; overlap across runs has not been measured. Structural comparisons, WIF strings, hypotheses and private scalars are separate units.',
          'result_summaries':summaries,'structural_summaries':structural,'files':files}

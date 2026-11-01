@@ -537,3 +537,28 @@ nem kulcsból dolgozó generátor. A BD, lépcső és dátum szerepe konkrét
 A33pontos határértelmezés már C12/C15 tárgya volt; új bizonyíték nélkül
 nem ismételjük. A geometriai és Fibonacci–hang–Morse ág megmarad.
 Ebben a tervezési körben új futás nincs. Sorrend: `REPORT_20261101_GENERATOR_PLAN.md`.
+
+## C35–C36: pontos felezési korlát és teljes fázis/ASCII-lánc
+
+A következő körben a terv két szűk változata ténylegesen lefutott.
+C35-ben q*S_b/4 egész minden lag2 párnál; a négy deklarált kerekítés,
+közvetlen negyedelés vagy két köztes kerekítéses felezés mind ugyanaz.
+Az5–7. pár hét H-különbsége egyenként4px, tehát ebből a kerekítésből nem
+származik. Mind a nyolc blokk hisztogramja eltér: egy változatlan32mintás
+sablon, vagy két paritássablon tetszőleges átrendezéssel sem magyarázza
+az összes blokkot. Ez nem változó tartalmú hosszabb adatfolyam vagy
+általános kvantáló kódoló kizárása. A28 párhoz pontos permutációs korlát
+és azt elérő tanú mentve;192 kerekítési azonosság ellenőrizve.
+
+C36 a teljes512bites q-bemenetet használja: négy rögzített fázisnézet,
+két irány,24 állapotleképezés, két bájtképzés, közvetlen8bit vagy7ASCIIbit
+és egy megőrzött flag, feltételes XOR/komplementálással. A12672 olvasat
+egyike sem64karakteres hexszöveg (maximum29/64). A skalárkapun0 jelölt
+jutott át. A12288 flagművelet és minden fázisnézet pontosan visszaállítható;
+ez adatmegőrzési kontroll, nem bizonyított kódoló. A C25-fázis örökli az
+illesztett10-et; a flagek kulcsból való generálását nem állítjuk.
+
+A következő generátorjelöltnek a jelalak változását is elő kell állítania,
+nem pusztán felezett másolatokat. A geometriai és Fibonacci–hang–Morse
+ágak nyitottak. Részletek: `REPORT_20261101_HALVING_AND_PHASE_ASCII.md`.
+A teljes történet mostantól a folyamatosan frissülő `HALV_TELJES_KUTATAS.md`.

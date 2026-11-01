@@ -12,6 +12,12 @@
 - Használd a meglévő checkoutot. Külön worktree-t csak kifejezett kérésre készíts.
 - A kutatás eredményeit dátumozva naplózd a research/LOG.md fájlban;
   az adatokat, forrásokat és reprodukálható programokat is őrizd meg.
+- A felhasználó egy teljes, elejétől olvasható, folyamatosan frissülő MD-t kér:
+  research/HALV_TELJES_KUTATAS.md. Minden körben aktualizáld a
+  research/MASTER_OVERVIEW.md állapotképet, és őrizd a teljes kronológiát.
+  A generált fő MD-t ne kézzel szerkeszd: a tools/build_research_index.py
+  először automatikusan újraépíti a tools/build_master_document.py segítségével.
+  Új körben az állapotképet és a legújabb fő-MD szakaszokat is olvasd el.
 - Különítsd el: közvetlen mérés; felhasználótól átvett állítás;
   hipotézis; lefuttatott negatív teszt; még nem vizsgált ötlet.
 - A korábbi feljegyzésekben említett több ezer próbát nem szabad saját,

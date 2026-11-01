@@ -1954,3 +1954,64 @@ megkülönböztető következmény szükséges. Nincs megfejtés.
 
 Mentett terv: `REPORT_20261101_GENERATOR_PLAN.md`; README és hipotézistérkép
 frissítve. A korábbi mérések és eredményfájlok változatlanok.
+
+## 2026-11-01 – tizenkilencedik kör: C35–C36 és az egybefűzött, teljes MD
+
+A felhasználó jóváhagyta a folytatást, és kérte, hogy egy MD az elejétől
+a végéig minden lépést tartalmazzon, folyamatos frissítéssel. Az új fő fájl
+`HALV_TELJES_KUTATAS.md`; a részletes forrásdokumentumok megmaradnak.
+
+1. Elolvastuk az AGENTS/README/LOG/HYPOTHESES/RUN_INDEX dokumentumokat és
+   a generátortervet. A névleges q, a skálák és a korábbi C25 paraméterek
+   változatlanok. A felhőkörnyezet fut és a hálózati szabályzat érvényes.
+2. A közös32mintás sablon és felezés G1/G2 részmodelljét pontosítottuk;
+   a `models/halving_invariants_v1.json` C35 specifikáció futás előtt mentve.
+   A hisztogramadatok korábban ismertek, a vizsgálat nem vak felfedezés.
+3. Öt racionális kerekítési kontroll és30 kis hisztogramfeladat összes720
+   permutációjának kontrollja sikeres.192 pontos felezési azonosság igazolt.
+   Minden lag2 forrásmagasság negyedelése egész, köztes felezés is egész:
+   a deklarált kerekítések nem változtatják az eredményt.
+4. A rögzített C25 eltérései reprodukálva. Az5–7. pár hét hibája a cél
+   koordinátájában2,7,8,14,23,30,31; mind4px, egyik sem a fenti kerekítés.
+5. Mind a nyolc q-hisztogram különbözik. Mind a28 párhoz pontos
+   hisztogram-intersection egyezési korlát és konstruktív optimális permutáció
+   mentve. Egy közös32mintás sablon vagy két paritássablon puszta permutáció
+   és felezés mellett lehetetlen. Hosszabb adatfolyam eltérő ablakai nem kizártak.
+6. Megvizsgáltuk a korábbi közvetlen ASCII-hex és fáziskódolási programok
+   hatókörét. Új teljes512bites, fázis+ASCII+megőrzöttflag családot rögzítettünk
+   a `models/phase_ascii_generator_v1.json` C36 modellben. Ez nem azonos
+   a C30352bites50karakteres WIF-kapuval; közvetlen ágában van régi kontrollátfedés.
+7. Négy fázisnézet, két irány,24 állapotbijekció, két bájtképzés, nyolc közös
+   flagpozíció és feltételes XOR/komplementálás. Nincs szélső blokkonkénti
+   javítás. Mind a64 flag megmarad. Skalár1 címkontroll és32 szintetikus
+   ASCII/flag kódoló-dekódoló ellenőrzés sikeres.
+8. C36 futás:384 közvetlen8bites és12288 hétbites+flag próba, összesen12672.
+   Nincs teljes64karakteres hexszöveg, maximum29/64,0 skalár. Ez nem
+   közel-megfejtés. Külön fázisinverziós ellenőrzést is beépítettünk és
+   újrafuttattuk ugyanazt a családot; a számlálók változatlanok, nem új
+   független kísérlet. A végső forráshash az eredményben szerepel.
+9. Külön integritásaudit ellenőrzi a C35/C36 nyolc bemeneti/programfájlját,
+   mind a28 permutációs korlátot és a C36 teljes12672 rekordos naplóját.
+   Nem indítottunk új nyers skalárkeresést vagy hangdekódolást.
+10. A fő MD teljes egészében beágyazza a kronológiai LOG-ot, hipotézistérképet,
+    minden részletes jelentést és modell-JSON-t; az eredmény-/forrás-/program-
+    állományokat kattintható hash-jegyzék őrzi. Nem találunk ki nem mentett
+    korábbi lépéseket. A történeti állításokat későbbi javításaikkal együtt adjuk.
+11. Új kézi állapotkép: `MASTER_OVERVIEW.md`. A `tools/build_master_document.py`
+    reprodukálhatóan állítja elő a fő MD-t és a bemeneti manifesztet.
+    Az indexelő ezt minden futásakor automatikusan újraépíti. Az AGENTS
+    rögzíti a jövőbeli frissítési kötelezettséget a felhasználó kérésére.
+12. A strukturális és formai negatívumok csak a rögzített családokra
+    vonatkoznak. Változó jelalakot is előállító közös generátor, geometriai
+    kódolás és konkrét Fibonacci–hang–Morse lánc továbbra is nyitott.
+13. A fő MD teljességellenőrzése19 naplókört,6 teljes jelentést és26 modell-
+    specifikációt igazol. Mind a267 manifesztbemenet és269 indexelt állomány
+    hash-e egyezik. Az ismételt indexelés bájtra azonos fő MD-t, manifesztet
+    és indexet ad.185 korábbi adat-/forrás-/modellállomány változatlan maradt.
+
+Jelentés: `REPORT_20261101_HALVING_AND_PHASE_ASCII.md`. Programok:
+`tools/check_halving_invariants.py`, `tools/check_phase_ascii_generator.py`,
+`tools/audit_halving_phase_ascii.py`, `tools/build_master_document.py`.
+Eredmények: `data/halving_invariants_check.json`, `data/phase_ascii_generator_check.json`,
+`data/phase_ascii_generator_trials.jsonl.gz`, `data/halving_phase_ascii_integrity.json`,
+`data/master_document_manifest.json`. **Nincs HALV-kulcs vagy teljes generátor.**
