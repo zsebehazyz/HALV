@@ -1,0 +1,84 @@
+{
+  "review": "R28",
+  "published_key_hex": "5a9674dbee5a9674dbee5a9674dbee5a9674dbee5a9674dbee5a9674dbfcf3ec",
+  "public_key_matches_catalog": true,
+  "derived_ethereum_address": "0x6b2560b34c7469c561a8fce581c88bfb8cce73b2",
+  "ethereum_address_matches_catalog": true,
+  "known_key_check_not_artwork_decoder": true,
+  "images": [
+    {
+      "path": "research/sources/codex_author_review_hint2.png",
+      "sha256": "b369586f13687dbc54e02c9da152df71fe22d8dcb25601947a7cb01dde1997be",
+      "bytes": 1053536,
+      "catalog_matches": true
+    },
+    {
+      "path": "research/sources/codex_author_review_hint1.png",
+      "sha256": "adae828a669377f415fe2b440047ef1bba81161d2ceec7431f0d6dda1707496c",
+      "bytes": 20491068,
+      "catalog_matches": true
+    }
+  ],
+  "author_article_available": false,
+  "exact_author_four_step_algorithm_verified": false,
+  "conditional_fibonacci_mod5": {
+    "seed_convention": [
+      0,
+      1
+    ],
+    "residues": [
+      0,
+      1,
+      1,
+      2,
+      3,
+      0,
+      3,
+      3,
+      1,
+      4,
+      0,
+      4,
+      4,
+      3,
+      2,
+      0,
+      2,
+      2,
+      4,
+      1
+    ],
+    "state_period": 20,
+    "checked_exact_big_integer_residues": 256,
+    "not_an_author_algorithm_claim": true
+  },
+  "published_key_period_diagnostic": [
+    {
+      "candidate_bit_period": 20,
+      "first_mismatch_zero_based": 23,
+      "mismatch_count": 59
+    },
+    {
+      "candidate_bit_period": 40,
+      "first_mismatch_zero_based": 235,
+      "mismatch_count": 11
+    }
+  ],
+  "no_new_HALV_Fibonacci_search": true,
+  "unverified_details": [
+    "actual graph and local edge ordering",
+    "initial vertex and directed edge",
+    "Fibonacci seeds and phase",
+    "absolute or relative edge index including return edge",
+    "move/read-bit order and edge-to-bit property",
+    "state updates and reset policy",
+    "output bit order"
+  ],
+  "input_sha256": {
+    "research/sources/codex_author_review_access.json": "526b9d361fcd9f429f83afc5132e6ff235a8e70988c0659cf5791eae47cb8e7d",
+    "research/sources/codex_author_review_search.json": "4e060f3e4243cc171af4e0ec31b20d4d0046286ca058195e334afdac96604065",
+    "research/sources/webreview_catalog_codex-protocol.txt": "2c49782f167a4ba98c1b379e0c6d25dee0c61a8666a865151d540293ac2013df",
+    "research/sources/webreview_codex_solution_note.txt": "f0a33c6e59006c6706b7133f507646b327fa7ee01f0acf3fc4ce478778dba08e",
+    "tools/verify_codex_author_evidence.py": "5be71be3b51d33ca3b2be7a0898617b85175149f466c99ceca2957adea26fa68"
+  }
+}

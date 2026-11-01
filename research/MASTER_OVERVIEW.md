@@ -122,3 +122,13 @@ A helyi R=f(A,blokk,mod4óra) feltevéshez pontos ütközési tanú van a másod
 blokkban. A következő generátornak ezt indokolt állapottal, más payload
 azonosítással vagy R adatszerepével kell magyaráznia. Nincs kulcsjelölt.
 A meglévő fő MD27.fejezete őrzi az összes receptet és a korlátokat.
+
+
+### Legújabb folytatás:28.kör, Codex forrásellenőrzés
+
+Publikált Codex-kulcs→Ethereum-cím ellenőrizve, két hash-azonos szerzői
+hintkép megtekintve. A pontos szerzői négy lépés továbbra is ellenőrizetlen:
+a Steemit-cikket a futó hálózati szabály blokkolja, a korábban mentett
+domainbővítés még nincs alkalmazva. A modulo5 gráfbejárás állítása nem
+keverhető az elvégzett kulcsellenőrzéssel. Új HALV-Fibonacci-család nem futott.
+A teljes forrásmunkához a konkrét cikk hozzáférése szükséges. Részletek:28.fejezet.

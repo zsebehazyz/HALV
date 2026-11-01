@@ -416,6 +416,12 @@
       "sha256": "25dcbdb7ea4bb768807590f8ee80f660f779e217d7c69206337403c487ba9d59"
     },
     {
+      "path": "research/data/codex_author_evidence_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 2535,
+      "sha256": "71f4c837ed1d078b0b66c3e973acd4ed8a59745cae3f84894d2d355ac5dcb1ec"
+    },
+    {
       "path": "research/data/composite_masks.json",
       "role": "executed_result_or_artifact",
       "bytes": 88453,
@@ -712,14 +718,14 @@
     {
       "path": "research/data/master_append_state.json",
       "role": "executed_result_or_artifact",
-      "bytes": 95262,
-      "sha256": "718541a51902c64ded5ff2683d5d3051fc88d4a9a0bb698b33fa63636831356c"
+      "bytes": 96800,
+      "sha256": "ca9e7af47533859bfd31e923d582585a04e3fe67ee88964ed1c12638f33d304a"
     },
     {
       "path": "research/data/master_document_manifest.json",
       "role": "executed_result_or_artifact",
-      "bytes": 124742,
-      "sha256": "20b0aa30baabbaea52e25141285cc9ed859a0cc2ae61849f6c5009dfa55dad14"
+      "bytes": 127525,
+      "sha256": "8da3f2544de4af813bef321ac34e7de0f8992f9867584d88af4c67d379f39d58"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -1188,6 +1194,30 @@
       "role": "source_or_reference",
       "bytes": 17756,
       "sha256": "63e373d13c7075adb1d3f3689bd178f9049f5cbd1d9d451a82599b16be765323"
+    },
+    {
+      "path": "research/sources/codex_author_review_access.json",
+      "role": "source_or_reference",
+      "bytes": 970,
+      "sha256": "526b9d361fcd9f429f83afc5132e6ff235a8e70988c0659cf5791eae47cb8e7d"
+    },
+    {
+      "path": "research/sources/codex_author_review_hint1.png",
+      "role": "source_or_reference",
+      "bytes": 20491068,
+      "sha256": "adae828a669377f415fe2b440047ef1bba81161d2ceec7431f0d6dda1707496c"
+    },
+    {
+      "path": "research/sources/codex_author_review_hint2.png",
+      "role": "source_or_reference",
+      "bytes": 1053536,
+      "sha256": "b369586f13687dbc54e02c9da152df71fe22d8dcb25601947a7cb01dde1997be"
+    },
+    {
+      "path": "research/sources/codex_author_review_search.json",
+      "role": "source_or_reference",
+      "bytes": 12035,
+      "sha256": "4e060f3e4243cc171af4e0ec31b20d4d0046286ca058195e334afdac96604065"
     },
     {
       "path": "research/sources/coinmetrics.json",
@@ -2774,6 +2804,12 @@
       "sha256": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
     },
     {
+      "path": "tools/verify_codex_author_evidence.py",
+      "role": "reproduction_tool",
+      "bytes": 3950,
+      "sha256": "5be71be3b51d33ca3b2be7a0898617b85175149f466c99ceca2957adea26fa68"
+    },
+    {
       "path": "tools/verify_historical_level2.py",
       "role": "reproduction_tool",
       "bytes": 4393,
@@ -2788,8 +2824,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 19342,
-      "sha256": "c0101fc3a556ed1d205b4b728096a78c88ee9585ff15b81d1d6aba59e1e0ad40"
+      "bytes": 19358,
+      "sha256": "d8cbf205ae6993bdf02e4b57a42d56ced95318f9f41388dc9135919417fc3dff"
     },
     {
       "path": "AGENTS.md",
@@ -2800,26 +2836,26 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 46538,
-      "sha256": "0c37639b4c3cd332e681c9ce462a3028478076dd864be3454c15df0ba4f40ccb"
+      "bytes": 47344,
+      "sha256": "8086b588d9c46fe1aefca6d27780cd65135bb033150f7e4ea87759af2f02b123"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 204424,
-      "sha256": "7615601a628815cad77b2bdaf3d942352a57f4c68c12127191fab1c76945bbaf"
+      "bytes": 213812,
+      "sha256": "af248ca0da521f96b5fd9483c09b234c6044b5637c2710feee7d8fb580f9f6ae"
     },
     {
       "path": "research/MASTER_OVERVIEW.md",
       "role": "research_map_or_log",
-      "bytes": 7189,
-      "sha256": "1a46b0472cd30512e643161fe07d542b68a88fac5af7433717119a6477e5282f"
+      "bytes": 7751,
+      "sha256": "7f43329f6aaa0a48308275c6bb1577a148752d934c038c918e0101e995f87d27"
     },
     {
       "path": "research/HALV_TELJES_KUTATAS.md",
       "role": "research_map_or_log",
-      "bytes": 434757,
-      "sha256": "3ef034f0feabdf30f83ef885200674ebf8808a05da014c74ca6c804c99bc1596"
+      "bytes": 445293,
+      "sha256": "9658dd24031d5f85d07cd96a38c307e18b1eb23539fd5bfa5be90e9e0393793a"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",

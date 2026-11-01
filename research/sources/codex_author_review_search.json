@@ -1,0 +1,391 @@
+[
+  {
+    "query": "CODEXOKRYPHODRON in:readme",
+    "url": "https://github.com/search?q=CODEXOKRYPHODRON+in%3Areadme&type=repositories",
+    "results": [],
+    "result_count": 0
+  },
+  {
+    "query": "\"CodexPuzzle\" in:readme",
+    "url": "https://github.com/search?q=%22CodexPuzzle%22+in%3Areadme&type=repositories",
+    "results": [],
+    "result_count": 0
+  },
+  {
+    "query": "\"codex-puzzle-1-codexokryphodron\" in:readme",
+    "url": "https://github.com/search?q=%22codex-puzzle-1-codexokryphodron%22+in%3Areadme&type=repositories",
+    "results": [],
+    "result_count": 0
+  },
+  {
+    "query": "\"Fibonacci\" \"Codex\" in:readme",
+    "url": "https://github.com/search?q=%22Fibonacci%22+%22Codex%22+in%3Areadme&type=repositories",
+    "results": [
+      {
+        "id": "642557888",
+        "archived": false,
+        "color": "#dea584",
+        "followers": 1059,
+        "has_funding_file": false,
+        "hl_name": "a16z/jolt",
+        "hl_trunc_description": "The simplest and most extensible zkVM. Fast and fully open source from a16z crypto and friends. \u26a1",
+        "language": "Rust",
+        "mirror": false,
+        "owned_by_organization": true,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 642557888,
+            "name": "jolt",
+            "owner_id": 745163,
+            "owner_login": "a16z",
+            "updated_at": "2026-11-01T21:26:58.713Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": false,
+        "topics": [
+          "cryptography",
+          "crypto",
+          "zk",
+          "zk-snarks",
+          "snark",
+          "zkp",
+          "arkworks",
+          "zkvm"
+        ],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "984096689",
+        "archived": false,
+        "color": "#3572A5",
+        "followers": 7686,
+        "has_funding_file": false,
+        "hl_name": "algorithmicsuperintelligence/openevolve",
+        "hl_trunc_description": "Open-source implementation of AlphaEvolve",
+        "language": "Python",
+        "mirror": false,
+        "owned_by_organization": true,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 984096689,
+            "name": "openevolve",
+            "owner_id": 238764598,
+            "owner_login": "algorithmicsuperintelligence",
+            "updated_at": "2026-11-01T19:55:48.002Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": false,
+        "topics": [
+          "genetic-algorithm",
+          "discovery",
+          "optimize",
+          "evolutionary-algorithms",
+          "deepmind-lab",
+          "deepmind",
+          "iterative-methods",
+          "genetic-algorithms",
+          "evolutionary-computation",
+          "alphacode",
+          "distributed-evolutionary-algorithms",
+          "iterative-refinement",
+          "llm-inference",
+          "llm-engineering",
+          "llm-ensemble",
+          "coding-agent",
+          "alpha-evolve",
+          "alphaevolve",
+          "openevolve"
+        ],
+        "type": "Public",
+        "help_wanted_issues_count": 6,
+        "good_first_issue_issues_count": 7,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "1080558732",
+        "archived": false,
+        "color": "#3178c6",
+        "followers": 61,
+        "has_funding_file": false,
+        "hl_name": "coleam00/codex-telegram-coding-assistant",
+        "hl_trunc_description": "AI Coding assistant using Codex that integrates directly with Telegram. Send off coding requests from your phone!",
+        "language": "TypeScript",
+        "mirror": false,
+        "owned_by_organization": false,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 1080558732,
+            "name": "codex-telegram-coding-assistant",
+            "owner_id": 47287758,
+            "owner_login": "coleam00",
+            "updated_at": "2025-10-21T14:35:45.422Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": false,
+        "topics": [],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "968340993",
+        "archived": false,
+        "color": "#3572A5",
+        "followers": 52,
+        "has_funding_file": false,
+        "hl_name": "agency-ai-solutions/openai-codex-mcp",
+        "hl_trunc_description": "An MCP server to communicated with, use, and wrap the API for the OpenAI Codex CLI tool.",
+        "language": "Python",
+        "mirror": false,
+        "owned_by_organization": true,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 968340993,
+            "name": "openai-codex-mcp",
+            "owner_id": 189315257,
+            "owner_login": "agency-ai-solutions",
+            "updated_at": "2025-04-18T04:20:13.933Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": false,
+        "topics": [],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "1034736943",
+        "archived": false,
+        "color": "#3572A5",
+        "followers": 5190,
+        "has_funding_file": true,
+        "hl_name": "atilaahmettaner/tradingview-mcp",
+        "hl_trunc_description": "MCP server for market analysis in AI assistants: screeners, multi-timeframe technical analysis, backtests and sentiment for crypto, stock\u2026",
+        "language": "Python",
+        "mirror": false,
+        "owned_by_organization": false,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 1034736943,
+            "name": "tradingview-mcp",
+            "owner_id": 67838093,
+            "owner_login": "atilaahmettaner",
+            "updated_at": "2026-10-29T14:24:40.009Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": true,
+        "topics": [
+          "cryptocurrency",
+          "stock-market",
+          "market-data",
+          "trading-strategies",
+          "technical-analysis",
+          "futures",
+          "tradingview",
+          "claude-desktop",
+          "model-context-protocol",
+          "mcp-server",
+          "mcp-tools",
+          "trading-mcp",
+          "openclaw"
+        ],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "618514446",
+        "archived": false,
+        "color": "#3572A5",
+        "followers": 4466,
+        "has_funding_file": false,
+        "hl_name": "gptme/gptme",
+        "hl_trunc_description": "Your agent in your terminal, equipped with local tools: writes code, uses the terminal, browses the web. Make your own persistent autonom\u2026",
+        "language": "Python",
+        "mirror": false,
+        "owned_by_organization": true,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 618514446,
+            "name": "gptme",
+            "owner_id": 157223935,
+            "owner_login": "gptme",
+            "updated_at": "2026-11-01T21:36:01.743Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": false,
+        "topics": [
+          "python",
+          "agent",
+          "cli",
+          "terminal",
+          "chatbot",
+          "openai",
+          "code-generation",
+          "agents",
+          "autonomous-agents",
+          "ai-agents",
+          "rag",
+          "local-first",
+          "ai-assistant",
+          "llm",
+          "chatgpt",
+          "anthropic",
+          "llm-agent",
+          "openrouter",
+          "llm-apps",
+          "deepseek"
+        ],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "1027180892",
+        "archived": false,
+        "color": "#3572A5",
+        "followers": 109,
+        "has_funding_file": false,
+        "hl_name": "PAMPAS-Lab/Pywen",
+        "hl_trunc_description": "Full-stack Python Code Agent platform ",
+        "language": "Python",
+        "mirror": false,
+        "owned_by_organization": true,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 1027180892,
+            "name": "Pywen",
+            "owner_id": 193309727,
+            "owner_login": "PAMPAS-Lab",
+            "updated_at": "2026-06-07T16:38:06.805Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": false,
+        "topics": [],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "1040829648",
+        "archived": false,
+        "color": "#3178c6",
+        "followers": 85,
+        "has_funding_file": true,
+        "hl_name": "GewoonJaap/codex-openai-wrapper",
+        "hl_trunc_description": "Wrap OpenAI's Codex to an OpenAI compatible endpoint using Cloudflare Workers",
+        "language": "TypeScript",
+        "mirror": false,
+        "owned_by_organization": false,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 1040829648,
+            "name": "codex-openai-wrapper",
+            "owner_id": 33700526,
+            "owner_login": "GewoonJaap",
+            "updated_at": "2026-09-14T09:09:54.452Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": true,
+        "topics": [
+          "docker",
+          "openai",
+          "gpt",
+          "codex",
+          "chatgpt",
+          "gpt-5"
+        ],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "1374827115",
+        "archived": false,
+        "color": "#3572A5",
+        "followers": 168,
+        "has_funding_file": false,
+        "hl_name": "dimentary/llm-robotics-playground",
+        "hl_trunc_description": "A library of experiments using frontier LLMs/VLMs for robotics tasks, currently focusing on GPT-6 Astra.",
+        "language": "Python",
+        "mirror": false,
+        "owned_by_organization": false,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 1374827115,
+            "name": "llm-robotics-playground",
+            "owner_id": 13711526,
+            "owner_login": "dimentary",
+            "updated_at": "2026-09-24T18:47:00.140Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": false,
+        "topics": [],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      },
+      {
+        "id": "1192761948",
+        "archived": false,
+        "color": "#3D6117",
+        "followers": 72,
+        "has_funding_file": false,
+        "hl_name": "the-omega-institute/automath",
+        "hl_trunc_description": "LEAN4 AUTO YOUTUBE LIVING",
+        "language": "TeX",
+        "mirror": false,
+        "owned_by_organization": true,
+        "public": true,
+        "repo": {
+          "repository": {
+            "id": 1192761948,
+            "name": "automath",
+            "owner_id": 247526503,
+            "owner_login": "the-omega-institute",
+            "updated_at": "2026-08-28T11:27:44.351Z",
+            "has_issues": true
+          }
+        },
+        "sponsorable": false,
+        "topics": [
+          "lean4",
+          "formalized-mathematics"
+        ],
+        "type": "Public",
+        "help_wanted_issues_count": 0,
+        "good_first_issue_issues_count": 0,
+        "starred_by_current_user": false
+      }
+    ],
+    "result_count": 740
+  }
+]

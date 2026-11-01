@@ -6482,3 +6482,182 @@ Forrás: [image_directed_join_v1.json](models/image_directed_join_v1.json), SHA-
 | [tools/check_image_directed_join.py](../tools/check_image_directed_join.py) | 5962 | `4ae0ba5fc5bbb4f56d6461a446d109dd5e49d21f71774b99feceedc3a59b381a` |
 | [tools/audit_image_directed_join.py](../tools/audit_image_directed_join.py) | 5127 | `4f522932022df984349c08fc8975538675ad0a61c5ca03fd2563c72cae79e0ad` |
 | [tools/check_residual_local_collisions.py](../tools/check_residual_local_collisions.py) | 2288 | `2eceb6f99fdc6967a0bfca5e88ccaf71091f56e0c0cbae4903ca8d83e9ead222` |
+
+
+---
+
+<a id="round-28"></a>
+
+## 2026-11-01 – huszonnyolcadik kör: Codex szerzői algoritmusának forrásellenőrzése, R28
+
+### 1. Feladat és az ellenőrzés állapota
+
+A felhasználó kifejezetten a Codex pontos szerzői algoritmusának ellenőrzését
+kérte újabb Fibonacci-család előtt. Ebben a körben nem futott új HALV-
+Fibonacci-keresés. Nem töltjük ki a hiányzó szerzői lépéseket a célkulcsra
+illesztett, utólag választott gráffal vagy kezdőállapottal.
+
+**A pontos négy szerzői lépést továbbra sem sikerült teljes szöveges
+forrásból hitelesíteni.** A konkrét eredeti cikk URL-je:
+https://steemit.com/cryptopuzzle/@zden/codex-puzzle-1-codexokryphodron
+
+A kérés most is proxy403-at kapott. A futó hálózati szabály csak a
+csomagkezelő/GitHub-csoportot engedi. A korábban elmentett tervezetben
+steemit.com és crypto.haluska.sk már szerepel, de ez még nem alkalmazott
+futási szabály. Az environment_status current/enforced megfigyelése a
+régi1.spec-revíziót mutatja, míg a konfigurációs tervezet3.revíziója tartalmazza
+a bővítést. Nem hiányzó GitHub-token vagy a cikk hiánya a megállapított ok.
+A továbblépéshez a környezet beállításaiban alkalmazni kell a mentett
+hálózati változtatást. Nem készítettünk újabb, azonos domainkövetelményt.
+
+### 2. Mihez fértünk hozzá, és mit láttunk közvetlenül?
+
+A nyilvános agntn-repó már rögzített
+`38025a53495a6816ae81388d3e7ca3ca9e7b195d` commitjáról letöltöttük a két
+Codex-hintképet. Mindkét fájl mérete és SHA-256 lenyomata pontosan egyezik
+a korábban archivált katalógussal:
+
+| Fájl | Bájt | SHA-256 |
+| --- | ---: | --- |
+| CodexPuzzle-hint.png másolata | 20491068 | adae828a669377f415fe2b440047ef1bba81161d2ceec7431f0d6dda1707496c |
+| CodexPuzzle-hint2.png másolata | 1053536 | b369586f13687dbc54e02c9da152df71fe22d8dcb25601947a7cb01dde1997be |
+
+Mindkét képet vizuálisan megtekintettük. Az elsőn a központi térbeli
+élszerkezetet piros vonalak egészítik ki, és a felső jelöléstől függőleges
+piros vonal vezet a testhez. A második a külső töröttvonal egy részét mutatja,
+A,V,E betűjelölésekkel. Ez valódi képi bizonyíték arra, hogy a szerzői hint
+geometriai elemekre és kiindulásra irányítja a figyelmet. **Nem bizonyítja
+önmagában** a Fibonacci-rekurziót, a modulo5 műveletet, az élek lokális
+sorszámozását vagy egy él bitértékét.
+
+A fájlok szerzői URL-hez rendelt, hash-azonos közösségi másolatok.
+A szerzői szerver bájtjaival most nem tudtuk közvetlenül összevetni őket.
+A négy specifikus GitHub-repókeresés eredménye külön JSON-ba került.
+Az egyedi Codex-név/cikkcím keresése nem adott használható szövegmásolatot;
+a Fibonacci+Codex általános keresés túlnyomórészt más témájú találatokat adott.
+Ez nem a teljes internet hiánybizonyítéka.
+
+### 3. A publikált kulcsot ténylegesen ellenőriztük
+
+A közösségi rekordban közölt64hexkarakterből secp256k1 nyilvános kulcsot
+képeztünk; az pontosan egyezik a rekord tömörítetlen nyilvános kulcsával.
+A nyilvános kulcs64adatbájtjának Ethereum Keccak-256 hash-éből az utolsó
+20bájt pontosan ezt a címet adja:
+
+`0x6b2560b34c7469c561a8fce581c88bfb8cce73b2`.
+
+A Keccak-256 és a NIST SHA3-256 eltérő; ezért tényleges Keccakot használtunk,
+és az üres bemenet ismert eredményével is ellenőriztük az implementációt.
+Az ideiglenes pycryptodome3.23.0 telepítés a repón kívül történt,
+függőségdeklaráció és lockfile módosítása nélkül.
+
+**Ez publikált kulcs→publikus kulcs→célcím ellenőrzés. Nem kép→kulcs
+visszafejtés, nem a négy lépés reprodukciója és nem HALV-találat.**
+A közösségi megjegyzés maga is egyértelműen leírja, hogy a publikált kulcsot
+másolja, nem a grafikából rekonstruálja a megoldást.
+
+### 4. Az állítások bizonyítékszintje
+
+| Állítás | Mostani státusz |
+| --- | --- |
+| A közölt Codex-kulcs a megadott Ethereum-címhez tartozik | Saját kriptográfiai ellenőrzéssel igazolt. |
+| A szerzői hint a térbeli élszerkezetre és kijelölt kiindulásra utal | A hash-ellenőrzött hintképen közvetlenül megfigyelt. |
+| Négy lépést256szor ismételve gyűlnek össze a kulcsbitjei | Korábban archivált közösségi idézet a szerzői cikkből; teljes cikk nélkül nem újraellenőrzött. |
+| Fibonacci-érték modulo5 választja a következő élt | A korábbi felhasználói kutatási jegyzetből átvett állítás. A most elért képek és publikált kulcs önmagukban nem igazolják. |
+| Az él egy tulajdonsága hordoz bitet | Ugyanennek az átvett állításnak része; a pontos tulajdonság és olvasási időpont nincs hitelesítve. |
+| A teljes256lépéses gráfbejárás az eredeti képből reprodukálható nálunk | Jelenleg nem teljesített ellenőrzés. |
+
+A korábbi R26 óvatosság tehát továbbra is indokolt. Nem írjuk vissza a
+régi fejezeteket; itt pontosítjuk a most elvégzett és a még hiányzó munkát.
+
+### 5. Mi szükséges a pontos algoritmushoz?
+
+A „Fibonacci mod5” címke akkor sem lenne elégséges specifikáció, ha a
+szöveg ezt megerősítené. Legalább a következőket meg kell tudnunk:
+
+1. A bejárandó tényleges gráf és az élek lokális sorrendje.
+2. A kezdőcsúcs és a belépő irány/él.
+3. A Fibonacci-kezdőértékek és az első felhasznált index.
+4. Abszolút vagy az érkezési irányhoz viszonyított élindex; a visszaél kezelése.
+5. Előbb mozgás vagy előbb bitolvasás; pontosan mely él-/csúcstulajdonság a bit.
+6. A navigációs és rekurziós állapot frissítése, valamint bármilyen reset.
+7. A bitek kimeneti sorrendje és a megállás szabálya.
+
+Ezek összekapcsolt követelmények. Egy díszítővonal, az átvett modulo5 és a
+megoldott kulcs összeillesztése célkulcs alapján nem helyettesíti őket.
+A szerző professzionális, többlépcsős megoldása éppen az adat, útvonal,
+kezdőpont és bitérték külön szerepe miatt lehet megtévesztő.
+
+### 6. Két matematikai ellenőrzés, korlátozott következtetéssel
+
+A Fibonacci(0)=0,Fibonacci(1)=1 konvenció mellett az állapotpár modulo5
+periódusa20. A maradéksor:
+
+`0,1,1,2,3,0,3,3,1,4,0,4,4,3,2,0,2,2,4,1`.
+
+Ezt a pontos egész Fibonacci-számok első256modulo5 maradékával is
+összevetettük. Ez matematikai tény az adott konvencióhoz, **nem annak
+bizonyítéka, hogy a szerző ezt a kezdést és indexkezelést használta**.
+
+A közölt kulcs első235bitje ismétli az első40bitet; nullaalapú235-nél,
+vagyis a236.kimeneti bitnél van az első eltérés. A teljes256biten11eltérés
+van a folytatott40bites mintához képest.20bites periódusnál már a
+nullaalapú23.helyen eltérés van, összesen59helyen.
+A megfigyelés nem igazolja a20-as navigációs periódus és a40bites minta
+közti ok-okozati kapcsolatot. Nem hosszabbítjuk ki mesterségesen a mintát,
+és nem használjuk a végső kulcsot a hiányzó szerzői szabály betanítására.
+
+### 7. Mit jelent ez HALV-ra és a korábbi ágakra?
+
+A hipotetikus gráfnavigáció külön kategória a C40rögzített8SVX-delta és
+C44–46önhatároló Fibonacci-egészkód próbáihoz képest. Ezek negatívumai
+nem zárják ki a gráfnavigációt. Ugyanakkor a félbemaradt szerzői ellenőrzés
+nem jogosít új HALV-keresés elindítására pusztán a Fibonacci név alapján.
+
+HALV esetében a csúcssor, a64cella vagy a8blokk egyike sem automatikusan
+a Codexhez szükséges, sorszámozott élgráf. Előbb indokolni kellene a csúcsokat,
+a szomszédságot, a lokális élsorrendet, a marker/aláírás kezdőirány-szerepét
+és azt, hogyan magyarázza a modell a teljes q/R-t. A hullám polivonala
+önmagában nem határoz meg egy modulo5 szerint választható gráfot.
+
+A C48tanúja szerint azonos A és helyi képi vezérlés mellett más R is lehet;
+egy állapotos bejárás elvben kezelhetne ilyet. Ez lehetőség, nem bizonyíték
+Codex-szerű bejárásra. A Level2 feltételes művelete, XM17mozgó bitkezdése,
+XIXOIOcsatornaegyesítése, Level5geometriája és SFXinverz renderelése továbbra
+is alternatív előzmény. A Codex-kapcsolat miatt nem dobjuk el ezeket.
+
+### 8. Reprodukció és a még szükséges külső lépés
+
+```sh
+cd /workspace/HALV
+python3 -m pip install --disable-pip-version-check --no-cache-dir --target /tmp/halv-codex-review/deps pycryptodome==3.23.0
+PYTHONPATH=/tmp/halv-codex-review/deps python3 tools/verify_codex_author_evidence.py
+```
+
+A vizsgálat a források méret/hash egyezését, a publikált kulcs/cím kapcsolatát,
+az ismert Keccak-vektort és a feltételes matematikai diagnosztikát ellenőrzi.
+A JSON kifejezetten `exact_author_four_step_algorithm_verified=false`
+állapotot őriz; nem elvégzett gráfdekódolást állít.
+
+A következő szükséges lépés a már mentett hálózati bővítés alkalmazása a
+környezet beállításaiban, majd a konkrét szerzői cikk elolvasása. Ha az
+elsődleges szöveg más módon rendelkezésre kerül, azt forrásként külön
+rögzíteni és a teljes cikkel egyeztetni kell. A kulcs és hintképek ellenőrzése
+nem helyettesíti ezt a hiányzó részt.
+
+Új jelentés-MD nem készült. A meglévő fő MD korábbi 434757 bájtja változatlan.
+A GitHub-frissítés az ellenőrzött részeredményt és a konkrét blokkolást is
+megőrzi. Nincs új HALV-kulcscsalád, kulcsjelölt vagy megfejtés.
+
+
+### A fejezet adatai és reprodukciós programjai
+
+
+| Fájl | Bájt | SHA-256 |
+| --- | ---: | --- |
+| [research/sources/codex_author_review_access.json](sources/codex_author_review_access.json) | 970 | `526b9d361fcd9f429f83afc5132e6ff235a8e70988c0659cf5791eae47cb8e7d` |
+| [research/sources/codex_author_review_search.json](sources/codex_author_review_search.json) | 12035 | `4e060f3e4243cc171af4e0ec31b20d4d0046286ca058195e334afdac96604065` |
+| [research/sources/codex_author_review_hint1.png](sources/codex_author_review_hint1.png) | 20491068 | `adae828a669377f415fe2b440047ef1bba81161d2ceec7431f0d6dda1707496c` |
+| [research/sources/codex_author_review_hint2.png](sources/codex_author_review_hint2.png) | 1053536 | `b369586f13687dbc54e02c9da152df71fe22d8dcb25601947a7cb01dde1997be` |
+| [research/data/codex_author_evidence_check.json](data/codex_author_evidence_check.json) | 2535 | `71f4c837ed1d078b0b66c3e973acd4ed8a59745cae3f84894d2d355ac5dcb1ec` |
+| [tools/verify_codex_author_evidence.py](../tools/verify_codex_author_evidence.py) | 3950 | `5be71be3b51d33ca3b2be7a0898617b85175149f466c99ceca2957adea26fa68` |

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "article",
+    "url": "https://steemit.com/cryptopuzzle/@zden/codex-puzzle-1-codexokryphodron",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "id": "hint2",
+    "url": "https://raw.githubusercontent.com/agntn/puzzles/38025a53495a6816ae81388d3e7ca3ca9e7b195d/assets/zden/codex-protocol/hint-2.png",
+    "status": 200,
+    "path": "research/sources/codex_author_review_hint2.png",
+    "sha256": "b369586f13687dbc54e02c9da152df71fe22d8dcb25601947a7cb01dde1997be",
+    "bytes": 1053536,
+    "catalog_digest_verified": true
+  },
+  {
+    "id": "hint1",
+    "url": "https://raw.githubusercontent.com/agntn/puzzles/38025a53495a6816ae81388d3e7ca3ca9e7b195d/assets/zden/codex-protocol/hint-1.png",
+    "status": 200,
+    "path": "research/sources/codex_author_review_hint1.png",
+    "sha256": "adae828a669377f415fe2b440047ef1bba81161d2ceec7431f0d6dda1707496c",
+    "bytes": 20491068,
+    "catalog_digest_verified": true
+  }
+]

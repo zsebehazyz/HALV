@@ -2554,6 +2554,46 @@
           "sha256": "2eceb6f99fdc6967a0bfca5e88ccaf71091f56e0c0cbae4903ca8d83e9ead222"
         }
       ]
+    },
+    {
+      "journal_round": 28,
+      "offset": 434757,
+      "bytes": 10536,
+      "sha256": "20b0c9fa28e62d6f67de24fbcccd4b5ab725ffbe1c054ffa0e99727023dd88b2",
+      "journal_section_sha256": "93a19b4cf097a9d1239f64267ba5bc43b7fd35bd84816fd1197ba80f1d29d7bc",
+      "model_inputs": [],
+      "artifact_inputs": [
+        {
+          "path": "research/sources/codex_author_review_access.json",
+          "bytes": 970,
+          "sha256": "526b9d361fcd9f429f83afc5132e6ff235a8e70988c0659cf5791eae47cb8e7d"
+        },
+        {
+          "path": "research/sources/codex_author_review_search.json",
+          "bytes": 12035,
+          "sha256": "4e060f3e4243cc171af4e0ec31b20d4d0046286ca058195e334afdac96604065"
+        },
+        {
+          "path": "research/sources/codex_author_review_hint1.png",
+          "bytes": 20491068,
+          "sha256": "adae828a669377f415fe2b440047ef1bba81161d2ceec7431f0d6dda1707496c"
+        },
+        {
+          "path": "research/sources/codex_author_review_hint2.png",
+          "bytes": 1053536,
+          "sha256": "b369586f13687dbc54e02c9da152df71fe22d8dcb25601947a7cb01dde1997be"
+        },
+        {
+          "path": "research/data/codex_author_evidence_check.json",
+          "bytes": 2535,
+          "sha256": "71f4c837ed1d078b0b66c3e973acd4ed8a59745cae3f84894d2d355ac5dcb1ec"
+        },
+        {
+          "path": "tools/verify_codex_author_evidence.py",
+          "bytes": 3950,
+          "sha256": "5be71be3b51d33ca3b2be7a0898617b85175149f466c99ceca2957adea26fa68"
+        }
+      ]
     }
   ]
 }

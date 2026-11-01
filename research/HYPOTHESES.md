@@ -734,3 +734,16 @@ kap. Emiatt R=f(A,blokk,cellaszám mod4) sem lehet teljes magyarázat.
 Ez nem zárja ki R önálló adatszerepét, korábbi állapotot, más payloadot vagy
 képi előtranszformációt. A teljes q/R és geometriai ág megmarad.
 Független audit sikeres; nincs új kulcsjelölt. Részletek:27.fejezet.
+
+
+## R28: Codex szerzői algoritmusának ellenőrzési státusza
+
+A publikált Codex-kulcs secp256k1 publikus kulcsa és Keccak256-ból képzett
+Ethereum-címe pontosan ellenőrzött. Két szerzőnek tulajdonított hintkép
+hash-azonos példánya megtekintve; geometriai navigációs kiindulást jeleznek.
+A teljes szerzői cikk továbbra is hálózatilag blokkolt. A pontos négy lépés,
+Fibonacci-magok, élsorszám és bitolvasási időpont még nincs hitelesítve.
+A Fibonacci-mod5 állítás korábbi átvett jegyzetből származik, nem új bizonyíték.
+Új HALV-Fibonacci-keresés nem indult. A feltételes20-as maradékperiódus és
+a kulcs235bitig tartó40bites mintája nem helyettesítik a szerzői algoritmust.
+A meglévő fő MD28.fejezete őrzi a részeredményt és a konkrét blokkolást.
