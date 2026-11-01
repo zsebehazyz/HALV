@@ -12,12 +12,16 @@
 - Használd a meglévő checkoutot. Külön worktree-t csak kifejezett kérésre készíts.
 - A kutatás eredményeit dátumozva naplózd a research/LOG.md fájlban;
   az adatokat, forrásokat és reprodukálható programokat is őrizd meg.
-- A felhasználó egy teljes, elejétől olvasható, folyamatosan frissülő MD-t kér:
-  research/HALV_TELJES_KUTATAS.md. Minden körben aktualizáld a
-  research/MASTER_OVERVIEW.md állapotképet, és őrizd a teljes kronológiát.
-  A generált fő MD-t ne kézzel szerkeszd: a tools/build_research_index.py
-  először automatikusan újraépíti a tools/build_master_document.py segítségével.
-  Új körben az állapotképet és a legújabb fő-MD szakaszokat is olvasd el.
+- A felhasználó legutóbbi kérése: ne készüljön új jelentés-MD, hanem a
+  research/HALV_TELJES_KUTATAS.md VÉGÉHEZ fűzzük az új kört. A meglévő
+  tartalom bájtjai maradjanak változatlanok; az append-only nyilvántartás
+  a research/data/master_append_state.json. Új REPORT_*.md-t ne hozz létre.
+  A részletes új kört az aktuális research/LOG.md végére írd, majd a
+  tools/append_master_chapter.py --round N --model ... --artifact ...
+  paranccsal fűzd a fő MD végére. A research/MASTER_OVERVIEW.md állapotképet
+  és a többi meglévő segédnaplót frissítheted. Az indexelő append-only módban
+  ellenőrzi a fő MD-t és frissíti a manifesztet, de nem írja újra.
+  Új körben a legutolsó hozzáfűzött fejezetet és az állapotképet is olvasd el.
 - Különítsd el: közvetlen mérés; felhasználótól átvett állítás;
   hipotézis; lefuttatott negatív teszt; még nem vizsgált ötlet.
 - A korábbi feljegyzésekben említett több ezer próbát nem szabad saját,

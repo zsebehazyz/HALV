@@ -25,18 +25,21 @@ korábban nem naplózott számításokat vagy forrásokat.
 - A Level 2 és Level 5 történeti pozitív kontrolljai reprodukáltak; a régi
   nyilvános megoldási kulcsok nem HALV-találatok.
 
-### Legutóbbi végrehajtott kör: C35–C36
+### Legutóbbi végrehajtott kör: C37–C38
 
-A tiszta fizikai felezésnél a mért kettőhatvány-skálák miatt az osztás egészre
-esik. A deklarált négy kerekítés nem magyarázza az 5–7. pár hét, egyenként 4 px-es
-eltérését. A nyolc blokk hisztogramja mind különbözik: egy változatlan 32 mintás
-sablon tetszőleges átrendezése és felezése, illetve két paritássablon nem elég.
-Ez a szűk modell kizárása, nem minden kvantálási vagy közösadatfolyam-kódolóé.
+Hosszabb közös adatfolyam pontos ablakait vizsgáltuk, így a blokkok eltérő
+hisztogramja megengedett. A két paritás külön sablont kap, a felezési skálák
+és közös fázisképlet határozza meg az ablakkezdeteket. A 96 konfiguráció
+egyike sem illeszkedik pontosan a négy középső tanítóblokkra.
 
-A teljes 512 bites, fázisigazított ASCII/flag család 12 672 formátumpróbája
-nem adott 64 karakteres hexszöveget; a skalárkapun semmi nem jutott át.
-Az összes flag és eredeti bit visszaállítható. A részletes C35–C36 jelentés
-az alábbi beágyazott jelentések között van.
+Külön magas/alacsony bináris síkkal, független ablakkoordinátákkal sem
+született pontos illesztés a 192 síkonkénti konfigurációban. Nem készült
+teljes, szélső blokkokat megjósló generátor vagy új kulcsjelölt.
+
+A teljesen hibátlan HATÁRÁTFEDÉS legnagyobb hossza a 3–5., 4–6., 5–7.
+párokra 1, 2, 3 minta. Ez nem a leghosszabb közös belső részlet: a 3. és
+5. blokkban például igazolt 12 mintás belső egyezés van. Az eredmény csak
+a rögzített ablakozó/indexelő családot szűkíti.
 
 ### Nyitott munkafeladat
 
@@ -54,9 +57,12 @@ előjel, mintavétel és kodek szükséges.
 
 A kézzel szerkesztett állapotkép ebben a `MASTER_OVERVIEW.md` fájlban,
 a kronológia a `LOG.md`-ben, az aktuális értelmezés a `HYPOTHESES.md`-ben,
-a részletek a `REPORT_*.md` fájlokban vannak. Minden körben ezek frissítése
-után a `tools/build_master_document.py` újraírja a teljes fő MD-t.
-A `tools/build_research_index.py` ezt automatikusan is elvégzi az indexelés előtt.
+a korábbi részletek a `REPORT_*.md` fájlokban megmaradnak. A felhasználó
+legutóbbi kérése szerint új jelentés-MD helyett a fő MD végéhez fűzzük
+az új részletes naplókört a `tools/append_master_chapter.py` segítségével.
+A régi fő-MD tartalom változatlan: a prefix és a fejezetek hash-e a
+`data/master_append_state.json` fájlban van. Az indexelő csak ellenőriz,
+és az aktuális manifesztet frissíti; nem építi újra a fő MD korábbi részét.
 
 A nagy adatok és programok külön, a bizonyítékjegyzékben hash-sel hivatkozva
 maradnak meg; nem másoljuk be a több tíz megabájtnyi jelöltet a szövegbe.

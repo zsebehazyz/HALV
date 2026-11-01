@@ -1,0 +1,18 @@
+{
+  "model":"C37",
+  "question":"Can changing block shapes be exact windows of two longer parity streams rather than circular copies of one32sample template?",
+  "generator":"q[b,k]=T[b mod2][start[b]+k]; physical_height=q*128/2**b",
+  "start":"start[0]=start[1]=0; start[b+2]=start[b]+d[b]",
+  "phase_family":"s[b]=(a+source_scale[b]/2)mod32; all a0..31, fitted on training only; a10 inherited only as comparison",
+  "displacement_policies":["principal_signed","nonnegative","nonpositive"],
+  "displacement_definitions":"principal=(s+16)mod32-16; nonnegative=s; nonpositive=s if s==0 else s-32",
+  "templates":"Two arbitrary finite lookup streams with no period imposed; conflicting values at the same stream coordinate invalidate exact training",
+  "training_blocks_1based":[3,4,5,6],
+  "heldout_blocks_1based":[1,2,7,8],
+  "strong_training_requirement":"Each of the two training parity pairs must share at least16 coordinates; perfect training with tiny overlap is only a weak diagnostic",
+  "forecast":"Only coordinates already defined by training can be predicted; no default0 and no use of heldout symbols to fill templates",
+  "selection":"First exact strong-training fit in fixed enumeration is primary; all other successes exploratory",
+  "diagnostic":"For each training pair, exhaustively test all63 linear displacements-31..31 and report the longest exactly matching entire overlap",
+  "calibration":"Known synthetic streams must give exact known-coordinate forecasts; injected overlap conflict must be rejected; no-overlap must not be counted as evidence",
+  "limitations":["Same previously observed image; holdout is parameter-fitting exclusion, not prospective measurement","Two parity streams and this phase family are hypotheses","A stored arbitrary template is not yet a key-derived encoder","Failure excludes only this exact window/index family, not all longer-stream encoders","Original states and full residual retained; no private-key search"]
+}

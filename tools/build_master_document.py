@@ -2,8 +2,8 @@
 """Build the user's complete, continuously refreshed MD from saved research.
 
 Embeds the full journal, hypothesis map, all detailed reports and model JSONs.
-Large evidence/program files stay linked with hashes. Exclude generated index,
-master and manifest from inputs to avoid circular content hashes.
+Large evidence/program files stay linked with hashes. In append-only mode,
+validate the existing document and update its manifest without rewriting it.
 """
 import hashlib
 import json
@@ -52,6 +52,30 @@ def main():
     for p,role in sorted(inventory.items()):
         records.append({'path':str(p.relative_to(ROOT)),'role':role,'bytes':p.stat().st_size,
                         'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+    append_state=ROOT/'research/data/master_append_state.json'
+    if MASTER.exists() and not append_state.exists():
+        raise RuntimeError('Append metadata missing; refusing to rewrite the existing master MD')
+    if append_state.exists():
+        from append_master_chapter import validate_append_state
+        state=json.loads(append_state.read_text());data=validate_append_state(state)
+        rounds=len(re.findall(r'^## 20\d\d-',journal.read_text(),re.M))
+        assert rounds==state['base_journal_rounds']+len(state['chapters']),'Append the new journal round before indexing'
+        base=state['base_snapshot_manifest']
+        assert set(base['full_reports_embedded'])=={str(p.relative_to(ROOT)) for p in reports},'Append to the existing MD; do not create another report MD'
+        embedded_models=base['full_model_specs_embedded']+[r['path'] for c in state['chapters'] for r in c['model_inputs']]
+        assert set(embedded_models)=={str(p.relative_to(ROOT)) for p in models},'Unappended model specification'
+        manifest={'purpose':'Append-only full research MD; old snapshot plus new end chapters',
+                  'mode':'append_only','master_path':str(MASTER.relative_to(ROOT)),
+                  'master_sha256':hashlib.sha256(data).hexdigest(),
+                  'frozen_prefix_bytes':state['base_prefix_bytes'],'frozen_prefix_sha256':state['base_prefix_sha256'],
+                  'base_snapshot_journal_rounds':state['base_journal_rounds'],'journal_round_headings':rounds,
+                  'all_journal_rounds_present':True,'full_journal_embedded_as_one_current_snapshot':False,
+                  'full_reports_embedded':base['full_reports_embedded'],'full_model_specs_embedded':embedded_models,
+                  'appended_chapters':state['chapters'],'inputs':records,'generator':'tools/build_master_document.py',
+                  'note':'Base source hashes are historical snapshots in master_append_state; inputs here describe current files.'}
+        MANIFEST.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+        print('Master MD validated without rewriting:',rounds,'rounds;',len(state['chapters']),'end appendices.')
+        return
     out=['# HALV – teljes kutatási jegyzőkönyv\n',
          'A felhasználó kérésére összeállított, folyamatosan frissülő fő MD.\n',
          '**Generált fájl:** a forrásdokumentumokat frissítsd, majd futtasd az indexelőt. '

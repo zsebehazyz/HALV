@@ -562,3 +562,28 @@ A következő generátorjelöltnek a jelalak változását is elő kell állíta
 nem pusztán felezett másolatokat. A geometriai és Fibonacci–hang–Morse
 ágak nyitottak. Részletek: `REPORT_20261101_HALVING_AND_PHASE_ASCII.md`.
 A teljes történet mostantól a folyamatosan frissülő `HALV_TELJES_KUTATAS.md`.
+
+## C37–C38: hosszabb adatfolyam ablakai és külön bináris síkok
+
+A C35 változatlan32mintás sablonja után két hosszabb, nem periodikus
+paritásadatfolyamból vett ablakokat vizsgáltunk. A kezdetek a C25
+felezéses fázisképletének közös0..31 eltolásától és három közös előjeles
+reprezentációtól függenek. Az R-t nem külön javítókódnak tekintjük:
+teljes q-előállítást követelünk. A 3–6. blokk tanítás, az1,2,7,8. ellenőrzés.
+
+C37: mind a96 konfiguráció már a tanítóablakok közös címein ellentmondó
+q-értékeket ad. Nincs illesztett modell a szélső blokkok előrejelzésére.
+Az összes lineáris elmozduláson a teljes hibátlan határátfedés maximuma
+az ismert három párra1,2,3 minta. Ez nem belső substring-hossz: a3. blokk
+első12 mintája pontosan egyezik az5. blokk6..17. mintájával.
+
+C38: külön H/L síkok, síkonként külön ablakfázis. A192 síkonkénti
+konfiguráció egyikében sincs pontos tanítóillesztés. Ezért nincs elsődleges
+összetett modell vagy teljes, visszatartott128mintás jóslat. Egy hiányzó
+síket nem töltenénk ki nullával. A szintetikus generátorok és a független
+integritás-/átfedés-audit sikeresek.
+
+Ezek a kötött indexelésű, értékváltoztatás nélküli ablakmodellek negatívumai,
+nem minden adatfolyam vagy nemlineáris kódoló kizárásai. A geometriai és
+Fibonacci–hang–Morse ág megmarad. Részletes folytatás a meglévő fő MD
+végén: `HALV_TELJES_KUTATAS.md#round-20`. Új jelentés-MD nem készült.

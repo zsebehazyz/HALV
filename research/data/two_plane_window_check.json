@@ -1,0 +1,4268 @@
+{
+  "model": "C38",
+  "input_sha256": {
+    "research/models/two_plane_window_v1.json": "f2924a1b8d6391c0b6a94bfa8f3e2cfa4e84117b5f5279a6c24b76a16b684f89",
+    "research/models/sliding_window_generator_v1.json": "9fb013cbaeb20a34af9c9ae2d003756d3ac8ea1552d2afb7884398e6b73dd954",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "tools/check_two_plane_window.py": "5e6a6fcc293539720bbc0601aea7d051ce08c713c25666428a75c0cc46e2b1e5",
+    "tools/check_sliding_window_generator.py": "bd6b9a5845af9371ceaf662bf0a2fa9ce69cb1d6baaf1dd6c3c667b4c70f833f",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+  },
+  "calibration": {
+    "independent_plane_synthetic_generation": true,
+    "missing_plane_not_zero_filled": true
+  },
+  "plane_configurations": 192,
+  "planes": {
+    "high": {
+      "exact_training_fits": [],
+      "strong_training_fits": [],
+      "first_strong_training_fit": null,
+      "heldout_zero_baseline_correct_bits": 73
+    },
+    "low": {
+      "exact_training_fits": [],
+      "strong_training_fits": [],
+      "first_strong_training_fit": null,
+      "heldout_zero_baseline_correct_bits": 83
+    }
+  },
+  "strong_composite_configurations": 0,
+  "primary_training_selected_composite": null,
+  "full_heldout_successes": [],
+  "composite_results": [],
+  "all_plane_trials": [
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        -16,
+        8,
+        -12,
+        10
+      ],
+      "training_pair_overlaps": [
+        16,
+        24
+      ],
+      "training_conflicts": 19,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        1,
+        1,
+        -14,
+        10,
+        -9,
+        13
+      ],
+      "training_pair_overlaps": [
+        17,
+        23
+      ],
+      "training_conflicts": 19,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        2,
+        2,
+        -12,
+        12,
+        -6,
+        16
+      ],
+      "training_pair_overlaps": [
+        18,
+        22
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        3,
+        3,
+        -10,
+        14,
+        -3,
+        19
+      ],
+      "training_pair_overlaps": [
+        19,
+        21
+      ],
+      "training_conflicts": 26,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        4,
+        4,
+        -8,
+        16,
+        0,
+        22
+      ],
+      "training_pair_overlaps": [
+        20,
+        20
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        5,
+        5,
+        -6,
+        18,
+        3,
+        25
+      ],
+      "training_pair_overlaps": [
+        21,
+        19
+      ],
+      "training_conflicts": 16,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        6,
+        6,
+        -4,
+        20,
+        6,
+        28
+      ],
+      "training_pair_overlaps": [
+        22,
+        18
+      ],
+      "training_conflicts": 11,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        7,
+        7,
+        -2,
+        22,
+        9,
+        31
+      ],
+      "training_pair_overlaps": [
+        23,
+        17
+      ],
+      "training_conflicts": 25,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        8,
+        8,
+        0,
+        -8,
+        12,
+        2
+      ],
+      "training_pair_overlaps": [
+        24,
+        16
+      ],
+      "training_conflicts": 21,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        9,
+        9,
+        2,
+        -6,
+        15,
+        5
+      ],
+      "training_pair_overlaps": [
+        25,
+        17
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        10,
+        10,
+        4,
+        -4,
+        18,
+        8
+      ],
+      "training_pair_overlaps": [
+        26,
+        18
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        11,
+        11,
+        6,
+        -2,
+        21,
+        11
+      ],
+      "training_pair_overlaps": [
+        27,
+        19
+      ],
+      "training_conflicts": 25,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        12,
+        12,
+        8,
+        0,
+        -8,
+        14
+      ],
+      "training_pair_overlaps": [
+        28,
+        20
+      ],
+      "training_conflicts": 27,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        13,
+        13,
+        10,
+        2,
+        -5,
+        17
+      ],
+      "training_pair_overlaps": [
+        29,
+        21
+      ],
+      "training_conflicts": 25,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        14,
+        14,
+        12,
+        4,
+        -2,
+        -12
+      ],
+      "training_pair_overlaps": [
+        30,
+        22
+      ],
+      "training_conflicts": 17,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        15,
+        15,
+        14,
+        6,
+        1,
+        -9
+      ],
+      "training_pair_overlaps": [
+        31,
+        23
+      ],
+      "training_conflicts": 29,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        -16,
+        -16,
+        -16,
+        -24,
+        -28,
+        -38
+      ],
+      "training_pair_overlaps": [
+        32,
+        24
+      ],
+      "training_conflicts": 30,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        -15,
+        -15,
+        -14,
+        -22,
+        -25,
+        -35
+      ],
+      "training_pair_overlaps": [
+        31,
+        25
+      ],
+      "training_conflicts": 27,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        -14,
+        -14,
+        -12,
+        -20,
+        -22,
+        -32
+      ],
+      "training_pair_overlaps": [
+        30,
+        26
+      ],
+      "training_conflicts": 17,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        -13,
+        -13,
+        -10,
+        -18,
+        -19,
+        -29
+      ],
+      "training_pair_overlaps": [
+        29,
+        27
+      ],
+      "training_conflicts": 31,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        -12,
+        -12,
+        -8,
+        -16,
+        -16,
+        -26
+      ],
+      "training_pair_overlaps": [
+        28,
+        28
+      ],
+      "training_conflicts": 31,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        -11,
+        -11,
+        -6,
+        -14,
+        -13,
+        -23
+      ],
+      "training_pair_overlaps": [
+        27,
+        29
+      ],
+      "training_conflicts": 26,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        -10,
+        -10,
+        -4,
+        -12,
+        -10,
+        -20
+      ],
+      "training_pair_overlaps": [
+        26,
+        30
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        -9,
+        -9,
+        -2,
+        -10,
+        -7,
+        -17
+      ],
+      "training_pair_overlaps": [
+        25,
+        31
+      ],
+      "training_conflicts": 29,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        -8,
+        -8,
+        0,
+        -8,
+        -4,
+        -14
+      ],
+      "training_pair_overlaps": [
+        24,
+        32
+      ],
+      "training_conflicts": 25,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        -7,
+        -7,
+        2,
+        -6,
+        -1,
+        -11
+      ],
+      "training_pair_overlaps": [
+        23,
+        31
+      ],
+      "training_conflicts": 27,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        -6,
+        -6,
+        4,
+        -4,
+        2,
+        -8
+      ],
+      "training_pair_overlaps": [
+        22,
+        30
+      ],
+      "training_conflicts": 24,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        -5,
+        -5,
+        6,
+        -2,
+        5,
+        -5
+      ],
+      "training_pair_overlaps": [
+        21,
+        29
+      ],
+      "training_conflicts": 26,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        -4,
+        -4,
+        8,
+        0,
+        8,
+        -2
+      ],
+      "training_pair_overlaps": [
+        20,
+        28
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        -3,
+        -3,
+        10,
+        2,
+        11,
+        1
+      ],
+      "training_pair_overlaps": [
+        19,
+        27
+      ],
+      "training_conflicts": 20,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        -2,
+        -2,
+        12,
+        4,
+        14,
+        4
+      ],
+      "training_pair_overlaps": [
+        18,
+        26
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "principal_signed",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        -1,
+        -1,
+        14,
+        6,
+        17,
+        7
+      ],
+      "training_pair_overlaps": [
+        17,
+        25
+      ],
+      "training_conflicts": 24,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        16,
+        8,
+        20,
+        10
+      ],
+      "training_pair_overlaps": [
+        16,
+        24
+      ],
+      "training_conflicts": 18,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        1,
+        1,
+        18,
+        10,
+        23,
+        13
+      ],
+      "training_pair_overlaps": [
+        15,
+        23
+      ],
+      "training_conflicts": 16,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        2,
+        2,
+        20,
+        12,
+        26,
+        16
+      ],
+      "training_pair_overlaps": [
+        14,
+        22
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        3,
+        3,
+        22,
+        14,
+        29,
+        19
+      ],
+      "training_pair_overlaps": [
+        13,
+        21
+      ],
+      "training_conflicts": 23,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        4,
+        4,
+        24,
+        16,
+        32,
+        22
+      ],
+      "training_pair_overlaps": [
+        12,
+        20
+      ],
+      "training_conflicts": 19,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        5,
+        5,
+        26,
+        18,
+        35,
+        25
+      ],
+      "training_pair_overlaps": [
+        11,
+        19
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        6,
+        6,
+        28,
+        20,
+        38,
+        28
+      ],
+      "training_pair_overlaps": [
+        10,
+        18
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        7,
+        7,
+        30,
+        22,
+        41,
+        31
+      ],
+      "training_pair_overlaps": [
+        9,
+        17
+      ],
+      "training_conflicts": 16,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        8,
+        8,
+        32,
+        24,
+        44,
+        34
+      ],
+      "training_pair_overlaps": [
+        8,
+        16
+      ],
+      "training_conflicts": 15,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        9,
+        9,
+        34,
+        26,
+        47,
+        37
+      ],
+      "training_pair_overlaps": [
+        7,
+        15
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        10,
+        10,
+        36,
+        28,
+        50,
+        40
+      ],
+      "training_pair_overlaps": [
+        6,
+        14
+      ],
+      "training_conflicts": 4,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        11,
+        11,
+        38,
+        30,
+        53,
+        43
+      ],
+      "training_pair_overlaps": [
+        5,
+        13
+      ],
+      "training_conflicts": 11,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        12,
+        12,
+        40,
+        32,
+        56,
+        46
+      ],
+      "training_pair_overlaps": [
+        4,
+        12
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        13,
+        13,
+        42,
+        34,
+        59,
+        49
+      ],
+      "training_pair_overlaps": [
+        3,
+        11
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        14,
+        14,
+        44,
+        36,
+        62,
+        52
+      ],
+      "training_pair_overlaps": [
+        2,
+        10
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        15,
+        15,
+        46,
+        38,
+        65,
+        55
+      ],
+      "training_pair_overlaps": [
+        1,
+        9
+      ],
+      "training_conflicts": 3,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        16,
+        16,
+        16,
+        40,
+        36,
+        58
+      ],
+      "training_pair_overlaps": [
+        32,
+        8
+      ],
+      "training_conflicts": 19,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        17,
+        17,
+        18,
+        42,
+        39,
+        61
+      ],
+      "training_pair_overlaps": [
+        31,
+        7
+      ],
+      "training_conflicts": 18,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        18,
+        18,
+        20,
+        44,
+        42,
+        64
+      ],
+      "training_pair_overlaps": [
+        30,
+        6
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        19,
+        19,
+        22,
+        46,
+        45,
+        67
+      ],
+      "training_pair_overlaps": [
+        29,
+        5
+      ],
+      "training_conflicts": 20,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        20,
+        20,
+        24,
+        48,
+        48,
+        70
+      ],
+      "training_pair_overlaps": [
+        28,
+        4
+      ],
+      "training_conflicts": 18,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        21,
+        21,
+        26,
+        50,
+        51,
+        73
+      ],
+      "training_pair_overlaps": [
+        27,
+        3
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        22,
+        22,
+        28,
+        52,
+        54,
+        76
+      ],
+      "training_pair_overlaps": [
+        26,
+        2
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        23,
+        23,
+        30,
+        54,
+        57,
+        79
+      ],
+      "training_pair_overlaps": [
+        25,
+        1
+      ],
+      "training_conflicts": 18,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        24,
+        24,
+        32,
+        24,
+        60,
+        50
+      ],
+      "training_pair_overlaps": [
+        24,
+        32
+      ],
+      "training_conflicts": 25,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        25,
+        25,
+        34,
+        26,
+        63,
+        53
+      ],
+      "training_pair_overlaps": [
+        23,
+        31
+      ],
+      "training_conflicts": 27,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        26,
+        26,
+        36,
+        28,
+        66,
+        56
+      ],
+      "training_pair_overlaps": [
+        22,
+        30
+      ],
+      "training_conflicts": 24,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        27,
+        27,
+        38,
+        30,
+        69,
+        59
+      ],
+      "training_pair_overlaps": [
+        21,
+        29
+      ],
+      "training_conflicts": 26,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        28,
+        28,
+        40,
+        32,
+        40,
+        62
+      ],
+      "training_pair_overlaps": [
+        20,
+        28
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        29,
+        29,
+        42,
+        34,
+        43,
+        65
+      ],
+      "training_pair_overlaps": [
+        19,
+        27
+      ],
+      "training_conflicts": 20,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        30,
+        30,
+        44,
+        36,
+        46,
+        36
+      ],
+      "training_pair_overlaps": [
+        18,
+        26
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonnegative",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        31,
+        31,
+        46,
+        38,
+        49,
+        39
+      ],
+      "training_pair_overlaps": [
+        17,
+        25
+      ],
+      "training_conflicts": 24,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        -16,
+        -24,
+        -44,
+        -54
+      ],
+      "training_pair_overlaps": [
+        16,
+        8
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        -31,
+        -31,
+        -46,
+        -54,
+        -73,
+        -83
+      ],
+      "training_pair_overlaps": [
+        17,
+        9
+      ],
+      "training_conflicts": 16,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        -30,
+        -30,
+        -44,
+        -52,
+        -70,
+        -80
+      ],
+      "training_pair_overlaps": [
+        18,
+        10
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        -29,
+        -29,
+        -42,
+        -50,
+        -67,
+        -77
+      ],
+      "training_pair_overlaps": [
+        19,
+        11
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        -28,
+        -28,
+        -40,
+        -48,
+        -64,
+        -74
+      ],
+      "training_pair_overlaps": [
+        20,
+        12
+      ],
+      "training_conflicts": 15,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        -27,
+        -27,
+        -38,
+        -46,
+        -61,
+        -71
+      ],
+      "training_pair_overlaps": [
+        21,
+        13
+      ],
+      "training_conflicts": 17,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        -26,
+        -26,
+        -36,
+        -44,
+        -58,
+        -68
+      ],
+      "training_pair_overlaps": [
+        22,
+        14
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        -25,
+        -25,
+        -34,
+        -42,
+        -55,
+        -65
+      ],
+      "training_pair_overlaps": [
+        23,
+        15
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        -24,
+        -24,
+        -32,
+        -40,
+        -52,
+        -62
+      ],
+      "training_pair_overlaps": [
+        24,
+        16
+      ],
+      "training_conflicts": 21,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        -23,
+        -23,
+        -30,
+        -38,
+        -49,
+        -59
+      ],
+      "training_pair_overlaps": [
+        25,
+        17
+      ],
+      "training_conflicts": 22,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        -22,
+        -22,
+        -28,
+        -36,
+        -46,
+        -56
+      ],
+      "training_pair_overlaps": [
+        26,
+        18
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        -21,
+        -21,
+        -26,
+        -34,
+        -43,
+        -53
+      ],
+      "training_pair_overlaps": [
+        27,
+        19
+      ],
+      "training_conflicts": 25,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        -20,
+        -20,
+        -24,
+        -32,
+        -40,
+        -50
+      ],
+      "training_pair_overlaps": [
+        28,
+        20
+      ],
+      "training_conflicts": 27,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        -19,
+        -19,
+        -22,
+        -30,
+        -37,
+        -47
+      ],
+      "training_pair_overlaps": [
+        29,
+        21
+      ],
+      "training_conflicts": 25,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        -18,
+        -18,
+        -20,
+        -28,
+        -34,
+        -44
+      ],
+      "training_pair_overlaps": [
+        30,
+        22
+      ],
+      "training_conflicts": 17,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        -17,
+        -17,
+        -18,
+        -26,
+        -31,
+        -41
+      ],
+      "training_pair_overlaps": [
+        31,
+        23
+      ],
+      "training_conflicts": 29,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        -16,
+        -16,
+        -16,
+        -24,
+        -28,
+        -38
+      ],
+      "training_pair_overlaps": [
+        32,
+        24
+      ],
+      "training_conflicts": 30,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        -15,
+        -15,
+        -46,
+        -22,
+        -57,
+        -35
+      ],
+      "training_pair_overlaps": [
+        1,
+        25
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        -14,
+        -14,
+        -44,
+        -20,
+        -54,
+        -32
+      ],
+      "training_pair_overlaps": [
+        2,
+        26
+      ],
+      "training_conflicts": 6,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        -13,
+        -13,
+        -42,
+        -18,
+        -51,
+        -29
+      ],
+      "training_pair_overlaps": [
+        3,
+        27
+      ],
+      "training_conflicts": 16,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        -12,
+        -12,
+        -40,
+        -16,
+        -48,
+        -26
+      ],
+      "training_pair_overlaps": [
+        4,
+        28
+      ],
+      "training_conflicts": 18,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        -11,
+        -11,
+        -38,
+        -14,
+        -45,
+        -23
+      ],
+      "training_pair_overlaps": [
+        5,
+        29
+      ],
+      "training_conflicts": 21,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        -10,
+        -10,
+        -36,
+        -12,
+        -42,
+        -20
+      ],
+      "training_pair_overlaps": [
+        6,
+        30
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        -9,
+        -9,
+        -34,
+        -10,
+        -39,
+        -17
+      ],
+      "training_pair_overlaps": [
+        7,
+        31
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        -8,
+        -8,
+        -32,
+        -8,
+        -36,
+        -14
+      ],
+      "training_pair_overlaps": [
+        8,
+        32
+      ],
+      "training_conflicts": 20,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        -7,
+        -7,
+        -30,
+        -38,
+        -33,
+        -43
+      ],
+      "training_pair_overlaps": [
+        9,
+        1
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        -6,
+        -6,
+        -28,
+        -36,
+        -30,
+        -40
+      ],
+      "training_pair_overlaps": [
+        10,
+        2
+      ],
+      "training_conflicts": 2,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        -5,
+        -5,
+        -26,
+        -34,
+        -27,
+        -37
+      ],
+      "training_pair_overlaps": [
+        11,
+        3
+      ],
+      "training_conflicts": 6,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        -4,
+        -4,
+        -24,
+        -32,
+        -24,
+        -34
+      ],
+      "training_pair_overlaps": [
+        12,
+        4
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        -3,
+        -3,
+        -22,
+        -30,
+        -53,
+        -31
+      ],
+      "training_pair_overlaps": [
+        13,
+        5
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        -2,
+        -2,
+        -20,
+        -28,
+        -50,
+        -28
+      ],
+      "training_pair_overlaps": [
+        14,
+        6
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "high",
+      "policy": "nonpositive",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        -1,
+        -1,
+        -18,
+        -26,
+        -47,
+        -57
+      ],
+      "training_pair_overlaps": [
+        15,
+        7
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        -16,
+        8,
+        -12,
+        10
+      ],
+      "training_pair_overlaps": [
+        16,
+        24
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        1,
+        1,
+        -14,
+        10,
+        -9,
+        13
+      ],
+      "training_pair_overlaps": [
+        17,
+        23
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        2,
+        2,
+        -12,
+        12,
+        -6,
+        16
+      ],
+      "training_pair_overlaps": [
+        18,
+        22
+      ],
+      "training_conflicts": 6,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        3,
+        3,
+        -10,
+        14,
+        -3,
+        19
+      ],
+      "training_pair_overlaps": [
+        19,
+        21
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        4,
+        4,
+        -8,
+        16,
+        0,
+        22
+      ],
+      "training_pair_overlaps": [
+        20,
+        20
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        5,
+        5,
+        -6,
+        18,
+        3,
+        25
+      ],
+      "training_pair_overlaps": [
+        21,
+        19
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        6,
+        6,
+        -4,
+        20,
+        6,
+        28
+      ],
+      "training_pair_overlaps": [
+        22,
+        18
+      ],
+      "training_conflicts": 5,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        7,
+        7,
+        -2,
+        22,
+        9,
+        31
+      ],
+      "training_pair_overlaps": [
+        23,
+        17
+      ],
+      "training_conflicts": 11,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        8,
+        8,
+        0,
+        -8,
+        12,
+        2
+      ],
+      "training_pair_overlaps": [
+        24,
+        16
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        9,
+        9,
+        2,
+        -6,
+        15,
+        5
+      ],
+      "training_pair_overlaps": [
+        25,
+        17
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        10,
+        10,
+        4,
+        -4,
+        18,
+        8
+      ],
+      "training_pair_overlaps": [
+        26,
+        18
+      ],
+      "training_conflicts": 3,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        11,
+        11,
+        6,
+        -2,
+        21,
+        11
+      ],
+      "training_pair_overlaps": [
+        27,
+        19
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        12,
+        12,
+        8,
+        0,
+        -8,
+        14
+      ],
+      "training_pair_overlaps": [
+        28,
+        20
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        13,
+        13,
+        10,
+        2,
+        -5,
+        17
+      ],
+      "training_pair_overlaps": [
+        29,
+        21
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        14,
+        14,
+        12,
+        4,
+        -2,
+        -12
+      ],
+      "training_pair_overlaps": [
+        30,
+        22
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        15,
+        15,
+        14,
+        6,
+        1,
+        -9
+      ],
+      "training_pair_overlaps": [
+        31,
+        23
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        -16,
+        -16,
+        -16,
+        -24,
+        -28,
+        -38
+      ],
+      "training_pair_overlaps": [
+        32,
+        24
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        -15,
+        -15,
+        -14,
+        -22,
+        -25,
+        -35
+      ],
+      "training_pair_overlaps": [
+        31,
+        25
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        -14,
+        -14,
+        -12,
+        -20,
+        -22,
+        -32
+      ],
+      "training_pair_overlaps": [
+        30,
+        26
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        -13,
+        -13,
+        -10,
+        -18,
+        -19,
+        -29
+      ],
+      "training_pair_overlaps": [
+        29,
+        27
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        -12,
+        -12,
+        -8,
+        -16,
+        -16,
+        -26
+      ],
+      "training_pair_overlaps": [
+        28,
+        28
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        -11,
+        -11,
+        -6,
+        -14,
+        -13,
+        -23
+      ],
+      "training_pair_overlaps": [
+        27,
+        29
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        -10,
+        -10,
+        -4,
+        -12,
+        -10,
+        -20
+      ],
+      "training_pair_overlaps": [
+        26,
+        30
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        -9,
+        -9,
+        -2,
+        -10,
+        -7,
+        -17
+      ],
+      "training_pair_overlaps": [
+        25,
+        31
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        -8,
+        -8,
+        0,
+        -8,
+        -4,
+        -14
+      ],
+      "training_pair_overlaps": [
+        24,
+        32
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        -7,
+        -7,
+        2,
+        -6,
+        -1,
+        -11
+      ],
+      "training_pair_overlaps": [
+        23,
+        31
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        -6,
+        -6,
+        4,
+        -4,
+        2,
+        -8
+      ],
+      "training_pair_overlaps": [
+        22,
+        30
+      ],
+      "training_conflicts": 5,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        -5,
+        -5,
+        6,
+        -2,
+        5,
+        -5
+      ],
+      "training_pair_overlaps": [
+        21,
+        29
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        -4,
+        -4,
+        8,
+        0,
+        8,
+        -2
+      ],
+      "training_pair_overlaps": [
+        20,
+        28
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        -3,
+        -3,
+        10,
+        2,
+        11,
+        1
+      ],
+      "training_pair_overlaps": [
+        19,
+        27
+      ],
+      "training_conflicts": 11,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        -2,
+        -2,
+        12,
+        4,
+        14,
+        4
+      ],
+      "training_pair_overlaps": [
+        18,
+        26
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "principal_signed",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        -1,
+        -1,
+        14,
+        6,
+        17,
+        7
+      ],
+      "training_pair_overlaps": [
+        17,
+        25
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        16,
+        8,
+        20,
+        10
+      ],
+      "training_pair_overlaps": [
+        16,
+        24
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        1,
+        1,
+        18,
+        10,
+        23,
+        13
+      ],
+      "training_pair_overlaps": [
+        15,
+        23
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        2,
+        2,
+        20,
+        12,
+        26,
+        16
+      ],
+      "training_pair_overlaps": [
+        14,
+        22
+      ],
+      "training_conflicts": 6,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        3,
+        3,
+        22,
+        14,
+        29,
+        19
+      ],
+      "training_pair_overlaps": [
+        13,
+        21
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        4,
+        4,
+        24,
+        16,
+        32,
+        22
+      ],
+      "training_pair_overlaps": [
+        12,
+        20
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        5,
+        5,
+        26,
+        18,
+        35,
+        25
+      ],
+      "training_pair_overlaps": [
+        11,
+        19
+      ],
+      "training_conflicts": 6,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        6,
+        6,
+        28,
+        20,
+        38,
+        28
+      ],
+      "training_pair_overlaps": [
+        10,
+        18
+      ],
+      "training_conflicts": 3,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        7,
+        7,
+        30,
+        22,
+        41,
+        31
+      ],
+      "training_pair_overlaps": [
+        9,
+        17
+      ],
+      "training_conflicts": 5,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        8,
+        8,
+        32,
+        24,
+        44,
+        34
+      ],
+      "training_pair_overlaps": [
+        8,
+        16
+      ],
+      "training_conflicts": 4,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        9,
+        9,
+        34,
+        26,
+        47,
+        37
+      ],
+      "training_pair_overlaps": [
+        7,
+        15
+      ],
+      "training_conflicts": 4,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        10,
+        10,
+        36,
+        28,
+        50,
+        40
+      ],
+      "training_pair_overlaps": [
+        6,
+        14
+      ],
+      "training_conflicts": 3,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        11,
+        11,
+        38,
+        30,
+        53,
+        43
+      ],
+      "training_pair_overlaps": [
+        5,
+        13
+      ],
+      "training_conflicts": 2,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        12,
+        12,
+        40,
+        32,
+        56,
+        46
+      ],
+      "training_pair_overlaps": [
+        4,
+        12
+      ],
+      "training_conflicts": 2,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        13,
+        13,
+        42,
+        34,
+        59,
+        49
+      ],
+      "training_pair_overlaps": [
+        3,
+        11
+      ],
+      "training_conflicts": 2,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        14,
+        14,
+        44,
+        36,
+        62,
+        52
+      ],
+      "training_pair_overlaps": [
+        2,
+        10
+      ],
+      "training_conflicts": 2,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        15,
+        15,
+        46,
+        38,
+        65,
+        55
+      ],
+      "training_pair_overlaps": [
+        1,
+        9
+      ],
+      "training_conflicts": 2,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        16,
+        16,
+        16,
+        40,
+        36,
+        58
+      ],
+      "training_pair_overlaps": [
+        32,
+        8
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        17,
+        17,
+        18,
+        42,
+        39,
+        61
+      ],
+      "training_pair_overlaps": [
+        31,
+        7
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        18,
+        18,
+        20,
+        44,
+        42,
+        64
+      ],
+      "training_pair_overlaps": [
+        30,
+        6
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        19,
+        19,
+        22,
+        46,
+        45,
+        67
+      ],
+      "training_pair_overlaps": [
+        29,
+        5
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        20,
+        20,
+        24,
+        48,
+        48,
+        70
+      ],
+      "training_pair_overlaps": [
+        28,
+        4
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        21,
+        21,
+        26,
+        50,
+        51,
+        73
+      ],
+      "training_pair_overlaps": [
+        27,
+        3
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        22,
+        22,
+        28,
+        52,
+        54,
+        76
+      ],
+      "training_pair_overlaps": [
+        26,
+        2
+      ],
+      "training_conflicts": 2,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        23,
+        23,
+        30,
+        54,
+        57,
+        79
+      ],
+      "training_pair_overlaps": [
+        25,
+        1
+      ],
+      "training_conflicts": 5,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        24,
+        24,
+        32,
+        24,
+        60,
+        50
+      ],
+      "training_pair_overlaps": [
+        24,
+        32
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        25,
+        25,
+        34,
+        26,
+        63,
+        53
+      ],
+      "training_pair_overlaps": [
+        23,
+        31
+      ],
+      "training_conflicts": 13,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        26,
+        26,
+        36,
+        28,
+        66,
+        56
+      ],
+      "training_pair_overlaps": [
+        22,
+        30
+      ],
+      "training_conflicts": 5,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        27,
+        27,
+        38,
+        30,
+        69,
+        59
+      ],
+      "training_pair_overlaps": [
+        21,
+        29
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        28,
+        28,
+        40,
+        32,
+        40,
+        62
+      ],
+      "training_pair_overlaps": [
+        20,
+        28
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        29,
+        29,
+        42,
+        34,
+        43,
+        65
+      ],
+      "training_pair_overlaps": [
+        19,
+        27
+      ],
+      "training_conflicts": 11,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        30,
+        30,
+        44,
+        36,
+        46,
+        36
+      ],
+      "training_pair_overlaps": [
+        18,
+        26
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonnegative",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        31,
+        31,
+        46,
+        38,
+        49,
+        39
+      ],
+      "training_pair_overlaps": [
+        17,
+        25
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        -16,
+        -24,
+        -44,
+        -54
+      ],
+      "training_pair_overlaps": [
+        16,
+        8
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        -31,
+        -31,
+        -46,
+        -54,
+        -73,
+        -83
+      ],
+      "training_pair_overlaps": [
+        17,
+        9
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        -30,
+        -30,
+        -44,
+        -52,
+        -70,
+        -80
+      ],
+      "training_pair_overlaps": [
+        18,
+        10
+      ],
+      "training_conflicts": 4,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        -29,
+        -29,
+        -42,
+        -50,
+        -67,
+        -77
+      ],
+      "training_pair_overlaps": [
+        19,
+        11
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        -28,
+        -28,
+        -40,
+        -48,
+        -64,
+        -74
+      ],
+      "training_pair_overlaps": [
+        20,
+        12
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        -27,
+        -27,
+        -38,
+        -46,
+        -61,
+        -71
+      ],
+      "training_pair_overlaps": [
+        21,
+        13
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        -26,
+        -26,
+        -36,
+        -44,
+        -58,
+        -68
+      ],
+      "training_pair_overlaps": [
+        22,
+        14
+      ],
+      "training_conflicts": 5,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        -25,
+        -25,
+        -34,
+        -42,
+        -55,
+        -65
+      ],
+      "training_pair_overlaps": [
+        23,
+        15
+      ],
+      "training_conflicts": 11,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        -24,
+        -24,
+        -32,
+        -40,
+        -52,
+        -62
+      ],
+      "training_pair_overlaps": [
+        24,
+        16
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        -23,
+        -23,
+        -30,
+        -38,
+        -49,
+        -59
+      ],
+      "training_pair_overlaps": [
+        25,
+        17
+      ],
+      "training_conflicts": 12,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        -22,
+        -22,
+        -28,
+        -36,
+        -46,
+        -56
+      ],
+      "training_pair_overlaps": [
+        26,
+        18
+      ],
+      "training_conflicts": 3,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        -21,
+        -21,
+        -26,
+        -34,
+        -43,
+        -53
+      ],
+      "training_pair_overlaps": [
+        27,
+        19
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        -20,
+        -20,
+        -24,
+        -32,
+        -40,
+        -50
+      ],
+      "training_pair_overlaps": [
+        28,
+        20
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        -19,
+        -19,
+        -22,
+        -30,
+        -37,
+        -47
+      ],
+      "training_pair_overlaps": [
+        29,
+        21
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        -18,
+        -18,
+        -20,
+        -28,
+        -34,
+        -44
+      ],
+      "training_pair_overlaps": [
+        30,
+        22
+      ],
+      "training_conflicts": 10,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        -17,
+        -17,
+        -18,
+        -26,
+        -31,
+        -41
+      ],
+      "training_pair_overlaps": [
+        31,
+        23
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        -16,
+        -16,
+        -16,
+        -24,
+        -28,
+        -38
+      ],
+      "training_pair_overlaps": [
+        32,
+        24
+      ],
+      "training_conflicts": 14,
+      "strong_overlap": true,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        -15,
+        -15,
+        -46,
+        -22,
+        -57,
+        -35
+      ],
+      "training_pair_overlaps": [
+        1,
+        25
+      ],
+      "training_conflicts": 7,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        -14,
+        -14,
+        -44,
+        -20,
+        -54,
+        -32
+      ],
+      "training_pair_overlaps": [
+        2,
+        26
+      ],
+      "training_conflicts": 3,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        -13,
+        -13,
+        -42,
+        -18,
+        -51,
+        -29
+      ],
+      "training_pair_overlaps": [
+        3,
+        27
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        -12,
+        -12,
+        -40,
+        -16,
+        -48,
+        -26
+      ],
+      "training_pair_overlaps": [
+        4,
+        28
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        -11,
+        -11,
+        -38,
+        -14,
+        -45,
+        -23
+      ],
+      "training_pair_overlaps": [
+        5,
+        29
+      ],
+      "training_conflicts": 9,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        -10,
+        -10,
+        -36,
+        -12,
+        -42,
+        -20
+      ],
+      "training_pair_overlaps": [
+        6,
+        30
+      ],
+      "training_conflicts": 8,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        -9,
+        -9,
+        -34,
+        -10,
+        -39,
+        -17
+      ],
+      "training_pair_overlaps": [
+        7,
+        31
+      ],
+      "training_conflicts": 11,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        -8,
+        -8,
+        -32,
+        -8,
+        -36,
+        -14
+      ],
+      "training_pair_overlaps": [
+        8,
+        32
+      ],
+      "training_conflicts": 11,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        -7,
+        -7,
+        -30,
+        -38,
+        -33,
+        -43
+      ],
+      "training_pair_overlaps": [
+        9,
+        1
+      ],
+      "training_conflicts": 3,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        -6,
+        -6,
+        -28,
+        -36,
+        -30,
+        -40
+      ],
+      "training_pair_overlaps": [
+        10,
+        2
+      ],
+      "training_conflicts": 1,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        -5,
+        -5,
+        -26,
+        -34,
+        -27,
+        -37
+      ],
+      "training_pair_overlaps": [
+        11,
+        3
+      ],
+      "training_conflicts": 4,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        -4,
+        -4,
+        -24,
+        -32,
+        -24,
+        -34
+      ],
+      "training_pair_overlaps": [
+        12,
+        4
+      ],
+      "training_conflicts": 4,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        -3,
+        -3,
+        -22,
+        -30,
+        -53,
+        -31
+      ],
+      "training_pair_overlaps": [
+        13,
+        5
+      ],
+      "training_conflicts": 5,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        -2,
+        -2,
+        -20,
+        -28,
+        -50,
+        -28
+      ],
+      "training_pair_overlaps": [
+        14,
+        6
+      ],
+      "training_conflicts": 5,
+      "strong_overlap": false,
+      "training_exact": false
+    },
+    {
+      "plane": "low",
+      "policy": "nonpositive",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        -1,
+        -1,
+        -18,
+        -26,
+        -47,
+        -57
+      ],
+      "training_pair_overlaps": [
+        15,
+        7
+      ],
+      "training_conflicts": 6,
+      "strong_overlap": false,
+      "training_exact": false
+    }
+  ],
+  "no_private_key_search": true,
+  "limitations": [
+    "Same known image, exploratory family",
+    "Partial lower-plane fit is not a full waveform decoder",
+    "Large zero baseline requires separate nonzero reporting",
+    "Arbitrary memorized binary templates are not key-derived encoders",
+    "No private-key search"
+  ]
+}

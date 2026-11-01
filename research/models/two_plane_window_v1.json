@@ -1,0 +1,14 @@
+{
+  "model":"C38",
+  "question":"Can four binary parity streams, with independent high/low-plane window coordinates, jointly generate the measuredq=2H+L?",
+  "generator":"H[b,k]=U[b mod2][start_H[b]+k]; L[b,k]=V[b mod2][start_L[b]+k]; q=2H+L; physical height=q*128/2**b",
+  "coordinates":"Each plane separately uses the96 C37 phase/displacement configurations; independent offsets but one global rule per plane",
+  "training_blocks_1based":[3,4,5,6],
+  "heldout_blocks_1based":[1,2,7,8],
+  "strong_requirement":"Each training parity-pair overlap>=16 on both planes; no use of heldout bits for selecting configurations",
+  "selection":"First strong exact training fit of each plane gives primary pair; if either plane has none there is no primary composite generator",
+  "forecast":"A q-value is known only when both plane values are known; no missing-plane zero fill",
+  "scope":"No per-cell correction, arbitrary state relabeling or source replacement; independent plane coordinate rules are additional parameters, explicitly counted",
+  "calibration":"Synthetic independent binary streams with different window coordinates must jointly reconstruct known q values; missing bitplane must remain unknown",
+  "limitations":["Same known image, exploratory family","Partial lower-plane fit is not a full waveform decoder","Large zero baseline requires separate nonzero reporting","Arbitrary memorized binary templates are not key-derived encoders","No private-key search"]
+}

@@ -1,10 +1,14 @@
 {
-  "purpose": "Inputs and completeness of the continuously refreshed full research MD",
+  "purpose": "Append-only full research MD; old snapshot plus new end chapters",
+  "mode": "append_only",
   "master_path": "research/HALV_TELJES_KUTATAS.md",
-  "master_sha256": "c08809df3d1725dde612e150008d00ca8caf76fa89fcb9523a2650ff9d6fadb2",
-  "journal_round_headings": 19,
-  "full_journal_embedded": true,
-  "full_hypothesis_map_embedded": true,
+  "master_sha256": "9e380a379296545cc18ababfe87625a34af48e27e85a562204b72adff0816936",
+  "frozen_prefix_bytes": 298373,
+  "frozen_prefix_sha256": "c08809df3d1725dde612e150008d00ca8caf76fa89fcb9523a2650ff9d6fadb2",
+  "base_snapshot_journal_rounds": 19,
+  "journal_round_headings": 20,
+  "all_journal_rounds_present": true,
+  "full_journal_embedded_as_one_current_snapshot": false,
   "full_reports_embedded": [
     "research/REPORT_20261101_GENERATOR_PLAN.md",
     "research/REPORT_20261101_HALVING_AND_PHASE_ASCII.md",
@@ -39,38 +43,108 @@
     "research/models/stateful_bridge_v1.json",
     "research/models/timing_lattice_v1.json",
     "research/models/uniform_phase_layers_v1.json",
-    "research/models/upload_audit_v1.json"
+    "research/models/upload_audit_v1.json",
+    "research/models/sliding_window_generator_v1.json",
+    "research/models/two_plane_window_v1.json"
+  ],
+  "appended_chapters": [
+    {
+      "journal_round": 20,
+      "offset": 298373,
+      "bytes": 14590,
+      "sha256": "da326c5d7b75901386f236156a51dce45c504e171b5f8ddeeff9fc42815a664e",
+      "journal_section_sha256": "2ac526b066cf35f7f42ca7fb8f3c09e060cf0de62a1fb7477a45075b97c8929d",
+      "model_inputs": [
+        {
+          "path": "research/models/sliding_window_generator_v1.json",
+          "bytes": 1967,
+          "sha256": "9fb013cbaeb20a34af9c9ae2d003756d3ac8ea1552d2afb7884398e6b73dd954"
+        },
+        {
+          "path": "research/models/two_plane_window_v1.json",
+          "bytes": 1471,
+          "sha256": "f2924a1b8d6391c0b6a94bfa8f3e2cfa4e84117b5f5279a6c24b76a16b684f89"
+        }
+      ],
+      "artifact_inputs": [
+        {
+          "path": "research/data/sliding_window_generator_check.json",
+          "bytes": 113555,
+          "sha256": "77e152897120f77a80258011ea74010d49dbe99e7dcc6319b50c1a3672d9df93"
+        },
+        {
+          "path": "research/data/two_plane_window_check.json",
+          "bytes": 72607,
+          "sha256": "49adcb34428a9ad73a0e852671b1be1bccdc14e7d36e938338936e629ab3949e"
+        },
+        {
+          "path": "research/data/window_generators_integrity.json",
+          "bytes": 657,
+          "sha256": "401ab4b67eaec3e6881dcff77bbefa3bc24a011f434eb1ed7aa3fa811e538964"
+        },
+        {
+          "path": "tools/check_sliding_window_generator.py",
+          "bytes": 6634,
+          "sha256": "bd6b9a5845af9371ceaf662bf0a2fa9ce69cb1d6baaf1dd6c3c667b4c70f833f"
+        },
+        {
+          "path": "tools/check_two_plane_window.py",
+          "bytes": 5300,
+          "sha256": "5e6a6fcc293539720bbc0601aea7d051ce08c713c25666428a75c0cc46e2b1e5"
+        },
+        {
+          "path": "tools/audit_window_generators.py",
+          "bytes": 2556,
+          "sha256": "e127f3be7ec7e31129b3b339e77ce1afaa88be653a6fc70e9fe1776a87986258"
+        },
+        {
+          "path": "tools/append_master_chapter.py",
+          "bytes": 4008,
+          "sha256": "8572f99e61e4a69054aafcf0969bbd5c0460b47adfacb2415c5684014baa91be"
+        },
+        {
+          "path": "tools/build_master_document.py",
+          "bytes": 8471,
+          "sha256": "f85407d24b472b2b37671cdb4d1c669da5d6159d5a479fa81a7178fe4625fe77"
+        },
+        {
+          "path": "tools/build_research_index.py",
+          "bytes": 10599,
+          "sha256": "2453eff540cc33d2df6929bb2b3e7e6e40d378da029fb774f74d583bfab72765"
+        }
+      ]
+    }
   ],
   "inputs": [
     {
       "path": "AGENTS.md",
       "role": "dokumentum",
-      "bytes": 2218,
-      "sha256": "5e0e02697905e64e58f99291cf3f4b7feec384b55ffdc8e9c29daea70efe5058"
+      "bytes": 2530,
+      "sha256": "546be9da4ba8b8f52cca3b7990031b1586ff39449652b804e2c6aaec48c48b03"
     },
     {
       "path": "README.md",
       "role": "dokumentum",
-      "bytes": 18255,
-      "sha256": "5c5fc35199dedb57c2870231982c4c0ca74d4f11424a9df88631c6692204ce4a"
+      "bytes": 18392,
+      "sha256": "1dea650e4e2717385b1692be661c66f16da80188376f2912e906981585dea6ea"
     },
     {
       "path": "research/HYPOTHESES.md",
       "role": "dokumentum",
-      "bytes": 35804,
-      "sha256": "d4adbaa53823b133b333e99d76d9886ab81b0560b71ffebc77da254a03ea716e"
+      "bytes": 37341,
+      "sha256": "826e54afb81a15caecd72099b434043e8076eb3b20a7074c5f392387705554ac"
     },
     {
       "path": "research/LOG.md",
       "role": "dokumentum",
-      "bytes": 118644,
-      "sha256": "cc8371188f5880136cfec69949f5975a434c8cde11d9403dbc04952285f3b882"
+      "bytes": 127788,
+      "sha256": "926c1afe3a048e77b127c1438723e6e5095786b0f828a9ce93f413f1d40b4306"
     },
     {
       "path": "research/MASTER_OVERVIEW.md",
       "role": "dokumentum",
-      "bytes": 3638,
-      "sha256": "344f6d44bf21121b98bb06dfe78da80f8601ae936a6b15df24bca6c21b7dcad9"
+      "bytes": 3977,
+      "sha256": "4894e44a410c7f37248876268c2d25b5cd4fd9bfc74c0807cbe98ea3fce20d3e"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",
@@ -341,6 +415,12 @@
       "role": "eredmény/adat",
       "bytes": 917,
       "sha256": "305bf4febd4cb6615063c84884d97162275bd3e421f559a9b9f97e4c980b05d5"
+    },
+    {
+      "path": "research/data/master_append_state.json",
+      "role": "eredmény/adat",
+      "bytes": 62449,
+      "sha256": "8170152334628b5fe6d8d78df753f64b45eb2a845ae24c7009e8cdfd29b82a83"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -637,6 +717,12 @@
       "sha256": "4c8be47411a6a2ded8ef435c9e71c21970838872cc79d17ed56034b020e9f6cc"
     },
     {
+      "path": "research/data/sliding_window_generator_check.json",
+      "role": "eredmény/adat",
+      "bytes": 113555,
+      "sha256": "77e152897120f77a80258011ea74010d49dbe99e7dcc6319b50c1a3672d9df93"
+    },
+    {
       "path": "research/data/stateful_area_cancellations.png",
       "role": "eredmény/adat",
       "bytes": 103867,
@@ -685,6 +771,12 @@
       "sha256": "84eb5d82a246cc6e6aa77e3531b7eb1ec474673d44f6d34cb79088a86c9d9ceb"
     },
     {
+      "path": "research/data/two_plane_window_check.json",
+      "role": "eredmény/adat",
+      "bytes": 72607,
+      "sha256": "49adcb34428a9ad73a0e852671b1be1bccdc14e7d36e938338936e629ab3949e"
+    },
+    {
       "path": "research/data/uniform_affine_surrogates.npz",
       "role": "eredmény/adat",
       "bytes": 25544,
@@ -731,6 +823,12 @@
       "role": "eredmény/adat",
       "bytes": 8514,
       "sha256": "5fe91a22f3705ac3840441967771a93ac3f22843b33053fdd49638d29181c512"
+    },
+    {
+      "path": "research/data/window_generators_integrity.json",
+      "role": "eredmény/adat",
+      "bytes": 657,
+      "sha256": "401ab4b67eaec3e6881dcff77bbefa3bc24a011f434eb1ed7aa3fa811e538964"
     },
     {
       "path": "research/models/bd_halving_v1.json",
@@ -865,6 +963,12 @@
       "sha256": "6fad05ce8c3386fe4631196704471046dbecf2c63f0f622207ae506c7e2d0182"
     },
     {
+      "path": "research/models/sliding_window_generator_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1967,
+      "sha256": "9fb013cbaeb20a34af9c9ae2d003756d3ac8ea1552d2afb7884398e6b73dd954"
+    },
+    {
       "path": "research/models/stateful_bridge_v1.json",
       "role": "rögzített modell",
       "bytes": 3295,
@@ -875,6 +979,12 @@
       "role": "rögzített modell",
       "bytes": 1197,
       "sha256": "1bcad4fa3800999aef86f722cde185dbf157c5aaf5821afd066f8cfb0a71704b"
+    },
+    {
+      "path": "research/models/two_plane_window_v1.json",
+      "role": "rögzített modell",
+      "bytes": 1471,
+      "sha256": "f2924a1b8d6391c0b6a94bfa8f3e2cfa4e84117b5f5279a6c24b76a16b684f89"
     },
     {
       "path": "research/models/uniform_phase_layers_v1.json",
@@ -1261,6 +1371,12 @@
       "sha256": "d9f2bbd7792f4ba01986b9c565fcae41ab2f5b1b29304e5159434981381227ff"
     },
     {
+      "path": "tools/append_master_chapter.py",
+      "role": "program",
+      "bytes": 4008,
+      "sha256": "8572f99e61e4a69054aafcf0969bbd5c0460b47adfacb2415c5684014baa91be"
+    },
+    {
       "path": "tools/audit_halving_phase_ascii.py",
       "role": "program",
       "bytes": 2825,
@@ -1279,6 +1395,12 @@
       "sha256": "948c92ca4060a87eeb98a25545edfdc7780eb20a1a3f3a767033057c7f763920"
     },
     {
+      "path": "tools/audit_window_generators.py",
+      "role": "program",
+      "bytes": 2556,
+      "sha256": "e127f3be7ec7e31129b3b339e77ce1afaa88be653a6fc70e9fe1776a87986258"
+    },
+    {
       "path": "tools/bitcoin_oracle.py",
       "role": "program",
       "bytes": 2264,
@@ -1287,14 +1409,14 @@
     {
       "path": "tools/build_master_document.py",
       "role": "program",
-      "bytes": 6273,
-      "sha256": "77357c39c9a1ea1e13eb637629c139d6c9f1dd944488f653ee65ec1e4464418a"
+      "bytes": 8471,
+      "sha256": "f85407d24b472b2b37671cdb4d1c669da5d6159d5a479fa81a7178fe4625fe77"
     },
     {
       "path": "tools/build_research_index.py",
       "role": "program",
-      "bytes": 9467,
-      "sha256": "fb2ca664c6de1bebfb620cff744b6521d2be7b2253f8ec352b00679e82771a82"
+      "bytes": 10599,
+      "sha256": "2453eff540cc33d2df6929bb2b3e7e6e40d378da029fb774f74d583bfab72765"
     },
     {
       "path": "tools/capture_rs_reference.py",
@@ -1501,6 +1623,12 @@
       "sha256": "158eb792b7792c8574efe449dd933e2e66092ac58db978452074551ee811280a"
     },
     {
+      "path": "tools/check_sliding_window_generator.py",
+      "role": "program",
+      "bytes": 6634,
+      "sha256": "bd6b9a5845af9371ceaf662bf0a2fa9ce69cb1d6baaf1dd6c3c667b4c70f833f"
+    },
+    {
       "path": "tools/check_stateful_bridge.py",
       "role": "program",
       "bytes": 12174,
@@ -1511,6 +1639,12 @@
       "role": "program",
       "bytes": 8331,
       "sha256": "42994b08e2865b853d9b230cab27025587c054398bdb62e1abbc62b25e9479b4"
+    },
+    {
+      "path": "tools/check_two_plane_window.py",
+      "role": "program",
+      "bytes": 5300,
+      "sha256": "5e6a6fcc293539720bbc0601aea7d051ce08c713c25666428a75c0cc46e2b1e5"
     },
     {
       "path": "tools/check_uniform_phase_layers.py",
@@ -1645,5 +1779,6 @@
       "sha256": "e7a9785cfc0e9d559e992a1087779b8eb0588a8703f584d2b92c480c92fcb43f"
     }
   ],
-  "generator": "tools/build_master_document.py"
+  "generator": "tools/build_master_document.py",
+  "note": "Base source hashes are historical snapshots in master_append_state; inputs here describe current files."
 }

@@ -4501,3 +4501,266 @@ A generált fő MD, saját manifesztje és a RUN_INDEX nem bemeneti forrás, íg
 | [tools/residual_channels.py](../tools/residual_channels.py) | program | 1652 | `d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006` |
 | [tools/verify_historical_level2.py](../tools/verify_historical_level2.py) | program | 4393 | `d94cfbb8f96273bb15475b70d011193001523a3e3878ae60dc9de274b495c5e5` |
 | [tools/verify_level5_geometry.py](../tools/verify_level5_geometry.py) | program | 4130 | `e7a9785cfc0e9d559e992a1087779b8eb0588a8703f584d2b92c480c92fcb43f` |
+
+
+---
+
+<a id="round-20"></a>
+
+## 2026-11-01 – huszadik kör: közös adatfolyamablakok, külön bitsíkok, hozzáfűzés
+
+### Kérés és rögzített munkamód
+
+A felhasználó kérése: folytassuk, de ne készüljön új MD; a meglévő
+`HALV_TELJES_KUTATAS.md` VÉGÉT egészítsük ki. Külön jelentés-MD nem készült.
+A korábbi teljes fő MD 298 373 bájtos prefixét változatlanul megőrizzük.
+Ennek SHA-256 lenyomata:
+`c08809df3d1725dde612e150008d00ca8caf76fa89fcb9523a2650ff9d6fadb2`.
+A kiinduló commit `c824319dab35a4290d7f5d8c2ceac78a95ce1f1c`.
+
+A korábbi kezdeti állapotkép és bizonyítéktábla történeti pillanatkép marad.
+Az új állapot, mérések, program- és modellhivatkozások ettől kezdve az
+új fejezetekben, a fájl végén jelennek meg. Az aktuális segédnaplók és az
+index változhatnak; a fő MD korábbi bájtjait az indexelő sem írja újra.
+
+### 1. Előzmények és az új kérdés
+
+Elolvastuk a munkaszabályokat, naplót, hipotéziseket, állapotképet, indexet
+és a fő MD frissítési programját. Az eredeti q-minták, amplitúdóskálák,
+az összes R-bit és minden korábbi kutatási adat megmarad.
+
+A C35 egy változatlan, átrendezett 32 mintás sablont kizárt a rögzített
+felezési modellben. Most hosszabb, nem periodikus adatfolyam különböző
+ablakai következnek. Itt eltérhet a blokkok hisztogramja és jelalakja,
+de az azonos adatfolyamcímhez rendelt minták nem mondhatnak ellent.
+Az R-t nem külön javítócsatornának feltételezzük: a teljes q előállítása a cél.
+
+### 2. C37 – két hosszabb paritásadatfolyam pontos ablakai
+
+A `models/sliding_window_generator_v1.json` modellt a futtatás előtt mentettük.
+A teljes q előállításának feltételezett szabálya:
+
+```
+S_b = 128 / 2^b
+s_b = (a + S_b/2) mod 32
+start_0 = start_1 = 0
+start_(b+2) = start_b + d_b
+q[b,k] = T[b mod 2][start_b + k]
+fizikai_magasság[b,k] = S_b * q[b,k]
+```
+
+A két T tetszőleges véges, 0..3 értékű adatfolyam; nincs rájuk 32-es periódus
+erőltetve. Ez több szabadságot ad a korábbi ismétlődő sablonnál. Az ablakok
+címeit viszont egyetlen közös szabály adja: `a=0..31`, három d-reprezentáció:
+
+| Bejárás | d meghatározása |
+| --- | --- |
+| Előjeles főérték | `(s+16) mod32 −16` |
+| Nemnegatív | `s` |
+| Nempozitív | `0`, ha s=0; különben `s−32` |
+
+Összesen 96 koordinátakonfiguráció. A 10-es eltolás csak egy összehasonlító
+eset ebben a családban; nem képből újonnan levezetett paraméter.
+
+Tanítóblokkok: 3,4,5,6, összesen 128 q-minta. Ellenőrzésre félretett
+blokkok: 1,2,7,8, szintén 128 minta. Az adat már ismert kép része, tehát
+ez illesztésből való kihagyás, nem új, független mérés.
+
+Azonos streamcímre eltérő q esetén a konfiguráció elutasítandó. Erős
+tanítóillesztéshez mindkét paritáspárnál legalább 16 közös koordinátát
+követelünk. A kevés közös cím miatt triviálisan illeszkedő konfiguráció
+nem számítana pozitív bizonyítéknak. Ismeretlen ellenőrző koordinátát
+nem töltenénk ki nullával; a memorizált sablon önmagában nem kulcskódoló.
+
+**Eredmény: mind a 96 konfiguráció ellentmondásos már a tanításban.**
+Gyenge és erős pontos tanítóillesztésből is nulla van. Nem készült
+illesztett szabály, amellyel a visszatartott blokkokat megjósolhatnánk.
+Minden konfigurációhoz elmentettük a kezdőcímeket, átfedéseket, konfliktusszámot
+és az első konkrét ellentmondás két értékét.
+
+### 3. Teljes határátfedés és belső egyező részlet: külön mérés
+
+Mindhárom középső párnál végigvizsgáltuk a −31..31 lineáris elmozdulásokat,
+összesen 189 átfedési esetet. A teljes átfedő tartomány minden mintájának
+egyeznie kell; nem választható ki belőle csak egy kedvező belső rész.
+
+| Blokkpár | Leghosszabb teljesen hibátlan HATÁRÁTFEDÉS |
+| --- | ---: |
+| 3–5 | 1 minta |
+| 4–6 | 2 minta |
+| 5–7 | 3 minta |
+
+Ez **nem** a leghosszabb közös belső részlet hossza. Példa: a 3. blokk
+0..11. mintája és az 5. blokk 6..17. mintája pontosan azonos:
+
+```
+3,0,2,2,1,0,2,2,0,0,2,2
+```
+
+Ez a 12 mintás belső ismétlődés valódi, de az adott elmozdulás teljes
+ablakátfedése már nem hibátlan. A negatív ablakeredmény nem törli el
+a korábban megfigyelt részleges hasonlóságot.
+
+### 4. C37 pozitív és negatív kontrollok
+
+A program ismert, szintetikus hosszabb adatfolyamból generált ablakokat
+pontosan visszailleszt. Minden ismert ellenőrző koordinátát helyesen jósol,
+egy beültetett átfedési konfliktust észlel, és az ismeretlen koordinátát
+nem tölti ki. Teljesen különálló ablakok nem válnak előrejelzési bizonyítékká.
+Az azonos nullasorozatok ismert átfedési kontrollja 32 mintás egyezést ad.
+
+### 5. C38 – magas és alacsony sík külön adatfolyamként
+
+A `models/two_plane_window_v1.json` specifikáció után a két síkot külön
+vizsgáltuk, egymástól független a- és d-szabállyal:
+
+```
+H[b,k] = U[b mod2][start_H[b] + k]
+L[b,k] = V[b mod2][start_L[b] + k]
+q[b,k] = 2*H[b,k] + L[b,k]
+```
+
+Ez négy bináris paritásadatfolyamot jelent. Több paramétert adunk a modellnek,
+de továbbra sincs cellánkénti javítás vagy ellenőrzőadatból visszatöltés.
+q csak akkor jósolható meg, ha **mindkét** bitje ismert. Egy hiányzó
+bitsíkot nem helyettesítünk nullával.
+
+| Sík | Konfiguráció | Pontos tanítóillesztés | Erős tanítóillesztés |
+| --- | ---: | ---: | ---: |
+| H | 96 | 0 | 0 |
+| L | 96 | 0 | 0 |
+| Együtt vizsgált síkkonfiguráció | 192 | 0 | 0 |
+
+Nincs elsődleges összetett modell és nincs teljes 128 mintás ellenőrzőjóslat.
+Nem állítunk 9216 összetett kulcspróbát: az esetleges párosításokat már
+a síkonkénti pontos tanítófeltétel elutasítja. A csak nullát jósló
+ellenőrzési alapérték H-nál 73/128, L-nél 83/128 helyes bit lenne;
+ezeket nem kezeljük dekódolási sikernek.
+
+A szintetikus kontroll két független bitsíkot eltérő ablakkoordinátákkal
+generál; a közösen ismert q-k pontosan visszaállnak. Külön ellenőrzött,
+hogy egy hiányzó síkból nem készül hamis q-jóslat.
+
+### 6. Javítás és független ellenőrzés
+
+A C38 első szintetikus futása NumPy-egész JSON-szerializációs hibát jelzett.
+A közös előrejelzési számlálókat szabványos Python int-té alakítottuk,
+és az üres helyeshalmaz számlálását is javítottuk. Ezután mindkét család
+újrafutott, a C37 számlálói változatlanok; a végső forráshash-ek az
+eredményekben vannak. A hibás előfutást nem tekintjük kutatási eredménynek.
+
+Külön audit hét bemeneti/programfájl hashét ellenőrzi, és saját cím→érték
+könyveléssel újraellenőrzi mind a 96 q- és 192 bitsíkkonfiguráció ütközéseit.
+A 189 határátfedés egyezési számát is külön ciklusból visszaállítja.
+Minden ellenőrzés sikeres. Új nyers kulcskeresés vagy hangdekódolás nem futott.
+
+### 7. A meglévő MD végének bővítése, új MD nélkül
+
+A `data/master_append_state.json` az eredeti prefix hosszát és hashét,
+az eredeti pillanatkép manifesztjét és az új fejezetek offsetjét, hosszát,
+hashét őrzi. A `tools/append_master_chapter.py` a teljes új naplókört,
+annak pontos modellrecepteit és hivatkozott programjait a fő MD végéhez
+fűzi. A korábbi bájtokat nem írja újra. Azonos fejezet ismételt futtatása
+nem hozhat létre duplikátumot.
+
+Két ideiglenes másolaton ellenőriztük, hogy sérült régi prefixet vagy
+nyilvántartás nélküli utólagos tartalmat a védelmi ellenőrzés elutasít.
+Az indexelő append-only módban kizárólag a teljességet, hash-eket és
+az aktuális manifesztet kezeli. Hiányzó append-nyilvántartás esetén
+megtagadja a már létező fő MD újraírását. Új REPORT-MD-t sem fogad el.
+Az AGENTS a felhasználó legújabb frissítési kérését rögzíti.
+
+### 8. Mit jelent ez, merre tovább?
+
+Nem sikerült a blokkeltéréseket pusztán egy hosszabb adatfolyam változó
+ablakaiból előállítani a rögzített fáziscsaládban, még külön bitsíkokkal sem.
+Ez az indexelési család negatívuma, nem minden hosszabb adatfolyam vagy
+nemlineáris generátor kizárása. A belső ismétlődések megmaradnak.
+
+A következő generátorjelöltnek a minták kódolását is le kell vezetnie,
+nem elég az ismert q értékeit új ablakcímekre tenni. A geometriai és
+Fibonacci–hang–Morse ág továbbra is aktív; a jelölő, lépcső és dátum
+szerepe nyitott. Külön szélső mintajavítást vagy célcímhez igazított
+hibamaszkot nem fogadunk el teljes szabálynak.
+
+### Reprodukció
+
+```sh
+python tools/check_sliding_window_generator.py
+python tools/check_two_plane_window.py
+python tools/audit_window_generators.py
+```
+
+A fejezetet a két modell és az eredmény-/programállományok hivatkozásával
+a `tools/append_master_chapter.py --round 20 --model ... --artifact ...`
+parancs fűzi a fő MD végéhez; ezután `python tools/build_research_index.py`.
+A pontos források és hash-ek közvetlenül e fejezet után szerepelnek.
+
+**Nincs igazolt közös generátor, megjósolt teljes javítás vagy HALV-kulcs.**
+
+
+### A fejezethez rögzített pontos modellreceptek
+
+
+#### sliding_window_generator_v1.json
+
+Forrás: [sliding_window_generator_v1.json](models/sliding_window_generator_v1.json), SHA-256: `9fb013cbaeb20a34af9c9ae2d003756d3ac8ea1552d2afb7884398e6b73dd954`.
+
+```json
+{
+  "model":"C37",
+  "question":"Can changing block shapes be exact windows of two longer parity streams rather than circular copies of one32sample template?",
+  "generator":"q[b,k]=T[b mod2][start[b]+k]; physical_height=q*128/2**b",
+  "start":"start[0]=start[1]=0; start[b+2]=start[b]+d[b]",
+  "phase_family":"s[b]=(a+source_scale[b]/2)mod32; all a0..31, fitted on training only; a10 inherited only as comparison",
+  "displacement_policies":["principal_signed","nonnegative","nonpositive"],
+  "displacement_definitions":"principal=(s+16)mod32-16; nonnegative=s; nonpositive=s if s==0 else s-32",
+  "templates":"Two arbitrary finite lookup streams with no period imposed; conflicting values at the same stream coordinate invalidate exact training",
+  "training_blocks_1based":[3,4,5,6],
+  "heldout_blocks_1based":[1,2,7,8],
+  "strong_training_requirement":"Each of the two training parity pairs must share at least16 coordinates; perfect training with tiny overlap is only a weak diagnostic",
+  "forecast":"Only coordinates already defined by training can be predicted; no default0 and no use of heldout symbols to fill templates",
+  "selection":"First exact strong-training fit in fixed enumeration is primary; all other successes exploratory",
+  "diagnostic":"For each training pair, exhaustively test all63 linear displacements-31..31 and report the longest exactly matching entire overlap",
+  "calibration":"Known synthetic streams must give exact known-coordinate forecasts; injected overlap conflict must be rejected; no-overlap must not be counted as evidence",
+  "limitations":["Same previously observed image; holdout is parameter-fitting exclusion, not prospective measurement","Two parity streams and this phase family are hypotheses","A stored arbitrary template is not yet a key-derived encoder","Failure excludes only this exact window/index family, not all longer-stream encoders","Original states and full residual retained; no private-key search"]
+}
+```
+
+
+#### two_plane_window_v1.json
+
+Forrás: [two_plane_window_v1.json](models/two_plane_window_v1.json), SHA-256: `f2924a1b8d6391c0b6a94bfa8f3e2cfa4e84117b5f5279a6c24b76a16b684f89`.
+
+```json
+{
+  "model":"C38",
+  "question":"Can four binary parity streams, with independent high/low-plane window coordinates, jointly generate the measuredq=2H+L?",
+  "generator":"H[b,k]=U[b mod2][start_H[b]+k]; L[b,k]=V[b mod2][start_L[b]+k]; q=2H+L; physical height=q*128/2**b",
+  "coordinates":"Each plane separately uses the96 C37 phase/displacement configurations; independent offsets but one global rule per plane",
+  "training_blocks_1based":[3,4,5,6],
+  "heldout_blocks_1based":[1,2,7,8],
+  "strong_requirement":"Each training parity-pair overlap>=16 on both planes; no use of heldout bits for selecting configurations",
+  "selection":"First strong exact training fit of each plane gives primary pair; if either plane has none there is no primary composite generator",
+  "forecast":"A q-value is known only when both plane values are known; no missing-plane zero fill",
+  "scope":"No per-cell correction, arbitrary state relabeling or source replacement; independent plane coordinate rules are additional parameters, explicitly counted",
+  "calibration":"Synthetic independent binary streams with different window coordinates must jointly reconstruct known q values; missing bitplane must remain unknown",
+  "limitations":["Same known image, exploratory family","Partial lower-plane fit is not a full waveform decoder","Large zero baseline requires separate nonzero reporting","Arbitrary memorized binary templates are not key-derived encoders","No private-key search"]
+}
+```
+
+
+### A fejezet adatai és reprodukciós programjai
+
+
+| Fájl | Bájt | SHA-256 |
+| --- | ---: | --- |
+| [research/data/sliding_window_generator_check.json](data/sliding_window_generator_check.json) | 113555 | `77e152897120f77a80258011ea74010d49dbe99e7dcc6319b50c1a3672d9df93` |
+| [research/data/two_plane_window_check.json](data/two_plane_window_check.json) | 72607 | `49adcb34428a9ad73a0e852671b1be1bccdc14e7d36e938338936e629ab3949e` |
+| [research/data/window_generators_integrity.json](data/window_generators_integrity.json) | 657 | `401ab4b67eaec3e6881dcff77bbefa3bc24a011f434eb1ed7aa3fa811e538964` |
+| [tools/check_sliding_window_generator.py](../tools/check_sliding_window_generator.py) | 6634 | `bd6b9a5845af9371ceaf662bf0a2fa9ce69cb1d6baaf1dd6c3c667b4c70f833f` |
+| [tools/check_two_plane_window.py](../tools/check_two_plane_window.py) | 5300 | `5e6a6fcc293539720bbc0601aea7d051ce08c713c25666428a75c0cc46e2b1e5` |
+| [tools/audit_window_generators.py](../tools/audit_window_generators.py) | 2556 | `e127f3be7ec7e31129b3b339e77ce1afaa88be653a6fc70e9fe1776a87986258` |
+| [tools/append_master_chapter.py](../tools/append_master_chapter.py) | 4008 | `8572f99e61e4a69054aafcf0969bbd5c0460b47adfacb2415c5684014baa91be` |
+| [tools/build_master_document.py](../tools/build_master_document.py) | 8471 | `f85407d24b472b2b37671cdb4d1c669da5d6159d5a479fa81a7178fe4625fe77` |
+| [tools/build_research_index.py](../tools/build_research_index.py) | 10599 | `2453eff540cc33d2df6929bb2b3e7e6e40d378da029fb774f74d583bfab72765` |

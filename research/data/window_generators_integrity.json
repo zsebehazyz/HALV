@@ -1,0 +1,17 @@
+{
+  "purpose": "Independent exact-window and binary-plane audit, not a key search",
+  "verified_input_files": 7,
+  "full_state_trials_verified": 96,
+  "binary_plane_trials_verified": 192,
+  "whole_boundary_overlap_lengths": [
+    1,
+    2,
+    3
+  ],
+  "new_template_successes": 0,
+  "input_sha256": {
+    "research/data/sliding_window_generator_check.json": "77e152897120f77a80258011ea74010d49dbe99e7dcc6319b50c1a3672d9df93",
+    "research/data/two_plane_window_check.json": "49adcb34428a9ad73a0e852671b1be1bccdc14e7d36e938338936e629ab3949e",
+    "tools/audit_window_generators.py": "e127f3be7ec7e31129b3b339e77ce1afaa88be653a6fc70e9fe1776a87986258"
+  }
+}

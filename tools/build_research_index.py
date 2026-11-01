@@ -126,6 +126,21 @@ def main():
             'kind':'full512bit_phase_ASCII_flag_gate','format_trials':d['all_trials'],
             'complete_hex_readings':len(d['complete_hex_readings']),'scalars_passing_format_gate':d['unique_valid_scalars'],
             'target_matches':len(d['matches']),'full512bit_flag_roundtrips':d['full512bit_flag_roundtrips']})
+    p=ROOT/'research/data/sliding_window_generator_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'exact_long_stream_window_generator','configurations':d['configurations'],
+            'exact_training_fits':len(d['training_exact_fits']),
+            'strong_training_fits':len(d['strong_training_exact_fits']),
+            'full_heldout_successes':len(d['all_128_heldout_successes']),
+            'whole_boundary_overlap_lengths':[r['longest_exact_whole_overlap'] for r in d['linear_overlap_diagnostics']],
+            'not_private_key_search':True})
+    p=ROOT/'research/data/two_plane_window_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'independent_binary_plane_window_generator','plane_configurations':d['plane_configurations'],
+            'exact_training_fits_by_plane':{k:len(v['exact_training_fits']) for k,v in d['planes'].items()},
+            'full_heldout_successes':len(d['full_heldout_successes']),'not_private_key_search':True})
     out={'purpose':'Persistent evidence index; read together with HYPOTHESES.md and LOG.md.',
          'counting_rule':'Do not sum per-run unique candidates as global uniques; overlap across runs has not been measured. Structural comparisons, WIF strings, hypotheses and private scalars are separate units.',
          'result_summaries':summaries,'structural_summaries':structural,'files':files}

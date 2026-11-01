@@ -4,8 +4,10 @@ A bitcoin puzzle vizsgálata. **Nincs ellenőrzött megfejtés vagy privát kulc
 
 **[Teljes kutatási MD – minden mentett lépés az elejétől](research/HALV_TELJES_KUTATAS.md).**
 Tartalmazza a teljes naplót, hipotéziseket, részletes jelentéseket és
-modellrecepteket. Minden kutatási körben frissül; a forrásadatok és programok
-hash-sel hivatkozva megmaradnak. A kézi állapotkép: [MASTER_OVERVIEW.md](research/MASTER_OVERVIEW.md).
+modellrecepteket. Az új körök a meglévő fájl végéhez kerülnek; a korábbi
+tartalom változatlan marad. A forrásadatok és programok hash-sel megmaradnak.
+Aktuális állapotkép: [MASTER_OVERVIEW.md](research/MASTER_OVERVIEW.md).
+Legújabb folytatás: [20. kör, C37–C38](research/HALV_TELJES_KUTATAS.md#round-20).
 
 A kutatás fő térképe az [összefüggések és hipotézisek](research/HYPOTHESES.md)
 fájl: a jelölő, az aláírás, a hullám és a dátum lehetséges adat-, maszk-,

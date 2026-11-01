@@ -1,0 +1,5923 @@
+{
+  "model": "C37",
+  "input_sha256": {
+    "research/models/sliding_window_generator_v1.json": "9fb013cbaeb20a34af9c9ae2d003756d3ac8ea1552d2afb7884398e6b73dd954",
+    "research/data/pixel_measurements.json": "8265520b123a24b2736c2029d2f6c7d8455d5c54fb7a27df888d528819302f79",
+    "research/data/lag2_halving_check.json": "2de6d22982c31fd1654999cce510b5860aa4b6118eece6b1f3c62f54e983394f",
+    "tools/check_sliding_window_generator.py": "bd6b9a5845af9371ceaf662bf0a2fa9ce69cb1d6baaf1dd6c3c667b4c70f833f",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+  },
+  "calibration": {
+    "synthetic_known_stream_forecast": true,
+    "injected_overlap_conflict_detected": true,
+    "unknown_coordinates_not_filled": true,
+    "no_overlap_not_promoted": true,
+    "exact_overlap_known_answer": true
+  },
+  "configurations": 96,
+  "training_exact_fits": [],
+  "strong_training_exact_fits": [],
+  "first_strong_training_fit": null,
+  "all_128_heldout_successes": [],
+  "linear_overlap_diagnostics": [
+    {
+      "blocks_1based": [
+        3,
+        5
+      ],
+      "all_displacements": [
+        {
+          "displacement_target_start": -31,
+          "overlap_samples": 1,
+          "exact_samples": 0,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -30,
+          "overlap_samples": 2,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -29,
+          "overlap_samples": 3,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -28,
+          "overlap_samples": 4,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -27,
+          "overlap_samples": 5,
+          "exact_samples": 0,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -26,
+          "overlap_samples": 6,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -25,
+          "overlap_samples": 7,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -24,
+          "overlap_samples": 8,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -23,
+          "overlap_samples": 9,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -22,
+          "overlap_samples": 10,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -21,
+          "overlap_samples": 11,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -20,
+          "overlap_samples": 12,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -19,
+          "overlap_samples": 13,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -18,
+          "overlap_samples": 14,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -17,
+          "overlap_samples": 15,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -16,
+          "overlap_samples": 16,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -15,
+          "overlap_samples": 17,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -14,
+          "overlap_samples": 18,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -13,
+          "overlap_samples": 19,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -12,
+          "overlap_samples": 20,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -11,
+          "overlap_samples": 21,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -10,
+          "overlap_samples": 22,
+          "exact_samples": 15,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -9,
+          "overlap_samples": 23,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -8,
+          "overlap_samples": 24,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -7,
+          "overlap_samples": 25,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -6,
+          "overlap_samples": 26,
+          "exact_samples": 22,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -5,
+          "overlap_samples": 27,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -4,
+          "overlap_samples": 28,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -3,
+          "overlap_samples": 29,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -2,
+          "overlap_samples": 30,
+          "exact_samples": 17,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -1,
+          "overlap_samples": 31,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 0,
+          "overlap_samples": 32,
+          "exact_samples": 11,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 1,
+          "overlap_samples": 31,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 2,
+          "overlap_samples": 30,
+          "exact_samples": 16,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 3,
+          "overlap_samples": 29,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 4,
+          "overlap_samples": 28,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 5,
+          "overlap_samples": 27,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 6,
+          "overlap_samples": 26,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 7,
+          "overlap_samples": 25,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 8,
+          "overlap_samples": 24,
+          "exact_samples": 12,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 9,
+          "overlap_samples": 23,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 10,
+          "overlap_samples": 22,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 11,
+          "overlap_samples": 21,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 12,
+          "overlap_samples": 20,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 13,
+          "overlap_samples": 19,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 14,
+          "overlap_samples": 18,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 15,
+          "overlap_samples": 17,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 16,
+          "overlap_samples": 16,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 17,
+          "overlap_samples": 15,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 18,
+          "overlap_samples": 14,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 19,
+          "overlap_samples": 13,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 20,
+          "overlap_samples": 12,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 21,
+          "overlap_samples": 11,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 22,
+          "overlap_samples": 10,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 23,
+          "overlap_samples": 9,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 24,
+          "overlap_samples": 8,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 25,
+          "overlap_samples": 7,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 26,
+          "overlap_samples": 6,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 27,
+          "overlap_samples": 5,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 28,
+          "overlap_samples": 4,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 29,
+          "overlap_samples": 3,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 30,
+          "overlap_samples": 2,
+          "exact_samples": 0,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 31,
+          "overlap_samples": 1,
+          "exact_samples": 1,
+          "whole_overlap_exact": true
+        }
+      ],
+      "longest_exact_whole_overlap": 1,
+      "maximal_exact_overlaps": [
+        {
+          "displacement_target_start": 31,
+          "overlap_samples": 1,
+          "exact_samples": 1,
+          "whole_overlap_exact": true
+        }
+      ]
+    },
+    {
+      "blocks_1based": [
+        4,
+        6
+      ],
+      "all_displacements": [
+        {
+          "displacement_target_start": -31,
+          "overlap_samples": 1,
+          "exact_samples": 1,
+          "whole_overlap_exact": true
+        },
+        {
+          "displacement_target_start": -30,
+          "overlap_samples": 2,
+          "exact_samples": 2,
+          "whole_overlap_exact": true
+        },
+        {
+          "displacement_target_start": -29,
+          "overlap_samples": 3,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -28,
+          "overlap_samples": 4,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -27,
+          "overlap_samples": 5,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -26,
+          "overlap_samples": 6,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -25,
+          "overlap_samples": 7,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -24,
+          "overlap_samples": 8,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -23,
+          "overlap_samples": 9,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -22,
+          "overlap_samples": 10,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -21,
+          "overlap_samples": 11,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -20,
+          "overlap_samples": 12,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -19,
+          "overlap_samples": 13,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -18,
+          "overlap_samples": 14,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -17,
+          "overlap_samples": 15,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -16,
+          "overlap_samples": 16,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -15,
+          "overlap_samples": 17,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -14,
+          "overlap_samples": 18,
+          "exact_samples": 13,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -13,
+          "overlap_samples": 19,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -12,
+          "overlap_samples": 20,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -11,
+          "overlap_samples": 21,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -10,
+          "overlap_samples": 22,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -9,
+          "overlap_samples": 23,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -8,
+          "overlap_samples": 24,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -7,
+          "overlap_samples": 25,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -6,
+          "overlap_samples": 26,
+          "exact_samples": 19,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -5,
+          "overlap_samples": 27,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -4,
+          "overlap_samples": 28,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -3,
+          "overlap_samples": 29,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -2,
+          "overlap_samples": 30,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -1,
+          "overlap_samples": 31,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 0,
+          "overlap_samples": 32,
+          "exact_samples": 12,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 1,
+          "overlap_samples": 31,
+          "exact_samples": 12,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 2,
+          "overlap_samples": 30,
+          "exact_samples": 11,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 3,
+          "overlap_samples": 29,
+          "exact_samples": 11,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 4,
+          "overlap_samples": 28,
+          "exact_samples": 12,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 5,
+          "overlap_samples": 27,
+          "exact_samples": 15,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 6,
+          "overlap_samples": 26,
+          "exact_samples": 11,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 7,
+          "overlap_samples": 25,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 8,
+          "overlap_samples": 24,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 9,
+          "overlap_samples": 23,
+          "exact_samples": 13,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 10,
+          "overlap_samples": 22,
+          "exact_samples": 13,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 11,
+          "overlap_samples": 21,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 12,
+          "overlap_samples": 20,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 13,
+          "overlap_samples": 19,
+          "exact_samples": 11,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 14,
+          "overlap_samples": 18,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 15,
+          "overlap_samples": 17,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 16,
+          "overlap_samples": 16,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 17,
+          "overlap_samples": 15,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 18,
+          "overlap_samples": 14,
+          "exact_samples": 11,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 19,
+          "overlap_samples": 13,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 20,
+          "overlap_samples": 12,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 21,
+          "overlap_samples": 11,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 22,
+          "overlap_samples": 10,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 23,
+          "overlap_samples": 9,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 24,
+          "overlap_samples": 8,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 25,
+          "overlap_samples": 7,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 26,
+          "overlap_samples": 6,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 27,
+          "overlap_samples": 5,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 28,
+          "overlap_samples": 4,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 29,
+          "overlap_samples": 3,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 30,
+          "overlap_samples": 2,
+          "exact_samples": 0,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 31,
+          "overlap_samples": 1,
+          "exact_samples": 1,
+          "whole_overlap_exact": true
+        }
+      ],
+      "longest_exact_whole_overlap": 2,
+      "maximal_exact_overlaps": [
+        {
+          "displacement_target_start": -30,
+          "overlap_samples": 2,
+          "exact_samples": 2,
+          "whole_overlap_exact": true
+        }
+      ]
+    },
+    {
+      "blocks_1based": [
+        5,
+        7
+      ],
+      "all_displacements": [
+        {
+          "displacement_target_start": -31,
+          "overlap_samples": 1,
+          "exact_samples": 1,
+          "whole_overlap_exact": true
+        },
+        {
+          "displacement_target_start": -30,
+          "overlap_samples": 2,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -29,
+          "overlap_samples": 3,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -28,
+          "overlap_samples": 4,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -27,
+          "overlap_samples": 5,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -26,
+          "overlap_samples": 6,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -25,
+          "overlap_samples": 7,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -24,
+          "overlap_samples": 8,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -23,
+          "overlap_samples": 9,
+          "exact_samples": 1,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -22,
+          "overlap_samples": 10,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -21,
+          "overlap_samples": 11,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -20,
+          "overlap_samples": 12,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -19,
+          "overlap_samples": 13,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -18,
+          "overlap_samples": 14,
+          "exact_samples": 11,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -17,
+          "overlap_samples": 15,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -16,
+          "overlap_samples": 16,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -15,
+          "overlap_samples": 17,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -14,
+          "overlap_samples": 18,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -13,
+          "overlap_samples": 19,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -12,
+          "overlap_samples": 20,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -11,
+          "overlap_samples": 21,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -10,
+          "overlap_samples": 22,
+          "exact_samples": 13,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -9,
+          "overlap_samples": 23,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -8,
+          "overlap_samples": 24,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -7,
+          "overlap_samples": 25,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -6,
+          "overlap_samples": 26,
+          "exact_samples": 12,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -5,
+          "overlap_samples": 27,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -4,
+          "overlap_samples": 28,
+          "exact_samples": 12,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -3,
+          "overlap_samples": 29,
+          "exact_samples": 11,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -2,
+          "overlap_samples": 30,
+          "exact_samples": 18,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": -1,
+          "overlap_samples": 31,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 0,
+          "overlap_samples": 32,
+          "exact_samples": 12,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 1,
+          "overlap_samples": 31,
+          "exact_samples": 13,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 2,
+          "overlap_samples": 30,
+          "exact_samples": 15,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 3,
+          "overlap_samples": 29,
+          "exact_samples": 13,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 4,
+          "overlap_samples": 28,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 5,
+          "overlap_samples": 27,
+          "exact_samples": 15,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 6,
+          "overlap_samples": 26,
+          "exact_samples": 13,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 7,
+          "overlap_samples": 25,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 8,
+          "overlap_samples": 24,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 9,
+          "overlap_samples": 23,
+          "exact_samples": 13,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 10,
+          "overlap_samples": 22,
+          "exact_samples": 12,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 11,
+          "overlap_samples": 21,
+          "exact_samples": 7,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 12,
+          "overlap_samples": 20,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 13,
+          "overlap_samples": 19,
+          "exact_samples": 10,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 14,
+          "overlap_samples": 18,
+          "exact_samples": 14,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 15,
+          "overlap_samples": 17,
+          "exact_samples": 9,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 16,
+          "overlap_samples": 16,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 17,
+          "overlap_samples": 15,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 18,
+          "overlap_samples": 14,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 19,
+          "overlap_samples": 13,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 20,
+          "overlap_samples": 12,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 21,
+          "overlap_samples": 11,
+          "exact_samples": 8,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 22,
+          "overlap_samples": 10,
+          "exact_samples": 4,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 23,
+          "overlap_samples": 9,
+          "exact_samples": 5,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 24,
+          "overlap_samples": 8,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 25,
+          "overlap_samples": 7,
+          "exact_samples": 6,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 26,
+          "overlap_samples": 6,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 27,
+          "overlap_samples": 5,
+          "exact_samples": 3,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 28,
+          "overlap_samples": 4,
+          "exact_samples": 2,
+          "whole_overlap_exact": false
+        },
+        {
+          "displacement_target_start": 29,
+          "overlap_samples": 3,
+          "exact_samples": 3,
+          "whole_overlap_exact": true
+        },
+        {
+          "displacement_target_start": 30,
+          "overlap_samples": 2,
+          "exact_samples": 2,
+          "whole_overlap_exact": true
+        },
+        {
+          "displacement_target_start": 31,
+          "overlap_samples": 1,
+          "exact_samples": 1,
+          "whole_overlap_exact": true
+        }
+      ],
+      "longest_exact_whole_overlap": 3,
+      "maximal_exact_overlaps": [
+        {
+          "displacement_target_start": 29,
+          "overlap_samples": 3,
+          "exact_samples": 3,
+          "whole_overlap_exact": true
+        }
+      ]
+    }
+  ],
+  "all_trials": [
+    {
+      "policy": "principal_signed",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        -16,
+        8,
+        -12,
+        10
+      ],
+      "shifts_mod32": [
+        0,
+        0,
+        16,
+        8,
+        4,
+        2
+      ],
+      "displacements": [
+        0,
+        0,
+        -16,
+        8,
+        4,
+        2
+      ],
+      "training_pair_overlaps": [
+        16,
+        24
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 26,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 16,
+        "stream": 0,
+        "coordinate": 0,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        48,
+        40
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        1,
+        1,
+        -14,
+        10,
+        -9,
+        13
+      ],
+      "shifts_mod32": [
+        1,
+        1,
+        17,
+        9,
+        5,
+        3
+      ],
+      "displacements": [
+        1,
+        1,
+        -15,
+        9,
+        5,
+        3
+      ],
+      "training_pair_overlaps": [
+        17,
+        23
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 22,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 15,
+        "stream": 0,
+        "coordinate": 1,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        47,
+        41
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        2,
+        2,
+        -12,
+        12,
+        -6,
+        16
+      ],
+      "shifts_mod32": [
+        2,
+        2,
+        18,
+        10,
+        6,
+        4
+      ],
+      "displacements": [
+        2,
+        2,
+        -14,
+        10,
+        6,
+        4
+      ],
+      "training_pair_overlaps": [
+        18,
+        22
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 17,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 14,
+        "stream": 0,
+        "coordinate": 2,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        46,
+        42
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        3,
+        3,
+        -10,
+        14,
+        -3,
+        19
+      ],
+      "shifts_mod32": [
+        3,
+        3,
+        19,
+        11,
+        7,
+        5
+      ],
+      "displacements": [
+        3,
+        3,
+        -13,
+        11,
+        7,
+        5
+      ],
+      "training_pair_overlaps": [
+        19,
+        21
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 29,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 13,
+        "stream": 0,
+        "coordinate": 3,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        45,
+        43
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        4,
+        4,
+        -8,
+        16,
+        0,
+        22
+      ],
+      "shifts_mod32": [
+        4,
+        4,
+        20,
+        12,
+        8,
+        6
+      ],
+      "displacements": [
+        4,
+        4,
+        -12,
+        12,
+        8,
+        6
+      ],
+      "training_pair_overlaps": [
+        20,
+        20
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 26,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 12,
+        "stream": 0,
+        "coordinate": 4,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        44,
+        44
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        5,
+        5,
+        -6,
+        18,
+        3,
+        25
+      ],
+      "shifts_mod32": [
+        5,
+        5,
+        21,
+        13,
+        9,
+        7
+      ],
+      "displacements": [
+        5,
+        5,
+        -11,
+        13,
+        9,
+        7
+      ],
+      "training_pair_overlaps": [
+        21,
+        19
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 23,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 11,
+        "stream": 0,
+        "coordinate": 5,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        43,
+        45
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        6,
+        6,
+        -4,
+        20,
+        6,
+        28
+      ],
+      "shifts_mod32": [
+        6,
+        6,
+        22,
+        14,
+        10,
+        8
+      ],
+      "displacements": [
+        6,
+        6,
+        -10,
+        14,
+        10,
+        8
+      ],
+      "training_pair_overlaps": [
+        22,
+        18
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 16,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 10,
+        "stream": 0,
+        "coordinate": 6,
+        "previous_value": 3,
+        "new_value": 1
+      },
+      "unique_training_coordinates": [
+        42,
+        46
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        7,
+        7,
+        -2,
+        22,
+        9,
+        31
+      ],
+      "shifts_mod32": [
+        7,
+        7,
+        23,
+        15,
+        11,
+        9
+      ],
+      "displacements": [
+        7,
+        7,
+        -9,
+        15,
+        11,
+        9
+      ],
+      "training_pair_overlaps": [
+        23,
+        17
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 31,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 9,
+        "stream": 0,
+        "coordinate": 7,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        41,
+        47
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        8,
+        8,
+        0,
+        -8,
+        12,
+        2
+      ],
+      "shifts_mod32": [
+        8,
+        8,
+        24,
+        16,
+        12,
+        10
+      ],
+      "displacements": [
+        8,
+        8,
+        -8,
+        -16,
+        12,
+        10
+      ],
+      "training_pair_overlaps": [
+        24,
+        16
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 26,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 8,
+        "stream": 0,
+        "coordinate": 8,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        40,
+        48
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        9,
+        9,
+        2,
+        -6,
+        15,
+        5
+      ],
+      "shifts_mod32": [
+        9,
+        9,
+        25,
+        17,
+        13,
+        11
+      ],
+      "displacements": [
+        9,
+        9,
+        -7,
+        -15,
+        13,
+        11
+      ],
+      "training_pair_overlaps": [
+        25,
+        17
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 28,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 7,
+        "stream": 0,
+        "coordinate": 9,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        39,
+        47
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        10,
+        10,
+        4,
+        -4,
+        18,
+        8
+      ],
+      "shifts_mod32": [
+        10,
+        10,
+        26,
+        18,
+        14,
+        12
+      ],
+      "displacements": [
+        10,
+        10,
+        -6,
+        -14,
+        14,
+        12
+      ],
+      "training_pair_overlaps": [
+        26,
+        18
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 9,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 18,
+        "stream": 0,
+        "coordinate": 22,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        38,
+        46
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        11,
+        11,
+        6,
+        -2,
+        21,
+        11
+      ],
+      "shifts_mod32": [
+        11,
+        11,
+        27,
+        19,
+        15,
+        13
+      ],
+      "displacements": [
+        11,
+        11,
+        -5,
+        -13,
+        15,
+        13
+      ],
+      "training_pair_overlaps": [
+        27,
+        19
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 32,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 5,
+        "stream": 0,
+        "coordinate": 11,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        37,
+        45
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        12,
+        12,
+        8,
+        0,
+        -8,
+        14
+      ],
+      "shifts_mod32": [
+        12,
+        12,
+        28,
+        20,
+        16,
+        14
+      ],
+      "displacements": [
+        12,
+        12,
+        -4,
+        -12,
+        -16,
+        14
+      ],
+      "training_pair_overlaps": [
+        28,
+        20
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 29,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 4,
+        "stream": 0,
+        "coordinate": 12,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        36,
+        44
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        13,
+        13,
+        10,
+        2,
+        -5,
+        17
+      ],
+      "shifts_mod32": [
+        13,
+        13,
+        29,
+        21,
+        17,
+        15
+      ],
+      "displacements": [
+        13,
+        13,
+        -3,
+        -11,
+        -15,
+        15
+      ],
+      "training_pair_overlaps": [
+        29,
+        21
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 33,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 3,
+        "stream": 0,
+        "coordinate": 13,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        35,
+        43
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        14,
+        14,
+        12,
+        4,
+        -2,
+        -12
+      ],
+      "shifts_mod32": [
+        14,
+        14,
+        30,
+        22,
+        18,
+        16
+      ],
+      "displacements": [
+        14,
+        14,
+        -2,
+        -10,
+        -14,
+        -16
+      ],
+      "training_pair_overlaps": [
+        30,
+        22
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 21,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": 14,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        34,
+        42
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        15,
+        15,
+        14,
+        6,
+        1,
+        -9
+      ],
+      "shifts_mod32": [
+        15,
+        15,
+        31,
+        23,
+        19,
+        17
+      ],
+      "displacements": [
+        15,
+        15,
+        -1,
+        -9,
+        -13,
+        -15
+      ],
+      "training_pair_overlaps": [
+        31,
+        23
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 40,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": 15,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        33,
+        41
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        -16,
+        -16,
+        -16,
+        -24,
+        -28,
+        -38
+      ],
+      "shifts_mod32": [
+        16,
+        16,
+        0,
+        24,
+        20,
+        18
+      ],
+      "displacements": [
+        -16,
+        -16,
+        0,
+        -8,
+        -12,
+        -14
+      ],
+      "training_pair_overlaps": [
+        32,
+        24
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 36,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": -16,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        32,
+        40
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        -15,
+        -15,
+        -14,
+        -22,
+        -25,
+        -35
+      ],
+      "shifts_mod32": [
+        17,
+        17,
+        1,
+        25,
+        21,
+        19
+      ],
+      "displacements": [
+        -15,
+        -15,
+        1,
+        -7,
+        -11,
+        -13
+      ],
+      "training_pair_overlaps": [
+        31,
+        25
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 32,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 3,
+        "stream": 0,
+        "coordinate": -11,
+        "previous_value": 1,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        33,
+        39
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        -14,
+        -14,
+        -12,
+        -20,
+        -22,
+        -32
+      ],
+      "shifts_mod32": [
+        18,
+        18,
+        2,
+        26,
+        22,
+        20
+      ],
+      "displacements": [
+        -14,
+        -14,
+        2,
+        -6,
+        -10,
+        -12
+      ],
+      "training_pair_overlaps": [
+        30,
+        26
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 21,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": -12,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        34,
+        38
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        -13,
+        -13,
+        -10,
+        -18,
+        -19,
+        -29
+      ],
+      "shifts_mod32": [
+        19,
+        19,
+        3,
+        27,
+        23,
+        21
+      ],
+      "displacements": [
+        -13,
+        -13,
+        3,
+        -5,
+        -9,
+        -11
+      ],
+      "training_pair_overlaps": [
+        29,
+        27
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 41,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": -10,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        35,
+        37
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        -12,
+        -12,
+        -8,
+        -16,
+        -16,
+        -26
+      ],
+      "shifts_mod32": [
+        20,
+        20,
+        4,
+        28,
+        24,
+        22
+      ],
+      "displacements": [
+        -12,
+        -12,
+        4,
+        -4,
+        -8,
+        -10
+      ],
+      "training_pair_overlaps": [
+        28,
+        28
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 39,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": -8,
+        "previous_value": 1,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        36,
+        36
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        -11,
+        -11,
+        -6,
+        -14,
+        -13,
+        -23
+      ],
+      "shifts_mod32": [
+        21,
+        21,
+        5,
+        29,
+        25,
+        23
+      ],
+      "displacements": [
+        -11,
+        -11,
+        5,
+        -3,
+        -7,
+        -9
+      ],
+      "training_pair_overlaps": [
+        27,
+        29
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 32,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 5,
+        "stream": 0,
+        "coordinate": -1,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        37,
+        35
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        -10,
+        -10,
+        -4,
+        -12,
+        -10,
+        -20
+      ],
+      "shifts_mod32": [
+        22,
+        22,
+        6,
+        30,
+        26,
+        24
+      ],
+      "displacements": [
+        -10,
+        -10,
+        6,
+        -2,
+        -6,
+        -8
+      ],
+      "training_pair_overlaps": [
+        26,
+        30
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 28,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": -4,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        38,
+        34
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        -9,
+        -9,
+        -2,
+        -10,
+        -7,
+        -17
+      ],
+      "shifts_mod32": [
+        23,
+        23,
+        7,
+        31,
+        27,
+        25
+      ],
+      "displacements": [
+        -9,
+        -9,
+        7,
+        -1,
+        -5,
+        -7
+      ],
+      "training_pair_overlaps": [
+        25,
+        31
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 37,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": -2,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        39,
+        33
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        -8,
+        -8,
+        0,
+        -8,
+        -4,
+        -14
+      ],
+      "shifts_mod32": [
+        24,
+        24,
+        8,
+        0,
+        28,
+        26
+      ],
+      "displacements": [
+        -8,
+        -8,
+        8,
+        0,
+        -4,
+        -6
+      ],
+      "training_pair_overlaps": [
+        24,
+        32
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 32,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": 1,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        40,
+        32
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        -7,
+        -7,
+        2,
+        -6,
+        -1,
+        -11
+      ],
+      "shifts_mod32": [
+        25,
+        25,
+        9,
+        1,
+        29,
+        27
+      ],
+      "displacements": [
+        -7,
+        -7,
+        9,
+        1,
+        -3,
+        -5
+      ],
+      "training_pair_overlaps": [
+        23,
+        31
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 33,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 3,
+        "stream": 0,
+        "coordinate": 5,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        41,
+        33
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        -6,
+        -6,
+        4,
+        -4,
+        2,
+        -8
+      ],
+      "shifts_mod32": [
+        26,
+        26,
+        10,
+        2,
+        30,
+        28
+      ],
+      "displacements": [
+        -6,
+        -6,
+        10,
+        2,
+        -2,
+        -4
+      ],
+      "training_pair_overlaps": [
+        22,
+        30
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 27,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 4,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        42,
+        34
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        -5,
+        -5,
+        6,
+        -2,
+        5,
+        -5
+      ],
+      "shifts_mod32": [
+        27,
+        27,
+        11,
+        3,
+        31,
+        29
+      ],
+      "displacements": [
+        -5,
+        -5,
+        11,
+        3,
+        -1,
+        -3
+      ],
+      "training_pair_overlaps": [
+        21,
+        29
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 32,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 6,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        43,
+        35
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        -4,
+        -4,
+        8,
+        0,
+        8,
+        -2
+      ],
+      "shifts_mod32": [
+        28,
+        28,
+        12,
+        4,
+        0,
+        30
+      ],
+      "displacements": [
+        -4,
+        -4,
+        12,
+        4,
+        0,
+        -2
+      ],
+      "training_pair_overlaps": [
+        20,
+        28
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 28,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 8,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        44,
+        36
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        -3,
+        -3,
+        10,
+        2,
+        11,
+        1
+      ],
+      "shifts_mod32": [
+        29,
+        29,
+        13,
+        5,
+        1,
+        31
+      ],
+      "displacements": [
+        -3,
+        -3,
+        13,
+        5,
+        1,
+        -1
+      ],
+      "training_pair_overlaps": [
+        19,
+        27
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 24,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": 12,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        45,
+        37
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        -2,
+        -2,
+        12,
+        4,
+        14,
+        4
+      ],
+      "shifts_mod32": [
+        30,
+        30,
+        14,
+        6,
+        2,
+        0
+      ],
+      "displacements": [
+        -2,
+        -2,
+        14,
+        6,
+        2,
+        0
+      ],
+      "training_pair_overlaps": [
+        18,
+        26
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 24,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 12,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        46,
+        38
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "principal_signed",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        -1,
+        -1,
+        14,
+        6,
+        17,
+        7
+      ],
+      "shifts_mod32": [
+        31,
+        31,
+        15,
+        7,
+        3,
+        1
+      ],
+      "displacements": [
+        -1,
+        -1,
+        15,
+        7,
+        3,
+        1
+      ],
+      "training_pair_overlaps": [
+        17,
+        25
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 29,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": 15,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        47,
+        39
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        16,
+        8,
+        20,
+        10
+      ],
+      "shifts_mod32": [
+        0,
+        0,
+        16,
+        8,
+        4,
+        2
+      ],
+      "displacements": [
+        0,
+        0,
+        16,
+        8,
+        4,
+        2
+      ],
+      "training_pair_overlaps": [
+        16,
+        24
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 25,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 16,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        48,
+        40
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        1,
+        1,
+        18,
+        10,
+        23,
+        13
+      ],
+      "shifts_mod32": [
+        1,
+        1,
+        17,
+        9,
+        5,
+        3
+      ],
+      "displacements": [
+        1,
+        1,
+        17,
+        9,
+        5,
+        3
+      ],
+      "training_pair_overlaps": [
+        15,
+        23
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 19,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": 20,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        49,
+        41
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        2,
+        2,
+        20,
+        12,
+        26,
+        16
+      ],
+      "shifts_mod32": [
+        2,
+        2,
+        18,
+        10,
+        6,
+        4
+      ],
+      "displacements": [
+        2,
+        2,
+        18,
+        10,
+        6,
+        4
+      ],
+      "training_pair_overlaps": [
+        14,
+        22
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 17,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 20,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        50,
+        42
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        3,
+        3,
+        22,
+        14,
+        29,
+        19
+      ],
+      "shifts_mod32": [
+        3,
+        3,
+        19,
+        11,
+        7,
+        5
+      ],
+      "displacements": [
+        3,
+        3,
+        19,
+        11,
+        7,
+        5
+      ],
+      "training_pair_overlaps": [
+        13,
+        21
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 25,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": 23,
+        "previous_value": 1,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        51,
+        43
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        4,
+        4,
+        24,
+        16,
+        32,
+        22
+      ],
+      "shifts_mod32": [
+        4,
+        4,
+        20,
+        12,
+        8,
+        6
+      ],
+      "displacements": [
+        4,
+        4,
+        20,
+        12,
+        8,
+        6
+      ],
+      "training_pair_overlaps": [
+        12,
+        20
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 21,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 24,
+        "previous_value": 1,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        52,
+        44
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        5,
+        5,
+        26,
+        18,
+        35,
+        25
+      ],
+      "shifts_mod32": [
+        5,
+        5,
+        21,
+        13,
+        9,
+        7
+      ],
+      "displacements": [
+        5,
+        5,
+        21,
+        13,
+        9,
+        7
+      ],
+      "training_pair_overlaps": [
+        11,
+        19
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 13,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": 28,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        53,
+        45
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        6,
+        6,
+        28,
+        20,
+        38,
+        28
+      ],
+      "shifts_mod32": [
+        6,
+        6,
+        22,
+        14,
+        10,
+        8
+      ],
+      "displacements": [
+        6,
+        6,
+        22,
+        14,
+        10,
+        8
+      ],
+      "training_pair_overlaps": [
+        10,
+        18
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 14,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 28,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        54,
+        46
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        7,
+        7,
+        30,
+        22,
+        41,
+        31
+      ],
+      "shifts_mod32": [
+        7,
+        7,
+        23,
+        15,
+        11,
+        9
+      ],
+      "displacements": [
+        7,
+        7,
+        23,
+        15,
+        11,
+        9
+      ],
+      "training_pair_overlaps": [
+        9,
+        17
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 18,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": 32,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        55,
+        47
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        8,
+        8,
+        32,
+        24,
+        44,
+        34
+      ],
+      "shifts_mod32": [
+        8,
+        8,
+        24,
+        16,
+        12,
+        10
+      ],
+      "displacements": [
+        8,
+        8,
+        24,
+        16,
+        12,
+        10
+      ],
+      "training_pair_overlaps": [
+        8,
+        16
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 17,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 32,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        56,
+        48
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        9,
+        9,
+        34,
+        26,
+        47,
+        37
+      ],
+      "shifts_mod32": [
+        9,
+        9,
+        25,
+        17,
+        13,
+        11
+      ],
+      "displacements": [
+        9,
+        9,
+        25,
+        17,
+        13,
+        11
+      ],
+      "training_pair_overlaps": [
+        7,
+        15
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 11,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": 35,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        57,
+        49
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        10,
+        10,
+        36,
+        28,
+        50,
+        40
+      ],
+      "shifts_mod32": [
+        10,
+        10,
+        26,
+        18,
+        14,
+        12
+      ],
+      "displacements": [
+        10,
+        10,
+        26,
+        18,
+        14,
+        12
+      ],
+      "training_pair_overlaps": [
+        6,
+        14
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 5,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": 38,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        58,
+        50
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        11,
+        11,
+        38,
+        30,
+        53,
+        43
+      ],
+      "shifts_mod32": [
+        11,
+        11,
+        27,
+        19,
+        15,
+        13
+      ],
+      "displacements": [
+        11,
+        11,
+        27,
+        19,
+        15,
+        13
+      ],
+      "training_pair_overlaps": [
+        5,
+        13
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 12,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 38,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        59,
+        51
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        12,
+        12,
+        40,
+        32,
+        56,
+        46
+      ],
+      "shifts_mod32": [
+        12,
+        12,
+        28,
+        20,
+        16,
+        14
+      ],
+      "displacements": [
+        12,
+        12,
+        28,
+        20,
+        16,
+        14
+      ],
+      "training_pair_overlaps": [
+        4,
+        12
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 11,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": 41,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        60,
+        52
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        13,
+        13,
+        42,
+        34,
+        59,
+        49
+      ],
+      "shifts_mod32": [
+        13,
+        13,
+        29,
+        21,
+        17,
+        15
+      ],
+      "displacements": [
+        13,
+        13,
+        29,
+        21,
+        17,
+        15
+      ],
+      "training_pair_overlaps": [
+        3,
+        11
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 8,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": 44,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        61,
+        53
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        14,
+        14,
+        44,
+        36,
+        62,
+        52
+      ],
+      "shifts_mod32": [
+        14,
+        14,
+        30,
+        22,
+        18,
+        16
+      ],
+      "displacements": [
+        14,
+        14,
+        30,
+        22,
+        18,
+        16
+      ],
+      "training_pair_overlaps": [
+        2,
+        10
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 7,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 44,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        62,
+        54
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        15,
+        15,
+        46,
+        38,
+        65,
+        55
+      ],
+      "shifts_mod32": [
+        15,
+        15,
+        31,
+        23,
+        19,
+        17
+      ],
+      "displacements": [
+        15,
+        15,
+        31,
+        23,
+        19,
+        17
+      ],
+      "training_pair_overlaps": [
+        1,
+        9
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 4,
+      "first_conflict": {
+        "block_1based": 6,
+        "local_index": 1,
+        "stream": 1,
+        "coordinate": 39,
+        "previous_value": 0,
+        "new_value": 3
+      },
+      "unique_training_coordinates": [
+        63,
+        55
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        16,
+        16,
+        16,
+        40,
+        36,
+        58
+      ],
+      "shifts_mod32": [
+        16,
+        16,
+        0,
+        24,
+        20,
+        18
+      ],
+      "displacements": [
+        16,
+        16,
+        0,
+        24,
+        20,
+        18
+      ],
+      "training_pair_overlaps": [
+        32,
+        8
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 26,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 16,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        32,
+        56
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        17,
+        17,
+        18,
+        42,
+        39,
+        61
+      ],
+      "shifts_mod32": [
+        17,
+        17,
+        1,
+        25,
+        21,
+        19
+      ],
+      "displacements": [
+        17,
+        17,
+        1,
+        25,
+        21,
+        19
+      ],
+      "training_pair_overlaps": [
+        31,
+        7
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 22,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 3,
+        "stream": 0,
+        "coordinate": 21,
+        "previous_value": 1,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        33,
+        57
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        18,
+        18,
+        20,
+        44,
+        42,
+        64
+      ],
+      "shifts_mod32": [
+        18,
+        18,
+        2,
+        26,
+        22,
+        20
+      ],
+      "displacements": [
+        18,
+        18,
+        2,
+        26,
+        22,
+        20
+      ],
+      "training_pair_overlaps": [
+        30,
+        6
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 18,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 20,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        34,
+        58
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        19,
+        19,
+        22,
+        46,
+        45,
+        67
+      ],
+      "shifts_mod32": [
+        19,
+        19,
+        3,
+        27,
+        23,
+        21
+      ],
+      "displacements": [
+        19,
+        19,
+        3,
+        27,
+        23,
+        21
+      ],
+      "training_pair_overlaps": [
+        29,
+        5
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 24,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 22,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        35,
+        59
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        20,
+        20,
+        24,
+        48,
+        48,
+        70
+      ],
+      "shifts_mod32": [
+        20,
+        20,
+        4,
+        28,
+        24,
+        22
+      ],
+      "displacements": [
+        20,
+        20,
+        4,
+        28,
+        24,
+        22
+      ],
+      "training_pair_overlaps": [
+        28,
+        4
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 22,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 24,
+        "previous_value": 1,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        36,
+        60
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        21,
+        21,
+        26,
+        50,
+        51,
+        73
+      ],
+      "shifts_mod32": [
+        21,
+        21,
+        5,
+        29,
+        25,
+        23
+      ],
+      "displacements": [
+        21,
+        21,
+        5,
+        29,
+        25,
+        23
+      ],
+      "training_pair_overlaps": [
+        27,
+        3
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 14,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 5,
+        "stream": 0,
+        "coordinate": 31,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        37,
+        61
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        22,
+        22,
+        28,
+        52,
+        54,
+        76
+      ],
+      "shifts_mod32": [
+        22,
+        22,
+        6,
+        30,
+        26,
+        24
+      ],
+      "displacements": [
+        22,
+        22,
+        6,
+        30,
+        26,
+        24
+      ],
+      "training_pair_overlaps": [
+        26,
+        2
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 14,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 28,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        38,
+        62
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        23,
+        23,
+        30,
+        54,
+        57,
+        79
+      ],
+      "shifts_mod32": [
+        23,
+        23,
+        7,
+        31,
+        27,
+        25
+      ],
+      "displacements": [
+        23,
+        23,
+        7,
+        31,
+        27,
+        25
+      ],
+      "training_pair_overlaps": [
+        25,
+        1
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 20,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 30,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        39,
+        63
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        24,
+        24,
+        32,
+        24,
+        60,
+        50
+      ],
+      "shifts_mod32": [
+        24,
+        24,
+        8,
+        0,
+        28,
+        26
+      ],
+      "displacements": [
+        24,
+        24,
+        8,
+        0,
+        28,
+        26
+      ],
+      "training_pair_overlaps": [
+        24,
+        32
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 32,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": 33,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        40,
+        32
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        25,
+        25,
+        34,
+        26,
+        63,
+        53
+      ],
+      "shifts_mod32": [
+        25,
+        25,
+        9,
+        1,
+        29,
+        27
+      ],
+      "displacements": [
+        25,
+        25,
+        9,
+        1,
+        29,
+        27
+      ],
+      "training_pair_overlaps": [
+        23,
+        31
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 33,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 3,
+        "stream": 0,
+        "coordinate": 37,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        41,
+        33
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        26,
+        26,
+        36,
+        28,
+        66,
+        56
+      ],
+      "shifts_mod32": [
+        26,
+        26,
+        10,
+        2,
+        30,
+        28
+      ],
+      "displacements": [
+        26,
+        26,
+        10,
+        2,
+        30,
+        28
+      ],
+      "training_pair_overlaps": [
+        22,
+        30
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 27,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 36,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        42,
+        34
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        27,
+        27,
+        38,
+        30,
+        69,
+        59
+      ],
+      "shifts_mod32": [
+        27,
+        27,
+        11,
+        3,
+        31,
+        29
+      ],
+      "displacements": [
+        27,
+        27,
+        11,
+        3,
+        31,
+        29
+      ],
+      "training_pair_overlaps": [
+        21,
+        29
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 32,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 38,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        43,
+        35
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        28,
+        28,
+        40,
+        32,
+        40,
+        62
+      ],
+      "shifts_mod32": [
+        28,
+        28,
+        12,
+        4,
+        0,
+        30
+      ],
+      "displacements": [
+        28,
+        28,
+        12,
+        4,
+        0,
+        30
+      ],
+      "training_pair_overlaps": [
+        20,
+        28
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 28,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 40,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        44,
+        36
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        29,
+        29,
+        42,
+        34,
+        43,
+        65
+      ],
+      "shifts_mod32": [
+        29,
+        29,
+        13,
+        5,
+        1,
+        31
+      ],
+      "displacements": [
+        29,
+        29,
+        13,
+        5,
+        1,
+        31
+      ],
+      "training_pair_overlaps": [
+        19,
+        27
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 24,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": 44,
+        "previous_value": 0,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        45,
+        37
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        30,
+        30,
+        44,
+        36,
+        46,
+        36
+      ],
+      "shifts_mod32": [
+        30,
+        30,
+        14,
+        6,
+        2,
+        0
+      ],
+      "displacements": [
+        30,
+        30,
+        14,
+        6,
+        2,
+        0
+      ],
+      "training_pair_overlaps": [
+        18,
+        26
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 24,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": 44,
+        "previous_value": 2,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        46,
+        38
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonnegative",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        31,
+        31,
+        46,
+        38,
+        49,
+        39
+      ],
+      "shifts_mod32": [
+        31,
+        31,
+        15,
+        7,
+        3,
+        1
+      ],
+      "displacements": [
+        31,
+        31,
+        15,
+        7,
+        3,
+        1
+      ],
+      "training_pair_overlaps": [
+        17,
+        25
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 29,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": 47,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        47,
+        39
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 0,
+      "starts": [
+        0,
+        0,
+        0,
+        0,
+        -16,
+        -24,
+        -44,
+        -54
+      ],
+      "shifts_mod32": [
+        0,
+        0,
+        16,
+        8,
+        4,
+        2
+      ],
+      "displacements": [
+        0,
+        0,
+        -16,
+        -24,
+        -28,
+        -30
+      ],
+      "training_pair_overlaps": [
+        16,
+        8
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 17,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 16,
+        "stream": 0,
+        "coordinate": 0,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        48,
+        56
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 1,
+      "starts": [
+        0,
+        0,
+        -31,
+        -31,
+        -46,
+        -54,
+        -73,
+        -83
+      ],
+      "shifts_mod32": [
+        1,
+        1,
+        17,
+        9,
+        5,
+        3
+      ],
+      "displacements": [
+        -31,
+        -31,
+        -15,
+        -23,
+        -27,
+        -29
+      ],
+      "training_pair_overlaps": [
+        17,
+        9
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 18,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 15,
+        "stream": 0,
+        "coordinate": -31,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        47,
+        55
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 2,
+      "starts": [
+        0,
+        0,
+        -30,
+        -30,
+        -44,
+        -52,
+        -70,
+        -80
+      ],
+      "shifts_mod32": [
+        2,
+        2,
+        18,
+        10,
+        6,
+        4
+      ],
+      "displacements": [
+        -30,
+        -30,
+        -14,
+        -22,
+        -26,
+        -28
+      ],
+      "training_pair_overlaps": [
+        18,
+        10
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 15,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 14,
+        "stream": 0,
+        "coordinate": -30,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        46,
+        54
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 3,
+      "starts": [
+        0,
+        0,
+        -29,
+        -29,
+        -42,
+        -50,
+        -67,
+        -77
+      ],
+      "shifts_mod32": [
+        3,
+        3,
+        19,
+        11,
+        7,
+        5
+      ],
+      "displacements": [
+        -29,
+        -29,
+        -13,
+        -21,
+        -25,
+        -27
+      ],
+      "training_pair_overlaps": [
+        19,
+        11
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 19,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 13,
+        "stream": 0,
+        "coordinate": -29,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        45,
+        53
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 4,
+      "starts": [
+        0,
+        0,
+        -28,
+        -28,
+        -40,
+        -48,
+        -64,
+        -74
+      ],
+      "shifts_mod32": [
+        4,
+        4,
+        20,
+        12,
+        8,
+        6
+      ],
+      "displacements": [
+        -28,
+        -28,
+        -12,
+        -20,
+        -24,
+        -26
+      ],
+      "training_pair_overlaps": [
+        20,
+        12
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 21,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 12,
+        "stream": 0,
+        "coordinate": -28,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        44,
+        52
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 5,
+      "starts": [
+        0,
+        0,
+        -27,
+        -27,
+        -38,
+        -46,
+        -61,
+        -71
+      ],
+      "shifts_mod32": [
+        5,
+        5,
+        21,
+        13,
+        9,
+        7
+      ],
+      "displacements": [
+        -27,
+        -27,
+        -11,
+        -19,
+        -23,
+        -25
+      ],
+      "training_pair_overlaps": [
+        21,
+        13
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 22,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 11,
+        "stream": 0,
+        "coordinate": -27,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        43,
+        51
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 6,
+      "starts": [
+        0,
+        0,
+        -26,
+        -26,
+        -36,
+        -44,
+        -58,
+        -68
+      ],
+      "shifts_mod32": [
+        6,
+        6,
+        22,
+        14,
+        10,
+        8
+      ],
+      "displacements": [
+        -26,
+        -26,
+        -10,
+        -18,
+        -22,
+        -24
+      ],
+      "training_pair_overlaps": [
+        22,
+        14
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 14,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 10,
+        "stream": 0,
+        "coordinate": -26,
+        "previous_value": 3,
+        "new_value": 1
+      },
+      "unique_training_coordinates": [
+        42,
+        50
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 7,
+      "starts": [
+        0,
+        0,
+        -25,
+        -25,
+        -34,
+        -42,
+        -55,
+        -65
+      ],
+      "shifts_mod32": [
+        7,
+        7,
+        23,
+        15,
+        11,
+        9
+      ],
+      "displacements": [
+        -25,
+        -25,
+        -9,
+        -17,
+        -21,
+        -23
+      ],
+      "training_pair_overlaps": [
+        23,
+        15
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 29,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 9,
+        "stream": 0,
+        "coordinate": -25,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        41,
+        49
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 8,
+      "starts": [
+        0,
+        0,
+        -24,
+        -24,
+        -32,
+        -40,
+        -52,
+        -62
+      ],
+      "shifts_mod32": [
+        8,
+        8,
+        24,
+        16,
+        12,
+        10
+      ],
+      "displacements": [
+        -24,
+        -24,
+        -8,
+        -16,
+        -20,
+        -22
+      ],
+      "training_pair_overlaps": [
+        24,
+        16
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 26,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 8,
+        "stream": 0,
+        "coordinate": -24,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        40,
+        48
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 9,
+      "starts": [
+        0,
+        0,
+        -23,
+        -23,
+        -30,
+        -38,
+        -49,
+        -59
+      ],
+      "shifts_mod32": [
+        9,
+        9,
+        25,
+        17,
+        13,
+        11
+      ],
+      "displacements": [
+        -23,
+        -23,
+        -7,
+        -15,
+        -19,
+        -21
+      ],
+      "training_pair_overlaps": [
+        25,
+        17
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 28,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 7,
+        "stream": 0,
+        "coordinate": -23,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        39,
+        47
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 10,
+      "starts": [
+        0,
+        0,
+        -22,
+        -22,
+        -28,
+        -36,
+        -46,
+        -56
+      ],
+      "shifts_mod32": [
+        10,
+        10,
+        26,
+        18,
+        14,
+        12
+      ],
+      "displacements": [
+        -22,
+        -22,
+        -6,
+        -14,
+        -18,
+        -20
+      ],
+      "training_pair_overlaps": [
+        26,
+        18
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 9,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 18,
+        "stream": 0,
+        "coordinate": -10,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        38,
+        46
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 11,
+      "starts": [
+        0,
+        0,
+        -21,
+        -21,
+        -26,
+        -34,
+        -43,
+        -53
+      ],
+      "shifts_mod32": [
+        11,
+        11,
+        27,
+        19,
+        15,
+        13
+      ],
+      "displacements": [
+        -21,
+        -21,
+        -5,
+        -13,
+        -17,
+        -19
+      ],
+      "training_pair_overlaps": [
+        27,
+        19
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 32,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 5,
+        "stream": 0,
+        "coordinate": -21,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        37,
+        45
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 12,
+      "starts": [
+        0,
+        0,
+        -20,
+        -20,
+        -24,
+        -32,
+        -40,
+        -50
+      ],
+      "shifts_mod32": [
+        12,
+        12,
+        28,
+        20,
+        16,
+        14
+      ],
+      "displacements": [
+        -20,
+        -20,
+        -4,
+        -12,
+        -16,
+        -18
+      ],
+      "training_pair_overlaps": [
+        28,
+        20
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 29,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 4,
+        "stream": 0,
+        "coordinate": -20,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        36,
+        44
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 13,
+      "starts": [
+        0,
+        0,
+        -19,
+        -19,
+        -22,
+        -30,
+        -37,
+        -47
+      ],
+      "shifts_mod32": [
+        13,
+        13,
+        29,
+        21,
+        17,
+        15
+      ],
+      "displacements": [
+        -19,
+        -19,
+        -3,
+        -11,
+        -15,
+        -17
+      ],
+      "training_pair_overlaps": [
+        29,
+        21
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 33,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 3,
+        "stream": 0,
+        "coordinate": -19,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        35,
+        43
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 14,
+      "starts": [
+        0,
+        0,
+        -18,
+        -18,
+        -20,
+        -28,
+        -34,
+        -44
+      ],
+      "shifts_mod32": [
+        14,
+        14,
+        30,
+        22,
+        18,
+        16
+      ],
+      "displacements": [
+        -18,
+        -18,
+        -2,
+        -10,
+        -14,
+        -16
+      ],
+      "training_pair_overlaps": [
+        30,
+        22
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 21,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 2,
+        "stream": 0,
+        "coordinate": -18,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        34,
+        42
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 15,
+      "starts": [
+        0,
+        0,
+        -17,
+        -17,
+        -18,
+        -26,
+        -31,
+        -41
+      ],
+      "shifts_mod32": [
+        15,
+        15,
+        31,
+        23,
+        19,
+        17
+      ],
+      "displacements": [
+        -17,
+        -17,
+        -1,
+        -9,
+        -13,
+        -15
+      ],
+      "training_pair_overlaps": [
+        31,
+        23
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 40,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 1,
+        "stream": 0,
+        "coordinate": -17,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        33,
+        41
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 16,
+      "starts": [
+        0,
+        0,
+        -16,
+        -16,
+        -16,
+        -24,
+        -28,
+        -38
+      ],
+      "shifts_mod32": [
+        16,
+        16,
+        0,
+        24,
+        20,
+        18
+      ],
+      "displacements": [
+        -16,
+        -16,
+        0,
+        -8,
+        -12,
+        -14
+      ],
+      "training_pair_overlaps": [
+        32,
+        24
+      ],
+      "meets_minimum_training_overlap": true,
+      "training_conflicts": 36,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 0,
+        "stream": 0,
+        "coordinate": -16,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        32,
+        40
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 17,
+      "starts": [
+        0,
+        0,
+        -15,
+        -15,
+        -46,
+        -22,
+        -57,
+        -35
+      ],
+      "shifts_mod32": [
+        17,
+        17,
+        1,
+        25,
+        21,
+        19
+      ],
+      "displacements": [
+        -15,
+        -15,
+        -31,
+        -7,
+        -11,
+        -13
+      ],
+      "training_pair_overlaps": [
+        1,
+        25
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 16,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 31,
+        "stream": 0,
+        "coordinate": -15,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        63,
+        39
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 18,
+      "starts": [
+        0,
+        0,
+        -14,
+        -14,
+        -44,
+        -20,
+        -54,
+        -32
+      ],
+      "shifts_mod32": [
+        18,
+        18,
+        2,
+        26,
+        22,
+        20
+      ],
+      "displacements": [
+        -14,
+        -14,
+        -30,
+        -6,
+        -10,
+        -12
+      ],
+      "training_pair_overlaps": [
+        2,
+        26
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 8,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 30,
+        "stream": 0,
+        "coordinate": -14,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        62,
+        38
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 19,
+      "starts": [
+        0,
+        0,
+        -13,
+        -13,
+        -42,
+        -18,
+        -51,
+        -29
+      ],
+      "shifts_mod32": [
+        19,
+        19,
+        3,
+        27,
+        23,
+        21
+      ],
+      "displacements": [
+        -13,
+        -13,
+        -29,
+        -5,
+        -9,
+        -11
+      ],
+      "training_pair_overlaps": [
+        3,
+        27
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 22,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 29,
+        "stream": 0,
+        "coordinate": -13,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        61,
+        37
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 20,
+      "starts": [
+        0,
+        0,
+        -12,
+        -12,
+        -40,
+        -16,
+        -48,
+        -26
+      ],
+      "shifts_mod32": [
+        20,
+        20,
+        4,
+        28,
+        24,
+        22
+      ],
+      "displacements": [
+        -12,
+        -12,
+        -28,
+        -4,
+        -8,
+        -10
+      ],
+      "training_pair_overlaps": [
+        4,
+        28
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 23,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 28,
+        "stream": 0,
+        "coordinate": -12,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        60,
+        36
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 21,
+      "starts": [
+        0,
+        0,
+        -11,
+        -11,
+        -38,
+        -14,
+        -45,
+        -23
+      ],
+      "shifts_mod32": [
+        21,
+        21,
+        5,
+        29,
+        25,
+        23
+      ],
+      "displacements": [
+        -11,
+        -11,
+        -27,
+        -3,
+        -7,
+        -9
+      ],
+      "training_pair_overlaps": [
+        5,
+        29
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 24,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 27,
+        "stream": 0,
+        "coordinate": -11,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        59,
+        35
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 22,
+      "starts": [
+        0,
+        0,
+        -10,
+        -10,
+        -36,
+        -12,
+        -42,
+        -20
+      ],
+      "shifts_mod32": [
+        22,
+        22,
+        6,
+        30,
+        26,
+        24
+      ],
+      "displacements": [
+        -10,
+        -10,
+        -26,
+        -2,
+        -6,
+        -8
+      ],
+      "training_pair_overlaps": [
+        6,
+        30
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 19,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 26,
+        "stream": 0,
+        "coordinate": -10,
+        "previous_value": 3,
+        "new_value": 1
+      },
+      "unique_training_coordinates": [
+        58,
+        34
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 23,
+      "starts": [
+        0,
+        0,
+        -9,
+        -9,
+        -34,
+        -10,
+        -39,
+        -17
+      ],
+      "shifts_mod32": [
+        23,
+        23,
+        7,
+        31,
+        27,
+        25
+      ],
+      "displacements": [
+        -9,
+        -9,
+        -25,
+        -1,
+        -5,
+        -7
+      ],
+      "training_pair_overlaps": [
+        7,
+        31
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 22,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 25,
+        "stream": 0,
+        "coordinate": -9,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        57,
+        33
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 24,
+      "starts": [
+        0,
+        0,
+        -8,
+        -8,
+        -32,
+        -8,
+        -36,
+        -14
+      ],
+      "shifts_mod32": [
+        24,
+        24,
+        8,
+        0,
+        28,
+        26
+      ],
+      "displacements": [
+        -8,
+        -8,
+        -24,
+        0,
+        -4,
+        -6
+      ],
+      "training_pair_overlaps": [
+        8,
+        32
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 26,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 24,
+        "stream": 0,
+        "coordinate": -8,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        56,
+        32
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 25,
+      "starts": [
+        0,
+        0,
+        -7,
+        -7,
+        -30,
+        -38,
+        -33,
+        -43
+      ],
+      "shifts_mod32": [
+        25,
+        25,
+        9,
+        1,
+        29,
+        27
+      ],
+      "displacements": [
+        -7,
+        -7,
+        -23,
+        -31,
+        -3,
+        -5
+      ],
+      "training_pair_overlaps": [
+        9,
+        1
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 8,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 23,
+        "stream": 0,
+        "coordinate": -7,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        55,
+        63
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 26,
+      "starts": [
+        0,
+        0,
+        -6,
+        -6,
+        -28,
+        -36,
+        -30,
+        -40
+      ],
+      "shifts_mod32": [
+        26,
+        26,
+        10,
+        2,
+        30,
+        28
+      ],
+      "displacements": [
+        -6,
+        -6,
+        -22,
+        -30,
+        -2,
+        -4
+      ],
+      "training_pair_overlaps": [
+        10,
+        2
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 3,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 22,
+        "stream": 0,
+        "coordinate": -6,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        54,
+        62
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 27,
+      "starts": [
+        0,
+        0,
+        -5,
+        -5,
+        -26,
+        -34,
+        -27,
+        -37
+      ],
+      "shifts_mod32": [
+        27,
+        27,
+        11,
+        3,
+        31,
+        29
+      ],
+      "displacements": [
+        -5,
+        -5,
+        -21,
+        -29,
+        -1,
+        -3
+      ],
+      "training_pair_overlaps": [
+        11,
+        3
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 9,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 21,
+        "stream": 0,
+        "coordinate": -5,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        53,
+        61
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 28,
+      "starts": [
+        0,
+        0,
+        -4,
+        -4,
+        -24,
+        -32,
+        -24,
+        -34
+      ],
+      "shifts_mod32": [
+        28,
+        28,
+        12,
+        4,
+        0,
+        30
+      ],
+      "displacements": [
+        -4,
+        -4,
+        -20,
+        -28,
+        0,
+        -2
+      ],
+      "training_pair_overlaps": [
+        12,
+        4
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 11,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 20,
+        "stream": 0,
+        "coordinate": -4,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        52,
+        60
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 29,
+      "starts": [
+        0,
+        0,
+        -3,
+        -3,
+        -22,
+        -30,
+        -53,
+        -31
+      ],
+      "shifts_mod32": [
+        29,
+        29,
+        13,
+        5,
+        1,
+        31
+      ],
+      "displacements": [
+        -3,
+        -3,
+        -19,
+        -27,
+        -31,
+        -1
+      ],
+      "training_pair_overlaps": [
+        13,
+        5
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 13,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 19,
+        "stream": 0,
+        "coordinate": -3,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        51,
+        59
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 30,
+      "starts": [
+        0,
+        0,
+        -2,
+        -2,
+        -20,
+        -28,
+        -50,
+        -28
+      ],
+      "shifts_mod32": [
+        30,
+        30,
+        14,
+        6,
+        2,
+        0
+      ],
+      "displacements": [
+        -2,
+        -2,
+        -18,
+        -26,
+        -30,
+        0
+      ],
+      "training_pair_overlaps": [
+        14,
+        6
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 10,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 18,
+        "stream": 0,
+        "coordinate": -2,
+        "previous_value": 3,
+        "new_value": 0
+      },
+      "unique_training_coordinates": [
+        50,
+        58
+      ],
+      "training_exact": false
+    },
+    {
+      "policy": "nonpositive",
+      "offset_a": 31,
+      "starts": [
+        0,
+        0,
+        -1,
+        -1,
+        -18,
+        -26,
+        -47,
+        -57
+      ],
+      "shifts_mod32": [
+        31,
+        31,
+        15,
+        7,
+        3,
+        1
+      ],
+      "displacements": [
+        -1,
+        -1,
+        -17,
+        -25,
+        -29,
+        -31
+      ],
+      "training_pair_overlaps": [
+        15,
+        7
+      ],
+      "meets_minimum_training_overlap": false,
+      "training_conflicts": 13,
+      "first_conflict": {
+        "block_1based": 5,
+        "local_index": 17,
+        "stream": 0,
+        "coordinate": -1,
+        "previous_value": 3,
+        "new_value": 2
+      },
+      "unique_training_coordinates": [
+        49,
+        57
+      ],
+      "training_exact": false
+    }
+  ],
+  "no_private_key_search": true,
+  "limitations": [
+    "Same previously observed image; holdout is parameter-fitting exclusion, not prospective measurement",
+    "Two parity streams and this phase family are hypotheses",
+    "A stored arbitrary template is not yet a key-derived encoder",
+    "Failure excludes only this exact window/index family, not all longer-stream encoders",
+    "Original states and full residual retained; no private-key search"
+  ]
+}
