@@ -1,0 +1,57 @@
+{
+  "purpose": "Independent C42 quadrature/least-squares audit, not a new hypothesis search",
+  "independently_replayed_variants": 6,
+  "pixel_values_per_variant": 225,
+  "global_training_selected_reference": "regular4",
+  "passing_pixel_gate": 0,
+  "variants": [
+    {
+      "pattern": "NMRM",
+      "carrier": "flat",
+      "training_MSE": 486.18061749757976,
+      "heldout_MSE": 1328.599157398173,
+      "heldout_errors_gt1": 83
+    },
+    {
+      "pattern": "NMRM",
+      "carrier": "palette",
+      "training_MSE": 74.18763709768298,
+      "heldout_MSE": 310.989270365335,
+      "heldout_errors_gt1": 67
+    },
+    {
+      "pattern": "XEX",
+      "carrier": "flat",
+      "training_MSE": 1254.8038189344356,
+      "heldout_MSE": 4253.867235115432,
+      "heldout_errors_gt1": 91
+    },
+    {
+      "pattern": "XEX",
+      "carrier": "palette",
+      "training_MSE": 454.12503061016264,
+      "heldout_MSE": 1265.9420063029388,
+      "heldout_errors_gt1": 64
+    },
+    {
+      "pattern": "regular4",
+      "carrier": "flat",
+      "training_MSE": 1130.3980248846328,
+      "heldout_MSE": 3892.035087719298,
+      "heldout_errors_gt1": 64
+    },
+    {
+      "pattern": "regular4",
+      "carrier": "palette",
+      "training_MSE": 42.60103585400197,
+      "heldout_MSE": 1404.1458536317302,
+      "heldout_errors_gt1": 32
+    }
+  ],
+  "input_sha256": {
+    "research/data/marker_raster_check.json": "8d998435fe781079a1f9a2c25d46c4410cba02add52123884f3b549e59e579a6",
+    "research/data/marker_raster_predictions.npz": "95c7b33099b6017ab6e65e14ea4eac8cb097a6959493b09883794bd62482b935",
+    "research/data/marker_raster_search.npz": "031d3e024cc05fcc07e2386b547a88e482bf434de437a4ebce361d9f71994fb5",
+    "tools/audit_marker_raster.py": "fb2ee05f5e6b2cf12ddebbff64797c86b745f476fdafe278706091b97e81cd75"
+  }
+}

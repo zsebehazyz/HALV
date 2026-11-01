@@ -25,40 +25,36 @@ korábban nem naplózott számításokat vagy forrásokat.
 - A Level 2 és Level 5 történeti pozitív kontrolljai reprodukáltak; a régi
   nyilvános megoldási kulcsok nem HALV-találatok.
 
-### Legutóbbi végrehajtott kör: C39–C41
+### Legutóbbi végrehajtott kör: C42–C43
 
-A felhasználó újra a jelölő, Fibonacci–Morse–hang és árfolyam ágát kérte.
-A hét fényességszint mind a 43 erősebb markerpixelre ±1 pontossággal illik,
-de egyetlen rögzített hét­soros fázis csak 26-ot magyaráz. Az x=91 oszlop
-globális küszöbös családjában XEX nem jön ki, NMRM 309 ismétlődéseket is
-tartalmazó receptből kijön; egyik kilencjeles kivágat sem pontos 1:3:7 Morse.
+A teljes háromoszlopos markerhez NMRM, XEX és négy szabályos impulzus
+modellje készült. Az y438..474 pixeleken illesztett, majd változatlanul
+alkalmazott modellek egyike sem teljesítette az y475..512 pixeleken a
+±1 fényességkaput. A tanításon a referenciajel nyert; NMRM ellenőrzőhibája
+kisebb, de még így is nagy. Nem származtattunk ebből hullámvezérlő órát.
+Az eredmény az empirikus rasztercsalád negatívuma, nem általános Morse-kizárás.
 
-A 256 csúcsérték teljes szöveges és CSV-exportja elkészült. A blokkon belüli
-744 pixeldelta a 248 csúcsdelta háromszoros ismétlése a modellben. Az így
-képzett Fibonacci-indexek alsó bitje egyszerű paritáskülönbség, nem új adat.
+A geometriai ágon pontosan vizsgáltuk a négyállapotú cellák információját.
+Terület önmagában 22 különböző mintát különít el a 256-ból; terület+első
+momentum 184-et; az első három momentum mind a 256-ot, ismert jobb
+határ mellett. A szabályos 3+1 cellák 16 lehetséges mintájához két momentum
+elég minden fázisban. A végpontfolytatás ellenőrzése után három momentumból
+az összes 64 cella visszaállítható mentett jobb határok nélkül is.
 
-A teljes kétbites bemenet 96 Fibonacci-dekódercsaládjában mind a 256 kezdeti
-állapotot lefuttattuk: 24 576 feltételezett, 128 mintás PCM-kimenet,
-13 299 különböző amplitúdóaktivitás-maszk. A rögzített szigorú, legalább
-8 jelből és 3 karakterből álló Morse-feltételt egyik sem teljesíti.
-Eredeti hangformátumot, időalapot vagy titkosítást továbbra sem azonosítottunk.
-
-A 24 rögzített árfolyamalak-modell legjobbja 3,34% javulást ad az alapjóslathoz
-képest a kihagyott blokkokon; a család szintjén eltolásos referenciák 40,2%-a
-legalább ilyen jó. Ez nem érdemi támasz az árfolyamhipotézishez, de nem
-tetszőleges árfolyamkódolás kizárása. A „Cracked it…” idézet már a kezdeti
-felhasználói jegyzetben is szerepelt; önállóan ellenőrzött forrás továbbra sincs.
+A teljes 256 q-állapotot a normalizált és fizikai csúcsmagasságokból képzett
+momentumokból is pontosan visszakaptuk, a feleződő skálahatárokkal együtt.
+Ez az eredeti jel információt megtartó másik leírása, nem új kulcsanyag
+vagy a szerző kódolójának azonosítása. A C33 területi kioltásai az első
+momentumban már látszanak; egy új ellenpélda szerint két momentum sem
+mindig elég a teljes cellaábécén.
 
 ### Nyitott munkafeladat
 
-A 22. körben a meglévő eredmények alapján rangsoroltuk a nyomokat; új
-dekóderfutás vagy kulcskeresés nem történt. Első a 12 px-es, 3+1 bites
-cellaszerkezet és a teljes maradék közös magyarázata. Következő célzott
-feladat a marker három oszlopának teljes rasztermodellje: rögzített
-rajzolási paraméterekkel és közös órával megjósolni a kihagyott pixeleket,
-NMRM/XEX és szabályos referenciajel versengő értelmezése mellett.
-A küszöbölt pontos időzítés negatívuma önmagában nem rasterizált Morse-kizárás.
-Utána csak az így alátámasztott órajelet vagy maszkot vigyük a hullámmodellbe.
+A 22. körben javasolt markerpróba lefutott, de nem adott a teljes pixelhibát
+megmagyarázó órát vagy maszkot. Ezt nem pótoljuk jelként külön igazított
+paraméterrel. A következő generátorjelölt a hárommomentumos cellaleírást
+is használhatja, de egy konkrét kulcsból kell előállítania a mért értékeket;
+a q→momentum→q kör önmagában nem fejti meg a kulcsot.
 
 Olyan közös előállítási szabály kell, amely változó jelalakot is generál,
 és a külső mintákat, az összes R-bitet, a felezési skálát és fázist együtt

@@ -1880,6 +1880,97 @@
           "sha256": "8fcbed97a056f4e4449919f39b239044263e529b515773aa7c107f061634094b"
         }
       ]
+    },
+    {
+      "journal_round": 23,
+      "offset": 343094,
+      "bytes": 19836,
+      "sha256": "cc620de27e5c747cc2e452724b9223d8b335aa76dabed6bfb3986990b9c4cd2b",
+      "journal_section_sha256": "e4646815cb2d5ca62e6fdd8168269a7d1d78e83b4990b1db94b5737060764298",
+      "model_inputs": [
+        {
+          "path": "research/models/marker_raster_v1.json",
+          "bytes": 2825,
+          "sha256": "0af259cc226ece9818e72de211f258af7dca4c2d73c81bbcaf7ec1c97b7591ea"
+        },
+        {
+          "path": "research/models/cell_moment_identifiability_v1.json",
+          "bytes": 2167,
+          "sha256": "8f531679c1d25f22cbff59bfd3d0c9ecc8d5bb318088fa4dde7c40525acb4224"
+        }
+      ],
+      "artifact_inputs": [
+        {
+          "path": "research/data/cell_moment_collision.png",
+          "bytes": 85230,
+          "sha256": "423ba27c5f464a08404d05247ab11ccbf4f2c52f387e3bfcd37aa15b5b6aa41a"
+        },
+        {
+          "path": "research/data/cell_moments_check.json",
+          "bytes": 49901,
+          "sha256": "5e8c45e144e2be40f6e5dcc5a61fe3ea7a042db1160a16fff2a78b5d729b8bc6"
+        },
+        {
+          "path": "research/data/cell_moments_integrity.json",
+          "bytes": 627,
+          "sha256": "25dcbdb7ea4bb768807590f8ee80f660f779e217d7c69206337403c487ba9d59"
+        },
+        {
+          "path": "research/data/marker_raster_check.json",
+          "bytes": 13346,
+          "sha256": "8d998435fe781079a1f9a2c25d46c4410cba02add52123884f3b549e59e579a6"
+        },
+        {
+          "path": "research/data/marker_raster_comparison.png",
+          "bytes": 499494,
+          "sha256": "f2ac1c4c04c913f59cd933565cda0f33a6f93e0a9e826a254897a4567908cb3d"
+        },
+        {
+          "path": "research/data/marker_raster_integrity.json",
+          "bytes": 1814,
+          "sha256": "d105d6831a95352d05cc5a581001f412c109e2f99b6705124cfae2a75fdbbb9e"
+        },
+        {
+          "path": "research/data/marker_raster_predictions.npz",
+          "bytes": 5739,
+          "sha256": "95c7b33099b6017ab6e65e14ea4eac8cb097a6959493b09883794bd62482b935"
+        },
+        {
+          "path": "research/data/marker_raster_search.npz",
+          "bytes": 2573518,
+          "sha256": "031d3e024cc05fcc07e2386b547a88e482bf434de437a4ebce361d9f71994fb5"
+        },
+        {
+          "path": "tools/audit_cell_moments.py",
+          "bytes": 3401,
+          "sha256": "5da265f6d07c8c0edd4ca5b6006b6b70bd4c9c6b6044d2a185b45744f2cc6881"
+        },
+        {
+          "path": "tools/audit_marker_raster.py",
+          "bytes": 4814,
+          "sha256": "fb2ee05f5e6b2cf12ddebbff64797c86b745f476fdafe278706091b97e81cd75"
+        },
+        {
+          "path": "tools/check_cell_moments.py",
+          "bytes": 7630,
+          "sha256": "0508a3654e264c57bb008be4b20bad3c4965e3ea564413d1936a49f94c4a491e"
+        },
+        {
+          "path": "tools/check_marker_raster.py",
+          "bytes": 10036,
+          "sha256": "9dc67e46961a4a9ae41a929726203a5d0990da7b4a38f56aa17e2d78b7021054"
+        },
+        {
+          "path": "tools/plot_cell_moments.py",
+          "bytes": 1388,
+          "sha256": "692d02637b8d3e4b5ce0bef793530eace8c50e37d750efc3ac7421af1070ce6b"
+        },
+        {
+          "path": "tools/plot_marker_raster.py",
+          "bytes": 2129,
+          "sha256": "80981e4ab5be47dced0b1ad7f4e509454013eb740e6dcbf2bc8b5c36f0eda067"
+        }
+      ]
     }
   ]
 }

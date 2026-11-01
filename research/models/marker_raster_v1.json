@@ -1,0 +1,17 @@
+{
+  "model":"C42",
+  "question":"Can one calibrated three-column raster model predict heldout marker intensities asNMRM,XEX or four regular reference pulses?",
+  "roi":{"x":[90,91,92],"rows_inclusive":[438,512],"training_rows_inclusive":[438,474],"heldout_rows_inclusive":[475,512]},
+  "patterns":{"NMRM":"Standard1/3mark lengths,1intraletter and3interletter gaps","XEX":"Same standard timings","regular4":"Four3unit on intervals separated by1unit, no decoded letter claim"},
+  "mask_renderer":"Pixel-box integral of the union of continuous on intervals convolved with a normalized verticalGaussian; sigma0 uses exact interval/pixel intersection",
+  "carrier":"Flat1 or an8level palette0,23,47,75,107,141,178,216 normalized by216; floor(8*frac((y-438)/period+phase)); multiplied after vertical mask integration",
+  "transverse_profile":"Shared empirical profile fitted from training pixels with center>=3: mean(side)=c*center+d. Then predicted center=g*m*r; both sides=c*g*m*r+d*m*I(r>0). This calibrated transfer replaces an assumed physical pen width; no independent per-column or per-mark fits.",
+  "coarse_grid":{"origin_y":[439.5,446.5,0.25],"unit_pixels":[1.0,5.0,0.025],"vertical_sigma":[0,0.25,0.5,0.75,1.0],"palette_period_pixels":[6.5,7.75,0.125],"palette_phase_fraction":"0..15/16 in1/16 steps"},
+  "gain":"Analytic three-column least-squares gain using training rows only, clipped0..255; fixed background0",
+  "refinement":"Per pattern and carrier kind, refine the coarse training winner only: origin+/-0.25 step0.05,unit+/-0.025 step0.005,sigma+/-0.125 step0.025,period+/-0.125 step0.025,phase+/-1/16 step1/64; clip to global bounds,phase wraps; no heldout selection",
+  "selection":"Minimum trainingSSE; fixed enumeration, first minimum; also archive coarse per-geometry carrier winners to show search scope",
+  "metrics":"Training/heldout all3columnMSE, foreground-onlyMSE, heldout max error, number of intensity errors>1; gain/clock never chosen using heldout pixels",
+  "gate":"Only a model with all heldout intensities within1 can provide a candidate clock; Morse interpretation also must outperform the regular reference. Otherwise do not propagate a clock/mask to the wave.",
+  "calibration":"Exact pixel-box known answers,Gaussian area conservation,synthetic transverse profile,analytic gain against direct least-squares and a known synthetic raster candidate",
+  "limitations":["Approximate empirical renderer, not the author source renderer","Palette and competing texts chosen after seeing same image; holdout is reconstruction validation, not prospective discovery","Carrier multiplication order is declared, not identified from provenance","Finite grid plus local training-only refinement; failure is not universal Morse exclusion","No private-key search; fullq/R and geometric branch preserved"]
+}

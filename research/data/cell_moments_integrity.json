@@ -1,0 +1,18 @@
+{
+  "purpose": "Independent polynomial moment and source-free reverse audit",
+  "distinct_full_alphabet_signatures": [
+    22,
+    184,
+    256,
+    256
+  ],
+  "exactly_integrated_cells_in_both_domains": 128,
+  "reverse_recovered_states_normalized": 256,
+  "reverse_recovered_states_physical": 256,
+  "original_nodes_not_used_by_reverse_function": true,
+  "no_key_decoder_claim": true,
+  "input_sha256": {
+    "research/data/cell_moments_check.json": "5e8c45e144e2be40f6e5dcc5a61fe3ea7a042db1160a16fff2a78b5d729b8bc6",
+    "tools/audit_cell_moments.py": "5da265f6d07c8c0edd4ca5b6006b6b70bd4c9c6b6044d2a185b45744f2cc6881"
+  }
+}

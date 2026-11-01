@@ -1,0 +1,14 @@
+{
+  "model":"C43",
+  "question":"Which exact geometric features retain the ordering of the3+1cell data, including all residual-bearing cells?",
+  "geometry":"64cells,4 consecutive q nodes plus measured right boundary,3px interpolation, radiusq/2; last continuation repeats the final node as inC16",
+  "features":"J[k]=integral_0^4 u^k*q(u)/2du,k0..3 with linear q interpolation; horizontal pixel-coordinate moment=3^(k+1)*J[k]; vertical amplitude here is normalized",
+  "enumerations":"All256 possible q0..q3 states at fixed known right boundary0; adding another known right boundary changes only a constant. Also16 regular3+1 states for each zero phasez0..3",
+  "test":"Count exact signature collisions for1,2,3,4moments; do not infer an encoding from fit alone",
+  "actual_cells":"Compute all4 exact moments for all64 measured cells; preserve actual right nodes and reconstruct each cell by exact dictionary membership at the smallest globally injective moment count",
+  "followup_after_local_audit":"Test constant-continuation terminal injectivity and reverse reconstruction without saved right-node values; also repeat actual area/reconstruction in physical_nodes domain using measured scale ratios, including the seven half-scale boundary nodes",
+  "cross_checks":"Area must equal archivedC16 normalized half-q radius areas; C33 zero-area difference examples must have their higher moments evaluated exactly",
+  "calibration":"Constant and linear q profiles against closed integrals; explicit collision [0,0,2,0] versus[0,1,0,1] with shared right0 has same area and firstmoment",
+  "scope":"Identifiability of geometric observables, not a64value-to32byte key decoder. Initial local audit conditions on right node; followup decodes it from the next cell using only moment vectors, fixed scale schedule and declared endpoint continuation.",
+  "limitations":["Chosen cell grid remains a hypothesis about encoding semantics","More moments retain information but do not explain author mapping or provide key material independently","No arbitrary moment combination or normalization is selected to fit target address","No private-key search; all q/R data retained"]
+}

@@ -645,3 +645,38 @@ A geometriai64→32 ág párhuzamosan aktív. A konkrét8SVX/Morse család és
 A „Cracked it…” eredeti forrásának/algoritmusának hitelesítése értékes
 független nyom lehet, jelenleg nincs ilyen új bizonyíték. Rangsor és terv
 a meglévő fő MD22. fejezetében; nem végrehajtott C42-ként könyveljük.
+
+## C42–C43: markerjóslat és a teljes cellageometria információja
+
+C42 ténylegesen lefutott: háromoszlopos, tanításon kalibrált oldalprofil,
+közös időegység/kezdőpont/függőleges Gaussian-élsimítás, állandó vagy
+nyolcszintű periodikus fényességmoduláció. A 438..474 tanítórész alapján
+a szabályos négypulzusos referencia nyer. Az NMRM visszatartott hibája
+jobb, de egyik sem jósol minden y475..512 intenzitást ±1-re. A három
+elsődleges jelölt heldout MSE-je NMRM310,99, XEX1265,94, referencia1404,15.
+Nincs igazolt Morse-szöveg, és nem propagáltunk órát a hullámba.
+Ez a közelítő, empirikus rajzolócsalád negatívuma, nem minden rendereré.
+
+C43 azonos 12px cellák J_k=integral u^k*q(u)/2,k0..3 mennyiségeit vizsgálja
+pontosan. Adott jobb határ mellett a teljes4^4=256 cellaábécén1,2,3,4
+momentum rendre22,184,256,256 különböző aláírást ad. A három magas+egy
+alsó bitből álló16mintás részhalmaz minden fázisában két momentum injektív.
+Ezért a középső szabályos cellákra jó geometriai kód nem feltétlenül elég
+a maradékot hordozó cellákhoz; nem dobhatjuk el R-t.
+
+Konkrét ellenpélda azonos jobb0 mellett: [0,0,2,0] és [0,1,0,1] területe
+és első momentuma egyenlő, a második eltér. A C33 három nulla területű
+eltérésének első momentuma már nem nulla. Ez azonosíthatósági geometria,
+nem új független adat.
+
+A lokális audit után külön ellenőriztük a végpont folytatását: három
+momentummal a terminális cella256 mintája is különböző. Így visszafelé
+csak a momentumokból mind a256 eredeti állapot visszanyerhető, mentett
+jobb határok nélkül. Ez mind a normalizált, mind a fizikai csúcsmagasságok
+geometriájában működik, a hét félskálás határponttal. Az utolsó konstans
+végpontfolytatás továbbra is C16-ból örökölt geometriai feltevés.
+
+Minden64 cella azonos szabály szerint ellenőrzött, de hárommomentumos
+ábrázolásból még nem következik64adat→32kulcsbájt művelet. Nincs privátkulcs-
+próba. A további generátornak a teljes q/R mellett a geometriai értékeket
+is elő kell állítania egy megindokolt kulcskódolásból. Részletek a fő MD23. körében.

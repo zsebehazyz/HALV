@@ -161,6 +161,20 @@ def main():
             'best_exploratory_heldout_skill':d['best_exploratory_model']['heldout_skill'],
             'conditional_shift_reference_fraction':d['shift_reference_fraction_including_identity'],
             'not_global_p_value':True,'not_private_key_search':True})
+    p=ROOT/'research/data/marker_raster_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'train_selected_full_marker_raster_prediction',
+            'global_training_selected_pattern':d['global_primary_selected_by_training'],
+            'patterns_passing_pixel_gate':d['patterns_passing_pixel_gate'],
+            'clock_propagated_to_wave':d['clock_propagated_to_wave'],'not_private_key_search':True})
+    p=ROOT/'research/data/cell_moments_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'exact_geometric_cell_information',
+            'full_alphabet_distinct_signatures':[r['distinct_signatures'] for r in d['full_alphabet']],
+            'reverse_reconstruction':d['reverse_reconstruction_without_original_nodes'],
+            'not_key_decoder':True,'not_private_key_search':True})
     out={'purpose':'Persistent evidence index; read together with HYPOTHESES.md and LOG.md.',
          'counting_rule':'Do not sum per-run unique candidates as global uniques; overlap across runs has not been measured. Structural comparisons, WIF strings, hypotheses and private scalars are separate units.',
          'result_summaries':summaries,'structural_summaries':structural,'files':files}

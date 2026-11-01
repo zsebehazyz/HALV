@@ -2580,3 +2580,217 @@ modellfejezetet a fő MD-be. A teljes új naplókör a meglévő fő MD VÉGÉHE
 kerül22. fejezetként; a korábbi tartalom változatlan marad.
 
 **Ez kutatási rangsor és terv. Nincs új megfejtési eredmény vagy HALV-kulcs.**
+
+## 2026-11-01 – huszonharmadik kör: teljes marker-raszter és a maradékot megtartó cellageometria
+
+### 1. Kérés, bemenet és a két vizsgálat szerepe
+
+A felhasználó a 22. kör három prioritását emelte ki: a 12 px-es cellák,
+eltolódó 3+1 bitszerkezet és teljes maradék közös magyarázata; a jelölő
+három oszlopának visszarajzolása; az aláírás/felezés/geometria ág megőrzése.
+Elsőként a rögzített markerpróba futott le, mellette pontos geometriai
+információvizsgálat készült. Ez nem a teljes kulcsgenerátor megtalálása.
+
+Bemenet a korábban archivált `sources/cryptoHALV.png`, SHA-256:
+`3a487ebaeb4801137f09159a2d533046936cd395f4e2f7d115ac554607790e95`,
+valamint a kanonikus, 256 darab 0..3 állapotot tartalmazó rekonstrukció.
+A képfájl eredeti készítői publikációval való bájtpontos azonosságáról
+nincs új forrásellenőrzés. A korábbi q/R-, Fibonacci–hang-, aláírás-, dátum-
+és geometriai adatokat változatlanul megőrizzük. Új jelentés-MD nem készül.
+
+### 2. C42: közös háromoszlopos előállítási modell
+
+A pontos recept a `models/marker_raster_v1.json` fájlban van. A képrész
+x=90,91,92; y=438..512, összesen 225 intenzitásérték. Tanító rész:
+y=438..474, 111 pixel; ellenőrző rész: y=475..512, 114 pixel. A már ismert
+kép ilyen visszatartása feltáró rekonstrukciós ellenőrzés, nem új mérés.
+
+Három rögzített mintázat versenyez:
+
+- NMRM: `-. | -- | .-. | --`, szabályos 1/3 jelhosszakkal,
+  1 egységnyi belső és 3 egységnyi betűközi szünettel.
+- XEX: `-..- | . | -..-`, ugyanazzal az időzítési szabállyal.
+- `regular4`: négy 3 egységes impulzus, köztük 1 egységes szünet;
+  ez referenciajel, nem megfejtett szöveg.
+
+A függőleges modell folytonos impulzusintervallumok és normált Gauss-kernel
+konvolúciójának pixelterület-integrálja. Nulla szórásnál pontos intervallum–
+pixeldoboz metszet. Minden mintázatnak egyetlen kezdőpozíciója, időegysége,
+függőleges szórása és közös fényességparamétere van; nincs betűnkénti javítás.
+
+A 22. körben felvetett fizikai vonalszélesség helyett itt közös, empirikus
+keresztirányú átvitelt illesztettünk a tanító rész center>=3 pixeleire:
+`átlag(szélsők)=c*közép+d`, ahol c=0,399464174 és d=3,428973717.
+Ez deklarált közelítés, nem a készítő fizikai rajzolóeljárásának azonosítása.
+A két szélső oszlop ugyanazt az átvitelt kapja, külön oszlopillesztés nélkül.
+
+A hordozó vagy állandó 1, vagy a korábban mért
+`0,23,47,75,107,141,178,216` paletta periodikus lépcsője, 216-tal normálva.
+A hordozót a függőleges maszk integrálása UTÁN szorozzuk rá. Ez a műveleti
+sorrend modellválasztás, nem bizonyított alkotói sorrend. A középső oszlop
+jóslata g*m*r, a két szélsőé c*g*m*r+d*m*I(r>0). A g közös erősítését
+háromoszlopos legkisebb négyzetekkel, kizárólag tanítópixelekből számoljuk,
+0..255 közé korlátozva; a háttér rögzítetten nulla.
+
+A durva keresés kezdőpozíciója 439,5..446,5, lépés 0,25; időegysége
+1..5 px, lépés 0,025; szórása 0;0,25;0,5;0,75;1. A palettás változat
+periódusa 6,5..7,75 px, lépés 0,125, fázisa 0..15/16. Mintázatonként
+és hordozónként csak a tanítóhiba minimumát finomítjuk a JSON-ban rögzített
+szűk tartományon. A döntés sem a durva, sem a finom keresésnél nem használ
+ellenőrzőpixeleket. A numerikus raszterpróbák nem privátkulcs-próbák.
+
+### 3. C42 eredmény: egyik modell sem ad átvihető órát
+
+A mintázatonként tanítóhibával kiválasztott jobb változat mindhárom esetben
+palettás. Az MSE az összes háromoszlopos intenzitás négyzetes hibájának
+átlaga; nem koordinátahiba és nem százalék.
+
+| Mintázat | Tanító MSE | Ellenőrző MSE | Legnagyobb ellenőrzőhiba | ±1-nél nagyobb hibák /114 |
+| --- | ---: | ---: | ---: | ---: |
+| NMRM | 74,187637 | 310,989270 | 82,873814 | 67 |
+| XEX | 454,125031 | 1265,942006 | 215,999577 | 64 |
+| regular4 | 42,601036 | 1404,145854 | 177,502384 | 32 |
+
+A palettás NMRM tanításon kiválasztott időegysége 1,77 px, kezdete445,35;
+XEX-é 4,275 px, kezdete442,6; a referenciáé 4,15 px, kezdete442,4.
+Ezek illesztett, a kaput nem teljesítő paraméterek, nem mért Morse-órák.
+
+A globális tanítónyertes a referenciajel. Az NMRM kisebb ellenőrző MSE-je
+diagnosztikus adat; ebből utólag nem választjuk ki megfejtésnek. A referencia
+kisebb hibás-pixelszáma sem győzelem, mert néhány erős pixelét rosszul jósolja.
+A JSON a háttértől kevésbé függő, csak előtérre számított hibákat is őrzi.
+
+Az előre rögzített kapu minden ellenőrzőpixelre legfeljebb 1 intenzitásegység
+eltérést kívánt. Mind a hat változat, az állandó hordozósak is, elbukik.
+Ezért nincs ebből hullámra átvitt óra vagy maszk. Az eredmény ennek a véges,
+közelítő rasztercsaládnak a negatívuma; nem zár ki minden rajzolt Morse-t,
+más átviteli függvényt vagy az egész kép összetett felhasználását.
+
+![Háromoszlopos mérés és tanításon kiválasztott raszterek, jelölt ellenőrző résszel](data/marker_raster_comparison.png)
+
+### 4. C42 pozitív kontroll és független audit
+
+A program ismert pixeldoboz-területet, Gauss-területmegmaradást, szintetikus
+keresztirányú átvitelt és közvetlen least-squares erősítésszámítást ellenőriz.
+Egy ismert szintetikus raszteren nulla hibát ad; külön 54 jelöltes kontrollban
+a tanításon kiválasztott recept az ellenőrző részt is pontosan megjósolja.
+Így a negatív HALV-eredmény nem egyszerűen egy soha nem teljesíthető kapu.
+
+Az `audit_marker_raster.py` más úton, Gauss-CDF numerikus kvadratúrájával
+rajzolja újra mind a hat nyertes 225 pixelét. Külön teljesvektoros
+least-squares számítással ellenőrzi az erősítést és a hibákat, a mentett
+keresési tömbből a durva minimumokat, valamint a bemenetek hash-eit.
+Minden ellenőrzés sikeres. A keresési és előrejelzési NPZ-k is archiválva vannak.
+
+### 5. C43: milyen geometria őrzi meg a teljes cellát?
+
+A geometriai ág kérdése itt az információvesztés, nem egy új tetszőleges
+64szám→32bájt képlet. A 64 cella mindegyike négy q-csúcsból és a következő
+cellával közös jobb végpontból áll. A csúcsok távolsága 3 px. A normalizált
+sugár q/2, a helyi koordináta u=x/3, 0..4. A vizsgált momentumok:
+
+`J_k = integral(0..4, u^k*q(u)/2 du)`, k=0,1,2,3.
+
+A q(u) szakaszonként lineáris; minden számítást pontos törtekkel végzünk.
+A helyi pixelkoordinátában számolt momentum `M_k=3^(k+1)*J_k`.
+A normalizált magasság és a valódi, blokkonként feleződő csúcsmagasság
+külön adatmező. A fizikai tartomány a hét blokkhatár jobb csúcsának
+felezett skáláját is figyelembe veszi; nem minden teljes cellára azonos
+skálát szoroz rá gondolkodás nélkül.
+
+Először minden 0..3 közötti négycsúcsos cellát felsorolunk, közös ismert
+jobb végponttal. A 256 lehetséges állapot pontos aláírásai:
+
+| Megtartott momentumok | Különböző aláírás a256-ból | Egyértelmű minden cella? |
+| --- | ---: | --- |
+| J0: terület | 22 | nem |
+| J0,J1: terület és első momentum | 184 | nem |
+| J0,J1,J2 | 256 | igen |
+| J0,J1,J2,J3 | 256 | igen |
+
+A jobb végpont más ismert értéke mindegyik jelölthöz ugyanazt az állandó
+vektort adja, így az ütközések számát nem változtatja. A szabályos 3+1 bites
+részábécé viszont csak16 állapot fázisonként: azon J0 és J1 már minden
+fázisban egyértelmű. A 44 szabályos és20 maradékos cellát ezért nem szabad
+ugyanazzal az információvesztő kétszámos leírással automatikusan kezelni.
+
+Konkrét ellenpélda, közös nulla jobb végponttal:
+
+- A=[0,0,2,0]: J0=1, J1=2, J2=25/6.
+- B=[0,1,0,1]: J0=1, J1=2, J2=31/6.
+
+Területük és első momentumuk azonos, de más minták. B nem a szabályos
+3+1 részábécében van; pontosan a teljes maradék megtartása miatt számít.
+
+![Két különböző cella azonos területtel és első momentummal](data/cell_moment_collision.png)
+
+A C33 három korábbi nulla területkülönbségű példájának J1-értékei rendre
+5/3, 1 és -1, pixelkoordinátában15,9,-9. Az első momentum tehát észreveszi
+ezeket a korábbi területi kioltásokat, de az új ellenpélda miatt mégsem
+tekinthető önmagában teljes ellenőrzésnek.
+
+### 6. C43 követő ellenőrzés: minden q visszaállítása mentett határértékek nélkül
+
+Az előző helyi felsorolás a jobb csúcs ismeretét feltételezte. Ezután,
+kifejezetten követő vizsgálatként, ellenőriztük a C16-ban is használt
+végpontfeltevést: a legutolsó csúcs állandó folytatása, q256=q255.
+Ez modellfeltevés, nem egy képen túli mintapont mérése.
+
+Az így zárt végső cella ábécéjén két momentum229, három256 különböző
+aláírást ad. Ez lehetővé teszi a visszafelé rekonstrukciót: a végső cella
+három momentumából meghatározható a négy csúcsa; az előző cella jobb
+csúcsa ekkor már a következő cellából ismert. Ugyanezt a szabályt ismételjük
+mind a64 cellára, szélső blokkok külön javítása nélkül.
+
+A rekonstrukció függvénye csak a hárommomentumos vektorokat, a rögzített
+skálasorrendet és a végpontfolytatási szabályt kapja; nem kapja meg az
+eredeti q-t vagy a mentett cellahatárértékeket. A normalizált és a fizikai
+magasság tartományában is mind a256 állapotot pontosan visszaadja.
+Így az összes R-bit is megmarad. Ez 192 racionális szám invertálható
+geometriai reprezentációja, nem 64 geometriai értékből32 kulcsbájt megfejtése.
+
+Az állandó és lineáris profilok integráljával kalibráltunk. A64 cella területét
+mindkét tartományban összevetettük a korábbi C16-archívummal:128 pontos
+egyezés. A független `audit_cell_moments.py` külön binomiális polinom-
+integrálással újraszámolja az ábécé ütközéseit és az összes cellamomentumot,
+majd saját visszafelé rekonstrukcióval is visszakapja a256 csúcsot mindkét
+tartományban. Minden ellenőrzés sikeres.
+
+### 7. Mit szűkít ez, és mi marad a következő feladat?
+
+A markerből most nem kaptunk igazolt közös időegységet. A sikertelen
+1,77 px-es vagy4,275 px-es értéket nem visszük önkényesen a hullámra.
+A bal jelölő, BD/½, aláírás és dátum lehetséges vezérlő szerepe nyitva marad;
+azokat ez a negatív próba nem teszi lényegtelenné.
+
+A geometriai eredmény pontos korlátot ad: a puszta terület, sőt két momentum
+is elrejthet teljes cellakülönbséget. Egy új többképelemes generátort a teljes
+q/R-soron vagy az itt egyértelmű hárommomentumos reprezentáción kell
+ellenőrizni. A q→momentum→q kör sem a12bájtos maradék szerepét, sem annak
+kulcsból való előállítását nem vezeti le.
+
+A következő érdemi lépés továbbra is olyan konkrét kódolóegyenlet, amely
+egyszerre indokolja a fázist, felezési skálát, a44 szabályos és20 maradékos
+cellát és a maradék értékeit. Ehhez több kell új skálafaktorok vagy hash-ek
+hozzáadásánál. A Level5 geometriai kontrollt és a Fibonacci–hang–Morse ágat
+megőrizzük, de csak konkrét új műveleti szabállyal indokolt új családot futtatni.
+Ebben a körben nincs új32bájtos kulcsjelölt vagy Bitcoin-címkeresés.
+
+### 8. Reprodukció és folyamatos dokumentálás
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python tools/check_marker_raster.py
+python tools/audit_marker_raster.py
+python tools/plot_marker_raster.py
+python tools/check_cell_moments.py
+python tools/audit_cell_moments.py
+python tools/plot_cell_moments.py
+```
+
+A numerikus modell NumPy, SciPy és Pillow környezetet, az ábrák Matplotlibot
+használnak. A két modell receptje, minden új adat, két ábra és hat program
+hash-sel kerül a meglévő fő MD VÉGÉHEZ,23. fejezetként. A korábbi343094 bájt
+változatlan marad; az indexelő és az append-nyilvántartás ezt ellenőrzi.
+
+**A teljes cellainformáció geometriai megőrzése igazolt a megadott modellben.
+Morse-üzenet, eredeti hangdekódolás, teljes kulcsgenerátor és HALV-kulcs nincs.**

@@ -7,11 +7,20 @@ Tartalmazza a teljes naplót, hipotéziseket, részletes jelentéseket és
 modellrecepteket. Az új körök a meglévő fájl végéhez kerülnek; a korábbi
 tartalom változatlan marad. A forrásadatok és programok hash-sel megmaradnak.
 Aktuális állapotkép: [MASTER_OVERVIEW.md](research/MASTER_OVERVIEW.md).
-Legújabb folytatás: [22. kör, nyomok rangsora és következő vizsgálat](research/HALV_TELJES_KUTATAS.md#round-22).
+Legújabb folytatás: [23. kör, háromoszlopos marker és teljes cellageometria](research/HALV_TELJES_KUTATAS.md#round-23).
 Pontos rekonstrukció: [256 csúcsérték szövegként](research/data/canonical_q256.txt),
 [csúcsok és deltaindexek CSV-ben](research/data/canonical_q256.csv).
 A [128 mintás PCM-példa](research/data/hypothetical_pcm128_identity_seed128.csv)
 egy feltételezett dekóderkimenet, nem a mért csúcssor vagy igazolt eredeti hang.
+
+A **C42** marker-visszarajzolásban NMRM, XEX és négy referenciaimpulzus
+közös rajzolási modellje versenyzett. Egyik sem jósolta meg a kihagyott
+pixeleket ±1-en belül, ezért nem vittünk át belőlük órajelet a hullámba.
+A **C43** geometriai audit szerint a szabályos 3+1 cellák két momentummal
+megkülönböztethetők adott jobb határ mellett; a teljes cellaábécéhez három
+kell. Három momentumból minden eredeti q-minta visszaállítható a rögzített
+végpontfolytatási modellben, a maradék elvesztése nélkül. Ez reprezentációs
+eredmény, nem kulcsdekódolás.
 
 A kutatás fő térképe az [összefüggések és hipotézisek](research/HYPOTHESES.md)
 fájl: a jelölő, az aláírás, a hullám és a dátum lehetséges adat-, maszk-,

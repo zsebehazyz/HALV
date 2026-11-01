@@ -282,6 +282,34 @@
       "conditional_shift_reference_fraction": 0.40234375,
       "not_global_p_value": true,
       "not_private_key_search": true
+    },
+    {
+      "result": "research/data/marker_raster_check.json",
+      "kind": "train_selected_full_marker_raster_prediction",
+      "global_training_selected_pattern": "regular4",
+      "patterns_passing_pixel_gate": [],
+      "clock_propagated_to_wave": false,
+      "not_private_key_search": true
+    },
+    {
+      "result": "research/data/cell_moments_check.json",
+      "kind": "exact_geometric_cell_information",
+      "full_alphabet_distinct_signatures": [
+        22,
+        184,
+        256,
+        256
+      ],
+      "reverse_reconstruction": {
+        "moment_count_per_cell": 3,
+        "normalized_nodes_states_recovered": 256,
+        "physical_nodes_states_recovered": 256,
+        "uses_saved_right_nodes": false,
+        "uses_measured_scale_schedule": true,
+        "endpoint_continuation_is_an_assumption": true
+      },
+      "not_key_decoder": true,
+      "not_private_key_search": true
     }
   ],
   "files": [
@@ -368,6 +396,24 @@
       "role": "executed_result_or_artifact",
       "bytes": 12426,
       "sha256": "2e7fe4452aa46c65096f1831779994cb8ea706c63d4dde6c5ec8064e65fff877"
+    },
+    {
+      "path": "research/data/cell_moment_collision.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 85230,
+      "sha256": "423ba27c5f464a08404d05247ab11ccbf4f2c52f387e3bfcd37aa15b5b6aa41a"
+    },
+    {
+      "path": "research/data/cell_moments_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 49901,
+      "sha256": "5e8c45e144e2be40f6e5dcc5a61fe3ea7a042db1160a16fff2a78b5d729b8bc6"
+    },
+    {
+      "path": "research/data/cell_moments_integrity.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 627,
+      "sha256": "25dcbdb7ea4bb768807590f8ee80f660f779e217d7c69206337403c487ba9d59"
     },
     {
       "path": "research/data/composite_masks.json",
@@ -580,6 +626,36 @@
       "sha256": "305bf4febd4cb6615063c84884d97162275bd3e421f559a9b9f97e4c980b05d5"
     },
     {
+      "path": "research/data/marker_raster_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 13346,
+      "sha256": "8d998435fe781079a1f9a2c25d46c4410cba02add52123884f3b549e59e579a6"
+    },
+    {
+      "path": "research/data/marker_raster_comparison.png",
+      "role": "executed_result_or_artifact",
+      "bytes": 499494,
+      "sha256": "f2ac1c4c04c913f59cd933565cda0f33a6f93e0a9e826a254897a4567908cb3d"
+    },
+    {
+      "path": "research/data/marker_raster_integrity.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 1814,
+      "sha256": "d105d6831a95352d05cc5a581001f412c109e2f99b6705124cfae2a75fdbbb9e"
+    },
+    {
+      "path": "research/data/marker_raster_predictions.npz",
+      "role": "executed_result_or_artifact",
+      "bytes": 5739,
+      "sha256": "95c7b33099b6017ab6e65e14ea4eac8cb097a6959493b09883794bd62482b935"
+    },
+    {
+      "path": "research/data/marker_raster_search.npz",
+      "role": "executed_result_or_artifact",
+      "bytes": 2573518,
+      "sha256": "031d3e024cc05fcc07e2386b547a88e482bf434de437a4ebce361d9f71994fb5"
+    },
+    {
       "path": "research/data/marker_x91_rows443_506.csv",
       "role": "executed_result_or_artifact",
       "bytes": 860,
@@ -588,14 +664,14 @@
     {
       "path": "research/data/master_append_state.json",
       "role": "executed_result_or_artifact",
-      "bytes": 68632,
-      "sha256": "6b162a5cbbdfe3c5f3660383b316ac9eb0f842c672dc2d41cd6c2a8e4063311c"
+      "bytes": 72027,
+      "sha256": "faaec0e0c0a0abebdda67fc1840aad301b665735b3d4b8256a51064623d229dd"
     },
     {
       "path": "research/data/master_document_manifest.json",
       "role": "executed_result_or_artifact",
-      "bytes": 72084,
-      "sha256": "ba8a7b8164df6766aa06b9992ce6ec04a72b477a6cd24cb0be6145e4760c6276"
+      "bytes": 78800,
+      "sha256": "6db56ec87ab39c5bfb7f8da4deb9fa84603642b2ef31d9509e26b1a796454c71"
     },
     {
       "path": "research/data/miner_revenue_check.json",
@@ -1408,6 +1484,12 @@
       "sha256": "112799d0ca3f6f1277d4c1f748d76c7c462f4183c61bd5876b1fb4930a713567"
     },
     {
+      "path": "research/models/cell_moment_identifiability_v1.json",
+      "role": "model_specification",
+      "bytes": 2167,
+      "sha256": "8f531679c1d25f22cbff59bfd3d0c9ecc8d5bb318088fa4dde7c40525acb4224"
+    },
+    {
       "path": "research/models/composite_v1.json",
       "role": "model_specification",
       "bytes": 1435,
@@ -1466,6 +1548,12 @@
       "role": "model_specification",
       "bytes": 1886,
       "sha256": "abd0753e706cca10a3828716090a54eac073d084ec14a5e57df6c37cd2659992"
+    },
+    {
+      "path": "research/models/marker_raster_v1.json",
+      "role": "model_specification",
+      "bytes": 2825,
+      "sha256": "0af259cc226ece9818e72de211f258af7dca4c2d73c81bbcaf7ec1c97b7591ea"
     },
     {
       "path": "research/models/nonlinear_context_v1.json",
@@ -1594,6 +1682,12 @@
       "sha256": "7b22e71bad09d59787e327ddcd6468ab8bc3847b3f9c0cebac994a70257bdf6f"
     },
     {
+      "path": "tools/audit_cell_moments.py",
+      "role": "reproduction_tool",
+      "bytes": 3401,
+      "sha256": "5da265f6d07c8c0edd4ca5b6006b6b70bd4c9c6b6044d2a185b45744f2cc6881"
+    },
+    {
       "path": "tools/audit_halving_phase_ascii.py",
       "role": "reproduction_tool",
       "bytes": 2825,
@@ -1604,6 +1698,12 @@
       "role": "reproduction_tool",
       "bytes": 8314,
       "sha256": "55e9be5c7db65a3d7029eb636c9190ac1c3d70aebc57801d8b26a68c55a9f92d"
+    },
+    {
+      "path": "tools/audit_marker_raster.py",
+      "role": "reproduction_tool",
+      "bytes": 4814,
+      "sha256": "fb2ee05f5e6b2cf12ddebbff64797c86b745f476fdafe278706091b97e81cd75"
     },
     {
       "path": "tools/audit_ordered_results.py",
@@ -1638,8 +1738,8 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 12134,
-      "sha256": "1a1fabfb2a06192b614fcad4ddd6296399b2412a9bca62bbe4e65744156dc83c"
+      "bytes": 13103,
+      "sha256": "dcb914f20fc8f6c2dd5094f8702e55faca9bd8ed08b8910f009cd3ca90984207"
     },
     {
       "path": "tools/capture_rs_reference.py",
@@ -1664,6 +1764,12 @@
       "role": "reproduction_tool",
       "bytes": 5544,
       "sha256": "946451423896405ba7e8bb75074cca7d2fec4542107b922dc32ab8ec3b37ecf0"
+    },
+    {
+      "path": "tools/check_cell_moments.py",
+      "role": "reproduction_tool",
+      "bytes": 7630,
+      "sha256": "0508a3654e264c57bb008be4b20bad3c4965e3ea564413d1936a49f94c4a491e"
     },
     {
       "path": "tools/check_composite_models.py",
@@ -1736,6 +1842,12 @@
       "role": "reproduction_tool",
       "bytes": 3037,
       "sha256": "3eef1b7295e33f0806decb4d033f74df93f1dcef98136df9339adb823102398a"
+    },
+    {
+      "path": "tools/check_marker_raster.py",
+      "role": "reproduction_tool",
+      "bytes": 10036,
+      "sha256": "9dc67e46961a4a9ae41a929726203a5d0990da7b4a38f56aa17e2d78b7021054"
     },
     {
       "path": "tools/check_miner_revenue.py",
@@ -1930,6 +2042,12 @@
       "sha256": "383ce9de03f221b8f7fa5a5fa1763395b0039f22a83b7307cf96652cf0860413"
     },
     {
+      "path": "tools/plot_cell_moments.py",
+      "role": "reproduction_tool",
+      "bytes": 1388,
+      "sha256": "692d02637b8d3e4b5ce0bef793530eace8c50e37d750efc3ac7421af1070ce6b"
+    },
+    {
       "path": "tools/plot_historical_level2.py",
       "role": "reproduction_tool",
       "bytes": 1262,
@@ -1940,6 +2058,12 @@
       "role": "reproduction_tool",
       "bytes": 3312,
       "sha256": "6293e504dd712f6da7015544be4169b727b4c07e5514f4590b13ac1245fef9c8"
+    },
+    {
+      "path": "tools/plot_marker_raster.py",
+      "role": "reproduction_tool",
+      "bytes": 2129,
+      "sha256": "80981e4ab5be47dced0b1ad7f4e509454013eb740e6dcbf2bc8b5c36f0eda067"
     },
     {
       "path": "tools/plot_pair64.py",
@@ -2016,8 +2140,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 18755,
-      "sha256": "6a08fec0a9f88b0fab23e4bcfc10b1447f6e76d17733e76b8b4317530e56430f"
+      "bytes": 19354,
+      "sha256": "9dad8f997ad72b7fa5054f1335c697e2781dbf99a9b449f38a3a0a339f024ad6"
     },
     {
       "path": "AGENTS.md",
@@ -2028,26 +2152,26 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 41067,
-      "sha256": "080cca108b71f291127c4174ac1e2a3b3ca591c5f6e937d6842ed1181d0929c0"
+      "bytes": 43291,
+      "sha256": "8956b977c8aef52cc0d74c121661d99140ef132ed3c7e692c1864e8efe8a85eb"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 147347,
-      "sha256": "d40424d7090bc95bd92aae2d0614a1bb2e06f5e95be9a85638d3b000b62f9a37"
+      "bytes": 159486,
+      "sha256": "43d9fa0893cbf75683a3f205da23c4ab01cc7da00e4d94573b90ff1e0ace2050"
     },
     {
       "path": "research/MASTER_OVERVIEW.md",
       "role": "research_map_or_log",
-      "bytes": 5265,
-      "sha256": "87b352f107e5ec8b6ea9638af077e2e6cd8376bc9838716a708edd41038ac377"
+      "bytes": 4921,
+      "sha256": "735b3d02c8103f7c3cc9c2df323762cd29e1a4cff64d51a5c7f752b6eb697500"
     },
     {
       "path": "research/HALV_TELJES_KUTATAS.md",
       "role": "research_map_or_log",
-      "bytes": 343094,
-      "sha256": "d502f3a3b1ff1cc82f0bd4a0d3ba94344e119e6286434f631530dcd30ff57cff"
+      "bytes": 362930,
+      "sha256": "6cb960f96e2cbeb54efb00598666ba6a50ab04b26fb88cf87b3f0e7fca9aa39d"
     },
     {
       "path": "research/REPORT_20261101_GENERATOR_PLAN.md",
