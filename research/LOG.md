@@ -1814,3 +1814,63 @@ Részletes javaslat: `REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md`.
 `data/historical_level2_audit.png`; reprodukció: `tools/verify_historical_level2.py`,
 `tools/plot_historical_level2.py`. C27 kizárólag történeti pozitív kontroll;
 a HALV-ra írt feltételes dekódolási analógia még hipotézis.
+
+## 2026-11-01 – tizenhatodik kör: a jóváhagyott műveletsorrend végrehajtása
+
+A felhasználó kérése: „próbáljuk a sorrededet”. Végrehajtottuk a C27 után
+javasolt vezérlőjel → felezés/átvitel → formátum/célcím sorrendet.
+A futás előtt rögzített specifikáció: `models/ordered_decode_v1.json`.
+Minden lépés az eredeti 256 állapoton és az összes maradékbiten alapul;
+képi utasítások szerepét hipotézisként jelöljük.
+
+### C28 – történetileg kalibrált vezérlő- és szomszédváltozatok
+
+A közös flagprimitív mind az 51 Level 2 karaktert reprodukálja.
+Három keretben 588 feltételes és 3 identitáskontroll készült. Minden
+esetben pontosan visszaáll mind a 256 állapot. A három előre megadott
+szomszéd-komplementdiagnosztika egyik változatban sem teljesül pontosan.
+Az adatmegőrzést nem tekintjük kész dekódolónak vagy generátornak.
+
+### C29 – párok, felezés, carry/borrow és geometria
+
+4728 bájtpárrecept (886 tartományhiba), 37 824 szószintű recept,
+7092 területrecept (3546 tartományhiba), összesen 49 644 próba.
+28 307 különböző 32 bájtos eredmény marad. A szóaritmetika öt ismert
+tesztet és 4728 önálló ripple-carry/borrow összevetést teljesít.
+A területprimitív 128 korábbi C16 pontos racionális értékkel egyezik.
+A fizikai területek mind tartományon kívüliek, a normalizáltak belüliek.
+A teljes receptnapló és a kontroll átviteli példái archiválva.
+Az átlagolást/összegzést nem nevezzük veszteségmentes leképezésnek.
+
+### C30 – teljes formátumkapuk és célcímellenőrzés
+
+A C28 és C29 adataiból előre/hátra bájtsorrend és bájton belüli bitfordítás
+115 592 különböző érvényes skalárt ad. Mindkét publikus kulcsformátum
+ellenőrizve; **0 egyezés** a HALV célcímére. Az orákulumok kontrolljai sikeresek.
+14 184 ASCII7/50 olvasat: maximum 30/50 Base58-karakter, nincs teljes
+Base58-szöveg, ezért nincs a WIF-ellenőrzésre átjutó HALV-jelölt.
+1182 ASCII64-hex olvasat: maximum 11/64, nincs teljes hexszöveg.
+Hash-véglegesítés és karakterjavítás nem szerepelt.
+
+### Integritás, értelmezés és folytatás
+
+Külön audit ellenőrizte 17 bemeneti/programfájl hashét, minden C28
+visszaalakítást, az összes recept- és formátumnapló számosságát, valamint
+a jelölthalmaz pontos unióját/hashét. 16 skalár két publikus formátumának
+szerializációját a meglévő teljes címképzéssel is összevetettük (32 eset).
+A nagyméretű generált kulcs-JSON veszteségmentesen gzip-be archiválva.
+
+A lokális flag és deklarált szóátvitel e családja nem adott megoldást.
+Ez nem minden állapotos lánc kizárása. Nem magyaráztuk meg a lag2 modell
+10-es alapját vagy hét H-eltérését. Következő megkülönböztető feladat:
+az R-t kezdőállapotként vagy átviteli/kerekítési utasításként használó,
+azonos frissítéssel minden blokkra érvényes generáló szabály; visszatartott
+korrekciókra pontos előrejelzés szükséges. A geometriai, dátum- és
+Fibonacci–hang–Morse ágakat megőriztük; utóbbira most új teszt nem futott.
+
+Részletes jelentés: `REPORT_20261101_ORDERED_SEQUENCE.md`. Programok:
+`tools/check_ordered_controls.py`, `tools/check_ordered_arithmetic.py`,
+`tools/check_ordered_formats.py`, `tools/audit_ordered_results.py`;
+közös primitívek: `tools/ordered_decode_common.py`.
+Eredmények a `data/ordered_*` fájlokban, pontos hash-ek a RUN_INDEX-ben.
+**Nincs HALV-kulcs, teljes R-előrejelzés vagy igazolt közös generátor.**

@@ -1,0 +1,30 @@
+{
+  "purpose": "Archive/integrity audit, not a new key search",
+  "verified_input_files": 17,
+  "roundtrip_cases": 591,
+  "states_per_roundtrip": 256,
+  "arithmetic_log_records": 49644,
+  "geometry_records_by_domain_and_status": [
+    {
+      "domain": "normalized",
+      "status": "formed",
+      "count": 3546
+    },
+    {
+      "domain": "physical",
+      "status": "byte_range_rejected",
+      "count": 3546
+    }
+  ],
+  "format_log_records": {
+    "ASCII64_hex": 1182,
+    "ASCII7_WIF50": 14184
+  },
+  "exact_candidate_union_verified": true,
+  "candidate_count": 115592,
+  "public_key_serialization_crosschecks": 32,
+  "candidate_archive": "research/data/ordered_key_candidates.json.gz",
+  "candidate_archive_sha256": "09ba0ac405f0319ae2c5245ca29e36a18cccd6dcfb6cb8a5b20522b874edc872",
+  "candidate_uncompressed_sha256": "76df426fd046643970a420549b114db0ee3dd6da4b8ca1a70df9b242e32ea5fc",
+  "audit_tool_sha256": "1fdf1e308bd4d4b17221ac39ea206cc5c2e7bf91a7e786055b98beaf1447aaa9"
+}

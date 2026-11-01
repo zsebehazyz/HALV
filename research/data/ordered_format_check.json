@@ -1,0 +1,98 @@
+{
+  "model": "C30",
+  "input_sha256": {
+    "research/models/ordered_decode_v1.json": "9887c4d7c8015e631ceff14c2a0712ebe05f371b29cc4461866710fac0ce8acc",
+    "research/data/ordered_control_check.json": "8dc783db0164a510172fd72ea0ecd7d8ba68922e55442d4c2d52c4e29a2d2554",
+    "research/data/ordered_control_cases.json": "5f917831393c13ac9f95066472696e9a2b06d8e61ef1ee2ab8ffd4ef7ecd63e2",
+    "research/data/ordered_arithmetic_check.json": "d5a24871ac01ed251beb5bb4df7bb482a31ae09128cbcecd3134d7b92c6e1a02",
+    "research/data/ordered_arithmetic_payloads.json": "9c04d516dcbf815e2e3ff041286b1ede0b488c312f389a99c0a15e0382b9edf9",
+    "tools/check_ordered_formats.py": "94a6f52dded1ce3b0935e59f63d8412486f2053dbca4255b894ba91dbe291a16",
+    "tools/ordered_decode_common.py": "19fc09a7a999fa563dc640444f2fcb155d5e70f3f6e853dca0424bb6d935eff9",
+    "tools/bitcoin_oracle.py": "23fc132483bbee26271c5bfdfe745e590ddf431ca92fb3897b696e46c198f5ec",
+    "tools/check_five_sample_wif.py": "2726b1417e4f1fa3674785f6191cdc635f8ceb197acf0c7fa96b8104dc2b09df"
+  },
+  "oracle_selftests": {
+    "address": {
+      "scalar_1_both_formats": "passed",
+      "target_base58check": "passed",
+      "invalid_scalars": "passed",
+      "target_hash160": "06c84797d1f468b9d5773a61c80073b344df7470"
+    },
+    "wif": {
+      "cases_passed": 9,
+      "known_vectors": "scalar 1, uncompressed and compressed",
+      "negative_cases": "mutated checksum, version, compression marker, scalar zero/order, forbidden alphabet"
+    }
+  },
+  "hash160_scalar1_both_formats_known_answers": true,
+  "raw_candidate_groups": {
+    "C28_main": {
+      "emissions": 2364,
+      "invalid_scalar_rejections": 0,
+      "unique_scalars": 2364
+    },
+    "C29_byte_pair": {
+      "emissions": 15368,
+      "invalid_scalar_rejections": 0,
+      "unique_scalars": 15368
+    },
+    "C29_word_pair": {
+      "emissions": 90596,
+      "invalid_scalar_rejections": 0,
+      "unique_scalars": 90596
+    },
+    "C29_geometry": {
+      "emissions": 7264,
+      "invalid_scalar_rejections": 0,
+      "unique_scalars": 7264
+    }
+  },
+  "C29_group_labels_follow_first_payload_recipe": true,
+  "unique_valid_scalars": 115592,
+  "public_key_formats": 2,
+  "candidate_set_sha256": "231e74757f2802c12644a647113adbdef5980577c9fd4a3ae7b7c1244e937306",
+  "hash_finalization_used": false,
+  "wif_format_gate": {
+    "ASCII7_trials": 14184,
+    "best_Base58_characters_in50": 30,
+    "histogram": {
+      "10": 2,
+      "11": 12,
+      "12": 38,
+      "13": 114,
+      "14": 228,
+      "15": 462,
+      "16": 804,
+      "17": 1234,
+      "18": 1616,
+      "19": 1764,
+      "20": 1892,
+      "21": 1744,
+      "22": 1476,
+      "23": 1062,
+      "24": 766,
+      "25": 420,
+      "26": 242,
+      "27": 162,
+      "28": 112,
+      "29": 24,
+      "30": 10
+    }
+  },
+  "valid_wif_records": [],
+  "ascii64_hex_gate": {
+    "streams": 1182,
+    "max_hex_characters_in64": 11
+  },
+  "matches": [],
+  "format_trials_sha256": "6f42e5fbbfee165c7d17a2f735ea0709763c9cddd9050606c536ffff42c38afb",
+  "elapsed_oracle_seconds": 80.96,
+  "limitations": [
+    "Finite exploratory family chosen after seeing the image",
+    "Marker/phase semantic bindings remain hypotheses",
+    "Lossless rearrangement does not itself prove a decoder",
+    "Negative results concern these exact chains, not all stateful or nonlinear algorithms",
+    "No independent derivation of offset10 or all seven lag2 high-bit errors is assumed",
+    "WIF or full target equality are actual validation; arbitrary32bytes being representable as hex is not independent evidence"
+  ]
+}

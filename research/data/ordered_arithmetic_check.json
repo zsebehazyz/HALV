@@ -1,0 +1,4079 @@
+{
+  "model": "C29",
+  "input_sha256": {
+    "research/models/ordered_decode_v1.json": "9887c4d7c8015e631ceff14c2a0712ebe05f371b29cc4461866710fac0ce8acc",
+    "research/data/ordered_control_check.json": "8dc783db0164a510172fd72ea0ecd7d8ba68922e55442d4c2d52c4e29a2d2554",
+    "research/data/ordered_control_cases.json": "5f917831393c13ac9f95066472696e9a2b06d8e61ef1ee2ab8ffd4ef7ecd63e2",
+    "research/data/fractional_area_profiles.json": "2f1b2125dd465492c54f2a02fe5464d186ad7ac743cefac8723f785cd4faec9f",
+    "tools/check_ordered_arithmetic.py": "8105250096372bf63fd8d09544a684cb5550863057a32bd1b578a764c9d2a40d",
+    "tools/ordered_decode_common.py": "19fc09a7a999fa563dc640444f2fcb155d5e70f3f6e853dca0424bb6d935eff9",
+    "tools/residual_channels.py": "d89af207c072ee60c585667e90a7384c7185e2148e8d5cda3344cdac3dee0006"
+  },
+  "calibration": {
+    "word_known_answers": 5,
+    "geometry_C16_vectors_matched": 2,
+    "geometry_cells_matched": 128
+  },
+  "independent_ripple_comparisons": 4728,
+  "groups": {
+    "byte_pair": {
+      "attempts": 4728,
+      "byte_range_rejections": 886
+    },
+    "word_pair": {
+      "attempts": 37824,
+      "byte_range_rejections": 0
+    },
+    "geometry": {
+      "attempts": 7092,
+      "byte_range_rejections": 3546
+    }
+  },
+  "attempts_including_duplicates": 49644,
+  "unique_formed_payloads32": 28307,
+  "formed_payloads_may_include_invalid_scalars": true,
+  "recipe_log": "research/data/ordered_arithmetic_recipes.jsonl.gz",
+  "recipe_log_sha256": "28fb5aad4ceaf4a3abeb0ed6db00d4275bc3db99e81ffa8bfd0caf2747696ff5",
+  "trace_samples": [
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "whole256bit_word",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "93421c67c2f8f4f2f060d0a040a0806060d0c09070c04030204020f0f0f137b5",
+          "input_b_hex": "f271923850f0e0e470d0504030d0c04030c0208090d030902010a01046025502",
+          "output_hex": "85b3aea013e9d5d7613120e0717140a09190e111019070c04050c10136f38cb7",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "whole256bit_word",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "93421c67c2f8f4f2f060d0a040a0806060d0c09070c04030204020f0f0f137b5",
+          "input_b_hex": "f271923850f0e0e470d0504030d0c04030c0208090d030902010a01046025502",
+          "output_hex": "85b4ae9f12e9d5d7613121e1707041a19090e110019171c04050c00037f48cb7",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "whole256bit_word",
+      "operator": "half_sum_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "93421c67c2f8f4f2f060d0a040a0806060d0c09070c04030204020f0f0f137b5",
+          "input_b_hex": "f271923850f0e0e470d0504030d0c04030c0208090d030902010a01046025502",
+          "output_hex": "c2d9d75009f4eaebb098907038b8a05048c8708880c83860202860809b79c65b",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "whole256bit_word",
+      "operator": "half_sum_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "93421c67c2f8f4f2f060d0a040a0806060d0c09070c04030204020f0f0f137b5",
+          "input_b_hex": "f271923850f0e0e470d0504030d0c04030c0208090d030902010a01046025502",
+          "output_hex": "425ad74f89f4eaebb098907038b8a05048c8708880c83860202860801b7ac65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "whole256bit_word",
+      "operator": "half_each_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "93421c67c2f8f4f2f060d0a040a0806060d0c09070c04030204020f0f0f137b5",
+          "input_b_hex": "f271923850f0e0e470d0504030d0c04030c0208090d030902010a01046025502",
+          "output_hex": "c2d9d75009f4eaebb098907038b8a05048c8708880c83860202860809b79c65b",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "whole256bit_word",
+      "operator": "half_each_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "93421c67c2f8f4f2f060d0a040a0806060d0c09070c04030204020f0f0f137b5",
+          "input_b_hex": "f271923850f0e0e470d0504030d0c04030c0208090d030902010a01046025502",
+          "output_hex": "425ad74f89f4eaebb098907038b8a05048c8708880c83860202860801b7ac65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "whole256bit_word",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "93421c67c2f8f4f2f060d0a040a0806060d0c09070c04030204020f0f0f137b5",
+          "input_b_hex": "f271923850f0e0e470d0504030d0c04030c0208090d030902010a01046025502",
+          "output_hex": "a0d08a2f7208140e7f9080600fcfc0203010a00fdff00fa0002f80e0aaeee2b3",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "whole256bit_word",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "93421c67c2f8f4f2f060d0a040a0806060d0c09070c04030204020f0f0f137b5",
+          "input_b_hex": "f271923850f0e0e470d0504030d0c04030c0208090d030902010a01046025502",
+          "output_hex": "a1d0892e7208140e80907f6010d0bf1f3010a010e0ef0fa0ff2f80dfaaefe2b2",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "each32bit_block",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "85b3ae9f",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "c2f8f4f2",
+          "input_b_hex": "50f0e0e4",
+          "output_hex": "13e9d5d6",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "f060d0a0",
+          "input_b_hex": "70d05040",
+          "output_hex": "613120e0",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "717140a0",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "9190e110",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "019070c0",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "204020f0",
+          "input_b_hex": "2010a010",
+          "output_hex": "4050c100",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "36f38cb7",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "each32bit_block",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "85b4ae9f",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "c2f8f4f2",
+          "input_b_hex": "50f0e0e4",
+          "output_hex": "12e9d5d7",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "f060d0a0",
+          "input_b_hex": "70d05040",
+          "output_hex": "603121e1",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "707041a1",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "9090e110",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "009171c0",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "204020f0",
+          "input_b_hex": "2010a010",
+          "output_hex": "4050c000",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "36f48cb7",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "each32bit_block",
+      "operator": "half_sum_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "c2d9d74f",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "c2f8f4f2",
+          "input_b_hex": "50f0e0e4",
+          "output_hex": "89f4eaeb",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "f060d0a0",
+          "input_b_hex": "70d05040",
+          "output_hex": "b0989070",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "38b8a050",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "48c87088",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "80c83860",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "204020f0",
+          "input_b_hex": "2010a010",
+          "output_hex": "20286080",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "9b79c65b",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "each32bit_block",
+      "operator": "half_sum_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "425ad74f",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "c2f8f4f2",
+          "input_b_hex": "50f0e0e4",
+          "output_hex": "89f4eaeb",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "f060d0a0",
+          "input_b_hex": "70d05040",
+          "output_hex": "b0989070",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "38b8a050",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "48c87088",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "80c83860",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "204020f0",
+          "input_b_hex": "2010a010",
+          "output_hex": "20286080",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "1b7ac65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "each32bit_block",
+      "operator": "half_each_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "c2d9d74f",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "c2f8f4f2",
+          "input_b_hex": "50f0e0e4",
+          "output_hex": "89f4eaeb",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "f060d0a0",
+          "input_b_hex": "70d05040",
+          "output_hex": "b0989070",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "38b8a050",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "48c87088",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "80c83860",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "204020f0",
+          "input_b_hex": "2010a010",
+          "output_hex": "20286080",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "9b79c65b",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "each32bit_block",
+      "operator": "half_each_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "425ad74f",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "c2f8f4f2",
+          "input_b_hex": "50f0e0e4",
+          "output_hex": "89f4eaeb",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "f060d0a0",
+          "input_b_hex": "70d05040",
+          "output_hex": "b0989070",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "38b8a050",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "48c87088",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "80c83860",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "204020f0",
+          "input_b_hex": "2010a010",
+          "output_hex": "20286080",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "1b7ac65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "each32bit_block",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "a0d08a2f",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "c2f8f4f2",
+          "input_b_hex": "50f0e0e4",
+          "output_hex": "7208140e",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "f060d0a0",
+          "input_b_hex": "70d05040",
+          "output_hex": "7f908060",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "0fcfc020",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "3010a010",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "dff00fa0",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "204020f0",
+          "input_b_hex": "2010a010",
+          "output_hex": "002f80e0",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "aaeee2b3",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "each32bit_block",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "a1d0892e",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "c2f8f4f2",
+          "input_b_hex": "50f0e0e4",
+          "output_hex": "7208140e",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "f060d0a0",
+          "input_b_hex": "70d05040",
+          "output_hex": "80907f60",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "10d0bf1f",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "3010a010",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "e0ef0fa0",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "204020f0",
+          "input_b_hex": "2010a010",
+          "output_hex": "003080df",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "aaefe2b2",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker1_cuts",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "85b3ae9f",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "c2f8f4f2f060d0a0",
+          "input_b_hex": "50f0e0e470d05040",
+          "output_hex": "13e9d5d7613120e0",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "717140a0",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "9190e110",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "019070c0",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "204020f0f0f137b5",
+          "input_b_hex": "2010a01046025502",
+          "output_hex": "4050c10136f38cb7",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker1_cuts",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "85b4ae9f",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "c2f8f4f2f060d0a0",
+          "input_b_hex": "50f0e0e470d05040",
+          "output_hex": "12e9d5d7613121e1",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "707041a1",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "9090e110",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "009171c0",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "204020f0f0f137b5",
+          "input_b_hex": "2010a01046025502",
+          "output_hex": "4050c00037f48cb7",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker1_cuts",
+      "operator": "half_sum_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "c2d9d74f",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "c2f8f4f2f060d0a0",
+          "input_b_hex": "50f0e0e470d05040",
+          "output_hex": "89f4eaebb0989070",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "38b8a050",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "48c87088",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "80c83860",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "204020f0f0f137b5",
+          "input_b_hex": "2010a01046025502",
+          "output_hex": "202860809b79c65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker1_cuts",
+      "operator": "half_sum_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "425ad74f",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "c2f8f4f2f060d0a0",
+          "input_b_hex": "50f0e0e470d05040",
+          "output_hex": "89f4eaebb0989070",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "38b8a050",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "48c87088",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "80c83860",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "204020f0f0f137b5",
+          "input_b_hex": "2010a01046025502",
+          "output_hex": "202860801b7ac65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker1_cuts",
+      "operator": "half_each_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "c2d9d74f",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "c2f8f4f2f060d0a0",
+          "input_b_hex": "50f0e0e470d05040",
+          "output_hex": "89f4eaebb0989070",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "38b8a050",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "48c87088",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "80c83860",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "204020f0f0f137b5",
+          "input_b_hex": "2010a01046025502",
+          "output_hex": "202860809b79c65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker1_cuts",
+      "operator": "half_each_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "425ad74f",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "c2f8f4f2f060d0a0",
+          "input_b_hex": "50f0e0e470d05040",
+          "output_hex": "89f4eaebb0989070",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "38b8a050",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "48c87088",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "80c83860",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "204020f0f0f137b5",
+          "input_b_hex": "2010a01046025502",
+          "output_hex": "202860801b7ac65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker1_cuts",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "a0d08a2f",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "c2f8f4f2f060d0a0",
+          "input_b_hex": "50f0e0e470d05040",
+          "output_hex": "7208140e7f908060",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "0fcfc020",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "3010a010",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "dff00fa0",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "204020f0f0f137b5",
+          "input_b_hex": "2010a01046025502",
+          "output_hex": "002f80e0aaeee2b3",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker1_cuts",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "93421c67",
+          "input_b_hex": "f2719238",
+          "output_hex": "a1d0892e",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "c2f8f4f2f060d0a0",
+          "input_b_hex": "50f0e0e470d05040",
+          "output_hex": "7208140e80907f60",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "40a08060",
+          "input_b_hex": "30d0c040",
+          "output_hex": "10d0bf1f",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "60d0c090",
+          "input_b_hex": "30c02080",
+          "output_hex": "3010a010",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "70c04030",
+          "input_b_hex": "90d03090",
+          "output_hex": "e0ef0fa0",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "204020f0f0f137b5",
+          "input_b_hex": "2010a01046025502",
+          "output_hex": "003080dfaaefe2b2",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker0_cuts",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "93421c67c2f8f4f2",
+          "input_b_hex": "f271923850f0e0e4",
+          "output_hex": "85b3aea013e9d5d6",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "f060d0a040a0806060d0c09070c04030204020f0",
+          "input_b_hex": "70d0504030d0c04030c0208090d030902010a010",
+          "output_hex": "613120e0717140a09190e111019070c04050c100",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "36f38cb7",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker0_cuts",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "93421c67c2f8f4f2",
+          "input_b_hex": "f271923850f0e0e4",
+          "output_hex": "85b4ae9f12e9d5d7",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "f060d0a040a0806060d0c09070c04030204020f0",
+          "input_b_hex": "70d0504030d0c04030c0208090d030902010a010",
+          "output_hex": "603121e1707041a19090e110019171c04050c000",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "36f48cb7",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker0_cuts",
+      "operator": "half_sum_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "93421c67c2f8f4f2",
+          "input_b_hex": "f271923850f0e0e4",
+          "output_hex": "c2d9d75009f4eaeb",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "f060d0a040a0806060d0c09070c04030204020f0",
+          "input_b_hex": "70d0504030d0c04030c0208090d030902010a010",
+          "output_hex": "b098907038b8a05048c8708880c8386020286080",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "9b79c65b",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker0_cuts",
+      "operator": "half_sum_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "93421c67c2f8f4f2",
+          "input_b_hex": "f271923850f0e0e4",
+          "output_hex": "425ad74f89f4eaeb",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "f060d0a040a0806060d0c09070c04030204020f0",
+          "input_b_hex": "70d0504030d0c04030c0208090d030902010a010",
+          "output_hex": "b098907038b8a05048c8708880c8386020286080",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "1b7ac65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker0_cuts",
+      "operator": "half_each_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "93421c67c2f8f4f2",
+          "input_b_hex": "f271923850f0e0e4",
+          "output_hex": "c2d9d75009f4eaeb",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "f060d0a040a0806060d0c09070c04030204020f0",
+          "input_b_hex": "70d0504030d0c04030c0208090d030902010a010",
+          "output_hex": "b098907038b8a05048c8708880c8386020286080",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "9b79c65b",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker0_cuts",
+      "operator": "half_each_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "93421c67c2f8f4f2",
+          "input_b_hex": "f271923850f0e0e4",
+          "output_hex": "425ad74f89f4eaeb",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "f060d0a040a0806060d0c09070c04030204020f0",
+          "input_b_hex": "70d0504030d0c04030c0208090d030902010a010",
+          "output_hex": "b098907038b8a05048c8708880c8386020286080",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "1b7ac65b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker0_cuts",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "93421c67c2f8f4f2",
+          "input_b_hex": "f271923850f0e0e4",
+          "output_hex": "a0d08a2f7208140e",
+          "carry_out": 1,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "f060d0a040a0806060d0c09070c04030204020f0",
+          "input_b_hex": "70d0504030d0c04030c0208090d030902010a010",
+          "output_hex": "7f9080600fcfc0203010a00fdff00fa0002f80e0",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "aaeee2b3",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "main_high",
+      "policy": "marker0_cuts",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "93421c67c2f8f4f2",
+          "input_b_hex": "f271923850f0e0e4",
+          "output_hex": "a1d0892e7208140e",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "f060d0a040a0806060d0c09070c04030204020f0",
+          "input_b_hex": "70d0504030d0c04030c0208090d030902010a010",
+          "output_hex": "80907f6010d0bf1f3010a010e0ef0fa0ff2f80df",
+          "carry_out": 1,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "f0f137b5",
+          "input_b_hex": "46025502",
+          "output_hex": "aaefe2b2",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "whole256bit_word",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "3924c1762c8f4f2f0f060d0a040a0806060d0c09070c04030204020f0f1f735b",
+          "input_b_hex": "2f172983050f0e4e070d0504030d0c04030c0208090d030902010a0164205520",
+          "output_hex": "683beaf9319e5d7d1613120e0717140a09190e111019070c04050c10733fc87b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "whole256bit_word",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "3924c1762c8f4f2f0f060d0a040a0806060d0c09070c04030204020f0f1f735b",
+          "input_b_hex": "2f172983050f0e4e070d0504030d0c04030c0208090d030902010a0164205520",
+          "output_hex": "683beaf9319e5d7d1613120e0717140a09190e111019070c04050c10733fc87b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "whole256bit_word",
+      "operator": "half_sum_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "3924c1762c8f4f2f0f060d0a040a0806060d0c09070c04030204020f0f1f735b",
+          "input_b_hex": "2f172983050f0e4e070d0504030d0c04030c0208090d030902010a0164205520",
+          "output_hex": "341df57c98cf2ebe8b098907038b8a05048c8708880c838602028608399fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "whole256bit_word",
+      "operator": "half_sum_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "3924c1762c8f4f2f0f060d0a040a0806060d0c09070c04030204020f0f1f735b",
+          "input_b_hex": "2f172983050f0e4e070d0504030d0c04030c0208090d030902010a0164205520",
+          "output_hex": "b41df5fc18cfae3e8b090987830b0a85840c8708888c030682020688b91fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "whole256bit_word",
+      "operator": "half_each_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "3924c1762c8f4f2f0f060d0a040a0806060d0c09070c04030204020f0f1f735b",
+          "input_b_hex": "2f172983050f0e4e070d0504030d0c04030c0208090d030902010a0164205520",
+          "output_hex": "341df57c98cf2ebe8b098907038b8a05048c8708880c838602028608399fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "whole256bit_word",
+      "operator": "half_each_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "3924c1762c8f4f2f0f060d0a040a0806060d0c09070c04030204020f0f1f735b",
+          "input_b_hex": "2f172983050f0e4e070d0504030d0c04030c0208090d030902010a0164205520",
+          "output_hex": "b31df5fc18cfae3e8b090987830b0a85840c8708888c030682020688b91fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "whole256bit_word",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "3924c1762c8f4f2f0f060d0a040a0806060d0c09070c04030204020f0f1f735b",
+          "input_b_hex": "2f172983050f0e4e070d0504030d0c04030c0208090d030902010a0164205520",
+          "output_hex": "0a0d97f3278040e107f9080600fcfc0203010a00fdff00fa0002f80daaff1e3b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "whole256bit_word",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "3924c1762c8f4f2f0f060d0a040a0806060d0c09070c04030204020f0f1f735b",
+          "input_b_hex": "2f172983050f0e4e070d0504030d0c04030c0208090d030902010a0164205520",
+          "output_hex": "0a0d98f3268041e107f9070601fdfb0103010a01fefe00faff02f80dabfe1d3b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "each32bit_block",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "683beaf9",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "2c8f4f2f",
+          "input_b_hex": "050f0e4e",
+          "output_hex": "319e5d7d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "0f060d0a",
+          "input_b_hex": "070d0504",
+          "output_hex": "1613120e",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "0717140a",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "09190e11",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "1019070c",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0204020f",
+          "input_b_hex": "02010a01",
+          "output_hex": "04050c10",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "733fc87b",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "each32bit_block",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "683beaf9",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "2c8f4f2f",
+          "input_b_hex": "050f0e4e",
+          "output_hex": "319e5d7d",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "0f060d0a",
+          "input_b_hex": "070d0504",
+          "output_hex": "1613120e",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "0717140a",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "09190e11",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "1019070c",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0204020f",
+          "input_b_hex": "02010a01",
+          "output_hex": "04050c10",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "733fc87b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "each32bit_block",
+      "operator": "half_sum_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "341df57c",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "2c8f4f2f",
+          "input_b_hex": "050f0e4e",
+          "output_hex": "18cf2ebe",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "0f060d0a",
+          "input_b_hex": "070d0504",
+          "output_hex": "0b098907",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "038b8a05",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "048c8708",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "080c8386",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0204020f",
+          "input_b_hex": "02010a01",
+          "output_hex": "02028608",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "399fe43d",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "each32bit_block",
+      "operator": "half_sum_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "b41df57c",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "2c8f4f2f",
+          "input_b_hex": "050f0e4e",
+          "output_hex": "18cfae3e",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "0f060d0a",
+          "input_b_hex": "070d0504",
+          "output_hex": "8b090907",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "830b0a05",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "840c8708",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "888c0306",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0204020f",
+          "input_b_hex": "02010a01",
+          "output_hex": "82020608",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "b91fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "each32bit_block",
+      "operator": "half_each_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "341df57c",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "2c8f4f2f",
+          "input_b_hex": "050f0e4e",
+          "output_hex": "18cf2ebe",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "0f060d0a",
+          "input_b_hex": "070d0504",
+          "output_hex": "0b098907",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "038b8a05",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "048c8708",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "080c8385",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0204020f",
+          "input_b_hex": "02010a01",
+          "output_hex": "02028607",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "399fe43d",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "each32bit_block",
+      "operator": "half_each_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "b31df57c",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "2c8f4f2f",
+          "input_b_hex": "050f0e4e",
+          "output_hex": "18cfae3e",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "0f060d0a",
+          "input_b_hex": "070d0504",
+          "output_hex": "8a090907",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "830b0a05",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "840c8708",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "878c0306",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0204020f",
+          "input_b_hex": "02010a01",
+          "output_hex": "82020608",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "b91fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "each32bit_block",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "0a0d97f3",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "2c8f4f2f",
+          "input_b_hex": "050f0e4e",
+          "output_hex": "278040e1",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "0f060d0a",
+          "input_b_hex": "070d0504",
+          "output_hex": "07f90806",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "00fcfc02",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "03010a01",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "fdff00fa",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0204020f",
+          "input_b_hex": "02010a01",
+          "output_hex": "0002f80e",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "aaff1e3b",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "each32bit_block",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "0a0d98f3",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "2c8f4f2f",
+          "input_b_hex": "050f0e4e",
+          "output_hex": "278041e1",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "0f060d0a",
+          "input_b_hex": "070d0504",
+          "output_hex": "08f90706",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "01fdfb01",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "03010a01",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "fefe00fa",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0204020f",
+          "input_b_hex": "02010a01",
+          "output_hex": "0003f80d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "abfe1d3b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker1_cuts",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "683beaf9",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "2c8f4f2f0f060d0a",
+          "input_b_hex": "050f0e4e070d0504",
+          "output_hex": "319e5d7d1613120e",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "0717140a",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "09190e11",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "1019070c",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0204020f0f1f735b",
+          "input_b_hex": "02010a0164205520",
+          "output_hex": "04050c10733fc87b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker1_cuts",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "683beaf9",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "2c8f4f2f0f060d0a",
+          "input_b_hex": "050f0e4e070d0504",
+          "output_hex": "319e5d7d1613120e",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "0717140a",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "09190e11",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "1019070c",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0204020f0f1f735b",
+          "input_b_hex": "02010a0164205520",
+          "output_hex": "04050c10733fc87b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker1_cuts",
+      "operator": "half_sum_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "341df57c",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "2c8f4f2f0f060d0a",
+          "input_b_hex": "050f0e4e070d0504",
+          "output_hex": "18cf2ebe8b098907",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "038b8a05",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "048c8708",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "080c8386",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0204020f0f1f735b",
+          "input_b_hex": "02010a0164205520",
+          "output_hex": "02028608399fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker1_cuts",
+      "operator": "half_sum_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "b41df57c",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "2c8f4f2f0f060d0a",
+          "input_b_hex": "050f0e4e070d0504",
+          "output_hex": "18cfae3e8b090907",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "830b0a05",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "840c8708",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "888c0306",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0204020f0f1f735b",
+          "input_b_hex": "02010a0164205520",
+          "output_hex": "82020688b91fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker1_cuts",
+      "operator": "half_each_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "341df57c",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "2c8f4f2f0f060d0a",
+          "input_b_hex": "050f0e4e070d0504",
+          "output_hex": "18cf2ebe8b098907",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "038b8a05",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "048c8708",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "080c8385",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0204020f0f1f735b",
+          "input_b_hex": "02010a0164205520",
+          "output_hex": "02028608399fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker1_cuts",
+      "operator": "half_each_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "b31df57c",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "2c8f4f2f0f060d0a",
+          "input_b_hex": "050f0e4e070d0504",
+          "output_hex": "18cfae3e8b090907",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "830b0a05",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "840c8708",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "878c0306",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0204020f0f1f735b",
+          "input_b_hex": "02010a0164205520",
+          "output_hex": "82020688b91fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker1_cuts",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "0a0d97f3",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "2c8f4f2f0f060d0a",
+          "input_b_hex": "050f0e4e070d0504",
+          "output_hex": "278040e107f90806",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "00fcfc02",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "03010a01",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "fdff00fa",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0204020f0f1f735b",
+          "input_b_hex": "02010a0164205520",
+          "output_hex": "0002f80daaff1e3b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker1_cuts",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 4,
+          "input_a_hex": "3924c176",
+          "input_b_hex": "2f172983",
+          "output_hex": "0a0d98f3",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 4,
+          "last_byte_exclusive": 12,
+          "input_a_hex": "2c8f4f2f0f060d0a",
+          "input_b_hex": "050f0e4e070d0504",
+          "output_hex": "278041e107f90706",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 12,
+          "last_byte_exclusive": 16,
+          "input_a_hex": "040a0806",
+          "input_b_hex": "030d0c04",
+          "output_hex": "01fdfb01",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 16,
+          "last_byte_exclusive": 20,
+          "input_a_hex": "060d0c09",
+          "input_b_hex": "030c0208",
+          "output_hex": "03010a01",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 1,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 20,
+          "last_byte_exclusive": 24,
+          "input_a_hex": "070c0403",
+          "input_b_hex": "090d0309",
+          "output_hex": "fefe00fa",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 24,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0204020f0f1f735b",
+          "input_b_hex": "02010a0164205520",
+          "output_hex": "0003f80dabfe1d3b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 0,
+          "b_mod2": 0,
+          "sum_mod2": 0
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker0_cuts",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "3924c1762c8f4f2f",
+          "input_b_hex": "2f172983050f0e4e",
+          "output_hex": "683beaf9319e5d7d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0f060d0a040a0806060d0c09070c04030204020f",
+          "input_b_hex": "070d0504030d0c04030c0208090d030902010a01",
+          "output_hex": "1613120e0717140a09190e111019070c04050c10",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "733fc87b",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker0_cuts",
+      "operator": "sum_low_word_with_carry",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "3924c1762c8f4f2f",
+          "input_b_hex": "2f172983050f0e4e",
+          "output_hex": "683beaf9319e5d7d",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0f060d0a040a0806060d0c09070c04030204020f",
+          "input_b_hex": "070d0504030d0c04030c0208090d030902010a01",
+          "output_hex": "1613120e0717140a09190e111019070c04050c10",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "733fc87b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker0_cuts",
+      "operator": "half_sum_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "3924c1762c8f4f2f",
+          "input_b_hex": "2f172983050f0e4e",
+          "output_hex": "341df57c98cf2ebe",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0f060d0a040a0806060d0c09070c04030204020f",
+          "input_b_hex": "070d0504030d0c04030c0208090d030902010a01",
+          "output_hex": "0b098907038b8a05048c8708880c838602028608",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "399fe43d",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker0_cuts",
+      "operator": "half_sum_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "3924c1762c8f4f2f",
+          "input_b_hex": "2f172983050f0e4e",
+          "output_hex": "b41df5fc18cfae3e",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0f060d0a040a0806060d0c09070c04030204020f",
+          "input_b_hex": "070d0504030d0c04030c0208090d030902010a01",
+          "output_hex": "8b090987830b0a85840c8708888c030682020608",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "b91fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker0_cuts",
+      "operator": "half_each_floor",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "3924c1762c8f4f2f",
+          "input_b_hex": "2f172983050f0e4e",
+          "output_hex": "341df57c98cf2ebe",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0f060d0a040a0806060d0c09070c04030204020f",
+          "input_b_hex": "070d0504030d0c04030c0208090d030902010a01",
+          "output_hex": "0b098907038b8a05048c8708880c838602028607",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "399fe43d",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker0_cuts",
+      "operator": "half_each_floor",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "3924c1762c8f4f2f",
+          "input_b_hex": "2f172983050f0e4e",
+          "output_hex": "b31df5fc18cfae3e",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0f060d0a040a0806060d0c09070c04030204020f",
+          "input_b_hex": "070d0504030d0c04030c0208090d030902010a01",
+          "output_hex": "8a090987830b0a85840c8708888c030682020608",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "b91fe43d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker0_cuts",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "big",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "3924c1762c8f4f2f",
+          "input_b_hex": "2f172983050f0e4e",
+          "output_hex": "0a0d97f3278040e1",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0f060d0a040a0806060d0c09070c04030204020f",
+          "input_b_hex": "070d0504030d0c04030c0208090d030902010a01",
+          "output_hex": "07f9080600fcfc0203010a00fdff00fa0002f80e",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "aaff1e3b",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    },
+    {
+      "case_id": 0,
+      "packing": "residual_high",
+      "policy": "marker0_cuts",
+      "operator": "subtract_low_word_with_borrow",
+      "byte_order": "little",
+      "trace": [
+        {
+          "first_byte": 0,
+          "last_byte_exclusive": 8,
+          "input_a_hex": "3924c1762c8f4f2f",
+          "input_b_hex": "2f172983050f0e4e",
+          "output_hex": "0a0d98f3268041e1",
+          "carry_out": 0,
+          "borrow_out": 1,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 8,
+          "last_byte_exclusive": 28,
+          "input_a_hex": "0f060d0a040a0806060d0c09070c04030204020f",
+          "input_b_hex": "070d0504030d0c04030c0208090d030902010a01",
+          "output_hex": "08f9070601fdfb0103010a01fefe00faff02f80d",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 1,
+          "sum_mod2": 0
+        },
+        {
+          "first_byte": 28,
+          "last_byte_exclusive": 32,
+          "input_a_hex": "0f1f735b",
+          "input_b_hex": "64205520",
+          "output_hex": "abfe1d3b",
+          "carry_out": 0,
+          "borrow_out": 0,
+          "a_mod2": 1,
+          "b_mod2": 0,
+          "sum_mod2": 1
+        }
+      ]
+    }
+  ],
+  "loss_statement": "Pair sums, averages and word truncations are many-to-one; retain original full inputs, final carries, remainders and deterministic recipes; do not claim these are invertible renderers",
+  "limitations": [
+    "Finite exploratory family chosen after seeing the image",
+    "Marker/phase semantic bindings remain hypotheses",
+    "Lossless rearrangement does not itself prove a decoder",
+    "Negative results concern these exact chains, not all stateful or nonlinear algorithms",
+    "No independent derivation of offset10 or all seven lag2 high-bit errors is assumed"
+  ]
+}

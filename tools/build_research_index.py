@@ -39,6 +39,7 @@ def main():
         ('signature_phase_decode_check.json','unique_valid_scalars','valid private scalars'),
         ('uniform_phase_layers_check.json','unique_valid_scalars','valid private scalars'),
         ('residual_predictors_check.json','unique_valid_scalars','valid private scalars; includes the96 C20 controls'),
+        ('ordered_format_check.json','unique_valid_scalars','valid private scalars in C28-C30 only; both public key formats'),
         ('marker_glyph_relation.json','attempts_including_duplicates','structural comparisons, not private keys')]:
         p=ROOT/'research/data'/filename
         if p.exists():
@@ -79,6 +80,19 @@ def main():
             'neighbor_constraints_total':d['neighbor_constraints_total'],
             'valid_wif_readings':sum(v['validation']=='valid' for v in d['candidate_readings']),
             'historical_target_match':d['historical_target_match'],'not_HALV_key_search':True})
+    p=ROOT/'research/data/ordered_control_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'invertible_control_family','cases':d['cases'],
+            'states_recovered_in_every_case':d['states_recovered_in_every_case'],
+            'exact_neighbor_relations':len(d['exact_neighbor_relations']),
+            'roundtrip_is_not_decoder_evidence':True})
+    p=ROOT/'research/data/ordered_arithmetic_check.json'
+    if p.exists():
+        d=json.loads(p.read_text());structural.append({'result':str(p.relative_to(ROOT)),
+            'kind':'coupled_arithmetic_and_geometry','recipes_including_duplicates':d['attempts_including_duplicates'],
+            'unique_payloads32':d['unique_formed_payloads32'],'groups':d['groups'],
+            'payloads_are_not_independent_key_tests':True})
     out={'purpose':'Persistent evidence index; read together with HYPOTHESES.md and LOG.md.',
          'counting_rule':'Do not sum per-run unique candidates as global uniques; overlap across runs has not been measured. Structural comparisons, WIF strings, hypotheses and private scalars are separate units.',
          'result_summaries':summaries,'structural_summaries':structural,'files':files}

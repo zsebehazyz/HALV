@@ -101,6 +101,13 @@
       "target_or_exact_matches": 0
     },
     {
+      "result": "research/data/ordered_format_check.json",
+      "count_field": "unique_valid_scalars",
+      "count": 115592,
+      "unit": "valid private scalars in C28-C30 only; both public key formats",
+      "target_or_exact_matches": 0
+    },
+    {
       "result": "research/data/marker_glyph_relation.json",
       "count_field": "attempts_including_duplicates",
       "count": 61200,
@@ -150,6 +157,35 @@
       "valid_wif_readings": 1,
       "historical_target_match": true,
       "not_HALV_key_search": true
+    },
+    {
+      "result": "research/data/ordered_control_check.json",
+      "kind": "invertible_control_family",
+      "cases": 591,
+      "states_recovered_in_every_case": 256,
+      "exact_neighbor_relations": 0,
+      "roundtrip_is_not_decoder_evidence": true
+    },
+    {
+      "result": "research/data/ordered_arithmetic_check.json",
+      "kind": "coupled_arithmetic_and_geometry",
+      "recipes_including_duplicates": 49644,
+      "unique_payloads32": 28307,
+      "groups": {
+        "byte_pair": {
+          "attempts": 4728,
+          "byte_range_rejections": 886
+        },
+        "word_pair": {
+          "attempts": 37824,
+          "byte_range_rejections": 0
+        },
+        "geometry": {
+          "attempts": 7092,
+          "byte_range_rejections": 3546
+        }
+      },
+      "payloads_are_not_independent_key_tests": true
     }
   ],
   "files": [
@@ -392,6 +428,60 @@
       "role": "executed_result_or_artifact",
       "bytes": 969,
       "sha256": "91434f6b3e0f2ce4bd85fc864a2cb18b40ecc63e55fcda85181db7bc15927d5e"
+    },
+    {
+      "path": "research/data/ordered_arithmetic_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 111620,
+      "sha256": "d5a24871ac01ed251beb5bb4df7bb482a31ae09128cbcecd3134d7b92c6e1a02"
+    },
+    {
+      "path": "research/data/ordered_arithmetic_payloads.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 8128024,
+      "sha256": "9c04d516dcbf815e2e3ff041286b1ede0b488c312f389a99c0a15e0382b9edf9"
+    },
+    {
+      "path": "research/data/ordered_arithmetic_recipes.jsonl.gz",
+      "role": "executed_result_or_artifact",
+      "bytes": 691832,
+      "sha256": "28fb5aad4ceaf4a3abeb0ed6db00d4275bc3db99e81ffa8bfd0caf2747696ff5"
+    },
+    {
+      "path": "research/data/ordered_control_cases.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 569080,
+      "sha256": "5f917831393c13ac9f95066472696e9a2b06d8e61ef1ee2ab8ffd4ef7ecd63e2"
+    },
+    {
+      "path": "research/data/ordered_control_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 2189,
+      "sha256": "8dc783db0164a510172fd72ea0ecd7d8ba68922e55442d4c2d52c4e29a2d2554"
+    },
+    {
+      "path": "research/data/ordered_format_check.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 3571,
+      "sha256": "1bd6cbb83179d98dc8e116dc85b554119e374f5320844e68aab3f02af0cc6015"
+    },
+    {
+      "path": "research/data/ordered_format_trials.jsonl.gz",
+      "role": "executed_result_or_artifact",
+      "bytes": 64496,
+      "sha256": "6f42e5fbbfee165c7d17a2f735ea0709763c9cddd9050606c536ffff42c38afb"
+    },
+    {
+      "path": "research/data/ordered_integrity_audit.json",
+      "role": "executed_result_or_artifact",
+      "bytes": 987,
+      "sha256": "c17138a9aaee8dedeb9542c927569ccb5c3f2f1e4e56ce683fd819bd4e8b8f40"
+    },
+    {
+      "path": "research/data/ordered_key_candidates.json.gz",
+      "role": "executed_result_or_artifact",
+      "bytes": 2676845,
+      "sha256": "09ba0ac405f0319ae2c5245ca29e36a18cccd6dcfb6cb8a5b20522b874edc872"
     },
     {
       "path": "research/data/pair64_check.json",
@@ -1090,6 +1180,12 @@
       "sha256": "c65428f11fe91d8c65d2eb9f4e2c8fb712bad89d15829f2b988b3f542f9c92d9"
     },
     {
+      "path": "research/models/ordered_decode_v1.json",
+      "role": "model_specification",
+      "bytes": 4055,
+      "sha256": "9887c4d7c8015e631ceff14c2a0712ebe05f371b29cc4461866710fac0ce8acc"
+    },
+    {
       "path": "research/models/pair64_v1.json",
       "role": "model_specification",
       "bytes": 1601,
@@ -1162,6 +1258,12 @@
       "sha256": "d9f2bbd7792f4ba01986b9c565fcae41ab2f5b1b29304e5159434981381227ff"
     },
     {
+      "path": "tools/audit_ordered_results.py",
+      "role": "reproduction_tool",
+      "bytes": 5566,
+      "sha256": "1fdf1e308bd4d4b17221ac39ea206cc5c2e7bf91a7e786055b98beaf1447aaa9"
+    },
+    {
       "path": "tools/bitcoin_oracle.py",
       "role": "reproduction_tool",
       "bytes": 2264,
@@ -1170,8 +1272,8 @@
     {
       "path": "tools/build_research_index.py",
       "role": "reproduction_tool",
-      "bytes": 6149,
-      "sha256": "2ef80696a90f4afcb03b65fd653d8618d03b52ef1d743dfc8ed13f0e88a38f6a"
+      "bytes": 7148,
+      "sha256": "e86054f888f2fb23607cc69c9b39ee39bed658175580b563863211a7da7b2d74"
     },
     {
       "path": "tools/capture_rs_reference.py",
@@ -1274,6 +1376,24 @@
       "role": "reproduction_tool",
       "bytes": 1330,
       "sha256": "5e7dd187694ceecb109f03f32a904f3b496ffedf4b09b34248cd74aa013dcd9c"
+    },
+    {
+      "path": "tools/check_ordered_arithmetic.py",
+      "role": "reproduction_tool",
+      "bytes": 8451,
+      "sha256": "8105250096372bf63fd8d09544a684cb5550863057a32bd1b578a764c9d2a40d"
+    },
+    {
+      "path": "tools/check_ordered_controls.py",
+      "role": "reproduction_tool",
+      "bytes": 4531,
+      "sha256": "8d0024f2491b87f5d209a210a5f39c637281769fa23da8ed61281e69cc71ebb3"
+    },
+    {
+      "path": "tools/check_ordered_formats.py",
+      "role": "reproduction_tool",
+      "bytes": 7712,
+      "sha256": "94a6f52dded1ce3b0935e59f63d8412486f2053dbca4255b894ba91dbe291a16"
     },
     {
       "path": "tools/check_pair64.py",
@@ -1390,6 +1510,12 @@
       "sha256": "874520a478a8ed200c6e9d38207eec8e74bc95e5e0e1067fe09c7f3c5e370cd3"
     },
     {
+      "path": "tools/ordered_decode_common.py",
+      "role": "reproduction_tool",
+      "bytes": 2629,
+      "sha256": "19fc09a7a999fa563dc640444f2fcb155d5e70f3f6e853dca0424bb6d935eff9"
+    },
+    {
       "path": "tools/plot_boundary_fraction.py",
       "role": "reproduction_tool",
       "bytes": 4815,
@@ -1470,8 +1596,8 @@
     {
       "path": "README.md",
       "role": "research_map_or_log",
-      "bytes": 15704,
-      "sha256": "0a2010cda0caa314b0ca6f1e760a73ebadf5bac54584557c11323393e9dda724"
+      "bytes": 16219,
+      "sha256": "68e43077e9363b64d9ec6e9f0344d8bf6508dd78f86c45bf4c496c4becfff5a7"
     },
     {
       "path": "AGENTS.md",
@@ -1482,14 +1608,20 @@
     {
       "path": "research/HYPOTHESES.md",
       "role": "research_map_or_log",
-      "bytes": 28573,
-      "sha256": "2795e53f58cb255cac83b304e9c1cc46f129cd712577dffc7fd8931c6c12b391"
+      "bytes": 30785,
+      "sha256": "48ad068d91583546ec9999868326cbf371ccc2c2c717f38b3f5bb9ac2455203a"
     },
     {
       "path": "research/LOG.md",
       "role": "research_map_or_log",
-      "bytes": 105477,
-      "sha256": "0a8132620eac6a53abb3a10cc17bd4932a909518f705702554113fc361d60a9e"
+      "bytes": 109038,
+      "sha256": "5ae8485d54a1cd4320ead2ecfd9d68ee2cf910ab9ccd00b016b87c26ca60bd18"
+    },
+    {
+      "path": "research/REPORT_20261101_ORDERED_SEQUENCE.md",
+      "role": "research_report",
+      "bytes": 9898,
+      "sha256": "970c77c385565a59a4183510d83428de1a8d0a6ec4ff64c473c09388b4732b4b"
     },
     {
       "path": "research/REPORT_20261101_UPLOAD_AUDIT.md",

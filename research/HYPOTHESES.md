@@ -450,3 +450,37 @@ nyitott; nem egységes, minden Zden-képre érvényes műveletként kezeljük.
 
 Részletes sorrend és falszifikációs feltételek:
 `REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md`.
+
+## C28–C30: végrehajtott vezérlés → felezés → validálás
+
+A felhasználó elfogadta a C27 után javasolt sorrendet. A rögzített
+`models/ordered_decode_v1.json` szerinti család most lefutott.
+Az A három adatbitjét szomszédválasztás és feltételes inverzió módosítja;
+a flaget a helyi Lr, egy R-függvény, opcionális BD-bit és közös polaritás
+határozza meg. A három keret összes 591 változata pontosan visszaadja a
+256 bemeneti állapotot. Ez adatmegőrzési kontroll, nem dekódolási bizonyíték.
+Nincs a Level 2-höz hasonló teljes komplementkapcsolat a három vizsgált
+szomszédsági diagnosztikában. A primitív mind az 51 történeti karaktert
+helyesen állítja elő a külön pozitív kontrollon.
+
+A C29 mind a 591 esethez két főcsatorna/R byte-csomagolást, páros
+felezést/összeget és négy szegmentálással carry/borrow szóaritmetikát
+vizsgál. Az átalakított hullám pontos geometriai területe külön ág.
+49 644 receptből 28 307 egyedi 32 bájtos eredmény született; a túlcsorduló
+közvetlen bájtértékek elutasítva. A fizikai területváltozatok normalizálás
+nélkül nem adnak bájtokat. A C16 területkontroll és az önálló átviteli
+ellenőrzések sikeresek. Az összeg/átlag nem invertálható, eredeti bemenete
+és determinisztikus receptje megmarad.
+
+C30: négy rögzített kulcsolvasattal 115 592 különböző érvényes skalár,
+két publikus kulcsformátum, 0 célcímegyezés. Az 50 karakteres ASCII7
+14 184 olvasatában nincs teljes Base58-tartalom (maximum 30/50), ezért
+a vezető 5 hozzáadása nem jutott át a formátumkapun. Az ASCII64-hex
+1182 esetében sincs teljes hexszöveg. Nincs karakterjavítás vagy hash-véglegesítés.
+
+Ezek nem zárnak ki más állapotfrissítést, más képből levezetett sorrendet
+vagy normalizálást. Nem vezettük le a lag2-modell 10-es alapját vagy a hét
+magasbit-hibát. A következő elsődleges követelmény e korrekciók közös
+generáló szabályból történő előrejelzése, nem újabb paraméterenkénti javítás.
+A dátum és a Fibonacci–hang–Morse szerepe nyitott; új hangteszt most nem futott.
+Részletek és hatókör: `REPORT_20261101_ORDERED_SEQUENCE.md`.

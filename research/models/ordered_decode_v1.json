@@ -1,0 +1,40 @@
+{
+  "experiment":"C28-C30",
+  "purpose":"Execute the user-approved order: coupled controls, then halving/carry, then format/address validation",
+  "source":"Unchanged nominal256 states, full physical scales and all residual bits preserved",
+  "C28":{
+    "frames":["absolute","phase_relative","zero_position"],
+    "phase_binding":"C18 staircase zero phases; r=z-1; this is a tested hypothesis, not established author intent",
+    "marker_binding":"C7 measured BD bits, used as candidate per-block polarity or neighbor direction",
+    "residual_controls":["none","R0","R1","R2","R3","parity_R","nonzero_R"],
+    "flag":"g=local_Lr XOR selected_R_control XOR optional_marker_bit XOR global_polarity",
+    "decode":"D'=neighbor(D) XOR g, F'=1-g; inverse must restore every original state using unchanged R",
+    "neighbors":["current","previous_in_block","next_in_block","previous_global","next_global","marker_direction","inverse_marker_direction"],
+    "neighbor_cycles":"Within-block8 cells or whole64 cells; marker-directed shifts are constant within each block and therefore bijections",
+    "baselines":"One identity case per frame; no per-cell tuned parameter",
+    "internal_diagnostic":"Complement checks at cell neighbors, neighboring blocks and lag2 blocks, including the middle region; report exact fractions without treating best score as a p-value",
+    "positive_control":"Same generic flag primitive must reproduce all51 Level2 output characters"
+  },
+  "C29":{
+    "byte_terms":"64 bytes as16*decoded_main+R or16*R+decoded_main; both are explicit hypotheses",
+    "pairing":"Adjacent terms only; one resulting byte per pair as Level5 composition control",
+    "byte_operations":["direct_sum","half_sum_floor","half_each_floor","half_sum_ceil"],
+    "segment_operations":["sum_low_word_with_carry","half_sum_floor","half_each_floor","subtract_low_word_with_borrow"],
+    "segments":["whole256bit_word","each32bit_block","marker1_cuts","marker0_cuts"],
+    "segment_cut_definition":"Carry flows from less to more significant bytes; marker cut between blocks b and b+1 uses marker[b], b0..6; final marker bit does not define an extra boundary",
+    "byte_orders":["big","little"],
+    "geometry":"From decoded_main+R reconstruct a transformed q; exact q/2 piecewise-linear radius area in64 cells at anchor92, normalized or measured physical node scales; round_each_then_sum or sum_then_round",
+    "geometry_rounders":["floor","ceil","nearest_ties_even"],
+    "calibration":"Baseline area vectors must equal archived C16 exact rational profiles; verify word-level arithmetic with independently computed integers",
+    "loss_statement":"Pair sums, averages and word truncations are many-to-one; retain original full inputs, final carries, remainders and deterministic recipes; do not claim these are invertible renderers"
+  },
+  "C30":{
+    "raw_key_views":"Forward/reversed bytes and bit reversal within each byte; no arbitrary nibble permutation sweep",
+    "wif_source":"Two lossless352bit layouts: main32+outer_residual12, or blockwise main/residual interleaving in edges with middle residual zeros implicit",
+    "wif_views":"Both whole-stream bit directions, padding offsets0/1/2 and MSB/LSB per7bit character; exactly50 characters, require full Base58 alphabet before prepending5 and Base58Check",
+    "hex_source":"Only a complete64byte ASCII-hex stream from the two byte-term packings; no sliding windows or character repair",
+    "oracle":"Every complete valid scalar checked against both P2PKH formats; no hash-based finalization",
+    "scope":"WIF or full target equality are actual validation; arbitrary32bytes being representable as hex is not independent evidence"
+  },
+  "limitations":["Finite exploratory family chosen after seeing the image","Marker/phase semantic bindings remain hypotheses","Lossless rearrangement does not itself prove a decoder","Negative results concern these exact chains, not all stateful or nonlinear algorithms","No independent derivation of offset10 or all seven lag2 high-bit errors is assumed"]
+}

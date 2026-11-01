@@ -44,9 +44,16 @@ a javításokat. [Teljes audit és kontrollkorlátok](research/REPORT_20261101_U
 A legújabb történeti kontrollban a Level 2 teljes képi megoldását is
 reprodukáltuk: 306/306 szomszédos komplementellenőrzés, feltételes
 bitinverzió, érvényes WIF és a képen szereplő régi cím. Ez **nem HALV-találat**.
-A következő prioritás a vezérlőjeles, szomszédokra vagy állapotra épülő
-inverz művelet, a geometriai ág megtartásával.
 [Történeti módszer és konkrét kutatási sorrend](research/REPORT_20261101_ZDEN_METHOD_AND_NEXT_STEPS.md).
+
+A jóváhagyott sorrendet a **C28–C30** végrehajtotta: 591 adatmegőrző
+vezérlő-/szomszédváltozat, majd 49 644 felezési, átviteli és geometriai
+recept. A 115 592 különböző skalár egyik publikus kulcsformátumban sem
+adta a célcímet; a 14 184 hétbites olvasat között nincs teljes Base58-szöveg.
+Ez a rögzített család negatívuma, nem a képi nyomok kizárása.
+A következő szerkezeti feladat a maradékból vezetett közös állapotszabály
+és a hét magasbit-eltérés előrejelzése, a geometriai ág megtartásával.
+[Teljes lánc, köztes eredmények és reprodukció](research/REPORT_20261101_ORDERED_SEQUENCE.md).
 
 ## Reprodukálás
 
